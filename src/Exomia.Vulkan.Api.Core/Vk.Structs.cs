@@ -193,9 +193,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-        public byte*           pApplicationName;
+        public sbyte*          pApplicationName;
         public VkVersion       applicationVersion;
-        public byte*           pEngineName;
+        public sbyte*          pEngineName;
         public VkVersion       engineVersion;
         public VkVersion       apiVersion;
     }
@@ -226,9 +226,9 @@ namespace Exomia.Vulkan.Api.Core
         public VkInstanceCreateFlags flags;
         public VkApplicationInfo*    pApplicationInfo;
         public uint                  enabledLayerCount;
-        public byte**                ppEnabledLayerNames;
+        public sbyte**               ppEnabledLayerNames;
         public uint                  enabledExtensionCount;
-        public byte**                ppEnabledExtensionNames;
+        public sbyte**               ppEnabledExtensionNames;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -251,6 +251,7 @@ namespace Exomia.Vulkan.Api.Core
         public VkMemoryType this[int index]
         {
             get { return *((VkMemoryType*)Unsafe.AsPointer(ref this) + index); }
+
             //set { *((VkMemoryType*)Unsafe.AsPointer(ref this) + index) = value; }
         }
 
@@ -612,8 +613,8 @@ namespace Exomia.Vulkan.Api.Core
         public       uint                             vendorID;
         public       uint                             deviceID;
         public       VkPhysicalDeviceType             deviceType;
-        public fixed char                             deviceName[VK_MAX_PHYSICAL_DEVICE_NAME_SIZE];
-        public fixed byte                             pipelineCacheUUID[VK_UUID_SIZE];
+        public fixed sbyte                            deviceName[VK_MAX_PHYSICAL_DEVICE_NAME_SIZE];
+        public fixed sbyte                            pipelineCacheUUID[VK_UUID_SIZE];
         public       VkPhysicalDeviceLimits           limits;
         public       VkPhysicalDeviceSparseProperties sparseProperties;
     }
@@ -647,26 +648,26 @@ namespace Exomia.Vulkan.Api.Core
         public uint                      queueCreateInfoCount;
         public VkDeviceQueueCreateInfo*  pQueueCreateInfos;
         public uint                      enabledLayerCount;
-        public byte**                    ppEnabledLayerNames;
+        public sbyte**                   ppEnabledLayerNames;
         public uint                      enabledExtensionCount;
-        public byte**                    ppEnabledExtensionNames;
+        public sbyte**                   ppEnabledExtensionNames;
         public VkPhysicalDeviceFeatures* pEnabledFeatures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExtensionProperties
     {
-        public fixed byte extensionName[VK_MAX_EXTENSION_NAME_SIZE];
-        public       uint specVersion;
+        public fixed sbyte extensionName[VK_MAX_EXTENSION_NAME_SIZE];
+        public       uint  specVersion;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkLayerProperties
     {
-        public fixed byte      layerName[VK_MAX_EXTENSION_NAME_SIZE];
+        public fixed sbyte     layerName[VK_MAX_EXTENSION_NAME_SIZE];
         public       VkVersion specVersion;
         public       uint      implementationVersion;
-        public fixed byte      description[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte     description[VK_MAX_DESCRIPTION_SIZE];
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -955,7 +956,7 @@ namespace Exomia.Vulkan.Api.Core
         public VkPipelineShaderStageCreateFlags flags;
         public VkShaderStageFlags               stage;
         public VkShaderModule                   module;
-        public byte*                            pName;
+        public sbyte*                           pName;
         public VkSpecializationInfo*            pSpecializationInfo;
     }
 
@@ -2452,8 +2453,8 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType                   sType;
         public       void*                             pNext;
         public       VkDriverId                        driverID;
-        public fixed char                              driverName[VK_MAX_DRIVER_NAME_SIZE];
-        public fixed char                              driverInfo[VK_MAX_DRIVER_INFO_SIZE];
+        public fixed sbyte                             driverName[VK_MAX_DRIVER_NAME_SIZE];
+        public fixed sbyte                             driverInfo[VK_MAX_DRIVER_INFO_SIZE];
         public       VkConformanceVersion              conformanceVersion;
         public       VkShaderFloatControlsIndependence denormBehaviorIndependence;
         public       VkShaderFloatControlsIndependence roundingModeIndependence;
@@ -2681,8 +2682,8 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType      sType;
         public       void*                pNext;
         public       VkDriverId           driverID;
-        public fixed char                 driverName[VK_MAX_DRIVER_NAME_SIZE];
-        public fixed char                 driverInfo[VK_MAX_DRIVER_INFO_SIZE];
+        public fixed sbyte                driverName[VK_MAX_DRIVER_NAME_SIZE];
+        public fixed sbyte                driverInfo[VK_MAX_DRIVER_INFO_SIZE];
         public       VkConformanceVersion conformanceVersion;
     }
 
@@ -3354,7 +3355,7 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe struct VkDisplayPropertiesKHR
     {
         public VkDisplayKHR               display;
-        public byte*                      displayName;
+        public sbyte*                     displayName;
         public VkExtent2D                 physicalDimensions;
         public VkExtent2D                 physicalResolution;
         public VkSurfaceTransformFlagsKHR supportedTransforms;
@@ -3539,9 +3540,9 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType                         sType;
         public       void*                                   pNext;
         public       VkPerformanceCounterDescriptionFlagsKHR flags;
-        public fixed char                                    name[VK_MAX_DESCRIPTION_SIZE];
-        public fixed char                                    category[VK_MAX_DESCRIPTION_SIZE];
-        public fixed char                                    description[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte                                   name[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte                                   category[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte                                   description[VK_MAX_DESCRIPTION_SIZE];
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3782,8 +3783,8 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType    sType;
         public       void*              pNext;
         public       VkShaderStageFlags stages;
-        public fixed char               name[VK_MAX_DESCRIPTION_SIZE];
-        public fixed char               description[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte              name[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte              description[VK_MAX_DESCRIPTION_SIZE];
         public       uint               subgroupSize;
     }
 
@@ -3801,8 +3802,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public       VkStructureType                        sType;
         public       void*                                  pNext;
-        public fixed char                                   name[VK_MAX_DESCRIPTION_SIZE];
-        public fixed char                                   description[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte                                  name[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte                                  description[VK_MAX_DESCRIPTION_SIZE];
         public       VkPipelineExecutableStatisticFormatKHR format;
         public       VkPipelineExecutableStatisticValueKHR  value;
     }
@@ -3812,8 +3813,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public       VkStructureType sType;
         public       void*           pNext;
-        public fixed char            name[VK_MAX_DESCRIPTION_SIZE];
-        public fixed char            description[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte           name[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte           description[VK_MAX_DESCRIPTION_SIZE];
 
         [MarshalAs(UnmanagedType.Bool)]
         public bool isText;
@@ -3983,8 +3984,8 @@ namespace Exomia.Vulkan.Api.Core
             ulong,                      /* @object      */
             nuint,                      /* location     */
             int,                        /* messageCode  */
-            byte*,                      /* pLayerPrefix */
-            byte*,                      /* pMessage     */
+            sbyte*,                     /* pLayerPrefix */
+            sbyte*,                     /* pMessage     */
             void*,                      /* flags        */
             bool> pfnCallback;
 
@@ -4006,7 +4007,7 @@ namespace Exomia.Vulkan.Api.Core
         public void*                      pNext;
         public VkDebugReportObjectTypeEXT objectType;
         public ulong                      @object;
-        public byte*                      pObjectName;
+        public sbyte*                     pObjectName;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4026,7 +4027,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public       VkStructureType sType;
         public       void*           pNext;
-        public       byte*           pMarkerName;
+        public       sbyte*          pMarkerName;
         public fixed float           color[4];
     }
 
@@ -4498,7 +4499,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-        public byte*           pLabelName;
+        public sbyte*          pLabelName;
         public VkColor         color;
     }
 
@@ -4509,7 +4510,7 @@ namespace Exomia.Vulkan.Api.Core
         public void*           pNext;
         public VkObjectType    objectType;
         public ulong           objectHandle;
-        public byte*           pObjectName;
+        public sbyte*          pObjectName;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4523,9 +4524,9 @@ namespace Exomia.Vulkan.Api.Core
         /// </summary>
         public uint flags;
 
-        public byte*                          pMessageIdName;
+        public sbyte*                         pMessageIdName;
         public int                            messageIdNumber;
-        public byte*                          pMessage;
+        public sbyte*                         pMessage;
         public uint                           queueLabelCount;
         public VkDebugUtilsLabelEXT*          pQueueLabels;
         public uint                           cmdBufLabelCount;
@@ -5684,11 +5685,11 @@ namespace Exomia.Vulkan.Api.Core
     {
         public       VkStructureType       sType;
         public       void*                 pNext;
-        public fixed char                  name[VK_MAX_EXTENSION_NAME_SIZE];
-        public fixed char                  version[VK_MAX_EXTENSION_NAME_SIZE];
+        public fixed sbyte                 name[VK_MAX_EXTENSION_NAME_SIZE];
+        public fixed sbyte                 version[VK_MAX_EXTENSION_NAME_SIZE];
         public       VkToolPurposeFlagsEXT purposes;
-        public fixed char                  description[VK_MAX_DESCRIPTION_SIZE];
-        public fixed char                  layer[VK_MAX_EXTENSION_NAME_SIZE];
+        public fixed sbyte                 description[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte                 layer[VK_MAX_EXTENSION_NAME_SIZE];
     }
 
     [StructLayout(LayoutKind.Sequential)]

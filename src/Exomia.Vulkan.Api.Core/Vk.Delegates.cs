@@ -96,11 +96,11 @@ namespace Exomia.Vulkan.Api.Core
 
     public unsafe delegate VoidFunction GetInstanceProcAddr(
         VkInstance instance,
-        byte*      pName);
+        sbyte*     pName);
 
     public unsafe delegate VoidFunction GetDeviceProcAddr(
         VkDevice device,
-        byte*    pName);
+        sbyte*   pName);
 
     public unsafe delegate VkResult CreateDevice(
         VkPhysicalDevice      physicalDevice,
@@ -113,13 +113,13 @@ namespace Exomia.Vulkan.Api.Core
         VkAllocationCallbacks pAllocator);
 
     public unsafe delegate VkResult EnumerateInstanceExtensionProperties(
-        byte*                  pLayerName,
+        sbyte*                 pLayerName,
         uint*                  pPropertyCount,
         VkExtensionProperties* pProperties);
 
     public unsafe delegate VkResult EnumerateDeviceExtensionProperties(
         VkPhysicalDevice       physicalDevice,
-        byte*                  pLayerName,
+        sbyte*                 pLayerName,
         uint*                  pPropertyCount,
         VkExtensionProperties* pProperties);
 
@@ -1562,8 +1562,8 @@ namespace Exomia.Vulkan.Api.Core
         ulong                                                    @object,
         nuint                                                    location,
         int                                                      messageCode,
-        byte*                                                    pLayerPrefix,
-        byte*                                                    pMessage,
+        sbyte*                                                   pLayerPrefix,
+        sbyte*                                                   pMessage,
         void*                                                    pUserData);
 
     public unsafe delegate VkResult CreateDebugReportCallbackEXT(
@@ -1584,8 +1584,8 @@ namespace Exomia.Vulkan.Api.Core
         ulong                      @object,
         size_t                     location,
         int                        messageCode,
-        byte*                      pLayerPrefix,
-        byte*                      pMessage);
+        sbyte*                     pLayerPrefix,
+        sbyte*                     pMessage);
 
     public unsafe delegate VkResult DebugMarkerSetObjectTagEXT(
         VkDevice                       device,

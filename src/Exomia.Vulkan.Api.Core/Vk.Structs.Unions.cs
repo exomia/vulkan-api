@@ -92,7 +92,7 @@ namespace Exomia.Vulkan.Api.Core
         public bool valueBool;
 
         [FieldOffset(0)]
-        public byte* valueString;
+        public sbyte* valueString;
     }
 
     [StructLayout(LayoutKind.Explicit)]
