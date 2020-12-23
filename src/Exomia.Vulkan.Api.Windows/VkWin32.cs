@@ -26,87 +26,92 @@ namespace Exomia.Vulkan.Api.Windows
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCreateWin32SurfaceKHR")]
-        public static extern unsafe VkResult CreateWin32SurfaceKHR(VkInstance                   instance,
-                                                                   VkWin32SurfaceCreateInfoKHR* pCreateInfo,
-                                                                   VkAllocationCallbacks*       pAllocator,
-                                                                   VkSurfaceKHR*                pSurface);
+        public static extern unsafe VkResult CreateWin32SurfaceKHR(
+            VkInstance                   instance,
+            VkWin32SurfaceCreateInfoKHR* pCreateInfo,
+            VkAllocationCallbacks*       pAllocator,
+            VkSurfaceKHR*                pSurface);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceWin32PresentationSupportKHR")]
-        public static extern bool GetPhysicalDeviceWin32PresentationSupportKHR(VkPhysicalDevice physicalDevice,
-                                                                               uint             queueFamilyIndex);
+        public static extern bool GetPhysicalDeviceWin32PresentationSupportKHR(
+            VkPhysicalDevice physicalDevice,
+            uint             queueFamilyIndex);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetMemoryWin32HandleKHR")]
-        public static extern unsafe VkResult GetMemoryWin32HandleKHR(VkDevice                       device,
-                                                                     VkMemoryGetWin32HandleInfoKHR* pGetWin32HandleInfo,
-                                                                     HANDLE*                        pHandle);
+        public static extern unsafe VkResult GetMemoryWin32HandleKHR(
+            VkDevice                       device,
+            VkMemoryGetWin32HandleInfoKHR* pGetWin32HandleInfo,
+            HANDLE*                        pHandle);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetMemoryWin32HandlePropertiesKHR")]
-        public static extern unsafe VkResult GetMemoryWin32HandlePropertiesKHR(VkDevice device,
-                                                                               VkExternalMemoryHandleTypeFlags
-                                                                                   handleType,
-                                                                               HANDLE handle,
-                                                                               VkMemoryWin32HandlePropertiesKHR*
-                                                                                   pMemoryWin32HandleProperties);
+        public static extern unsafe VkResult GetMemoryWin32HandlePropertiesKHR(
+            VkDevice                          device,
+            VkExternalMemoryHandleTypeFlags   handleType,
+            HANDLE                            handle,
+            VkMemoryWin32HandlePropertiesKHR* pMemoryWin32HandleProperties);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceSurfacePresentModes2EXT")]
-        public static extern unsafe VkResult GetPhysicalDeviceSurfacePresentModes2EXT(VkPhysicalDevice physicalDevice,
-                                                                                      VkPhysicalDeviceSurfaceInfo2KHR*
-                                                                                          pSurfaceInfo,
-                                                                                      uint* pPresentModeCount,
-                                                                                      VkPresentModeKHR* pPresentModes);
+        public static extern unsafe VkResult GetPhysicalDeviceSurfacePresentModes2EXT(
+            VkPhysicalDevice                 physicalDevice,
+            VkPhysicalDeviceSurfaceInfo2KHR* pSurfaceInfo,
+            uint*                            pPresentModeCount,
+            VkPresentModeKHR*                pPresentModes);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkAcquireFullScreenExclusiveModeEXT")]
-        public static extern VkResult AcquireFullScreenExclusiveModeEXT(VkDevice       device,
-                                                                        VkSwapchainKHR swapchain);
+        public static extern VkResult AcquireFullScreenExclusiveModeEXT(
+            VkDevice       device,
+            VkSwapchainKHR swapchain);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkReleaseFullScreenExclusiveModeEXT")]
-        public static extern VkResult ReleaseFullScreenExclusiveModeEXT(VkDevice       device,
-                                                                        VkSwapchainKHR swapchain);
+        public static extern VkResult ReleaseFullScreenExclusiveModeEXT(
+            VkDevice       device,
+            VkSwapchainKHR swapchain);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetDeviceGroupSurfacePresentModes2EXT")]
-        public static extern unsafe VkResult GetDeviceGroupSurfacePresentModes2EXT(VkDevice device,
-                                                                                   VkPhysicalDeviceSurfaceInfo2KHR*
-                                                                                       pSurfaceInfo,
-                                                                                   VkDeviceGroupPresentModeFlagsKHR*
-                                                                                       pModes);
+        public static extern unsafe VkResult GetDeviceGroupSurfacePresentModes2EXT(
+            VkDevice                          device,
+            VkPhysicalDeviceSurfaceInfo2KHR*  pSurfaceInfo,
+            VkDeviceGroupPresentModeFlagsKHR* pModes);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkImportSemaphoreWin32HandleKHR")]
-        public static extern unsafe VkResult ImportSemaphoreWin32HandleKHR(VkDevice device,
-                                                                           VkImportSemaphoreWin32HandleInfoKHR*
-                                                                               pImportSemaphoreWin32HandleInfo);
+        public static extern unsafe VkResult ImportSemaphoreWin32HandleKHR(
+            VkDevice                             device,
+            VkImportSemaphoreWin32HandleInfoKHR* pImportSemaphoreWin32HandleInfo);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetSemaphoreWin32HandleKHR")]
-        public static extern unsafe VkResult GetSemaphoreWin32HandleKHR(VkDevice device,
-                                                                        VkSemaphoreGetWin32HandleInfoKHR*
-                                                                            pGetWin32HandleInfo,
-                                                                        HANDLE* pHandle);
+        public static extern unsafe VkResult GetSemaphoreWin32HandleKHR(
+            VkDevice                          device,
+            VkSemaphoreGetWin32HandleInfoKHR* pGetWin32HandleInfo,
+            HANDLE*                           pHandle);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkImportFenceWin32HandleKHR")]
-        public static extern unsafe VkResult ImportFenceWin32HandleKHR(VkDevice device,
-                                                                       VkImportFenceWin32HandleInfoKHR*
-                                                                           pImportFenceWin32HandleInfo);
+        public static extern unsafe VkResult ImportFenceWin32HandleKHR(
+            VkDevice                         device,
+            VkImportFenceWin32HandleInfoKHR* pImportFenceWin32HandleInfo);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetFenceWin32HandleKHR")]
-        public static extern unsafe VkResult GetFenceWin32HandleKHR(VkDevice                      device,
-                                                                    VkFenceGetWin32HandleInfoKHR* pGetWin32HandleInfo,
-                                                                    HANDLE*                       pHandle);
+        public static extern unsafe VkResult GetFenceWin32HandleKHR(
+            VkDevice                      device,
+            VkFenceGetWin32HandleInfoKHR* pGetWin32HandleInfo,
+            HANDLE*                       pHandle);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetMemoryWin32HandleNV")]
-        public static extern unsafe VkResult GetMemoryWin32HandleNV(VkDevice                          device,
-                                                                    VkDeviceMemory                    memory,
-                                                                    VkExternalMemoryHandleTypeFlagsNV handleType,
-                                                                    HANDLE*                           pHandle);
+        public static extern unsafe VkResult GetMemoryWin32HandleNV(
+            VkDevice                          device,
+            VkDeviceMemory                    memory,
+            VkExternalMemoryHandleTypeFlagsNV handleType,
+            HANDLE*                           pHandle);
     }
 }
