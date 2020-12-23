@@ -17,6 +17,73 @@ namespace Exomia.Vulkan.Api.Core
     using static Vk;
 
     /// <summary>
+    ///     A vk bool 32.
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public readonly unsafe struct VkBool32
+    {
+        private readonly uint _value;
+
+        /// <summary>
+        ///     Explicit cast that converts the given uint to a VkBool32.
+        /// </summary>
+        /// <param name="value"> The value. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static explicit operator VkBool32(uint value)
+        {
+            VkBool32 v;
+            *(uint*)&v = value;
+            return v;
+        }
+
+        /// <summary>
+        ///     Explicit cast that converts the given uint to a VkBool32.
+        /// </summary>
+        /// <param name="value"> The value. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static explicit operator uint(VkBool32 value)
+        {
+            return value._value;
+        }
+
+        /// <summary>
+        ///     Implicit cast that converts the given uint to a VkBool32.
+        /// </summary>
+        /// <param name="value"> The value. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static implicit operator VkBool32(bool value)
+        {
+            VkBool32 v;
+            *(uint*)&v = *(uint*)&value;
+            return v;
+        }
+
+        /// <summary>
+        ///     Implicit cast that converts the given VkBool32 to a bool.
+        /// </summary>
+        /// <param name="value"> The value. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static implicit operator bool(VkBool32 value)
+        {
+            return *(bool*)&value;
+        }
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"{((bool)this).ToString()} ({_value.ToString()})";
+        }
+    }
+
+    /// <summary>
     ///     Used instead of public fixed float blendConstants[4].
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
@@ -130,7 +197,8 @@ namespace Exomia.Vulkan.Api.Core
         ///     The length of <see cref="VkArray16{T}" />.
         /// </summary>
         public const uint LENGTH = 16;
-#pragma warning disable 1591
+
+#pragma warning disable 1591 //Missing XML comment for publicly visible type or member
         public T M01;
         public T M02;
         public T M03;
@@ -147,7 +215,7 @@ namespace Exomia.Vulkan.Api.Core
         public T M14;
         public T M15;
         public T M16;
-#pragma warning restore 1591
+#pragma warning restore 1591 //Missing XML comment for publicly visible type or member
 
         /// <summary>
         ///     Indexer to get or set items within this collection using array index syntax.
@@ -205,7 +273,7 @@ namespace Exomia.Vulkan.Api.Core
         /// </summary>
         public const int MAX = VK_MAX_DEVICE_GROUP_SIZE;
 
-#pragma warning disable 1591
+#pragma warning disable 1591 //Missing XML comment for publicly visible type or member
         public readonly VkPhysicalDevice M01;
         public readonly VkPhysicalDevice M02;
         public readonly VkPhysicalDevice M03;
@@ -238,7 +306,7 @@ namespace Exomia.Vulkan.Api.Core
         public readonly VkPhysicalDevice M30;
         public readonly VkPhysicalDevice M31;
         public readonly VkPhysicalDevice M32;
-#pragma warning restore 1591
+#pragma warning restore 1591 //Missing XML comment for publicly visible type or member
 
         /// <summary>
         ///     Indexer to get items within this collection using array index syntax.
@@ -250,11 +318,7 @@ namespace Exomia.Vulkan.Api.Core
         public VkMemoryType this[int index]
         {
             get { return *((VkMemoryType*)Unsafe.AsPointer(ref this) + index); }
-
-            //set { *((VkMemoryType*)Unsafe.AsPointer(ref this) + index) = value; }
         }
-
-#pragma warning disable IDE0044 // Add readonly modifier
     }
 
     /// <summary>

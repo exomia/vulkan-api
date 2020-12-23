@@ -251,8 +251,6 @@ namespace Exomia.Vulkan.Api.Core
         public VkMemoryType this[int index]
         {
             get { return *((VkMemoryType*)Unsafe.AsPointer(ref this) + index); }
-
-            //set { *((VkMemoryType*)Unsafe.AsPointer(ref this) + index) = value; }
         }
 
         private readonly VkMemoryType M01;
@@ -292,170 +290,61 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPhysicalDeviceFeatures
     {
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool robustBufferAccess;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fullDrawIndexUint32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool imageCubeArray;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool independentBlend;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool geometryShader;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool tessellationShader;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sampleRateShading;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool dualSrcBlend;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool logicOp;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool multiDrawIndirect;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool drawIndirectFirstInstance;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthClamp;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthBiasClamp;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fillModeNonSolid;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthBounds;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool wideLines;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool largePoints;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool alphaToOne;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool multiViewport;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool samplerAnisotropy;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool textureCompressionETC2;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool textureCompressionASTC_LDR;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool textureCompressionBC;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool occlusionQueryPrecise;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool pipelineStatisticsQuery;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vertexPipelineStoresAndAtomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentStoresAndAtomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderTessellationAndGeometryPointSize;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderImageGatherExtended;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageImageExtendedFormats;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageImageMultisample;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageImageReadWithoutFormat;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageImageWriteWithoutFormat;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderUniformBufferArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSampledImageArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageBufferArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageImageArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderClipDistance;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderCullDistance;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderFloat64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInt64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInt16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderResourceResidency;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderResourceMinLod;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseBinding;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseResidencyBuffer;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseResidencyImage2D;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseResidencyImage3D;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseResidency2Samples;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseResidency4Samples;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseResidency8Samples;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseResidency16Samples;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseResidencyAliased;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool variableMultisampleRate;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool inheritedQueries;
+        public VkBool32 robustBufferAccess;
+        public VkBool32 fullDrawIndexUint32;
+        public VkBool32 imageCubeArray;
+        public VkBool32 independentBlend;
+        public VkBool32 geometryShader;
+        public VkBool32 tessellationShader;
+        public VkBool32 sampleRateShading;
+        public VkBool32 dualSrcBlend;
+        public VkBool32 logicOp;
+        public VkBool32 multiDrawIndirect;
+        public VkBool32 drawIndirectFirstInstance;
+        public VkBool32 depthClamp;
+        public VkBool32 depthBiasClamp;
+        public VkBool32 fillModeNonSolid;
+        public VkBool32 depthBounds;
+        public VkBool32 wideLines;
+        public VkBool32 largePoints;
+        public VkBool32 alphaToOne;
+        public VkBool32 multiViewport;
+        public VkBool32 samplerAnisotropy;
+        public VkBool32 textureCompressionETC2;
+        public VkBool32 textureCompressionASTC_LDR;
+        public VkBool32 textureCompressionBC;
+        public VkBool32 occlusionQueryPrecise;
+        public VkBool32 pipelineStatisticsQuery;
+        public VkBool32 vertexPipelineStoresAndAtomics;
+        public VkBool32 fragmentStoresAndAtomics;
+        public VkBool32 shaderTessellationAndGeometryPointSize;
+        public VkBool32 shaderImageGatherExtended;
+        public VkBool32 shaderStorageImageExtendedFormats;
+        public VkBool32 shaderStorageImageMultisample;
+        public VkBool32 shaderStorageImageReadWithoutFormat;
+        public VkBool32 shaderStorageImageWriteWithoutFormat;
+        public VkBool32 shaderUniformBufferArrayDynamicIndexing;
+        public VkBool32 shaderSampledImageArrayDynamicIndexing;
+        public VkBool32 shaderStorageBufferArrayDynamicIndexing;
+        public VkBool32 shaderStorageImageArrayDynamicIndexing;
+        public VkBool32 shaderClipDistance;
+        public VkBool32 shaderCullDistance;
+        public VkBool32 shaderFloat64;
+        public VkBool32 shaderInt64;
+        public VkBool32 shaderInt16;
+        public VkBool32 shaderResourceResidency;
+        public VkBool32 shaderResourceMinLod;
+        public VkBool32 sparseBinding;
+        public VkBool32 sparseResidencyBuffer;
+        public VkBool32 sparseResidencyImage2D;
+        public VkBool32 sparseResidencyImage3D;
+        public VkBool32 sparseResidency2Samples;
+        public VkBool32 sparseResidency4Samples;
+        public VkBool32 sparseResidency8Samples;
+        public VkBool32 sparseResidency16Samples;
+        public VkBool32 sparseResidencyAliased;
+        public VkBool32 variableMultisampleRate;
+        public VkBool32 inheritedQueries;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -552,29 +441,21 @@ namespace Exomia.Vulkan.Api.Core
         public       VkSampleCountFlags sampledImageStencilSampleCounts;
         public       VkSampleCountFlags storageImageSampleCounts;
         public       uint               maxSampleMaskWords;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool timestampComputeAndGraphics;
-
-        public       float timestampPeriod;
-        public       uint  maxClipDistances;
-        public       uint  maxCullDistances;
-        public       uint  maxCombinedClipAndCullDistances;
-        public       uint  discreteQueuePriorities;
-        public fixed float pointSizeRange[2];
-        public fixed float lineWidthRange[2];
-        public       float pointSizeGranularity;
-        public       float lineWidthGranularity;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool strictLines;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool standardSampleLocations;
-
-        public VkDeviceSize optimalBufferCopyOffsetAlignment;
-        public VkDeviceSize optimalBufferCopyRowPitchAlignment;
-        public VkDeviceSize nonCoherentAtomSize;
+        public       VkBool32           timestampComputeAndGraphics;
+        public       float              timestampPeriod;
+        public       uint               maxClipDistances;
+        public       uint               maxCullDistances;
+        public       uint               maxCombinedClipAndCullDistances;
+        public       uint               discreteQueuePriorities;
+        public fixed float              pointSizeRange[2];
+        public fixed float              lineWidthRange[2];
+        public       float              pointSizeGranularity;
+        public       float              lineWidthGranularity;
+        public       VkBool32           strictLines;
+        public       VkBool32           standardSampleLocations;
+        public       VkDeviceSize       optimalBufferCopyOffsetAlignment;
+        public       VkDeviceSize       optimalBufferCopyRowPitchAlignment;
+        public       VkDeviceSize       nonCoherentAtomSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -589,20 +470,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPhysicalDeviceSparseProperties
     {
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool residencyStandard2DBlockShape;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool residencyStandard2DMultisampleBlockShape;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool residencyStandard3DBlockShape;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool residencyAlignedMipSize;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool residencyNonResidentStrict;
+        public VkBool32 residencyStandard2DBlockShape;
+        public VkBool32 residencyStandard2DMultisampleBlockShape;
+        public VkBool32 residencyStandard3DBlockShape;
+        public VkBool32 residencyAlignedMipSize;
+        public VkBool32 residencyNonResidentStrict;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -614,7 +486,7 @@ namespace Exomia.Vulkan.Api.Core
         public       uint                             deviceID;
         public       VkPhysicalDeviceType             deviceType;
         public fixed sbyte                            deviceName[VK_MAX_PHYSICAL_DEVICE_NAME_SIZE];
-        public fixed sbyte                            pipelineCacheUUID[VK_UUID_SIZE];
+        public fixed byte                             pipelineCacheUUID[VK_UUID_SIZE];
         public       VkPhysicalDeviceLimits           limits;
         public       VkPhysicalDeviceSparseProperties sparseProperties;
     }
@@ -1008,9 +880,7 @@ namespace Exomia.Vulkan.Api.Core
         public void*                                   pNext;
         public VkPipelineInputAssemblyStateCreateFlags flags;
         public VkPrimitiveTopology                     topology;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool primitiveRestartEnable;
+        public VkBool32                                primitiveRestartEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1051,24 +921,16 @@ namespace Exomia.Vulkan.Api.Core
         public VkStructureType                         sType;
         public void*                                   pNext;
         public VkPipelineRasterizationStateCreateFlags flags;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthClampEnable;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool rasterizerDiscardEnable;
-
-        public VkPolygonMode   polygonMode;
-        public VkCullModeFlags cullMode;
-        public VkFrontFace     frontFace;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthBiasEnable;
-
-        public float depthBiasConstantFactor;
-        public float depthBiasClamp;
-        public float depthBiasSlopeFactor;
-        public float lineWidth;
+        public VkBool32                                depthClampEnable;
+        public VkBool32                                rasterizerDiscardEnable;
+        public VkPolygonMode                           polygonMode;
+        public VkCullModeFlags                         cullMode;
+        public VkFrontFace                             frontFace;
+        public VkBool32                                depthBiasEnable;
+        public float                                   depthBiasConstantFactor;
+        public float                                   depthBiasClamp;
+        public float                                   depthBiasSlopeFactor;
+        public float                                   lineWidth;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1078,18 +940,11 @@ namespace Exomia.Vulkan.Api.Core
         public void*                                 pNext;
         public VkPipelineMultisampleStateCreateFlags flags;
         public VkSampleCountFlags                    rasterizationSamples;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sampleShadingEnable;
-
-        public float minSampleShading;
-        public uint* pSampleMask;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool alphaToCoverageEnable;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool alphaToOneEnable;
+        public VkBool32                              sampleShadingEnable;
+        public float                                 minSampleShading;
+        public uint*                                 pSampleMask;
+        public VkBool32                              alphaToCoverageEnable;
+        public VkBool32                              alphaToOneEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1110,33 +965,21 @@ namespace Exomia.Vulkan.Api.Core
         public VkStructureType                        sType;
         public void*                                  pNext;
         public VkPipelineDepthStencilStateCreateFlags flags;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthTestEnable;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthWriteEnable;
-
-        public VkCompareOp depthCompareOp;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthBoundsTestEnable;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool stencilTestEnable;
-
-        public VkStencilOpState front;
-        public VkStencilOpState back;
-        public float            minDepthBounds;
-        public float            maxDepthBounds;
+        public VkBool32                               depthTestEnable;
+        public VkBool32                               depthWriteEnable;
+        public VkCompareOp                            depthCompareOp;
+        public VkBool32                               depthBoundsTestEnable;
+        public VkBool32                               stencilTestEnable;
+        public VkStencilOpState                       front;
+        public VkStencilOpState                       back;
+        public float                                  minDepthBounds;
+        public float                                  maxDepthBounds;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPipelineColorBlendAttachmentState
     {
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool blendEnable;
-
+        public VkBool32              blendEnable;
         public VkBlendFactor         srcColorBlendFactor;
         public VkBlendFactor         dstColorBlendFactor;
         public VkBlendOp             colorBlendOp;
@@ -1149,13 +992,10 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineColorBlendStateCreateInfo
     {
-        public VkStructureType                      sType;
-        public void*                                pNext;
-        public VkPipelineColorBlendStateCreateFlags flags;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool logicOpEnable;
-
+        public       VkStructureType                      sType;
+        public       void*                                pNext;
+        public       VkPipelineColorBlendStateCreateFlags flags;
+        public       VkBool32                             logicOpEnable;
         public       VkLogicOp                            logicOp;
         public       uint                                 attachmentCount;
         public       VkPipelineColorBlendAttachmentState* pAttachments;
@@ -1229,22 +1069,14 @@ namespace Exomia.Vulkan.Api.Core
         public VkSamplerAddressMode addressModeV;
         public VkSamplerAddressMode addressModeW;
         public float                mipLodBias;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool anisotropyEnable;
-
-        public float maxAnisotropy;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool compareEnable;
-
-        public VkCompareOp   compareOp;
-        public float         minLod;
-        public float         maxLod;
-        public VkBorderColor borderColor;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool unnormalizedCoordinates;
+        public VkBool32             anisotropyEnable;
+        public float                maxAnisotropy;
+        public VkBool32             compareEnable;
+        public VkCompareOp          compareOp;
+        public float                minLod;
+        public float                maxLod;
+        public VkBorderColor        borderColor;
+        public VkBool32             unnormalizedCoordinates;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1438,15 +1270,12 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCommandBufferInheritanceInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkRenderPass    renderPass;
-        public uint            subpass;
-        public VkFramebuffer   framebuffer;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool occlusionQueryEnable;
-
+        public VkStructureType               sType;
+        public void*                         pNext;
+        public VkRenderPass                  renderPass;
+        public uint                          subpass;
+        public VkFramebuffer                 framebuffer;
+        public VkBool32                      occlusionQueryEnable;
         public VkQueryControlFlags           queryFlags;
         public VkQueryPipelineStatisticFlags pipelineStatistics;
     }
@@ -1562,9 +1391,7 @@ namespace Exomia.Vulkan.Api.Core
         public uint                   subgroupSize;
         public VkShaderStageFlags     supportedStages;
         public VkSubgroupFeatureFlags supportedOperations;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool quadOperationsInAllStages;
+        public VkBool32               quadOperationsInAllStages;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1592,18 +1419,10 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storageBuffer16BitAccess;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool uniformAndStorageBuffer16BitAccess;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storagePushConstant16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storageInputOutput16;
+        public VkBool32        storageBuffer16BitAccess;
+        public VkBool32        uniformAndStorageBuffer16BitAccess;
+        public VkBool32        storagePushConstant16;
+        public VkBool32        storageInputOutput16;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1611,12 +1430,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool prefersDedicatedAllocation;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool requiresDedicatedAllocation;
+        public VkBool32        prefersDedicatedAllocation;
+        public VkBool32        requiresDedicatedAllocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1704,9 +1519,7 @@ namespace Exomia.Vulkan.Api.Core
         public void*                 pNext;
         public uint                  physicalDeviceCount;
         public VkPhysicalDeviceArray physicalDevices;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool subsetAllocation;
+        public VkBool32              subsetAllocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1897,15 +1710,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool multiview;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool multiviewGeometryShader;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool multiviewTessellationShader;
+        public VkBool32        multiview;
+        public VkBool32        multiviewGeometryShader;
+        public VkBool32        multiviewTessellationShader;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1922,12 +1729,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool variablePointersStorageBuffer;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool variablePointers;
+        public VkBool32        variablePointersStorageBuffer;
+        public VkBool32        variablePointers;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1935,9 +1738,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool protectedMemory;
+        public VkBool32        protectedMemory;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1945,9 +1746,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool protectedNoFault;
+        public VkBool32        protectedNoFault;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1965,9 +1764,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool protectedSubmit;
+        public VkBool32        protectedSubmit;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1982,9 +1779,7 @@ namespace Exomia.Vulkan.Api.Core
         public VkChromaLocation              xChromaOffset;
         public VkChromaLocation              yChromaOffset;
         public VkFilter                      chromaFilter;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool forceExplicitReconstruction;
+        public VkBool32                      forceExplicitReconstruction;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2016,9 +1811,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool samplerYcbcrConversion;
+        public VkBool32        samplerYcbcrConversion;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2106,9 +1899,7 @@ namespace Exomia.Vulkan.Api.Core
         public fixed byte            driverUUID[VK_UUID_SIZE];
         public fixed byte            deviceLUID[VK_LUID_SIZE];
         public       uint            deviceNodeMask;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool deviceLUIDValid;
+        public       VkBool32        deviceLUIDValid;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2201,9 +1992,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool supported;
+        public VkBool32        supported;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2211,9 +2000,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDrawParameters;
+        public VkBool32        shaderDrawParameters;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2221,73 +2008,40 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storageBuffer16BitAccess;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool uniformAndStorageBuffer16BitAccess;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storagePushConstant16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storageInputOutput16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool multiview;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool multiviewGeometryShader;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool multiviewTessellationShader;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool variablePointersStorageBuffer;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool variablePointers;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool protectedMemory;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool samplerYcbcrConversion;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDrawParameters;
+        public VkBool32        storageBuffer16BitAccess;
+        public VkBool32        uniformAndStorageBuffer16BitAccess;
+        public VkBool32        storagePushConstant16;
+        public VkBool32        storageInputOutput16;
+        public VkBool32        multiview;
+        public VkBool32        multiviewGeometryShader;
+        public VkBool32        multiviewTessellationShader;
+        public VkBool32        variablePointersStorageBuffer;
+        public VkBool32        variablePointers;
+        public VkBool32        protectedMemory;
+        public VkBool32        samplerYcbcrConversion;
+        public VkBool32        shaderDrawParameters;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVulkan11Properties
     {
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public fixed byte            deviceUUID[VK_UUID_SIZE];
-        public fixed byte            driverUUID[VK_UUID_SIZE];
-        public fixed byte            deviceLUID[VK_LUID_SIZE];
-        public       uint            deviceNodeMask;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool deviceLUIDValid;
-
-        public uint                   subgroupSize;
-        public VkShaderStageFlags     subgroupSupportedStages;
-        public VkSubgroupFeatureFlags subgroupSupportedOperations;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool subgroupQuadOperationsInAllStages;
-
-        public VkPointClippingBehavior pointClippingBehavior;
-        public uint                    maxMultiviewViewCount;
-        public uint                    maxMultiviewInstanceIndex;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool protectedNoFault;
-
-        public uint         maxPerSetDescriptors;
-        public VkDeviceSize maxMemoryAllocationSize;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public fixed byte                    deviceUUID[VK_UUID_SIZE];
+        public fixed byte                    driverUUID[VK_UUID_SIZE];
+        public fixed byte                    deviceLUID[VK_LUID_SIZE];
+        public       uint                    deviceNodeMask;
+        public       VkBool32                deviceLUIDValid;
+        public       uint                    subgroupSize;
+        public       VkShaderStageFlags      subgroupSupportedStages;
+        public       VkSubgroupFeatureFlags  subgroupSupportedOperations;
+        public       VkBool32                subgroupQuadOperationsInAllStages;
+        public       VkPointClippingBehavior pointClippingBehavior;
+        public       uint                    maxMultiviewViewCount;
+        public       uint                    maxMultiviewInstanceIndex;
+        public       VkBool32                protectedNoFault;
+        public       uint                    maxPerSetDescriptors;
+        public       VkDeviceSize            maxMemoryAllocationSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2295,147 +2049,53 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool samplerMirrorClampToEdge;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool drawIndirectCount;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storageBuffer8BitAccess;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool uniformAndStorageBuffer8BitAccess;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storagePushConstant8;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderBufferInt64Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSharedInt64Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInt8;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInputAttachmentArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderUniformTexelBufferArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageTexelBufferArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderUniformBufferArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSampledImageArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageBufferArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageImageArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInputAttachmentArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderUniformTexelBufferArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageTexelBufferArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingUniformBufferUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingSampledImageUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingStorageImageUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingStorageBufferUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingUniformTexelBufferUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingStorageTexelBufferUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingUpdateUnusedWhilePending;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingPartiallyBound;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingVariableDescriptorCount;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool runtimeDescriptorArray;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool samplerFilterMinmax;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool scalarBlockLayout;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool imagelessFramebuffer;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool uniformBufferStandardLayout;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSubgroupExtendedTypes;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool separateDepthStencilLayouts;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool hostQueryReset;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool timelineSemaphore;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bufferDeviceAddress;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bufferDeviceAddressCaptureReplay;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bufferDeviceAddressMultiDevice;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vulkanMemoryModel;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vulkanMemoryModelDeviceScope;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vulkanMemoryModelAvailabilityVisibilityChains;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderOutputViewportIndex;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderOutputLayer;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool subgroupBroadcastDynamicId;
+        public VkBool32        samplerMirrorClampToEdge;
+        public VkBool32        drawIndirectCount;
+        public VkBool32        storageBuffer8BitAccess;
+        public VkBool32        uniformAndStorageBuffer8BitAccess;
+        public VkBool32        storagePushConstant8;
+        public VkBool32        shaderBufferInt64Atomics;
+        public VkBool32        shaderSharedInt64Atomics;
+        public VkBool32        shaderFloat16;
+        public VkBool32        shaderInt8;
+        public VkBool32        descriptorIndexing;
+        public VkBool32        shaderInputAttachmentArrayDynamicIndexing;
+        public VkBool32        shaderUniformTexelBufferArrayDynamicIndexing;
+        public VkBool32        shaderStorageTexelBufferArrayDynamicIndexing;
+        public VkBool32        shaderUniformBufferArrayNonUniformIndexing;
+        public VkBool32        shaderSampledImageArrayNonUniformIndexing;
+        public VkBool32        shaderStorageBufferArrayNonUniformIndexing;
+        public VkBool32        shaderStorageImageArrayNonUniformIndexing;
+        public VkBool32        shaderInputAttachmentArrayNonUniformIndexing;
+        public VkBool32        shaderUniformTexelBufferArrayNonUniformIndexing;
+        public VkBool32        shaderStorageTexelBufferArrayNonUniformIndexing;
+        public VkBool32        descriptorBindingUniformBufferUpdateAfterBind;
+        public VkBool32        descriptorBindingSampledImageUpdateAfterBind;
+        public VkBool32        descriptorBindingStorageImageUpdateAfterBind;
+        public VkBool32        descriptorBindingStorageBufferUpdateAfterBind;
+        public VkBool32        descriptorBindingUniformTexelBufferUpdateAfterBind;
+        public VkBool32        descriptorBindingStorageTexelBufferUpdateAfterBind;
+        public VkBool32        descriptorBindingUpdateUnusedWhilePending;
+        public VkBool32        descriptorBindingPartiallyBound;
+        public VkBool32        descriptorBindingVariableDescriptorCount;
+        public VkBool32        runtimeDescriptorArray;
+        public VkBool32        samplerFilterMinmax;
+        public VkBool32        scalarBlockLayout;
+        public VkBool32        imagelessFramebuffer;
+        public VkBool32        uniformBufferStandardLayout;
+        public VkBool32        shaderSubgroupExtendedTypes;
+        public VkBool32        separateDepthStencilLayouts;
+        public VkBool32        hostQueryReset;
+        public VkBool32        timelineSemaphore;
+        public VkBool32        bufferDeviceAddress;
+        public VkBool32        bufferDeviceAddressCaptureReplay;
+        public VkBool32        bufferDeviceAddressMultiDevice;
+        public VkBool32        vulkanMemoryModel;
+        public VkBool32        vulkanMemoryModelDeviceScope;
+        public VkBool32        vulkanMemoryModelAvailabilityVisibilityChains;
+        public VkBool32        shaderOutputViewportIndex;
+        public VkBool32        shaderOutputLayer;
+        public VkBool32        subgroupBroadcastDynamicId;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2458,104 +2118,50 @@ namespace Exomia.Vulkan.Api.Core
         public       VkConformanceVersion              conformanceVersion;
         public       VkShaderFloatControlsIndependence denormBehaviorIndependence;
         public       VkShaderFloatControlsIndependence roundingModeIndependence;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSignedZeroInfNanPreserveFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSignedZeroInfNanPreserveFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSignedZeroInfNanPreserveFloat64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormPreserveFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormPreserveFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormPreserveFloat64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormFlushToZeroFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormFlushToZeroFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormFlushToZeroFloat64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTEFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTEFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTEFloat64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTZFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTZFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTZFloat64;
-
-        public uint maxUpdateAfterBindDescriptorsInAllPools;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderUniformBufferArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSampledImageArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageBufferArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageImageArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInputAttachmentArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool robustBufferAccessUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool quadDivergentImplicitLod;
-
-        public uint               maxPerStageDescriptorUpdateAfterBindSamplers;
-        public uint               maxPerStageDescriptorUpdateAfterBindUniformBuffers;
-        public uint               maxPerStageDescriptorUpdateAfterBindStorageBuffers;
-        public uint               maxPerStageDescriptorUpdateAfterBindSampledImages;
-        public uint               maxPerStageDescriptorUpdateAfterBindStorageImages;
-        public uint               maxPerStageDescriptorUpdateAfterBindInputAttachments;
-        public uint               maxPerStageUpdateAfterBindResources;
-        public uint               maxDescriptorSetUpdateAfterBindSamplers;
-        public uint               maxDescriptorSetUpdateAfterBindUniformBuffers;
-        public uint               maxDescriptorSetUpdateAfterBindUniformBuffersDynamic;
-        public uint               maxDescriptorSetUpdateAfterBindStorageBuffers;
-        public uint               maxDescriptorSetUpdateAfterBindStorageBuffersDynamic;
-        public uint               maxDescriptorSetUpdateAfterBindSampledImages;
-        public uint               maxDescriptorSetUpdateAfterBindStorageImages;
-        public uint               maxDescriptorSetUpdateAfterBindInputAttachments;
-        public VkResolveModeFlags supportedDepthResolveModes;
-        public VkResolveModeFlags supportedStencilResolveModes;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool independentResolveNone;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool independentResolve;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool filterMinmaxSingleComponentFormats;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool filterMinmaxImageComponentMapping;
+        public       VkBool32                          shaderSignedZeroInfNanPreserveFloat16;
+        public       VkBool32                          shaderSignedZeroInfNanPreserveFloat32;
+        public       VkBool32                          shaderSignedZeroInfNanPreserveFloat64;
+        public       VkBool32                          shaderDenormPreserveFloat16;
+        public       VkBool32                          shaderDenormPreserveFloat32;
+        public       VkBool32                          shaderDenormPreserveFloat64;
+        public       VkBool32                          shaderDenormFlushToZeroFloat16;
+        public       VkBool32                          shaderDenormFlushToZeroFloat32;
+        public       VkBool32                          shaderDenormFlushToZeroFloat64;
+        public       VkBool32                          shaderRoundingModeRTEFloat16;
+        public       VkBool32                          shaderRoundingModeRTEFloat32;
+        public       VkBool32                          shaderRoundingModeRTEFloat64;
+        public       VkBool32                          shaderRoundingModeRTZFloat16;
+        public       VkBool32                          shaderRoundingModeRTZFloat32;
+        public       VkBool32                          shaderRoundingModeRTZFloat64;
+        public       uint                              maxUpdateAfterBindDescriptorsInAllPools;
+        public       VkBool32                          shaderUniformBufferArrayNonUniformIndexingNative;
+        public       VkBool32                          shaderSampledImageArrayNonUniformIndexingNative;
+        public       VkBool32                          shaderStorageBufferArrayNonUniformIndexingNative;
+        public       VkBool32                          shaderStorageImageArrayNonUniformIndexingNative;
+        public       VkBool32                          shaderInputAttachmentArrayNonUniformIndexingNative;
+        public       VkBool32                          robustBufferAccessUpdateAfterBind;
+        public       VkBool32                          quadDivergentImplicitLod;
+        public       uint                              maxPerStageDescriptorUpdateAfterBindSamplers;
+        public       uint                              maxPerStageDescriptorUpdateAfterBindUniformBuffers;
+        public       uint                              maxPerStageDescriptorUpdateAfterBindStorageBuffers;
+        public       uint                              maxPerStageDescriptorUpdateAfterBindSampledImages;
+        public       uint                              maxPerStageDescriptorUpdateAfterBindStorageImages;
+        public       uint                              maxPerStageDescriptorUpdateAfterBindInputAttachments;
+        public       uint                              maxPerStageUpdateAfterBindResources;
+        public       uint                              maxDescriptorSetUpdateAfterBindSamplers;
+        public       uint                              maxDescriptorSetUpdateAfterBindUniformBuffers;
+        public       uint                              maxDescriptorSetUpdateAfterBindUniformBuffersDynamic;
+        public       uint                              maxDescriptorSetUpdateAfterBindStorageBuffers;
+        public       uint                              maxDescriptorSetUpdateAfterBindStorageBuffersDynamic;
+        public       uint                              maxDescriptorSetUpdateAfterBindSampledImages;
+        public       uint                              maxDescriptorSetUpdateAfterBindStorageImages;
+        public       uint                              maxDescriptorSetUpdateAfterBindInputAttachments;
+        public       VkResolveModeFlags                supportedDepthResolveModes;
+        public       VkResolveModeFlags                supportedStencilResolveModes;
+        public       VkBool32                          independentResolveNone;
+        public       VkBool32                          independentResolve;
+        public       VkBool32                          filterMinmaxSingleComponentFormats;
+        public       VkBool32                          filterMinmaxImageComponentMapping;
 
         public ulong              maxTimelineSemaphoreValueDifference;
         public VkSampleCountFlags framebufferIntegerColorSampleCounts;
@@ -2665,15 +2271,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storageBuffer8BitAccess;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool uniformAndStorageBuffer8BitAccess;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storagePushConstant8;
+        public VkBool32        storageBuffer8BitAccess;
+        public VkBool32        uniformAndStorageBuffer8BitAccess;
+        public VkBool32        storagePushConstant8;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2692,12 +2292,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderBufferInt64Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSharedInt64Atomics;
+        public VkBool32        shaderBufferInt64Atomics;
+        public VkBool32        shaderSharedInt64Atomics;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2705,12 +2301,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInt8;
+        public VkBool32        shaderFloat16;
+        public VkBool32        shaderInt8;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2720,51 +2312,21 @@ namespace Exomia.Vulkan.Api.Core
         public void*                             pNext;
         public VkShaderFloatControlsIndependence denormBehaviorIndependence;
         public VkShaderFloatControlsIndependence roundingModeIndependence;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSignedZeroInfNanPreserveFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSignedZeroInfNanPreserveFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSignedZeroInfNanPreserveFloat64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormPreserveFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormPreserveFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormPreserveFloat64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormFlushToZeroFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormFlushToZeroFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDenormFlushToZeroFloat64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTEFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTEFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTEFloat64;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTZFloat16;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTZFloat32;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderRoundingModeRTZFloat64;
+        public VkBool32                          shaderSignedZeroInfNanPreserveFloat16;
+        public VkBool32                          shaderSignedZeroInfNanPreserveFloat32;
+        public VkBool32                          shaderSignedZeroInfNanPreserveFloat64;
+        public VkBool32                          shaderDenormPreserveFloat16;
+        public VkBool32                          shaderDenormPreserveFloat32;
+        public VkBool32                          shaderDenormPreserveFloat64;
+        public VkBool32                          shaderDenormFlushToZeroFloat16;
+        public VkBool32                          shaderDenormFlushToZeroFloat32;
+        public VkBool32                          shaderDenormFlushToZeroFloat64;
+        public VkBool32                          shaderRoundingModeRTEFloat16;
+        public VkBool32                          shaderRoundingModeRTEFloat32;
+        public VkBool32                          shaderRoundingModeRTEFloat64;
+        public VkBool32                          shaderRoundingModeRTZFloat16;
+        public VkBool32                          shaderRoundingModeRTZFloat32;
+        public VkBool32                          shaderRoundingModeRTZFloat64;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2781,66 +2343,26 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInputAttachmentArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderUniformTexelBufferArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageTexelBufferArrayDynamicIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderUniformBufferArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSampledImageArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageBufferArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageImageArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInputAttachmentArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderUniformTexelBufferArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageTexelBufferArrayNonUniformIndexing;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingUniformBufferUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingSampledImageUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingStorageImageUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingStorageBufferUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingUniformTexelBufferUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingStorageTexelBufferUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingUpdateUnusedWhilePending;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingPartiallyBound;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingVariableDescriptorCount;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool runtimeDescriptorArray;
+        public VkBool32        shaderInputAttachmentArrayDynamicIndexing;
+        public VkBool32        shaderUniformTexelBufferArrayDynamicIndexing;
+        public VkBool32        shaderStorageTexelBufferArrayDynamicIndexing;
+        public VkBool32        shaderUniformBufferArrayNonUniformIndexing;
+        public VkBool32        shaderSampledImageArrayNonUniformIndexing;
+        public VkBool32        shaderStorageBufferArrayNonUniformIndexing;
+        public VkBool32        shaderStorageImageArrayNonUniformIndexing;
+        public VkBool32        shaderInputAttachmentArrayNonUniformIndexing;
+        public VkBool32        shaderUniformTexelBufferArrayNonUniformIndexing;
+        public VkBool32        shaderStorageTexelBufferArrayNonUniformIndexing;
+        public VkBool32        descriptorBindingUniformBufferUpdateAfterBind;
+        public VkBool32        descriptorBindingSampledImageUpdateAfterBind;
+        public VkBool32        descriptorBindingStorageImageUpdateAfterBind;
+        public VkBool32        descriptorBindingStorageBufferUpdateAfterBind;
+        public VkBool32        descriptorBindingUniformTexelBufferUpdateAfterBind;
+        public VkBool32        descriptorBindingStorageTexelBufferUpdateAfterBind;
+        public VkBool32        descriptorBindingUpdateUnusedWhilePending;
+        public VkBool32        descriptorBindingPartiallyBound;
+        public VkBool32        descriptorBindingVariableDescriptorCount;
+        public VkBool32        runtimeDescriptorArray;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2849,43 +2371,28 @@ namespace Exomia.Vulkan.Api.Core
         public VkStructureType sType;
         public void*           pNext;
         public uint            maxUpdateAfterBindDescriptorsInAllPools;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderUniformBufferArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSampledImageArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageBufferArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderStorageImageArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderInputAttachmentArrayNonUniformIndexingNative;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool robustBufferAccessUpdateAfterBind;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool quadDivergentImplicitLod;
-
-        public uint maxPerStageDescriptorUpdateAfterBindSamplers;
-        public uint maxPerStageDescriptorUpdateAfterBindUniformBuffers;
-        public uint maxPerStageDescriptorUpdateAfterBindStorageBuffers;
-        public uint maxPerStageDescriptorUpdateAfterBindSampledImages;
-        public uint maxPerStageDescriptorUpdateAfterBindStorageImages;
-        public uint maxPerStageDescriptorUpdateAfterBindInputAttachments;
-        public uint maxPerStageUpdateAfterBindResources;
-        public uint maxDescriptorSetUpdateAfterBindSamplers;
-        public uint maxDescriptorSetUpdateAfterBindUniformBuffers;
-        public uint maxDescriptorSetUpdateAfterBindUniformBuffersDynamic;
-        public uint maxDescriptorSetUpdateAfterBindStorageBuffers;
-        public uint maxDescriptorSetUpdateAfterBindStorageBuffersDynamic;
-        public uint maxDescriptorSetUpdateAfterBindSampledImages;
-        public uint maxDescriptorSetUpdateAfterBindStorageImages;
-        public uint maxDescriptorSetUpdateAfterBindInputAttachments;
+        public VkBool32        shaderUniformBufferArrayNonUniformIndexingNative;
+        public VkBool32        shaderSampledImageArrayNonUniformIndexingNative;
+        public VkBool32        shaderStorageBufferArrayNonUniformIndexingNative;
+        public VkBool32        shaderStorageImageArrayNonUniformIndexingNative;
+        public VkBool32        shaderInputAttachmentArrayNonUniformIndexingNative;
+        public VkBool32        robustBufferAccessUpdateAfterBind;
+        public VkBool32        quadDivergentImplicitLod;
+        public uint            maxPerStageDescriptorUpdateAfterBindSamplers;
+        public uint            maxPerStageDescriptorUpdateAfterBindUniformBuffers;
+        public uint            maxPerStageDescriptorUpdateAfterBindStorageBuffers;
+        public uint            maxPerStageDescriptorUpdateAfterBindSampledImages;
+        public uint            maxPerStageDescriptorUpdateAfterBindStorageImages;
+        public uint            maxPerStageDescriptorUpdateAfterBindInputAttachments;
+        public uint            maxPerStageUpdateAfterBindResources;
+        public uint            maxDescriptorSetUpdateAfterBindSamplers;
+        public uint            maxDescriptorSetUpdateAfterBindUniformBuffers;
+        public uint            maxDescriptorSetUpdateAfterBindUniformBuffersDynamic;
+        public uint            maxDescriptorSetUpdateAfterBindStorageBuffers;
+        public uint            maxDescriptorSetUpdateAfterBindStorageBuffersDynamic;
+        public uint            maxDescriptorSetUpdateAfterBindSampledImages;
+        public uint            maxDescriptorSetUpdateAfterBindStorageImages;
+        public uint            maxDescriptorSetUpdateAfterBindInputAttachments;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2922,12 +2429,8 @@ namespace Exomia.Vulkan.Api.Core
         public void*              pNext;
         public VkResolveModeFlags supportedDepthResolveModes;
         public VkResolveModeFlags supportedStencilResolveModes;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool independentResolveNone;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool independentResolve;
+        public VkBool32           independentResolveNone;
+        public VkBool32           independentResolve;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2935,9 +2438,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool scalarBlockLayout;
+        public VkBool32        scalarBlockLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2961,12 +2462,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool filterMinmaxSingleComponentFormats;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool filterMinmaxImageComponentMapping;
+        public VkBool32        filterMinmaxSingleComponentFormats;
+        public VkBool32        filterMinmaxImageComponentMapping;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2974,15 +2471,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vulkanMemoryModel;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vulkanMemoryModelDeviceScope;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vulkanMemoryModelAvailabilityVisibilityChains;
+        public VkBool32        vulkanMemoryModel;
+        public VkBool32        vulkanMemoryModelDeviceScope;
+        public VkBool32        vulkanMemoryModelAvailabilityVisibilityChains;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2990,9 +2481,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool imagelessFramebuffer;
+        public VkBool32        imagelessFramebuffer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3032,9 +2521,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool uniformBufferStandardLayout;
+        public VkBool32        uniformBufferStandardLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3042,9 +2529,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSubgroupExtendedTypes;
+        public VkBool32        shaderSubgroupExtendedTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3052,9 +2537,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool separateDepthStencilLayouts;
+        public VkBool32        separateDepthStencilLayouts;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3079,9 +2562,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool hostQueryReset;
+        public VkBool32        hostQueryReset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3089,9 +2570,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool timelineSemaphore;
+        public VkBool32        timelineSemaphore;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3147,15 +2626,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bufferDeviceAddress;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bufferDeviceAddressCaptureReplay;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bufferDeviceAddressMultiDevice;
+        public VkBool32        bufferDeviceAddress;
+        public VkBool32        bufferDeviceAddressCaptureReplay;
+        public VkBool32        bufferDeviceAddressMultiDevice;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3231,11 +2704,8 @@ namespace Exomia.Vulkan.Api.Core
         public VkSurfaceTransformFlagsKHR preTransform;
         public VkCompositeAlphaFlagsKHR   compositeAlpha;
         public VkPresentModeKHR           presentMode;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool clipped;
-
-        public VkSwapchainKHR oldSwapchain;
+        public VkBool32                   clipped;
+        public VkSwapchainKHR             oldSwapchain;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3359,12 +2829,8 @@ namespace Exomia.Vulkan.Api.Core
         public VkExtent2D                 physicalDimensions;
         public VkExtent2D                 physicalResolution;
         public VkSurfaceTransformFlagsKHR supportedTransforms;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool planeReorderPossible;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool persistentContent;
+        public VkBool32                   planeReorderPossible;
+        public VkBool32                   persistentContent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3389,9 +2855,7 @@ namespace Exomia.Vulkan.Api.Core
         public void*           pNext;
         public VkRect2D        srcRect;
         public VkRect2D        dstRect;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool persistent;
+        public VkBool32        persistent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3505,12 +2969,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool performanceCounterQueryPools;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool performanceCounterMultipleQueryPools;
+        public VkBool32        performanceCounterQueryPools;
+        public VkBool32        performanceCounterMultipleQueryPools;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3518,9 +2978,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool allowCommandBufferQueryCopies;
+        public VkBool32        allowCommandBufferQueryCopies;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3642,12 +3100,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSubgroupClock;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDeviceClock;
+        public VkBool32        shaderSubgroupClock;
+        public VkBool32        shaderDeviceClock;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3655,9 +3109,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderTerminateInvocation;
+        public VkBool32        shaderTerminateInvocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3684,60 +3136,33 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool pipelineFragmentShadingRate;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool primitiveFragmentShadingRate;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool attachmentFragmentShadingRate;
+        public VkBool32        pipelineFragmentShadingRate;
+        public VkBool32        primitiveFragmentShadingRate;
+        public VkBool32        attachmentFragmentShadingRate;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkExtent2D      minFragmentShadingRateAttachmentTexelSize;
-        public VkExtent2D      maxFragmentShadingRateAttachmentTexelSize;
-        public uint            maxFragmentShadingRateAttachmentTexelSizeAspectRatio;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool primitiveFragmentShadingRateWithMultipleViewports;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool layeredShadingRateAttachments;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShadingRateNonTrivialCombinerOps;
-
+        public VkStructureType    sType;
+        public void*              pNext;
+        public VkExtent2D         minFragmentShadingRateAttachmentTexelSize;
+        public VkExtent2D         maxFragmentShadingRateAttachmentTexelSize;
+        public uint               maxFragmentShadingRateAttachmentTexelSizeAspectRatio;
+        public VkBool32           primitiveFragmentShadingRateWithMultipleViewports;
+        public VkBool32           layeredShadingRateAttachments;
+        public VkBool32           fragmentShadingRateNonTrivialCombinerOps;
         public VkExtent2D         maxFragmentSize;
         public uint               maxFragmentSizeAspectRatio;
         public uint               maxFragmentShadingRateCoverageSamples;
         public VkSampleCountFlags maxFragmentShadingRateRasterizationSamples;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShadingRateWithShaderDepthStencilWrites;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShadingRateWithSampleMask;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShadingRateWithShaderSampleMask;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShadingRateWithConservativeRasterization;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShadingRateWithFragmentShaderInterlock;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShadingRateWithCustomSampleLocations;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShadingRateStrictMultiplyCombiner;
+        public VkBool32           fragmentShadingRateWithShaderDepthStencilWrites;
+        public VkBool32           fragmentShadingRateWithSampleMask;
+        public VkBool32           fragmentShadingRateWithShaderSampleMask;
+        public VkBool32           fragmentShadingRateWithConservativeRasterization;
+        public VkBool32           fragmentShadingRateWithFragmentShaderInterlock;
+        public VkBool32           fragmentShadingRateWithCustomSampleLocations;
+        public VkBool32           fragmentShadingRateStrictMultiplyCombiner;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3754,9 +3179,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool supportsProtected;
+        public VkBool32        supportsProtected;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3764,9 +3187,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool pipelineExecutableInfo;
+        public VkBool32        pipelineExecutableInfo;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3815,9 +3236,7 @@ namespace Exomia.Vulkan.Api.Core
         public       void*           pNext;
         public fixed sbyte           name[VK_MAX_DESCRIPTION_SIZE];
         public fixed sbyte           description[VK_MAX_DESCRIPTION_SIZE];
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool isText;
+        public       VkBool32        isText;
 
         public nuint dataSize;
         public void* pData;
@@ -3970,12 +3389,8 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugReportCallbackCreateInfoEXT
     {
-        [MarshalAs(UnmanagedType.U4)]
-        public VkStructureType sType;
-
-        public void* pNext;
-
-        [MarshalAs(UnmanagedType.U4)]
+        public VkStructureType       sType;
+        public void*                 pNext;
         public VkDebugReportFlagsEXT flags;
 
         public delegate* unmanaged<
@@ -4036,9 +3451,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool dedicatedAllocation;
+        public VkBool32        dedicatedAllocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4046,9 +3459,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool dedicatedAllocation;
+        public VkBool32        dedicatedAllocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4065,12 +3476,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool transformFeedback;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool geometryStreams;
+        public VkBool32        transformFeedback;
+        public VkBool32        geometryStreams;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4084,18 +3491,10 @@ namespace Exomia.Vulkan.Api.Core
         public uint            maxTransformFeedbackStreamDataSize;
         public uint            maxTransformFeedbackBufferDataSize;
         public uint            maxTransformFeedbackBufferDataStride;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool transformFeedbackQueries;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool transformFeedbackStreamsLinesTriangles;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool transformFeedbackRasterizationStreamSelect;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool transformFeedbackDraw;
+        public VkBool32        transformFeedbackQueries;
+        public VkBool32        transformFeedbackStreamsLinesTriangles;
+        public VkBool32        transformFeedbackRasterizationStreamSelect;
+        public VkBool32        transformFeedbackDraw;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4131,9 +3530,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool supportsTextureGatherLODBiasAMD;
+        public VkBool32        supportsTextureGatherLODBiasAMD;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4163,9 +3560,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool cornerSampledImage;
+        public VkBool32        cornerSampledImage;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4207,9 +3602,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool textureCompressionASTC_HDR;
+        public VkBool32        textureCompressionASTC_HDR;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4225,9 +3618,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool decodeModeSharedExponent;
+        public VkBool32        decodeModeSharedExponent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4245,12 +3636,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool conditionalRendering;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool inheritedConditionalRendering;
+        public VkBool32        conditionalRendering;
+        public VkBool32        inheritedConditionalRendering;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4258,9 +3645,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool conditionalRenderingEnable;
+        public VkBool32        conditionalRenderingEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4275,9 +3660,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool viewportWScalingEnable;
+        public VkBool32        viewportWScalingEnable;
 
         public uint                  viewportCount;
         public VkViewportWScalingNV* pViewportWScalings;
@@ -4370,9 +3753,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool perViewPositionAllComponents;
+        public VkBool32        perViewPositionAllComponents;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4421,24 +3802,12 @@ namespace Exomia.Vulkan.Api.Core
         public float           primitiveOverestimationSize;
         public float           maxExtraPrimitiveOverestimationSize;
         public float           extraPrimitiveOverestimationSizeGranularity;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool primitiveUnderestimation;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool conservativePointAndLineRasterization;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool degenerateTrianglesRasterized;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool degenerateLinesRasterized;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fullyCoveredFragmentShaderInputVariable;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool conservativeRasterizationPostDepthCoverage;
+        public VkBool32        primitiveUnderestimation;
+        public VkBool32        conservativePointAndLineRasterization;
+        public VkBool32        degenerateTrianglesRasterized;
+        public VkBool32        degenerateLinesRasterized;
+        public VkBool32        fullyCoveredFragmentShaderInputVariable;
+        public VkBool32        conservativeRasterizationPostDepthCoverage;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4456,9 +3825,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthClipEnable;
+        public VkBool32        depthClipEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4467,9 +3834,7 @@ namespace Exomia.Vulkan.Api.Core
         public VkStructureType                                     sType;
         public void*                                               pNext;
         public VkPipelineRasterizationDepthClipStateCreateFlagsEXT flags;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool depthClipEnable;
+        public VkBool32                                            depthClipEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4538,21 +3903,16 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugUtilsMessengerCreateInfoEXT
     {
-        [MarshalAs(UnmanagedType.U4)]
         public VkStructureType sType;
-
-        public void* pNext;
+        public void*           pNext;
 
         /// <summary>
         ///     Is 0 and is reserved for future use.
         /// </summary>
         public uint flags;
 
-        [MarshalAs(UnmanagedType.U4)]
         public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
-
-        [MarshalAs(UnmanagedType.U4)]
-        public VkDebugUtilsMessageTypeFlagsEXT messageType;
+        public VkDebugUtilsMessageTypeFlagsEXT     messageType;
 
         public delegate* unmanaged<
             VkDebugUtilsMessageSeverityFlagsEXT,   /* messageSeverity */
@@ -4581,12 +3941,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool inlineUniformBlock;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingInlineUniformBlockUpdateAfterBind;
+        public VkBool32        inlineUniformBlock;
+        public VkBool32        descriptorBindingInlineUniformBlockUpdateAfterBind;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4664,12 +4020,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineSampleLocationsStateCreateInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sampleLocationsEnable;
-
+        public VkStructureType          sType;
+        public void*                    pNext;
+        public VkBool32                 sampleLocationsEnable;
         public VkSampleLocationsInfoEXT sampleLocationsInfo;
     }
 
@@ -4682,9 +4035,7 @@ namespace Exomia.Vulkan.Api.Core
         public       VkExtent2D         maxSampleLocationGridSize;
         public fixed float              sampleLocationCoordinateRange[2];
         public       uint               sampleLocationSubPixelBits;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool variableSampleLocations;
+        public       VkBool32           variableSampleLocations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4700,9 +4051,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool advancedBlendCoherentOperations;
+        public VkBool32        advancedBlendCoherentOperations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4711,35 +4060,20 @@ namespace Exomia.Vulkan.Api.Core
         public VkStructureType sType;
         public void*           pNext;
         public uint            advancedBlendMaxColorAttachments;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool advancedBlendIndependentBlend;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool advancedBlendNonPremultipliedSrcColor;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool advancedBlendNonPremultipliedDstColor;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool advancedBlendCorrelatedOverlap;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool advancedBlendAllOperations;
+        public VkBool32        advancedBlendIndependentBlend;
+        public VkBool32        advancedBlendNonPremultipliedSrcColor;
+        public VkBool32        advancedBlendNonPremultipliedDstColor;
+        public VkBool32        advancedBlendCorrelatedOverlap;
+        public VkBool32        advancedBlendAllOperations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineColorBlendAdvancedStateCreateInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool srcPremultiplied;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool dstPremultiplied;
-
+        public VkStructureType   sType;
+        public void*             pNext;
+        public VkBool32          srcPremultiplied;
+        public VkBool32          dstPremultiplied;
         public VkBlendOverlapEXT blendOverlap;
     }
 
@@ -4749,11 +4083,8 @@ namespace Exomia.Vulkan.Api.Core
         public VkStructureType                             sType;
         public void*                                       pNext;
         public VkPipelineCoverageToColorStateCreateFlagsNV flags;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool coverageToColorEnable;
-
-        public uint coverageToColorLocation;
+        public VkBool32                                    coverageToColorEnable;
+        public uint                                        coverageToColorLocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4763,12 +4094,9 @@ namespace Exomia.Vulkan.Api.Core
         public void*                                          pNext;
         public VkPipelineCoverageModulationStateCreateFlagsNV flags;
         public VkCoverageModulationModeNV                     coverageModulationMode;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool coverageModulationTableEnable;
-
-        public uint   coverageModulationTableCount;
-        public float* pCoverageModulationTable;
+        public VkBool32                                       coverageModulationTableEnable;
+        public uint                                           coverageModulationTableCount;
+        public float*                                         pCoverageModulationTable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4785,9 +4113,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSMBuiltins;
+        public VkBool32        shaderSMBuiltins;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4873,12 +4199,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportShadingRateImageStateCreateInfoNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shadingRateImageEnable;
-
+        public VkStructureType         sType;
+        public void*                   pNext;
+        public VkBool32                shadingRateImageEnable;
         public uint                    viewportCount;
         public VkShadingRatePaletteNV* pShadingRatePalettes;
     }
@@ -4888,12 +4211,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shadingRateImage;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shadingRateCoarseSampleOrder;
+        public VkBool32        shadingRateImage;
+        public VkBool32        shadingRateCoarseSampleOrder;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5141,9 +4460,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool representativeFragmentTest;
+        public VkBool32        representativeFragmentTest;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5151,9 +4468,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool representativeFragmentTestEnable;
+        public VkBool32        representativeFragmentTestEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5169,12 +4484,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool filterCubic;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool filterCubicMinmax;
+        public VkBool32        filterCubic;
+        public VkBool32        filterCubicMinmax;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5284,12 +4595,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vertexAttributeInstanceRateDivisor;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vertexAttributeInstanceRateZeroDivisor;
+        public VkBool32        vertexAttributeInstanceRateDivisor;
+        public VkBool32        vertexAttributeInstanceRateZeroDivisor;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5314,12 +4621,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool computeDerivativeGroupQuads;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool computeDerivativeGroupLinear;
+        public VkBool32        computeDerivativeGroupQuads;
+        public VkBool32        computeDerivativeGroupLinear;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5327,12 +4630,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool taskShader;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool meshShader;
+        public VkBool32        taskShader;
+        public VkBool32        meshShader;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5367,9 +4666,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShaderBarycentric;
+        public VkBool32        fragmentShaderBarycentric;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5377,9 +4674,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool imageFootprint;
+        public VkBool32        imageFootprint;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5396,9 +4691,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool exclusiveScissor;
+        public VkBool32        exclusiveScissor;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5423,9 +4716,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderIntegerFunctions2;
+        public VkBool32        shaderIntegerFunctions2;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5473,11 +4764,8 @@ namespace Exomia.Vulkan.Api.Core
         public VkStructureType                sType;
         public void*                          pNext;
         public VkPerformanceOverrideTypeINTEL type;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool enable;
-
-        public ulong parameter;
+        public VkBool32                       enable;
+        public ulong                          parameter;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5504,9 +4792,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool localDimmingSupport;
+        public VkBool32        localDimmingSupport;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5514,9 +4800,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool localDimmingEnable;
+        public VkBool32        localDimmingEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5524,15 +4808,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentDensityMap;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentDensityMapDynamic;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentDensityMapNonSubsampledImages;
+        public VkBool32        fragmentDensityMap;
+        public VkBool32        fragmentDensityMapDynamic;
+        public VkBool32        fragmentDensityMapNonSubsampledImages;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5542,9 +4820,7 @@ namespace Exomia.Vulkan.Api.Core
         public void*           pNext;
         public VkExtent2D      minFragmentDensityTexelSize;
         public VkExtent2D      maxFragmentDensityTexelSize;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentDensityInvocations;
+        public VkBool32        fragmentDensityInvocations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5560,12 +4836,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool subgroupSizeControl;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool computeFullSubgroups;
+        public VkBool32        subgroupSizeControl;
+        public VkBool32        computeFullSubgroups;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5601,9 +4873,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool deviceCoherentMemory;
+        public VkBool32        deviceCoherentMemory;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5611,12 +4881,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderImageInt64Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseImageInt64Atomics;
+        public VkBool32        shaderImageInt64Atomics;
+        public VkBool32        sparseImageInt64Atomics;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5633,9 +4899,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool memoryPriority;
+        public VkBool32        memoryPriority;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5651,9 +4915,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool dedicatedAllocationImageAliasing;
+        public VkBool32        dedicatedAllocationImageAliasing;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5661,15 +4923,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bufferDeviceAddress;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bufferDeviceAddressCaptureReplay;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bufferDeviceAddressMultiDevice;
+        public VkBool32        bufferDeviceAddress;
+        public VkBool32        bufferDeviceAddressCaptureReplay;
+        public VkBool32        bufferDeviceAddressMultiDevice;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5723,12 +4979,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool cooperativeMatrix;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool cooperativeMatrixRobustBufferAccess;
+        public VkBool32        cooperativeMatrix;
+        public VkBool32        cooperativeMatrixRobustBufferAccess;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5744,9 +4996,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool coverageReductionMode;
+        public VkBool32        coverageReductionMode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5774,15 +5024,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShaderSampleInterlock;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShaderPixelInterlock;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShaderShadingRateInterlock;
+        public VkBool32        fragmentShaderSampleInterlock;
+        public VkBool32        fragmentShaderPixelInterlock;
+        public VkBool32        fragmentShaderShadingRateInterlock;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5790,9 +5034,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool ycbcrImageArrays;
+        public VkBool32        ycbcrImageArrays;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5808,24 +5050,12 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool rectangularLines;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool bresenhamLines;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool smoothLines;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool stippledRectangularLines;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool stippledBresenhamLines;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool stippledSmoothLines;
+        public VkBool32        rectangularLines;
+        public VkBool32        bresenhamLines;
+        public VkBool32        smoothLines;
+        public VkBool32        stippledRectangularLines;
+        public VkBool32        stippledBresenhamLines;
+        public VkBool32        stippledSmoothLines;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5842,9 +5072,7 @@ namespace Exomia.Vulkan.Api.Core
         public VkStructureType            sType;
         public void*                      pNext;
         public VkLineRasterizationModeEXT lineRasterizationMode;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool stippledLineEnable;
+        public VkBool32                   stippledLineEnable;
 
         public uint   lineStippleFactor;
         public ushort lineStipplePattern;
@@ -5855,42 +5083,18 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderBufferFloat32Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderBufferFloat32AtomicAdd;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderBufferFloat64Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderBufferFloat64AtomicAdd;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSharedFloat32Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSharedFloat32AtomicAdd;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSharedFloat64Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderSharedFloat64AtomicAdd;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderImageFloat32Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderImageFloat32AtomicAdd;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseImageFloat32Atomics;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool sparseImageFloat32AtomicAdd;
+        public VkBool32        shaderBufferFloat32Atomics;
+        public VkBool32        shaderBufferFloat32AtomicAdd;
+        public VkBool32        shaderBufferFloat64Atomics;
+        public VkBool32        shaderBufferFloat64AtomicAdd;
+        public VkBool32        shaderSharedFloat32Atomics;
+        public VkBool32        shaderSharedFloat32AtomicAdd;
+        public VkBool32        shaderSharedFloat64Atomics;
+        public VkBool32        shaderSharedFloat64AtomicAdd;
+        public VkBool32        shaderImageFloat32Atomics;
+        public VkBool32        shaderImageFloat32AtomicAdd;
+        public VkBool32        sparseImageFloat32Atomics;
+        public VkBool32        sparseImageFloat32AtomicAdd;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5898,9 +5102,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool indexTypeUint8;
+        public VkBool32        indexTypeUint8;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5908,9 +5110,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool extendedDynamicState;
+        public VkBool32        extendedDynamicState;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5918,9 +5118,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool shaderDemoteToHelperInvocation;
+        public VkBool32        shaderDemoteToHelperInvocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5944,9 +5142,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool deviceGeneratedCommands;
+        public VkBool32        deviceGeneratedCommands;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6015,18 +5211,15 @@ namespace Exomia.Vulkan.Api.Core
         public uint                          stream;
         public uint                          offset;
         public uint                          vertexBindingUnit;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool vertexDynamicStride;
-
-        public VkPipelineLayout       pushconstantPipelineLayout;
-        public VkShaderStageFlags     pushconstantShaderStageFlags;
-        public uint                   pushconstantOffset;
-        public uint                   pushconstantSize;
-        public VkIndirectStateFlagsNV indirectStateFlags;
-        public uint                   indexTypeCount;
-        public VkIndexType*           pIndexTypes;
-        public uint*                  pIndexTypeValues;
+        public VkBool32                      vertexDynamicStride;
+        public VkPipelineLayout              pushconstantPipelineLayout;
+        public VkShaderStageFlags            pushconstantShaderStageFlags;
+        public uint                          pushconstantOffset;
+        public uint                          pushconstantSize;
+        public VkIndirectStateFlagsNV        indirectStateFlags;
+        public uint                          indexTypeCount;
+        public VkIndexType*                  pIndexTypes;
+        public uint*                         pIndexTypeValues;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6078,9 +5271,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool texelBufferAlignment;
+        public VkBool32        texelBufferAlignment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6089,14 +5280,9 @@ namespace Exomia.Vulkan.Api.Core
         public VkStructureType sType;
         public void*           pNext;
         public VkDeviceSize    storageTexelBufferOffsetAlignmentBytes;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool storageTexelBufferOffsetSingleTexelAlignment;
-
-        public VkDeviceSize uniformTexelBufferOffsetAlignmentBytes;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool uniformTexelBufferOffsetSingleTexelAlignment;
+        public VkBool32        storageTexelBufferOffsetSingleTexelAlignment;
+        public VkDeviceSize    uniformTexelBufferOffsetAlignmentBytes;
+        public VkBool32        uniformTexelBufferOffsetSingleTexelAlignment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6121,9 +5307,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool deviceMemoryReport;
+        public VkBool32        deviceMemoryReport;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6155,15 +5339,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool robustBufferAccess2;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool robustImageAccess2;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool nullDescriptor;
+        public VkBool32        robustBufferAccess2;
+        public VkBool32        robustImageAccess2;
+        public VkBool32        nullDescriptor;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6197,12 +5375,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool customBorderColors;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool customBorderColorWithoutFormat;
+        public VkBool32        customBorderColors;
+        public VkBool32        customBorderColorWithoutFormat;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6210,9 +5384,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool privateData;
+        public VkBool32        privateData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6236,9 +5408,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool pipelineCreationCacheControl;
+        public VkBool32        pipelineCreationCacheControl;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6246,9 +5416,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool diagnosticsConfig;
+        public VkBool32        diagnosticsConfig;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6264,15 +5432,9 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentShadingRateEnums;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool supersampleFragmentShadingRates;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool noInvocationFragmentShadingRates;
+        public VkBool32        fragmentShadingRateEnums;
+        public VkBool32        supersampleFragmentShadingRates;
+        public VkBool32        noInvocationFragmentShadingRates;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6299,9 +5461,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool fragmentDensityMapDeferred;
+        public VkBool32        fragmentDensityMapDeferred;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6309,12 +5469,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool subsampledLoads;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool subsampledCoarseReconstructionEarlyAccess;
+        public VkBool32        subsampledLoads;
+        public VkBool32        subsampledCoarseReconstructionEarlyAccess;
 
         public uint maxSubsampledArrayLayers;
         public uint maxDescriptorSetSubsampledSamplers;
@@ -6333,9 +5489,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool robustImageAccess;
+        public VkBool32        robustImageAccess;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6343,12 +5497,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool formatA4R4G4B4;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool formatA4B4G4R4;
+        public VkBool32        formatA4R4G4B4;
+        public VkBool32        formatA4B4G4R4;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6356,9 +5506,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool mutableDescriptorType;
+        public VkBool32        mutableDescriptorType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6414,9 +5562,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool arrayOfPointers;
+        public VkBool32        arrayOfPointers;
 
         public VkDeviceOrHostAddressConstKHR data;
     }
@@ -6474,21 +5620,11 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool accelerationStructure;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool accelerationStructureCaptureReplay;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool accelerationStructureIndirectBuild;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool accelerationStructureHostCommands;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool descriptorBindingAccelerationStructureUpdateAfterBind;
+        public VkBool32        accelerationStructure;
+        public VkBool32        accelerationStructureCaptureReplay;
+        public VkBool32        accelerationStructureIndirectBuild;
+        public VkBool32        accelerationStructureHostCommands;
+        public VkBool32        descriptorBindingAccelerationStructureUpdateAfterBind;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6608,21 +5744,11 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool rayTracingPipeline;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool rayTracingPipelineShaderGroupHandleCaptureReplay;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool rayTracingPipelineShaderGroupHandleCaptureReplayMixed;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool rayTracingPipelineTraceRaysIndirect;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool rayTraversalPrimitiveCulling;
+        public VkBool32        rayTracingPipeline;
+        public VkBool32        rayTracingPipelineShaderGroupHandleCaptureReplay;
+        public VkBool32        rayTracingPipelineShaderGroupHandleCaptureReplayMixed;
+        public VkBool32        rayTracingPipelineTraceRaysIndirect;
+        public VkBool32        rayTraversalPrimitiveCulling;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6661,8 +5787,6 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkStructureType sType;
         public void*           pNext;
-
-        [MarshalAs(UnmanagedType.Bool)]
-        public bool rayQuery;
+        public VkBool32        rayQuery;
     }
 }

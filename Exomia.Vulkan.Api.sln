@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exomia.Vulkan.Api.Core", "src\Exomia.Vulkan.Api.Core\Exomia.Vulkan.Api.Core.csproj", "{27287070-EC8F-490A-8AE4-DB8B7A2C99C2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exomia.Vulkan.Api.Win32", "src\Exomia.Vulkan.Api.Windows\Exomia.Vulkan.Api.Windows.csproj", "{EF39D92F-EFAB-4279-A528-276E6B677C57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exomia.Vulkan.Api.Windows", "src\Exomia.Vulkan.Api.Windows\Exomia.Vulkan.Api.Windows.csproj", "{EF39D92F-EFAB-4279-A528-276E6B677C57}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0C693EFF-7745-4445-9BF6-68FE6D83D5C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exomia.Vulkan.Api.Core.Tests", "tests\L0\Exomia.Vulkan.Api.Core.Tests\Exomia.Vulkan.Api.Core.Tests.csproj", "{9BB7AF5D-059C-4AD9-891F-C1709BAC75AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exomia.Vulkan.Api.Core.Tests", "tests\L0\Exomia.Vulkan.Api.Core.Tests\Exomia.Vulkan.Api.Core.Tests.csproj", "{9BB7AF5D-059C-4AD9-891F-C1709BAC75AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exomia.Vulkan.Api.Windows.Tests", "tests\L0\Exomia.Vulkan.Api.Windows.Tests\Exomia.Vulkan.Api.Windows.Tests.csproj", "{3400E0CB-EEDC-44B6-9AB3-95D1D3A1A446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exomia.Vulkan.Api.Windows.Tests", "tests\L0\Exomia.Vulkan.Api.Windows.Tests\Exomia.Vulkan.Api.Windows.Tests.csproj", "{3400E0CB-EEDC-44B6-9AB3-95D1D3A1A446}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
