@@ -1,6 +1,6 @@
 ## Information
 
-The exomia/vulkan-api is a low-level wrapper library for .Net 5 to access the Vulkan api.
+The exomia/vulkan-api is a low-level library for C#/.Net 5 to access the Vulkan API.
 
 ![](https://img.shields.io/github/issues-pr/exomia/vulkan-api.svg)
 ![](https://img.shields.io/github/issues/exomia/vulkan-api.svg)

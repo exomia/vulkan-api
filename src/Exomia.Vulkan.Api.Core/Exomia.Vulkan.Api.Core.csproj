@@ -14,7 +14,7 @@
   <PropertyGroup>
     <Company>exomia</Company>
     <Authors>exomia; Daniel Bätz; Daniel Baumert</Authors>
-    <Description>Low-level wrapper library for .Net 5 to access the Vulkan api.</Description>
+    <Description>Low-level library for C#/.Net 5 to access the Vulkan API.</Description>
     <Copyright>Copyright © $([System.DateTime]::Now.Year) exomia</Copyright>
   </PropertyGroup>
 
