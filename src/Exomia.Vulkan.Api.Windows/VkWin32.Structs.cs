@@ -35,7 +35,7 @@ namespace Exomia.Vulkan.Api.Windows
         public void*                           pNext;
         public VkExternalMemoryHandleTypeFlags handleType;
         public IntPtr                          handle;
-        public byte*                           pName;
+        public char*                           pName;
     }
 
     public unsafe struct VkExportMemoryWin32HandleInfoKHR
@@ -44,7 +44,7 @@ namespace Exomia.Vulkan.Api.Windows
         public void*                pNext;
         public SECURITY_ATTRIBUTES* pAttributes;
         public uint                 dwAccess;
-        public byte*                pName;
+        public char*                pName;
     }
 
     public unsafe struct VkMemoryWin32HandlePropertiesKHR
@@ -83,7 +83,7 @@ namespace Exomia.Vulkan.Api.Windows
         public VkSemaphoreImportFlags             flags;
         public VkExternalSemaphoreHandleTypeFlags handleType;
         public HANDLE                             handle;
-        public byte*                              pName;
+        public char*                              pName;
     }
 
     public unsafe struct VkExportSemaphoreWin32HandleInfoKHR
@@ -92,7 +92,7 @@ namespace Exomia.Vulkan.Api.Windows
         public void*                pNext;
         public SECURITY_ATTRIBUTES* pAttributes;
         public uint                 dwAccess;
-        public byte*                pName;
+        public char*                pName;
     }
 
     public unsafe struct VkD3D12FenceSubmitInfoKHR
@@ -155,7 +155,7 @@ namespace Exomia.Vulkan.Api.Windows
         public VkFenceImportFlags             flags;
         public VkExternalFenceHandleTypeFlags handleType;
         public HANDLE                         handle;
-        public byte*                          pName;
+        public char*                          pName;
     }
 
     public unsafe struct VkExportFenceWin32HandleInfoKHR
@@ -164,7 +164,7 @@ namespace Exomia.Vulkan.Api.Windows
         public void*                pNext;
         public SECURITY_ATTRIBUTES* pAttributes;
         public uint                 dwAccess;
-        public byte*                pName;
+        public char*                pName;
     }
 
     public unsafe struct VkFenceGetWin32HandleInfoKHR
