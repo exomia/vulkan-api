@@ -57,7 +57,6 @@ jobs:
   publish-github-windows:
     name: "[project core] publish debug on github"
     needs: [test-windows]
-    if: ${{ github.event_name == 'release' }}
     runs-on: windows-latest
     steps:    
     - uses: actions/checkout@v2
@@ -80,7 +79,6 @@ jobs:
   publish-nuget-windows:
     name: "[project core] publish release on nuget"
     needs: [test-windows, publish-github-windows]
-    if: ${{ github.event_name == 'release' }}
     runs-on: windows-latest
     steps:    
     - uses: actions/checkout@v2

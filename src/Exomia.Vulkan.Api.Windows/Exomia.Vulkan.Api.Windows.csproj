@@ -67,8 +67,12 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Exomia.Vulkan.Api.Core" Version="0.*" IncludeAssets="all" />
+  <ItemGroup Condition="'$(Platform)'=='AnyCPU'">
+    <PackageReference Include="Exomia.Vulkan.Api.Core" Version="0.*" IncludeAssets="all"/>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Platform)'!='AnyCPU'">
+    <PackageReference Include="Exomia.Vulkan.Api.Core.$(Platform)" Version="0.*" IncludeAssets="all"/>
   </ItemGroup>
   
   <ItemGroup>
