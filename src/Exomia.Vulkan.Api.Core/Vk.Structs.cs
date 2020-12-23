@@ -153,38 +153,38 @@ namespace Exomia.Vulkan.Api.Core
     {
         public void* pUserData;
 
-        public delegate* unmanaged< /*AllocationFunction*/
-            void* /* pUserData        */,
-            size_t /* size             */,
-            size_t /* alignment        */,
-            VkSystemAllocationScope /* allocationScope  */,
+        public delegate* unmanaged<  /*AllocationFunction*/
+            void*,                   /* pUserData        */
+            size_t,                  /* size             */
+            size_t,                  /* alignment        */
+            VkSystemAllocationScope, /* allocationScope  */
             void*> pfnAllocation;
 
-        public delegate* unmanaged< /*ReallocationFunction*/
-            void* /* pUserData          */,
-            void* /* pOriginal          */,
-            size_t /* size               */,
-            size_t /* alignment          */,
-            VkSystemAllocationScope /* allocationScope    */,
+        public delegate* unmanaged<  /*ReallocationFunction*/
+            void*,                   /* pUserData          */
+            void*,                   /* pOriginal          */
+            size_t,                  /* size               */
+            size_t,                  /* alignment          */
+            VkSystemAllocationScope, /* allocationScope    */
             void*> pfnReallocation;
 
         public delegate* unmanaged< /*FreeFunction        */
-            void* /* pUserData          */,
-            void* /* pMemory            */,
+            void*,                  /* pUserData          */
+            void*,                  /* pMemory            */
             void> pfnFree;
 
-        public delegate* unmanaged< /*InternalAllocationNotification*/
-            void* /* pUserData                    */,
-            size_t /* size                         */,
-            VkInternalAllocationType /* allocationType               */,
-            VkSystemAllocationScope /* allocationScope              */,
+        public delegate* unmanaged<   /*InternalAllocationNotification*/
+            void*,                    /* pUserData                    */
+            size_t,                   /* size                         */
+            VkInternalAllocationType, /* allocationType               */
+            VkSystemAllocationScope,  /* allocationScope              */
             void> pfnInternalAllocation;
 
-        public delegate* unmanaged< /*InternalFreeNotification*/
-            void* /* pUserData              */,
-            size_t /* size                   */,
-            VkInternalAllocationType /* allocationType         */,
-            VkSystemAllocationScope /* allocationScope        */,
+        public delegate* unmanaged<   /*InternalFreeNotification*/
+            void*,                    /* pUserData              */
+            size_t,                   /* size                   */
+            VkInternalAllocationType, /* allocationType         */
+            VkSystemAllocationScope,  /* allocationScope        */
             void> pfnInternalFree;
     }
 
@@ -250,9 +250,8 @@ namespace Exomia.Vulkan.Api.Core
     {
         public VkMemoryType this[int index]
         {
-            //public static unsafe void* AsPointer<T>(ref T value) => (void*) ref value;
             get { return *((VkMemoryType*)Unsafe.AsPointer(ref this) + index); }
-            set { *((VkMemoryType*)Unsafe.AsPointer(ref this) + index) = value; }
+            //set { *((VkMemoryType*)Unsafe.AsPointer(ref this) + index) = value; }
         }
 
         private readonly VkMemoryType M01;
@@ -3979,14 +3978,14 @@ namespace Exomia.Vulkan.Api.Core
         public VkDebugReportFlagsEXT flags;
 
         public delegate* unmanaged<
-            VkDebugReportFlagsEXT /* flags        */,
-            VkDebugReportObjectTypeEXT /* objectType   */,
-            ulong /* @object      */,
-            nuint /* location     */,
-            int /* messageCode  */,
-            byte* /* pLayerPrefix */,
-            byte* /* pMessage     */,
-            void* /* flags        */,
+            VkDebugReportFlagsEXT,      /* flags        */
+            VkDebugReportObjectTypeEXT, /* objectType   */
+            ulong,                      /* @object      */
+            nuint,                      /* location     */
+            int,                        /* messageCode  */
+            byte*,                      /* pLayerPrefix */
+            byte*,                      /* pMessage     */
+            void*,                      /* flags        */
             bool> pfnCallback;
 
         public void* pUserData;
@@ -4555,10 +4554,10 @@ namespace Exomia.Vulkan.Api.Core
         public VkDebugUtilsMessageTypeFlagsEXT messageType;
 
         public delegate* unmanaged<
-            VkDebugUtilsMessageSeverityFlagsEXT /* messageSeverity */,
-            VkDebugUtilsMessageTypeFlagsEXT /* messageTypes    */,
-            VkDebugUtilsMessengerCallbackDataEXT* /* pCallbackData   */,
-            void* /* pUserData       */,
+            VkDebugUtilsMessageSeverityFlagsEXT,   /* messageSeverity */
+            VkDebugUtilsMessageTypeFlagsEXT,       /* messageTypes    */
+            VkDebugUtilsMessengerCallbackDataEXT*, /* pCallbackData   */
+            void*,                                 /* pUserData       */
             bool> pfnUserCallback;
 
         public void* pUserData;

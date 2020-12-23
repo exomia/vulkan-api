@@ -17,71 +17,28 @@ namespace Exomia.Vulkan.Api.Core
     using static Vk;
 
     /// <summary>
-    ///     A vk bool 32.
-    /// </summary>
-    public readonly unsafe struct VkBool32
-    {
-#pragma warning disable 649
-        private readonly uint _value;
-#pragma warning restore 649
-        
-        /// <summary>
-        ///     Implicit cast that converts the given bool to a Bool32.
-        /// </summary>
-        /// <param name="value"> The value. </param>
-        /// <returns>
-        ///     The result of the operation.
-        /// </returns>
-        public static implicit operator VkBool32(bool value)
-        {
-            VkBool32 v;
-            *(uint*)&v = value ? VK_TRUE : VK_FALSE;
-            return v;
-        }
-
-
-        /// <summary>
-        ///     Implicit cast that converts the given Bool32 to a bool.
-        /// </summary>
-        /// <param name="value"> The value. </param>
-        /// <returns>
-        ///     The result of the operation.
-        /// </returns>
-        public static implicit operator bool(VkBool32 value)
-        {
-            return value._value != VK_FALSE;
-        }
-
-        /// <inheritdoc/>
-        public override string ToString()
-        {
-            return ((bool)this).ToString();
-        }
-    }
-
-    /// <summary>
     ///     Used instead of public fixed float blendConstants[4].
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
     public struct BlendConstants
     {
         /// <summary>
-        ///      The R value
+        ///     The R value
         /// </summary>
         public float R;
 
         /// <summary>
-        ///      The G value
+        ///     The G value
         /// </summary>
         public float G;
 
         /// <summary>
-        ///      The B value
+        ///     The B value
         /// </summary>
         public float B;
 
         /// <summary>
-        ///      The A value
+        ///     The A value
         /// </summary>
         public float A;
     }
@@ -113,7 +70,7 @@ namespace Exomia.Vulkan.Api.Core
         public float B;
 
         /// <summary>
-        ///      The A value between 0.0f and 1.0f.
+        ///     The A value between 0.0f and 1.0f.
         /// </summary>
         public float A;
 
@@ -244,10 +201,10 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe struct VkPhysicalDeviceArray
     {
         /// <summary>
-        ///     <see cref="VK_MAX_DEVICE_GROUP_SIZE"/>
+        ///     <see cref="VK_MAX_DEVICE_GROUP_SIZE" />
         /// </summary>
         public const int MAX = VK_MAX_DEVICE_GROUP_SIZE;
-        
+
 #pragma warning disable 1591
         public readonly VkPhysicalDevice M01;
         public readonly VkPhysicalDevice M02;
@@ -293,6 +250,7 @@ namespace Exomia.Vulkan.Api.Core
         public VkMemoryType this[int index]
         {
             get { return *((VkMemoryType*)Unsafe.AsPointer(ref this) + index); }
+
             //set { *((VkMemoryType*)Unsafe.AsPointer(ref this) + index) = value; }
         }
 
@@ -319,7 +277,6 @@ namespace Exomia.Vulkan.Api.Core
         /// </summary>
         public static readonly VkVersion VulkanApiVersion12 = new VkVersion(1, 2, 0);
 
-        
         private readonly uint _version;
 
         /// <summary>
