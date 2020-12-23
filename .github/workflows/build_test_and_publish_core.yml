@@ -1,0 +1,97 @@
+name: "[project core] build, test & publish"
+on: 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: |
+          # Specify the project version format:
+            major.minor.patch[-rc|beta|alpha].X  
+        required: true
+        default: '0.0.0'
+env:  
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+    DOTNET_NOLOGO: 1
+    DOTNET_CLI_TELEMETRY_OPTOUT: 1
+jobs:
+  build-windows:
+    name: "[project core] build release and debug"
+    runs-on: windows-latest
+    steps: 
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: 5.0.101
+    - name: build debug
+      run: |
+        dotnet build --configuration Debug --force --nologo -p:Platform=AnyCPU
+        dotnet build --configuration Debug --force --nologo -p:Platform=x86
+        dotnet build --configuration Debug --force --nologo -p:Platform=x64
+      working-directory: src/Exomia.Vulkan.Api.Core
+    - name: build release
+      run: |
+        dotnet build --configuration Release --force --nologo -p:Platform=AnyCPU
+        dotnet build --configuration Release --force --nologo -p:Platform=x86
+        dotnet build --configuration Release --force --nologo -p:Platform=x64
+      working-directory: src/Exomia.Vulkan.Api.Core
+  test-windows:   
+    name: "[project core] test release and debug"
+    needs: [build-windows]
+    runs-on: windows-latest
+    steps:    
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: 5.0.101
+    - name: test debug
+      run: |
+        dotnet test --configuration Debug --nologo -p:Platform=AnyCPU
+        dotnet test --configuration Debug --nologo -p:Platform=x86
+        dotnet test --configuration Debug --nologo -p:Platform=x64
+      working-directory: tests/L0/Exomia.Vulkan.Api.Core.Tests
+    - name: test release
+      run: |
+        dotnet test --configuration Release --nologo -p:Platform=AnyCPU
+        dotnet test --configuration Release --nologo -p:Platform=x86
+        dotnet test --configuration Release --nologo -p:Platform=x64
+      working-directory: tests/L0/Exomia.Vulkan.Api.Core.Tests
+  publish-github-windows:
+    name: "[project core] publish debug on github"
+    needs: [test-windows]
+    if: ${{ github.event_name == 'release' }}
+    runs-on: windows-latest
+    steps:    
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: 5.0.101
+    - name: publish ${{ github.repository }} [v${{ github.event.inputs.version }}]
+      run: |
+        dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=AnyCPU -p:Version=${{ github.event.inputs.version }}
+        dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=x86 -p:Version=${{ github.event.inputs.version }}
+        dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=x64 -p:Version=${{ github.event.inputs.version }}
+        for f in ./*.nupkg
+           do
+             STATUSCODE=$(curl -sSX PUT --retry 3 -o /dev/null -w "%{http_code}" -u "${{ github.repository_owner }}:${{ github.token }}" -F package=@$f https://nuget.pkg.github.com/${{ github.repository_owner }}/)
+             echo "[$STATUSCODE:https://nuget.pkg.github.com/${{ github.repository_owner }}/] $f"
+             if [ "${STATUSCODE}" != 200 ] && [ "${STATUSCODE}" != 409 ]; then exit 1; fi
+           done
+      shell: bash
+      working-directory: src/Exomia.Vulkan.Api.Core
+  publish-nuget-windows:
+    name: "[project core] publish release on nuget"
+    needs: [test-windows, publish-github-windows]
+    if: ${{ github.event_name == 'release' }}
+    runs-on: windows-latest
+    steps:    
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: 5.0.101
+    - name: publish ${{ github.repository }} [v${{ github.event.inputs.version }}]
+      run: |
+        dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=AnyCPU -p:Version=${{ github.event.inputs.version }}
+        dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=x86 -p:Version=${{ github.event.inputs.version }}
+        dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=x64 -p:Version=${{ github.event.inputs.version }}
+        dotnet nuget push **/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
+      shell: bash
+      working-directory: src/Exomia.Vulkan.Api.Core

@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# IDE0056: Use index operator
+csharp_style_prefer_index_operator = false:none
+
+# IDE0055: Fix formatting
+dotnet_diagnostic.IDE0055.severity = none
+
+# Default severity for analyzer diagnostics with category 'Style'
+dotnet_analyzer_diagnostic.category-Style.severity = none
