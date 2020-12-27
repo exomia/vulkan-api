@@ -100,13 +100,13 @@ namespace Exomia.Vulkan.Api.Core
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetInstanceProcAddr")]
-        public static extern unsafe VoidFunction GetInstanceProcAddr(
+        public static extern unsafe void* GetInstanceProcAddr(
             VkInstance instance,
             sbyte*      pName);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetDeviceProcAddr")]
-        public static extern unsafe VoidFunction GetDeviceProcAddr(
+        public static extern unsafe void* GetDeviceProcAddr(
             VkDevice device,
             sbyte*    pName);
 

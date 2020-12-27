@@ -47,8 +47,6 @@ namespace Exomia.Vulkan.Api.Core
         size_t                  alignment,
         VkSystemAllocationScope allocationScope);
 
-    public delegate void VoidFunction();
-
     public unsafe delegate VkResult CreateInstance(
         VkInstanceCreateInfo* pCreateInfo,
         VkAllocationCallbacks pAllocator,
@@ -94,11 +92,11 @@ namespace Exomia.Vulkan.Api.Core
         VkPhysicalDevice                  physicalDevice,
         VkPhysicalDeviceMemoryProperties* pMemoryProperties);
 
-    public unsafe delegate VoidFunction GetInstanceProcAddr(
+    public unsafe delegate void* GetInstanceProcAddr(
         VkInstance instance,
         sbyte*     pName);
 
-    public unsafe delegate VoidFunction GetDeviceProcAddr(
+    public unsafe delegate void* GetDeviceProcAddr(
         VkDevice device,
         sbyte*   pName);
 
