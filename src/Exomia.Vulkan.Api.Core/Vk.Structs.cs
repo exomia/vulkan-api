@@ -11,7 +11,6 @@
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using System;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // ReSharper disable UnusedMember.Global
@@ -153,14 +152,14 @@ namespace Exomia.Vulkan.Api.Core
     {
         public void* pUserData;
 
-        public delegate*<  /*AllocationFunction*/
+        public delegate*<            /*AllocationFunction*/
             void*,                   /* pUserData        */
             size_t,                  /* size             */
             size_t,                  /* alignment        */
             VkSystemAllocationScope, /* allocationScope  */
             void*> pfnAllocation;
 
-        public delegate*<  /*ReallocationFunction*/
+        public delegate*<            /*ReallocationFunction*/
             void*,                   /* pUserData          */
             void*,                   /* pOriginal          */
             size_t,                  /* size               */
@@ -168,19 +167,19 @@ namespace Exomia.Vulkan.Api.Core
             VkSystemAllocationScope, /* allocationScope    */
             void*> pfnReallocation;
 
-        public delegate*< /*FreeFunction        */
-            void*,                  /* pUserData          */
-            void*,                  /* pMemory            */
+        public delegate*< /*FreeFunction*/
+            void*,        /* pUserData  */
+            void*,        /* pMemory    */
             void> pfnFree;
 
-        public delegate*<   /*InternalAllocationNotification*/
+        public delegate*<             /*InternalAllocationNotification*/
             void*,                    /* pUserData                    */
             size_t,                   /* size                         */
             VkInternalAllocationType, /* allocationType               */
             VkSystemAllocationScope,  /* allocationScope              */
             void> pfnInternalAllocation;
 
-        public delegate*<   /*InternalFreeNotification*/
+        public delegate*<             /*InternalFreeNotification*/
             void*,                    /* pUserData              */
             size_t,                   /* size                   */
             VkInternalAllocationType, /* allocationType         */
@@ -245,7 +244,6 @@ namespace Exomia.Vulkan.Api.Core
         public uint                  heapIndex;
     }
 
-   
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPhysicalDeviceFeatures
     {
@@ -3352,15 +3350,15 @@ namespace Exomia.Vulkan.Api.Core
         public void*                 pNext;
         public VkDebugReportFlagsEXT flags;
 
-        public delegate*<
-            VkDebugReportFlagsEXT,      /* flags        */
-            VkDebugReportObjectTypeEXT, /* objectType   */
-            ulong,                      /* @object      */
-            nuint,                      /* location     */
-            int,                        /* messageCode  */
-            sbyte*,                     /* pLayerPrefix */
-            sbyte*,                     /* pMessage     */
-            void*,                      /* flags        */
+        public delegate*<               /*vkDebugReportCallbackEXT*/
+            VkDebugReportFlagsEXT,      /* flags                  */
+            VkDebugReportObjectTypeEXT, /* objectType             */
+            ulong,                      /* @object                */
+            nuint,                      /* location               */
+            int,                        /* messageCode            */
+            sbyte*,                     /* pLayerPrefix           */
+            sbyte*,                     /* pMessage               */
+            void*,                      /* flags                  */
             bool> pfnCallback;
 
         public void* pUserData;
@@ -3873,7 +3871,7 @@ namespace Exomia.Vulkan.Api.Core
         public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
         public VkDebugUtilsMessageTypeFlagsEXT     messageType;
 
-        public delegate* <
+        public delegate*<
             VkDebugUtilsMessageSeverityFlagsEXT,   /* messageSeverity */
             VkDebugUtilsMessageTypeFlagsEXT,       /* messageTypes    */
             VkDebugUtilsMessengerCallbackDataEXT*, /* pCallbackData   */

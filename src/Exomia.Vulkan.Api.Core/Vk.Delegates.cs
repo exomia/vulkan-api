@@ -48,13 +48,13 @@ namespace Exomia.Vulkan.Api.Core
         VkSystemAllocationScope allocationScope);
 
     public unsafe delegate VkResult CreateInstance(
-        VkInstanceCreateInfo* pCreateInfo,
-        VkAllocationCallbacks pAllocator,
-        VkInstance*           pInstance);
+        VkInstanceCreateInfo*  pCreateInfo,
+        VkAllocationCallbacks* pAllocator,
+        VkInstance*            pInstance);
 
-    public delegate void DestroyInstance(
-        VkInstance            instance,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyInstance(
+        VkInstance             instance,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult EnumeratePhysicalDevices(
         VkInstance        instance,
@@ -101,14 +101,14 @@ namespace Exomia.Vulkan.Api.Core
         sbyte*   pName);
 
     public unsafe delegate VkResult CreateDevice(
-        VkPhysicalDevice      physicalDevice,
-        VkDeviceCreateInfo*   pCreateInfo,
-        VkAllocationCallbacks pAllocator,
-        VkDevice*             pDevice);
+        VkPhysicalDevice       physicalDevice,
+        VkDeviceCreateInfo*    pCreateInfo,
+        VkAllocationCallbacks* pAllocator,
+        VkDevice*              pDevice);
 
-    public delegate void DestroyDevice(
-        VkDevice              device,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyDevice(
+        VkDevice               device,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult EnumerateInstanceExtensionProperties(
         sbyte*                 pLayerName,
@@ -147,15 +147,15 @@ namespace Exomia.Vulkan.Api.Core
     public delegate VkResult DeviceWaitIdle(VkDevice device);
 
     public unsafe delegate VkResult AllocateMemory(
-        VkDevice              device,
-        VkMemoryAllocateInfo* pAllocateInfo,
-        VkAllocationCallbacks pAllocator,
-        VkDeviceMemory*       pMemory);
+        VkDevice               device,
+        VkMemoryAllocateInfo*  pAllocateInfo,
+        VkAllocationCallbacks* pAllocator,
+        VkDeviceMemory*        pMemory);
 
-    public delegate void FreeMemory(
-        VkDevice              device,
-        VkDeviceMemory        memory,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void FreeMemory(
+        VkDevice               device,
+        VkDeviceMemory         memory,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult MapMemory(
         VkDevice         device,
@@ -229,15 +229,15 @@ namespace Exomia.Vulkan.Api.Core
         VkFence           fence);
 
     public unsafe delegate VkResult CreateFence(
-        VkDevice              device,
-        VkFenceCreateInfo*    pCreateInfo,
-        VkAllocationCallbacks pAllocator,
-        VkFence*              pFence);
+        VkDevice               device,
+        VkFenceCreateInfo*     pCreateInfo,
+        VkAllocationCallbacks* pAllocator,
+        VkFence*               pFence);
 
-    public delegate void DestroyFence(
-        VkDevice              device,
-        VkFence               fence,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyFence(
+        VkDevice               device,
+        VkFence                fence,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult ResetFences(
         VkDevice device,
@@ -258,24 +258,24 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateSemaphore(
         VkDevice               device,
         VkSemaphoreCreateInfo* pCreateInfo,
-        VkAllocationCallbacks  pAllocator,
+        VkAllocationCallbacks* pAllocator,
         VkSemaphore*           pSemaphore);
 
-    public delegate void DestroySemaphore(
-        VkDevice              device,
-        VkSemaphore           semaphore,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroySemaphore(
+        VkDevice               device,
+        VkSemaphore            semaphore,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreateEvent(
-        VkDevice              device,
-        VkEventCreateInfo*    pCreateInfo,
-        VkAllocationCallbacks pAllocator,
-        VkEvent*              pEvent);
+        VkDevice               device,
+        VkEventCreateInfo*     pCreateInfo,
+        VkAllocationCallbacks* pAllocator,
+        VkEvent*               pEvent);
 
-    public delegate void DestroyEvent(
-        VkDevice              device,
-        VkEvent               @event,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyEvent(
+        VkDevice               device,
+        VkEvent                @event,
+        VkAllocationCallbacks* pAllocator);
 
     public delegate VkResult GetEventStatus(
         VkDevice device,
@@ -292,13 +292,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateQueryPool(
         VkDevice               device,
         VkQueryPoolCreateInfo* pCreateInfo,
-        VkAllocationCallbacks  pAllocator,
+        VkAllocationCallbacks* pAllocator,
         VkQueryPool*           pQueryPool);
 
-    public delegate void DestroyQueryPool(
-        VkDevice              device,
-        VkQueryPool           queryPool,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyQueryPool(
+        VkDevice               device,
+        VkQueryPool            queryPool,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult GetQueryPoolResults(
         VkDevice           device,
@@ -311,37 +311,37 @@ namespace Exomia.Vulkan.Api.Core
         VkQueryResultFlags flags);
 
     public unsafe delegate VkResult CreateBuffer(
-        VkDevice              device,
-        VkBufferCreateInfo*   pCreateInfo,
-        VkAllocationCallbacks pAllocator,
-        VkBuffer*             pBuffer);
+        VkDevice               device,
+        VkBufferCreateInfo*    pCreateInfo,
+        VkAllocationCallbacks* pAllocator,
+        VkBuffer*              pBuffer);
 
-    public delegate void DestroyBuffer(
-        VkDevice              device,
-        VkBuffer              buffer,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyBuffer(
+        VkDevice               device,
+        VkBuffer               buffer,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreateBufferView(
         VkDevice                device,
         VkBufferViewCreateInfo* pCreateInfo,
-        VkAllocationCallbacks   pAllocator,
+        VkAllocationCallbacks*  pAllocator,
         VkBufferView*           pView);
 
-    public delegate void DestroyBufferView(
-        VkDevice              device,
-        VkBufferView          bufferView,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyBufferView(
+        VkDevice               device,
+        VkBufferView           bufferView,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreateImage(
-        VkDevice              device,
-        VkImageCreateInfo*    pCreateInfo,
-        VkAllocationCallbacks pAllocator,
-        VkImage*              pImage);
+        VkDevice               device,
+        VkImageCreateInfo*     pCreateInfo,
+        VkAllocationCallbacks* pAllocator,
+        VkImage*               pImage);
 
-    public delegate void DestroyImage(
-        VkDevice              device,
-        VkImage               image,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyImage(
+        VkDevice               device,
+        VkImage                image,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate void GetImageSubresourceLayout(
         VkDevice             device,
@@ -352,35 +352,35 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateImageView(
         VkDevice               device,
         VkImageViewCreateInfo* pCreateInfo,
-        VkAllocationCallbacks  pAllocator,
+        VkAllocationCallbacks* pAllocator,
         VkImageView*           pView);
 
-    public delegate void DestroyImageView(
-        VkDevice              device,
-        VkImageView           imageView,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyImageView(
+        VkDevice               device,
+        VkImageView            imageView,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreateShaderModule(
         VkDevice                  device,
         VkShaderModuleCreateInfo* pCreateInfo,
-        VkAllocationCallbacks     pAllocator,
+        VkAllocationCallbacks*    pAllocator,
         VkShaderModule*           pShaderModule);
 
-    public delegate void DestroyShaderModule(
-        VkDevice              device,
-        VkShaderModule        shaderModule,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyShaderModule(
+        VkDevice               device,
+        VkShaderModule         shaderModule,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreatePipelineCache(
         VkDevice                   device,
         VkPipelineCacheCreateInfo* pCreateInfo,
-        VkAllocationCallbacks      pAllocator,
+        VkAllocationCallbacks*     pAllocator,
         VkPipelineCache*           pPipelineCache);
 
-    public delegate void DestroyPipelineCache(
-        VkDevice              device,
-        VkPipelineCache       pipelineCache,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyPipelineCache(
+        VkDevice               device,
+        VkPipelineCache        pipelineCache,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult GetPipelineCacheData(
         VkDevice        device,
@@ -399,7 +399,7 @@ namespace Exomia.Vulkan.Api.Core
         VkPipelineCache               pipelineCache,
         uint                          createInfoCount,
         VkGraphicsPipelineCreateInfo* pCreateInfos,
-        VkAllocationCallbacks         pAllocator,
+        VkAllocationCallbacks*        pAllocator,
         VkPipeline*                   pPipelines);
 
     public unsafe delegate VkResult CreateComputePipelines(
@@ -407,57 +407,57 @@ namespace Exomia.Vulkan.Api.Core
         VkPipelineCache              pipelineCache,
         uint                         createInfoCount,
         VkComputePipelineCreateInfo* pCreateInfos,
-        VkAllocationCallbacks        pAllocator,
+        VkAllocationCallbacks*       pAllocator,
         VkPipeline*                  pPipelines);
 
-    public delegate void DestroyPipeline(
-        VkDevice              device,
-        VkPipeline            pipeline,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyPipeline(
+        VkDevice               device,
+        VkPipeline             pipeline,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreatePipelineLayout(
         VkDevice                    device,
         VkPipelineLayoutCreateInfo* pCreateInfo,
-        VkAllocationCallbacks       pAllocator,
+        VkAllocationCallbacks*      pAllocator,
         VkPipelineLayout*           pPipelineLayout);
 
-    public delegate void DestroyPipelineLayout(
-        VkDevice              device,
-        VkPipelineLayout      pipelineLayout,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyPipelineLayout(
+        VkDevice               device,
+        VkPipelineLayout       pipelineLayout,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreateSampler(
-        VkDevice              device,
-        VkSamplerCreateInfo*  pCreateInfo,
-        VkAllocationCallbacks pAllocator,
-        VkSampler*            pSampler);
+        VkDevice               device,
+        VkSamplerCreateInfo*   pCreateInfo,
+        VkAllocationCallbacks* pAllocator,
+        VkSampler*             pSampler);
 
-    public delegate void DestroySampler(
-        VkDevice              device,
-        VkSampler             sampler,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroySampler(
+        VkDevice               device,
+        VkSampler              sampler,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreateDescriptorSetLayout(
         VkDevice                         device,
         VkDescriptorSetLayoutCreateInfo* pCreateInfo,
-        VkAllocationCallbacks            pAllocator,
+        VkAllocationCallbacks*           pAllocator,
         VkDescriptorSetLayout*           pSetLayout);
 
-    public delegate void DestroyDescriptorSetLayout(
-        VkDevice              device,
-        VkDescriptorSetLayout descriptorSetLayout,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyDescriptorSetLayout(
+        VkDevice               device,
+        VkDescriptorSetLayout  descriptorSetLayout,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreateDescriptorPool(
         VkDevice                    device,
         VkDescriptorPoolCreateInfo* pCreateInfo,
-        VkAllocationCallbacks       pAllocator,
+        VkAllocationCallbacks*      pAllocator,
         VkDescriptorPool*           pDescriptorPool);
 
-    public delegate void DestroyDescriptorPool(
-        VkDevice              device,
-        VkDescriptorPool      descriptorPool,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyDescriptorPool(
+        VkDevice               device,
+        VkDescriptorPool       descriptorPool,
+        VkAllocationCallbacks* pAllocator);
 
     public delegate VkResult ResetDescriptorPool(
         VkDevice                   device,
@@ -485,24 +485,24 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateFramebuffer(
         VkDevice                 device,
         VkFramebufferCreateInfo* pCreateInfo,
-        VkAllocationCallbacks    pAllocator,
+        VkAllocationCallbacks*   pAllocator,
         VkFramebuffer*           pFramebuffer);
 
-    public delegate void DestroyFramebuffer(
-        VkDevice              device,
-        VkFramebuffer         framebuffer,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyFramebuffer(
+        VkDevice               device,
+        VkFramebuffer          framebuffer,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult CreateRenderPass(
         VkDevice                device,
         VkRenderPassCreateInfo* pCreateInfo,
-        VkAllocationCallbacks   pAllocator,
+        VkAllocationCallbacks*  pAllocator,
         VkRenderPass*           pRenderPass);
 
-    public delegate void DestroyRenderPass(
-        VkDevice              device,
-        VkRenderPass          renderPass,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyRenderPass(
+        VkDevice               device,
+        VkRenderPass           renderPass,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate void GetRenderAreaGranularity(
         VkDevice     device,
@@ -512,13 +512,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateCommandPool(
         VkDevice                 device,
         VkCommandPoolCreateInfo* pCreateInfo,
-        VkAllocationCallbacks    pAllocator,
+        VkAllocationCallbacks*   pAllocator,
         VkCommandPool*           pCommandPool);
 
-    public delegate void DestroyCommandPool(
-        VkDevice              device,
-        VkCommandPool         commandPool,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyCommandPool(
+        VkDevice               device,
+        VkCommandPool          commandPool,
+        VkAllocationCallbacks* pAllocator);
 
     public delegate VkResult ResetCommandPool(
         VkDevice                device,
@@ -939,24 +939,24 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateSamplerYcbcrConversion(
         VkDevice                            device,
         VkSamplerYcbcrConversionCreateInfo* pCreateInfo,
-        VkAllocationCallbacks               pAllocator,
+        VkAllocationCallbacks*              pAllocator,
         VkSamplerYcbcrConversion*           pYcbcrConversion);
 
-    public delegate void DestroySamplerYcbcrConversion(
+    public unsafe delegate void DestroySamplerYcbcrConversion(
         VkDevice                 device,
         VkSamplerYcbcrConversion ycbcrConversion,
-        VkAllocationCallbacks    pAllocator);
+        VkAllocationCallbacks*   pAllocator);
 
     public unsafe delegate VkResult CreateDescriptorUpdateTemplate(
         VkDevice                              device,
         VkDescriptorUpdateTemplateCreateInfo* pCreateInfo,
-        VkAllocationCallbacks                 pAllocator,
+        VkAllocationCallbacks*                pAllocator,
         VkDescriptorUpdateTemplate*           pDescriptorUpdateTemplate);
 
-    public delegate void DestroyDescriptorUpdateTemplate(
+    public unsafe delegate void DestroyDescriptorUpdateTemplate(
         VkDevice                   device,
         VkDescriptorUpdateTemplate descriptorUpdateTemplate,
-        VkAllocationCallbacks      pAllocator);
+        VkAllocationCallbacks*     pAllocator);
 
     public unsafe delegate void UpdateDescriptorSetWithTemplate(
         VkDevice                   device,
@@ -1005,7 +1005,7 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateRenderPass2(
         VkDevice                 device,
         VkRenderPassCreateInfo2* pCreateInfo,
-        VkAllocationCallbacks    pAllocator,
+        VkAllocationCallbacks*   pAllocator,
         VkRenderPass*            pRenderPass);
 
     public unsafe delegate void CmdBeginRenderPass2(
@@ -1054,10 +1054,10 @@ namespace Exomia.Vulkan.Api.Core
         VkDevice                                device,
         VkDeviceMemoryOpaqueCaptureAddressInfo* pInfo);
 
-    public delegate void DestroySurfaceKHR(
-        VkInstance            instance,
-        VkSurfaceKHR          surface,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroySurfaceKHR(
+        VkInstance             instance,
+        VkSurfaceKHR           surface,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult GetPhysicalDeviceSurfaceSupportKHR(
         VkPhysicalDevice physicalDevice,
@@ -1085,13 +1085,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateSwapchainKHR(
         VkDevice                  device,
         VkSwapchainCreateInfoKHR* pCreateInfo,
-        VkAllocationCallbacks     pAllocator,
+        VkAllocationCallbacks*    pAllocator,
         VkSwapchainKHR*           pSwapchain);
 
-    public delegate void DestroySwapchainKHR(
-        VkDevice              device,
-        VkSwapchainKHR        swapchain,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroySwapchainKHR(
+        VkDevice               device,
+        VkSwapchainKHR         swapchain,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult GetSwapchainImagesKHR(
         VkDevice       device,
@@ -1157,7 +1157,7 @@ namespace Exomia.Vulkan.Api.Core
         VkPhysicalDevice            physicalDevice,
         VkDisplayKHR                display,
         VkDisplayModeCreateInfoKHR* pCreateInfo,
-        VkAllocationCallbacks       pAllocator,
+        VkAllocationCallbacks*      pAllocator,
         VkDisplayModeKHR*           pMode);
 
     public unsafe delegate VkResult GetDisplayPlaneCapabilitiesKHR(
@@ -1169,14 +1169,14 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateDisplayPlaneSurfaceKHR(
         VkInstance                     instance,
         VkDisplaySurfaceCreateInfoKHR* pCreateInfo,
-        VkAllocationCallbacks          pAllocator,
+        VkAllocationCallbacks*         pAllocator,
         VkSurfaceKHR*                  pSurface);
 
     public unsafe delegate VkResult CreateSharedSwapchainsKHR(
         VkDevice                  device,
         uint                      swapchainCount,
         VkSwapchainCreateInfoKHR* pCreateInfos,
-        VkAllocationCallbacks     pAllocator,
+        VkAllocationCallbacks*    pAllocator,
         VkSwapchainKHR*           pSwapchains);
 
     public unsafe delegate void GetPhysicalDeviceFeatures2KHR(
@@ -1290,13 +1290,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateDescriptorUpdateTemplateKHR(
         VkDevice                              device,
         VkDescriptorUpdateTemplateCreateInfo* pCreateInfo,
-        VkAllocationCallbacks                 pAllocator,
+        VkAllocationCallbacks*                pAllocator,
         VkDescriptorUpdateTemplate*           pDescriptorUpdateTemplate);
 
-    public delegate void DestroyDescriptorUpdateTemplateKHR(
+    public unsafe delegate void DestroyDescriptorUpdateTemplateKHR(
         VkDevice                   device,
         VkDescriptorUpdateTemplate descriptorUpdateTemplate,
-        VkAllocationCallbacks      pAllocator);
+        VkAllocationCallbacks*     pAllocator);
 
     public unsafe delegate void UpdateDescriptorSetWithTemplateKHR(
         VkDevice                   device,
@@ -1307,7 +1307,7 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateRenderPass2KHR(
         VkDevice                 device,
         VkRenderPassCreateInfo2* pCreateInfo,
-        VkAllocationCallbacks    pAllocator,
+        VkAllocationCallbacks*   pAllocator,
         VkRenderPass*            pRenderPass);
 
     public unsafe delegate void CmdBeginRenderPass2KHR(
@@ -1411,13 +1411,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateSamplerYcbcrConversionKHR(
         VkDevice                            device,
         VkSamplerYcbcrConversionCreateInfo* pCreateInfo,
-        VkAllocationCallbacks               pAllocator,
+        VkAllocationCallbacks*              pAllocator,
         VkSamplerYcbcrConversion*           pYcbcrConversion);
 
-    public delegate void DestroySamplerYcbcrConversionKHR(
+    public unsafe delegate void DestroySamplerYcbcrConversionKHR(
         VkDevice                 device,
         VkSamplerYcbcrConversion ycbcrConversion,
-        VkAllocationCallbacks    pAllocator);
+        VkAllocationCallbacks*   pAllocator);
 
     public unsafe delegate VkResult BindBufferMemory2KHR(
         VkDevice                device,
@@ -1491,13 +1491,13 @@ namespace Exomia.Vulkan.Api.Core
 
     public unsafe delegate VkResult CreateDeferredOperationKHR(
         VkDevice                device,
-        VkAllocationCallbacks   pAllocator,
+        VkAllocationCallbacks*  pAllocator,
         VkDeferredOperationKHR* pDeferredOperation);
 
-    public delegate void DestroyDeferredOperationKHR(
+    public unsafe delegate void DestroyDeferredOperationKHR(
         VkDevice               device,
         VkDeferredOperationKHR operation,
-        VkAllocationCallbacks  pAllocator);
+        VkAllocationCallbacks* pAllocator);
 
     public delegate uint GetDeferredOperationMaxConcurrencyKHR(
         VkDevice               device,
@@ -1567,13 +1567,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateDebugReportCallbackEXT(
         VkInstance                          instance,
         VkDebugReportCallbackCreateInfoEXT* pCreateInfo,
-        VkAllocationCallbacks               pAllocator,
+        VkAllocationCallbacks*              pAllocator,
         VkDebugReportCallbackEXT*           pCallback);
 
-    public delegate void DestroyDebugReportCallbackEXT(
+    public unsafe delegate void DestroyDebugReportCallbackEXT(
         VkInstance               instance,
         VkDebugReportCallbackEXT callback,
-        VkAllocationCallbacks    pAllocator);
+        VkAllocationCallbacks*   pAllocator);
 
     public unsafe delegate void DebugReportMessageEXT(
         VkInstance                 instance,
@@ -1719,16 +1719,16 @@ namespace Exomia.Vulkan.Api.Core
         VkDisplayPowerInfoEXT* pDisplayPowerInfo);
 
     public unsafe delegate VkResult RegisterDeviceEventEXT(
-        VkDevice              device,
-        VkDeviceEventInfoEXT* pDeviceEventInfo,
-        VkAllocationCallbacks pAllocator,
-        VkFence*              pFence);
+        VkDevice               device,
+        VkDeviceEventInfoEXT*  pDeviceEventInfo,
+        VkAllocationCallbacks* pAllocator,
+        VkFence*               pFence);
 
     public unsafe delegate VkResult RegisterDisplayEventEXT(
         VkDevice               device,
         VkDisplayKHR           display,
         VkDisplayEventInfoEXT* pDisplayEventInfo,
-        VkAllocationCallbacks  pAllocator,
+        VkAllocationCallbacks* pAllocator,
         VkFence*               pFence);
 
     public unsafe delegate VkResult GetSwapchainCounterEXT(
@@ -1798,13 +1798,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateDebugUtilsMessengerEXT(
         VkInstance                          instance,
         VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo,
-        VkAllocationCallbacks               pAllocator,
+        VkAllocationCallbacks*              pAllocator,
         VkDebugUtilsMessengerEXT*           pMessenger);
 
-    public delegate void DestroyDebugUtilsMessengerEXT(
+    public unsafe delegate void DestroyDebugUtilsMessengerEXT(
         VkInstance               instance,
         VkDebugUtilsMessengerEXT messenger,
-        VkAllocationCallbacks    pAllocator);
+        VkAllocationCallbacks*   pAllocator);
 
     public unsafe delegate void SubmitDebugUtilsMessageEXT(
         VkInstance                            instance,
@@ -1829,13 +1829,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateValidationCacheEXT(
         VkDevice                        device,
         VkValidationCacheCreateInfoEXT* pCreateInfo,
-        VkAllocationCallbacks           pAllocator,
+        VkAllocationCallbacks*          pAllocator,
         VkValidationCacheEXT*           pValidationCache);
 
-    public delegate void DestroyValidationCacheEXT(
-        VkDevice              device,
-        VkValidationCacheEXT  validationCache,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyValidationCacheEXT(
+        VkDevice               device,
+        VkValidationCacheEXT   validationCache,
+        VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult MergeValidationCachesEXT(
         VkDevice              device,
@@ -1869,13 +1869,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateAccelerationStructureNV(
         VkDevice                             device,
         VkAccelerationStructureCreateInfoNV* pCreateInfo,
-        VkAllocationCallbacks                pAllocator,
+        VkAllocationCallbacks*               pAllocator,
         VkAccelerationStructureNV*           pAccelerationStructure);
 
-    public delegate void DestroyAccelerationStructureNV(
+    public unsafe delegate void DestroyAccelerationStructureNV(
         VkDevice                  device,
         VkAccelerationStructureNV accelerationStructure,
-        VkAllocationCallbacks     pAllocator);
+        VkAllocationCallbacks*    pAllocator);
 
     public unsafe delegate void GetAccelerationStructureMemoryRequirementsNV(
         VkDevice                                         device,
@@ -1926,7 +1926,7 @@ namespace Exomia.Vulkan.Api.Core
         VkPipelineCache                   pipelineCache,
         uint                              createInfoCount,
         VkRayTracingPipelineCreateInfoNV* pCreateInfos,
-        VkAllocationCallbacks             pAllocator,
+        VkAllocationCallbacks*            pAllocator,
         VkPipeline*                       pPipelines);
 
     public unsafe delegate VkResult GetRayTracingShaderGroupHandlesKHR(
@@ -2088,7 +2088,7 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateHeadlessSurfaceEXT(
         VkInstance                      instance,
         VkHeadlessSurfaceCreateInfoEXT* pCreateInfo,
-        VkAllocationCallbacks           pAllocator,
+        VkAllocationCallbacks*          pAllocator,
         VkSurfaceKHR*                   pSurface);
 
     public delegate void CmdSetLineStippleEXT(
@@ -2184,13 +2184,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateIndirectCommandsLayoutNV(
         VkDevice                              device,
         VkIndirectCommandsLayoutCreateInfoNV* pCreateInfo,
-        VkAllocationCallbacks                 pAllocator,
+        VkAllocationCallbacks*                pAllocator,
         VkIndirectCommandsLayoutNV*           pIndirectCommandsLayout);
 
-    public delegate void DestroyIndirectCommandsLayoutNV(
+    public unsafe delegate void DestroyIndirectCommandsLayoutNV(
         VkDevice                   device,
         VkIndirectCommandsLayoutNV indirectCommandsLayout,
-        VkAllocationCallbacks      pAllocator);
+        VkAllocationCallbacks*     pAllocator);
 
     public unsafe delegate void DeviceMemoryReportCallbackEXT(
         VkDeviceMemoryReportCallbackDataEXT* pCallbackData,
@@ -2199,13 +2199,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreatePrivateDataSlotEXT(
         VkDevice                        device,
         VkPrivateDataSlotCreateInfoEXT* pCreateInfo,
-        VkAllocationCallbacks           pAllocator,
+        VkAllocationCallbacks*          pAllocator,
         VkPrivateDataSlotEXT*           pPrivateDataSlot);
 
-    public delegate void DestroyPrivateDataSlotEXT(
-        VkDevice              device,
-        VkPrivateDataSlotEXT  privateDataSlot,
-        VkAllocationCallbacks pAllocator);
+    public unsafe delegate void DestroyPrivateDataSlotEXT(
+        VkDevice               device,
+        VkPrivateDataSlotEXT   privateDataSlot,
+        VkAllocationCallbacks* pAllocator);
 
     public delegate VkResult SetPrivateDataEXT(
         VkDevice             device,
@@ -2239,13 +2239,13 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult CreateAccelerationStructureKHR(
         VkDevice                              device,
         VkAccelerationStructureCreateInfoKHR* pCreateInfo,
-        VkAllocationCallbacks                 pAllocator,
+        VkAllocationCallbacks*                pAllocator,
         VkAccelerationStructureKHR*           pAccelerationStructure);
 
-    public delegate void DestroyAccelerationStructureKHR(
+    public unsafe delegate void DestroyAccelerationStructureKHR(
         VkDevice                   device,
         VkAccelerationStructureKHR accelerationStructure,
-        VkAllocationCallbacks      pAllocator);
+        VkAllocationCallbacks*     pAllocator);
 
     public unsafe delegate void CmdBuildAccelerationStructuresKHR(
         VkCommandBuffer                              commandBuffer,
@@ -2344,7 +2344,7 @@ namespace Exomia.Vulkan.Api.Core
         VkPipelineCache                    pipelineCache,
         uint                               createInfoCount,
         VkRayTracingPipelineCreateInfoKHR* pCreateInfos,
-        VkAllocationCallbacks              pAllocator,
+        VkAllocationCallbacks*             pAllocator,
         VkPipeline*                        pPipelines);
 
     public unsafe delegate VkResult GetRayTracingCaptureReplayShaderGroupHandlesKHR(
