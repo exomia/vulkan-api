@@ -245,48 +245,7 @@ namespace Exomia.Vulkan.Api.Core
         public uint                  heapIndex;
     }
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkMemoryTypeArray
-    {
-        public VkMemoryType this[int index]
-        {
-            get { return *((VkMemoryType*)Unsafe.AsPointer(ref this) + index); }
-        }
-
-        private readonly VkMemoryType M01;
-        private readonly VkMemoryType M02;
-        private readonly VkMemoryType M03;
-        private readonly VkMemoryType M04;
-        private readonly VkMemoryType M05;
-        private readonly VkMemoryType M06;
-        private readonly VkMemoryType M07;
-        private readonly VkMemoryType M08;
-        private readonly VkMemoryType M09;
-        private readonly VkMemoryType M10;
-        private readonly VkMemoryType M11;
-        private readonly VkMemoryType M12;
-        private readonly VkMemoryType M13;
-        private readonly VkMemoryType M14;
-        private readonly VkMemoryType M15;
-        private readonly VkMemoryType M16;
-        private readonly VkMemoryType M17;
-        private readonly VkMemoryType M18;
-        private readonly VkMemoryType M19;
-        private readonly VkMemoryType M20;
-        private readonly VkMemoryType M21;
-        private readonly VkMemoryType M22;
-        private readonly VkMemoryType M23;
-        private readonly VkMemoryType M24;
-        private readonly VkMemoryType M25;
-        private readonly VkMemoryType M26;
-        private readonly VkMemoryType M27;
-        private readonly VkMemoryType M28;
-        private readonly VkMemoryType M29;
-        private readonly VkMemoryType M30;
-        private readonly VkMemoryType M31;
-        private readonly VkMemoryType M32;
-    }
-
+   
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPhysicalDeviceFeatures
     {

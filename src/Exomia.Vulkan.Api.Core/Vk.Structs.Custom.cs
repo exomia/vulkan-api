@@ -322,6 +322,66 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     /// <summary>
+    ///     List of vk physical devices.
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkMemoryTypeArray
+    {
+       
+        /// <summary>
+        ///     <see cref="VK_MAX_MEMORY_TYPES"/>
+        /// </summary>
+        public const int MAX = VK_MAX_MEMORY_TYPES;
+
+#pragma warning disable 1591 //Missing XML comment for publicly visible type or member
+        public readonly VkMemoryType M01;
+        public readonly VkMemoryType M02;
+        public readonly VkMemoryType M03;
+        public readonly VkMemoryType M04;
+        public readonly VkMemoryType M05;
+        public readonly VkMemoryType M06;
+        public readonly VkMemoryType M07;
+        public readonly VkMemoryType M08;
+        public readonly VkMemoryType M09;
+        public readonly VkMemoryType M10;
+        public readonly VkMemoryType M11;
+        public readonly VkMemoryType M12;
+        public readonly VkMemoryType M13;
+        public readonly VkMemoryType M14;
+        public readonly VkMemoryType M15;
+        public readonly VkMemoryType M16;
+        public readonly VkMemoryType M17;
+        public readonly VkMemoryType M18;
+        public readonly VkMemoryType M19;
+        public readonly VkMemoryType M20;
+        public readonly VkMemoryType M21;
+        public readonly VkMemoryType M22;
+        public readonly VkMemoryType M23;
+        public readonly VkMemoryType M24;
+        public readonly VkMemoryType M25;
+        public readonly VkMemoryType M26;
+        public readonly VkMemoryType M27;
+        public readonly VkMemoryType M28;
+        public readonly VkMemoryType M29;
+        public readonly VkMemoryType M30;
+        public readonly VkMemoryType M31;
+        public readonly VkMemoryType M32;
+#pragma warning restore 1591 //Missing XML comment for publicly visible type or member
+
+        /// <summary>
+        ///     Indexer to get items within this collection using array index syntax.
+        /// </summary>
+        /// <param name="index"> Zero-based index of the entry to access. </param>
+        /// <returns>
+        ///     The indexed item.
+        /// </returns>    
+        public VkMemoryType this[int index]
+        {
+            get { return *((VkMemoryType*)Unsafe.AsPointer(ref this) + index); }
+        }
+    }
+
+    /// <summary>
     ///     A vk version.
     /// </summary>
     public readonly struct VkVersion
