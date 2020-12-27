@@ -322,7 +322,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     /// <summary>
-    ///     List of vk physical devices.
+    ///     List of vk memory types.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryTypeArray
