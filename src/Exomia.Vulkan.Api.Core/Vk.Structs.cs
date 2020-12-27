@@ -421,7 +421,7 @@ namespace Exomia.Vulkan.Api.Core
     public struct VkPhysicalDeviceMemoryProperties
     {
         public uint                    memoryTypeCount;
-        public VkMemoryTypeArray       memoryTypes;
+        public VkArray32<VkMemoryType> memoryTypes;
         public uint                    memoryHeapCount;
         public VkArray16<VkMemoryHeap> memoryHeaps;
     }
@@ -1474,11 +1474,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceGroupProperties
     {
-        public VkStructureType       sType;
-        public void*                 pNext;
-        public uint                  physicalDeviceCount;
-        public VkPhysicalDeviceArray physicalDevices;
-        public VkBool32              subsetAllocation;
+        public VkStructureType             sType;
+        public void*                       pNext;
+        public uint                        physicalDeviceCount;
+        public VkArray32<VkPhysicalDevice> physicalDevices;
+        public VkBool32                    subsetAllocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]

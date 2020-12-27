@@ -14,8 +14,6 @@ using System.Runtime.InteropServices;
 
 namespace Exomia.Vulkan.Api.Core
 {
-    using static Vk;
-
     /// <summary>
     ///     A vk bool 32.
     /// </summary>
@@ -231,7 +229,6 @@ namespace Exomia.Vulkan.Api.Core
                 Debug.Assert(index < LENGTH, "Index out of range!");
                 return *((T*)Unsafe.AsPointer(ref this) + index);
             }
-
             set
             {
                 Debug.Assert(index < LENGTH, "Index out of range!");
@@ -253,7 +250,6 @@ namespace Exomia.Vulkan.Api.Core
                 Debug.Assert(index < LENGTH, "Index out of range!");
                 return *((T*)Unsafe.AsPointer(ref this) + index);
             }
-
             set
             {
                 Debug.Assert(index < LENGTH, "Index out of range!");
@@ -263,49 +259,49 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     /// <summary>
-    ///     List of vk physical devices.
+    ///     Used instead of public fixed T[32].
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceArray
+    public unsafe struct VkArray32<T> where T : unmanaged
     {
         /// <summary>
-        ///     <see cref="VK_MAX_DEVICE_GROUP_SIZE" />
+        ///     The length of <see cref="VkArray32{T}" />.
         /// </summary>
-        public const int MAX = VK_MAX_DEVICE_GROUP_SIZE;
+        public const uint LENGTH = 32;
 
 #pragma warning disable 1591 //Missing XML comment for publicly visible type or member
-        public readonly VkPhysicalDevice M01;
-        public readonly VkPhysicalDevice M02;
-        public readonly VkPhysicalDevice M03;
-        public readonly VkPhysicalDevice M04;
-        public readonly VkPhysicalDevice M05;
-        public readonly VkPhysicalDevice M06;
-        public readonly VkPhysicalDevice M07;
-        public readonly VkPhysicalDevice M08;
-        public readonly VkPhysicalDevice M09;
-        public readonly VkPhysicalDevice M10;
-        public readonly VkPhysicalDevice M11;
-        public readonly VkPhysicalDevice M12;
-        public readonly VkPhysicalDevice M13;
-        public readonly VkPhysicalDevice M14;
-        public readonly VkPhysicalDevice M15;
-        public readonly VkPhysicalDevice M16;
-        public readonly VkPhysicalDevice M17;
-        public readonly VkPhysicalDevice M18;
-        public readonly VkPhysicalDevice M19;
-        public readonly VkPhysicalDevice M20;
-        public readonly VkPhysicalDevice M21;
-        public readonly VkPhysicalDevice M22;
-        public readonly VkPhysicalDevice M23;
-        public readonly VkPhysicalDevice M24;
-        public readonly VkPhysicalDevice M25;
-        public readonly VkPhysicalDevice M26;
-        public readonly VkPhysicalDevice M27;
-        public readonly VkPhysicalDevice M28;
-        public readonly VkPhysicalDevice M29;
-        public readonly VkPhysicalDevice M30;
-        public readonly VkPhysicalDevice M31;
-        public readonly VkPhysicalDevice M32;
+        public T M01;
+        public T M02;
+        public T M03;
+        public T M04;
+        public T M05;
+        public T M06;
+        public T M07;
+        public T M08;
+        public T M09;
+        public T M10;
+        public T M11;
+        public T M12;
+        public T M13;
+        public T M14;
+        public T M15;
+        public T M16;
+        public T M17;
+        public T M18;
+        public T M19;
+        public T M20;
+        public T M21;
+        public T M22;
+        public T M23;
+        public T M24;
+        public T M25;
+        public T M26;
+        public T M27;
+        public T M28;
+        public T M29;
+        public T M30;
+        public T M31;
+        public T M32;
 #pragma warning restore 1591 //Missing XML comment for publicly visible type or member
 
         /// <summary>
@@ -315,58 +311,19 @@ namespace Exomia.Vulkan.Api.Core
         /// <returns>
         ///     The indexed item.
         /// </returns>
-        public VkPhysicalDevice this[int index]
+        public T this[uint index]
         {
-            get { return *((VkPhysicalDevice*)Unsafe.AsPointer(ref this) + index); }
+            get 
+            { 
+                Debug.Assert(index < LENGTH, "Index out of range!"); 
+                return *((T*)Unsafe.AsPointer(ref this) + index); 
+            }
+            set
+            {
+                Debug.Assert(index < LENGTH, "Index out of range!");
+                *((T*)Unsafe.AsPointer(ref this) + index) = value;
+            }
         }
-    }
-
-    /// <summary>
-    ///     List of vk memory types.
-    /// </summary>
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkMemoryTypeArray
-    {
-       
-        /// <summary>
-        ///     <see cref="VK_MAX_MEMORY_TYPES"/>
-        /// </summary>
-        public const int MAX = VK_MAX_MEMORY_TYPES;
-
-#pragma warning disable 1591 //Missing XML comment for publicly visible type or member
-        public readonly VkMemoryType M01;
-        public readonly VkMemoryType M02;
-        public readonly VkMemoryType M03;
-        public readonly VkMemoryType M04;
-        public readonly VkMemoryType M05;
-        public readonly VkMemoryType M06;
-        public readonly VkMemoryType M07;
-        public readonly VkMemoryType M08;
-        public readonly VkMemoryType M09;
-        public readonly VkMemoryType M10;
-        public readonly VkMemoryType M11;
-        public readonly VkMemoryType M12;
-        public readonly VkMemoryType M13;
-        public readonly VkMemoryType M14;
-        public readonly VkMemoryType M15;
-        public readonly VkMemoryType M16;
-        public readonly VkMemoryType M17;
-        public readonly VkMemoryType M18;
-        public readonly VkMemoryType M19;
-        public readonly VkMemoryType M20;
-        public readonly VkMemoryType M21;
-        public readonly VkMemoryType M22;
-        public readonly VkMemoryType M23;
-        public readonly VkMemoryType M24;
-        public readonly VkMemoryType M25;
-        public readonly VkMemoryType M26;
-        public readonly VkMemoryType M27;
-        public readonly VkMemoryType M28;
-        public readonly VkMemoryType M29;
-        public readonly VkMemoryType M30;
-        public readonly VkMemoryType M31;
-        public readonly VkMemoryType M32;
-#pragma warning restore 1591 //Missing XML comment for publicly visible type or member
 
         /// <summary>
         ///     Indexer to get items within this collection using array index syntax.
@@ -374,10 +331,19 @@ namespace Exomia.Vulkan.Api.Core
         /// <param name="index"> Zero-based index of the entry to access. </param>
         /// <returns>
         ///     The indexed item.
-        /// </returns>    
-        public VkMemoryType this[int index]
+        /// </returns>
+        public T this[int index]
         {
-            get { return *((VkMemoryType*)Unsafe.AsPointer(ref this) + index); }
+            get
+            {
+                Debug.Assert(index < LENGTH, "Index out of range!");
+                return *((T*)Unsafe.AsPointer(ref this) + index);
+            }
+            set
+            {
+                Debug.Assert(index < LENGTH, "Index out of range!");
+                *((T*)Unsafe.AsPointer(ref this) + index) = value;
+            }
         }
     }
 
