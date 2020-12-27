@@ -23,13 +23,13 @@ namespace Exomia.Vulkan.Api.Core
         private readonly uint _value;
 
         /// <summary>
-        ///     Explicit cast that converts the given uint to a VkBool32.
+        ///     Implicit cast that converts the given uint to a VkBool32.
         /// </summary>
         /// <param name="value"> The value. </param>
         /// <returns>
         ///     The result of the operation.
         /// </returns>
-        public static explicit operator VkBool32(uint value)
+        public static implicit operator VkBool32(uint value)
         {
             VkBool32 v;
             *(uint*)&v = value;
@@ -37,13 +37,13 @@ namespace Exomia.Vulkan.Api.Core
         }
 
         /// <summary>
-        ///     Explicit cast that converts the given uint to a VkBool32.
+        ///     Implicit cast that converts the given uint to a VkBool32.
         /// </summary>
         /// <param name="value"> The value. </param>
         /// <returns>
         ///     The result of the operation.
         /// </returns>
-        public static explicit operator uint(VkBool32 value)
+        public static implicit operator uint(VkBool32 value)
         {
             return value._value;
         }
@@ -77,7 +77,7 @@ namespace Exomia.Vulkan.Api.Core
         /// <inheritdoc />
         public override string ToString()
         {
-            return $"{((bool)this).ToString()} ({_value.ToString()})";
+            return $"{((bool)this).ToString()}";
         }
     }
 
@@ -313,10 +313,10 @@ namespace Exomia.Vulkan.Api.Core
         /// </returns>
         public T this[uint index]
         {
-            get 
-            { 
-                Debug.Assert(index < LENGTH, "Index out of range!"); 
-                return *((T*)Unsafe.AsPointer(ref this) + index); 
+            get
+            {
+                Debug.Assert(index < LENGTH, "Index out of range!");
+                return *((T*)Unsafe.AsPointer(ref this) + index);
             }
             set
             {

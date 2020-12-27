@@ -1554,7 +1554,7 @@ namespace Exomia.Vulkan.Api.Core
         VkResolveImageInfo2KHR* pResolveImageInfo);
 
     [return: MarshalAs(UnmanagedType.Bool)]
-    public unsafe delegate bool DebugReportCallbackEXT(
+    public unsafe delegate VkBool32 DebugReportCallbackEXT(
         [MarshalAs(UnmanagedType.U4)] VkDebugReportFlagsEXT      flags,
         [MarshalAs(UnmanagedType.U4)] VkDebugReportObjectTypeEXT objectType,
         ulong                                                    @object,
@@ -1761,7 +1761,7 @@ namespace Exomia.Vulkan.Api.Core
         VkHdrMetadataEXT* pMetadata);
 
     [return: MarshalAs(UnmanagedType.Bool)]
-    public unsafe delegate bool DebugUtilsMessengerCallbackEXT(
+    public unsafe delegate VkBool32 DebugUtilsMessengerCallbackEXT(
         [MarshalAs(UnmanagedType.U4)] VkDebugUtilsMessageSeverityFlagsEXT messageSeverity,
         [MarshalAs(UnmanagedType.U4)] VkDebugUtilsMessageTypeFlagsEXT     messageTypes,
         VkDebugUtilsMessengerCallbackDataEXT*                             pCallbackData,

@@ -64,7 +64,7 @@ namespace Exomia.Vulkan.Api.Core
     public struct VkPipelineExecutableStatisticValueKHR
     {
         [FieldOffset(0)]
-        public bool b32;
+        public VkBool32 b32;
 
         [FieldOffset(0)]
         public long i64;
@@ -89,7 +89,7 @@ namespace Exomia.Vulkan.Api.Core
         public float valueFloat;
 
         [FieldOffset(0)]
-        public bool valueBool;
+        public VkBool32 valueBool;
 
         [FieldOffset(0)]
         public sbyte* valueString;

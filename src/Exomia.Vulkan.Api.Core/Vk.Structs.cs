@@ -152,19 +152,19 @@ namespace Exomia.Vulkan.Api.Core
     {
         public void* pUserData;
 
-        public delegate*<            /*AllocationFunction*/
-            void*,                   /* pUserData        */
-            size_t,                  /* size             */
-            size_t,                  /* alignment        */
-            VkSystemAllocationScope, /* allocationScope  */
-            void*> pfnAllocation;
-
-        public delegate*<            /*ReallocationFunction*/
+        public delegate*<            /*vkAllocationFunction*/
             void*,                   /* pUserData          */
-            void*,                   /* pOriginal          */
             size_t,                  /* size               */
             size_t,                  /* alignment          */
             VkSystemAllocationScope, /* allocationScope    */
+            void*> pfnAllocation;
+
+        public delegate*<            /*vkReallocationFunction*/
+            void*,                   /* pUserData            */
+            void*,                   /* pOriginal            */
+            size_t,                  /* size                 */
+            size_t,                  /* alignment            */
+            VkSystemAllocationScope, /* allocationScope      */
             void*> pfnReallocation;
 
         public delegate*< /*FreeFunction*/
@@ -172,18 +172,18 @@ namespace Exomia.Vulkan.Api.Core
             void*,        /* pMemory    */
             void> pfnFree;
 
-        public delegate*<             /*InternalAllocationNotification*/
-            void*,                    /* pUserData                    */
-            size_t,                   /* size                         */
-            VkInternalAllocationType, /* allocationType               */
-            VkSystemAllocationScope,  /* allocationScope              */
+        public delegate*<             /*vkInternalAllocationNotification*/
+            void*,                    /* pUserData                      */
+            size_t,                   /* size                           */
+            VkInternalAllocationType, /* allocationType                 */
+            VkSystemAllocationScope,  /* allocationScope                */
             void> pfnInternalAllocation;
 
-        public delegate*<             /*InternalFreeNotification*/
-            void*,                    /* pUserData              */
-            size_t,                   /* size                   */
-            VkInternalAllocationType, /* allocationType         */
-            VkSystemAllocationScope,  /* allocationScope        */
+        public delegate*<             /*vkInternalFreeNotification*/
+            void*,                    /* pUserData                */
+            size_t,                   /* size                     */
+            VkInternalAllocationType, /* allocationType           */
+            VkSystemAllocationScope,  /* allocationScope          */
             void> pfnInternalFree;
     }
 
@@ -3359,7 +3359,7 @@ namespace Exomia.Vulkan.Api.Core
             sbyte*,                     /* pLayerPrefix           */
             sbyte*,                     /* pMessage               */
             void*,                      /* flags                  */
-            bool> pfnCallback;
+            VkBool32> pfnCallback;
 
         public void* pUserData;
     }
@@ -3871,12 +3871,12 @@ namespace Exomia.Vulkan.Api.Core
         public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
         public VkDebugUtilsMessageTypeFlagsEXT     messageType;
 
-        public delegate*<
-            VkDebugUtilsMessageSeverityFlagsEXT,   /* messageSeverity */
-            VkDebugUtilsMessageTypeFlagsEXT,       /* messageTypes    */
-            VkDebugUtilsMessengerCallbackDataEXT*, /* pCallbackData   */
-            void*,                                 /* pUserData       */
-            bool> pfnUserCallback;
+        public delegate*<                          /*vkDebugUtilsMessengerCallbackEXT*/
+            VkDebugUtilsMessageSeverityFlagsEXT,   /* messageSeverity                */
+            VkDebugUtilsMessageTypeFlagsEXT,       /* messageTypes                   */
+            VkDebugUtilsMessengerCallbackDataEXT*, /* pCallbackData                  */
+            void*,                                 /* pUserData                      */
+            VkBool32> pfnUserCallback;
 
         public void* pUserData;
     }

@@ -102,13 +102,13 @@ namespace Exomia.Vulkan.Api.Core
         [DllImport(IMPORT, EntryPoint = "vkGetInstanceProcAddr")]
         public static extern unsafe void* GetInstanceProcAddr(
             VkInstance instance,
-            sbyte*      pName);
+            sbyte*     pName);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetDeviceProcAddr")]
         public static extern unsafe void* GetDeviceProcAddr(
             VkDevice device,
-            sbyte*    pName);
+            sbyte*   pName);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCreateDevice")]
@@ -1423,7 +1423,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDevice physicalDevice,
             uint             queueFamilyIndex,
             VkSurfaceKHR     surface,
-            bool*            pSupported);
+            VkBool32*        pSupported);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceSurfaceCapabilitiesKHR")]
