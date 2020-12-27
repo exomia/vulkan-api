@@ -315,9 +315,9 @@ namespace Exomia.Vulkan.Api.Core
         /// <returns>
         ///     The indexed item.
         /// </returns>
-        public VkMemoryType this[int index]
+        public VkPhysicalDevice this[int index]
         {
-            get { return *((VkMemoryType*)Unsafe.AsPointer(ref this) + index); }
+            get { return *((VkPhysicalDevice*)Unsafe.AsPointer(ref this) + index); }
         }
     }
 
