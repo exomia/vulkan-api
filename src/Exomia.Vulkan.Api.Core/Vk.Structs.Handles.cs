@@ -38,17 +38,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._address != right._address;
         }
 
-        public readonly bool Equals(in VkDeviceAddress obj)
+        public bool Equals(in VkDeviceAddress obj)
         {
             return obj._address == _address;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDeviceAddress vkDeviceAddress && this.Equals(in vkDeviceAddress);
+            return obj is VkDeviceAddress vkDeviceAddress && Equals(in vkDeviceAddress);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return _address.GetHashCode();
         }
@@ -87,17 +87,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._size != right._size;
         }
 
-        public readonly bool Equals(in VkDeviceSize obj)
+        public bool Equals(in VkDeviceSize obj)
         {
             return obj._size == _size;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDeviceSize vkDeviceSize && this.Equals(in vkDeviceSize);
+            return obj is VkDeviceSize vkDeviceSize && Equals(in vkDeviceSize);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return _size.GetHashCode();
         }
@@ -113,16 +113,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDevice
+    public readonly unsafe struct VkDevice
     {
         public static readonly VkDevice Zero = new VkDevice();
-                private                void*    _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDevice(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDevice(void* ptr)
         {
-            VkDevice value;
-            value._ptr = ptr;
-            return value;
+            return new VkDevice(ptr);
         }
 
         public static bool operator ==(VkDevice left, VkDevice right)
@@ -135,17 +140,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDevice obj)
+        public bool Equals(in VkDevice obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDevice vkDevice && this.Equals(in vkDevice);
+            return obj is VkDevice vkDevice && Equals(in vkDevice);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -156,16 +161,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDebugReportCallbackEXT
+    public readonly unsafe struct VkDebugReportCallbackEXT
     {
         public static readonly VkDebugReportCallbackEXT Zero = new VkDebugReportCallbackEXT();
-                private                void*                    _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDebugReportCallbackEXT(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDebugReportCallbackEXT(void* ptr)
         {
-            VkDebugReportCallbackEXT value;
-            value._ptr = ptr;
-            return value;
+            return new VkDebugReportCallbackEXT(ptr);
         }
 
         public static bool operator ==(VkDebugReportCallbackEXT left, VkDebugReportCallbackEXT right)
@@ -178,17 +188,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDebugReportCallbackEXT obj)
+        public bool Equals(in VkDebugReportCallbackEXT obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDebugReportCallbackEXT vkDebugReportCallbackEXT && this.Equals(in vkDebugReportCallbackEXT);
+            return obj is VkDebugReportCallbackEXT vkDebugReportCallbackEXT && Equals(in vkDebugReportCallbackEXT);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -199,16 +209,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDebugUtilsMessengerEXT
+    public readonly unsafe struct VkDebugUtilsMessengerEXT
     {
         public static readonly VkDebugUtilsMessengerEXT Zero = new VkDebugUtilsMessengerEXT();
-                private                void*                    _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDebugUtilsMessengerEXT(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDebugUtilsMessengerEXT(void* ptr)
         {
-            VkDebugUtilsMessengerEXT value;
-            value._ptr = ptr;
-            return value;
+            return new VkDebugUtilsMessengerEXT(ptr);
         }
 
         public static bool operator ==(VkDebugUtilsMessengerEXT left, VkDebugUtilsMessengerEXT right)
@@ -221,17 +236,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDebugUtilsMessengerEXT obj)
+        public bool Equals(in VkDebugUtilsMessengerEXT obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDebugUtilsMessengerEXT vkDebugUtilsMessengerEXT && this.Equals(in vkDebugUtilsMessengerEXT);
+            return obj is VkDebugUtilsMessengerEXT vkDebugUtilsMessengerEXT && Equals(in vkDebugUtilsMessengerEXT);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -242,16 +257,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDeferredOperationKHR
+    public readonly unsafe struct VkDeferredOperationKHR
     {
         public static readonly VkDeferredOperationKHR Zero = new VkDeferredOperationKHR();
-                private                void*                  _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDeferredOperationKHR(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDeferredOperationKHR(void* ptr)
         {
-            VkDeferredOperationKHR value;
-            value._ptr = ptr;
-            return value;
+            return new VkDeferredOperationKHR(ptr);
         }
 
         public static bool operator ==(VkDeferredOperationKHR left, VkDeferredOperationKHR right)
@@ -264,17 +284,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDeferredOperationKHR obj)
+        public bool Equals(in VkDeferredOperationKHR obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDeferredOperationKHR vkDeferredOperationKHR && this.Equals(in vkDeferredOperationKHR);
+            return obj is VkDeferredOperationKHR vkDeferredOperationKHR && Equals(in vkDeferredOperationKHR);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -285,16 +305,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkPerformanceConfigurationINTEL
+    public readonly unsafe struct VkPerformanceConfigurationINTEL
     {
         public static readonly VkPerformanceConfigurationINTEL Zero = new VkPerformanceConfigurationINTEL();
-                private                void*                           _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkPerformanceConfigurationINTEL(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkPerformanceConfigurationINTEL(void* ptr)
         {
-            VkPerformanceConfigurationINTEL value;
-            value._ptr = ptr;
-            return value;
+            return new VkPerformanceConfigurationINTEL(ptr);
         }
 
         public static bool operator ==(VkPerformanceConfigurationINTEL left, VkPerformanceConfigurationINTEL right)
@@ -307,17 +332,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkPerformanceConfigurationINTEL obj)
+        public bool Equals(in VkPerformanceConfigurationINTEL obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkPerformanceConfigurationINTEL vkPerformanceConfigurationINTEL && this.Equals(in vkPerformanceConfigurationINTEL);
+            return obj is VkPerformanceConfigurationINTEL vkPerformanceConfigurationINTEL && Equals(in vkPerformanceConfigurationINTEL);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -328,16 +353,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDescriptorUpdateTemplate
+    public readonly unsafe struct VkDescriptorUpdateTemplate
     {
         public static readonly VkDescriptorUpdateTemplate Zero = new VkDescriptorUpdateTemplate();
-                private                void*                      _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDescriptorUpdateTemplate(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDescriptorUpdateTemplate(void* ptr)
         {
-            VkDescriptorUpdateTemplate value;
-            value._ptr = ptr;
-            return value;
+            return new VkDescriptorUpdateTemplate(ptr);
         }
 
         public static bool operator ==(VkDescriptorUpdateTemplate left, VkDescriptorUpdateTemplate right)
@@ -350,17 +380,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDescriptorUpdateTemplate obj)
+        public bool Equals(in VkDescriptorUpdateTemplate obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDescriptorUpdateTemplate vkDescriptorUpdateTemplate && this.Equals(in vkDescriptorUpdateTemplate);
+            return obj is VkDescriptorUpdateTemplate vkDescriptorUpdateTemplate && Equals(in vkDescriptorUpdateTemplate);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -371,16 +401,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkPrivateDataSlotEXT
+    public readonly unsafe struct VkPrivateDataSlotEXT
     {
         public static readonly VkPrivateDataSlotEXT Zero = new VkPrivateDataSlotEXT();
-                private                void*                _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkPrivateDataSlotEXT(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkPrivateDataSlotEXT(void* ptr)
         {
-            VkPrivateDataSlotEXT value;
-            value._ptr = ptr;
-            return value;
+            return new VkPrivateDataSlotEXT(ptr);
         }
 
         public static bool operator ==(VkPrivateDataSlotEXT left, VkPrivateDataSlotEXT right)
@@ -393,17 +428,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkPrivateDataSlotEXT obj)
+        public bool Equals(in VkPrivateDataSlotEXT obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkPrivateDataSlotEXT vkPrivateDataSlotEXT && this.Equals(in vkPrivateDataSlotEXT);
+            return obj is VkPrivateDataSlotEXT vkPrivateDataSlotEXT && Equals(in vkPrivateDataSlotEXT);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -414,16 +449,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkInstance
+    public readonly unsafe struct VkInstance
     {
         public static readonly VkInstance Zero = new VkInstance();
-                private                void*      _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkInstance(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkInstance(void* ptr)
         {
-            VkInstance value;
-            value._ptr = ptr;
-            return value;
+            return new VkInstance(ptr);
         }
 
         public static bool operator ==(VkInstance left, VkInstance right)
@@ -436,17 +476,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkInstance obj)
+        public bool Equals(in VkInstance obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkInstance vkInstance && this.Equals(in vkInstance);
+            return obj is VkInstance vkInstance && Equals(in vkInstance);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -457,16 +497,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkEvent
+    public readonly unsafe struct VkEvent
     {
         public static readonly VkEvent Zero = new VkEvent();
-                private                void*   _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkEvent(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkEvent(void* ptr)
         {
-            VkEvent value;
-            value._ptr = ptr;
-            return value;
+            return new VkEvent(ptr);
         }
 
         public static bool operator ==(VkEvent left, VkEvent right)
@@ -479,17 +524,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkEvent obj)
+        public bool Equals(in VkEvent obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkEvent vkEvent && this.Equals(in vkEvent);
+            return obj is VkEvent vkEvent && Equals(in vkEvent);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -500,16 +545,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkQueue
+    public readonly unsafe struct VkQueue
     {
         public static readonly VkQueue Zero = new VkQueue();
-                private                void*   _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkQueue(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkQueue(void* ptr)
         {
-            VkQueue value;
-            value._ptr = ptr;
-            return value;
+            return new VkQueue(ptr);
         }
 
         public static bool operator ==(VkQueue left, VkQueue right)
@@ -522,17 +572,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkQueue obj)
+        public bool Equals(in VkQueue obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkQueue vkQueue && this.Equals(in vkQueue);
+            return obj is VkQueue vkQueue && Equals(in vkQueue);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -543,16 +593,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkQueryPool
+    public readonly unsafe struct VkQueryPool
     {
         public static readonly VkQueryPool Zero = new VkQueryPool();
-                private                void*       _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkQueryPool(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkQueryPool(void* ptr)
         {
-            VkQueryPool value;
-            value._ptr = ptr;
-            return value;
+            return new VkQueryPool(ptr);
         }
 
         public static bool operator ==(VkQueryPool left, VkQueryPool right)
@@ -565,17 +620,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkQueryPool obj)
+        public bool Equals(in VkQueryPool obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkQueryPool vkQueryPool && this.Equals(in vkQueryPool);
+            return obj is VkQueryPool vkQueryPool && Equals(in vkQueryPool);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -586,16 +641,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkPipelineCache
+    public readonly unsafe struct VkPipelineCache
     {
         public static readonly VkPipelineCache Zero = new VkPipelineCache();
-                private                void*           _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkPipelineCache(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkPipelineCache(void* ptr)
         {
-            VkPipelineCache value;
-            value._ptr = ptr;
-            return value;
+            return new VkPipelineCache(ptr);
         }
 
         public static bool operator ==(VkPipelineCache left, VkPipelineCache right)
@@ -608,17 +668,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkPipelineCache obj)
+        public bool Equals(in VkPipelineCache obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkPipelineCache vkPipelineCache && this.Equals(in vkPipelineCache);
+            return obj is VkPipelineCache vkPipelineCache && Equals(in vkPipelineCache);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -629,16 +689,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkPhysicalDevice
+    public readonly unsafe struct VkPhysicalDevice
     {
         public static readonly VkPhysicalDevice Zero = new VkPhysicalDevice();
-                private                void*            _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkPhysicalDevice(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkPhysicalDevice(void* ptr)
         {
-            VkPhysicalDevice value;
-            value._ptr = ptr;
-            return value;
+            return new VkPhysicalDevice(ptr);
         }
 
         public static bool operator ==(VkPhysicalDevice left, VkPhysicalDevice right)
@@ -651,17 +716,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkPhysicalDevice obj)
+        public bool Equals(in VkPhysicalDevice obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkPhysicalDevice vkPhysicalDevice && this.Equals(in vkPhysicalDevice);
+            return obj is VkPhysicalDevice vkPhysicalDevice && Equals(in vkPhysicalDevice);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -672,16 +737,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkBuffer
+    public readonly unsafe struct VkBuffer
     {
         public static readonly VkBuffer Zero = new VkBuffer();
-                private                void*    _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkBuffer(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkBuffer(void* ptr)
         {
-            VkBuffer value;
-            value._ptr = ptr;
-            return value;
+            return new VkBuffer(ptr);
         }
 
         public static bool operator ==(VkBuffer left, VkBuffer right)
@@ -694,17 +764,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkBuffer obj)
+        public bool Equals(in VkBuffer obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkBuffer vkBuffer && this.Equals(in vkBuffer);
+            return obj is VkBuffer vkBuffer && Equals(in vkBuffer);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -715,16 +785,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkCommandBuffer
+    public readonly unsafe struct VkCommandBuffer
     {
         public static readonly VkCommandBuffer Zero = new VkCommandBuffer();
-                private                void*           _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkCommandBuffer(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkCommandBuffer(void* ptr)
         {
-            VkCommandBuffer value;
-            value._ptr = ptr;
-            return value;
+            return new VkCommandBuffer(ptr);
         }
 
         public static bool operator ==(VkCommandBuffer left, VkCommandBuffer right)
@@ -737,17 +812,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkCommandBuffer obj)
+        public bool Equals(in VkCommandBuffer obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkCommandBuffer vkCommandBuffer && this.Equals(in vkCommandBuffer);
+            return obj is VkCommandBuffer vkCommandBuffer && Equals(in vkCommandBuffer);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -758,16 +833,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkImage
+    public readonly unsafe struct VkImage
     {
         public static readonly VkImage Zero = new VkImage();
-                private                void*   _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkImage(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkImage(void* ptr)
         {
-            VkImage value;
-            value._ptr = ptr;
-            return value;
+            return new VkImage(ptr);
         }
 
         public static bool operator ==(VkImage left, VkImage right)
@@ -780,17 +860,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkImage obj)
+        public bool Equals(in VkImage obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkImage vkImage && this.Equals(in vkImage);
+            return obj is VkImage vkImage && Equals(in vkImage);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -801,16 +881,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkSemaphore
+    public readonly unsafe struct VkSemaphore
     {
         public static readonly VkSemaphore Zero = new VkSemaphore();
-                private                void*       _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkSemaphore(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkSemaphore(void* ptr)
         {
-            VkSemaphore value;
-            value._ptr = ptr;
-            return value;
+            return new VkSemaphore(ptr);
         }
 
         public static bool operator ==(VkSemaphore left, VkSemaphore right)
@@ -823,17 +908,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkSemaphore obj)
+        public bool Equals(in VkSemaphore obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkSemaphore vkSemaphore && this.Equals(in vkSemaphore);
+            return obj is VkSemaphore vkSemaphore && Equals(in vkSemaphore);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -844,16 +929,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkFence
+    public readonly unsafe struct VkFence
     {
         public static readonly VkFence Zero = new VkFence();
-                private                void*   _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkFence(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkFence(void* ptr)
         {
-            VkFence value;
-            value._ptr = ptr;
-            return value;
+            return new VkFence(ptr);
         }
 
         public static bool operator ==(VkFence left, VkFence right)
@@ -866,17 +956,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkFence obj)
+        public bool Equals(in VkFence obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkFence vkFence && this.Equals(in vkFence);
+            return obj is VkFence vkFence && Equals(in vkFence);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -887,16 +977,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDeviceMemory
+    public readonly unsafe struct VkDeviceMemory
     {
         public static readonly VkDeviceMemory Zero = new VkDeviceMemory();
-                private                void*          _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDeviceMemory(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDeviceMemory(void* ptr)
         {
-            VkDeviceMemory value;
-            value._ptr = ptr;
-            return value;
+            return new VkDeviceMemory(ptr);
         }
 
         public static bool operator ==(VkDeviceMemory left, VkDeviceMemory right)
@@ -909,17 +1004,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDeviceMemory obj)
+        public bool Equals(in VkDeviceMemory obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDeviceMemory vkDeviceMemory && this.Equals(in vkDeviceMemory);
+            return obj is VkDeviceMemory vkDeviceMemory && Equals(in vkDeviceMemory);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -930,16 +1025,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkBufferView
+    public readonly unsafe struct VkBufferView
     {
         public static readonly VkBufferView Zero = new VkBufferView();
-                private                void*        _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkBufferView(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkBufferView(void* ptr)
         {
-            VkBufferView value;
-            value._ptr = ptr;
-            return value;
+            return new VkBufferView(ptr);
         }
 
         public static bool operator ==(VkBufferView left, VkBufferView right)
@@ -952,17 +1052,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkBufferView obj)
+        public bool Equals(in VkBufferView obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkBufferView vkBufferView && this.Equals(in vkBufferView);
+            return obj is VkBufferView vkBufferView && Equals(in vkBufferView);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -973,16 +1073,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkImageView
+    public readonly unsafe struct VkImageView
     {
         public static readonly VkImageView Zero = new VkImageView();
-                private                void*       _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkImageView(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkImageView(void* ptr)
         {
-            VkImageView value;
-            value._ptr = ptr;
-            return value;
+            return new VkImageView(ptr);
         }
 
         public static bool operator ==(VkImageView left, VkImageView right)
@@ -995,17 +1100,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkImageView obj)
+        public bool Equals(in VkImageView obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkImageView vkImageView && this.Equals(in vkImageView);
+            return obj is VkImageView vkImageView && Equals(in vkImageView);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1016,16 +1121,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkShaderModule
+    public readonly unsafe struct VkShaderModule
     {
         public static readonly VkShaderModule Zero = new VkShaderModule();
-                private                void*          _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkShaderModule(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkShaderModule(void* ptr)
         {
-            VkShaderModule value;
-            value._ptr = ptr;
-            return value;
+            return new VkShaderModule(ptr);
         }
 
         public static bool operator ==(VkShaderModule left, VkShaderModule right)
@@ -1038,17 +1148,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkShaderModule obj)
+        public bool Equals(in VkShaderModule obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkShaderModule vkShaderModule && this.Equals(in vkShaderModule);
+            return obj is VkShaderModule vkShaderModule && Equals(in vkShaderModule);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1059,16 +1169,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkPipelineLayout
+    public readonly unsafe struct VkPipelineLayout
     {
         public static readonly VkPipelineLayout Zero = new VkPipelineLayout();
-                private                void*            _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkPipelineLayout(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkPipelineLayout(void* ptr)
         {
-            VkPipelineLayout value;
-            value._ptr = ptr;
-            return value;
+            return new VkPipelineLayout(ptr);
         }
 
         public static bool operator ==(VkPipelineLayout left, VkPipelineLayout right)
@@ -1081,17 +1196,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkPipelineLayout obj)
+        public bool Equals(in VkPipelineLayout obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkPipelineLayout vkPipelineLayout && this.Equals(in vkPipelineLayout);
+            return obj is VkPipelineLayout vkPipelineLayout && Equals(in vkPipelineLayout);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1102,16 +1217,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkPipeline
+    public readonly unsafe struct VkPipeline
     {
         public static readonly VkPipeline Zero = new VkPipeline();
-                private                void*      _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkPipeline(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkPipeline(void* ptr)
         {
-            VkPipeline value;
-            value._ptr = ptr;
-            return value;
+            return new VkPipeline(ptr);
         }
 
         public static bool operator ==(VkPipeline left, VkPipeline right)
@@ -1124,17 +1244,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkPipeline obj)
+        public bool Equals(in VkPipeline obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkPipeline vkPipeline && this.Equals(in vkPipeline);
+            return obj is VkPipeline vkPipeline && Equals(in vkPipeline);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1145,16 +1265,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkRenderPass
+    public readonly unsafe struct VkRenderPass
     {
         public static readonly VkRenderPass Zero = new VkRenderPass();
-                private                void*        _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkRenderPass(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkRenderPass(void* ptr)
         {
-            VkRenderPass value;
-            value._ptr = ptr;
-            return value;
+            return new VkRenderPass(ptr);
         }
 
         public static bool operator ==(VkRenderPass left, VkRenderPass right)
@@ -1167,17 +1292,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkRenderPass obj)
+        public bool Equals(in VkRenderPass obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkRenderPass vkRenderPass && this.Equals(in vkRenderPass);
+            return obj is VkRenderPass vkRenderPass && Equals(in vkRenderPass);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1188,16 +1313,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDescriptorSetLayout
+    public readonly unsafe struct VkDescriptorSetLayout
     {
         public static readonly VkDescriptorSetLayout Zero = new VkDescriptorSetLayout();
-                private                void*                 _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDescriptorSetLayout(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDescriptorSetLayout(void* ptr)
         {
-            VkDescriptorSetLayout value;
-            value._ptr = ptr;
-            return value;
+            return new VkDescriptorSetLayout(ptr);
         }
 
         public static bool operator ==(VkDescriptorSetLayout left, VkDescriptorSetLayout right)
@@ -1210,17 +1340,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDescriptorSetLayout obj)
+        public bool Equals(in VkDescriptorSetLayout obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDescriptorSetLayout vkDescriptorSetLayout && this.Equals(in vkDescriptorSetLayout);
+            return obj is VkDescriptorSetLayout vkDescriptorSetLayout && Equals(in vkDescriptorSetLayout);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1231,16 +1361,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkSampler
+    public readonly unsafe struct VkSampler
     {
         public static readonly VkSampler Zero = new VkSampler();
-                private                void*     _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkSampler(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkSampler(void* ptr)
         {
-            VkSampler value;
-            value._ptr = ptr;
-            return value;
+            return new VkSampler(ptr);
         }
 
         public static bool operator ==(VkSampler left, VkSampler right)
@@ -1253,17 +1388,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkSampler obj)
+        public bool Equals(in VkSampler obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkSampler vkSampler && this.Equals(in vkSampler);
+            return obj is VkSampler vkSampler && Equals(in vkSampler);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1274,16 +1409,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDescriptorSet
+    public readonly unsafe struct VkDescriptorSet
     {
         public static readonly VkDescriptorSet Zero = new VkDescriptorSet();
-                private                void*           _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDescriptorSet(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDescriptorSet(void* ptr)
         {
-            VkDescriptorSet value;
-            value._ptr = ptr;
-            return value;
+            return new VkDescriptorSet(ptr);
         }
 
         public static bool operator ==(VkDescriptorSet left, VkDescriptorSet right)
@@ -1296,17 +1436,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDescriptorSet obj)
+        public bool Equals(in VkDescriptorSet obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDescriptorSet vkDescriptorSet && this.Equals(in vkDescriptorSet);
+            return obj is VkDescriptorSet vkDescriptorSet && Equals(in vkDescriptorSet);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1317,16 +1457,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDescriptorPool
+    public readonly unsafe struct VkDescriptorPool
     {
         public static readonly VkDescriptorPool Zero = new VkDescriptorPool();
-                private                void*            _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDescriptorPool(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDescriptorPool(void* ptr)
         {
-            VkDescriptorPool value;
-            value._ptr = ptr;
-            return value;
+            return new VkDescriptorPool(ptr);
         }
 
         public static bool operator ==(VkDescriptorPool left, VkDescriptorPool right)
@@ -1339,17 +1484,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDescriptorPool obj)
+        public bool Equals(in VkDescriptorPool obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDescriptorPool vkDescriptorPool && this.Equals(in vkDescriptorPool);
+            return obj is VkDescriptorPool vkDescriptorPool && Equals(in vkDescriptorPool);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1360,16 +1505,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkFramebuffer
+    public readonly unsafe struct VkFramebuffer
     {
         public static readonly VkFramebuffer Zero = new VkFramebuffer();
-                private                void*         _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkFramebuffer(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkFramebuffer(void* ptr)
         {
-            VkFramebuffer value;
-            value._ptr = ptr;
-            return value;
+            return new VkFramebuffer(ptr);
         }
 
         public static bool operator ==(VkFramebuffer left, VkFramebuffer right)
@@ -1382,17 +1532,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkFramebuffer obj)
+        public bool Equals(in VkFramebuffer obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkFramebuffer vkFramebuffer && this.Equals(in vkFramebuffer);
+            return obj is VkFramebuffer vkFramebuffer && Equals(in vkFramebuffer);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1403,16 +1553,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkCommandPool
+    public readonly unsafe struct VkCommandPool
     {
         public static readonly VkCommandPool Zero = new VkCommandPool();
-                private                void*         _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkCommandPool(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkCommandPool(void* ptr)
         {
-            VkCommandPool value;
-            value._ptr = ptr;
-            return value;
+            return new VkCommandPool(ptr);
         }
 
         public static bool operator ==(VkCommandPool left, VkCommandPool right)
@@ -1425,17 +1580,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkCommandPool obj)
+        public bool Equals(in VkCommandPool obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkCommandPool vkCommandPool && this.Equals(in vkCommandPool);
+            return obj is VkCommandPool vkCommandPool && Equals(in vkCommandPool);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1446,16 +1601,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkSamplerYcbcrConversion
+    public readonly unsafe struct VkSamplerYcbcrConversion
     {
         public static readonly VkSamplerYcbcrConversion Zero = new VkSamplerYcbcrConversion();
-                private                void*                    _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkSamplerYcbcrConversion(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkSamplerYcbcrConversion(void* ptr)
         {
-            VkSamplerYcbcrConversion value;
-            value._ptr = ptr;
-            return value;
+            return new VkSamplerYcbcrConversion(ptr);
         }
 
         public static bool operator ==(VkSamplerYcbcrConversion left, VkSamplerYcbcrConversion right)
@@ -1468,17 +1628,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkSamplerYcbcrConversion obj)
+        public bool Equals(in VkSamplerYcbcrConversion obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkSamplerYcbcrConversion vkSamplerYcbcrConversion && this.Equals(in vkSamplerYcbcrConversion);
+            return obj is VkSamplerYcbcrConversion vkSamplerYcbcrConversion && Equals(in vkSamplerYcbcrConversion);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1489,16 +1649,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkSurfaceKHR
+    public readonly unsafe struct VkSurfaceKHR
     {
         public static readonly VkSurfaceKHR Zero = new VkSurfaceKHR();
-                private                void*        _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkSurfaceKHR(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkSurfaceKHR(void* ptr)
         {
-            VkSurfaceKHR value;
-            value._ptr = ptr;
-            return value;
+            return new VkSurfaceKHR(ptr);
         }
 
         public static bool operator ==(VkSurfaceKHR left, VkSurfaceKHR right)
@@ -1511,17 +1676,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkSurfaceKHR obj)
+        public bool Equals(in VkSurfaceKHR obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkSurfaceKHR vkSurfaceKHR && this.Equals(in vkSurfaceKHR);
+            return obj is VkSurfaceKHR vkSurfaceKHR && Equals(in vkSurfaceKHR);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1532,16 +1697,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkSwapchainKHR
+    public readonly unsafe struct VkSwapchainKHR
     {
         public static readonly VkSwapchainKHR Zero = new VkSwapchainKHR();
-                private                void*          _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkSwapchainKHR(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkSwapchainKHR(void* ptr)
         {
-            VkSwapchainKHR value;
-            value._ptr = ptr;
-            return value;
+            return new VkSwapchainKHR(ptr);
         }
 
         public static bool operator ==(VkSwapchainKHR left, VkSwapchainKHR right)
@@ -1554,17 +1724,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkSwapchainKHR obj)
+        public bool Equals(in VkSwapchainKHR obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkSwapchainKHR vkSwapchainKHR && this.Equals(in vkSwapchainKHR);
+            return obj is VkSwapchainKHR vkSwapchainKHR && Equals(in vkSwapchainKHR);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1575,16 +1745,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDisplayKHR
+    public readonly unsafe struct VkDisplayKHR
     {
         public static readonly VkDisplayKHR Zero = new VkDisplayKHR();
-                private                void*        _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDisplayKHR(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDisplayKHR(void* ptr)
         {
-            VkDisplayKHR value;
-            value._ptr = ptr;
-            return value;
+            return new VkDisplayKHR(ptr);
         }
 
         public static bool operator ==(VkDisplayKHR left, VkDisplayKHR right)
@@ -1597,17 +1772,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDisplayKHR obj)
+        public bool Equals(in VkDisplayKHR obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDisplayKHR vkDisplayKHR && this.Equals(in vkDisplayKHR);
+            return obj is VkDisplayKHR vkDisplayKHR && Equals(in vkDisplayKHR);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1618,16 +1793,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkDisplayModeKHR
+    public readonly unsafe struct VkDisplayModeKHR
     {
         public static readonly VkDisplayModeKHR Zero = new VkDisplayModeKHR();
-                private                void*            _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkDisplayModeKHR(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkDisplayModeKHR(void* ptr)
         {
-            VkDisplayModeKHR value;
-            value._ptr = ptr;
-            return value;
+            return new VkDisplayModeKHR(ptr);
         }
 
         public static bool operator ==(VkDisplayModeKHR left, VkDisplayModeKHR right)
@@ -1640,17 +1820,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkDisplayModeKHR obj)
+        public bool Equals(in VkDisplayModeKHR obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkDisplayModeKHR vkDisplayModeKHR && this.Equals(in vkDisplayModeKHR);
+            return obj is VkDisplayModeKHR vkDisplayModeKHR && Equals(in vkDisplayModeKHR);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1661,16 +1841,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkValidationCacheEXT
+    public readonly unsafe struct VkValidationCacheEXT
     {
         public static readonly VkValidationCacheEXT Zero = new VkValidationCacheEXT();
-                private                void*                _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkValidationCacheEXT(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkValidationCacheEXT(void* ptr)
         {
-            VkValidationCacheEXT value;
-            value._ptr = ptr;
-            return value;
+            return new VkValidationCacheEXT(ptr);
         }
 
         public static bool operator ==(VkValidationCacheEXT left, VkValidationCacheEXT right)
@@ -1683,17 +1868,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkValidationCacheEXT obj)
+        public bool Equals(in VkValidationCacheEXT obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkValidationCacheEXT vkValidationCacheEXT && this.Equals(in vkValidationCacheEXT);
+            return obj is VkValidationCacheEXT vkValidationCacheEXT && Equals(in vkValidationCacheEXT);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1704,16 +1889,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkAccelerationStructureNV
+    public readonly unsafe struct VkAccelerationStructureNV
     {
         public static readonly VkAccelerationStructureNV Zero = new VkAccelerationStructureNV();
-                private                void*                     _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkAccelerationStructureNV(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkAccelerationStructureNV(void* ptr)
         {
-            VkAccelerationStructureNV value;
-            value._ptr = ptr;
-            return value;
+            return new VkAccelerationStructureNV(ptr);
         }
 
         public static bool operator ==(VkAccelerationStructureNV left, VkAccelerationStructureNV right)
@@ -1726,17 +1916,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkAccelerationStructureNV obj)
+        public bool Equals(in VkAccelerationStructureNV obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkAccelerationStructureNV vkAccelerationStructureNV && this.Equals(in vkAccelerationStructureNV);
+            return obj is VkAccelerationStructureNV vkAccelerationStructureNV && Equals(in vkAccelerationStructureNV);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1747,16 +1937,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkIndirectCommandsLayoutNV
+    public readonly unsafe struct VkIndirectCommandsLayoutNV
     {
         public static readonly VkIndirectCommandsLayoutNV Zero = new VkIndirectCommandsLayoutNV();
-                private                void*                      _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkIndirectCommandsLayoutNV(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkIndirectCommandsLayoutNV(void* ptr)
         {
-            VkIndirectCommandsLayoutNV value;
-            value._ptr = ptr;
-            return value;
+            return new VkIndirectCommandsLayoutNV(ptr);
         }
 
         public static bool operator ==(VkIndirectCommandsLayoutNV left, VkIndirectCommandsLayoutNV right)
@@ -1769,17 +1964,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkIndirectCommandsLayoutNV obj)
+        public bool Equals(in VkIndirectCommandsLayoutNV obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkIndirectCommandsLayoutNV vkIndirectCommandsLayoutNV && this.Equals(in vkIndirectCommandsLayoutNV);
+            return obj is VkIndirectCommandsLayoutNV vkIndirectCommandsLayoutNV && Equals(in vkIndirectCommandsLayoutNV);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
@@ -1790,16 +1985,21 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public unsafe struct VkAccelerationStructureKHR
+    public readonly unsafe struct VkAccelerationStructureKHR
     {
         public static readonly VkAccelerationStructureKHR Zero = new VkAccelerationStructureKHR();
-                private                void*                      _ptr;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        private VkAccelerationStructureKHR(void* ptr)
+        {
+            _ptr = ptr;
+        }
 
         public static explicit operator VkAccelerationStructureKHR(void* ptr)
         {
-            VkAccelerationStructureKHR value;
-            value._ptr = ptr;
-            return value;
+            return new VkAccelerationStructureKHR(ptr);
         }
 
         public static bool operator ==(VkAccelerationStructureKHR left, VkAccelerationStructureKHR right)
@@ -1812,17 +2012,17 @@ namespace Exomia.Vulkan.Api.Core
             return left._ptr != right._ptr;
         }
 
-        public readonly bool Equals(in VkAccelerationStructureKHR obj)
+        public bool Equals(in VkAccelerationStructureKHR obj)
         {
-             return obj._ptr == _ptr;
+            return obj._ptr == _ptr;
         }
 
-        public readonly override bool Equals(object? obj)
+        public override bool Equals(object? obj)
         {
-            return obj is VkAccelerationStructureKHR vkAccelerationStructureKHR && this.Equals(in vkAccelerationStructureKHR);
+            return obj is VkAccelerationStructureKHR vkAccelerationStructureKHR && Equals(in vkAccelerationStructureKHR);
         }
 
-        public readonly override int GetHashCode()
+        public override int GetHashCode()
         {
             return ((IntPtr)_ptr).GetHashCode();
         }
