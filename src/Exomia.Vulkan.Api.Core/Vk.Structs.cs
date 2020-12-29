@@ -3835,14 +3835,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugUtilsMessengerCallbackDataEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-
-        /// <summary>
-        ///     0 and is reserved for future use.
-        /// </summary>
-        public uint flags;
-
+        public VkStructureType                sType;
+        public void*                          pNext;
+        public uint                           flags; //reserved for future use
         public sbyte*                         pMessageIdName;
         public int                            messageIdNumber;
         public sbyte*                         pMessage;
@@ -3857,14 +3852,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugUtilsMessengerCreateInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-
-        /// <summary>
-        ///     Is 0 and is reserved for future use.
-        /// </summary>
-        public uint flags;
-
+        public VkStructureType                     sType;
+        public void*                               pNext;
+        public uint                                flags; //reserved for future use
         public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
         public VkDebugUtilsMessageTypeFlagsEXT     messageType;
 
@@ -4353,12 +4343,10 @@ namespace Exomia.Vulkan.Api.Core
         public float M12;
         public float M13;
         public float M14;
-
         public float M21;
         public float M22;
         public float M23;
         public float M24;
-
         public float M31;
         public float M32;
         public float M33;
