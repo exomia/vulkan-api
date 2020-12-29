@@ -120,14 +120,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDevice(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDevice(void* ptr)
         {
-            return new VkDevice(ptr);
+            VkDevice value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDevice left, VkDevice right)
@@ -168,14 +165,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDebugReportCallbackEXT(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDebugReportCallbackEXT(void* ptr)
         {
-            return new VkDebugReportCallbackEXT(ptr);
+            VkDebugReportCallbackEXT value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDebugReportCallbackEXT left, VkDebugReportCallbackEXT right)
@@ -216,14 +210,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDebugUtilsMessengerEXT(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDebugUtilsMessengerEXT(void* ptr)
         {
-            return new VkDebugUtilsMessengerEXT(ptr);
+            VkDebugUtilsMessengerEXT value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDebugUtilsMessengerEXT left, VkDebugUtilsMessengerEXT right)
@@ -264,14 +255,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDeferredOperationKHR(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDeferredOperationKHR(void* ptr)
         {
-            return new VkDeferredOperationKHR(ptr);
+            VkDeferredOperationKHR value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDeferredOperationKHR left, VkDeferredOperationKHR right)
@@ -312,14 +300,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkPerformanceConfigurationINTEL(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkPerformanceConfigurationINTEL(void* ptr)
         {
-            return new VkPerformanceConfigurationINTEL(ptr);
+            VkPerformanceConfigurationINTEL value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkPerformanceConfigurationINTEL left, VkPerformanceConfigurationINTEL right)
@@ -360,14 +345,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDescriptorUpdateTemplate(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDescriptorUpdateTemplate(void* ptr)
         {
-            return new VkDescriptorUpdateTemplate(ptr);
+            VkDescriptorUpdateTemplate value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDescriptorUpdateTemplate left, VkDescriptorUpdateTemplate right)
@@ -408,14 +390,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkPrivateDataSlotEXT(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkPrivateDataSlotEXT(void* ptr)
         {
-            return new VkPrivateDataSlotEXT(ptr);
+            VkPrivateDataSlotEXT value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkPrivateDataSlotEXT left, VkPrivateDataSlotEXT right)
@@ -456,14 +435,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkInstance(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkInstance(void* ptr)
         {
-            return new VkInstance(ptr);
+            VkInstance value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkInstance left, VkInstance right)
@@ -504,14 +480,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkEvent(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkEvent(void* ptr)
         {
-            return new VkEvent(ptr);
+            VkEvent value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkEvent left, VkEvent right)
@@ -552,14 +525,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkQueue(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkQueue(void* ptr)
         {
-            return new VkQueue(ptr);
+            VkQueue value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkQueue left, VkQueue right)
@@ -600,14 +570,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkQueryPool(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkQueryPool(void* ptr)
         {
-            return new VkQueryPool(ptr);
+            VkQueryPool value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkQueryPool left, VkQueryPool right)
@@ -648,14 +615,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkPipelineCache(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkPipelineCache(void* ptr)
         {
-            return new VkPipelineCache(ptr);
+            VkPipelineCache value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkPipelineCache left, VkPipelineCache right)
@@ -696,14 +660,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkPhysicalDevice(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkPhysicalDevice(void* ptr)
         {
-            return new VkPhysicalDevice(ptr);
+            VkPhysicalDevice value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkPhysicalDevice left, VkPhysicalDevice right)
@@ -744,14 +705,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkBuffer(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkBuffer(void* ptr)
         {
-            return new VkBuffer(ptr);
+            VkBuffer value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkBuffer left, VkBuffer right)
@@ -792,14 +750,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkCommandBuffer(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkCommandBuffer(void* ptr)
         {
-            return new VkCommandBuffer(ptr);
+            VkCommandBuffer value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkCommandBuffer left, VkCommandBuffer right)
@@ -840,14 +795,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkImage(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkImage(void* ptr)
         {
-            return new VkImage(ptr);
+            VkImage value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkImage left, VkImage right)
@@ -888,14 +840,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkSemaphore(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkSemaphore(void* ptr)
         {
-            return new VkSemaphore(ptr);
+            VkSemaphore value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkSemaphore left, VkSemaphore right)
@@ -936,14 +885,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkFence(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkFence(void* ptr)
         {
-            return new VkFence(ptr);
+            VkFence value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkFence left, VkFence right)
@@ -984,14 +930,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDeviceMemory(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDeviceMemory(void* ptr)
         {
-            return new VkDeviceMemory(ptr);
+            VkDeviceMemory value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDeviceMemory left, VkDeviceMemory right)
@@ -1032,14 +975,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkBufferView(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkBufferView(void* ptr)
         {
-            return new VkBufferView(ptr);
+            VkBufferView value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkBufferView left, VkBufferView right)
@@ -1080,14 +1020,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkImageView(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkImageView(void* ptr)
         {
-            return new VkImageView(ptr);
+            VkImageView value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkImageView left, VkImageView right)
@@ -1128,14 +1065,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkShaderModule(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkShaderModule(void* ptr)
         {
-            return new VkShaderModule(ptr);
+            VkShaderModule value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkShaderModule left, VkShaderModule right)
@@ -1176,14 +1110,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkPipelineLayout(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkPipelineLayout(void* ptr)
         {
-            return new VkPipelineLayout(ptr);
+            VkPipelineLayout value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkPipelineLayout left, VkPipelineLayout right)
@@ -1224,14 +1155,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkPipeline(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkPipeline(void* ptr)
         {
-            return new VkPipeline(ptr);
+            VkPipeline value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkPipeline left, VkPipeline right)
@@ -1272,14 +1200,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkRenderPass(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkRenderPass(void* ptr)
         {
-            return new VkRenderPass(ptr);
+            VkRenderPass value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkRenderPass left, VkRenderPass right)
@@ -1320,14 +1245,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDescriptorSetLayout(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDescriptorSetLayout(void* ptr)
         {
-            return new VkDescriptorSetLayout(ptr);
+            VkDescriptorSetLayout value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDescriptorSetLayout left, VkDescriptorSetLayout right)
@@ -1368,14 +1290,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkSampler(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkSampler(void* ptr)
         {
-            return new VkSampler(ptr);
+            VkSampler value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkSampler left, VkSampler right)
@@ -1416,14 +1335,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDescriptorSet(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDescriptorSet(void* ptr)
         {
-            return new VkDescriptorSet(ptr);
+            VkDescriptorSet value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDescriptorSet left, VkDescriptorSet right)
@@ -1464,14 +1380,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDescriptorPool(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDescriptorPool(void* ptr)
         {
-            return new VkDescriptorPool(ptr);
+            VkDescriptorPool value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDescriptorPool left, VkDescriptorPool right)
@@ -1512,14 +1425,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkFramebuffer(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkFramebuffer(void* ptr)
         {
-            return new VkFramebuffer(ptr);
+            VkFramebuffer value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkFramebuffer left, VkFramebuffer right)
@@ -1560,14 +1470,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkCommandPool(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkCommandPool(void* ptr)
         {
-            return new VkCommandPool(ptr);
+            VkCommandPool value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkCommandPool left, VkCommandPool right)
@@ -1608,14 +1515,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkSamplerYcbcrConversion(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkSamplerYcbcrConversion(void* ptr)
         {
-            return new VkSamplerYcbcrConversion(ptr);
+            VkSamplerYcbcrConversion value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkSamplerYcbcrConversion left, VkSamplerYcbcrConversion right)
@@ -1656,14 +1560,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkSurfaceKHR(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkSurfaceKHR(void* ptr)
         {
-            return new VkSurfaceKHR(ptr);
+            VkSurfaceKHR value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkSurfaceKHR left, VkSurfaceKHR right)
@@ -1704,14 +1605,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkSwapchainKHR(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkSwapchainKHR(void* ptr)
         {
-            return new VkSwapchainKHR(ptr);
+            VkSwapchainKHR value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkSwapchainKHR left, VkSwapchainKHR right)
@@ -1752,14 +1650,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDisplayKHR(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDisplayKHR(void* ptr)
         {
-            return new VkDisplayKHR(ptr);
+            VkDisplayKHR value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDisplayKHR left, VkDisplayKHR right)
@@ -1800,14 +1695,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkDisplayModeKHR(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkDisplayModeKHR(void* ptr)
         {
-            return new VkDisplayModeKHR(ptr);
+            VkDisplayModeKHR value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkDisplayModeKHR left, VkDisplayModeKHR right)
@@ -1848,14 +1740,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkValidationCacheEXT(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkValidationCacheEXT(void* ptr)
         {
-            return new VkValidationCacheEXT(ptr);
+            VkValidationCacheEXT value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkValidationCacheEXT left, VkValidationCacheEXT right)
@@ -1896,14 +1785,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkAccelerationStructureNV(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkAccelerationStructureNV(void* ptr)
         {
-            return new VkAccelerationStructureNV(ptr);
+            VkAccelerationStructureNV value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkAccelerationStructureNV left, VkAccelerationStructureNV right)
@@ -1944,14 +1830,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkIndirectCommandsLayoutNV(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkIndirectCommandsLayoutNV(void* ptr)
         {
-            return new VkIndirectCommandsLayoutNV(ptr);
+            VkIndirectCommandsLayoutNV value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkIndirectCommandsLayoutNV left, VkIndirectCommandsLayoutNV right)
@@ -1992,14 +1875,11 @@ namespace Exomia.Vulkan.Api.Core
         private readonly void* _ptr;
 #pragma warning restore 649
 
-        private VkAccelerationStructureKHR(void* ptr)
-        {
-            _ptr = ptr;
-        }
-
         public static explicit operator VkAccelerationStructureKHR(void* ptr)
         {
-            return new VkAccelerationStructureKHR(ptr);
+            VkAccelerationStructureKHR value;
+            *(void**)&value = ptr;
+            return value;
         }
 
         public static bool operator ==(VkAccelerationStructureKHR left, VkAccelerationStructureKHR right)
