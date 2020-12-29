@@ -2119,9 +2119,8 @@ namespace Exomia.Vulkan.Api.Core
         public       VkBool32                          independentResolve;
         public       VkBool32                          filterMinmaxSingleComponentFormats;
         public       VkBool32                          filterMinmaxImageComponentMapping;
-
-        public ulong              maxTimelineSemaphoreValueDifference;
-        public VkSampleCountFlags framebufferIntegerColorSampleCounts;
+        public       ulong                             maxTimelineSemaphoreValueDifference;
+        public       VkSampleCountFlags                framebufferIntegerColorSampleCounts;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3194,9 +3193,8 @@ namespace Exomia.Vulkan.Api.Core
         public fixed sbyte           name[VK_MAX_DESCRIPTION_SIZE];
         public fixed sbyte           description[VK_MAX_DESCRIPTION_SIZE];
         public       VkBool32        isText;
-
-        public nuint dataSize;
-        public void* pData;
+        public       nuint           dataSize;
+        public       void*           pData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3615,10 +3613,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportWScalingStateCreateInfoNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        viewportWScalingEnable;
-
+        public VkStructureType       sType;
+        public void*                 pNext;
+        public VkBool32              viewportWScalingEnable;
         public uint                  viewportCount;
         public VkViewportWScalingNV* pViewportWScalings;
     }
@@ -5030,9 +5027,8 @@ namespace Exomia.Vulkan.Api.Core
         public void*                      pNext;
         public VkLineRasterizationModeEXT lineRasterizationMode;
         public VkBool32                   stippledLineEnable;
-
-        public uint   lineStippleFactor;
-        public ushort lineStipplePattern;
+        public uint                       lineStippleFactor;
+        public ushort                     lineStipplePattern;
     }
 
     [StructLayout(LayoutKind.Sequential)]
