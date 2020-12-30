@@ -10,10 +10,11 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-// ReSharper disable UnusedMember.Global
 using System;
 using System.Runtime.InteropServices;
 
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnassignedReadonlyField
 namespace Exomia.Vulkan.Api.Core
 {
     using size_t = nuint;
@@ -1589,11 +1590,21 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* pipelineStackSize */
             void> VkCmdSetRayTracingPipelineStackSizeKHR;
 
-        public static explicit operator VkFunction(void* ptr)
+        public static implicit operator VkFunction(void* ptr)
         {
             VkFunction value;
             *(void**)&value = ptr;
             return value;
+        }
+
+        public static implicit operator void*(VkFunction vkFunc)
+        {
+            return vkFunc._ptr;
+        }
+
+        public static implicit operator IntPtr(VkFunction vkFunc)
+        {
+            return (IntPtr)vkFunc._ptr;
         }
 
         public static bool operator ==(VkFunction left, VkFunction right)
@@ -1631,7 +1642,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDeviceFeatures2*, /* pFeatures */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceFeatures2KHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceFeatures2KHR(void* ptr)
         {
             VkGetPhysicalDeviceFeatures2KHR value;
             *(void**)&value = ptr;
@@ -1648,7 +1659,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDeviceProperties2*, /* pProperties */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceProperties2KHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceProperties2KHR(void* ptr)
         {
             VkGetPhysicalDeviceProperties2KHR value;
             *(void**)&value = ptr;
@@ -1666,7 +1677,7 @@ namespace Exomia.Vulkan.Api.Core
             VkFormatProperties2*, /* pFormatProperties */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceFormatProperties2KHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceFormatProperties2KHR(void* ptr)
         {
             VkGetPhysicalDeviceFormatProperties2KHR value;
             *(void**)&value = ptr;
@@ -1684,7 +1695,7 @@ namespace Exomia.Vulkan.Api.Core
             VkImageFormatProperties2*,         /* pImageFormatProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceImageFormatProperties2KHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceImageFormatProperties2KHR(void* ptr)
         {
             VkGetPhysicalDeviceImageFormatProperties2KHR value;
             *(void**)&value = ptr;
@@ -1702,7 +1713,7 @@ namespace Exomia.Vulkan.Api.Core
             VkQueueFamilyProperties2*, /* pQueueFamilyProperties */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceQueueFamilyProperties2KHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceQueueFamilyProperties2KHR(void* ptr)
         {
             VkGetPhysicalDeviceQueueFamilyProperties2KHR value;
             *(void**)&value = ptr;
@@ -1719,7 +1730,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDeviceMemoryProperties2*, /* pMemoryProperties */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceMemoryProperties2KHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceMemoryProperties2KHR(void* ptr)
         {
             VkGetPhysicalDeviceMemoryProperties2KHR value;
             *(void**)&value = ptr;
@@ -1738,7 +1749,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSparseImageFormatProperties2*,         /* pProperties */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceSparseImageFormatProperties2KHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceSparseImageFormatProperties2KHR(void* ptr)
         {
             VkGetPhysicalDeviceSparseImageFormatProperties2KHR value;
             *(void**)&value = ptr;
@@ -1758,7 +1769,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPeerMemoryFeatureFlags*, /* pPeerMemoryFeatures */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetDeviceGroupPeerMemoryFeaturesKHR(void* ptr)
+        public static implicit operator VkGetDeviceGroupPeerMemoryFeaturesKHR(void* ptr)
         {
             VkGetDeviceGroupPeerMemoryFeaturesKHR value;
             *(void**)&value = ptr;
@@ -1775,7 +1786,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* deviceMask */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetDeviceMaskKHR(void* ptr)
+        public static implicit operator VkCmdSetDeviceMaskKHR(void* ptr)
         {
             VkCmdSetDeviceMaskKHR value;
             *(void**)&value = ptr;
@@ -1797,7 +1808,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* groupCountZ */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDispatchBaseKHR(void* ptr)
+        public static implicit operator VkCmdDispatchBaseKHR(void* ptr)
         {
             VkCmdDispatchBaseKHR value;
             *(void**)&value = ptr;
@@ -1815,7 +1826,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCommandPoolTrimFlags, /* flags */
             void> UnsafeInvoke;
 
-        public static explicit operator VkTrimCommandPoolKHR(void* ptr)
+        public static implicit operator VkTrimCommandPoolKHR(void* ptr)
         {
             VkTrimCommandPoolKHR value;
             *(void**)&value = ptr;
@@ -1833,7 +1844,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDeviceGroupProperties*, /* pPhysicalDeviceGroupProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkEnumeratePhysicalDeviceGroupsKHR(void* ptr)
+        public static implicit operator VkEnumeratePhysicalDeviceGroupsKHR(void* ptr)
         {
             VkEnumeratePhysicalDeviceGroupsKHR value;
             *(void**)&value = ptr;
@@ -1851,7 +1862,7 @@ namespace Exomia.Vulkan.Api.Core
             VkExternalBufferProperties*,         /* pExternalBufferProperties */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceExternalBufferPropertiesKHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceExternalBufferPropertiesKHR(void* ptr)
         {
             VkGetPhysicalDeviceExternalBufferPropertiesKHR value;
             *(void**)&value = ptr;
@@ -1869,7 +1880,7 @@ namespace Exomia.Vulkan.Api.Core
             int*,                  /* pFd */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetMemoryFdKHR(void* ptr)
+        public static implicit operator VkGetMemoryFdKHR(void* ptr)
         {
             VkGetMemoryFdKHR value;
             *(void**)&value = ptr;
@@ -1888,7 +1899,7 @@ namespace Exomia.Vulkan.Api.Core
             VkMemoryFdPropertiesKHR*,        /* pMemoryFdProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetMemoryFdPropertiesKHR(void* ptr)
+        public static implicit operator VkGetMemoryFdPropertiesKHR(void* ptr)
         {
             VkGetMemoryFdPropertiesKHR value;
             *(void**)&value = ptr;
@@ -1906,7 +1917,7 @@ namespace Exomia.Vulkan.Api.Core
             VkExternalSemaphoreProperties*,         /* pExternalSemaphoreProperties */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceExternalSemaphorePropertiesKHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceExternalSemaphorePropertiesKHR(void* ptr)
         {
             VkGetPhysicalDeviceExternalSemaphorePropertiesKHR value;
             *(void**)&value = ptr;
@@ -1923,7 +1934,7 @@ namespace Exomia.Vulkan.Api.Core
             VkImportSemaphoreFdInfoKHR*, /* pImportSemaphoreFdInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkImportSemaphoreFdKHR(void* ptr)
+        public static implicit operator VkImportSemaphoreFdKHR(void* ptr)
         {
             VkImportSemaphoreFdKHR value;
             *(void**)&value = ptr;
@@ -1941,7 +1952,7 @@ namespace Exomia.Vulkan.Api.Core
             int*,                     /* pFd */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetSemaphoreFdKHR(void* ptr)
+        public static implicit operator VkGetSemaphoreFdKHR(void* ptr)
         {
             VkGetSemaphoreFdKHR value;
             *(void**)&value = ptr;
@@ -1962,7 +1973,7 @@ namespace Exomia.Vulkan.Api.Core
             VkWriteDescriptorSet*, /* pDescriptorWrites */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdPushDescriptorSetKHR(void* ptr)
+        public static implicit operator VkCmdPushDescriptorSetKHR(void* ptr)
         {
             VkCmdPushDescriptorSetKHR value;
             *(void**)&value = ptr;
@@ -1982,7 +1993,7 @@ namespace Exomia.Vulkan.Api.Core
             void*,                      /* pData */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdPushDescriptorSetWithTemplateKHR(void* ptr)
+        public static implicit operator VkCmdPushDescriptorSetWithTemplateKHR(void* ptr)
         {
             VkCmdPushDescriptorSetWithTemplateKHR value;
             *(void**)&value = ptr;
@@ -2001,7 +2012,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDescriptorUpdateTemplate*,           /* pDescriptorUpdateTemplate */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateDescriptorUpdateTemplateKHR(void* ptr)
+        public static implicit operator VkCreateDescriptorUpdateTemplateKHR(void* ptr)
         {
             VkCreateDescriptorUpdateTemplateKHR value;
             *(void**)&value = ptr;
@@ -2019,7 +2030,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*,     /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroyDescriptorUpdateTemplateKHR(void* ptr)
+        public static implicit operator VkDestroyDescriptorUpdateTemplateKHR(void* ptr)
         {
             VkDestroyDescriptorUpdateTemplateKHR value;
             *(void**)&value = ptr;
@@ -2038,7 +2049,7 @@ namespace Exomia.Vulkan.Api.Core
             void*,                      /* pData */
             void> UnsafeInvoke;
 
-        public static explicit operator VkUpdateDescriptorSetWithTemplateKHR(void* ptr)
+        public static implicit operator VkUpdateDescriptorSetWithTemplateKHR(void* ptr)
         {
             VkUpdateDescriptorSetWithTemplateKHR value;
             *(void**)&value = ptr;
@@ -2057,7 +2068,7 @@ namespace Exomia.Vulkan.Api.Core
             VkRenderPass*,            /* pRenderPass */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateRenderPass2KHR(void* ptr)
+        public static implicit operator VkCreateRenderPass2KHR(void* ptr)
         {
             VkCreateRenderPass2KHR value;
             *(void**)&value = ptr;
@@ -2075,7 +2086,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSubpassBeginInfo*,    /* pSubpassBeginInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBeginRenderPass2KHR(void* ptr)
+        public static implicit operator VkCmdBeginRenderPass2KHR(void* ptr)
         {
             VkCmdBeginRenderPass2KHR value;
             *(void**)&value = ptr;
@@ -2093,7 +2104,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSubpassEndInfo*,   /* pSubpassEndInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdNextSubpass2KHR(void* ptr)
+        public static implicit operator VkCmdNextSubpass2KHR(void* ptr)
         {
             VkCmdNextSubpass2KHR value;
             *(void**)&value = ptr;
@@ -2110,7 +2121,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSubpassEndInfo*, /* pSubpassEndInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdEndRenderPass2KHR(void* ptr)
+        public static implicit operator VkCmdEndRenderPass2KHR(void* ptr)
         {
             VkCmdEndRenderPass2KHR value;
             *(void**)&value = ptr;
@@ -2127,7 +2138,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSwapchainKHR, /* swapchain */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetSwapchainStatusKHR(void* ptr)
+        public static implicit operator VkGetSwapchainStatusKHR(void* ptr)
         {
             VkGetSwapchainStatusKHR value;
             *(void**)&value = ptr;
@@ -2145,7 +2156,7 @@ namespace Exomia.Vulkan.Api.Core
             VkExternalFenceProperties*,         /* pExternalFenceProperties */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceExternalFencePropertiesKHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceExternalFencePropertiesKHR(void* ptr)
         {
             VkGetPhysicalDeviceExternalFencePropertiesKHR value;
             *(void**)&value = ptr;
@@ -2162,7 +2173,7 @@ namespace Exomia.Vulkan.Api.Core
             VkImportFenceFdInfoKHR*, /* pImportFenceFdInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkImportFenceFdKHR(void* ptr)
+        public static implicit operator VkImportFenceFdKHR(void* ptr)
         {
             VkImportFenceFdKHR value;
             *(void**)&value = ptr;
@@ -2180,7 +2191,7 @@ namespace Exomia.Vulkan.Api.Core
             int*,                 /* pFd */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetFenceFdKHR(void* ptr)
+        public static implicit operator VkGetFenceFdKHR(void* ptr)
         {
             VkGetFenceFdKHR value;
             *(void**)&value = ptr;
@@ -2200,7 +2211,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPerformanceCounterDescriptionKHR*, /* pCounterDescriptions */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR(void* ptr)
+        public static implicit operator VkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR(void* ptr)
         {
             VkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR value;
             *(void**)&value = ptr;
@@ -2218,7 +2229,7 @@ namespace Exomia.Vulkan.Api.Core
             uint*,                                /* pNumPasses */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR(void* ptr)
         {
             VkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR value;
             *(void**)&value = ptr;
@@ -2235,7 +2246,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAcquireProfilingLockInfoKHR*, /* pInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkAcquireProfilingLockKHR(void* ptr)
+        public static implicit operator VkAcquireProfilingLockKHR(void* ptr)
         {
             VkAcquireProfilingLockKHR value;
             *(void**)&value = ptr;
@@ -2251,7 +2262,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDevice, /* device */
             void> UnsafeInvoke;
 
-        public static explicit operator VkReleaseProfilingLockKHR(void* ptr)
+        public static implicit operator VkReleaseProfilingLockKHR(void* ptr)
         {
             VkReleaseProfilingLockKHR value;
             *(void**)&value = ptr;
@@ -2269,7 +2280,7 @@ namespace Exomia.Vulkan.Api.Core
             VkMemoryRequirements2*,          /* pMemoryRequirements */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetImageMemoryRequirements2KHR(void* ptr)
+        public static implicit operator VkGetImageMemoryRequirements2KHR(void* ptr)
         {
             VkGetImageMemoryRequirements2KHR value;
             *(void**)&value = ptr;
@@ -2287,7 +2298,7 @@ namespace Exomia.Vulkan.Api.Core
             VkMemoryRequirements2*,           /* pMemoryRequirements */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetBufferMemoryRequirements2KHR(void* ptr)
+        public static implicit operator VkGetBufferMemoryRequirements2KHR(void* ptr)
         {
             VkGetBufferMemoryRequirements2KHR value;
             *(void**)&value = ptr;
@@ -2306,7 +2317,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSparseImageMemoryRequirements2*,     /* pSparseMemoryRequirements */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetImageSparseMemoryRequirements2KHR(void* ptr)
+        public static implicit operator VkGetImageSparseMemoryRequirements2KHR(void* ptr)
         {
             VkGetImageSparseMemoryRequirements2KHR value;
             *(void**)&value = ptr;
@@ -2325,7 +2336,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSamplerYcbcrConversion*,           /* pYcbcrConversion */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateSamplerYcbcrConversionKHR(void* ptr)
+        public static implicit operator VkCreateSamplerYcbcrConversionKHR(void* ptr)
         {
             VkCreateSamplerYcbcrConversionKHR value;
             *(void**)&value = ptr;
@@ -2343,7 +2354,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*,   /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroySamplerYcbcrConversionKHR(void* ptr)
+        public static implicit operator VkDestroySamplerYcbcrConversionKHR(void* ptr)
         {
             VkDestroySamplerYcbcrConversionKHR value;
             *(void**)&value = ptr;
@@ -2361,7 +2372,7 @@ namespace Exomia.Vulkan.Api.Core
             VkBindBufferMemoryInfo*, /* pBindInfos */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkBindBufferMemory2KHR(void* ptr)
+        public static implicit operator VkBindBufferMemory2KHR(void* ptr)
         {
             VkBindBufferMemory2KHR value;
             *(void**)&value = ptr;
@@ -2379,7 +2390,7 @@ namespace Exomia.Vulkan.Api.Core
             VkBindImageMemoryInfo*, /* pBindInfos */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkBindImageMemory2KHR(void* ptr)
+        public static implicit operator VkBindImageMemory2KHR(void* ptr)
         {
             VkBindImageMemory2KHR value;
             *(void**)&value = ptr;
@@ -2397,7 +2408,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDescriptorSetLayoutSupport*,    /* pSupport */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetDescriptorSetLayoutSupportKHR(void* ptr)
+        public static implicit operator VkGetDescriptorSetLayoutSupportKHR(void* ptr)
         {
             VkGetDescriptorSetLayoutSupportKHR value;
             *(void**)&value = ptr;
@@ -2419,7 +2430,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* stride */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDrawIndirectCountKHR(void* ptr)
+        public static implicit operator VkCmdDrawIndirectCountKHR(void* ptr)
         {
             VkCmdDrawIndirectCountKHR value;
             *(void**)&value = ptr;
@@ -2441,7 +2452,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* stride */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDrawIndexedIndirectCountKHR(void* ptr)
+        public static implicit operator VkCmdDrawIndexedIndirectCountKHR(void* ptr)
         {
             VkCmdDrawIndexedIndirectCountKHR value;
             *(void**)&value = ptr;
@@ -2459,7 +2470,7 @@ namespace Exomia.Vulkan.Api.Core
             ulong*,      /* pValue */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetSemaphoreCounterValueKHR(void* ptr)
+        public static implicit operator VkGetSemaphoreCounterValueKHR(void* ptr)
         {
             VkGetSemaphoreCounterValueKHR value;
             *(void**)&value = ptr;
@@ -2477,7 +2488,7 @@ namespace Exomia.Vulkan.Api.Core
             ulong,                /* timeout */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkWaitSemaphoresKHR(void* ptr)
+        public static implicit operator VkWaitSemaphoresKHR(void* ptr)
         {
             VkWaitSemaphoresKHR value;
             *(void**)&value = ptr;
@@ -2494,7 +2505,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSemaphoreSignalInfo*, /* pSignalInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkSignalSemaphoreKHR(void* ptr)
+        public static implicit operator VkSignalSemaphoreKHR(void* ptr)
         {
             VkSignalSemaphoreKHR value;
             *(void**)&value = ptr;
@@ -2512,7 +2523,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDeviceFragmentShadingRateKHR*, /* pFragmentShadingRates */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceFragmentShadingRatesKHR(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceFragmentShadingRatesKHR(void* ptr)
         {
             VkGetPhysicalDeviceFragmentShadingRatesKHR value;
             *(void**)&value = ptr;
@@ -2531,7 +2542,7 @@ namespace Exomia.Vulkan.Api.Core
             VkFragmentShadingRateCombinerOpKHR, /* combinerOps2 */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetFragmentShadingRateKHR(void* ptr)
+        public static implicit operator VkCmdSetFragmentShadingRateKHR(void* ptr)
         {
             VkCmdSetFragmentShadingRateKHR value;
             *(void**)&value = ptr;
@@ -2548,7 +2559,7 @@ namespace Exomia.Vulkan.Api.Core
             VkBufferDeviceAddressInfo*, /* pInfo */
             VkDeviceAddress> UnsafeInvoke;
 
-        public static explicit operator VkGetBufferDeviceAddressKHR(void* ptr)
+        public static implicit operator VkGetBufferDeviceAddressKHR(void* ptr)
         {
             VkGetBufferDeviceAddressKHR value;
             *(void**)&value = ptr;
@@ -2565,7 +2576,7 @@ namespace Exomia.Vulkan.Api.Core
             VkBufferDeviceAddressInfo*, /* pInfo */
             ulong> UnsafeInvoke;
 
-        public static explicit operator VkGetBufferOpaqueCaptureAddressKHR(void* ptr)
+        public static implicit operator VkGetBufferOpaqueCaptureAddressKHR(void* ptr)
         {
             VkGetBufferOpaqueCaptureAddressKHR value;
             *(void**)&value = ptr;
@@ -2582,7 +2593,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeviceMemoryOpaqueCaptureAddressInfo*, /* pInfo */
             ulong> UnsafeInvoke;
 
-        public static explicit operator VkGetDeviceMemoryOpaqueCaptureAddressKHR(void* ptr)
+        public static implicit operator VkGetDeviceMemoryOpaqueCaptureAddressKHR(void* ptr)
         {
             VkGetDeviceMemoryOpaqueCaptureAddressKHR value;
             *(void**)&value = ptr;
@@ -2600,7 +2611,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeferredOperationKHR*, /* pDeferredOperation */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateDeferredOperationKHR(void* ptr)
+        public static implicit operator VkCreateDeferredOperationKHR(void* ptr)
         {
             VkCreateDeferredOperationKHR value;
             *(void**)&value = ptr;
@@ -2618,7 +2629,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*, /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroyDeferredOperationKHR(void* ptr)
+        public static implicit operator VkDestroyDeferredOperationKHR(void* ptr)
         {
             VkDestroyDeferredOperationKHR value;
             *(void**)&value = ptr;
@@ -2635,7 +2646,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeferredOperationKHR, /* operation */
             uint> UnsafeInvoke;
 
-        public static explicit operator VkGetDeferredOperationMaxConcurrencyKHR(void* ptr)
+        public static implicit operator VkGetDeferredOperationMaxConcurrencyKHR(void* ptr)
         {
             VkGetDeferredOperationMaxConcurrencyKHR value;
             *(void**)&value = ptr;
@@ -2652,7 +2663,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeferredOperationKHR, /* operation */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetDeferredOperationResultKHR(void* ptr)
+        public static implicit operator VkGetDeferredOperationResultKHR(void* ptr)
         {
             VkGetDeferredOperationResultKHR value;
             *(void**)&value = ptr;
@@ -2669,7 +2680,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeferredOperationKHR, /* operation */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkDeferredOperationJoinKHR(void* ptr)
+        public static implicit operator VkDeferredOperationJoinKHR(void* ptr)
         {
             VkDeferredOperationJoinKHR value;
             *(void**)&value = ptr;
@@ -2688,7 +2699,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipelineExecutablePropertiesKHR*, /* pProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPipelineExecutablePropertiesKHR(void* ptr)
+        public static implicit operator VkGetPipelineExecutablePropertiesKHR(void* ptr)
         {
             VkGetPipelineExecutablePropertiesKHR value;
             *(void**)&value = ptr;
@@ -2707,7 +2718,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipelineExecutableStatisticKHR*, /* pStatistics */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPipelineExecutableStatisticsKHR(void* ptr)
+        public static implicit operator VkGetPipelineExecutableStatisticsKHR(void* ptr)
         {
             VkGetPipelineExecutableStatisticsKHR value;
             *(void**)&value = ptr;
@@ -2726,7 +2737,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipelineExecutableInternalRepresentationKHR*, /* pInternalRepresentations */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPipelineExecutableInternalRepresentationsKHR(void* ptr)
+        public static implicit operator VkGetPipelineExecutableInternalRepresentationsKHR(void* ptr)
         {
             VkGetPipelineExecutableInternalRepresentationsKHR value;
             *(void**)&value = ptr;
@@ -2743,7 +2754,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyBufferInfo2KHR*, /* pCopyBufferInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdCopyBuffer2KHR(void* ptr)
+        public static implicit operator VkCmdCopyBuffer2KHR(void* ptr)
         {
             VkCmdCopyBuffer2KHR value;
             *(void**)&value = ptr;
@@ -2760,7 +2771,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyImageInfo2KHR*, /* pCopyImageInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdCopyImage2KHR(void* ptr)
+        public static implicit operator VkCmdCopyImage2KHR(void* ptr)
         {
             VkCmdCopyImage2KHR value;
             *(void**)&value = ptr;
@@ -2777,7 +2788,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyBufferToImageInfo2KHR*, /* pCopyBufferToImageInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdCopyBufferToImage2KHR(void* ptr)
+        public static implicit operator VkCmdCopyBufferToImage2KHR(void* ptr)
         {
             VkCmdCopyBufferToImage2KHR value;
             *(void**)&value = ptr;
@@ -2794,7 +2805,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyImageToBufferInfo2KHR*, /* pCopyImageToBufferInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdCopyImageToBuffer2KHR(void* ptr)
+        public static implicit operator VkCmdCopyImageToBuffer2KHR(void* ptr)
         {
             VkCmdCopyImageToBuffer2KHR value;
             *(void**)&value = ptr;
@@ -2811,7 +2822,7 @@ namespace Exomia.Vulkan.Api.Core
             VkBlitImageInfo2KHR*, /* pBlitImageInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBlitImage2KHR(void* ptr)
+        public static implicit operator VkCmdBlitImage2KHR(void* ptr)
         {
             VkCmdBlitImage2KHR value;
             *(void**)&value = ptr;
@@ -2828,7 +2839,7 @@ namespace Exomia.Vulkan.Api.Core
             VkResolveImageInfo2KHR*, /* pResolveImageInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdResolveImage2KHR(void* ptr)
+        public static implicit operator VkCmdResolveImage2KHR(void* ptr)
         {
             VkCmdResolveImage2KHR value;
             *(void**)&value = ptr;
@@ -2847,7 +2858,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugReportCallbackEXT*,           /* pCallback */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateDebugReportCallbackEXT(void* ptr)
+        public static implicit operator VkCreateDebugReportCallbackEXT(void* ptr)
         {
             VkCreateDebugReportCallbackEXT value;
             *(void**)&value = ptr;
@@ -2865,7 +2876,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*,   /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroyDebugReportCallbackEXT(void* ptr)
+        public static implicit operator VkDestroyDebugReportCallbackEXT(void* ptr)
         {
             VkDestroyDebugReportCallbackEXT value;
             *(void**)&value = ptr;
@@ -2888,7 +2899,7 @@ namespace Exomia.Vulkan.Api.Core
             byte*,                      /* pMessage */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDebugReportMessageEXT(void* ptr)
+        public static implicit operator VkDebugReportMessageEXT(void* ptr)
         {
             VkDebugReportMessageEXT value;
             *(void**)&value = ptr;
@@ -2905,7 +2916,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugMarkerObjectTagInfoEXT*, /* pTagInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkDebugMarkerSetObjectTagEXT(void* ptr)
+        public static implicit operator VkDebugMarkerSetObjectTagEXT(void* ptr)
         {
             VkDebugMarkerSetObjectTagEXT value;
             *(void**)&value = ptr;
@@ -2922,7 +2933,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugMarkerObjectNameInfoEXT*, /* pNameInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkDebugMarkerSetObjectNameEXT(void* ptr)
+        public static implicit operator VkDebugMarkerSetObjectNameEXT(void* ptr)
         {
             VkDebugMarkerSetObjectNameEXT value;
             *(void**)&value = ptr;
@@ -2939,7 +2950,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugMarkerMarkerInfoEXT*, /* pMarkerInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDebugMarkerBeginEXT(void* ptr)
+        public static implicit operator VkCmdDebugMarkerBeginEXT(void* ptr)
         {
             VkCmdDebugMarkerBeginEXT value;
             *(void**)&value = ptr;
@@ -2955,7 +2966,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCommandBuffer, /* commandBuffer */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDebugMarkerEndEXT(void* ptr)
+        public static implicit operator VkCmdDebugMarkerEndEXT(void* ptr)
         {
             VkCmdDebugMarkerEndEXT value;
             *(void**)&value = ptr;
@@ -2972,7 +2983,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugMarkerMarkerInfoEXT*, /* pMarkerInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDebugMarkerInsertEXT(void* ptr)
+        public static implicit operator VkCmdDebugMarkerInsertEXT(void* ptr)
         {
             VkCmdDebugMarkerInsertEXT value;
             *(void**)&value = ptr;
@@ -2993,7 +3004,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeviceSize*,   /* pSizes */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBindTransformFeedbackBuffersEXT(void* ptr)
+        public static implicit operator VkCmdBindTransformFeedbackBuffersEXT(void* ptr)
         {
             VkCmdBindTransformFeedbackBuffersEXT value;
             *(void**)&value = ptr;
@@ -3013,7 +3024,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeviceSize*,   /* pCounterBufferOffsets */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBeginTransformFeedbackEXT(void* ptr)
+        public static implicit operator VkCmdBeginTransformFeedbackEXT(void* ptr)
         {
             VkCmdBeginTransformFeedbackEXT value;
             *(void**)&value = ptr;
@@ -3033,7 +3044,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeviceSize*,   /* pCounterBufferOffsets */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdEndTransformFeedbackEXT(void* ptr)
+        public static implicit operator VkCmdEndTransformFeedbackEXT(void* ptr)
         {
             VkCmdEndTransformFeedbackEXT value;
             *(void**)&value = ptr;
@@ -3053,7 +3064,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,                /* index */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBeginQueryIndexedEXT(void* ptr)
+        public static implicit operator VkCmdBeginQueryIndexedEXT(void* ptr)
         {
             VkCmdBeginQueryIndexedEXT value;
             *(void**)&value = ptr;
@@ -3072,7 +3083,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* index */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdEndQueryIndexedEXT(void* ptr)
+        public static implicit operator VkCmdEndQueryIndexedEXT(void* ptr)
         {
             VkCmdEndQueryIndexedEXT value;
             *(void**)&value = ptr;
@@ -3094,7 +3105,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* vertexStride */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDrawIndirectByteCountEXT(void* ptr)
+        public static implicit operator VkCmdDrawIndirectByteCountEXT(void* ptr)
         {
             VkCmdDrawIndirectByteCountEXT value;
             *(void**)&value = ptr;
@@ -3111,7 +3122,7 @@ namespace Exomia.Vulkan.Api.Core
             VkImageViewHandleInfoNVX*, /* pInfo */
             uint> UnsafeInvoke;
 
-        public static explicit operator VkGetImageViewHandleNVX(void* ptr)
+        public static implicit operator VkGetImageViewHandleNVX(void* ptr)
         {
             VkGetImageViewHandleNVX value;
             *(void**)&value = ptr;
@@ -3129,7 +3140,7 @@ namespace Exomia.Vulkan.Api.Core
             VkImageViewAddressPropertiesNVX*, /* pProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetImageViewAddressNVX(void* ptr)
+        public static implicit operator VkGetImageViewAddressNVX(void* ptr)
         {
             VkGetImageViewAddressNVX value;
             *(void**)&value = ptr;
@@ -3151,7 +3162,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* stride */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDrawIndirectCountAMD(void* ptr)
+        public static implicit operator VkCmdDrawIndirectCountAMD(void* ptr)
         {
             VkCmdDrawIndirectCountAMD value;
             *(void**)&value = ptr;
@@ -3173,7 +3184,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* stride */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDrawIndexedIndirectCountAMD(void* ptr)
+        public static implicit operator VkCmdDrawIndexedIndirectCountAMD(void* ptr)
         {
             VkCmdDrawIndexedIndirectCountAMD value;
             *(void**)&value = ptr;
@@ -3194,7 +3205,7 @@ namespace Exomia.Vulkan.Api.Core
             void*,               /* pInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetShaderInfoAMD(void* ptr)
+        public static implicit operator VkGetShaderInfoAMD(void* ptr)
         {
             VkGetShaderInfoAMD value;
             *(void**)&value = ptr;
@@ -3217,7 +3228,7 @@ namespace Exomia.Vulkan.Api.Core
             VkExternalImageFormatPropertiesNV*, /* pExternalImageFormatProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceExternalImageFormatPropertiesNV(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceExternalImageFormatPropertiesNV(void* ptr)
         {
             VkGetPhysicalDeviceExternalImageFormatPropertiesNV value;
             *(void**)&value = ptr;
@@ -3234,7 +3245,7 @@ namespace Exomia.Vulkan.Api.Core
             VkConditionalRenderingBeginInfoEXT*, /* pConditionalRenderingBegin */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBeginConditionalRenderingEXT(void* ptr)
+        public static implicit operator VkCmdBeginConditionalRenderingEXT(void* ptr)
         {
             VkCmdBeginConditionalRenderingEXT value;
             *(void**)&value = ptr;
@@ -3250,7 +3261,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCommandBuffer, /* commandBuffer */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdEndConditionalRenderingEXT(void* ptr)
+        public static implicit operator VkCmdEndConditionalRenderingEXT(void* ptr)
         {
             VkCmdEndConditionalRenderingEXT value;
             *(void**)&value = ptr;
@@ -3269,7 +3280,7 @@ namespace Exomia.Vulkan.Api.Core
             VkViewportWScalingNV*, /* pViewportWScalings */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetViewportWScalingNV(void* ptr)
+        public static implicit operator VkCmdSetViewportWScalingNV(void* ptr)
         {
             VkCmdSetViewportWScalingNV value;
             *(void**)&value = ptr;
@@ -3286,7 +3297,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDisplayKHR,     /* display */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkReleaseDisplayEXT(void* ptr)
+        public static implicit operator VkReleaseDisplayEXT(void* ptr)
         {
             VkReleaseDisplayEXT value;
             *(void**)&value = ptr;
@@ -3304,7 +3315,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSurfaceCapabilities2EXT*, /* pSurfaceCapabilities */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceSurfaceCapabilities2EXT(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceSurfaceCapabilities2EXT(void* ptr)
         {
             VkGetPhysicalDeviceSurfaceCapabilities2EXT value;
             *(void**)&value = ptr;
@@ -3322,7 +3333,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDisplayPowerInfoEXT*, /* pDisplayPowerInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkDisplayPowerControlEXT(void* ptr)
+        public static implicit operator VkDisplayPowerControlEXT(void* ptr)
         {
             VkDisplayPowerControlEXT value;
             *(void**)&value = ptr;
@@ -3341,7 +3352,7 @@ namespace Exomia.Vulkan.Api.Core
             VkFence*,               /* pFence */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkRegisterDeviceEventEXT(void* ptr)
+        public static implicit operator VkRegisterDeviceEventEXT(void* ptr)
         {
             VkRegisterDeviceEventEXT value;
             *(void**)&value = ptr;
@@ -3361,7 +3372,7 @@ namespace Exomia.Vulkan.Api.Core
             VkFence*,               /* pFence */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkRegisterDisplayEventEXT(void* ptr)
+        public static implicit operator VkRegisterDisplayEventEXT(void* ptr)
         {
             VkRegisterDisplayEventEXT value;
             *(void**)&value = ptr;
@@ -3380,7 +3391,7 @@ namespace Exomia.Vulkan.Api.Core
             ulong*,                   /* pCounterValue */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetSwapchainCounterEXT(void* ptr)
+        public static implicit operator VkGetSwapchainCounterEXT(void* ptr)
         {
             VkGetSwapchainCounterEXT value;
             *(void**)&value = ptr;
@@ -3398,7 +3409,7 @@ namespace Exomia.Vulkan.Api.Core
             VkRefreshCycleDurationGOOGLE*, /* pDisplayTimingProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetRefreshCycleDurationGOOGLE(void* ptr)
+        public static implicit operator VkGetRefreshCycleDurationGOOGLE(void* ptr)
         {
             VkGetRefreshCycleDurationGOOGLE value;
             *(void**)&value = ptr;
@@ -3417,7 +3428,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPastPresentationTimingGOOGLE*, /* pPresentationTimings */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPastPresentationTimingGOOGLE(void* ptr)
+        public static implicit operator VkGetPastPresentationTimingGOOGLE(void* ptr)
         {
             VkGetPastPresentationTimingGOOGLE value;
             *(void**)&value = ptr;
@@ -3436,7 +3447,7 @@ namespace Exomia.Vulkan.Api.Core
             VkRect2D*,       /* pDiscardRectangles */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetDiscardRectangleEXT(void* ptr)
+        public static implicit operator VkCmdSetDiscardRectangleEXT(void* ptr)
         {
             VkCmdSetDiscardRectangleEXT value;
             *(void**)&value = ptr;
@@ -3455,7 +3466,7 @@ namespace Exomia.Vulkan.Api.Core
             VkHdrMetadataEXT*, /* pMetadata */
             void> UnsafeInvoke;
 
-        public static explicit operator VkSetHdrMetadataEXT(void* ptr)
+        public static implicit operator VkSetHdrMetadataEXT(void* ptr)
         {
             VkSetHdrMetadataEXT value;
             *(void**)&value = ptr;
@@ -3472,7 +3483,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugUtilsObjectNameInfoEXT*, /* pNameInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkSetDebugUtilsObjectNameEXT(void* ptr)
+        public static implicit operator VkSetDebugUtilsObjectNameEXT(void* ptr)
         {
             VkSetDebugUtilsObjectNameEXT value;
             *(void**)&value = ptr;
@@ -3489,7 +3500,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugUtilsObjectTagInfoEXT*, /* pTagInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkSetDebugUtilsObjectTagEXT(void* ptr)
+        public static implicit operator VkSetDebugUtilsObjectTagEXT(void* ptr)
         {
             VkSetDebugUtilsObjectTagEXT value;
             *(void**)&value = ptr;
@@ -3506,7 +3517,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugUtilsLabelEXT*, /* pLabelInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkQueueBeginDebugUtilsLabelEXT(void* ptr)
+        public static implicit operator VkQueueBeginDebugUtilsLabelEXT(void* ptr)
         {
             VkQueueBeginDebugUtilsLabelEXT value;
             *(void**)&value = ptr;
@@ -3522,7 +3533,7 @@ namespace Exomia.Vulkan.Api.Core
             VkQueue, /* queue */
             void> UnsafeInvoke;
 
-        public static explicit operator VkQueueEndDebugUtilsLabelEXT(void* ptr)
+        public static implicit operator VkQueueEndDebugUtilsLabelEXT(void* ptr)
         {
             VkQueueEndDebugUtilsLabelEXT value;
             *(void**)&value = ptr;
@@ -3539,7 +3550,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugUtilsLabelEXT*, /* pLabelInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkQueueInsertDebugUtilsLabelEXT(void* ptr)
+        public static implicit operator VkQueueInsertDebugUtilsLabelEXT(void* ptr)
         {
             VkQueueInsertDebugUtilsLabelEXT value;
             *(void**)&value = ptr;
@@ -3556,7 +3567,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugUtilsLabelEXT*, /* pLabelInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBeginDebugUtilsLabelEXT(void* ptr)
+        public static implicit operator VkCmdBeginDebugUtilsLabelEXT(void* ptr)
         {
             VkCmdBeginDebugUtilsLabelEXT value;
             *(void**)&value = ptr;
@@ -3572,7 +3583,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCommandBuffer, /* commandBuffer */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdEndDebugUtilsLabelEXT(void* ptr)
+        public static implicit operator VkCmdEndDebugUtilsLabelEXT(void* ptr)
         {
             VkCmdEndDebugUtilsLabelEXT value;
             *(void**)&value = ptr;
@@ -3589,7 +3600,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugUtilsLabelEXT*, /* pLabelInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdInsertDebugUtilsLabelEXT(void* ptr)
+        public static implicit operator VkCmdInsertDebugUtilsLabelEXT(void* ptr)
         {
             VkCmdInsertDebugUtilsLabelEXT value;
             *(void**)&value = ptr;
@@ -3608,7 +3619,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugUtilsMessengerEXT*,           /* pMessenger */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateDebugUtilsMessengerEXT(void* ptr)
+        public static implicit operator VkCreateDebugUtilsMessengerEXT(void* ptr)
         {
             VkCreateDebugUtilsMessengerEXT value;
             *(void**)&value = ptr;
@@ -3626,7 +3637,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*,   /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroyDebugUtilsMessengerEXT(void* ptr)
+        public static implicit operator VkDestroyDebugUtilsMessengerEXT(void* ptr)
         {
             VkDestroyDebugUtilsMessengerEXT value;
             *(void**)&value = ptr;
@@ -3645,7 +3656,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugUtilsMessengerCallbackDataEXT*, /* pCallbackData */
             void> UnsafeInvoke;
 
-        public static explicit operator VkSubmitDebugUtilsMessageEXT(void* ptr)
+        public static implicit operator VkSubmitDebugUtilsMessageEXT(void* ptr)
         {
             VkSubmitDebugUtilsMessageEXT value;
             *(void**)&value = ptr;
@@ -3662,7 +3673,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSampleLocationsInfoEXT*, /* pSampleLocationsInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetSampleLocationsEXT(void* ptr)
+        public static implicit operator VkCmdSetSampleLocationsEXT(void* ptr)
         {
             VkCmdSetSampleLocationsEXT value;
             *(void**)&value = ptr;
@@ -3680,7 +3691,7 @@ namespace Exomia.Vulkan.Api.Core
             VkMultisamplePropertiesEXT*, /* pMultisampleProperties */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceMultisamplePropertiesEXT(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceMultisamplePropertiesEXT(void* ptr)
         {
             VkGetPhysicalDeviceMultisamplePropertiesEXT value;
             *(void**)&value = ptr;
@@ -3698,7 +3709,7 @@ namespace Exomia.Vulkan.Api.Core
             VkImageDrmFormatModifierPropertiesEXT*, /* pProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetImageDrmFormatModifierPropertiesEXT(void* ptr)
+        public static implicit operator VkGetImageDrmFormatModifierPropertiesEXT(void* ptr)
         {
             VkGetImageDrmFormatModifierPropertiesEXT value;
             *(void**)&value = ptr;
@@ -3717,7 +3728,7 @@ namespace Exomia.Vulkan.Api.Core
             VkValidationCacheEXT*,           /* pValidationCache */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateValidationCacheEXT(void* ptr)
+        public static implicit operator VkCreateValidationCacheEXT(void* ptr)
         {
             VkCreateValidationCacheEXT value;
             *(void**)&value = ptr;
@@ -3735,7 +3746,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*, /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroyValidationCacheEXT(void* ptr)
+        public static implicit operator VkDestroyValidationCacheEXT(void* ptr)
         {
             VkDestroyValidationCacheEXT value;
             *(void**)&value = ptr;
@@ -3754,7 +3765,7 @@ namespace Exomia.Vulkan.Api.Core
             VkValidationCacheEXT*, /* pSrcCaches */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkMergeValidationCachesEXT(void* ptr)
+        public static implicit operator VkMergeValidationCachesEXT(void* ptr)
         {
             VkMergeValidationCachesEXT value;
             *(void**)&value = ptr;
@@ -3773,7 +3784,7 @@ namespace Exomia.Vulkan.Api.Core
             void*,                /* pData */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetValidationCacheDataEXT(void* ptr)
+        public static implicit operator VkGetValidationCacheDataEXT(void* ptr)
         {
             VkGetValidationCacheDataEXT value;
             *(void**)&value = ptr;
@@ -3791,7 +3802,7 @@ namespace Exomia.Vulkan.Api.Core
             VkImageLayout,   /* imageLayout */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBindShadingRateImageNV(void* ptr)
+        public static implicit operator VkCmdBindShadingRateImageNV(void* ptr)
         {
             VkCmdBindShadingRateImageNV value;
             *(void**)&value = ptr;
@@ -3810,7 +3821,7 @@ namespace Exomia.Vulkan.Api.Core
             VkShadingRatePaletteNV*, /* pShadingRatePalettes */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetViewportShadingRatePaletteNV(void* ptr)
+        public static implicit operator VkCmdSetViewportShadingRatePaletteNV(void* ptr)
         {
             VkCmdSetViewportShadingRatePaletteNV value;
             *(void**)&value = ptr;
@@ -3829,7 +3840,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCoarseSampleOrderCustomNV*, /* pCustomSampleOrders */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetCoarseSampleOrderNV(void* ptr)
+        public static implicit operator VkCmdSetCoarseSampleOrderNV(void* ptr)
         {
             VkCmdSetCoarseSampleOrderNV value;
             *(void**)&value = ptr;
@@ -3848,7 +3859,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAccelerationStructureNV*,           /* pAccelerationStructure */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateAccelerationStructureNV(void* ptr)
+        public static implicit operator VkCreateAccelerationStructureNV(void* ptr)
         {
             VkCreateAccelerationStructureNV value;
             *(void**)&value = ptr;
@@ -3866,7 +3877,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*,    /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroyAccelerationStructureNV(void* ptr)
+        public static implicit operator VkDestroyAccelerationStructureNV(void* ptr)
         {
             VkDestroyAccelerationStructureNV value;
             *(void**)&value = ptr;
@@ -3884,7 +3895,7 @@ namespace Exomia.Vulkan.Api.Core
             VkMemoryRequirements2KHR*,                        /* pMemoryRequirements */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetAccelerationStructureMemoryRequirementsNV(void* ptr)
+        public static implicit operator VkGetAccelerationStructureMemoryRequirementsNV(void* ptr)
         {
             VkGetAccelerationStructureMemoryRequirementsNV value;
             *(void**)&value = ptr;
@@ -3902,7 +3913,7 @@ namespace Exomia.Vulkan.Api.Core
             VkBindAccelerationStructureMemoryInfoNV*, /* pBindInfos */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkBindAccelerationStructureMemoryNV(void* ptr)
+        public static implicit operator VkBindAccelerationStructureMemoryNV(void* ptr)
         {
             VkBindAccelerationStructureMemoryNV value;
             *(void**)&value = ptr;
@@ -3926,7 +3937,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeviceSize,                   /* scratchOffset */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBuildAccelerationStructureNV(void* ptr)
+        public static implicit operator VkCmdBuildAccelerationStructureNV(void* ptr)
         {
             VkCmdBuildAccelerationStructureNV value;
             *(void**)&value = ptr;
@@ -3945,7 +3956,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyAccelerationStructureModeKHR, /* mode */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdCopyAccelerationStructureNV(void* ptr)
+        public static implicit operator VkCmdCopyAccelerationStructureNV(void* ptr)
         {
             VkCmdCopyAccelerationStructureNV value;
             *(void**)&value = ptr;
@@ -3975,7 +3986,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* depth */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdTraceRaysNV(void* ptr)
+        public static implicit operator VkCmdTraceRaysNV(void* ptr)
         {
             VkCmdTraceRaysNV value;
             *(void**)&value = ptr;
@@ -3996,7 +4007,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipeline*,                       /* pPipelines */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateRayTracingPipelinesNV(void* ptr)
+        public static implicit operator VkCreateRayTracingPipelinesNV(void* ptr)
         {
             VkCreateRayTracingPipelinesNV value;
             *(void**)&value = ptr;
@@ -4017,7 +4028,7 @@ namespace Exomia.Vulkan.Api.Core
             void*,      /* pData */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetRayTracingShaderGroupHandlesKHR(void* ptr)
+        public static implicit operator VkGetRayTracingShaderGroupHandlesKHR(void* ptr)
         {
             VkGetRayTracingShaderGroupHandlesKHR value;
             *(void**)&value = ptr;
@@ -4038,7 +4049,7 @@ namespace Exomia.Vulkan.Api.Core
             void*,      /* pData */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetRayTracingShaderGroupHandlesNV(void* ptr)
+        public static implicit operator VkGetRayTracingShaderGroupHandlesNV(void* ptr)
         {
             VkGetRayTracingShaderGroupHandlesNV value;
             *(void**)&value = ptr;
@@ -4057,7 +4068,7 @@ namespace Exomia.Vulkan.Api.Core
             void*,                     /* pData */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetAccelerationStructureHandleNV(void* ptr)
+        public static implicit operator VkGetAccelerationStructureHandleNV(void* ptr)
         {
             VkGetAccelerationStructureHandleNV value;
             *(void**)&value = ptr;
@@ -4078,7 +4089,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,                       /* firstQuery */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdWriteAccelerationStructuresPropertiesNV(void* ptr)
+        public static implicit operator VkCmdWriteAccelerationStructuresPropertiesNV(void* ptr)
         {
             VkCmdWriteAccelerationStructuresPropertiesNV value;
             *(void**)&value = ptr;
@@ -4096,7 +4107,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,       /* shader */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCompileDeferredNV(void* ptr)
+        public static implicit operator VkCompileDeferredNV(void* ptr)
         {
             VkCompileDeferredNV value;
             *(void**)&value = ptr;
@@ -4115,7 +4126,7 @@ namespace Exomia.Vulkan.Api.Core
             VkMemoryHostPointerPropertiesEXT*, /* pMemoryHostPointerProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetMemoryHostPointerPropertiesEXT(void* ptr)
+        public static implicit operator VkGetMemoryHostPointerPropertiesEXT(void* ptr)
         {
             VkGetMemoryHostPointerPropertiesEXT value;
             *(void**)&value = ptr;
@@ -4135,7 +4146,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,                 /* marker */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdWriteBufferMarkerAMD(void* ptr)
+        public static implicit operator VkCmdWriteBufferMarkerAMD(void* ptr)
         {
             VkCmdWriteBufferMarkerAMD value;
             *(void**)&value = ptr;
@@ -4153,7 +4164,7 @@ namespace Exomia.Vulkan.Api.Core
             VkTimeDomainEXT*, /* pTimeDomains */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceCalibrateableTimeDomainsEXT(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceCalibrateableTimeDomainsEXT(void* ptr)
         {
             VkGetPhysicalDeviceCalibrateableTimeDomainsEXT value;
             *(void**)&value = ptr;
@@ -4173,7 +4184,7 @@ namespace Exomia.Vulkan.Api.Core
             ulong*,                        /* pMaxDeviation */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetCalibratedTimestampsEXT(void* ptr)
+        public static implicit operator VkGetCalibratedTimestampsEXT(void* ptr)
         {
             VkGetCalibratedTimestampsEXT value;
             *(void**)&value = ptr;
@@ -4191,7 +4202,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* firstTask */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDrawMeshTasksNV(void* ptr)
+        public static implicit operator VkCmdDrawMeshTasksNV(void* ptr)
         {
             VkCmdDrawMeshTasksNV value;
             *(void**)&value = ptr;
@@ -4211,7 +4222,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* stride */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDrawMeshTasksIndirectNV(void* ptr)
+        public static implicit operator VkCmdDrawMeshTasksIndirectNV(void* ptr)
         {
             VkCmdDrawMeshTasksIndirectNV value;
             *(void**)&value = ptr;
@@ -4233,7 +4244,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* stride */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdDrawMeshTasksIndirectCountNV(void* ptr)
+        public static implicit operator VkCmdDrawMeshTasksIndirectCountNV(void* ptr)
         {
             VkCmdDrawMeshTasksIndirectCountNV value;
             *(void**)&value = ptr;
@@ -4252,7 +4263,7 @@ namespace Exomia.Vulkan.Api.Core
             VkRect2D*,       /* pExclusiveScissors */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetExclusiveScissorNV(void* ptr)
+        public static implicit operator VkCmdSetExclusiveScissorNV(void* ptr)
         {
             VkCmdSetExclusiveScissorNV value;
             *(void**)&value = ptr;
@@ -4269,7 +4280,7 @@ namespace Exomia.Vulkan.Api.Core
             void*,           /* pCheckpointMarker */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetCheckpointNV(void* ptr)
+        public static implicit operator VkCmdSetCheckpointNV(void* ptr)
         {
             VkCmdSetCheckpointNV value;
             *(void**)&value = ptr;
@@ -4287,7 +4298,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCheckpointDataNV*, /* pCheckpointData */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetQueueCheckpointDataNV(void* ptr)
+        public static implicit operator VkGetQueueCheckpointDataNV(void* ptr)
         {
             VkGetQueueCheckpointDataNV value;
             *(void**)&value = ptr;
@@ -4304,7 +4315,7 @@ namespace Exomia.Vulkan.Api.Core
             VkInitializePerformanceApiInfoINTEL*, /* pInitializeInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkInitializePerformanceApiINTEL(void* ptr)
+        public static implicit operator VkInitializePerformanceApiINTEL(void* ptr)
         {
             VkInitializePerformanceApiINTEL value;
             *(void**)&value = ptr;
@@ -4320,7 +4331,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDevice, /* device */
             void> UnsafeInvoke;
 
-        public static explicit operator VkUninitializePerformanceApiINTEL(void* ptr)
+        public static implicit operator VkUninitializePerformanceApiINTEL(void* ptr)
         {
             VkUninitializePerformanceApiINTEL value;
             *(void**)&value = ptr;
@@ -4337,7 +4348,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPerformanceMarkerInfoINTEL*, /* pMarkerInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetPerformanceMarkerINTEL(void* ptr)
+        public static implicit operator VkCmdSetPerformanceMarkerINTEL(void* ptr)
         {
             VkCmdSetPerformanceMarkerINTEL value;
             *(void**)&value = ptr;
@@ -4354,7 +4365,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPerformanceStreamMarkerInfoINTEL*, /* pMarkerInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetPerformanceStreamMarkerINTEL(void* ptr)
+        public static implicit operator VkCmdSetPerformanceStreamMarkerINTEL(void* ptr)
         {
             VkCmdSetPerformanceStreamMarkerINTEL value;
             *(void**)&value = ptr;
@@ -4371,7 +4382,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPerformanceOverrideInfoINTEL*, /* pOverrideInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetPerformanceOverrideINTEL(void* ptr)
+        public static implicit operator VkCmdSetPerformanceOverrideINTEL(void* ptr)
         {
             VkCmdSetPerformanceOverrideINTEL value;
             *(void**)&value = ptr;
@@ -4389,7 +4400,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPerformanceConfigurationINTEL*,            /* pConfiguration */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkAcquirePerformanceConfigurationINTEL(void* ptr)
+        public static implicit operator VkAcquirePerformanceConfigurationINTEL(void* ptr)
         {
             VkAcquirePerformanceConfigurationINTEL value;
             *(void**)&value = ptr;
@@ -4406,7 +4417,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPerformanceConfigurationINTEL, /* configuration */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkReleasePerformanceConfigurationINTEL(void* ptr)
+        public static implicit operator VkReleasePerformanceConfigurationINTEL(void* ptr)
         {
             VkReleasePerformanceConfigurationINTEL value;
             *(void**)&value = ptr;
@@ -4423,7 +4434,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPerformanceConfigurationINTEL, /* configuration */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkQueueSetPerformanceConfigurationINTEL(void* ptr)
+        public static implicit operator VkQueueSetPerformanceConfigurationINTEL(void* ptr)
         {
             VkQueueSetPerformanceConfigurationINTEL value;
             *(void**)&value = ptr;
@@ -4441,7 +4452,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPerformanceValueINTEL*,        /* pValue */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPerformanceParameterINTEL(void* ptr)
+        public static implicit operator VkGetPerformanceParameterINTEL(void* ptr)
         {
             VkGetPerformanceParameterINTEL value;
             *(void**)&value = ptr;
@@ -4459,7 +4470,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,           /* localDimmingEnable */
             void> UnsafeInvoke;
 
-        public static explicit operator VkSetLocalDimmingAMD(void* ptr)
+        public static implicit operator VkSetLocalDimmingAMD(void* ptr)
         {
             VkSetLocalDimmingAMD value;
             *(void**)&value = ptr;
@@ -4476,7 +4487,7 @@ namespace Exomia.Vulkan.Api.Core
             VkBufferDeviceAddressInfo*, /* pInfo */
             VkDeviceAddress> UnsafeInvoke;
 
-        public static explicit operator VkGetBufferDeviceAddressEXT(void* ptr)
+        public static implicit operator VkGetBufferDeviceAddressEXT(void* ptr)
         {
             VkGetBufferDeviceAddressEXT value;
             *(void**)&value = ptr;
@@ -4494,7 +4505,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDeviceToolPropertiesEXT*, /* pToolProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceToolPropertiesEXT(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceToolPropertiesEXT(void* ptr)
         {
             VkGetPhysicalDeviceToolPropertiesEXT value;
             *(void**)&value = ptr;
@@ -4512,7 +4523,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCooperativeMatrixPropertiesNV*, /* pProperties */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceCooperativeMatrixPropertiesNV(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceCooperativeMatrixPropertiesNV(void* ptr)
         {
             VkGetPhysicalDeviceCooperativeMatrixPropertiesNV value;
             *(void**)&value = ptr;
@@ -4530,7 +4541,7 @@ namespace Exomia.Vulkan.Api.Core
             VkFramebufferMixedSamplesCombinationNV*, /* pCombinations */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV(void* ptr)
+        public static implicit operator VkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV(void* ptr)
         {
             VkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV value;
             *(void**)&value = ptr;
@@ -4549,7 +4560,7 @@ namespace Exomia.Vulkan.Api.Core
             VkSurfaceKHR*,                   /* pSurface */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateHeadlessSurfaceEXT(void* ptr)
+        public static implicit operator VkCreateHeadlessSurfaceEXT(void* ptr)
         {
             VkCreateHeadlessSurfaceEXT value;
             *(void**)&value = ptr;
@@ -4567,7 +4578,7 @@ namespace Exomia.Vulkan.Api.Core
             ushort,          /* lineStipplePattern */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetLineStippleEXT(void* ptr)
+        public static implicit operator VkCmdSetLineStippleEXT(void* ptr)
         {
             VkCmdSetLineStippleEXT value;
             *(void**)&value = ptr;
@@ -4586,7 +4597,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,        /* queryCount */
             void> UnsafeInvoke;
 
-        public static explicit operator VkResetQueryPoolEXT(void* ptr)
+        public static implicit operator VkResetQueryPoolEXT(void* ptr)
         {
             VkResetQueryPoolEXT value;
             *(void**)&value = ptr;
@@ -4603,7 +4614,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCullModeFlags, /* cullMode */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetCullModeEXT(void* ptr)
+        public static implicit operator VkCmdSetCullModeEXT(void* ptr)
         {
             VkCmdSetCullModeEXT value;
             *(void**)&value = ptr;
@@ -4620,7 +4631,7 @@ namespace Exomia.Vulkan.Api.Core
             VkFrontFace,     /* frontFace */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetFrontFaceEXT(void* ptr)
+        public static implicit operator VkCmdSetFrontFaceEXT(void* ptr)
         {
             VkCmdSetFrontFaceEXT value;
             *(void**)&value = ptr;
@@ -4637,7 +4648,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPrimitiveTopology, /* primitiveTopology */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetPrimitiveTopologyEXT(void* ptr)
+        public static implicit operator VkCmdSetPrimitiveTopologyEXT(void* ptr)
         {
             VkCmdSetPrimitiveTopologyEXT value;
             *(void**)&value = ptr;
@@ -4655,7 +4666,7 @@ namespace Exomia.Vulkan.Api.Core
             VkViewport*,     /* pViewports */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetViewportWithCountEXT(void* ptr)
+        public static implicit operator VkCmdSetViewportWithCountEXT(void* ptr)
         {
             VkCmdSetViewportWithCountEXT value;
             *(void**)&value = ptr;
@@ -4673,7 +4684,7 @@ namespace Exomia.Vulkan.Api.Core
             VkRect2D*,       /* pScissors */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetScissorWithCountEXT(void* ptr)
+        public static implicit operator VkCmdSetScissorWithCountEXT(void* ptr)
         {
             VkCmdSetScissorWithCountEXT value;
             *(void**)&value = ptr;
@@ -4695,7 +4706,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeviceSize*,   /* pStrides */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBindVertexBuffers2EXT(void* ptr)
+        public static implicit operator VkCmdBindVertexBuffers2EXT(void* ptr)
         {
             VkCmdBindVertexBuffers2EXT value;
             *(void**)&value = ptr;
@@ -4712,7 +4723,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* depthTestEnable */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetDepthTestEnableEXT(void* ptr)
+        public static implicit operator VkCmdSetDepthTestEnableEXT(void* ptr)
         {
             VkCmdSetDepthTestEnableEXT value;
             *(void**)&value = ptr;
@@ -4729,7 +4740,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* depthWriteEnable */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetDepthWriteEnableEXT(void* ptr)
+        public static implicit operator VkCmdSetDepthWriteEnableEXT(void* ptr)
         {
             VkCmdSetDepthWriteEnableEXT value;
             *(void**)&value = ptr;
@@ -4746,7 +4757,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCompareOp,     /* depthCompareOp */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetDepthCompareOpEXT(void* ptr)
+        public static implicit operator VkCmdSetDepthCompareOpEXT(void* ptr)
         {
             VkCmdSetDepthCompareOpEXT value;
             *(void**)&value = ptr;
@@ -4763,7 +4774,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* depthBoundsTestEnable */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetDepthBoundsTestEnableEXT(void* ptr)
+        public static implicit operator VkCmdSetDepthBoundsTestEnableEXT(void* ptr)
         {
             VkCmdSetDepthBoundsTestEnableEXT value;
             *(void**)&value = ptr;
@@ -4780,7 +4791,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* stencilTestEnable */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetStencilTestEnableEXT(void* ptr)
+        public static implicit operator VkCmdSetStencilTestEnableEXT(void* ptr)
         {
             VkCmdSetStencilTestEnableEXT value;
             *(void**)&value = ptr;
@@ -4801,7 +4812,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCompareOp,        /* compareOp */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetStencilOpEXT(void* ptr)
+        public static implicit operator VkCmdSetStencilOpEXT(void* ptr)
         {
             VkCmdSetStencilOpEXT value;
             *(void**)&value = ptr;
@@ -4819,7 +4830,7 @@ namespace Exomia.Vulkan.Api.Core
             VkMemoryRequirements2*,                       /* pMemoryRequirements */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetGeneratedCommandsMemoryRequirementsNV(void* ptr)
+        public static implicit operator VkGetGeneratedCommandsMemoryRequirementsNV(void* ptr)
         {
             VkGetGeneratedCommandsMemoryRequirementsNV value;
             *(void**)&value = ptr;
@@ -4836,7 +4847,7 @@ namespace Exomia.Vulkan.Api.Core
             VkGeneratedCommandsInfoNV*, /* pGeneratedCommandsInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdPreprocessGeneratedCommandsNV(void* ptr)
+        public static implicit operator VkCmdPreprocessGeneratedCommandsNV(void* ptr)
         {
             VkCmdPreprocessGeneratedCommandsNV value;
             *(void**)&value = ptr;
@@ -4854,7 +4865,7 @@ namespace Exomia.Vulkan.Api.Core
             VkGeneratedCommandsInfoNV*, /* pGeneratedCommandsInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdExecuteGeneratedCommandsNV(void* ptr)
+        public static implicit operator VkCmdExecuteGeneratedCommandsNV(void* ptr)
         {
             VkCmdExecuteGeneratedCommandsNV value;
             *(void**)&value = ptr;
@@ -4873,7 +4884,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,                /* groupIndex */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBindPipelineShaderGroupNV(void* ptr)
+        public static implicit operator VkCmdBindPipelineShaderGroupNV(void* ptr)
         {
             VkCmdBindPipelineShaderGroupNV value;
             *(void**)&value = ptr;
@@ -4892,7 +4903,7 @@ namespace Exomia.Vulkan.Api.Core
             VkIndirectCommandsLayoutNV*,           /* pIndirectCommandsLayout */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateIndirectCommandsLayoutNV(void* ptr)
+        public static implicit operator VkCreateIndirectCommandsLayoutNV(void* ptr)
         {
             VkCreateIndirectCommandsLayoutNV value;
             *(void**)&value = ptr;
@@ -4910,7 +4921,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*,     /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroyIndirectCommandsLayoutNV(void* ptr)
+        public static implicit operator VkDestroyIndirectCommandsLayoutNV(void* ptr)
         {
             VkDestroyIndirectCommandsLayoutNV value;
             *(void**)&value = ptr;
@@ -4929,7 +4940,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPrivateDataSlotEXT*,           /* pPrivateDataSlot */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreatePrivateDataSlotEXT(void* ptr)
+        public static implicit operator VkCreatePrivateDataSlotEXT(void* ptr)
         {
             VkCreatePrivateDataSlotEXT value;
             *(void**)&value = ptr;
@@ -4947,7 +4958,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*, /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroyPrivateDataSlotEXT(void* ptr)
+        public static implicit operator VkDestroyPrivateDataSlotEXT(void* ptr)
         {
             VkDestroyPrivateDataSlotEXT value;
             *(void**)&value = ptr;
@@ -4967,7 +4978,7 @@ namespace Exomia.Vulkan.Api.Core
             ulong,                /* data */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkSetPrivateDataEXT(void* ptr)
+        public static implicit operator VkSetPrivateDataEXT(void* ptr)
         {
             VkSetPrivateDataEXT value;
             *(void**)&value = ptr;
@@ -4987,7 +4998,7 @@ namespace Exomia.Vulkan.Api.Core
             ulong*,               /* pData */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetPrivateDataEXT(void* ptr)
+        public static implicit operator VkGetPrivateDataEXT(void* ptr)
         {
             VkGetPrivateDataEXT value;
             *(void**)&value = ptr;
@@ -5006,7 +5017,7 @@ namespace Exomia.Vulkan.Api.Core
             VkFragmentShadingRateCombinerOpKHR, /* combinerOps2 */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetFragmentShadingRateEnumNV(void* ptr)
+        public static implicit operator VkCmdSetFragmentShadingRateEnumNV(void* ptr)
         {
             VkCmdSetFragmentShadingRateEnumNV value;
             *(void**)&value = ptr;
@@ -5023,7 +5034,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDisplayKHR,     /* display */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkAcquireWinrtDisplayNV(void* ptr)
+        public static implicit operator VkAcquireWinrtDisplayNV(void* ptr)
         {
             VkAcquireWinrtDisplayNV value;
             *(void**)&value = ptr;
@@ -5041,7 +5052,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDisplayKHR*,    /* pDisplay */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetWinrtDisplayNV(void* ptr)
+        public static implicit operator VkGetWinrtDisplayNV(void* ptr)
         {
             VkGetWinrtDisplayNV value;
             *(void**)&value = ptr;
@@ -5060,7 +5071,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAccelerationStructureKHR*,           /* pAccelerationStructure */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateAccelerationStructureKHR(void* ptr)
+        public static implicit operator VkCreateAccelerationStructureKHR(void* ptr)
         {
             VkCreateAccelerationStructureKHR value;
             *(void**)&value = ptr;
@@ -5078,7 +5089,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAllocationCallbacks*,     /* pAllocator */
             void> UnsafeInvoke;
 
-        public static explicit operator VkDestroyAccelerationStructureKHR(void* ptr)
+        public static implicit operator VkDestroyAccelerationStructureKHR(void* ptr)
         {
             VkDestroyAccelerationStructureKHR value;
             *(void**)&value = ptr;
@@ -5097,7 +5108,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAccelerationStructureBuildRangeInfoKHR**,   /* ppBuildRangeInfos */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBuildAccelerationStructuresKHR(void* ptr)
+        public static implicit operator VkCmdBuildAccelerationStructuresKHR(void* ptr)
         {
             VkCmdBuildAccelerationStructuresKHR value;
             *(void**)&value = ptr;
@@ -5118,7 +5129,7 @@ namespace Exomia.Vulkan.Api.Core
             uint**,                                       /* ppMaxPrimitiveCounts */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdBuildAccelerationStructuresIndirectKHR(void* ptr)
+        public static implicit operator VkCmdBuildAccelerationStructuresIndirectKHR(void* ptr)
         {
             VkCmdBuildAccelerationStructuresIndirectKHR value;
             *(void**)&value = ptr;
@@ -5138,7 +5149,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAccelerationStructureBuildRangeInfoKHR**,   /* ppBuildRangeInfos */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkBuildAccelerationStructuresKHR(void* ptr)
+        public static implicit operator VkBuildAccelerationStructuresKHR(void* ptr)
         {
             VkBuildAccelerationStructuresKHR value;
             *(void**)&value = ptr;
@@ -5156,7 +5167,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyAccelerationStructureInfoKHR*, /* pInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCopyAccelerationStructureKHR(void* ptr)
+        public static implicit operator VkCopyAccelerationStructureKHR(void* ptr)
         {
             VkCopyAccelerationStructureKHR value;
             *(void**)&value = ptr;
@@ -5174,7 +5185,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyAccelerationStructureToMemoryInfoKHR*, /* nfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCopyAccelerationStructureToMemoryKHR(void* ptr)
+        public static implicit operator VkCopyAccelerationStructureToMemoryKHR(void* ptr)
         {
             VkCopyAccelerationStructureToMemoryKHR value;
             *(void**)&value = ptr;
@@ -5192,7 +5203,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyMemoryToAccelerationStructureInfoKHR*, /* pInfo */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCopyMemoryToAccelerationStructureKHR(void* ptr)
+        public static implicit operator VkCopyMemoryToAccelerationStructureKHR(void* ptr)
         {
             VkCopyMemoryToAccelerationStructureKHR value;
             *(void**)&value = ptr;
@@ -5214,7 +5225,7 @@ namespace Exomia.Vulkan.Api.Core
             size_t,                      /* stride */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkWriteAccelerationStructuresPropertiesKHR(void* ptr)
+        public static implicit operator VkWriteAccelerationStructuresPropertiesKHR(void* ptr)
         {
             VkWriteAccelerationStructuresPropertiesKHR value;
             *(void**)&value = ptr;
@@ -5231,7 +5242,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyAccelerationStructureInfoKHR*, /* pInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdCopyAccelerationStructureKHR(void* ptr)
+        public static implicit operator VkCmdCopyAccelerationStructureKHR(void* ptr)
         {
             VkCmdCopyAccelerationStructureKHR value;
             *(void**)&value = ptr;
@@ -5248,7 +5259,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyAccelerationStructureToMemoryInfoKHR*, /* pInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdCopyAccelerationStructureToMemoryKHR(void* ptr)
+        public static implicit operator VkCmdCopyAccelerationStructureToMemoryKHR(void* ptr)
         {
             VkCmdCopyAccelerationStructureToMemoryKHR value;
             *(void**)&value = ptr;
@@ -5265,7 +5276,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCopyMemoryToAccelerationStructureInfoKHR*, /* pInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdCopyMemoryToAccelerationStructureKHR(void* ptr)
+        public static implicit operator VkCmdCopyMemoryToAccelerationStructureKHR(void* ptr)
         {
             VkCmdCopyMemoryToAccelerationStructureKHR value;
             *(void**)&value = ptr;
@@ -5282,7 +5293,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAccelerationStructureDeviceAddressInfoKHR*, /* pInfo */
             VkDeviceAddress> UnsafeInvoke;
 
-        public static explicit operator VkGetAccelerationStructureDeviceAddressKHR(void* ptr)
+        public static implicit operator VkGetAccelerationStructureDeviceAddressKHR(void* ptr)
         {
             VkGetAccelerationStructureDeviceAddressKHR value;
             *(void**)&value = ptr;
@@ -5303,7 +5314,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,                        /* firstQuery */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdWriteAccelerationStructuresPropertiesKHR(void* ptr)
+        public static implicit operator VkCmdWriteAccelerationStructuresPropertiesKHR(void* ptr)
         {
             VkCmdWriteAccelerationStructuresPropertiesKHR value;
             *(void**)&value = ptr;
@@ -5321,7 +5332,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAccelerationStructureCompatibilityKHR*, /* pCompatibility */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetDeviceAccelerationStructureCompatibilityKHR(void* ptr)
+        public static implicit operator VkGetDeviceAccelerationStructureCompatibilityKHR(void* ptr)
         {
             VkGetDeviceAccelerationStructureCompatibilityKHR value;
             *(void**)&value = ptr;
@@ -5341,7 +5352,7 @@ namespace Exomia.Vulkan.Api.Core
             VkAccelerationStructureBuildSizesInfoKHR*,    /* pSizeInfo */
             void> UnsafeInvoke;
 
-        public static explicit operator VkGetAccelerationStructureBuildSizesKHR(void* ptr)
+        public static implicit operator VkGetAccelerationStructureBuildSizesKHR(void* ptr)
         {
             VkGetAccelerationStructureBuildSizesKHR value;
             *(void**)&value = ptr;
@@ -5364,7 +5375,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,                             /* depth */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdTraceRaysKHR(void* ptr)
+        public static implicit operator VkCmdTraceRaysKHR(void* ptr)
         {
             VkCmdTraceRaysKHR value;
             *(void**)&value = ptr;
@@ -5386,7 +5397,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipeline*,                        /* pPipelines */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkCreateRayTracingPipelinesKHR(void* ptr)
+        public static implicit operator VkCreateRayTracingPipelinesKHR(void* ptr)
         {
             VkCreateRayTracingPipelinesKHR value;
             *(void**)&value = ptr;
@@ -5407,7 +5418,7 @@ namespace Exomia.Vulkan.Api.Core
             void*,      /* pData */
             VkResult> UnsafeInvoke;
 
-        public static explicit operator VkGetRayTracingCaptureReplayShaderGroupHandlesKHR(void* ptr)
+        public static implicit operator VkGetRayTracingCaptureReplayShaderGroupHandlesKHR(void* ptr)
         {
             VkGetRayTracingCaptureReplayShaderGroupHandlesKHR value;
             *(void**)&value = ptr;
@@ -5428,7 +5439,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDeviceAddress,                  /* indirectDeviceAddress */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdTraceRaysIndirectKHR(void* ptr)
+        public static implicit operator VkCmdTraceRaysIndirectKHR(void* ptr)
         {
             VkCmdTraceRaysIndirectKHR value;
             *(void**)&value = ptr;
@@ -5447,7 +5458,7 @@ namespace Exomia.Vulkan.Api.Core
             VkShaderGroupShaderKHR, /* groupShader */
             VkDeviceSize> UnsafeInvoke;
 
-        public static explicit operator VkGetRayTracingShaderGroupStackSizeKHR(void* ptr)
+        public static implicit operator VkGetRayTracingShaderGroupStackSizeKHR(void* ptr)
         {
             VkGetRayTracingShaderGroupStackSizeKHR value;
             *(void**)&value = ptr;
@@ -5464,7 +5475,7 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* pipelineStackSize */
             void> UnsafeInvoke;
 
-        public static explicit operator VkCmdSetRayTracingPipelineStackSizeKHR(void* ptr)
+        public static implicit operator VkCmdSetRayTracingPipelineStackSizeKHR(void* ptr)
         {
             VkCmdSetRayTracingPipelineStackSizeKHR value;
             *(void**)&value = ptr;
