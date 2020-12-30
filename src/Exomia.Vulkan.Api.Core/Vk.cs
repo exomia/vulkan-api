@@ -1225,11 +1225,10 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceSparseImageFormatProperties2")]
         public static extern unsafe void GetPhysicalDeviceSparseImageFormatProperties2(
-            VkPhysicalDevice physicalDevice,
-            VkPhysicalDeviceSparseImageFormatInfo2
-                * pFormatInfo,
-            uint*                           pPropertyCount,
-            VkSparseImageFormatProperties2* pProperties);
+            VkPhysicalDevice                        physicalDevice,
+            VkPhysicalDeviceSparseImageFormatInfo2* pFormatInfo,
+            uint*                                   pPropertyCount,
+            VkSparseImageFormatProperties2*         pProperties);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkTrimCommandPool")]
@@ -1271,19 +1270,17 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkDestroyDescriptorUpdateTemplate")]
         public static extern unsafe void DestroyDescriptorUpdateTemplate(
-            VkDevice device,
-            VkDescriptorUpdateTemplate
-                descriptorUpdateTemplate,
-            VkAllocationCallbacks* pAllocator);
+            VkDevice                   device,
+            VkDescriptorUpdateTemplate descriptorUpdateTemplate,
+            VkAllocationCallbacks*     pAllocator);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkUpdateDescriptorSetWithTemplate")]
         public static extern unsafe void UpdateDescriptorSetWithTemplate(
-            VkDevice        device,
-            VkDescriptorSet descriptorSet,
-            VkDescriptorUpdateTemplate
-                descriptorUpdateTemplate,
-            void* pData);
+            VkDevice                   device,
+            VkDescriptorSet            descriptorSet,
+            VkDescriptorUpdateTemplate descriptorUpdateTemplate,
+            void*                      pData);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceExternalBufferProperties")]
@@ -1302,10 +1299,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceExternalSemaphoreProperties")]
         public static extern unsafe void GetPhysicalDeviceExternalSemaphoreProperties(
-            VkPhysicalDevice physicalDevice,
-            VkPhysicalDeviceExternalSemaphoreInfo
-                * pExternalSemaphoreInfo,
-            VkExternalSemaphoreProperties* pExternalSemaphoreProperties);
+            VkPhysicalDevice                       physicalDevice,
+            VkPhysicalDeviceExternalSemaphoreInfo* pExternalSemaphoreInfo,
+            VkExternalSemaphoreProperties*         pExternalSemaphoreProperties);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetDescriptorSetLayoutSupport")]
@@ -1601,10 +1597,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceImageFormatProperties2KHR")]
         public static extern unsafe VkResult GetPhysicalDeviceImageFormatProperties2KHR(
-            VkPhysicalDevice physicalDevice,
-            VkPhysicalDeviceImageFormatInfo2
-                * pImageFormatInfo,
-            VkImageFormatProperties2* pImageFormatProperties);
+            VkPhysicalDevice                  physicalDevice,
+            VkPhysicalDeviceImageFormatInfo2* pImageFormatInfo,
+            VkImageFormatProperties2*         pImageFormatProperties);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceQueueFamilyProperties2KHR")]
@@ -1670,10 +1665,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceExternalBufferPropertiesKHR")]
         public static extern unsafe void GetPhysicalDeviceExternalBufferPropertiesKHR(
-            VkPhysicalDevice physicalDevice,
-            VkPhysicalDeviceExternalBufferInfo
-                * pExternalBufferInfo,
-            VkExternalBufferProperties* pExternalBufferProperties);
+            VkPhysicalDevice                    physicalDevice,
+            VkPhysicalDeviceExternalBufferInfo* pExternalBufferInfo,
+            VkExternalBufferProperties*         pExternalBufferProperties);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetMemoryFdKHR")]
@@ -1723,12 +1717,11 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdPushDescriptorSetWithTemplateKHR")]
         public static extern unsafe void CmdPushDescriptorSetWithTemplateKHR(
-            VkCommandBuffer commandBuffer,
-            VkDescriptorUpdateTemplate
-                descriptorUpdateTemplate,
-            VkPipelineLayout layout,
-            uint             set,
-            void*            pData);
+            VkCommandBuffer            commandBuffer,
+            VkDescriptorUpdateTemplate descriptorUpdateTemplate,
+            VkPipelineLayout           layout,
+            uint                       set,
+            void*                      pData);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCreateDescriptorUpdateTemplateKHR")]
@@ -1741,19 +1734,17 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkDestroyDescriptorUpdateTemplateKHR")]
         public static extern unsafe void DestroyDescriptorUpdateTemplateKHR(
-            VkDevice device,
-            VkDescriptorUpdateTemplate
-                descriptorUpdateTemplate,
-            VkAllocationCallbacks* pAllocator);
+            VkDevice                   device,
+            VkDescriptorUpdateTemplate descriptorUpdateTemplate,
+            VkAllocationCallbacks*     pAllocator);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkUpdateDescriptorSetWithTemplateKHR")]
         public static extern unsafe void UpdateDescriptorSetWithTemplateKHR(
-            VkDevice        device,
-            VkDescriptorSet descriptorSet,
-            VkDescriptorUpdateTemplate
-                descriptorUpdateTemplate,
-            void* pData);
+            VkDevice                   device,
+            VkDescriptorSet            descriptorSet,
+            VkDescriptorUpdateTemplate descriptorUpdateTemplate,
+            void*                      pData);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCreateRenderPass2KHR")]
@@ -1982,10 +1973,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceFragmentShadingRatesKHR")]
         public static extern unsafe VkResult GetPhysicalDeviceFragmentShadingRatesKHR(
-            VkPhysicalDevice physicalDevice,
-            uint*            pFragmentShadingRateCount,
-            VkPhysicalDeviceFragmentShadingRateKHR
-                * pFragmentShadingRates);
+            VkPhysicalDevice                        physicalDevice,
+            uint*                                   pFragmentShadingRateCount,
+            VkPhysicalDeviceFragmentShadingRateKHR* pFragmentShadingRates);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdSetFragmentShadingRateKHR")]
@@ -2064,12 +2054,10 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPipelineExecutableInternalRepresentationsKHR")]
         public static extern unsafe VkResult GetPipelineExecutableInternalRepresentationsKHR(
-            VkDevice device,
-            VkPipelineExecutableInfoKHR
-                * pExecutableInfo,
-            uint* pInternalRepresentationCount,
-            VkPipelineExecutableInternalRepresentationKHR
-                * pInternalRepresentations);
+            VkDevice                                       device,
+            VkPipelineExecutableInfoKHR*                   pExecutableInfo,
+            uint*                                          pInternalRepresentationCount,
+            VkPipelineExecutableInternalRepresentationKHR* pInternalRepresentations);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdCopyBuffer2KHR")]
@@ -2452,10 +2440,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetImageDrmFormatModifierPropertiesEXT")]
         public static extern unsafe VkResult GetImageDrmFormatModifierPropertiesEXT(
-            VkDevice device,
-            VkImage  image,
-            VkImageDrmFormatModifierPropertiesEXT
-                * pProperties);
+            VkDevice                               device,
+            VkImage                                image,
+            VkImageDrmFormatModifierPropertiesEXT* pProperties);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCreateValidationCacheEXT")]
@@ -2529,10 +2516,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetAccelerationStructureMemoryRequirementsNV")]
         public static extern unsafe void GetAccelerationStructureMemoryRequirementsNV(
-            VkDevice device,
-            VkAccelerationStructureMemoryRequirementsInfoNV
-                * pInfo,
-            VkMemoryRequirements2KHR* pMemoryRequirements);
+            VkDevice                                         device,
+            VkAccelerationStructureMemoryRequirementsInfoNV* pInfo,
+            VkMemoryRequirements2KHR*                        pMemoryRequirements);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkBindAccelerationStructureMemoryNV")]
@@ -2614,11 +2600,10 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetAccelerationStructureHandleNV")]
         public static extern unsafe VkResult GetAccelerationStructureHandleNV(
-            VkDevice device,
-            VkAccelerationStructureNV
-                accelerationStructure,
-            size_t dataSize,
-            void*  pData);
+            VkDevice                  device,
+            VkAccelerationStructureNV accelerationStructure,
+            size_t                    dataSize,
+            void*                     pData);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdWriteAccelerationStructuresPropertiesNV")]
@@ -2640,9 +2625,8 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetMemoryHostPointerPropertiesEXT")]
         public static extern unsafe VkResult GetMemoryHostPointerPropertiesEXT(
-            VkDevice device,
-            VkExternalMemoryHandleTypeFlags
-                handleType,
+            VkDevice                          device,
+            VkExternalMemoryHandleTypeFlags   handleType,
             void*                             pHostPointer,
             VkMemoryHostPointerPropertiesEXT* pMemoryHostPointerProperties);
 
@@ -2750,24 +2734,21 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkAcquirePerformanceConfigurationINTEL")]
         public static extern unsafe VkResult AcquirePerformanceConfigurationINTEL(
-            VkDevice device,
-            VkPerformanceConfigurationAcquireInfoINTEL
-                * pAcquireInfo,
-            VkPerformanceConfigurationINTEL* pConfiguration);
+            VkDevice                                    device,
+            VkPerformanceConfigurationAcquireInfoINTEL* pAcquireInfo,
+            VkPerformanceConfigurationINTEL*            pConfiguration);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkReleasePerformanceConfigurationINTEL")]
         public static extern VkResult ReleasePerformanceConfigurationINTEL(
-            VkDevice device,
-            VkPerformanceConfigurationINTEL
-                configuration);
+            VkDevice                        device,
+            VkPerformanceConfigurationINTEL configuration);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkQueueSetPerformanceConfigurationINTEL")]
         public static extern VkResult QueueSetPerformanceConfigurationINTEL(
-            VkQueue queue,
-            VkPerformanceConfigurationINTEL
-                configuration);
+            VkQueue                         queue,
+            VkPerformanceConfigurationINTEL configuration);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPerformanceParameterINTEL")]
@@ -2919,10 +2900,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetGeneratedCommandsMemoryRequirementsNV")]
         public static extern unsafe void GetGeneratedCommandsMemoryRequirementsNV(
-            VkDevice device,
-            VkGeneratedCommandsMemoryRequirementsInfoNV
-                * pInfo,
-            VkMemoryRequirements2* pMemoryRequirements);
+            VkDevice                                     device,
+            VkGeneratedCommandsMemoryRequirementsInfoNV* pInfo,
+            VkMemoryRequirements2*                       pMemoryRequirements);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdPreprocessGeneratedCommandsNV")]
@@ -2956,10 +2936,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkDestroyIndirectCommandsLayoutNV")]
         public static extern unsafe void DestroyIndirectCommandsLayoutNV(
-            VkDevice device,
-            VkIndirectCommandsLayoutNV
-                indirectCommandsLayout,
-            VkAllocationCallbacks* pAllocator);
+            VkDevice                   device,
+            VkIndirectCommandsLayoutNV indirectCommandsLayout,
+            VkAllocationCallbacks*     pAllocator);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCreatePrivateDataSlotEXT")]
@@ -3026,10 +3005,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkDestroyAccelerationStructureKHR")]
         public static extern unsafe void DestroyAccelerationStructureKHR(
-            VkDevice device,
-            VkAccelerationStructureKHR
-                accelerationStructure,
-            VkAllocationCallbacks* pAllocator);
+            VkDevice                   device,
+            VkAccelerationStructureKHR accelerationStructure,
+            VkAllocationCallbacks*     pAllocator);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdBuildAccelerationStructuresKHR")]
@@ -3042,13 +3020,12 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdBuildAccelerationStructuresIndirectKHR")]
         public static extern unsafe void CmdBuildAccelerationStructuresIndirectKHR(
-            VkCommandBuffer commandBuffer,
-            uint            infoCount,
-            VkAccelerationStructureBuildGeometryInfoKHR
-                * pInfos,
-            VkDeviceAddress* pIndirectDeviceAddresses,
-            uint*            pIndirectStrides,
-            uint**           ppMaxPrimitiveCounts);
+            VkCommandBuffer                              commandBuffer,
+            uint                                         infoCount,
+            VkAccelerationStructureBuildGeometryInfoKHR* pInfos,
+            VkDeviceAddress*                             pIndirectDeviceAddresses,
+            uint*                                        pIndirectStrides,
+            uint**                                       ppMaxPrimitiveCounts);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkBuildAccelerationStructuresKHR")]
@@ -3069,20 +3046,16 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCopyAccelerationStructureToMemoryKHR")]
         public static extern unsafe VkResult CopyAccelerationStructureToMemoryKHR(
-            VkDevice device,
-            VkDeferredOperationKHR
-                deferredOperation,
-            VkCopyAccelerationStructureToMemoryInfoKHR
-                * pInfo);
+            VkDevice               device,
+            VkDeferredOperationKHR deferredOperation,
+            VkCopyAccelerationStructureToMemoryInfoKHR*nfo);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCopyMemoryToAccelerationStructureKHR")]
         public static extern unsafe VkResult CopyMemoryToAccelerationStructureKHR(
-            VkDevice device,
-            VkDeferredOperationKHR
-                deferredOperation,
-            VkCopyMemoryToAccelerationStructureInfoKHR
-                * pInfo);
+            VkDevice                                    device,
+            VkDeferredOperationKHR                      deferredOperation,
+            VkCopyMemoryToAccelerationStructureInfoKHR* pInfo);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkWriteAccelerationStructuresPropertiesKHR")]
@@ -3104,23 +3077,20 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdCopyAccelerationStructureToMemoryKHR")]
         public static extern unsafe void CmdCopyAccelerationStructureToMemoryKHR(
-            VkCommandBuffer commandBuffer,
-            VkCopyAccelerationStructureToMemoryInfoKHR
-                * pInfo);
+            VkCommandBuffer                             commandBuffer,
+            VkCopyAccelerationStructureToMemoryInfoKHR* pInfo);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdCopyMemoryToAccelerationStructureKHR")]
         public static extern unsafe void CmdCopyMemoryToAccelerationStructureKHR(
-            VkCommandBuffer commandBuffer,
-            VkCopyMemoryToAccelerationStructureInfoKHR
-                * pInfo);
+            VkCommandBuffer                             commandBuffer,
+            VkCopyMemoryToAccelerationStructureInfoKHR* pInfo);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetAccelerationStructureDeviceAddressKHR")]
         public static extern unsafe VkDeviceAddress GetAccelerationStructureDeviceAddressKHR(
-            VkDevice device,
-            VkAccelerationStructureDeviceAddressInfoKHR
-                * pInfo);
+            VkDevice                                     device,
+            VkAccelerationStructureDeviceAddressInfoKHR* pInfo);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdWriteAccelerationStructuresPropertiesKHR")]
@@ -3136,19 +3106,15 @@ namespace Exomia.Vulkan.Api.Core
         [DllImport(IMPORT, EntryPoint = "vkGetDeviceAccelerationStructureCompatibilityKHR")]
         public static extern unsafe void GetDeviceAccelerationStructureCompatibilityKHR(
             VkDevice device,
-            VkAccelerationStructureVersionInfoKHR
-                * pVersionInfo,
-            VkAccelerationStructureCompatibilityKHR
-                * pCompatibility);
+            VkAccelerationStructureVersionInfoKHR* pVersionInfo,
+            VkAccelerationStructureCompatibilityKHR* pCompatibility);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetAccelerationStructureBuildSizesKHR")]
         public static extern unsafe void GetAccelerationStructureBuildSizesKHR(
             VkDevice device,
-            VkAccelerationStructureBuildTypeKHR
-                buildType,
-            VkAccelerationStructureBuildGeometryInfoKHR
-                * pBuildInfo,
+            VkAccelerationStructureBuildTypeKHR buildType,
+            VkAccelerationStructureBuildGeometryInfoKHR* pBuildInfo,
             uint*                                     pMaxPrimitiveCounts,
             VkAccelerationStructureBuildSizesInfoKHR* pSizeInfo);
 
