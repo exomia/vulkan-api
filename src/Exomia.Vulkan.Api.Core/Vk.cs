@@ -3046,9 +3046,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCopyAccelerationStructureToMemoryKHR")]
         public static extern unsafe VkResult CopyAccelerationStructureToMemoryKHR(
-            VkDevice               device,
-            VkDeferredOperationKHR deferredOperation,
-            VkCopyAccelerationStructureToMemoryInfoKHR*nfo);
+            VkDevice                                    device,
+            VkDeferredOperationKHR                      deferredOperation,
+            VkCopyAccelerationStructureToMemoryInfoKHR* nfo);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCopyMemoryToAccelerationStructureKHR")]
@@ -3105,18 +3105,18 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetDeviceAccelerationStructureCompatibilityKHR")]
         public static extern unsafe void GetDeviceAccelerationStructureCompatibilityKHR(
-            VkDevice device,
-            VkAccelerationStructureVersionInfoKHR* pVersionInfo,
+            VkDevice                                 device,
+            VkAccelerationStructureVersionInfoKHR*   pVersionInfo,
             VkAccelerationStructureCompatibilityKHR* pCompatibility);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetAccelerationStructureBuildSizesKHR")]
         public static extern unsafe void GetAccelerationStructureBuildSizesKHR(
-            VkDevice device,
-            VkAccelerationStructureBuildTypeKHR buildType,
+            VkDevice                                     device,
+            VkAccelerationStructureBuildTypeKHR          buildType,
             VkAccelerationStructureBuildGeometryInfoKHR* pBuildInfo,
-            uint*                                     pMaxPrimitiveCounts,
-            VkAccelerationStructureBuildSizesInfoKHR* pSizeInfo);
+            uint*                                        pMaxPrimitiveCounts,
+            VkAccelerationStructureBuildSizesInfoKHR*    pSizeInfo);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdTraceRaysKHR")]
