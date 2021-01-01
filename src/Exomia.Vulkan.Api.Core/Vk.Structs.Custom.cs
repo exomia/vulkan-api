@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2020, exomia
+// Copyright (c) 2018-2021, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -417,6 +417,108 @@ namespace Exomia.Vulkan.Api.Core
         public override string ToString()
         {
             return $"{Major.ToString()}.{Minor.ToString()}.{Patch.ToString()}";
+        }
+
+        /// <summary>
+        ///     Tests if this VkVersion is considered equal to another.
+        /// </summary>
+        /// <param name="other"> The vk version to compare to this object. </param>
+        /// <returns>
+        ///     True if the objects are considered equal, false if they are not.
+        /// </returns>
+        public bool Equals(VkVersion other)
+        {
+            return _version == other._version;
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj)
+        {
+            return obj is VkVersion other && Equals(other);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return (int)_version;
+        }
+
+        /// <summary>
+        ///     Equality operator.
+        /// </summary>
+        /// <param name="a"> The first instance to compare. </param>
+        /// <param name="b"> The second instance to compare. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static bool operator ==(VkVersion a, VkVersion b)
+        {
+            return a._version == b._version;
+        }
+
+        /// <summary>
+        ///     Inequality operator.
+        /// </summary>
+        /// <param name="a"> The first instance to compare. </param>
+        /// <param name="b"> The second instance to compare. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static bool operator !=(VkVersion a, VkVersion b)
+        {
+            return a._version != b._version;
+        }
+
+        /// <summary>
+        ///     Less-than comparison operator.
+        /// </summary>
+        /// <param name="a"> The first instance to compare. </param>
+        /// <param name="b"> The second instance to compare. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static bool operator <(VkVersion a, VkVersion b)
+        {
+            return a._version < b._version;
+        }
+
+        /// <summary>
+        ///     Greater-than comparison operator.
+        /// </summary>
+        /// <param name="a"> The first instance to compare. </param>
+        /// <param name="b"> The second instance to compare. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static bool operator >(VkVersion a, VkVersion b)
+        {
+            return a._version > b._version;
+        }
+
+        /// <summary>
+        ///     Less-than-or-equal comparison operator.
+        /// </summary>
+        /// <param name="a"> The first instance to compare. </param>
+        /// <param name="b"> The second instance to compare. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static bool operator <=(VkVersion a, VkVersion b)
+        {
+            return a._version <= b._version;
+        }
+
+        /// <summary>
+        ///     Greater-than-or-equal comparison operator.
+        /// </summary>
+        /// <param name="a"> The first instance to compare. </param>
+        /// <param name="b"> The second instance to compare. </param>
+        /// <returns>
+        ///     The result of the operation.
+        /// </returns>
+        public static bool operator >=(VkVersion a, VkVersion b)
+        {
+            return a._version >= b._version;
         }
     }
 }
