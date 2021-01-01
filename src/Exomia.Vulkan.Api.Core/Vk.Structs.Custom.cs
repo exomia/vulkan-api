@@ -369,6 +369,11 @@ namespace Exomia.Vulkan.Api.Core
 
         private readonly uint _version;
 
+        internal VkVersion(uint version)
+        {
+            _version = version;
+        }
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="VkVersion" /> struct.
         /// </summary>
@@ -376,9 +381,7 @@ namespace Exomia.Vulkan.Api.Core
         /// <param name="minor"> The minor. </param>
         /// <param name="patch"> The patch. </param>
         public VkVersion(uint major, uint minor, uint patch)
-        {
-            _version = (major << 22) | ((minor & 0x3FF) << 12) | (patch & 0xFFF);
-        }
+            : this((major << 22) | ((minor & 0x3FF) << 12) | (patch & 0xFFF)) { }
 
         /// <summary>
         ///     Gets the major.
