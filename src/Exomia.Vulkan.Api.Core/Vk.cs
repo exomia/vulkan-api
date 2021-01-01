@@ -119,14 +119,6 @@ namespace Exomia.Vulkan.Api.Core
             VkDevice*              pDevice);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint = "vkCreateDevice")]
-        public static extern unsafe VkResult CreateDevice(
-            VkPhysicalDevice       physicalDevice,
-            VkDeviceCreateInfo*    pCreateInfo,
-            VkAllocationCallbacks* pAllocator,
-            out VkDevice           pDevice);
-
-        [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkDestroyDevice")]
         public static extern unsafe void DestroyDevice(
             VkDevice               device,
