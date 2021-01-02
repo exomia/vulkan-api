@@ -15,6 +15,10 @@ namespace Exomia.Vulkan.Api.Windows
 {
     public static partial class VkWin32
     {
+        public const int    VK_KHR_WIN32_SURFACE                = 1;
+        public const int    VK_KHR_WIN32_SURFACE_SPEC_VERSION   = 6;
+        public const string VK_KHR_WIN32_SURFACE_EXTENSION_NAME = "VK_KHR_win32_surface";
+
         public const int    VK_KHR_EXTERNAL_MEMORY_WIN32                = 1;
         public const int    VK_KHR_EXTERNAL_MEMORY_WIN32_SPEC_VERSION   = 1;
         public const string VK_KHR_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME = "VK_KHR_external_memory_win32";
