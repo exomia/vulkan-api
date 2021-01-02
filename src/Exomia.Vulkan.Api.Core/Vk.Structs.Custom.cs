@@ -20,6 +20,16 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public readonly unsafe struct VkBool32
     {
+        /// <summary>
+        ///     The true value.
+        /// </summary>
+        public static readonly VkBool32 True = Vk.VK_TRUE;
+
+        /// <summary>
+        ///     The false value.
+        /// </summary>
+        public static readonly VkBool32 False = Vk.VK_FALSE;
+        
         private readonly uint _value;
 
         /// <summary>
