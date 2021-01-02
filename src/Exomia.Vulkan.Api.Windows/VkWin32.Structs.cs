@@ -22,11 +22,11 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkWin32SurfaceCreateInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            flags;
-        public IntPtr          hInstance;
-        public IntPtr          hWnd;
+        public VkStructureType              sType;
+        public void*                        pNext;
+        public VkWin32SurfaceCreateFlagsKHR flags;
+        public IntPtr                       hInstance;
+        public IntPtr                       hWnd;
     }
 
     public unsafe struct VkImportMemoryWin32HandleInfoKHR
