@@ -3356,7 +3356,7 @@ namespace Exomia.Vulkan.Api.Core
             int,                        /* messageCode            */
             sbyte*,                     /* pLayerPrefix           */
             sbyte*,                     /* pMessage               */
-            void*,                      /* flags                  */
+            void*,                      /* pUserData              */
             VkBool32> pfnCallback;
 
         public void* pUserData;
