@@ -10,7 +10,6 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 
 // ReSharper disable UnusedMember.Global
@@ -18,7 +17,6 @@ namespace Exomia.Vulkan.Api.Core
 {
     using static Vk;
     using size_t = nuint;
-    using VkSampleMask = UInt32;
     using VkAccelerationStructureTypeNV = VkAccelerationStructureTypeKHR;
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3356,7 +3354,7 @@ namespace Exomia.Vulkan.Api.Core
             int,                        /* messageCode            */
             sbyte*,                     /* pLayerPrefix           */
             sbyte*,                     /* pMessage               */
-            void*,                      /* flags                  */
+            void*,                      /* pUserData              */
             VkBool32> pfnCallback;
 
         public void* pUserData;
