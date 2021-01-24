@@ -9,7 +9,6 @@
 #endregion
 
 using System;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -188,7 +187,7 @@ namespace Exomia.Vulkan.Api.Core
             get
             {
 #if DEBUG
-                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+                if (index >= LENGTH || index < 0) { throw new ArgumentOutOfRangeException(nameof(index)); }
 #endif
                 return *((float*)Unsafe.AsPointer(ref this) + index);
             }
@@ -196,7 +195,7 @@ namespace Exomia.Vulkan.Api.Core
             set
             {
 #if DEBUG
-                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+                if (index >= LENGTH || index < 0) { throw new ArgumentOutOfRangeException(nameof(index)); }
 #endif
                 *((float*)Unsafe.AsPointer(ref this) + index) = value;
             }
@@ -271,14 +270,14 @@ namespace Exomia.Vulkan.Api.Core
             get
             {
 #if DEBUG
-                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+                if (index >= LENGTH || index < 0) { throw new ArgumentOutOfRangeException(nameof(index)); }
 #endif
                 return *((T*)Unsafe.AsPointer(ref this) + index);
             }
             set
             {
 #if DEBUG
-                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+                if (index >= LENGTH || index < 0) { throw new ArgumentOutOfRangeException(nameof(index)); }
 #endif
                 *((T*)Unsafe.AsPointer(ref this) + index) = value;
             }
@@ -368,14 +367,14 @@ namespace Exomia.Vulkan.Api.Core
             get
             {
 #if DEBUG
-                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+                if (index >= LENGTH || index < 0) { throw new ArgumentOutOfRangeException(nameof(index)); }
 #endif
                 return *((T*)Unsafe.AsPointer(ref this) + index);
             }
             set
             {
 #if DEBUG
-                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+                if (index >= LENGTH || index < 0) { throw new ArgumentOutOfRangeException(nameof(index)); }
 #endif
                 *((T*)Unsafe.AsPointer(ref this) + index) = value;
             }
