@@ -66,7 +66,7 @@ namespace Exomia.Vulkan.Api.Core.Tests
             Assert.AreEqual(0.3f, color[2]);
             Assert.AreEqual(0.4f, color[3]);
         }
-
+#if DEBUG
         [DataTestMethod]
         [DataRow(7u)]
         [DataRow(5u)]
@@ -74,10 +74,13 @@ namespace Exomia.Vulkan.Api.Core.Tests
         [DataRow(uint.MaxValue)]
         [DataRow(785u)]
         [DataRow(987787898u)]
-        public void VkColor_InvalidIndexerUint_GetRGBA_ShouldNotWorkAndThrowException(uint index)
+        // ReSharper disable once HeapView.ClosureAllocation
+        public void VkColor_InvalidIndexerUint_Get_ShouldNotWorkAndThrowException(uint index)
         {
             VkColor color = new VkColor { R = 0.1f, G = 0.2f, B = 0.3f, A = 0.4f };
             Assert.ThrowsException<ArgumentOutOfRangeException>(
+
+                // ReSharper disable once HeapView.DelegateAllocation
                 () =>
                 {
                     float value = color[index];
@@ -93,15 +96,61 @@ namespace Exomia.Vulkan.Api.Core.Tests
         [DataRow(785)]
         [DataRow(-785)]
         [DataRow(987787898)]
-        public void VkColor_InvalidIndexerInt_GetRGBA_ShouldNotWorkAndThrowException(int index)
+        // ReSharper disable once HeapView.ClosureAllocation
+        public void VkColor_InvalidIndexerInt_Get_ShouldNotWorkAndThrowException(int index)
         {
             VkColor color = new VkColor { R = 0.1f, G = 0.2f, B = 0.3f, A = 0.4f };
             Assert.ThrowsException<ArgumentOutOfRangeException>(
+
+                // ReSharper disable once HeapView.DelegateAllocation
                 () =>
                 {
                     float value = color[index];
                 });
         }
+
+        [DataTestMethod]
+        [DataRow(7u)]
+        [DataRow(5u)]
+        [DataRow(45u)]
+        [DataRow(uint.MaxValue)]
+        [DataRow(785u)]
+        [DataRow(987787898u)]
+        // ReSharper disable once HeapView.ClosureAllocation
+        public void VkColor_InvalidIndexerUint_Set_ShouldNotWorkAndThrowException(uint index)
+        {
+            VkColor color = new VkColor { R = 0.1f, G = 0.2f, B = 0.3f, A = 0.4f };
+            Assert.ThrowsException<ArgumentOutOfRangeException>(
+
+                // ReSharper disable once HeapView.DelegateAllocation
+                () =>
+                {
+                    color[index] = 0.5f;
+                });
+        }
+
+        [DataTestMethod]
+        [DataRow(7)]
+        [DataRow(5)]
+        [DataRow(45)]
+        [DataRow(int.MaxValue)]
+        [DataRow(int.MinValue)]
+        [DataRow(785)]
+        [DataRow(-785)]
+        [DataRow(987787898)]
+        // ReSharper disable once HeapView.ClosureAllocation
+        public void VkColor_InvalidIndexerInt_Set_ShouldNotWorkAndThrowException(int index)
+        {
+            VkColor color = new VkColor { R = 0.1f, G = 0.2f, B = 0.3f, A = 0.4f };
+            Assert.ThrowsException<ArgumentOutOfRangeException>(
+
+                // ReSharper disable once HeapView.DelegateAllocation
+                () =>
+                {
+                     color[index] = 0.5f;
+                });
+        }
+#endif
     }
 }
 

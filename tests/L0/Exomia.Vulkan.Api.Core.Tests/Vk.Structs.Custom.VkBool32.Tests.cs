@@ -26,6 +26,34 @@ namespace Exomia.Vulkan.Api.Core.Tests
             VkBool32 value2;
         }
 
+        [TestMethod]
+        public void VkBool32_ToString_ShouldWorkAndReturnSameAsBooleanToString()
+        { 
+            string vTrue = VkBool32.True.ToString();
+            string vFalse = VkBool32.False.ToString();
+
+            Assert.AreEqual(true.ToString(),  vTrue);
+            Assert.AreEqual(false.ToString(), vFalse);
+        }
+
+        [TestMethod]
+        public void VkBool32_VkBool32True_ShouldBeTrue()
+        {
+            Assert.IsTrue(VkBool32.True);
+        }
+
+        [TestMethod]
+        public void VkBool32_VkBool32False_ShouldBeFalse()
+        {
+            Assert.IsFalse(VkBool32.False);
+        }
+
+        [TestMethod]
+        public void VkBool32_VkBool32True_ShouldNotBeVkBool32False()
+        {
+            Assert.AreNotEqual(VkBool32.True, VkBool32.False);
+        }
+
         [DataTestMethod]
         [DataRow(0u)]
         [DataRow(1u)]
