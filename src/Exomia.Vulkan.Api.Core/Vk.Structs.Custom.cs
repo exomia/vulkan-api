@@ -8,6 +8,7 @@
 
 #endregion
 
+using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -29,7 +30,7 @@ namespace Exomia.Vulkan.Api.Core
         ///     The false value.
         /// </summary>
         public static readonly VkBool32 False = Vk.VK_FALSE;
-        
+
         private readonly uint _value;
 
         /// <summary>
@@ -160,13 +161,17 @@ namespace Exomia.Vulkan.Api.Core
         {
             get
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 return *((float*)Unsafe.AsPointer(ref this) + index);
             }
 
             set
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 *((float*)Unsafe.AsPointer(ref this) + index) = value;
             }
         }
@@ -182,13 +187,17 @@ namespace Exomia.Vulkan.Api.Core
         {
             get
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 return *((float*)Unsafe.AsPointer(ref this) + index);
             }
 
             set
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 *((float*)Unsafe.AsPointer(ref this) + index) = value;
             }
         }
@@ -236,12 +245,16 @@ namespace Exomia.Vulkan.Api.Core
         {
             get
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 return *((T*)Unsafe.AsPointer(ref this) + index);
             }
             set
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 *((T*)Unsafe.AsPointer(ref this) + index) = value;
             }
         }
@@ -257,12 +270,16 @@ namespace Exomia.Vulkan.Api.Core
         {
             get
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 return *((T*)Unsafe.AsPointer(ref this) + index);
             }
             set
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 *((T*)Unsafe.AsPointer(ref this) + index) = value;
             }
         }
@@ -325,12 +342,16 @@ namespace Exomia.Vulkan.Api.Core
         {
             get
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 return *((T*)Unsafe.AsPointer(ref this) + index);
             }
             set
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 *((T*)Unsafe.AsPointer(ref this) + index) = value;
             }
         }
@@ -346,12 +367,16 @@ namespace Exomia.Vulkan.Api.Core
         {
             get
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 return *((T*)Unsafe.AsPointer(ref this) + index);
             }
             set
             {
-                Debug.Assert(index < LENGTH, "Index out of range!");
+#if DEBUG
+                if (index >= LENGTH) { throw new ArgumentOutOfRangeException(nameof(index)); }
+#endif
                 *((T*)Unsafe.AsPointer(ref this) + index) = value;
             }
         }
