@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2020, exomia
+// Copyright (c) 2018-2021, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -73,15 +73,16 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferMemoryBarrier
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkAccessFlags   srcAccessMask;
-        public VkAccessFlags   dstAccessMask;
-        public uint            srcQueueFamilyIndex;
-        public uint            dstQueueFamilyIndex;
-        public VkBuffer        buffer;
-        public VkDeviceSize    offset;
-        public VkDeviceSize    size;
+        public const VkStructureType STYPE = VkStructureType.BUFFER_MEMORY_BARRIER;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkAccessFlags   srcAccessMask;
+        public       VkAccessFlags   dstAccessMask;
+        public       uint            srcQueueFamilyIndex;
+        public       uint            dstQueueFamilyIndex;
+        public       VkBuffer        buffer;
+        public       VkDeviceSize    offset;
+        public       VkDeviceSize    size;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -124,25 +125,27 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageMemoryBarrier
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkAccessFlags           srcAccessMask;
-        public VkAccessFlags           dstAccessMask;
-        public VkImageLayout           oldLayout;
-        public VkImageLayout           newLayout;
-        public uint                    srcQueueFamilyIndex;
-        public uint                    dstQueueFamilyIndex;
-        public VkImage                 image;
-        public VkImageSubresourceRange subresourceRange;
+        public const VkStructureType         STYPE = VkStructureType.IMAGE_MEMORY_BARRIER;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkAccessFlags           srcAccessMask;
+        public       VkAccessFlags           dstAccessMask;
+        public       VkImageLayout           oldLayout;
+        public       VkImageLayout           newLayout;
+        public       uint                    srcQueueFamilyIndex;
+        public       uint                    dstQueueFamilyIndex;
+        public       VkImage                 image;
+        public       VkImageSubresourceRange subresourceRange;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryBarrier
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkAccessFlags   srcAccessMask;
-        public VkAccessFlags   dstAccessMask;
+        public const VkStructureType STYPE = VkStructureType.MEMORY_BARRIER;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkAccessFlags   srcAccessMask;
+        public       VkAccessFlags   dstAccessMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -188,13 +191,14 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkApplicationInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public sbyte*          pApplicationName;
-        public VkVersion       applicationVersion;
-        public sbyte*          pEngineName;
-        public VkVersion       engineVersion;
-        public VkVersion       apiVersion;
+        public const VkStructureType STYPE = VkStructureType.APPLICATION_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       sbyte*          pApplicationName;
+        public       VkVersion       applicationVersion;
+        public       sbyte*          pEngineName;
+        public       VkVersion       engineVersion;
+        public       VkVersion       apiVersion;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -218,14 +222,15 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkInstanceCreateInfo
     {
-        public VkStructureType       sType;
-        public void*                 pNext;
-        public VkInstanceCreateFlags flags;
-        public VkApplicationInfo*    pApplicationInfo;
-        public uint                  enabledLayerCount;
-        public sbyte**               ppEnabledLayerNames;
-        public uint                  enabledExtensionCount;
-        public sbyte**               ppEnabledExtensionNames;
+        public const VkStructureType       STYPE = VkStructureType.INSTANCE_CREATE_INFO;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkInstanceCreateFlags flags;
+        public       VkApplicationInfo*    pApplicationInfo;
+        public       uint                  enabledLayerCount;
+        public       sbyte**               ppEnabledLayerNames;
+        public       uint                  enabledExtensionCount;
+        public       sbyte**               ppEnabledExtensionNames;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -458,27 +463,29 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceQueueCreateInfo
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkDeviceQueueCreateFlags flags;
-        public uint                     queueFamilyIndex;
-        public uint                     queueCount;
-        public float*                   pQueuePriorities;
+        public const VkStructureType          STYPE = VkStructureType.DEVICE_QUEUE_CREATE_INFO;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkDeviceQueueCreateFlags flags;
+        public       uint                     queueFamilyIndex;
+        public       uint                     queueCount;
+        public       float*                   pQueuePriorities;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceCreateInfo
     {
-        public VkStructureType           sType;
-        public void*                     pNext;
-        public VkDeviceCreateFlags       flags;
-        public uint                      queueCreateInfoCount;
-        public VkDeviceQueueCreateInfo*  pQueueCreateInfos;
-        public uint                      enabledLayerCount;
-        public sbyte**                   ppEnabledLayerNames;
-        public uint                      enabledExtensionCount;
-        public sbyte**                   ppEnabledExtensionNames;
-        public VkPhysicalDeviceFeatures* pEnabledFeatures;
+        public const VkStructureType           STYPE = VkStructureType.DEVICE_CREATE_INFO;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       VkDeviceCreateFlags       flags;
+        public       uint                      queueCreateInfoCount;
+        public       VkDeviceQueueCreateInfo*  pQueueCreateInfos;
+        public       uint                      enabledLayerCount;
+        public       sbyte**                   ppEnabledLayerNames;
+        public       uint                      enabledExtensionCount;
+        public       sbyte**                   ppEnabledExtensionNames;
+        public       VkPhysicalDeviceFeatures* pEnabledFeatures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -500,34 +507,37 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubmitInfo
     {
-        public VkStructureType       sType;
-        public void*                 pNext;
-        public uint                  waitSemaphoreCount;
-        public VkSemaphore*          pWaitSemaphores;
-        public VkPipelineStageFlags* pWaitDstStageMask;
-        public uint                  commandBufferCount;
-        public VkCommandBuffer*      pCommandBuffers;
-        public uint                  signalSemaphoreCount;
-        public VkSemaphore*          pSignalSemaphores;
+        public const VkStructureType       STYPE = VkStructureType.SUBMIT_INFO;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       uint                  waitSemaphoreCount;
+        public       VkSemaphore*          pWaitSemaphores;
+        public       VkPipelineStageFlags* pWaitDstStageMask;
+        public       uint                  commandBufferCount;
+        public       VkCommandBuffer*      pCommandBuffers;
+        public       uint                  signalSemaphoreCount;
+        public       VkSemaphore*          pSignalSemaphores;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMappedMemoryRange
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceMemory  memory;
-        public VkDeviceSize    offset;
-        public VkDeviceSize    size;
+        public const VkStructureType STYPE = VkStructureType.MAPPED_MEMORY_RANGE;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceMemory  memory;
+        public       VkDeviceSize    offset;
+        public       VkDeviceSize    size;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryAllocateInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceSize    allocationSize;
-        public uint            memoryTypeIndex;
+        public const VkStructureType STYPE = VkStructureType.MEMORY_ALLOCATE_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceSize    allocationSize;
+        public       uint            memoryTypeIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -594,18 +604,19 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindSparseInfo
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public uint                               waitSemaphoreCount;
-        public VkSemaphore*                       pWaitSemaphores;
-        public uint                               bufferBindCount;
-        public VkSparseBufferMemoryBindInfo*      pBufferBinds;
-        public uint                               imageOpaqueBindCount;
-        public VkSparseImageOpaqueMemoryBindInfo* pImageOpaqueBinds;
-        public uint                               imageBindCount;
-        public VkSparseImageMemoryBindInfo*       pImageBinds;
-        public uint                               signalSemaphoreCount;
-        public VkSemaphore*                       pSignalSemaphores;
+        public const VkStructureType                    STYPE = VkStructureType.BIND_SPARSE_INFO;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       uint                               waitSemaphoreCount;
+        public       VkSemaphore*                       pWaitSemaphores;
+        public       uint                               bufferBindCount;
+        public       VkSparseBufferMemoryBindInfo*      pBufferBinds;
+        public       uint                               imageOpaqueBindCount;
+        public       VkSparseImageOpaqueMemoryBindInfo* pImageOpaqueBinds;
+        public       uint                               imageBindCount;
+        public       VkSparseImageMemoryBindInfo*       pImageBinds;
+        public       uint                               signalSemaphoreCount;
+        public       VkSemaphore*                       pSignalSemaphores;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -629,81 +640,88 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFenceCreateInfo
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkFenceCreateFlags flags;
+        public const VkStructureType    STYPE = VkStructureType.FENCE_CREATE_INFO;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkFenceCreateFlags flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSemaphoreCreateInfo
     {
-        public VkStructureType        sType;
-        public void*                  pNext;
-        public VkSemaphoreCreateFlags flags;
+        public const VkStructureType        STYPE = VkStructureType.SEMAPHORE_CREATE_INFO;
+        public       VkStructureType        sType;
+        public       void*                  pNext;
+        public       VkSemaphoreCreateFlags flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkEventCreateInfo
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkEventCreateFlags flags;
+        public const VkStructureType    STYPE = VkStructureType.EVENT_CREATE_INFO;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkEventCreateFlags flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkQueryPoolCreateInfo
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkQueryPoolCreateFlags        flags;
-        public VkQueryType                   queryType;
-        public uint                          queryCount;
-        public VkQueryPipelineStatisticFlags pipelineStatistics;
+        public const VkStructureType               STYPE = VkStructureType.QUERY_POOL_CREATE_INFO;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkQueryPoolCreateFlags        flags;
+        public       VkQueryType                   queryType;
+        public       uint                          queryCount;
+        public       VkQueryPipelineStatisticFlags pipelineStatistics;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferCreateInfo
     {
-        public VkStructureType     sType;
-        public void*               pNext;
-        public VkBufferCreateFlags flags;
-        public VkDeviceSize        size;
-        public VkBufferUsageFlags  usage;
-        public VkSharingMode       sharingMode;
-        public uint                queueFamilyIndexCount;
-        public uint*               pQueueFamilyIndices;
+        public const VkStructureType     STYPE = VkStructureType.BUFFER_CREATE_INFO;
+        public       VkStructureType     sType;
+        public       void*               pNext;
+        public       VkBufferCreateFlags flags;
+        public       VkDeviceSize        size;
+        public       VkBufferUsageFlags  usage;
+        public       VkSharingMode       sharingMode;
+        public       uint                queueFamilyIndexCount;
+        public       uint*               pQueueFamilyIndices;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferViewCreateInfo
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkBufferViewCreateFlags flags;
-        public VkBuffer                buffer;
-        public VkFormat                format;
-        public VkDeviceSize            offset;
-        public VkDeviceSize            range;
+        public const VkStructureType         STYPE = VkStructureType.BUFFER_VIEW_CREATE_INFO;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkBufferViewCreateFlags flags;
+        public       VkBuffer                buffer;
+        public       VkFormat                format;
+        public       VkDeviceSize            offset;
+        public       VkDeviceSize            range;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageCreateInfo
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkImageCreateFlags flags;
-        public VkImageType        imageType;
-        public VkFormat           format;
-        public VkExtent3D         extent;
-        public uint               mipLevels;
-        public uint               arrayLayers;
-        public VkSampleCountFlags samples;
-        public VkImageTiling      tiling;
-        public VkImageUsageFlags  usage;
-        public VkSharingMode      sharingMode;
-        public uint               queueFamilyIndexCount;
-        public uint*              pQueueFamilyIndices;
-        public VkImageLayout      initialLayout;
+        public const VkStructureType    STYPE = VkStructureType.IMAGE_CREATE_INFO;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkImageCreateFlags flags;
+        public       VkImageType        imageType;
+        public       VkFormat           format;
+        public       VkExtent3D         extent;
+        public       uint               mipLevels;
+        public       uint               arrayLayers;
+        public       VkSampleCountFlags samples;
+        public       VkImageTiling      tiling;
+        public       VkImageUsageFlags  usage;
+        public       VkSharingMode      sharingMode;
+        public       uint               queueFamilyIndexCount;
+        public       uint*              pQueueFamilyIndices;
+        public       VkImageLayout      initialLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -728,34 +746,37 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewCreateInfo
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkImageViewCreateFlags  flags;
-        public VkImage                 image;
-        public VkImageViewType         viewType;
-        public VkFormat                format;
-        public VkComponentMapping      components;
-        public VkImageSubresourceRange subresourceRange;
+        public const VkStructureType         STYPE = VkStructureType.IMAGE_VIEW_CREATE_INFO;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkImageViewCreateFlags  flags;
+        public       VkImage                 image;
+        public       VkImageViewType         viewType;
+        public       VkFormat                format;
+        public       VkComponentMapping      components;
+        public       VkImageSubresourceRange subresourceRange;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkShaderModuleCreateInfo
     {
-        public VkStructureType           sType;
-        public void*                     pNext;
-        public VkShaderModuleCreateFlags flags;
-        public nuint                     codeSize;
-        public uint*                     pCode;
+        public const VkStructureType           STYPE = VkStructureType.SHADER_MODULE_CREATE_INFO;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       VkShaderModuleCreateFlags flags;
+        public       nuint                     codeSize;
+        public       uint*                     pCode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCacheCreateInfo
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkPipelineCacheCreateFlags flags;
-        public nuint                      initialDataSize;
-        public void*                      pInitialData;
+        public const VkStructureType            STYPE = VkStructureType.PIPELINE_CACHE_CREATE_INFO;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkPipelineCacheCreateFlags flags;
+        public       nuint                      initialDataSize;
+        public       void*                      pInitialData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -778,25 +799,27 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineShaderStageCreateInfo
     {
-        public VkStructureType                  sType;
-        public void*                            pNext;
-        public VkPipelineShaderStageCreateFlags flags;
-        public VkShaderStageFlags               stage;
-        public VkShaderModule                   module;
-        public sbyte*                           pName;
-        public VkSpecializationInfo*            pSpecializationInfo;
+        public const VkStructureType                  STYPE = VkStructureType.PIPELINE_SHADER_STAGE_CREATE_INFO;
+        public       VkStructureType                  sType;
+        public       void*                            pNext;
+        public       VkPipelineShaderStageCreateFlags flags;
+        public       VkShaderStageFlags               stage;
+        public       VkShaderModule                   module;
+        public       sbyte*                           pName;
+        public       VkSpecializationInfo*            pSpecializationInfo;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkComputePipelineCreateInfo
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkPipelineCreateFlags           flags;
-        public VkPipelineShaderStageCreateInfo stage;
-        public VkPipelineLayout                layout;
-        public VkPipeline                      basePipelineHandle;
-        public int                             basePipelineIndex;
+        public const VkStructureType                 STYPE = VkStructureType.COMPUTE_PIPELINE_CREATE_INFO;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkPipelineCreateFlags           flags;
+        public       VkPipelineShaderStageCreateInfo stage;
+        public       VkPipelineLayout                layout;
+        public       VkPipeline                      basePipelineHandle;
+        public       int                             basePipelineIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -819,32 +842,35 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineVertexInputStateCreateInfo
     {
-        public VkStructureType                       sType;
-        public void*                                 pNext;
-        public VkPipelineVertexInputStateCreateFlags flags;
-        public uint                                  vertexBindingDescriptionCount;
-        public VkVertexInputBindingDescription*      pVertexBindingDescriptions;
-        public uint                                  vertexAttributeDescriptionCount;
-        public VkVertexInputAttributeDescription*    pVertexAttributeDescriptions;
+        public const VkStructureType                       STYPE = VkStructureType.PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkPipelineVertexInputStateCreateFlags flags;
+        public       uint                                  vertexBindingDescriptionCount;
+        public       VkVertexInputBindingDescription*      pVertexBindingDescriptions;
+        public       uint                                  vertexAttributeDescriptionCount;
+        public       VkVertexInputAttributeDescription*    pVertexAttributeDescriptions;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineInputAssemblyStateCreateInfo
     {
-        public VkStructureType                         sType;
-        public void*                                   pNext;
-        public VkPipelineInputAssemblyStateCreateFlags flags;
-        public VkPrimitiveTopology                     topology;
-        public VkBool32                                primitiveRestartEnable;
+        public const VkStructureType                         STYPE = VkStructureType.PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
+        public       VkStructureType                         sType;
+        public       void*                                   pNext;
+        public       VkPipelineInputAssemblyStateCreateFlags flags;
+        public       VkPrimitiveTopology                     topology;
+        public       VkBool32                                primitiveRestartEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineTessellationStateCreateInfo
     {
-        public VkStructureType                        sType;
-        public void*                                  pNext;
-        public VkPipelineTessellationStateCreateFlags flags;
-        public uint                                   patchControlPoints;
+        public const VkStructureType                        STYPE = VkStructureType.PIPELINE_TESSELLATION_STATE_CREATE_INFO;
+        public       VkStructureType                        sType;
+        public       void*                                  pNext;
+        public       VkPipelineTessellationStateCreateFlags flags;
+        public       uint                                   patchControlPoints;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -861,45 +887,48 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportStateCreateInfo
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkPipelineViewportStateCreateFlags flags;
-        public uint                               viewportCount;
-        public VkViewport*                        pViewports;
-        public uint                               scissorCount;
-        public VkRect2D*                          pScissors;
+        public const VkStructureType                    STYPE = VkStructureType.PIPELINE_VIEWPORT_STATE_CREATE_INFO;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkPipelineViewportStateCreateFlags flags;
+        public       uint                               viewportCount;
+        public       VkViewport*                        pViewports;
+        public       uint                               scissorCount;
+        public       VkRect2D*                          pScissors;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationStateCreateInfo
     {
-        public VkStructureType                         sType;
-        public void*                                   pNext;
-        public VkPipelineRasterizationStateCreateFlags flags;
-        public VkBool32                                depthClampEnable;
-        public VkBool32                                rasterizerDiscardEnable;
-        public VkPolygonMode                           polygonMode;
-        public VkCullModeFlags                         cullMode;
-        public VkFrontFace                             frontFace;
-        public VkBool32                                depthBiasEnable;
-        public float                                   depthBiasConstantFactor;
-        public float                                   depthBiasClamp;
-        public float                                   depthBiasSlopeFactor;
-        public float                                   lineWidth;
+        public const VkStructureType                         STYPE = VkStructureType.PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
+        public       VkStructureType                         sType;
+        public       void*                                   pNext;
+        public       VkPipelineRasterizationStateCreateFlags flags;
+        public       VkBool32                                depthClampEnable;
+        public       VkBool32                                rasterizerDiscardEnable;
+        public       VkPolygonMode                           polygonMode;
+        public       VkCullModeFlags                         cullMode;
+        public       VkFrontFace                             frontFace;
+        public       VkBool32                                depthBiasEnable;
+        public       float                                   depthBiasConstantFactor;
+        public       float                                   depthBiasClamp;
+        public       float                                   depthBiasSlopeFactor;
+        public       float                                   lineWidth;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineMultisampleStateCreateInfo
     {
-        public VkStructureType                       sType;
-        public void*                                 pNext;
-        public VkPipelineMultisampleStateCreateFlags flags;
-        public VkSampleCountFlags                    rasterizationSamples;
-        public VkBool32                              sampleShadingEnable;
-        public float                                 minSampleShading;
-        public uint*                                 pSampleMask;
-        public VkBool32                              alphaToCoverageEnable;
-        public VkBool32                              alphaToOneEnable;
+        public const VkStructureType                       STYPE = VkStructureType.PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkPipelineMultisampleStateCreateFlags flags;
+        public       VkSampleCountFlags                    rasterizationSamples;
+        public       VkBool32                              sampleShadingEnable;
+        public       float                                 minSampleShading;
+        public       uint*                                 pSampleMask;
+        public       VkBool32                              alphaToCoverageEnable;
+        public       VkBool32                              alphaToOneEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -917,18 +946,19 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineDepthStencilStateCreateInfo
     {
-        public VkStructureType                        sType;
-        public void*                                  pNext;
-        public VkPipelineDepthStencilStateCreateFlags flags;
-        public VkBool32                               depthTestEnable;
-        public VkBool32                               depthWriteEnable;
-        public VkCompareOp                            depthCompareOp;
-        public VkBool32                               depthBoundsTestEnable;
-        public VkBool32                               stencilTestEnable;
-        public VkStencilOpState                       front;
-        public VkStencilOpState                       back;
-        public float                                  minDepthBounds;
-        public float                                  maxDepthBounds;
+        public const VkStructureType                        STYPE = VkStructureType.PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
+        public       VkStructureType                        sType;
+        public       void*                                  pNext;
+        public       VkPipelineDepthStencilStateCreateFlags flags;
+        public       VkBool32                               depthTestEnable;
+        public       VkBool32                               depthWriteEnable;
+        public       VkCompareOp                            depthCompareOp;
+        public       VkBool32                               depthBoundsTestEnable;
+        public       VkBool32                               stencilTestEnable;
+        public       VkStencilOpState                       front;
+        public       VkStencilOpState                       back;
+        public       float                                  minDepthBounds;
+        public       float                                  maxDepthBounds;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -947,6 +977,7 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineColorBlendStateCreateInfo
     {
+        public const VkStructureType                      STYPE = VkStructureType.PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
         public       VkStructureType                      sType;
         public       void*                                pNext;
         public       VkPipelineColorBlendStateCreateFlags flags;
@@ -960,35 +991,37 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineDynamicStateCreateInfo
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public VkPipelineDynamicStateCreateFlags flags;
-        public uint                              dynamicStateCount;
-        public VkDynamicState*                   pDynamicStates;
+        public const VkStructureType                   STYPE = VkStructureType.PIPELINE_DYNAMIC_STATE_CREATE_INFO;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkPipelineDynamicStateCreateFlags flags;
+        public       uint                              dynamicStateCount;
+        public       VkDynamicState*                   pDynamicStates;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGraphicsPipelineCreateInfo
     {
-        public VkStructureType                         sType;
-        public void*                                   pNext;
-        public VkPipelineCreateFlags                   flags;
-        public uint                                    stageCount;
-        public VkPipelineShaderStageCreateInfo*        pStages;
-        public VkPipelineVertexInputStateCreateInfo*   pVertexInputState;
-        public VkPipelineInputAssemblyStateCreateInfo* pInputAssemblyState;
-        public VkPipelineTessellationStateCreateInfo*  pTessellationState;
-        public VkPipelineViewportStateCreateInfo*      pViewportState;
-        public VkPipelineRasterizationStateCreateInfo* pRasterizationState;
-        public VkPipelineMultisampleStateCreateInfo*   pMultisampleState;
-        public VkPipelineDepthStencilStateCreateInfo*  pDepthStencilState;
-        public VkPipelineColorBlendStateCreateInfo*    pColorBlendState;
-        public VkPipelineDynamicStateCreateInfo*       pDynamicState;
-        public VkPipelineLayout                        layout;
-        public VkRenderPass                            renderPass;
-        public uint                                    subpass;
-        public VkPipeline                              basePipelineHandle;
-        public int                                     basePipelineIndex;
+        public const VkStructureType                         STYPE = VkStructureType.GRAPHICS_PIPELINE_CREATE_INFO;
+        public       VkStructureType                         sType;
+        public       void*                                   pNext;
+        public       VkPipelineCreateFlags                   flags;
+        public       uint                                    stageCount;
+        public       VkPipelineShaderStageCreateInfo*        pStages;
+        public       VkPipelineVertexInputStateCreateInfo*   pVertexInputState;
+        public       VkPipelineInputAssemblyStateCreateInfo* pInputAssemblyState;
+        public       VkPipelineTessellationStateCreateInfo*  pTessellationState;
+        public       VkPipelineViewportStateCreateInfo*      pViewportState;
+        public       VkPipelineRasterizationStateCreateInfo* pRasterizationState;
+        public       VkPipelineMultisampleStateCreateInfo*   pMultisampleState;
+        public       VkPipelineDepthStencilStateCreateInfo*  pDepthStencilState;
+        public       VkPipelineColorBlendStateCreateInfo*    pColorBlendState;
+        public       VkPipelineDynamicStateCreateInfo*       pDynamicState;
+        public       VkPipelineLayout                        layout;
+        public       VkRenderPass                            renderPass;
+        public       uint                                    subpass;
+        public       VkPipeline                              basePipelineHandle;
+        public       int                                     basePipelineIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1002,50 +1035,53 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineLayoutCreateInfo
     {
-        public VkStructureType             sType;
-        public void*                       pNext;
-        public VkPipelineLayoutCreateFlags flags;
-        public uint                        setLayoutCount;
-        public VkDescriptorSetLayout*      pSetLayouts;
-        public uint                        pushConstantRangeCount;
-        public VkPushConstantRange*        pPushConstantRanges;
+        public const VkStructureType             STYPE = VkStructureType.PIPELINE_LAYOUT_CREATE_INFO;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       VkPipelineLayoutCreateFlags flags;
+        public       uint                        setLayoutCount;
+        public       VkDescriptorSetLayout*      pSetLayouts;
+        public       uint                        pushConstantRangeCount;
+        public       VkPushConstantRange*        pPushConstantRanges;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSamplerCreateInfo
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public VkSamplerCreateFlags flags;
-        public VkFilter             magFilter;
-        public VkFilter             minFilter;
-        public VkSamplerMipmapMode  mipmapMode;
-        public VkSamplerAddressMode addressModeU;
-        public VkSamplerAddressMode addressModeV;
-        public VkSamplerAddressMode addressModeW;
-        public float                mipLodBias;
-        public VkBool32             anisotropyEnable;
-        public float                maxAnisotropy;
-        public VkBool32             compareEnable;
-        public VkCompareOp          compareOp;
-        public float                minLod;
-        public float                maxLod;
-        public VkBorderColor        borderColor;
-        public VkBool32             unnormalizedCoordinates;
+        public const VkStructureType      STYPE = VkStructureType.SAMPLER_CREATE_INFO;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkSamplerCreateFlags flags;
+        public       VkFilter             magFilter;
+        public       VkFilter             minFilter;
+        public       VkSamplerMipmapMode  mipmapMode;
+        public       VkSamplerAddressMode addressModeU;
+        public       VkSamplerAddressMode addressModeV;
+        public       VkSamplerAddressMode addressModeW;
+        public       float                mipLodBias;
+        public       VkBool32             anisotropyEnable;
+        public       float                maxAnisotropy;
+        public       VkBool32             compareEnable;
+        public       VkCompareOp          compareOp;
+        public       float                minLod;
+        public       float                maxLod;
+        public       VkBorderColor        borderColor;
+        public       VkBool32             unnormalizedCoordinates;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCopyDescriptorSet
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDescriptorSet srcSet;
-        public uint            srcBinding;
-        public uint            srcArrayElement;
-        public VkDescriptorSet dstSet;
-        public uint            dstBinding;
-        public uint            dstArrayElement;
-        public uint            descriptorCount;
+        public const VkStructureType STYPE = VkStructureType.COPY_DESCRIPTOR_SET;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDescriptorSet srcSet;
+        public       uint            srcBinding;
+        public       uint            srcArrayElement;
+        public       VkDescriptorSet dstSet;
+        public       uint            dstBinding;
+        public       uint            dstArrayElement;
+        public       uint            descriptorCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1074,22 +1110,24 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorPoolCreateInfo
     {
-        public VkStructureType             sType;
-        public void*                       pNext;
-        public VkDescriptorPoolCreateFlags flags;
-        public uint                        maxSets;
-        public uint                        poolSizeCount;
-        public VkDescriptorPoolSize*       pPoolSizes;
+        public const VkStructureType             STYPE = VkStructureType.DESCRIPTOR_POOL_CREATE_INFO;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       VkDescriptorPoolCreateFlags flags;
+        public       uint                        maxSets;
+        public       uint                        poolSizeCount;
+        public       VkDescriptorPoolSize*       pPoolSizes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorSetAllocateInfo
     {
-        public VkStructureType        sType;
-        public void*                  pNext;
-        public VkDescriptorPool       descriptorPool;
-        public uint                   descriptorSetCount;
-        public VkDescriptorSetLayout* pSetLayouts;
+        public const VkStructureType        STYPE = VkStructureType.DESCRIPTOR_SET_ALLOCATE_INFO;
+        public       VkStructureType        sType;
+        public       void*                  pNext;
+        public       VkDescriptorPool       descriptorPool;
+        public       uint                   descriptorSetCount;
+        public       VkDescriptorSetLayout* pSetLayouts;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1105,26 +1143,28 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorSetLayoutCreateInfo
     {
-        public VkStructureType                  sType;
-        public void*                            pNext;
-        public VkDescriptorSetLayoutCreateFlags flags;
-        public uint                             bindingCount;
-        public VkDescriptorSetLayoutBinding*    pBindings;
+        public const VkStructureType                  STYPE = VkStructureType.DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
+        public       VkStructureType                  sType;
+        public       void*                            pNext;
+        public       VkDescriptorSetLayoutCreateFlags flags;
+        public       uint                             bindingCount;
+        public       VkDescriptorSetLayoutBinding*    pBindings;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkWriteDescriptorSet
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkDescriptorSet         dstSet;
-        public uint                    dstBinding;
-        public uint                    dstArrayElement;
-        public uint                    descriptorCount;
-        public VkDescriptorType        descriptorType;
-        public VkDescriptorImageInfo*  pImageInfo;
-        public VkDescriptorBufferInfo* pBufferInfo;
-        public VkBufferView*           pTexelBufferView;
+        public const VkStructureType         STYPE = VkStructureType.WRITE_DESCRIPTOR_SET;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkDescriptorSet         dstSet;
+        public       uint                    dstBinding;
+        public       uint                    dstArrayElement;
+        public       uint                    descriptorCount;
+        public       VkDescriptorType        descriptorType;
+        public       VkDescriptorImageInfo*  pImageInfo;
+        public       VkDescriptorBufferInfo* pBufferInfo;
+        public       VkBufferView*           pTexelBufferView;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1151,15 +1191,16 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFramebufferCreateInfo
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkFramebufferCreateFlags flags;
-        public VkRenderPass             renderPass;
-        public uint                     attachmentCount;
-        public VkImageView*             pAttachments;
-        public uint                     width;
-        public uint                     height;
-        public uint                     layers;
+        public const VkStructureType          STYPE = VkStructureType.FRAMEBUFFER_CREATE_INFO;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkFramebufferCreateFlags flags;
+        public       VkRenderPass             renderPass;
+        public       uint                     attachmentCount;
+        public       VkImageView*             pAttachments;
+        public       uint                     width;
+        public       uint                     height;
+        public       uint                     layers;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1192,56 +1233,61 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassCreateInfo
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkRenderPassCreateFlags  flags;
-        public uint                     attachmentCount;
-        public VkAttachmentDescription* pAttachments;
-        public uint                     subpassCount;
-        public VkSubpassDescription*    pSubpasses;
-        public uint                     dependencyCount;
-        public VkSubpassDependency*     pDependencies;
+        public const VkStructureType          STYPE = VkStructureType.RENDER_PASS_CREATE_INFO;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkRenderPassCreateFlags  flags;
+        public       uint                     attachmentCount;
+        public       VkAttachmentDescription* pAttachments;
+        public       uint                     subpassCount;
+        public       VkSubpassDescription*    pSubpasses;
+        public       uint                     dependencyCount;
+        public       VkSubpassDependency*     pDependencies;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCommandPoolCreateInfo
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkCommandPoolCreateFlags flags;
-        public uint                     queueFamilyIndex;
+        public const VkStructureType          STYPE = VkStructureType.COMMAND_POOL_CREATE_INFO;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkCommandPoolCreateFlags flags;
+        public       uint                     queueFamilyIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCommandBufferAllocateInfo
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public VkCommandPool        commandPool;
-        public VkCommandBufferLevel level;
-        public uint                 commandBufferCount;
+        public const VkStructureType      STYPE = VkStructureType.COMMAND_BUFFER_ALLOCATE_INFO;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkCommandPool        commandPool;
+        public       VkCommandBufferLevel level;
+        public       uint                 commandBufferCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCommandBufferInheritanceInfo
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkRenderPass                  renderPass;
-        public uint                          subpass;
-        public VkFramebuffer                 framebuffer;
-        public VkBool32                      occlusionQueryEnable;
-        public VkQueryControlFlags           queryFlags;
-        public VkQueryPipelineStatisticFlags pipelineStatistics;
+        public const VkStructureType               STYPE = VkStructureType.COMMAND_BUFFER_INHERITANCE_INFO;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkRenderPass                  renderPass;
+        public       uint                          subpass;
+        public       VkFramebuffer                 framebuffer;
+        public       VkBool32                      occlusionQueryEnable;
+        public       VkQueryControlFlags           queryFlags;
+        public       VkQueryPipelineStatisticFlags pipelineStatistics;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCommandBufferBeginInfo
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkCommandBufferUsageFlags       flags;
-        public VkCommandBufferInheritanceInfo* pInheritanceInfo;
+        public const VkStructureType                 STYPE = VkStructureType.COMMAND_BUFFER_BEGIN_INFO;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkCommandBufferUsageFlags       flags;
+        public       VkCommandBufferInheritanceInfo* pInheritanceInfo;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1329,289 +1375,320 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassBeginInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkRenderPass    renderPass;
-        public VkFramebuffer   framebuffer;
-        public VkRect2D        renderArea;
-        public uint            clearValueCount;
-        public VkClearValue*   pClearValues;
+        public const VkStructureType STYPE = VkStructureType.RENDER_PASS_BEGIN_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkRenderPass    renderPass;
+        public       VkFramebuffer   framebuffer;
+        public       VkRect2D        renderArea;
+        public       uint            clearValueCount;
+        public       VkClearValue*   pClearValues;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSubgroupProperties
     {
-        public VkStructureType        sType;
-        public void*                  pNext;
-        public uint                   subgroupSize;
-        public VkShaderStageFlags     supportedStages;
-        public VkSubgroupFeatureFlags supportedOperations;
-        public VkBool32               quadOperationsInAllStages;
+        public const VkStructureType        STYPE = VkStructureType.PHYSICAL_DEVICE_SUBGROUP_PROPERTIES;
+        public       VkStructureType        sType;
+        public       void*                  pNext;
+        public       uint                   subgroupSize;
+        public       VkShaderStageFlags     supportedStages;
+        public       VkSubgroupFeatureFlags supportedOperations;
+        public       VkBool32               quadOperationsInAllStages;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindBufferMemoryInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBuffer        buffer;
-        public VkDeviceMemory  memory;
-        public VkDeviceSize    memoryOffset;
+        public const VkStructureType STYPE = VkStructureType.BIND_BUFFER_MEMORY_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBuffer        buffer;
+        public       VkDeviceMemory  memory;
+        public       VkDeviceSize    memoryOffset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindImageMemoryInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkImage         image;
-        public VkDeviceMemory  memory;
-        public VkDeviceSize    memoryOffset;
+        public const VkStructureType STYPE = VkStructureType.BIND_IMAGE_MEMORY_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkImage         image;
+        public       VkDeviceMemory  memory;
+        public       VkDeviceSize    memoryOffset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevice16BitStorageFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        storageBuffer16BitAccess;
-        public VkBool32        uniformAndStorageBuffer16BitAccess;
-        public VkBool32        storagePushConstant16;
-        public VkBool32        storageInputOutput16;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        storageBuffer16BitAccess;
+        public       VkBool32        uniformAndStorageBuffer16BitAccess;
+        public       VkBool32        storagePushConstant16;
+        public       VkBool32        storageInputOutput16;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryDedicatedRequirements
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        prefersDedicatedAllocation;
-        public VkBool32        requiresDedicatedAllocation;
+        public const VkStructureType STYPE = VkStructureType.MEMORY_DEDICATED_REQUIREMENTS;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        prefersDedicatedAllocation;
+        public       VkBool32        requiresDedicatedAllocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryDedicatedAllocateInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkImage         image;
-        public VkBuffer        buffer;
+        public const VkStructureType STYPE = VkStructureType.MEMORY_DEDICATED_ALLOCATE_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkImage         image;
+        public       VkBuffer        buffer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryAllocateFlagsInfo
     {
-        public VkStructureType       sType;
-        public void*                 pNext;
-        public VkMemoryAllocateFlags flags;
-        public uint                  deviceMask;
+        public const VkStructureType       STYPE = VkStructureType.MEMORY_ALLOCATE_FLAGS_INFO;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkMemoryAllocateFlags flags;
+        public       uint                  deviceMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceGroupRenderPassBeginInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            deviceMask;
-        public uint            deviceRenderAreaCount;
-        public VkRect2D*       pDeviceRenderAreas;
+        public const VkStructureType STYPE = VkStructureType.DEVICE_GROUP_RENDER_PASS_BEGIN_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            deviceMask;
+        public       uint            deviceRenderAreaCount;
+        public       VkRect2D*       pDeviceRenderAreas;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceGroupCommandBufferBeginInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            deviceMask;
+        public const VkStructureType STYPE = VkStructureType.DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            deviceMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceGroupSubmitInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            waitSemaphoreCount;
-        public uint*           pWaitSemaphoreDeviceIndices;
-        public uint            commandBufferCount;
-        public uint*           pCommandBufferDeviceMasks;
-        public uint            signalSemaphoreCount;
-        public uint*           pSignalSemaphoreDeviceIndices;
+        public const VkStructureType STYPE = VkStructureType.DEVICE_GROUP_SUBMIT_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            waitSemaphoreCount;
+        public       uint*           pWaitSemaphoreDeviceIndices;
+        public       uint            commandBufferCount;
+        public       uint*           pCommandBufferDeviceMasks;
+        public       uint            signalSemaphoreCount;
+        public       uint*           pSignalSemaphoreDeviceIndices;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceGroupBindSparseInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            resourceDeviceIndex;
-        public uint            memoryDeviceIndex;
+        public const VkStructureType STYPE = VkStructureType.DEVICE_GROUP_BIND_SPARSE_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            resourceDeviceIndex;
+        public       uint            memoryDeviceIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindBufferMemoryDeviceGroupInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            deviceIndexCount;
-        public uint*           pDeviceIndices;
+        public const VkStructureType STYPE = VkStructureType.BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            deviceIndexCount;
+        public       uint*           pDeviceIndices;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindImageMemoryDeviceGroupInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            deviceIndexCount;
-        public uint*           pDeviceIndices;
-        public uint            splitInstanceBindRegionCount;
-        public VkRect2D*       pSplitInstanceBindRegions;
+        public const VkStructureType STYPE = VkStructureType.BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            deviceIndexCount;
+        public       uint*           pDeviceIndices;
+        public       uint            splitInstanceBindRegionCount;
+        public       VkRect2D*       pSplitInstanceBindRegions;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceGroupProperties
     {
-        public VkStructureType             sType;
-        public void*                       pNext;
-        public uint                        physicalDeviceCount;
-        public VkArray32<VkPhysicalDevice> physicalDevices;
-        public VkBool32                    subsetAllocation;
+        public const VkStructureType             STYPE = VkStructureType.PHYSICAL_DEVICE_GROUP_PROPERTIES;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       uint                        physicalDeviceCount;
+        public       VkArray32<VkPhysicalDevice> physicalDevices;
+        public       VkBool32                    subsetAllocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceGroupDeviceCreateInfo
     {
-        public VkStructureType   sType;
-        public void*             pNext;
-        public uint              physicalDeviceCount;
-        public VkPhysicalDevice* pPhysicalDevices;
+        public const VkStructureType   STYPE = VkStructureType.DEVICE_GROUP_DEVICE_CREATE_INFO;
+        public       VkStructureType   sType;
+        public       void*             pNext;
+        public       uint              physicalDeviceCount;
+        public       VkPhysicalDevice* pPhysicalDevices;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferMemoryRequirementsInfo2
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBuffer        buffer;
+        public const VkStructureType STYPE = VkStructureType.BUFFER_MEMORY_REQUIREMENTS_INFO_2;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBuffer        buffer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageMemoryRequirementsInfo2
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkImage         image;
+        public const VkStructureType STYPE = VkStructureType.IMAGE_MEMORY_REQUIREMENTS_INFO_2;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkImage         image;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageSparseMemoryRequirementsInfo2
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkImage         image;
+        public const VkStructureType STYPE = VkStructureType.IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkImage         image;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryRequirements2
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public VkMemoryRequirements memoryRequirements;
+        public const VkStructureType      STYPE = VkStructureType.MEMORY_REQUIREMENTS_2;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkMemoryRequirements memoryRequirements;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSparseImageMemoryRequirements2
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkSparseImageMemoryRequirements memoryRequirements;
+        public const VkStructureType                 STYPE = VkStructureType.SPARSE_IMAGE_MEMORY_REQUIREMENTS_2;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkSparseImageMemoryRequirements memoryRequirements;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFeatures2
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkPhysicalDeviceFeatures features;
+        public const VkStructureType          STYPE = VkStructureType.PHYSICAL_DEVICE_FEATURES_2;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkPhysicalDeviceFeatures features;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceProperties2
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkPhysicalDeviceProperties properties;
+        public const VkStructureType            STYPE = VkStructureType.PHYSICAL_DEVICE_PROPERTIES_2;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkPhysicalDeviceProperties properties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFormatProperties2
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkFormatProperties formatProperties;
+        public const VkStructureType    STYPE = VkStructureType.FORMAT_PROPERTIES_2;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkFormatProperties formatProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageFormatProperties2
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkImageFormatProperties imageFormatProperties;
+        public const VkStructureType         STYPE = VkStructureType.IMAGE_FORMAT_PROPERTIES_2;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkImageFormatProperties imageFormatProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceImageFormatInfo2
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkFormat           format;
-        public VkImageType        type;
-        public VkImageTiling      tiling;
-        public VkImageUsageFlags  usage;
-        public VkImageCreateFlags flags;
+        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkFormat           format;
+        public       VkImageType        type;
+        public       VkImageTiling      tiling;
+        public       VkImageUsageFlags  usage;
+        public       VkImageCreateFlags flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkQueueFamilyProperties2
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkQueueFamilyProperties queueFamilyProperties;
+        public const VkStructureType         STYPE = VkStructureType.QUEUE_FAMILY_PROPERTIES_2;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkQueueFamilyProperties queueFamilyProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMemoryProperties2
     {
-        public VkStructureType                  sType;
-        public void*                            pNext;
-        public VkPhysicalDeviceMemoryProperties memoryProperties;
+        public const VkStructureType                  STYPE = VkStructureType.PHYSICAL_DEVICE_MEMORY_PROPERTIES_2;
+        public       VkStructureType                  sType;
+        public       void*                            pNext;
+        public       VkPhysicalDeviceMemoryProperties memoryProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSparseImageFormatProperties2
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkSparseImageFormatProperties properties;
+        public const VkStructureType               STYPE = VkStructureType.SPARSE_IMAGE_FORMAT_PROPERTIES_2;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkSparseImageFormatProperties properties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSparseImageFormatInfo2
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkFormat           format;
-        public VkImageType        type;
-        public VkSampleCountFlags samples;
-        public VkImageUsageFlags  usage;
-        public VkImageTiling      tiling;
+        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkFormat           format;
+        public       VkImageType        type;
+        public       VkSampleCountFlags samples;
+        public       VkImageUsageFlags  usage;
+        public       VkImageTiling      tiling;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevicePointClippingProperties
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkPointClippingBehavior pointClippingBehavior;
+        public const VkStructureType         STYPE = VkStructureType.PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkPointClippingBehavior pointClippingBehavior;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1625,156 +1702,173 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassInputAttachmentAspectCreateInfo
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public uint                              aspectReferenceCount;
-        public VkInputAttachmentAspectReference* pAspectReferences;
+        public const VkStructureType                   STYPE = VkStructureType.RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       uint                              aspectReferenceCount;
+        public       VkInputAttachmentAspectReference* pAspectReferences;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewUsageCreateInfo
     {
-        public VkStructureType   sType;
-        public void*             pNext;
-        public VkImageUsageFlags usage;
+        public const VkStructureType   STYPE = VkStructureType.IMAGE_VIEW_USAGE_CREATE_INFO;
+        public       VkStructureType   sType;
+        public       void*             pNext;
+        public       VkImageUsageFlags usage;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineTessellationDomainOriginStateCreateInfo
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkTessellationDomainOrigin domainOrigin;
+        public const VkStructureType            STYPE = VkStructureType.PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkTessellationDomainOrigin domainOrigin;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassMultiviewCreateInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            subpassCount;
-        public uint*           pViewMasks;
-        public uint            dependencyCount;
-        public int*            pViewOffsets;
-        public uint            correlationMaskCount;
-        public uint*           pCorrelationMasks;
+        public const VkStructureType STYPE = VkStructureType.RENDER_PASS_MULTIVIEW_CREATE_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            subpassCount;
+        public       uint*           pViewMasks;
+        public       uint            dependencyCount;
+        public       int*            pViewOffsets;
+        public       uint            correlationMaskCount;
+        public       uint*           pCorrelationMasks;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMultiviewFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        multiview;
-        public VkBool32        multiviewGeometryShader;
-        public VkBool32        multiviewTessellationShader;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MULTIVIEW_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        multiview;
+        public       VkBool32        multiviewGeometryShader;
+        public       VkBool32        multiviewTessellationShader;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMultiviewProperties
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxMultiviewViewCount;
-        public uint            maxMultiviewInstanceIndex;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxMultiviewViewCount;
+        public       uint            maxMultiviewInstanceIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVariablePointersFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        variablePointersStorageBuffer;
-        public VkBool32        variablePointers;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        variablePointersStorageBuffer;
+        public       VkBool32        variablePointers;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceProtectedMemoryFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        protectedMemory;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        protectedMemory;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceProtectedMemoryProperties
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        protectedNoFault;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        protectedNoFault;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceQueueInfo2
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkDeviceQueueCreateFlags flags;
-        public uint                     queueFamilyIndex;
-        public uint                     queueIndex;
+        public const VkStructureType          STYPE = VkStructureType.DEVICE_QUEUE_INFO_2;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkDeviceQueueCreateFlags flags;
+        public       uint                     queueFamilyIndex;
+        public       uint                     queueIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkProtectedSubmitInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        protectedSubmit;
+        public const VkStructureType STYPE = VkStructureType.PROTECTED_SUBMIT_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        protectedSubmit;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSamplerYcbcrConversionCreateInfo
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkFormat                      format;
-        public VkSamplerYcbcrModelConversion ycbcrModel;
-        public VkSamplerYcbcrRange           ycbcrRange;
-        public VkComponentMapping            components;
-        public VkChromaLocation              xChromaOffset;
-        public VkChromaLocation              yChromaOffset;
-        public VkFilter                      chromaFilter;
-        public VkBool32                      forceExplicitReconstruction;
+        public const VkStructureType               STYPE = VkStructureType.SAMPLER_YCBCR_CONVERSION_CREATE_INFO;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkFormat                      format;
+        public       VkSamplerYcbcrModelConversion ycbcrModel;
+        public       VkSamplerYcbcrRange           ycbcrRange;
+        public       VkComponentMapping            components;
+        public       VkChromaLocation              xChromaOffset;
+        public       VkChromaLocation              yChromaOffset;
+        public       VkFilter                      chromaFilter;
+        public       VkBool32                      forceExplicitReconstruction;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSamplerYcbcrConversionInfo
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkSamplerYcbcrConversion conversion;
+        public const VkStructureType          STYPE = VkStructureType.SAMPLER_YCBCR_CONVERSION_INFO;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkSamplerYcbcrConversion conversion;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindImagePlaneMemoryInfo
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkImageAspectFlags planeAspect;
+        public const VkStructureType    STYPE = VkStructureType.BIND_IMAGE_PLANE_MEMORY_INFO;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkImageAspectFlags planeAspect;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImagePlaneMemoryRequirementsInfo
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkImageAspectFlags planeAspect;
+        public const VkStructureType    STYPE = VkStructureType.IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkImageAspectFlags planeAspect;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSamplerYcbcrConversionFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        samplerYcbcrConversion;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        samplerYcbcrConversion;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSamplerYcbcrConversionImageFormatProperties
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            combinedImageSamplerDescriptorCount;
+        public const VkStructureType STYPE = VkStructureType.SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            combinedImageSamplerDescriptorCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1791,16 +1885,17 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorUpdateTemplateCreateInfo
     {
-        public VkStructureType                       sType;
-        public void*                                 pNext;
-        public VkDescriptorUpdateTemplateCreateFlags flags;
-        public uint                                  descriptorUpdateEntryCount;
-        public VkDescriptorUpdateTemplateEntry*      pDescriptorUpdateEntries;
-        public VkDescriptorUpdateTemplateType        templateType;
-        public VkDescriptorSetLayout                 descriptorSetLayout;
-        public VkPipelineBindPoint                   pipelineBindPoint;
-        public VkPipelineLayout                      pipelineLayout;
-        public uint                                  set;
+        public const VkStructureType                       STYPE = VkStructureType.DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkDescriptorUpdateTemplateCreateFlags flags;
+        public       uint                                  descriptorUpdateEntryCount;
+        public       VkDescriptorUpdateTemplateEntry*      pDescriptorUpdateEntries;
+        public       VkDescriptorUpdateTemplateType        templateType;
+        public       VkDescriptorSetLayout                 descriptorSetLayout;
+        public       VkPipelineBindPoint                   pipelineBindPoint;
+        public       VkPipelineLayout                      pipelineLayout;
+        public       uint                                  set;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1814,40 +1909,45 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExternalImageFormatInfo
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkExternalMemoryHandleTypeFlags handleType;
+        public const VkStructureType                 STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkExternalMemoryHandleTypeFlags handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalImageFormatProperties
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkExternalMemoryProperties externalMemoryProperties;
+        public const VkStructureType            STYPE = VkStructureType.EXTERNAL_IMAGE_FORMAT_PROPERTIES;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkExternalMemoryProperties externalMemoryProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExternalBufferInfo
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkBufferCreateFlags             flags;
-        public VkBufferUsageFlags              usage;
-        public VkExternalMemoryHandleTypeFlags handleType;
+        public const VkStructureType                 STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkBufferCreateFlags             flags;
+        public       VkBufferUsageFlags              usage;
+        public       VkExternalMemoryHandleTypeFlags handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalBufferProperties
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkExternalMemoryProperties externalMemoryProperties;
+        public const VkStructureType            STYPE = VkStructureType.EXTERNAL_BUFFER_PROPERTIES;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkExternalMemoryProperties externalMemoryProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceIDProperties
     {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ID_PROPERTIES;
         public       VkStructureType sType;
         public       void*           pNext;
         public fixed byte            deviceUUID[VK_UUID_SIZE];
@@ -1860,126 +1960,140 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalMemoryImageCreateInfo
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkExternalMemoryHandleTypeFlags handleTypes;
+        public const VkStructureType                 STYPE = VkStructureType.EXTERNAL_MEMORY_IMAGE_CREATE_INFO;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkExternalMemoryHandleTypeFlags handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalMemoryBufferCreateInfo
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkExternalMemoryHandleTypeFlags handleTypes;
+        public const VkStructureType                 STYPE = VkStructureType.EXTERNAL_MEMORY_BUFFER_CREATE_INFO;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkExternalMemoryHandleTypeFlags handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExportMemoryAllocateInfo
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkExternalMemoryHandleTypeFlags handleTypes;
+        public const VkStructureType                 STYPE = VkStructureType.EXPORT_MEMORY_ALLOCATE_INFO;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkExternalMemoryHandleTypeFlags handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExternalFenceInfo
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkExternalFenceHandleTypeFlags handleType;
+        public const VkStructureType                STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkExternalFenceHandleTypeFlags handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalFenceProperties
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes;
-        public VkExternalFenceHandleTypeFlags compatibleHandleTypes;
-        public VkExternalFenceFeatureFlags    externalFenceFeatures;
+        public const VkStructureType                STYPE = VkStructureType.EXTERNAL_FENCE_PROPERTIES;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes;
+        public       VkExternalFenceHandleTypeFlags compatibleHandleTypes;
+        public       VkExternalFenceFeatureFlags    externalFenceFeatures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExportFenceCreateInfo
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkExternalFenceHandleTypeFlags handleTypes;
+        public const VkStructureType                STYPE = VkStructureType.EXPORT_FENCE_CREATE_INFO;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkExternalFenceHandleTypeFlags handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExportSemaphoreCreateInfo
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkExternalSemaphoreHandleTypeFlags handleTypes;
+        public const VkStructureType                    STYPE = VkStructureType.EXPORT_SEMAPHORE_CREATE_INFO;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalSemaphoreHandleTypeFlags handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExternalSemaphoreInfo
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkExternalSemaphoreHandleTypeFlags handleType;
+        public const VkStructureType                    STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalSemaphoreHandleTypeFlags handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalSemaphoreProperties
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkExternalSemaphoreHandleTypeFlags exportFromImportedHandleTypes;
-        public VkExternalSemaphoreHandleTypeFlags compatibleHandleTypes;
-        public VkExternalSemaphoreFeatureFlags    externalSemaphoreFeatures;
+        public const VkStructureType                    STYPE = VkStructureType.EXTERNAL_SEMAPHORE_PROPERTIES;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalSemaphoreHandleTypeFlags exportFromImportedHandleTypes;
+        public       VkExternalSemaphoreHandleTypeFlags compatibleHandleTypes;
+        public       VkExternalSemaphoreFeatureFlags    externalSemaphoreFeatures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMaintenance3Properties
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxPerSetDescriptors;
-        public VkDeviceSize    maxMemoryAllocationSize;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxPerSetDescriptors;
+        public       VkDeviceSize    maxMemoryAllocationSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorSetLayoutSupport
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        supported;
+        public const VkStructureType STYPE = VkStructureType.DESCRIPTOR_SET_LAYOUT_SUPPORT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        supported;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderDrawParametersFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderDrawParameters;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderDrawParameters;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVulkan11Features
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        storageBuffer16BitAccess;
-        public VkBool32        uniformAndStorageBuffer16BitAccess;
-        public VkBool32        storagePushConstant16;
-        public VkBool32        storageInputOutput16;
-        public VkBool32        multiview;
-        public VkBool32        multiviewGeometryShader;
-        public VkBool32        multiviewTessellationShader;
-        public VkBool32        variablePointersStorageBuffer;
-        public VkBool32        variablePointers;
-        public VkBool32        protectedMemory;
-        public VkBool32        samplerYcbcrConversion;
-        public VkBool32        shaderDrawParameters;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_VULKAN_1_1_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        storageBuffer16BitAccess;
+        public       VkBool32        uniformAndStorageBuffer16BitAccess;
+        public       VkBool32        storagePushConstant16;
+        public       VkBool32        storageInputOutput16;
+        public       VkBool32        multiview;
+        public       VkBool32        multiviewGeometryShader;
+        public       VkBool32        multiviewTessellationShader;
+        public       VkBool32        variablePointersStorageBuffer;
+        public       VkBool32        variablePointers;
+        public       VkBool32        protectedMemory;
+        public       VkBool32        samplerYcbcrConversion;
+        public       VkBool32        shaderDrawParameters;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVulkan11Properties
     {
+        public const VkStructureType         STYPE = VkStructureType.PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES;
         public       VkStructureType         sType;
         public       void*                   pNext;
         public fixed byte                    deviceUUID[VK_UUID_SIZE];
@@ -2002,55 +2116,56 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVulkan12Features
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        samplerMirrorClampToEdge;
-        public VkBool32        drawIndirectCount;
-        public VkBool32        storageBuffer8BitAccess;
-        public VkBool32        uniformAndStorageBuffer8BitAccess;
-        public VkBool32        storagePushConstant8;
-        public VkBool32        shaderBufferInt64Atomics;
-        public VkBool32        shaderSharedInt64Atomics;
-        public VkBool32        shaderFloat16;
-        public VkBool32        shaderInt8;
-        public VkBool32        descriptorIndexing;
-        public VkBool32        shaderInputAttachmentArrayDynamicIndexing;
-        public VkBool32        shaderUniformTexelBufferArrayDynamicIndexing;
-        public VkBool32        shaderStorageTexelBufferArrayDynamicIndexing;
-        public VkBool32        shaderUniformBufferArrayNonUniformIndexing;
-        public VkBool32        shaderSampledImageArrayNonUniformIndexing;
-        public VkBool32        shaderStorageBufferArrayNonUniformIndexing;
-        public VkBool32        shaderStorageImageArrayNonUniformIndexing;
-        public VkBool32        shaderInputAttachmentArrayNonUniformIndexing;
-        public VkBool32        shaderUniformTexelBufferArrayNonUniformIndexing;
-        public VkBool32        shaderStorageTexelBufferArrayNonUniformIndexing;
-        public VkBool32        descriptorBindingUniformBufferUpdateAfterBind;
-        public VkBool32        descriptorBindingSampledImageUpdateAfterBind;
-        public VkBool32        descriptorBindingStorageImageUpdateAfterBind;
-        public VkBool32        descriptorBindingStorageBufferUpdateAfterBind;
-        public VkBool32        descriptorBindingUniformTexelBufferUpdateAfterBind;
-        public VkBool32        descriptorBindingStorageTexelBufferUpdateAfterBind;
-        public VkBool32        descriptorBindingUpdateUnusedWhilePending;
-        public VkBool32        descriptorBindingPartiallyBound;
-        public VkBool32        descriptorBindingVariableDescriptorCount;
-        public VkBool32        runtimeDescriptorArray;
-        public VkBool32        samplerFilterMinmax;
-        public VkBool32        scalarBlockLayout;
-        public VkBool32        imagelessFramebuffer;
-        public VkBool32        uniformBufferStandardLayout;
-        public VkBool32        shaderSubgroupExtendedTypes;
-        public VkBool32        separateDepthStencilLayouts;
-        public VkBool32        hostQueryReset;
-        public VkBool32        timelineSemaphore;
-        public VkBool32        bufferDeviceAddress;
-        public VkBool32        bufferDeviceAddressCaptureReplay;
-        public VkBool32        bufferDeviceAddressMultiDevice;
-        public VkBool32        vulkanMemoryModel;
-        public VkBool32        vulkanMemoryModelDeviceScope;
-        public VkBool32        vulkanMemoryModelAvailabilityVisibilityChains;
-        public VkBool32        shaderOutputViewportIndex;
-        public VkBool32        shaderOutputLayer;
-        public VkBool32        subgroupBroadcastDynamicId;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_VULKAN_1_2_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        samplerMirrorClampToEdge;
+        public       VkBool32        drawIndirectCount;
+        public       VkBool32        storageBuffer8BitAccess;
+        public       VkBool32        uniformAndStorageBuffer8BitAccess;
+        public       VkBool32        storagePushConstant8;
+        public       VkBool32        shaderBufferInt64Atomics;
+        public       VkBool32        shaderSharedInt64Atomics;
+        public       VkBool32        shaderFloat16;
+        public       VkBool32        shaderInt8;
+        public       VkBool32        descriptorIndexing;
+        public       VkBool32        shaderInputAttachmentArrayDynamicIndexing;
+        public       VkBool32        shaderUniformTexelBufferArrayDynamicIndexing;
+        public       VkBool32        shaderStorageTexelBufferArrayDynamicIndexing;
+        public       VkBool32        shaderUniformBufferArrayNonUniformIndexing;
+        public       VkBool32        shaderSampledImageArrayNonUniformIndexing;
+        public       VkBool32        shaderStorageBufferArrayNonUniformIndexing;
+        public       VkBool32        shaderStorageImageArrayNonUniformIndexing;
+        public       VkBool32        shaderInputAttachmentArrayNonUniformIndexing;
+        public       VkBool32        shaderUniformTexelBufferArrayNonUniformIndexing;
+        public       VkBool32        shaderStorageTexelBufferArrayNonUniformIndexing;
+        public       VkBool32        descriptorBindingUniformBufferUpdateAfterBind;
+        public       VkBool32        descriptorBindingSampledImageUpdateAfterBind;
+        public       VkBool32        descriptorBindingStorageImageUpdateAfterBind;
+        public       VkBool32        descriptorBindingStorageBufferUpdateAfterBind;
+        public       VkBool32        descriptorBindingUniformTexelBufferUpdateAfterBind;
+        public       VkBool32        descriptorBindingStorageTexelBufferUpdateAfterBind;
+        public       VkBool32        descriptorBindingUpdateUnusedWhilePending;
+        public       VkBool32        descriptorBindingPartiallyBound;
+        public       VkBool32        descriptorBindingVariableDescriptorCount;
+        public       VkBool32        runtimeDescriptorArray;
+        public       VkBool32        samplerFilterMinmax;
+        public       VkBool32        scalarBlockLayout;
+        public       VkBool32        imagelessFramebuffer;
+        public       VkBool32        uniformBufferStandardLayout;
+        public       VkBool32        shaderSubgroupExtendedTypes;
+        public       VkBool32        separateDepthStencilLayouts;
+        public       VkBool32        hostQueryReset;
+        public       VkBool32        timelineSemaphore;
+        public       VkBool32        bufferDeviceAddress;
+        public       VkBool32        bufferDeviceAddressCaptureReplay;
+        public       VkBool32        bufferDeviceAddressMultiDevice;
+        public       VkBool32        vulkanMemoryModel;
+        public       VkBool32        vulkanMemoryModelDeviceScope;
+        public       VkBool32        vulkanMemoryModelAvailabilityVisibilityChains;
+        public       VkBool32        shaderOutputViewportIndex;
+        public       VkBool32        shaderOutputLayer;
+        public       VkBool32        subgroupBroadcastDynamicId;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2065,6 +2180,7 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVulkan12Properties
     {
+        public const VkStructureType                   STYPE = VkStructureType.PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES;
         public       VkStructureType                   sType;
         public       void*                             pNext;
         public       VkDriverId                        driverID;
@@ -2124,115 +2240,125 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageFormatListCreateInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            viewFormatCount;
-        public VkFormat*       pViewFormats;
+        public const VkStructureType STYPE = VkStructureType.IMAGE_FORMAT_LIST_CREATE_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            viewFormatCount;
+        public       VkFormat*       pViewFormats;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAttachmentDescription2
     {
-        public VkStructureType              sType;
-        public void*                        pNext;
-        public VkAttachmentDescriptionFlags flags;
-        public VkFormat                     format;
-        public VkSampleCountFlags           samples;
-        public VkAttachmentLoadOp           loadOp;
-        public VkAttachmentStoreOp          storeOp;
-        public VkAttachmentLoadOp           stencilLoadOp;
-        public VkAttachmentStoreOp          stencilStoreOp;
-        public VkImageLayout                initialLayout;
-        public VkImageLayout                finalLayout;
+        public const VkStructureType              STYPE = VkStructureType.ATTACHMENT_DESCRIPTION_2;
+        public       VkStructureType              sType;
+        public       void*                        pNext;
+        public       VkAttachmentDescriptionFlags flags;
+        public       VkFormat                     format;
+        public       VkSampleCountFlags           samples;
+        public       VkAttachmentLoadOp           loadOp;
+        public       VkAttachmentStoreOp          storeOp;
+        public       VkAttachmentLoadOp           stencilLoadOp;
+        public       VkAttachmentStoreOp          stencilStoreOp;
+        public       VkImageLayout                initialLayout;
+        public       VkImageLayout                finalLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAttachmentReference2
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public uint               attachment;
-        public VkImageLayout      layout;
-        public VkImageAspectFlags aspectMask;
+        public const VkStructureType    STYPE = VkStructureType.ATTACHMENT_REFERENCE_2;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       uint               attachment;
+        public       VkImageLayout      layout;
+        public       VkImageAspectFlags aspectMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassDescription2
     {
-        public VkStructureType           sType;
-        public void*                     pNext;
-        public VkSubpassDescriptionFlags flags;
-        public VkPipelineBindPoint       pipelineBindPoint;
-        public uint                      viewMask;
-        public uint                      inputAttachmentCount;
-        public VkAttachmentReference2*   pInputAttachments;
-        public uint                      colorAttachmentCount;
-        public VkAttachmentReference2*   pColorAttachments;
-        public VkAttachmentReference2*   pResolveAttachments;
-        public VkAttachmentReference2*   pDepthStencilAttachment;
-        public uint                      preserveAttachmentCount;
-        public uint*                     pPreserveAttachments;
+        public const VkStructureType           STYPE = VkStructureType.SUBPASS_DESCRIPTION_2;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       VkSubpassDescriptionFlags flags;
+        public       VkPipelineBindPoint       pipelineBindPoint;
+        public       uint                      viewMask;
+        public       uint                      inputAttachmentCount;
+        public       VkAttachmentReference2*   pInputAttachments;
+        public       uint                      colorAttachmentCount;
+        public       VkAttachmentReference2*   pColorAttachments;
+        public       VkAttachmentReference2*   pResolveAttachments;
+        public       VkAttachmentReference2*   pDepthStencilAttachment;
+        public       uint                      preserveAttachmentCount;
+        public       uint*                     pPreserveAttachments;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassDependency2
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public uint                 srcSubpass;
-        public uint                 dstSubpass;
-        public VkPipelineStageFlags srcStageMask;
-        public VkPipelineStageFlags dstStageMask;
-        public VkAccessFlags        srcAccessMask;
-        public VkAccessFlags        dstAccessMask;
-        public VkDependencyFlags    dependencyFlags;
-        public int                  viewOffset;
+        public const VkStructureType      STYPE = VkStructureType.SUBPASS_DEPENDENCY_2;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       uint                 srcSubpass;
+        public       uint                 dstSubpass;
+        public       VkPipelineStageFlags srcStageMask;
+        public       VkPipelineStageFlags dstStageMask;
+        public       VkAccessFlags        srcAccessMask;
+        public       VkAccessFlags        dstAccessMask;
+        public       VkDependencyFlags    dependencyFlags;
+        public       int                  viewOffset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassCreateInfo2
     {
-        public VkStructureType           sType;
-        public void*                     pNext;
-        public VkRenderPassCreateFlags   flags;
-        public uint                      attachmentCount;
-        public VkAttachmentDescription2* pAttachments;
-        public uint                      subpassCount;
-        public VkSubpassDescription2*    pSubpasses;
-        public uint                      dependencyCount;
-        public VkSubpassDependency2*     pDependencies;
-        public uint                      correlatedViewMaskCount;
-        public uint*                     pCorrelatedViewMasks;
+        public const VkStructureType           STYPE = VkStructureType.RENDER_PASS_CREATE_INFO_2;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       VkRenderPassCreateFlags   flags;
+        public       uint                      attachmentCount;
+        public       VkAttachmentDescription2* pAttachments;
+        public       uint                      subpassCount;
+        public       VkSubpassDescription2*    pSubpasses;
+        public       uint                      dependencyCount;
+        public       VkSubpassDependency2*     pDependencies;
+        public       uint                      correlatedViewMaskCount;
+        public       uint*                     pCorrelatedViewMasks;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassBeginInfo
     {
-        public VkStructureType   sType;
-        public void*             pNext;
-        public VkSubpassContents contents;
+        public const VkStructureType   STYPE = VkStructureType.SUBPASS_BEGIN_INFO;
+        public       VkStructureType   sType;
+        public       void*             pNext;
+        public       VkSubpassContents contents;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassEndInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
+        public const VkStructureType STYPE = VkStructureType.SUBPASS_END_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevice8BitStorageFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        storageBuffer8BitAccess;
-        public VkBool32        uniformAndStorageBuffer8BitAccess;
-        public VkBool32        storagePushConstant8;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        storageBuffer8BitAccess;
+        public       VkBool32        uniformAndStorageBuffer8BitAccess;
+        public       VkBool32        storagePushConstant8;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDriverProperties
     {
+        public const VkStructureType      STYPE = VkStructureType.PHYSICAL_DEVICE_DRIVER_PROPERTIES;
         public       VkStructureType      sType;
         public       void*                pNext;
         public       VkDriverId           driverID;
@@ -2244,377 +2370,413 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderAtomicInt64Features
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderBufferInt64Atomics;
-        public VkBool32        shaderSharedInt64Atomics;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderBufferInt64Atomics;
+        public       VkBool32        shaderSharedInt64Atomics;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderFloat16Int8Features
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderFloat16;
-        public VkBool32        shaderInt8;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderFloat16;
+        public       VkBool32        shaderInt8;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFloatControlsProperties
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public VkShaderFloatControlsIndependence denormBehaviorIndependence;
-        public VkShaderFloatControlsIndependence roundingModeIndependence;
-        public VkBool32                          shaderSignedZeroInfNanPreserveFloat16;
-        public VkBool32                          shaderSignedZeroInfNanPreserveFloat32;
-        public VkBool32                          shaderSignedZeroInfNanPreserveFloat64;
-        public VkBool32                          shaderDenormPreserveFloat16;
-        public VkBool32                          shaderDenormPreserveFloat32;
-        public VkBool32                          shaderDenormPreserveFloat64;
-        public VkBool32                          shaderDenormFlushToZeroFloat16;
-        public VkBool32                          shaderDenormFlushToZeroFloat32;
-        public VkBool32                          shaderDenormFlushToZeroFloat64;
-        public VkBool32                          shaderRoundingModeRTEFloat16;
-        public VkBool32                          shaderRoundingModeRTEFloat32;
-        public VkBool32                          shaderRoundingModeRTEFloat64;
-        public VkBool32                          shaderRoundingModeRTZFloat16;
-        public VkBool32                          shaderRoundingModeRTZFloat32;
-        public VkBool32                          shaderRoundingModeRTZFloat64;
+        public const VkStructureType                   STYPE = VkStructureType.PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkShaderFloatControlsIndependence denormBehaviorIndependence;
+        public       VkShaderFloatControlsIndependence roundingModeIndependence;
+        public       VkBool32                          shaderSignedZeroInfNanPreserveFloat16;
+        public       VkBool32                          shaderSignedZeroInfNanPreserveFloat32;
+        public       VkBool32                          shaderSignedZeroInfNanPreserveFloat64;
+        public       VkBool32                          shaderDenormPreserveFloat16;
+        public       VkBool32                          shaderDenormPreserveFloat32;
+        public       VkBool32                          shaderDenormPreserveFloat64;
+        public       VkBool32                          shaderDenormFlushToZeroFloat16;
+        public       VkBool32                          shaderDenormFlushToZeroFloat32;
+        public       VkBool32                          shaderDenormFlushToZeroFloat64;
+        public       VkBool32                          shaderRoundingModeRTEFloat16;
+        public       VkBool32                          shaderRoundingModeRTEFloat32;
+        public       VkBool32                          shaderRoundingModeRTEFloat64;
+        public       VkBool32                          shaderRoundingModeRTZFloat16;
+        public       VkBool32                          shaderRoundingModeRTZFloat32;
+        public       VkBool32                          shaderRoundingModeRTZFloat64;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorSetLayoutBindingFlagsCreateInfo
     {
-        public VkStructureType           sType;
-        public void*                     pNext;
-        public uint                      bindingCount;
-        public VkDescriptorBindingFlags* pBindingFlags;
+        public const VkStructureType           STYPE = VkStructureType.DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       uint                      bindingCount;
+        public       VkDescriptorBindingFlags* pBindingFlags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDescriptorIndexingFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderInputAttachmentArrayDynamicIndexing;
-        public VkBool32        shaderUniformTexelBufferArrayDynamicIndexing;
-        public VkBool32        shaderStorageTexelBufferArrayDynamicIndexing;
-        public VkBool32        shaderUniformBufferArrayNonUniformIndexing;
-        public VkBool32        shaderSampledImageArrayNonUniformIndexing;
-        public VkBool32        shaderStorageBufferArrayNonUniformIndexing;
-        public VkBool32        shaderStorageImageArrayNonUniformIndexing;
-        public VkBool32        shaderInputAttachmentArrayNonUniformIndexing;
-        public VkBool32        shaderUniformTexelBufferArrayNonUniformIndexing;
-        public VkBool32        shaderStorageTexelBufferArrayNonUniformIndexing;
-        public VkBool32        descriptorBindingUniformBufferUpdateAfterBind;
-        public VkBool32        descriptorBindingSampledImageUpdateAfterBind;
-        public VkBool32        descriptorBindingStorageImageUpdateAfterBind;
-        public VkBool32        descriptorBindingStorageBufferUpdateAfterBind;
-        public VkBool32        descriptorBindingUniformTexelBufferUpdateAfterBind;
-        public VkBool32        descriptorBindingStorageTexelBufferUpdateAfterBind;
-        public VkBool32        descriptorBindingUpdateUnusedWhilePending;
-        public VkBool32        descriptorBindingPartiallyBound;
-        public VkBool32        descriptorBindingVariableDescriptorCount;
-        public VkBool32        runtimeDescriptorArray;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderInputAttachmentArrayDynamicIndexing;
+        public       VkBool32        shaderUniformTexelBufferArrayDynamicIndexing;
+        public       VkBool32        shaderStorageTexelBufferArrayDynamicIndexing;
+        public       VkBool32        shaderUniformBufferArrayNonUniformIndexing;
+        public       VkBool32        shaderSampledImageArrayNonUniformIndexing;
+        public       VkBool32        shaderStorageBufferArrayNonUniformIndexing;
+        public       VkBool32        shaderStorageImageArrayNonUniformIndexing;
+        public       VkBool32        shaderInputAttachmentArrayNonUniformIndexing;
+        public       VkBool32        shaderUniformTexelBufferArrayNonUniformIndexing;
+        public       VkBool32        shaderStorageTexelBufferArrayNonUniformIndexing;
+        public       VkBool32        descriptorBindingUniformBufferUpdateAfterBind;
+        public       VkBool32        descriptorBindingSampledImageUpdateAfterBind;
+        public       VkBool32        descriptorBindingStorageImageUpdateAfterBind;
+        public       VkBool32        descriptorBindingStorageBufferUpdateAfterBind;
+        public       VkBool32        descriptorBindingUniformTexelBufferUpdateAfterBind;
+        public       VkBool32        descriptorBindingStorageTexelBufferUpdateAfterBind;
+        public       VkBool32        descriptorBindingUpdateUnusedWhilePending;
+        public       VkBool32        descriptorBindingPartiallyBound;
+        public       VkBool32        descriptorBindingVariableDescriptorCount;
+        public       VkBool32        runtimeDescriptorArray;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDescriptorIndexingProperties
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxUpdateAfterBindDescriptorsInAllPools;
-        public VkBool32        shaderUniformBufferArrayNonUniformIndexingNative;
-        public VkBool32        shaderSampledImageArrayNonUniformIndexingNative;
-        public VkBool32        shaderStorageBufferArrayNonUniformIndexingNative;
-        public VkBool32        shaderStorageImageArrayNonUniformIndexingNative;
-        public VkBool32        shaderInputAttachmentArrayNonUniformIndexingNative;
-        public VkBool32        robustBufferAccessUpdateAfterBind;
-        public VkBool32        quadDivergentImplicitLod;
-        public uint            maxPerStageDescriptorUpdateAfterBindSamplers;
-        public uint            maxPerStageDescriptorUpdateAfterBindUniformBuffers;
-        public uint            maxPerStageDescriptorUpdateAfterBindStorageBuffers;
-        public uint            maxPerStageDescriptorUpdateAfterBindSampledImages;
-        public uint            maxPerStageDescriptorUpdateAfterBindStorageImages;
-        public uint            maxPerStageDescriptorUpdateAfterBindInputAttachments;
-        public uint            maxPerStageUpdateAfterBindResources;
-        public uint            maxDescriptorSetUpdateAfterBindSamplers;
-        public uint            maxDescriptorSetUpdateAfterBindUniformBuffers;
-        public uint            maxDescriptorSetUpdateAfterBindUniformBuffersDynamic;
-        public uint            maxDescriptorSetUpdateAfterBindStorageBuffers;
-        public uint            maxDescriptorSetUpdateAfterBindStorageBuffersDynamic;
-        public uint            maxDescriptorSetUpdateAfterBindSampledImages;
-        public uint            maxDescriptorSetUpdateAfterBindStorageImages;
-        public uint            maxDescriptorSetUpdateAfterBindInputAttachments;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxUpdateAfterBindDescriptorsInAllPools;
+        public       VkBool32        shaderUniformBufferArrayNonUniformIndexingNative;
+        public       VkBool32        shaderSampledImageArrayNonUniformIndexingNative;
+        public       VkBool32        shaderStorageBufferArrayNonUniformIndexingNative;
+        public       VkBool32        shaderStorageImageArrayNonUniformIndexingNative;
+        public       VkBool32        shaderInputAttachmentArrayNonUniformIndexingNative;
+        public       VkBool32        robustBufferAccessUpdateAfterBind;
+        public       VkBool32        quadDivergentImplicitLod;
+        public       uint            maxPerStageDescriptorUpdateAfterBindSamplers;
+        public       uint            maxPerStageDescriptorUpdateAfterBindUniformBuffers;
+        public       uint            maxPerStageDescriptorUpdateAfterBindStorageBuffers;
+        public       uint            maxPerStageDescriptorUpdateAfterBindSampledImages;
+        public       uint            maxPerStageDescriptorUpdateAfterBindStorageImages;
+        public       uint            maxPerStageDescriptorUpdateAfterBindInputAttachments;
+        public       uint            maxPerStageUpdateAfterBindResources;
+        public       uint            maxDescriptorSetUpdateAfterBindSamplers;
+        public       uint            maxDescriptorSetUpdateAfterBindUniformBuffers;
+        public       uint            maxDescriptorSetUpdateAfterBindUniformBuffersDynamic;
+        public       uint            maxDescriptorSetUpdateAfterBindStorageBuffers;
+        public       uint            maxDescriptorSetUpdateAfterBindStorageBuffersDynamic;
+        public       uint            maxDescriptorSetUpdateAfterBindSampledImages;
+        public       uint            maxDescriptorSetUpdateAfterBindStorageImages;
+        public       uint            maxDescriptorSetUpdateAfterBindInputAttachments;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorSetVariableDescriptorCountAllocateInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            descriptorSetCount;
-        public uint*           pDescriptorCounts;
+        public const VkStructureType STYPE = VkStructureType.DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            descriptorSetCount;
+        public       uint*           pDescriptorCounts;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorSetVariableDescriptorCountLayoutSupport
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxVariableDescriptorCount;
+        public const VkStructureType STYPE = VkStructureType.DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxVariableDescriptorCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassDescriptionDepthStencilResolve
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkResolveModeFlags      depthResolveMode;
-        public VkResolveModeFlags      stencilResolveMode;
-        public VkAttachmentReference2* pDepthStencilResolveAttachment;
+        public const VkStructureType         STYPE = VkStructureType.SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkResolveModeFlags      depthResolveMode;
+        public       VkResolveModeFlags      stencilResolveMode;
+        public       VkAttachmentReference2* pDepthStencilResolveAttachment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDepthStencilResolveProperties
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkResolveModeFlags supportedDepthResolveModes;
-        public VkResolveModeFlags supportedStencilResolveModes;
-        public VkBool32           independentResolveNone;
-        public VkBool32           independentResolve;
+        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkResolveModeFlags supportedDepthResolveModes;
+        public       VkResolveModeFlags supportedStencilResolveModes;
+        public       VkBool32           independentResolveNone;
+        public       VkBool32           independentResolve;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceScalarBlockLayoutFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        scalarBlockLayout;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        scalarBlockLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageStencilUsageCreateInfo
     {
-        public VkStructureType   sType;
-        public void*             pNext;
-        public VkImageUsageFlags stencilUsage;
+        public const VkStructureType   STYPE = VkStructureType.IMAGE_STENCIL_USAGE_CREATE_INFO;
+        public       VkStructureType   sType;
+        public       void*             pNext;
+        public       VkImageUsageFlags stencilUsage;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSamplerReductionModeCreateInfo
     {
-        public VkStructureType        sType;
-        public void*                  pNext;
-        public VkSamplerReductionMode reductionMode;
+        public const VkStructureType        STYPE = VkStructureType.SAMPLER_REDUCTION_MODE_CREATE_INFO;
+        public       VkStructureType        sType;
+        public       void*                  pNext;
+        public       VkSamplerReductionMode reductionMode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSamplerFilterMinmaxProperties
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        filterMinmaxSingleComponentFormats;
-        public VkBool32        filterMinmaxImageComponentMapping;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        filterMinmaxSingleComponentFormats;
+        public       VkBool32        filterMinmaxImageComponentMapping;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVulkanMemoryModelFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        vulkanMemoryModel;
-        public VkBool32        vulkanMemoryModelDeviceScope;
-        public VkBool32        vulkanMemoryModelAvailabilityVisibilityChains;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        vulkanMemoryModel;
+        public       VkBool32        vulkanMemoryModelDeviceScope;
+        public       VkBool32        vulkanMemoryModelAvailabilityVisibilityChains;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceImagelessFramebufferFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        imagelessFramebuffer;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        imagelessFramebuffer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFramebufferAttachmentImageInfo
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkImageCreateFlags flags;
-        public VkImageUsageFlags  usage;
-        public uint               width;
-        public uint               height;
-        public uint               layerCount;
-        public uint               viewFormatCount;
-        public VkFormat*          pViewFormats;
+        public const VkStructureType    STYPE = VkStructureType.FRAMEBUFFER_ATTACHMENT_IMAGE_INFO;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkImageCreateFlags flags;
+        public       VkImageUsageFlags  usage;
+        public       uint               width;
+        public       uint               height;
+        public       uint               layerCount;
+        public       uint               viewFormatCount;
+        public       VkFormat*          pViewFormats;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFramebufferAttachmentsCreateInfo
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public uint                              attachmentImageInfoCount;
-        public VkFramebufferAttachmentImageInfo* pAttachmentImageInfos;
+        public const VkStructureType                   STYPE = VkStructureType.FRAMEBUFFER_ATTACHMENTS_CREATE_INFO;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       uint                              attachmentImageInfoCount;
+        public       VkFramebufferAttachmentImageInfo* pAttachmentImageInfos;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassAttachmentBeginInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            attachmentCount;
-        public VkImageView*    pAttachments;
+        public const VkStructureType STYPE = VkStructureType.RENDER_PASS_ATTACHMENT_BEGIN_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            attachmentCount;
+        public       VkImageView*    pAttachments;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceUniformBufferStandardLayoutFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        uniformBufferStandardLayout;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        uniformBufferStandardLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderSubgroupExtendedTypes;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderSubgroupExtendedTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        separateDepthStencilLayouts;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        separateDepthStencilLayouts;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAttachmentReferenceStencilLayout
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkImageLayout   stencilLayout;
+        public const VkStructureType STYPE = VkStructureType.ATTACHMENT_REFERENCE_STENCIL_LAYOUT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkImageLayout   stencilLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAttachmentDescriptionStencilLayout
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkImageLayout   stencilInitialLayout;
-        public VkImageLayout   stencilFinalLayout;
+        public const VkStructureType STYPE = VkStructureType.ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkImageLayout   stencilInitialLayout;
+        public       VkImageLayout   stencilFinalLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceHostQueryResetFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        hostQueryReset;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        hostQueryReset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceTimelineSemaphoreFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        timelineSemaphore;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        timelineSemaphore;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceTimelineSemaphoreProperties
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public ulong           maxTimelineSemaphoreValueDifference;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       ulong           maxTimelineSemaphoreValueDifference;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSemaphoreTypeCreateInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkSemaphoreType semaphoreType;
-        public ulong           initialValue;
+        public const VkStructureType STYPE = VkStructureType.SEMAPHORE_TYPE_CREATE_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkSemaphoreType semaphoreType;
+        public       ulong           initialValue;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkTimelineSemaphoreSubmitInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            waitSemaphoreValueCount;
-        public ulong*          pWaitSemaphoreValues;
-        public uint            signalSemaphoreValueCount;
-        public ulong*          pSignalSemaphoreValues;
+        public const VkStructureType STYPE = VkStructureType.TIMELINE_SEMAPHORE_SUBMIT_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            waitSemaphoreValueCount;
+        public       ulong*          pWaitSemaphoreValues;
+        public       uint            signalSemaphoreValueCount;
+        public       ulong*          pSignalSemaphoreValues;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSemaphoreWaitInfo
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public VkSemaphoreWaitFlags flags;
-        public uint                 semaphoreCount;
-        public VkSemaphore*         pSemaphores;
-        public ulong*               pValues;
+        public const VkStructureType      STYPE = VkStructureType.SEMAPHORE_WAIT_INFO;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkSemaphoreWaitFlags flags;
+        public       uint                 semaphoreCount;
+        public       VkSemaphore*         pSemaphores;
+        public       ulong*               pValues;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSemaphoreSignalInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkSemaphore     semaphore;
-        public ulong           value;
+        public const VkStructureType STYPE = VkStructureType.SEMAPHORE_SIGNAL_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkSemaphore     semaphore;
+        public       ulong           value;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceBufferDeviceAddressFeatures
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        bufferDeviceAddress;
-        public VkBool32        bufferDeviceAddressCaptureReplay;
-        public VkBool32        bufferDeviceAddressMultiDevice;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        bufferDeviceAddress;
+        public       VkBool32        bufferDeviceAddressCaptureReplay;
+        public       VkBool32        bufferDeviceAddressMultiDevice;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferDeviceAddressInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBuffer        buffer;
+        public const VkStructureType STYPE = VkStructureType.BUFFER_DEVICE_ADDRESS_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBuffer        buffer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferOpaqueCaptureAddressCreateInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public ulong           opaqueCaptureAddress;
+        public const VkStructureType STYPE = VkStructureType.BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       ulong           opaqueCaptureAddress;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryOpaqueCaptureAddressAllocateInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public ulong           opaqueCaptureAddress;
+        public const VkStructureType STYPE = VkStructureType.MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       ulong           opaqueCaptureAddress;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceMemoryOpaqueCaptureAddressInfo
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceMemory  memory;
+        public const VkStructureType STYPE = VkStructureType.DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceMemory  memory;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2642,71 +2804,77 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSwapchainCreateInfoKHR
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkSwapchainCreateFlagsKHR  flags;
-        public VkSurfaceKHR               surface;
-        public uint                       minImageCount;
-        public VkFormat                   imageFormat;
-        public VkColorSpaceKHR            imageColorSpace;
-        public VkExtent2D                 imageExtent;
-        public uint                       imageArrayLayers;
-        public VkImageUsageFlags          imageUsage;
-        public VkSharingMode              imageSharingMode;
-        public uint                       queueFamilyIndexCount;
-        public uint*                      pQueueFamilyIndices;
-        public VkSurfaceTransformFlagsKHR preTransform;
-        public VkCompositeAlphaFlagsKHR   compositeAlpha;
-        public VkPresentModeKHR           presentMode;
-        public VkBool32                   clipped;
-        public VkSwapchainKHR             oldSwapchain;
+        public const VkStructureType            STYPE = VkStructureType.SWAPCHAIN_CREATE_INFO_KHR;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkSwapchainCreateFlagsKHR  flags;
+        public       VkSurfaceKHR               surface;
+        public       uint                       minImageCount;
+        public       VkFormat                   imageFormat;
+        public       VkColorSpaceKHR            imageColorSpace;
+        public       VkExtent2D                 imageExtent;
+        public       uint                       imageArrayLayers;
+        public       VkImageUsageFlags          imageUsage;
+        public       VkSharingMode              imageSharingMode;
+        public       uint                       queueFamilyIndexCount;
+        public       uint*                      pQueueFamilyIndices;
+        public       VkSurfaceTransformFlagsKHR preTransform;
+        public       VkCompositeAlphaFlagsKHR   compositeAlpha;
+        public       VkPresentModeKHR           presentMode;
+        public       VkBool32                   clipped;
+        public       VkSwapchainKHR             oldSwapchain;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPresentInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            waitSemaphoreCount;
-        public VkSemaphore*    pWaitSemaphores;
-        public uint            swapchainCount;
-        public VkSwapchainKHR* pSwapchains;
-        public uint*           pImageIndices;
-        public VkResult*       pResults;
+        public const VkStructureType STYPE = VkStructureType.PRESENT_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            waitSemaphoreCount;
+        public       VkSemaphore*    pWaitSemaphores;
+        public       uint            swapchainCount;
+        public       VkSwapchainKHR* pSwapchains;
+        public       uint*           pImageIndices;
+        public       VkResult*       pResults;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageSwapchainCreateInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkSwapchainKHR  swapchain;
+        public const VkStructureType STYPE = VkStructureType.IMAGE_SWAPCHAIN_CREATE_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkSwapchainKHR  swapchain;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindImageMemorySwapchainInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkSwapchainKHR  swapchain;
-        public uint            imageIndex;
+        public const VkStructureType STYPE = VkStructureType.BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkSwapchainKHR  swapchain;
+        public       uint            imageIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAcquireNextImageInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkSwapchainKHR  swapchain;
-        public ulong           timeout;
-        public VkSemaphore     semaphore;
-        public VkFence         fence;
-        public uint            deviceMask;
+        public const VkStructureType STYPE = VkStructureType.ACQUIRE_NEXT_IMAGE_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkSwapchainKHR  swapchain;
+        public       ulong           timeout;
+        public       VkSemaphore     semaphore;
+        public       VkFence         fence;
+        public       uint            deviceMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceGroupPresentCapabilitiesKHR
     {
+        public const VkStructureType                  STYPE = VkStructureType.DEVICE_GROUP_PRESENT_CAPABILITIES_KHR;
         public       VkStructureType                  sType;
         public       void*                            pNext;
         public fixed uint                             presentMask[VK_MAX_DEVICE_GROUP_SIZE];
@@ -2716,19 +2884,21 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceGroupPresentInfoKHR
     {
-        public VkStructureType                  sType;
-        public void*                            pNext;
-        public uint                             swapchainCount;
-        public uint*                            pDeviceMasks;
-        public VkDeviceGroupPresentModeFlagsKHR mode;
+        public const VkStructureType                  STYPE = VkStructureType.DEVICE_GROUP_PRESENT_INFO_KHR;
+        public       VkStructureType                  sType;
+        public       void*                            pNext;
+        public       uint                             swapchainCount;
+        public       uint*                            pDeviceMasks;
+        public       VkDeviceGroupPresentModeFlagsKHR mode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceGroupSwapchainCreateInfoKHR
     {
-        public VkStructureType                  sType;
-        public void*                            pNext;
-        public VkDeviceGroupPresentModeFlagsKHR modes;
+        public const VkStructureType                  STYPE = VkStructureType.DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR;
+        public       VkStructureType                  sType;
+        public       void*                            pNext;
+        public       VkDeviceGroupPresentModeFlagsKHR modes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2741,10 +2911,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayModeCreateInfoKHR
     {
-        public VkStructureType             sType;
-        public void*                       pNext;
-        public VkDisplayModeCreateFlagsKHR flags;
-        public VkDisplayModeParametersKHR  parameters;
+        public const VkStructureType             STYPE = VkStructureType.DISPLAY_MODE_CREATE_INFO_KHR;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       VkDisplayModeCreateFlagsKHR flags;
+        public       VkDisplayModeParametersKHR  parameters;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2790,80 +2961,88 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplaySurfaceCreateInfoKHR
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkDisplaySurfaceCreateFlagsKHR flags;
-        public VkDisplayModeKHR               displayMode;
-        public uint                           planeIndex;
-        public uint                           planeStackIndex;
-        public VkSurfaceTransformFlagsKHR     transform;
-        public float                          globalAlpha;
-        public VkDisplayPlaneAlphaFlagsKHR    alphaMode;
-        public VkExtent2D                     imageExtent;
+        public const VkStructureType                STYPE = VkStructureType.DISPLAY_SURFACE_CREATE_INFO_KHR;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkDisplaySurfaceCreateFlagsKHR flags;
+        public       VkDisplayModeKHR               displayMode;
+        public       uint                           planeIndex;
+        public       uint                           planeStackIndex;
+        public       VkSurfaceTransformFlagsKHR     transform;
+        public       float                          globalAlpha;
+        public       VkDisplayPlaneAlphaFlagsKHR    alphaMode;
+        public       VkExtent2D                     imageExtent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayPresentInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkRect2D        srcRect;
-        public VkRect2D        dstRect;
-        public VkBool32        persistent;
+        public const VkStructureType STYPE = VkStructureType.DISPLAY_PRESENT_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkRect2D        srcRect;
+        public       VkRect2D        dstRect;
+        public       VkBool32        persistent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImportMemoryFdInfoKHR
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkExternalMemoryHandleTypeFlags handleType;
-        public int                             fd;
+        public const VkStructureType                 STYPE = VkStructureType.IMPORT_MEMORY_FD_INFO_KHR;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkExternalMemoryHandleTypeFlags handleType;
+        public       int                             fd;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryFdPropertiesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            memoryTypeBits;
+        public const VkStructureType STYPE = VkStructureType.MEMORY_FD_PROPERTIES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            memoryTypeBits;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryGetFdInfoKHR
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkDeviceMemory                  memory;
-        public VkExternalMemoryHandleTypeFlags handleType;
+        public const VkStructureType                 STYPE = VkStructureType.MEMORY_GET_FD_INFO_KHR;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkDeviceMemory                  memory;
+        public       VkExternalMemoryHandleTypeFlags handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImportSemaphoreFdInfoKHR
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkSemaphore                        semaphore;
-        public VkSemaphoreImportFlags             flags;
-        public VkExternalSemaphoreHandleTypeFlags handleType;
-        public int                                fd;
+        public const VkStructureType                    STYPE = VkStructureType.IMPORT_SEMAPHORE_FD_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkSemaphore                        semaphore;
+        public       VkSemaphoreImportFlags             flags;
+        public       VkExternalSemaphoreHandleTypeFlags handleType;
+        public       int                                fd;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSemaphoreGetFdInfoKHR
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkSemaphore                        semaphore;
-        public VkExternalSemaphoreHandleTypeFlags handleType;
+        public const VkStructureType                    STYPE = VkStructureType.SEMAPHORE_GET_FD_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkSemaphore                        semaphore;
+        public       VkExternalSemaphoreHandleTypeFlags handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevicePushDescriptorPropertiesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxPushDescriptors;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxPushDescriptors;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2884,60 +3063,67 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPresentRegionsKHR
     {
-        public VkStructureType     sType;
-        public void*               pNext;
-        public uint                swapchainCount;
-        public VkPresentRegionKHR* pRegions;
+        public const VkStructureType     STYPE = VkStructureType.PRESENT_REGIONS_KHR;
+        public       VkStructureType     sType;
+        public       void*               pNext;
+        public       uint                swapchainCount;
+        public       VkPresentRegionKHR* pRegions;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSharedPresentSurfaceCapabilitiesKHR
     {
-        public VkStructureType   sType;
-        public void*             pNext;
-        public VkImageUsageFlags sharedPresentSupportedUsageFlags;
+        public const VkStructureType   STYPE = VkStructureType.SHARED_PRESENT_SURFACE_CAPABILITIES_KHR;
+        public       VkStructureType   sType;
+        public       void*             pNext;
+        public       VkImageUsageFlags sharedPresentSupportedUsageFlags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImportFenceFdInfoKHR
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkFence                        fence;
-        public VkFenceImportFlags             flags;
-        public VkExternalFenceHandleTypeFlags handleType;
-        public int                            fd;
+        public const VkStructureType                STYPE = VkStructureType.IMPORT_FENCE_FD_INFO_KHR;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkFence                        fence;
+        public       VkFenceImportFlags             flags;
+        public       VkExternalFenceHandleTypeFlags handleType;
+        public       int                            fd;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFenceGetFdInfoKHR
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkFence                        fence;
-        public VkExternalFenceHandleTypeFlags handleType;
+        public const VkStructureType                STYPE = VkStructureType.FENCE_GET_FD_INFO_KHR;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkFence                        fence;
+        public       VkExternalFenceHandleTypeFlags handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevicePerformanceQueryFeaturesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        performanceCounterQueryPools;
-        public VkBool32        performanceCounterMultipleQueryPools;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        performanceCounterQueryPools;
+        public       VkBool32        performanceCounterMultipleQueryPools;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevicePerformanceQueryPropertiesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        allowCommandBufferQueryCopies;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        allowCommandBufferQueryCopies;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceCounterKHR
     {
+        public const VkStructureType                STYPE = VkStructureType.PERFORMANCE_COUNTER_KHR;
         public       VkStructureType                sType;
         public       void*                          pNext;
         public       VkPerformanceCounterUnitKHR    unit;
@@ -2949,6 +3135,7 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceCounterDescriptionKHR
     {
+        public const VkStructureType                         STYPE = VkStructureType.PERFORMANCE_COUNTER_DESCRIPTION_KHR;
         public       VkStructureType                         sType;
         public       void*                                   pNext;
         public       VkPerformanceCounterDescriptionFlagsKHR flags;
@@ -2960,201 +3147,223 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkQueryPoolPerformanceCreateInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            queueFamilyIndex;
-        public uint            counterIndexCount;
-        public uint*           pCounterIndices;
+        public const VkStructureType STYPE = VkStructureType.QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            queueFamilyIndex;
+        public       uint            counterIndexCount;
+        public       uint*           pCounterIndices;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAcquireProfilingLockInfoKHR
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkAcquireProfilingLockFlagsKHR flags;
-        public ulong                          timeout;
+        public const VkStructureType                STYPE = VkStructureType.ACQUIRE_PROFILING_LOCK_INFO_KHR;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkAcquireProfilingLockFlagsKHR flags;
+        public       ulong                          timeout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceQuerySubmitInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            counterPassIndex;
+        public const VkStructureType STYPE = VkStructureType.PERFORMANCE_QUERY_SUBMIT_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            counterPassIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSurfaceInfo2KHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkSurfaceKHR    surface;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SURFACE_INFO_2_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkSurfaceKHR    surface;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSurfaceCapabilities2KHR
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkSurfaceCapabilitiesKHR surfaceCapabilities;
+        public const VkStructureType          STYPE = VkStructureType.SURFACE_CAPABILITIES_2_KHR;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkSurfaceCapabilitiesKHR surfaceCapabilities;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSurfaceFormat2KHR
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkSurfaceFormatKHR surfaceFormat;
+        public const VkStructureType    STYPE = VkStructureType.SURFACE_FORMAT_2_KHR;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkSurfaceFormatKHR surfaceFormat;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayProperties2KHR
     {
-        public VkStructureType        sType;
-        public void*                  pNext;
-        public VkDisplayPropertiesKHR displayProperties;
+        public const VkStructureType        STYPE = VkStructureType.DISPLAY_PROPERTIES_2_KHR;
+        public       VkStructureType        sType;
+        public       void*                  pNext;
+        public       VkDisplayPropertiesKHR displayProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayPlaneProperties2KHR
     {
-        public VkStructureType             sType;
-        public void*                       pNext;
-        public VkDisplayPlanePropertiesKHR displayPlaneProperties;
+        public const VkStructureType             STYPE = VkStructureType.DISPLAY_PLANE_PROPERTIES_2_KHR;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       VkDisplayPlanePropertiesKHR displayPlaneProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayModeProperties2KHR
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkDisplayModePropertiesKHR displayModeProperties;
+        public const VkStructureType            STYPE = VkStructureType.DISPLAY_MODE_PROPERTIES_2_KHR;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkDisplayModePropertiesKHR displayModeProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayPlaneInfo2KHR
     {
-        public VkStructureType  sType;
-        public void*            pNext;
-        public VkDisplayModeKHR mode;
-        public uint             planeIndex;
+        public const VkStructureType  STYPE = VkStructureType.DISPLAY_PLANE_INFO_2_KHR;
+        public       VkStructureType  sType;
+        public       void*            pNext;
+        public       VkDisplayModeKHR mode;
+        public       uint             planeIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayPlaneCapabilities2KHR
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkDisplayPlaneCapabilitiesKHR capabilities;
+        public const VkStructureType               STYPE = VkStructureType.DISPLAY_PLANE_CAPABILITIES_2_KHR;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkDisplayPlaneCapabilitiesKHR capabilities;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderClockFeaturesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderSubgroupClock;
-        public VkBool32        shaderDeviceClock;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderSubgroupClock;
+        public       VkBool32        shaderDeviceClock;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderTerminateInvocationFeaturesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderTerminateInvocation;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderTerminateInvocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFragmentShadingRateAttachmentInfoKHR
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkAttachmentReference2* pFragmentShadingRateAttachment;
-        public VkExtent2D              shadingRateAttachmentTexelSize;
+        public const VkStructureType         STYPE = VkStructureType.FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkAttachmentReference2* pFragmentShadingRateAttachment;
+        public       VkExtent2D              shadingRateAttachmentTexelSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineFragmentShadingRateStateCreateInfoKHR
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkExtent2D                         fragmentSize;
-        public VkFragmentShadingRateCombinerOpKHR combinerOps1;
-        public VkFragmentShadingRateCombinerOpKHR combinerOps2;
+        public const VkStructureType                    STYPE = VkStructureType.PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExtent2D                         fragmentSize;
+        public       VkFragmentShadingRateCombinerOpKHR combinerOps1;
+        public       VkFragmentShadingRateCombinerOpKHR combinerOps2;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRateFeaturesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        pipelineFragmentShadingRate;
-        public VkBool32        primitiveFragmentShadingRate;
-        public VkBool32        attachmentFragmentShadingRate;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        pipelineFragmentShadingRate;
+        public       VkBool32        primitiveFragmentShadingRate;
+        public       VkBool32        attachmentFragmentShadingRate;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkExtent2D         minFragmentShadingRateAttachmentTexelSize;
-        public VkExtent2D         maxFragmentShadingRateAttachmentTexelSize;
-        public uint               maxFragmentShadingRateAttachmentTexelSizeAspectRatio;
-        public VkBool32           primitiveFragmentShadingRateWithMultipleViewports;
-        public VkBool32           layeredShadingRateAttachments;
-        public VkBool32           fragmentShadingRateNonTrivialCombinerOps;
-        public VkExtent2D         maxFragmentSize;
-        public uint               maxFragmentSizeAspectRatio;
-        public uint               maxFragmentShadingRateCoverageSamples;
-        public VkSampleCountFlags maxFragmentShadingRateRasterizationSamples;
-        public VkBool32           fragmentShadingRateWithShaderDepthStencilWrites;
-        public VkBool32           fragmentShadingRateWithSampleMask;
-        public VkBool32           fragmentShadingRateWithShaderSampleMask;
-        public VkBool32           fragmentShadingRateWithConservativeRasterization;
-        public VkBool32           fragmentShadingRateWithFragmentShaderInterlock;
-        public VkBool32           fragmentShadingRateWithCustomSampleLocations;
-        public VkBool32           fragmentShadingRateStrictMultiplyCombiner;
+        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkExtent2D         minFragmentShadingRateAttachmentTexelSize;
+        public       VkExtent2D         maxFragmentShadingRateAttachmentTexelSize;
+        public       uint               maxFragmentShadingRateAttachmentTexelSizeAspectRatio;
+        public       VkBool32           primitiveFragmentShadingRateWithMultipleViewports;
+        public       VkBool32           layeredShadingRateAttachments;
+        public       VkBool32           fragmentShadingRateNonTrivialCombinerOps;
+        public       VkExtent2D         maxFragmentSize;
+        public       uint               maxFragmentSizeAspectRatio;
+        public       uint               maxFragmentShadingRateCoverageSamples;
+        public       VkSampleCountFlags maxFragmentShadingRateRasterizationSamples;
+        public       VkBool32           fragmentShadingRateWithShaderDepthStencilWrites;
+        public       VkBool32           fragmentShadingRateWithSampleMask;
+        public       VkBool32           fragmentShadingRateWithShaderSampleMask;
+        public       VkBool32           fragmentShadingRateWithConservativeRasterization;
+        public       VkBool32           fragmentShadingRateWithFragmentShaderInterlock;
+        public       VkBool32           fragmentShadingRateWithCustomSampleLocations;
+        public       VkBool32           fragmentShadingRateStrictMultiplyCombiner;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRateKHR
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkSampleCountFlags sampleCounts;
-        public VkExtent2D         fragmentSize;
+        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkSampleCountFlags sampleCounts;
+        public       VkExtent2D         fragmentSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSurfaceProtectedCapabilitiesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        supportsProtected;
+        public const VkStructureType STYPE = VkStructureType.SURFACE_PROTECTED_CAPABILITIES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        supportsProtected;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        pipelineExecutableInfo;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        pipelineExecutableInfo;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkPipeline      pipeline;
+        public const VkStructureType STYPE = VkStructureType.PIPELINE_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkPipeline      pipeline;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineExecutablePropertiesKHR
     {
+        public const VkStructureType    STYPE = VkStructureType.PIPELINE_EXECUTABLE_PROPERTIES_KHR;
         public       VkStructureType    sType;
         public       void*              pNext;
         public       VkShaderStageFlags stages;
@@ -3166,15 +3375,17 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineExecutableInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkPipeline      pipeline;
-        public uint            executableIndex;
+        public const VkStructureType STYPE = VkStructureType.PIPELINE_EXECUTABLE_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkPipeline      pipeline;
+        public       uint            executableIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineExecutableStatisticKHR
     {
+        public const VkStructureType                        STYPE = VkStructureType.PIPELINE_EXECUTABLE_STATISTIC_KHR;
         public       VkStructureType                        sType;
         public       void*                                  pNext;
         public fixed sbyte                                  name[VK_MAX_DESCRIPTION_SIZE];
@@ -3186,6 +3397,7 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineExecutableInternalRepresentationKHR
     {
+        public const VkStructureType STYPE = VkStructureType.PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR;
         public       VkStructureType sType;
         public       void*           pNext;
         public fixed sbyte           name[VK_MAX_DESCRIPTION_SIZE];
@@ -3198,153 +3410,166 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineLibraryCreateInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            libraryCount;
-        public VkPipeline*     pLibraries;
+        public const VkStructureType STYPE = VkStructureType.PIPELINE_LIBRARY_CREATE_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            libraryCount;
+        public       VkPipeline*     pLibraries;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferCopy2KHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceSize    srcOffset;
-        public VkDeviceSize    dstOffset;
-        public VkDeviceSize    size;
+        public const VkStructureType STYPE = VkStructureType.BUFFER_COPY_2_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceSize    srcOffset;
+        public       VkDeviceSize    dstOffset;
+        public       VkDeviceSize    size;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCopyBufferInfo2KHR
     {
-        public VkStructureType   sType;
-        public void*             pNext;
-        public VkBuffer          srcBuffer;
-        public VkBuffer          dstBuffer;
-        public uint              regionCount;
-        public VkBufferCopy2KHR* pRegions;
+        public const VkStructureType   STYPE = VkStructureType.COPY_BUFFER_INFO_2_KHR;
+        public       VkStructureType   sType;
+        public       void*             pNext;
+        public       VkBuffer          srcBuffer;
+        public       VkBuffer          dstBuffer;
+        public       uint              regionCount;
+        public       VkBufferCopy2KHR* pRegions;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageCopy2KHR
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkImageSubresourceLayers srcSubresource;
-        public VkOffset3D               srcOffset;
-        public VkImageSubresourceLayers dstSubresource;
-        public VkOffset3D               dstOffset;
-        public VkExtent3D               extent;
+        public const VkStructureType          STYPE = VkStructureType.IMAGE_COPY_2_KHR;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkImageSubresourceLayers srcSubresource;
+        public       VkOffset3D               srcOffset;
+        public       VkImageSubresourceLayers dstSubresource;
+        public       VkOffset3D               dstOffset;
+        public       VkExtent3D               extent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCopyImageInfo2KHR
     {
-        public VkStructureType  sType;
-        public void*            pNext;
-        public VkImage          srcImage;
-        public VkImageLayout    srcImageLayout;
-        public VkImage          dstImage;
-        public VkImageLayout    dstImageLayout;
-        public uint             regionCount;
-        public VkImageCopy2KHR* pRegions;
+        public const VkStructureType  STYPE = VkStructureType.COPY_IMAGE_INFO_2_KHR;
+        public       VkStructureType  sType;
+        public       void*            pNext;
+        public       VkImage          srcImage;
+        public       VkImageLayout    srcImageLayout;
+        public       VkImage          dstImage;
+        public       VkImageLayout    dstImageLayout;
+        public       uint             regionCount;
+        public       VkImageCopy2KHR* pRegions;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferImageCopy2KHR
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkDeviceSize             bufferOffset;
-        public uint                     bufferRowLength;
-        public uint                     bufferImageHeight;
-        public VkImageSubresourceLayers imageSubresource;
-        public VkOffset3D               imageOffset;
-        public VkExtent3D               imageExtent;
+        public const VkStructureType          STYPE = VkStructureType.BUFFER_IMAGE_COPY_2_KHR;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkDeviceSize             bufferOffset;
+        public       uint                     bufferRowLength;
+        public       uint                     bufferImageHeight;
+        public       VkImageSubresourceLayers imageSubresource;
+        public       VkOffset3D               imageOffset;
+        public       VkExtent3D               imageExtent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCopyBufferToImageInfo2KHR
     {
-        public VkStructureType        sType;
-        public void*                  pNext;
-        public VkBuffer               srcBuffer;
-        public VkImage                dstImage;
-        public VkImageLayout          dstImageLayout;
-        public uint                   regionCount;
-        public VkBufferImageCopy2KHR* pRegions;
+        public const VkStructureType        STYPE = VkStructureType.COPY_BUFFER_TO_IMAGE_INFO_2_KHR;
+        public       VkStructureType        sType;
+        public       void*                  pNext;
+        public       VkBuffer               srcBuffer;
+        public       VkImage                dstImage;
+        public       VkImageLayout          dstImageLayout;
+        public       uint                   regionCount;
+        public       VkBufferImageCopy2KHR* pRegions;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCopyImageToBufferInfo2KHR
     {
-        public VkStructureType        sType;
-        public void*                  pNext;
-        public VkImage                srcImage;
-        public VkImageLayout          srcImageLayout;
-        public VkBuffer               dstBuffer;
-        public uint                   regionCount;
-        public VkBufferImageCopy2KHR* pRegions;
+        public const VkStructureType        STYPE = VkStructureType.COPY_IMAGE_TO_BUFFER_INFO_2_KHR;
+        public       VkStructureType        sType;
+        public       void*                  pNext;
+        public       VkImage                srcImage;
+        public       VkImageLayout          srcImageLayout;
+        public       VkBuffer               dstBuffer;
+        public       uint                   regionCount;
+        public       VkBufferImageCopy2KHR* pRegions;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageBlit2KHR
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkImageSubresourceLayers srcSubresource;
-        public VkOffset3D               srcOffsetsLeftTop;
-        public VkOffset3D               srcOffsetsRightBottom;
-        public VkImageSubresourceLayers dstSubresource;
-        public VkOffset3D               dstOffsetsLeftTop;
-        public VkOffset3D               dstOffsetsRightBottom;
+        public const VkStructureType          STYPE = VkStructureType.IMAGE_BLIT_2_KHR;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkImageSubresourceLayers srcSubresource;
+        public       VkOffset3D               srcOffsetsLeftTop;
+        public       VkOffset3D               srcOffsetsRightBottom;
+        public       VkImageSubresourceLayers dstSubresource;
+        public       VkOffset3D               dstOffsetsLeftTop;
+        public       VkOffset3D               dstOffsetsRightBottom;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBlitImageInfo2KHR
     {
-        public VkStructureType  sType;
-        public void*            pNext;
-        public VkImage          srcImage;
-        public VkImageLayout    srcImageLayout;
-        public VkImage          dstImage;
-        public VkImageLayout    dstImageLayout;
-        public uint             regionCount;
-        public VkImageBlit2KHR* pRegions;
-        public VkFilter         filter;
+        public const VkStructureType  STYPE = VkStructureType.BLIT_IMAGE_INFO_2_KHR;
+        public       VkStructureType  sType;
+        public       void*            pNext;
+        public       VkImage          srcImage;
+        public       VkImageLayout    srcImageLayout;
+        public       VkImage          dstImage;
+        public       VkImageLayout    dstImageLayout;
+        public       uint             regionCount;
+        public       VkImageBlit2KHR* pRegions;
+        public       VkFilter         filter;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageResolve2KHR
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkImageSubresourceLayers srcSubresource;
-        public VkOffset3D               srcOffset;
-        public VkImageSubresourceLayers dstSubresource;
-        public VkOffset3D               dstOffset;
-        public VkExtent3D               extent;
+        public const VkStructureType          STYPE = VkStructureType.IMAGE_RESOLVE_2_KHR;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkImageSubresourceLayers srcSubresource;
+        public       VkOffset3D               srcOffset;
+        public       VkImageSubresourceLayers dstSubresource;
+        public       VkOffset3D               dstOffset;
+        public       VkExtent3D               extent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkResolveImageInfo2KHR
     {
-        public VkStructureType     sType;
-        public void*               pNext;
-        public VkImage             srcImage;
-        public VkImageLayout       srcImageLayout;
-        public VkImage             dstImage;
-        public VkImageLayout       dstImageLayout;
-        public uint                regionCount;
-        public VkImageResolve2KHR* pRegions;
+        public const VkStructureType     STYPE = VkStructureType.RESOLVE_IMAGE_INFO_2_KHR;
+        public       VkStructureType     sType;
+        public       void*               pNext;
+        public       VkImage             srcImage;
+        public       VkImageLayout       srcImageLayout;
+        public       VkImage             dstImage;
+        public       VkImageLayout       dstImageLayout;
+        public       uint                regionCount;
+        public       VkImageResolve2KHR* pRegions;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugReportCallbackCreateInfoEXT
     {
-        public VkStructureType       sType;
-        public void*                 pNext;
-        public VkDebugReportFlagsEXT flags;
+        public const VkStructureType       STYPE = VkStructureType.DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkDebugReportFlagsEXT flags;
 
         public delegate*<               /*vkDebugReportCallbackEXT*/
             VkDebugReportFlagsEXT,      /* flags                  */
@@ -3363,36 +3588,40 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationStateRasterizationOrderAMD
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkRasterizationOrderAMD rasterizationOrder;
+        public const VkStructureType         STYPE = VkStructureType.PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkRasterizationOrderAMD rasterizationOrder;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugMarkerObjectNameInfoEXT
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkDebugReportObjectTypeEXT objectType;
-        public ulong                      @object;
-        public sbyte*                     pObjectName;
+        public const VkStructureType            STYPE = VkStructureType.DEBUG_MARKER_OBJECT_NAME_INFO_EXT;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkDebugReportObjectTypeEXT objectType;
+        public       ulong                      @object;
+        public       sbyte*                     pObjectName;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugMarkerObjectTagInfoEXT
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkDebugReportObjectTypeEXT objectType;
-        public ulong                      @object;
-        public ulong                      tagName;
-        public nuint                      tagSize;
-        public void*                      pTag;
+        public const VkStructureType            STYPE = VkStructureType.DEBUG_MARKER_OBJECT_TAG_INFO_EXT;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkDebugReportObjectTypeEXT objectType;
+        public       ulong                      @object;
+        public       ulong                      tagName;
+        public       nuint                      tagSize;
+        public       void*                      pTag;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugMarkerMarkerInfoEXT
     {
+        public const VkStructureType STYPE = VkStructureType.DEBUG_MARKER_MARKER_INFO_EXT;
         public       VkStructureType sType;
         public       void*           pNext;
         public       sbyte*          pMarkerName;
@@ -3402,88 +3631,97 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDedicatedAllocationImageCreateInfoNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        dedicatedAllocation;
+        public const VkStructureType STYPE = VkStructureType.DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        dedicatedAllocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDedicatedAllocationBufferCreateInfoNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        dedicatedAllocation;
+        public const VkStructureType STYPE = VkStructureType.DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        dedicatedAllocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDedicatedAllocationMemoryAllocateInfoNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkImage         image;
-        public VkBuffer        buffer;
+        public const VkStructureType STYPE = VkStructureType.DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkImage         image;
+        public       VkBuffer        buffer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceTransformFeedbackFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        transformFeedback;
-        public VkBool32        geometryStreams;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        transformFeedback;
+        public       VkBool32        geometryStreams;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceTransformFeedbackPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxTransformFeedbackStreams;
-        public uint            maxTransformFeedbackBuffers;
-        public VkDeviceSize    maxTransformFeedbackBufferSize;
-        public uint            maxTransformFeedbackStreamDataSize;
-        public uint            maxTransformFeedbackBufferDataSize;
-        public uint            maxTransformFeedbackBufferDataStride;
-        public VkBool32        transformFeedbackQueries;
-        public VkBool32        transformFeedbackStreamsLinesTriangles;
-        public VkBool32        transformFeedbackRasterizationStreamSelect;
-        public VkBool32        transformFeedbackDraw;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxTransformFeedbackStreams;
+        public       uint            maxTransformFeedbackBuffers;
+        public       VkDeviceSize    maxTransformFeedbackBufferSize;
+        public       uint            maxTransformFeedbackStreamDataSize;
+        public       uint            maxTransformFeedbackBufferDataSize;
+        public       uint            maxTransformFeedbackBufferDataStride;
+        public       VkBool32        transformFeedbackQueries;
+        public       VkBool32        transformFeedbackStreamsLinesTriangles;
+        public       VkBool32        transformFeedbackRasterizationStreamSelect;
+        public       VkBool32        transformFeedbackDraw;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationStateStreamCreateInfoEXT
     {
-        public VkStructureType                                  sType;
-        public void*                                            pNext;
-        public VkPipelineRasterizationStateStreamCreateFlagsEXT flags;
-        public uint                                             rasterizationStream;
+        public const VkStructureType                                  STYPE = VkStructureType.PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT;
+        public       VkStructureType                                  sType;
+        public       void*                                            pNext;
+        public       VkPipelineRasterizationStateStreamCreateFlagsEXT flags;
+        public       uint                                             rasterizationStream;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewHandleInfoNVX
     {
-        public VkStructureType  sType;
-        public void*            pNext;
-        public VkImageView      imageView;
-        public VkDescriptorType descriptorType;
-        public VkSampler        sampler;
+        public const VkStructureType  STYPE = VkStructureType.IMAGE_VIEW_HANDLE_INFO_NVX;
+        public       VkStructureType  sType;
+        public       void*            pNext;
+        public       VkImageView      imageView;
+        public       VkDescriptorType descriptorType;
+        public       VkSampler        sampler;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewAddressPropertiesNVX
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceAddress deviceAddress;
-        public VkDeviceSize    size;
+        public const VkStructureType STYPE = VkStructureType.IMAGE_VIEW_ADDRESS_PROPERTIES_NVX;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceAddress deviceAddress;
+        public       VkDeviceSize    size;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkTextureLODGatherFormatPropertiesAMD
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        supportsTextureGatherLODBiasAMD;
+        public const VkStructureType STYPE = VkStructureType.TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        supportsTextureGatherLODBiasAMD;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3511,9 +3749,10 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCornerSampledImageFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        cornerSampledImage;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        cornerSampledImage;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3528,77 +3767,86 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalMemoryImageCreateInfoNV
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public VkExternalMemoryHandleTypeFlagsNV handleTypes;
+        public const VkStructureType                   STYPE = VkStructureType.EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkExternalMemoryHandleTypeFlagsNV handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExportMemoryAllocateInfoNV
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public VkExternalMemoryHandleTypeFlagsNV handleTypes;
+        public const VkStructureType                   STYPE = VkStructureType.EXPORT_MEMORY_ALLOCATE_INFO_NV;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkExternalMemoryHandleTypeFlagsNV handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkValidationFlagsEXT
     {
-        public VkStructureType       sType;
-        public void*                 pNext;
-        public uint                  disabledValidationCheckCount;
-        public VkValidationCheckEXT* pDisabledValidationChecks;
+        public const VkStructureType       STYPE = VkStructureType.VALIDATION_FLAGS_EXT;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       uint                  disabledValidationCheckCount;
+        public       VkValidationCheckEXT* pDisabledValidationChecks;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        textureCompressionASTC_HDR;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        textureCompressionASTC_HDR;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewASTCDecodeModeEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkFormat        decodeMode;
+        public const VkStructureType STYPE = VkStructureType.IMAGE_VIEW_ASTC_DECODE_MODE_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkFormat        decodeMode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceASTCDecodeFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        decodeModeSharedExponent;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        decodeModeSharedExponent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkConditionalRenderingBeginInfoEXT
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkBuffer                       buffer;
-        public VkDeviceSize                   offset;
-        public VkConditionalRenderingFlagsEXT flags;
+        public const VkStructureType                STYPE = VkStructureType.CONDITIONAL_RENDERING_BEGIN_INFO_EXT;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkBuffer                       buffer;
+        public       VkDeviceSize                   offset;
+        public       VkConditionalRenderingFlagsEXT flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceConditionalRenderingFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        conditionalRendering;
-        public VkBool32        inheritedConditionalRendering;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        conditionalRendering;
+        public       VkBool32        inheritedConditionalRendering;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCommandBufferInheritanceConditionalRenderingInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        conditionalRenderingEnable;
+        public const VkStructureType STYPE = VkStructureType.COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        conditionalRenderingEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3611,61 +3859,67 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportWScalingStateCreateInfoNV
     {
-        public VkStructureType       sType;
-        public void*                 pNext;
-        public VkBool32              viewportWScalingEnable;
-        public uint                  viewportCount;
-        public VkViewportWScalingNV* pViewportWScalings;
+        public const VkStructureType       STYPE = VkStructureType.PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkBool32              viewportWScalingEnable;
+        public       uint                  viewportCount;
+        public       VkViewportWScalingNV* pViewportWScalings;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSurfaceCapabilities2EXT
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public uint                       minImageCount;
-        public uint                       maxImageCount;
-        public VkExtent2D                 currentExtent;
-        public VkExtent2D                 minImageExtent;
-        public VkExtent2D                 maxImageExtent;
-        public uint                       maxImageArrayLayers;
-        public VkSurfaceTransformFlagsKHR supportedTransforms;
-        public VkSurfaceTransformFlagsKHR currentTransform;
-        public VkCompositeAlphaFlagsKHR   supportedCompositeAlpha;
-        public VkImageUsageFlags          supportedUsageFlags;
-        public VkSurfaceCounterFlagsEXT   supportedSurfaceCounters;
+        public const VkStructureType            STYPE = VkStructureType.SURFACE_CAPABILITIES_2_EXT;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       uint                       minImageCount;
+        public       uint                       maxImageCount;
+        public       VkExtent2D                 currentExtent;
+        public       VkExtent2D                 minImageExtent;
+        public       VkExtent2D                 maxImageExtent;
+        public       uint                       maxImageArrayLayers;
+        public       VkSurfaceTransformFlagsKHR supportedTransforms;
+        public       VkSurfaceTransformFlagsKHR currentTransform;
+        public       VkCompositeAlphaFlagsKHR   supportedCompositeAlpha;
+        public       VkImageUsageFlags          supportedUsageFlags;
+        public       VkSurfaceCounterFlagsEXT   supportedSurfaceCounters;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayPowerInfoEXT
     {
-        public VkStructureType        sType;
-        public void*                  pNext;
-        public VkDisplayPowerStateEXT powerState;
+        public const VkStructureType        STYPE = VkStructureType.DISPLAY_POWER_INFO_EXT;
+        public       VkStructureType        sType;
+        public       void*                  pNext;
+        public       VkDisplayPowerStateEXT powerState;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceEventInfoEXT
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public VkDeviceEventTypeEXT deviceEvent;
+        public const VkStructureType      STYPE = VkStructureType.DEVICE_EVENT_INFO_EXT;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkDeviceEventTypeEXT deviceEvent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayEventInfoEXT
     {
-        public VkStructureType       sType;
-        public void*                 pNext;
-        public VkDisplayEventTypeEXT displayEvent;
+        public const VkStructureType       STYPE = VkStructureType.DISPLAY_EVENT_INFO_EXT;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkDisplayEventTypeEXT displayEvent;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSwapchainCounterCreateInfoEXT
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkSurfaceCounterFlagsEXT surfaceCounters;
+        public const VkStructureType          STYPE = VkStructureType.SWAPCHAIN_COUNTER_CREATE_INFO_EXT;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkSurfaceCounterFlagsEXT surfaceCounters;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3694,18 +3948,20 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPresentTimesInfoGOOGLE
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public uint                 swapchainCount;
-        public VkPresentTimeGOOGLE* pTimes;
+        public const VkStructureType      STYPE = VkStructureType.PRESENT_TIMES_INFO_GOOGLE;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       uint                 swapchainCount;
+        public       VkPresentTimeGOOGLE* pTimes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        perViewPositionAllComponents;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        perViewPositionAllComponents;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3720,73 +3976,80 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportSwizzleStateCreateInfoNV
     {
-        public VkStructureType                             sType;
-        public void*                                       pNext;
-        public VkPipelineViewportSwizzleStateCreateFlagsNV flags;
-        public uint                                        viewportCount;
-        public VkViewportSwizzleNV*                        pViewportSwizzles;
+        public const VkStructureType                             STYPE = VkStructureType.PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV;
+        public       VkStructureType                             sType;
+        public       void*                                       pNext;
+        public       VkPipelineViewportSwizzleStateCreateFlagsNV flags;
+        public       uint                                        viewportCount;
+        public       VkViewportSwizzleNV*                        pViewportSwizzles;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDiscardRectanglePropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxDiscardRectangles;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxDiscardRectangles;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineDiscardRectangleStateCreateInfoEXT
     {
-        public VkStructureType                               sType;
-        public void*                                         pNext;
-        public VkPipelineDiscardRectangleStateCreateFlagsEXT flags;
-        public VkDiscardRectangleModeEXT                     discardRectangleMode;
-        public uint                                          discardRectangleCount;
-        public VkRect2D*                                     pDiscardRectangles;
+        public const VkStructureType                               STYPE = VkStructureType.PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT;
+        public       VkStructureType                               sType;
+        public       void*                                         pNext;
+        public       VkPipelineDiscardRectangleStateCreateFlagsEXT flags;
+        public       VkDiscardRectangleModeEXT                     discardRectangleMode;
+        public       uint                                          discardRectangleCount;
+        public       VkRect2D*                                     pDiscardRectangles;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public float           primitiveOverestimationSize;
-        public float           maxExtraPrimitiveOverestimationSize;
-        public float           extraPrimitiveOverestimationSizeGranularity;
-        public VkBool32        primitiveUnderestimation;
-        public VkBool32        conservativePointAndLineRasterization;
-        public VkBool32        degenerateTrianglesRasterized;
-        public VkBool32        degenerateLinesRasterized;
-        public VkBool32        fullyCoveredFragmentShaderInputVariable;
-        public VkBool32        conservativeRasterizationPostDepthCoverage;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       float           primitiveOverestimationSize;
+        public       float           maxExtraPrimitiveOverestimationSize;
+        public       float           extraPrimitiveOverestimationSizeGranularity;
+        public       VkBool32        primitiveUnderestimation;
+        public       VkBool32        conservativePointAndLineRasterization;
+        public       VkBool32        degenerateTrianglesRasterized;
+        public       VkBool32        degenerateLinesRasterized;
+        public       VkBool32        fullyCoveredFragmentShaderInputVariable;
+        public       VkBool32        conservativeRasterizationPostDepthCoverage;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationConservativeStateCreateInfoEXT
     {
-        public VkStructureType                                        sType;
-        public void*                                                  pNext;
-        public VkPipelineRasterizationConservativeStateCreateFlagsEXT flags;
-        public VkConservativeRasterizationModeEXT                     conservativeRasterizationMode;
-        public float                                                  extraPrimitiveOverestimationSize;
+        public const VkStructureType                                        STYPE = VkStructureType.PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT;
+        public       VkStructureType                                        sType;
+        public       void*                                                  pNext;
+        public       VkPipelineRasterizationConservativeStateCreateFlagsEXT flags;
+        public       VkConservativeRasterizationModeEXT                     conservativeRasterizationMode;
+        public       float                                                  extraPrimitiveOverestimationSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDepthClipEnableFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        depthClipEnable;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        depthClipEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationDepthClipStateCreateInfoEXT
     {
-        public VkStructureType                                     sType;
-        public void*                                               pNext;
-        public VkPipelineRasterizationDepthClipStateCreateFlagsEXT flags;
-        public VkBool32                                            depthClipEnable;
+        public const VkStructureType                                     STYPE = VkStructureType.PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT;
+        public       VkStructureType                                     sType;
+        public       void*                                               pNext;
+        public       VkPipelineRasterizationDepthClipStateCreateFlagsEXT flags;
+        public       VkBool32                                            depthClipEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3799,62 +4062,67 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkHdrMetadataEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkXYColorEXT    displayPrimaryRed;
-        public VkXYColorEXT    displayPrimaryGreen;
-        public VkXYColorEXT    displayPrimaryBlue;
-        public VkXYColorEXT    whitePoint;
-        public float           maxLuminance;
-        public float           minLuminance;
-        public float           maxContentLightLevel;
-        public float           maxFrameAverageLightLevel;
+        public const VkStructureType STYPE = VkStructureType.HDR_METADATA_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkXYColorEXT    displayPrimaryRed;
+        public       VkXYColorEXT    displayPrimaryGreen;
+        public       VkXYColorEXT    displayPrimaryBlue;
+        public       VkXYColorEXT    whitePoint;
+        public       float           maxLuminance;
+        public       float           minLuminance;
+        public       float           maxContentLightLevel;
+        public       float           maxFrameAverageLightLevel;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugUtilsLabelEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public sbyte*          pLabelName;
-        public VkColor         color;
+        public const VkStructureType STYPE = VkStructureType.DEBUG_UTILS_LABEL_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       sbyte*          pLabelName;
+        public       VkColor         color;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugUtilsObjectNameInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkObjectType    objectType;
-        public ulong           objectHandle;
-        public sbyte*          pObjectName;
+        public const VkStructureType STYPE = VkStructureType.DEBUG_UTILS_OBJECT_NAME_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkObjectType    objectType;
+        public       ulong           objectHandle;
+        public       sbyte*          pObjectName;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugUtilsMessengerCallbackDataEXT
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public uint                           flags; //reserved for future use
-        public sbyte*                         pMessageIdName;
-        public int                            messageIdNumber;
-        public sbyte*                         pMessage;
-        public uint                           queueLabelCount;
-        public VkDebugUtilsLabelEXT*          pQueueLabels;
-        public uint                           cmdBufLabelCount;
-        public VkDebugUtilsLabelEXT*          pCmdBufLabels;
-        public uint                           objectCount;
-        public VkDebugUtilsObjectNameInfoEXT* pObjects;
+        public const VkStructureType                STYPE = VkStructureType.DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       uint                           flags; //reserved for future use
+        public       sbyte*                         pMessageIdName;
+        public       int                            messageIdNumber;
+        public       sbyte*                         pMessage;
+        public       uint                           queueLabelCount;
+        public       VkDebugUtilsLabelEXT*          pQueueLabels;
+        public       uint                           cmdBufLabelCount;
+        public       VkDebugUtilsLabelEXT*          pCmdBufLabels;
+        public       uint                           objectCount;
+        public       VkDebugUtilsObjectNameInfoEXT* pObjects;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugUtilsMessengerCreateInfoEXT
     {
-        public VkStructureType                     sType;
-        public void*                               pNext;
-        public uint                                flags; //reserved for future use
-        public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
-        public VkDebugUtilsMessageTypeFlagsEXT     messageType;
+        public const VkStructureType                     STYPE = VkStructureType.DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
+        public       VkStructureType                     sType;
+        public       void*                               pNext;
+        public       uint                                flags; //reserved for future use
+        public       VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
+        public       VkDebugUtilsMessageTypeFlagsEXT     messageType;
 
         public delegate*<                          /*vkDebugUtilsMessengerCallbackEXT*/
             VkDebugUtilsMessageSeverityFlagsEXT,   /* messageSeverity                */
@@ -3869,51 +4137,56 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugUtilsObjectTagInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkObjectType    objectType;
-        public ulong           objectHandle;
-        public ulong           tagName;
-        public nuint           tagSize;
-        public void*           pTag;
+        public const VkStructureType STYPE = VkStructureType.DEBUG_UTILS_OBJECT_TAG_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkObjectType    objectType;
+        public       ulong           objectHandle;
+        public       ulong           tagName;
+        public       nuint           tagSize;
+        public       void*           pTag;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceInlineUniformBlockFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        inlineUniformBlock;
-        public VkBool32        descriptorBindingInlineUniformBlockUpdateAfterBind;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        inlineUniformBlock;
+        public       VkBool32        descriptorBindingInlineUniformBlockUpdateAfterBind;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceInlineUniformBlockPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxInlineUniformBlockSize;
-        public uint            maxPerStageDescriptorInlineUniformBlocks;
-        public uint            maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks;
-        public uint            maxDescriptorSetInlineUniformBlocks;
-        public uint            maxDescriptorSetUpdateAfterBindInlineUniformBlocks;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxInlineUniformBlockSize;
+        public       uint            maxPerStageDescriptorInlineUniformBlocks;
+        public       uint            maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks;
+        public       uint            maxDescriptorSetInlineUniformBlocks;
+        public       uint            maxDescriptorSetUpdateAfterBindInlineUniformBlocks;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkWriteDescriptorSetInlineUniformBlockEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            dataSize;
-        public void*           pData;
+        public const VkStructureType STYPE = VkStructureType.WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            dataSize;
+        public       void*           pData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorPoolInlineUniformBlockCreateInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxInlineUniformBlockBindings;
+        public const VkStructureType STYPE = VkStructureType.DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxInlineUniformBlockBindings;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3926,12 +4199,13 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSampleLocationsInfoEXT
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public VkSampleCountFlags   sampleLocationsPerPixel;
-        public VkExtent2D           sampleLocationGridSize;
-        public uint                 sampleLocationsCount;
-        public VkSampleLocationEXT* pSampleLocations;
+        public const VkStructureType      STYPE = VkStructureType.SAMPLE_LOCATIONS_INFO_EXT;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkSampleCountFlags   sampleLocationsPerPixel;
+        public       VkExtent2D           sampleLocationGridSize;
+        public       uint                 sampleLocationsCount;
+        public       VkSampleLocationEXT* pSampleLocations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3951,26 +4225,29 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassSampleLocationsBeginInfoEXT
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public uint                            attachmentInitialSampleLocationsCount;
-        public VkAttachmentSampleLocationsEXT* pAttachmentInitialSampleLocations;
-        public uint                            postSubpassSampleLocationsCount;
-        public VkSubpassSampleLocationsEXT*    pPostSubpassSampleLocations;
+        public const VkStructureType                 STYPE = VkStructureType.RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       uint                            attachmentInitialSampleLocationsCount;
+        public       VkAttachmentSampleLocationsEXT* pAttachmentInitialSampleLocations;
+        public       uint                            postSubpassSampleLocationsCount;
+        public       VkSubpassSampleLocationsEXT*    pPostSubpassSampleLocations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineSampleLocationsStateCreateInfoEXT
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkBool32                 sampleLocationsEnable;
-        public VkSampleLocationsInfoEXT sampleLocationsInfo;
+        public const VkStructureType          STYPE = VkStructureType.PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkBool32                 sampleLocationsEnable;
+        public       VkSampleLocationsInfoEXT sampleLocationsInfo;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSampleLocationsPropertiesEXT
     {
+        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT;
         public       VkStructureType    sType;
         public       void*              pNext;
         public       VkSampleCountFlags sampleLocationSampleCounts;
@@ -3983,79 +4260,87 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMultisamplePropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkExtent2D      maxSampleLocationGridSize;
+        public const VkStructureType STYPE = VkStructureType.MULTISAMPLE_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkExtent2D      maxSampleLocationGridSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        advancedBlendCoherentOperations;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        advancedBlendCoherentOperations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            advancedBlendMaxColorAttachments;
-        public VkBool32        advancedBlendIndependentBlend;
-        public VkBool32        advancedBlendNonPremultipliedSrcColor;
-        public VkBool32        advancedBlendNonPremultipliedDstColor;
-        public VkBool32        advancedBlendCorrelatedOverlap;
-        public VkBool32        advancedBlendAllOperations;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            advancedBlendMaxColorAttachments;
+        public       VkBool32        advancedBlendIndependentBlend;
+        public       VkBool32        advancedBlendNonPremultipliedSrcColor;
+        public       VkBool32        advancedBlendNonPremultipliedDstColor;
+        public       VkBool32        advancedBlendCorrelatedOverlap;
+        public       VkBool32        advancedBlendAllOperations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineColorBlendAdvancedStateCreateInfoEXT
     {
-        public VkStructureType   sType;
-        public void*             pNext;
-        public VkBool32          srcPremultiplied;
-        public VkBool32          dstPremultiplied;
-        public VkBlendOverlapEXT blendOverlap;
+        public const VkStructureType   STYPE = VkStructureType.PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT;
+        public       VkStructureType   sType;
+        public       void*             pNext;
+        public       VkBool32          srcPremultiplied;
+        public       VkBool32          dstPremultiplied;
+        public       VkBlendOverlapEXT blendOverlap;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCoverageToColorStateCreateInfoNV
     {
-        public VkStructureType                             sType;
-        public void*                                       pNext;
-        public VkPipelineCoverageToColorStateCreateFlagsNV flags;
-        public VkBool32                                    coverageToColorEnable;
-        public uint                                        coverageToColorLocation;
+        public const VkStructureType                             STYPE = VkStructureType.PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV;
+        public       VkStructureType                             sType;
+        public       void*                                       pNext;
+        public       VkPipelineCoverageToColorStateCreateFlagsNV flags;
+        public       VkBool32                                    coverageToColorEnable;
+        public       uint                                        coverageToColorLocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCoverageModulationStateCreateInfoNV
     {
-        public VkStructureType                                sType;
-        public void*                                          pNext;
-        public VkPipelineCoverageModulationStateCreateFlagsNV flags;
-        public VkCoverageModulationModeNV                     coverageModulationMode;
-        public VkBool32                                       coverageModulationTableEnable;
-        public uint                                           coverageModulationTableCount;
-        public float*                                         pCoverageModulationTable;
+        public const VkStructureType                                STYPE = VkStructureType.PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV;
+        public       VkStructureType                                sType;
+        public       void*                                          pNext;
+        public       VkPipelineCoverageModulationStateCreateFlagsNV flags;
+        public       VkCoverageModulationModeNV                     coverageModulationMode;
+        public       VkBool32                                       coverageModulationTableEnable;
+        public       uint                                           coverageModulationTableCount;
+        public       float*                                         pCoverageModulationTable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderSMBuiltinsPropertiesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            shaderSMCount;
-        public uint            shaderWarpsPerSM;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            shaderSMCount;
+        public       uint            shaderWarpsPerSM;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderSMBuiltinsFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderSMBuiltins;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderSMBuiltins;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4069,66 +4354,73 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDrmFormatModifierPropertiesListEXT
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public uint                              drmFormatModifierCount;
-        public VkDrmFormatModifierPropertiesEXT* pDrmFormatModifierProperties;
+        public const VkStructureType                   STYPE = VkStructureType.DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       uint                              drmFormatModifierCount;
+        public       VkDrmFormatModifierPropertiesEXT* pDrmFormatModifierProperties;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public ulong           drmFormatModifier;
-        public VkSharingMode   sharingMode;
-        public uint            queueFamilyIndexCount;
-        public uint*           pQueueFamilyIndices;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       ulong           drmFormatModifier;
+        public       VkSharingMode   sharingMode;
+        public       uint            queueFamilyIndexCount;
+        public       uint*           pQueueFamilyIndices;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageDrmFormatModifierListCreateInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            drmFormatModifierCount;
-        public ulong*          pDrmFormatModifiers;
+        public const VkStructureType STYPE = VkStructureType.IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            drmFormatModifierCount;
+        public       ulong*          pDrmFormatModifiers;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageDrmFormatModifierExplicitCreateInfoEXT
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public ulong                drmFormatModifier;
-        public uint                 drmFormatModifierPlaneCount;
-        public VkSubresourceLayout* pPlaneLayouts;
+        public const VkStructureType      STYPE = VkStructureType.IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       ulong                drmFormatModifier;
+        public       uint                 drmFormatModifierPlaneCount;
+        public       VkSubresourceLayout* pPlaneLayouts;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageDrmFormatModifierPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public ulong           drmFormatModifier;
+        public const VkStructureType STYPE = VkStructureType.IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       ulong           drmFormatModifier;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkValidationCacheCreateInfoEXT
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkValidationCacheCreateFlagsEXT flags;
-        public nuint                           initialDataSize;
-        public void*                           pInitialData;
+        public const VkStructureType                 STYPE = VkStructureType.VALIDATION_CACHE_CREATE_INFO_EXT;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkValidationCacheCreateFlagsEXT flags;
+        public       nuint                           initialDataSize;
+        public       void*                           pInitialData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkShaderModuleValidationCacheCreateInfoEXT
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public VkValidationCacheEXT validationCache;
+        public const VkStructureType      STYPE = VkStructureType.SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkValidationCacheEXT validationCache;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4141,30 +4433,33 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportShadingRateImageStateCreateInfoNV
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkBool32                shadingRateImageEnable;
-        public uint                    viewportCount;
-        public VkShadingRatePaletteNV* pShadingRatePalettes;
+        public const VkStructureType         STYPE = VkStructureType.PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkBool32                shadingRateImageEnable;
+        public       uint                    viewportCount;
+        public       VkShadingRatePaletteNV* pShadingRatePalettes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShadingRateImageFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shadingRateImage;
-        public VkBool32        shadingRateCoarseSampleOrder;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shadingRateImage;
+        public       VkBool32        shadingRateCoarseSampleOrder;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShadingRateImagePropertiesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkExtent2D      shadingRateTexelSize;
-        public uint            shadingRatePaletteSize;
-        public uint            shadingRateMaxCoarseSamples;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkExtent2D      shadingRateTexelSize;
+        public       uint            shadingRatePaletteSize;
+        public       uint            shadingRateMaxCoarseSamples;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4187,68 +4482,73 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV
     {
-        public VkStructureType              sType;
-        public void*                        pNext;
-        public VkCoarseSampleOrderTypeNV    sampleOrderType;
-        public uint                         customSampleOrderCount;
-        public VkCoarseSampleOrderCustomNV* pCustomSampleOrders;
+        public const VkStructureType              STYPE = VkStructureType.PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV;
+        public       VkStructureType              sType;
+        public       void*                        pNext;
+        public       VkCoarseSampleOrderTypeNV    sampleOrderType;
+        public       uint                         customSampleOrderCount;
+        public       VkCoarseSampleOrderCustomNV* pCustomSampleOrders;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRayTracingShaderGroupCreateInfoNV
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkRayTracingShaderGroupTypeKHR type;
-        public uint                           generalShader;
-        public uint                           closestHitShader;
-        public uint                           anyHitShader;
-        public uint                           intersectionShader;
+        public const VkStructureType                STYPE = VkStructureType.RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkRayTracingShaderGroupTypeKHR type;
+        public       uint                           generalShader;
+        public       uint                           closestHitShader;
+        public       uint                           anyHitShader;
+        public       uint                           intersectionShader;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRayTracingPipelineCreateInfoNV
     {
-        public VkStructureType                      sType;
-        public void*                                pNext;
-        public VkPipelineCreateFlags                flags;
-        public uint                                 stageCount;
-        public VkPipelineShaderStageCreateInfo*     pStages;
-        public uint                                 groupCount;
-        public VkRayTracingShaderGroupCreateInfoNV* pGroups;
-        public uint                                 maxRecursionDepth;
-        public VkPipelineLayout                     layout;
-        public VkPipeline                           basePipelineHandle;
-        public int                                  basePipelineIndex;
+        public const VkStructureType                      STYPE = VkStructureType.RAY_TRACING_PIPELINE_CREATE_INFO_NV;
+        public       VkStructureType                      sType;
+        public       void*                                pNext;
+        public       VkPipelineCreateFlags                flags;
+        public       uint                                 stageCount;
+        public       VkPipelineShaderStageCreateInfo*     pStages;
+        public       uint                                 groupCount;
+        public       VkRayTracingShaderGroupCreateInfoNV* pGroups;
+        public       uint                                 maxRecursionDepth;
+        public       VkPipelineLayout                     layout;
+        public       VkPipeline                           basePipelineHandle;
+        public       int                                  basePipelineIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeometryTrianglesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBuffer        vertexData;
-        public VkDeviceSize    vertexOffset;
-        public uint            vertexCount;
-        public VkDeviceSize    vertexStride;
-        public VkFormat        vertexFormat;
-        public VkBuffer        indexData;
-        public VkDeviceSize    indexOffset;
-        public uint            indexCount;
-        public VkIndexType     indexType;
-        public VkBuffer        transformData;
-        public VkDeviceSize    transformOffset;
+        public const VkStructureType STYPE = VkStructureType.GEOMETRY_TRIANGLES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBuffer        vertexData;
+        public       VkDeviceSize    vertexOffset;
+        public       uint            vertexCount;
+        public       VkDeviceSize    vertexStride;
+        public       VkFormat        vertexFormat;
+        public       VkBuffer        indexData;
+        public       VkDeviceSize    indexOffset;
+        public       uint            indexCount;
+        public       VkIndexType     indexType;
+        public       VkBuffer        transformData;
+        public       VkDeviceSize    transformOffset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeometryAABBNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBuffer        aabbData;
-        public uint            numAABBs;
-        public uint            stride;
-        public VkDeviceSize    offset;
+        public const VkStructureType STYPE = VkStructureType.GEOMETRY_AABB_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBuffer        aabbData;
+        public       uint            numAABBs;
+        public       uint            stride;
+        public       VkDeviceSize    offset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4261,77 +4561,84 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeometryNV
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkGeometryTypeKHR  geometryType;
-        public VkGeometryDataNV   geometry;
-        public VkGeometryFlagsKHR flags;
+        public const VkStructureType    STYPE = VkStructureType.GEOMETRY_NV;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkGeometryTypeKHR  geometryType;
+        public       VkGeometryDataNV   geometry;
+        public       VkGeometryFlagsKHR flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureInfoNV
     {
-        public VkStructureType                     sType;
-        public void*                               pNext;
-        public VkAccelerationStructureTypeNV       type;
-        public VkBuildAccelerationStructureFlagsNV flags;
-        public uint                                instanceCount;
-        public uint                                geometryCount;
-        public VkGeometryNV*                       pGeometries;
+        public const VkStructureType                     STYPE = VkStructureType.ACCELERATION_STRUCTURE_INFO_NV;
+        public       VkStructureType                     sType;
+        public       void*                               pNext;
+        public       VkAccelerationStructureTypeNV       type;
+        public       VkBuildAccelerationStructureFlagsNV flags;
+        public       uint                                instanceCount;
+        public       uint                                geometryCount;
+        public       VkGeometryNV*                       pGeometries;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureCreateInfoNV
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkDeviceSize                  compactedSize;
-        public VkAccelerationStructureInfoNV info;
+        public const VkStructureType               STYPE = VkStructureType.ACCELERATION_STRUCTURE_CREATE_INFO_NV;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkDeviceSize                  compactedSize;
+        public       VkAccelerationStructureInfoNV info;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindAccelerationStructureMemoryInfoNV
     {
-        public VkStructureType           sType;
-        public void*                     pNext;
-        public VkAccelerationStructureNV accelerationStructure;
-        public VkDeviceMemory            memory;
-        public VkDeviceSize              memoryOffset;
-        public uint                      deviceIndexCount;
-        public uint*                     pDeviceIndices;
+        public const VkStructureType           STYPE = VkStructureType.BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       VkAccelerationStructureNV accelerationStructure;
+        public       VkDeviceMemory            memory;
+        public       VkDeviceSize              memoryOffset;
+        public       uint                      deviceIndexCount;
+        public       uint*                     pDeviceIndices;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkWriteDescriptorSetAccelerationStructureNV
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public uint                       accelerationStructureCount;
-        public VkAccelerationStructureNV* pAccelerationStructures;
+        public const VkStructureType            STYPE = VkStructureType.WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       uint                       accelerationStructureCount;
+        public       VkAccelerationStructureNV* pAccelerationStructures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureMemoryRequirementsInfoNV
     {
-        public VkStructureType                                 sType;
-        public void*                                           pNext;
-        public VkAccelerationStructureMemoryRequirementsTypeNV type;
-        public VkAccelerationStructureNV                       accelerationStructure;
+        public const VkStructureType                                 STYPE = VkStructureType.ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV;
+        public       VkStructureType                                 sType;
+        public       void*                                           pNext;
+        public       VkAccelerationStructureMemoryRequirementsTypeNV type;
+        public       VkAccelerationStructureNV                       accelerationStructure;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRayTracingPropertiesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            shaderGroupHandleSize;
-        public uint            maxRecursionDepth;
-        public uint            maxShaderGroupStride;
-        public uint            shaderGroupBaseAlignment;
-        public ulong           maxGeometryCount;
-        public ulong           maxInstanceCount;
-        public ulong           maxTriangleCount;
-        public uint            maxDescriptorSetAccelerationStructures;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            shaderGroupHandleSize;
+        public       uint            maxRecursionDepth;
+        public       uint            maxShaderGroupStride;
+        public       uint            shaderGroupBaseAlignment;
+        public       ulong           maxGeometryCount;
+        public       ulong           maxInstanceCount;
+        public       ulong           maxTriangleCount;
+        public       uint            maxDescriptorSetAccelerationStructures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4398,120 +4705,133 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        representativeFragmentTest;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        representativeFragmentTest;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRepresentativeFragmentTestStateCreateInfoNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        representativeFragmentTestEnable;
+        public const VkStructureType STYPE = VkStructureType.PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        representativeFragmentTestEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceImageViewImageFormatInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkImageViewType imageViewType;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkImageViewType imageViewType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFilterCubicImageViewImageFormatPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        filterCubic;
-        public VkBool32        filterCubicMinmax;
+        public const VkStructureType STYPE = VkStructureType.FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        filterCubic;
+        public       VkBool32        filterCubicMinmax;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceQueueGlobalPriorityCreateInfoEXT
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkQueueGlobalPriorityEXT globalPriority;
+        public const VkStructureType          STYPE = VkStructureType.DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkQueueGlobalPriorityEXT globalPriority;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImportMemoryHostPointerInfoEXT
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkExternalMemoryHandleTypeFlags handleType;
-        public void*                           pHostPointer;
+        public const VkStructureType                 STYPE = VkStructureType.IMPORT_MEMORY_HOST_POINTER_INFO_EXT;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkExternalMemoryHandleTypeFlags handleType;
+        public       void*                           pHostPointer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryHostPointerPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            memoryTypeBits;
+        public const VkStructureType STYPE = VkStructureType.MEMORY_HOST_POINTER_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            memoryTypeBits;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExternalMemoryHostPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceSize    minImportedHostPointerAlignment;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceSize    minImportedHostPointerAlignment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCompilerControlCreateInfoAMD
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public VkPipelineCompilerControlFlagsAMD compilerControlFlags;
+        public const VkStructureType                   STYPE = VkStructureType.PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkPipelineCompilerControlFlagsAMD compilerControlFlags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCalibratedTimestampInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkTimeDomainEXT timeDomain;
+        public const VkStructureType STYPE = VkStructureType.CALIBRATED_TIMESTAMP_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkTimeDomainEXT timeDomain;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderCorePropertiesAMD
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            shaderEngineCount;
-        public uint            shaderArraysPerEngineCount;
-        public uint            computeUnitsPerShaderArray;
-        public uint            simdPerComputeUnit;
-        public uint            wavefrontsPerSimd;
-        public uint            wavefrontSize;
-        public uint            sgprsPerSimd;
-        public uint            minSgprAllocation;
-        public uint            maxSgprAllocation;
-        public uint            sgprAllocationGranularity;
-        public uint            vgprsPerSimd;
-        public uint            minVgprAllocation;
-        public uint            maxVgprAllocation;
-        public uint            vgprAllocationGranularity;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            shaderEngineCount;
+        public       uint            shaderArraysPerEngineCount;
+        public       uint            computeUnitsPerShaderArray;
+        public       uint            simdPerComputeUnit;
+        public       uint            wavefrontsPerSimd;
+        public       uint            wavefrontSize;
+        public       uint            sgprsPerSimd;
+        public       uint            minSgprAllocation;
+        public       uint            maxSgprAllocation;
+        public       uint            sgprAllocationGranularity;
+        public       uint            vgprsPerSimd;
+        public       uint            minVgprAllocation;
+        public       uint            maxVgprAllocation;
+        public       uint            vgprAllocationGranularity;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceMemoryOverallocationCreateInfoAMD
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public VkMemoryOverallocationBehaviorAMD overallocationBehavior;
+        public const VkStructureType                   STYPE = VkStructureType.DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkMemoryOverallocationBehaviorAMD overallocationBehavior;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxVertexAttribDivisor;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxVertexAttribDivisor;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4524,19 +4844,21 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineVertexInputDivisorStateCreateInfoEXT
     {
-        public VkStructureType                            sType;
-        public void*                                      pNext;
-        public uint                                       vertexBindingDivisorCount;
-        public VkVertexInputBindingDivisorDescriptionEXT* pVertexBindingDivisors;
+        public const VkStructureType                            STYPE = VkStructureType.PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT;
+        public       VkStructureType                            sType;
+        public       void*                                      pNext;
+        public       uint                                       vertexBindingDivisorCount;
+        public       VkVertexInputBindingDivisorDescriptionEXT* pVertexBindingDivisors;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        vertexAttributeInstanceRateDivisor;
-        public VkBool32        vertexAttributeInstanceRateZeroDivisor;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        vertexAttributeInstanceRateDivisor;
+        public       VkBool32        vertexAttributeInstanceRateZeroDivisor;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4549,34 +4871,38 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCreationFeedbackCreateInfoEXT
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkPipelineCreationFeedbackEXT* pPipelineCreationFeedback;
-        public uint                           pipelineStageCreationFeedbackCount;
-        public VkPipelineCreationFeedbackEXT* pPipelineStageCreationFeedbacks;
+        public const VkStructureType                STYPE = VkStructureType.PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkPipelineCreationFeedbackEXT* pPipelineCreationFeedback;
+        public       uint                           pipelineStageCreationFeedbackCount;
+        public       VkPipelineCreationFeedbackEXT* pPipelineStageCreationFeedbacks;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        computeDerivativeGroupQuads;
-        public VkBool32        computeDerivativeGroupLinear;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        computeDerivativeGroupQuads;
+        public       VkBool32        computeDerivativeGroupLinear;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMeshShaderFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        taskShader;
-        public VkBool32        meshShader;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        taskShader;
+        public       VkBool32        meshShader;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMeshShaderPropertiesNV
     {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV;
         public       VkStructureType sType;
         public       void*           pNext;
         public       uint            maxDrawMeshTasksCount;
@@ -4604,59 +4930,66 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        fragmentShaderBarycentric;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        fragmentShaderBarycentric;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderImageFootprintFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        imageFootprint;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        imageFootprint;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportExclusiveScissorStateCreateInfoNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            exclusiveScissorCount;
-        public VkRect2D*       pExclusiveScissors;
+        public const VkStructureType STYPE = VkStructureType.PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            exclusiveScissorCount;
+        public       VkRect2D*       pExclusiveScissors;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExclusiveScissorFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        exclusiveScissor;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        exclusiveScissor;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkQueueFamilyCheckpointPropertiesNV
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public VkPipelineStageFlags checkpointExecutionStageMask;
+        public const VkStructureType      STYPE = VkStructureType.QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkPipelineStageFlags checkpointExecutionStageMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCheckpointDataNV
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public VkPipelineStageFlags stage;
-        public void*                pCheckpointMarker;
+        public const VkStructureType      STYPE = VkStructureType.CHECKPOINT_DATA_NV;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkPipelineStageFlags stage;
+        public       void*                pCheckpointMarker;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderIntegerFunctions2;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderIntegerFunctions2;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4669,216 +5002,241 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkInitializePerformanceApiInfoINTEL
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public void*           pUserData;
+        public const VkStructureType STYPE = VkStructureType.INITIALIZE_PERFORMANCE_API_INFO_INTEL;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       void*           pUserData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkQueryPoolPerformanceQueryCreateInfoINTEL
     {
-        public VkStructureType              sType;
-        public void*                        pNext;
-        public VkQueryPoolSamplingModeINTEL performanceCountersSampling;
+        public const VkStructureType              STYPE = VkStructureType.QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL;
+        public       VkStructureType              sType;
+        public       void*                        pNext;
+        public       VkQueryPoolSamplingModeINTEL performanceCountersSampling;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceMarkerInfoINTEL
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public ulong           marker;
+        public const VkStructureType STYPE = VkStructureType.PERFORMANCE_MARKER_INFO_INTEL;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       ulong           marker;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceStreamMarkerInfoINTEL
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            marker;
+        public const VkStructureType STYPE = VkStructureType.PERFORMANCE_STREAM_MARKER_INFO_INTEL;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            marker;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceOverrideInfoINTEL
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkPerformanceOverrideTypeINTEL type;
-        public VkBool32                       enable;
-        public ulong                          parameter;
+        public const VkStructureType                STYPE = VkStructureType.PERFORMANCE_OVERRIDE_INFO_INTEL;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkPerformanceOverrideTypeINTEL type;
+        public       VkBool32                       enable;
+        public       ulong                          parameter;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceConfigurationAcquireInfoINTEL
     {
-        public VkStructureType                     sType;
-        public void*                               pNext;
-        public VkPerformanceConfigurationTypeINTEL type;
+        public const VkStructureType                     STYPE = VkStructureType.PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL;
+        public       VkStructureType                     sType;
+        public       void*                               pNext;
+        public       VkPerformanceConfigurationTypeINTEL type;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevicePCIBusInfoPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            pciDomain;
-        public uint            pciBus;
-        public uint            pciDevice;
-        public uint            pciFunction;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            pciDomain;
+        public       uint            pciBus;
+        public       uint            pciDevice;
+        public       uint            pciFunction;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayNativeHdrSurfaceCapabilitiesAMD
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        localDimmingSupport;
+        public const VkStructureType STYPE = VkStructureType.DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        localDimmingSupport;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSwapchainDisplayNativeHdrCreateInfoAMD
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        localDimmingEnable;
+        public const VkStructureType STYPE = VkStructureType.SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        localDimmingEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        fragmentDensityMap;
-        public VkBool32        fragmentDensityMapDynamic;
-        public VkBool32        fragmentDensityMapNonSubsampledImages;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        fragmentDensityMap;
+        public       VkBool32        fragmentDensityMapDynamic;
+        public       VkBool32        fragmentDensityMapNonSubsampledImages;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkExtent2D      minFragmentDensityTexelSize;
-        public VkExtent2D      maxFragmentDensityTexelSize;
-        public VkBool32        fragmentDensityInvocations;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkExtent2D      minFragmentDensityTexelSize;
+        public       VkExtent2D      maxFragmentDensityTexelSize;
+        public       VkBool32        fragmentDensityInvocations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassFragmentDensityMapCreateInfoEXT
     {
-        public VkStructureType       sType;
-        public void*                 pNext;
-        public VkAttachmentReference fragmentDensityMapAttachment;
+        public const VkStructureType       STYPE = VkStructureType.RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkAttachmentReference fragmentDensityMapAttachment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSubgroupSizeControlFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        subgroupSizeControl;
-        public VkBool32        computeFullSubgroups;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        subgroupSizeControl;
+        public       VkBool32        computeFullSubgroups;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSubgroupSizeControlPropertiesEXT
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public uint               minSubgroupSize;
-        public uint               maxSubgroupSize;
-        public uint               maxComputeWorkgroupSubgroups;
-        public VkShaderStageFlags requiredSubgroupSizeStages;
+        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       uint               minSubgroupSize;
+        public       uint               maxSubgroupSize;
+        public       uint               maxComputeWorkgroupSubgroups;
+        public       VkShaderStageFlags requiredSubgroupSizeStages;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            requiredSubgroupSize;
+        public const VkStructureType STYPE = VkStructureType.PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            requiredSubgroupSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderCoreProperties2AMD
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkShaderCorePropertiesFlagsAMD shaderCoreFeatures;
-        public uint                           activeComputeUnitCount;
+        public const VkStructureType                STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkShaderCorePropertiesFlagsAMD shaderCoreFeatures;
+        public       uint                           activeComputeUnitCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCoherentMemoryFeaturesAMD
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        deviceCoherentMemory;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        deviceCoherentMemory;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderImageInt64Atomics;
-        public VkBool32        sparseImageInt64Atomics;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderImageInt64Atomics;
+        public       VkBool32        sparseImageInt64Atomics;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMemoryBudgetPropertiesEXT
     {
-        public VkStructureType         sType;
-        public void*                   pNext;
-        public VkArray16<VkDeviceSize> heapBudget;
-        public VkArray16<VkDeviceSize> heapUsage;
+        public const VkStructureType         STYPE = VkStructureType.PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkArray16<VkDeviceSize> heapBudget;
+        public       VkArray16<VkDeviceSize> heapUsage;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMemoryPriorityFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        memoryPriority;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        memoryPriority;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryPriorityAllocateInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public float           priority;
+        public const VkStructureType STYPE = VkStructureType.MEMORY_PRIORITY_ALLOCATE_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       float           priority;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        dedicatedAllocationImageAliasing;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        dedicatedAllocationImageAliasing;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        bufferDeviceAddress;
-        public VkBool32        bufferDeviceAddressCaptureReplay;
-        public VkBool32        bufferDeviceAddressMultiDevice;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        bufferDeviceAddress;
+        public       VkBool32        bufferDeviceAddressCaptureReplay;
+        public       VkBool32        bufferDeviceAddressMultiDevice;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferDeviceAddressCreateInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceAddress deviceAddress;
+        public const VkStructureType STYPE = VkStructureType.BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceAddress deviceAddress;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceToolPropertiesEXT
     {
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT;
         public       VkStructureType       sType;
         public       void*                 pNext;
         public fixed sbyte                 name[VK_MAX_EXTENSION_NAME_SIZE];
@@ -4891,219 +5249,240 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkValidationFeaturesEXT
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public uint                           enabledValidationFeatureCount;
-        public VkValidationFeatureEnableEXT*  pEnabledValidationFeatures;
-        public uint                           disabledValidationFeatureCount;
-        public VkValidationFeatureDisableEXT* pDisabledValidationFeatures;
+        public const VkStructureType                STYPE = VkStructureType.VALIDATION_FEATURES_EXT;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       uint                           enabledValidationFeatureCount;
+        public       VkValidationFeatureEnableEXT*  pEnabledValidationFeatures;
+        public       uint                           disabledValidationFeatureCount;
+        public       VkValidationFeatureDisableEXT* pDisabledValidationFeatures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCooperativeMatrixPropertiesNV
     {
-        public VkStructureType   sType;
-        public void*             pNext;
-        public uint              MSize;
-        public uint              NSize;
-        public uint              KSize;
-        public VkComponentTypeNV AType;
-        public VkComponentTypeNV BType;
-        public VkComponentTypeNV CType;
-        public VkComponentTypeNV DType;
-        public VkScopeNV         scope;
+        public const VkStructureType   STYPE = VkStructureType.COOPERATIVE_MATRIX_PROPERTIES_NV;
+        public       VkStructureType   sType;
+        public       void*             pNext;
+        public       uint              MSize;
+        public       uint              NSize;
+        public       uint              KSize;
+        public       VkComponentTypeNV AType;
+        public       VkComponentTypeNV BType;
+        public       VkComponentTypeNV CType;
+        public       VkComponentTypeNV DType;
+        public       VkScopeNV         scope;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCooperativeMatrixFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        cooperativeMatrix;
-        public VkBool32        cooperativeMatrixRobustBufferAccess;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        cooperativeMatrix;
+        public       VkBool32        cooperativeMatrixRobustBufferAccess;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCooperativeMatrixPropertiesNV
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkShaderStageFlags cooperativeMatrixSupportedStages;
+        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkShaderStageFlags cooperativeMatrixSupportedStages;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCoverageReductionModeFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        coverageReductionMode;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        coverageReductionMode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCoverageReductionStateCreateInfoNV
     {
-        public VkStructureType                               sType;
-        public void*                                         pNext;
-        public VkPipelineCoverageReductionStateCreateFlagsNV flags;
-        public VkCoverageReductionModeNV                     coverageReductionMode;
+        public const VkStructureType                               STYPE = VkStructureType.PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV;
+        public       VkStructureType                               sType;
+        public       void*                                         pNext;
+        public       VkPipelineCoverageReductionStateCreateFlagsNV flags;
+        public       VkCoverageReductionModeNV                     coverageReductionMode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFramebufferMixedSamplesCombinationNV
     {
-        public VkStructureType           sType;
-        public void*                     pNext;
-        public VkCoverageReductionModeNV coverageReductionMode;
-        public VkSampleCountFlags        rasterizationSamples;
-        public VkSampleCountFlags        depthStencilSamples;
-        public VkSampleCountFlags        colorSamples;
+        public const VkStructureType           STYPE = VkStructureType.FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       VkCoverageReductionModeNV coverageReductionMode;
+        public       VkSampleCountFlags        rasterizationSamples;
+        public       VkSampleCountFlags        depthStencilSamples;
+        public       VkSampleCountFlags        colorSamples;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        fragmentShaderSampleInterlock;
-        public VkBool32        fragmentShaderPixelInterlock;
-        public VkBool32        fragmentShaderShadingRateInterlock;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        fragmentShaderSampleInterlock;
+        public       VkBool32        fragmentShaderPixelInterlock;
+        public       VkBool32        fragmentShaderShadingRateInterlock;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceYcbcrImageArraysFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        ycbcrImageArrays;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        ycbcrImageArrays;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkHeadlessSurfaceCreateInfoEXT
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkHeadlessSurfaceCreateFlagsEXT flags;
+        public const VkStructureType                 STYPE = VkStructureType.HEADLESS_SURFACE_CREATE_INFO_EXT;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkHeadlessSurfaceCreateFlagsEXT flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceLineRasterizationFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        rectangularLines;
-        public VkBool32        bresenhamLines;
-        public VkBool32        smoothLines;
-        public VkBool32        stippledRectangularLines;
-        public VkBool32        stippledBresenhamLines;
-        public VkBool32        stippledSmoothLines;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        rectangularLines;
+        public       VkBool32        bresenhamLines;
+        public       VkBool32        smoothLines;
+        public       VkBool32        stippledRectangularLines;
+        public       VkBool32        stippledBresenhamLines;
+        public       VkBool32        stippledSmoothLines;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceLineRasterizationPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            lineSubPixelPrecisionBits;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            lineSubPixelPrecisionBits;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationLineStateCreateInfoEXT
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkLineRasterizationModeEXT lineRasterizationMode;
-        public VkBool32                   stippledLineEnable;
-        public uint                       lineStippleFactor;
-        public ushort                     lineStipplePattern;
+        public const VkStructureType            STYPE = VkStructureType.PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkLineRasterizationModeEXT lineRasterizationMode;
+        public       VkBool32                   stippledLineEnable;
+        public       uint                       lineStippleFactor;
+        public       ushort                     lineStipplePattern;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderBufferFloat32Atomics;
-        public VkBool32        shaderBufferFloat32AtomicAdd;
-        public VkBool32        shaderBufferFloat64Atomics;
-        public VkBool32        shaderBufferFloat64AtomicAdd;
-        public VkBool32        shaderSharedFloat32Atomics;
-        public VkBool32        shaderSharedFloat32AtomicAdd;
-        public VkBool32        shaderSharedFloat64Atomics;
-        public VkBool32        shaderSharedFloat64AtomicAdd;
-        public VkBool32        shaderImageFloat32Atomics;
-        public VkBool32        shaderImageFloat32AtomicAdd;
-        public VkBool32        sparseImageFloat32Atomics;
-        public VkBool32        sparseImageFloat32AtomicAdd;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderBufferFloat32Atomics;
+        public       VkBool32        shaderBufferFloat32AtomicAdd;
+        public       VkBool32        shaderBufferFloat64Atomics;
+        public       VkBool32        shaderBufferFloat64AtomicAdd;
+        public       VkBool32        shaderSharedFloat32Atomics;
+        public       VkBool32        shaderSharedFloat32AtomicAdd;
+        public       VkBool32        shaderSharedFloat64Atomics;
+        public       VkBool32        shaderSharedFloat64AtomicAdd;
+        public       VkBool32        shaderImageFloat32Atomics;
+        public       VkBool32        shaderImageFloat32AtomicAdd;
+        public       VkBool32        sparseImageFloat32Atomics;
+        public       VkBool32        sparseImageFloat32AtomicAdd;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceIndexTypeUint8FeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        indexTypeUint8;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        indexTypeUint8;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExtendedDynamicStateFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        extendedDynamicState;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        extendedDynamicState;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        shaderDemoteToHelperInvocation;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderDemoteToHelperInvocation;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxGraphicsShaderGroupCount;
-        public uint            maxIndirectSequenceCount;
-        public uint            maxIndirectCommandsTokenCount;
-        public uint            maxIndirectCommandsStreamCount;
-        public uint            maxIndirectCommandsTokenOffset;
-        public uint            maxIndirectCommandsStreamStride;
-        public uint            minSequencesCountBufferOffsetAlignment;
-        public uint            minSequencesIndexBufferOffsetAlignment;
-        public uint            minIndirectCommandsBufferOffsetAlignment;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxGraphicsShaderGroupCount;
+        public       uint            maxIndirectSequenceCount;
+        public       uint            maxIndirectCommandsTokenCount;
+        public       uint            maxIndirectCommandsStreamCount;
+        public       uint            maxIndirectCommandsTokenOffset;
+        public       uint            maxIndirectCommandsStreamStride;
+        public       uint            minSequencesCountBufferOffsetAlignment;
+        public       uint            minSequencesIndexBufferOffsetAlignment;
+        public       uint            minIndirectCommandsBufferOffsetAlignment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        deviceGeneratedCommands;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        deviceGeneratedCommands;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGraphicsShaderGroupCreateInfoNV
     {
-        public VkStructureType                        sType;
-        public void*                                  pNext;
-        public uint                                   stageCount;
-        public VkPipelineShaderStageCreateInfo*       pStages;
-        public VkPipelineVertexInputStateCreateInfo*  pVertexInputState;
-        public VkPipelineTessellationStateCreateInfo* pTessellationState;
+        public const VkStructureType                        STYPE = VkStructureType.GRAPHICS_SHADER_GROUP_CREATE_INFO_NV;
+        public       VkStructureType                        sType;
+        public       void*                                  pNext;
+        public       uint                                   stageCount;
+        public       VkPipelineShaderStageCreateInfo*       pStages;
+        public       VkPipelineVertexInputStateCreateInfo*  pVertexInputState;
+        public       VkPipelineTessellationStateCreateInfo* pTessellationState;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGraphicsPipelineShaderGroupsCreateInfoNV
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public uint                               groupCount;
-        public VkGraphicsShaderGroupCreateInfoNV* pGroups;
-        public uint                               pipelineCount;
-        public VkPipeline*                        pPipelines;
+        public const VkStructureType                    STYPE = VkStructureType.GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       uint                               groupCount;
+        public       VkGraphicsShaderGroupCreateInfoNV* pGroups;
+        public       uint                               pipelineCount;
+        public       VkPipeline*                        pPipelines;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5144,272 +5523,299 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkIndirectCommandsLayoutTokenNV
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkIndirectCommandsTokenTypeNV tokenType;
-        public uint                          stream;
-        public uint                          offset;
-        public uint                          vertexBindingUnit;
-        public VkBool32                      vertexDynamicStride;
-        public VkPipelineLayout              pushconstantPipelineLayout;
-        public VkShaderStageFlags            pushconstantShaderStageFlags;
-        public uint                          pushconstantOffset;
-        public uint                          pushconstantSize;
-        public VkIndirectStateFlagsNV        indirectStateFlags;
-        public uint                          indexTypeCount;
-        public VkIndexType*                  pIndexTypes;
-        public uint*                         pIndexTypeValues;
+        public const VkStructureType               STYPE = VkStructureType.INDIRECT_COMMANDS_LAYOUT_TOKEN_NV;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkIndirectCommandsTokenTypeNV tokenType;
+        public       uint                          stream;
+        public       uint                          offset;
+        public       uint                          vertexBindingUnit;
+        public       VkBool32                      vertexDynamicStride;
+        public       VkPipelineLayout              pushconstantPipelineLayout;
+        public       VkShaderStageFlags            pushconstantShaderStageFlags;
+        public       uint                          pushconstantOffset;
+        public       uint                          pushconstantSize;
+        public       VkIndirectStateFlagsNV        indirectStateFlags;
+        public       uint                          indexTypeCount;
+        public       VkIndexType*                  pIndexTypes;
+        public       uint*                         pIndexTypeValues;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkIndirectCommandsLayoutCreateInfoNV
     {
-        public VkStructureType                      sType;
-        public void*                                pNext;
-        public VkIndirectCommandsLayoutUsageFlagsNV flags;
-        public VkPipelineBindPoint                  pipelineBindPoint;
-        public uint                                 tokenCount;
-        public VkIndirectCommandsLayoutTokenNV*     pTokens;
-        public uint                                 streamCount;
-        public uint*                                pStreamStrides;
+        public const VkStructureType                      STYPE = VkStructureType.INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV;
+        public       VkStructureType                      sType;
+        public       void*                                pNext;
+        public       VkIndirectCommandsLayoutUsageFlagsNV flags;
+        public       VkPipelineBindPoint                  pipelineBindPoint;
+        public       uint                                 tokenCount;
+        public       VkIndirectCommandsLayoutTokenNV*     pTokens;
+        public       uint                                 streamCount;
+        public       uint*                                pStreamStrides;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeneratedCommandsInfoNV
     {
-        public VkStructureType             sType;
-        public void*                       pNext;
-        public VkPipelineBindPoint         pipelineBindPoint;
-        public VkPipeline                  pipeline;
-        public VkIndirectCommandsLayoutNV  indirectCommandsLayout;
-        public uint                        streamCount;
-        public VkIndirectCommandsStreamNV* pStreams;
-        public uint                        sequencesCount;
-        public VkBuffer                    preprocessBuffer;
-        public VkDeviceSize                preprocessOffset;
-        public VkDeviceSize                preprocessSize;
-        public VkBuffer                    sequencesCountBuffer;
-        public VkDeviceSize                sequencesCountOffset;
-        public VkBuffer                    sequencesIndexBuffer;
-        public VkDeviceSize                sequencesIndexOffset;
+        public const VkStructureType             STYPE = VkStructureType.GENERATED_COMMANDS_INFO_NV;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       VkPipelineBindPoint         pipelineBindPoint;
+        public       VkPipeline                  pipeline;
+        public       VkIndirectCommandsLayoutNV  indirectCommandsLayout;
+        public       uint                        streamCount;
+        public       VkIndirectCommandsStreamNV* pStreams;
+        public       uint                        sequencesCount;
+        public       VkBuffer                    preprocessBuffer;
+        public       VkDeviceSize                preprocessOffset;
+        public       VkDeviceSize                preprocessSize;
+        public       VkBuffer                    sequencesCountBuffer;
+        public       VkDeviceSize                sequencesCountOffset;
+        public       VkBuffer                    sequencesIndexBuffer;
+        public       VkDeviceSize                sequencesIndexOffset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeneratedCommandsMemoryRequirementsInfoNV
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkPipelineBindPoint        pipelineBindPoint;
-        public VkPipeline                 pipeline;
-        public VkIndirectCommandsLayoutNV indirectCommandsLayout;
-        public uint                       maxSequencesCount;
+        public const VkStructureType            STYPE = VkStructureType.GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkPipelineBindPoint        pipelineBindPoint;
+        public       VkPipeline                 pipeline;
+        public       VkIndirectCommandsLayoutNV indirectCommandsLayout;
+        public       uint                       maxSequencesCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        texelBufferAlignment;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        texelBufferAlignment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceSize    storageTexelBufferOffsetAlignmentBytes;
-        public VkBool32        storageTexelBufferOffsetSingleTexelAlignment;
-        public VkDeviceSize    uniformTexelBufferOffsetAlignmentBytes;
-        public VkBool32        uniformTexelBufferOffsetSingleTexelAlignment;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceSize    storageTexelBufferOffsetAlignmentBytes;
+        public       VkBool32        storageTexelBufferOffsetSingleTexelAlignment;
+        public       VkDeviceSize    uniformTexelBufferOffsetAlignmentBytes;
+        public       VkBool32        uniformTexelBufferOffsetSingleTexelAlignment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassTransformBeginInfoQCOM
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkSurfaceTransformFlagsKHR transform;
+        public const VkStructureType            STYPE = VkStructureType.RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkSurfaceTransformFlagsKHR transform;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkSurfaceTransformFlagsKHR transform;
-        public VkRect2D                   renderArea;
+        public const VkStructureType            STYPE = VkStructureType.COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkSurfaceTransformFlagsKHR transform;
+        public       VkRect2D                   renderArea;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDeviceMemoryReportFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        deviceMemoryReport;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        deviceMemoryReport;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceMemoryReportCallbackDataEXT
     {
-        public VkStructureType                  sType;
-        public void*                            pNext;
-        public VkDeviceMemoryReportFlagsEXT     flags;
-        public VkDeviceMemoryReportEventTypeEXT type;
-        public ulong                            memoryObjectId;
-        public VkDeviceSize                     size;
-        public VkObjectType                     objectType;
-        public ulong                            objectHandle;
-        public uint                             heapIndex;
+        public const VkStructureType                  STYPE = VkStructureType.DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT;
+        public       VkStructureType                  sType;
+        public       void*                            pNext;
+        public       VkDeviceMemoryReportFlagsEXT     flags;
+        public       VkDeviceMemoryReportEventTypeEXT type;
+        public       ulong                            memoryObjectId;
+        public       VkDeviceSize                     size;
+        public       VkObjectType                     objectType;
+        public       ulong                            objectHandle;
+        public       uint                             heapIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceDeviceMemoryReportCreateInfoEXT
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkDeviceMemoryReportFlagsEXT  flags;
-        public DeviceMemoryReportCallbackEXT pfnUserCallback;
-        public void*                         pUserData;
+        public const VkStructureType               STYPE = VkStructureType.DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkDeviceMemoryReportFlagsEXT  flags;
+        public       DeviceMemoryReportCallbackEXT pfnUserCallback;
+        public       void*                         pUserData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRobustness2FeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        robustBufferAccess2;
-        public VkBool32        robustImageAccess2;
-        public VkBool32        nullDescriptor;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        robustBufferAccess2;
+        public       VkBool32        robustImageAccess2;
+        public       VkBool32        nullDescriptor;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRobustness2PropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceSize    robustStorageBufferAccessSizeAlignment;
-        public VkDeviceSize    robustUniformBufferAccessSizeAlignment;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceSize    robustStorageBufferAccessSizeAlignment;
+        public       VkDeviceSize    robustUniformBufferAccessSizeAlignment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSamplerCustomBorderColorCreateInfoEXT
     {
-        public VkStructureType   sType;
-        public void*             pNext;
-        public VkClearColorValue customBorderColor;
-        public VkFormat          format;
+        public const VkStructureType   STYPE = VkStructureType.SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT;
+        public       VkStructureType   sType;
+        public       void*             pNext;
+        public       VkClearColorValue customBorderColor;
+        public       VkFormat          format;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCustomBorderColorPropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxCustomBorderColorSamplers;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxCustomBorderColorSamplers;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCustomBorderColorFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        customBorderColors;
-        public VkBool32        customBorderColorWithoutFormat;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        customBorderColors;
+        public       VkBool32        customBorderColorWithoutFormat;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevicePrivateDataFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        privateData;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        privateData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDevicePrivateDataCreateInfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            privateDataSlotRequestCount;
+        public const VkStructureType STYPE = VkStructureType.DEVICE_PRIVATE_DATA_CREATE_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            privateDataSlotRequestCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPrivateDataSlotCreateInfoEXT
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkPrivateDataSlotCreateFlagsEXT flags;
+        public const VkStructureType                 STYPE = VkStructureType.PRIVATE_DATA_SLOT_CREATE_INFO_EXT;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkPrivateDataSlotCreateFlagsEXT flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        pipelineCreationCacheControl;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        pipelineCreationCacheControl;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDiagnosticsConfigFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        diagnosticsConfig;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        diagnosticsConfig;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceDiagnosticsConfigCreateInfoNV
     {
-        public VkStructureType                  sType;
-        public void*                            pNext;
-        public VkDeviceDiagnosticsConfigFlagsNV flags;
+        public const VkStructureType                  STYPE = VkStructureType.DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV;
+        public       VkStructureType                  sType;
+        public       void*                            pNext;
+        public       VkDeviceDiagnosticsConfigFlagsNV flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        fragmentShadingRateEnums;
-        public VkBool32        supersampleFragmentShadingRates;
-        public VkBool32        noInvocationFragmentShadingRates;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        fragmentShadingRateEnums;
+        public       VkBool32        supersampleFragmentShadingRates;
+        public       VkBool32        noInvocationFragmentShadingRates;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV
     {
-        public VkStructureType    sType;
-        public void*              pNext;
-        public VkSampleCountFlags maxFragmentShadingRateInvocationCount;
+        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV;
+        public       VkStructureType    sType;
+        public       void*              pNext;
+        public       VkSampleCountFlags maxFragmentShadingRateInvocationCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineFragmentShadingRateEnumStateCreateInfoNV
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkFragmentShadingRateTypeNV        shadingRateType;
-        public VkFragmentShadingRateNV            shadingRate;
-        public VkFragmentShadingRateCombinerOpKHR combinerOps1;
-        public VkFragmentShadingRateCombinerOpKHR combinerOps2;
+        public const VkStructureType                    STYPE = VkStructureType.PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkFragmentShadingRateTypeNV        shadingRateType;
+        public       VkFragmentShadingRateNV            shadingRate;
+        public       VkFragmentShadingRateCombinerOpKHR combinerOps1;
+        public       VkFragmentShadingRateCombinerOpKHR combinerOps2;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentDensityMap2FeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        fragmentDensityMapDeferred;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        fragmentDensityMapDeferred;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentDensityMap2PropertiesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        subsampledLoads;
-        public VkBool32        subsampledCoarseReconstructionEarlyAccess;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        subsampledLoads;
+        public       VkBool32        subsampledCoarseReconstructionEarlyAccess;
 
         public uint maxSubsampledArrayLayers;
         public uint maxDescriptorSetSubsampledSamplers;
@@ -5418,34 +5824,38 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCopyCommandTransformInfoQCOM
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkSurfaceTransformFlagsKHR transform;
+        public const VkStructureType            STYPE = VkStructureType.COPY_COMMAND_TRANSFORM_INFO_QCOM;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkSurfaceTransformFlagsKHR transform;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceImageRobustnessFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        robustImageAccess;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        robustImageAccess;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDevice4444FormatsFeaturesEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        formatA4R4G4B4;
-        public VkBool32        formatA4B4G4R4;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        formatA4R4G4B4;
+        public       VkBool32        formatA4B4G4R4;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        mutableDescriptorType;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        mutableDescriptorType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5458,10 +5868,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMutableDescriptorTypeCreateInfoVALVE
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public uint                              mutableDescriptorTypeListCount;
-        public VkMutableDescriptorTypeListVALVE* pMutableDescriptorTypeLists;
+        public const VkStructureType                   STYPE = VkStructureType.MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       uint                              mutableDescriptorTypeListCount;
+        public       VkMutableDescriptorTypeListVALVE* pMutableDescriptorTypeLists;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5476,32 +5887,35 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureGeometryTrianglesDataKHR
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkFormat                      vertexFormat;
-        public VkDeviceOrHostAddressConstKHR vertexData;
-        public VkDeviceSize                  vertexStride;
-        public uint                          maxVertex;
-        public VkIndexType                   indexType;
-        public VkDeviceOrHostAddressConstKHR indexData;
-        public VkDeviceOrHostAddressConstKHR transformData;
+        public const VkStructureType               STYPE = VkStructureType.ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkFormat                      vertexFormat;
+        public       VkDeviceOrHostAddressConstKHR vertexData;
+        public       VkDeviceSize                  vertexStride;
+        public       uint                          maxVertex;
+        public       VkIndexType                   indexType;
+        public       VkDeviceOrHostAddressConstKHR indexData;
+        public       VkDeviceOrHostAddressConstKHR transformData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureGeometryAabbsDataKHR
     {
-        public VkStructureType               sType;
-        public void*                         pNext;
-        public VkDeviceOrHostAddressConstKHR data;
-        public VkDeviceSize                  stride;
+        public const VkStructureType               STYPE = VkStructureType.ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkDeviceOrHostAddressConstKHR data;
+        public       VkDeviceSize                  stride;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureGeometryInstancesDataKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        arrayOfPointers;
+        public const VkStructureType STYPE = VkStructureType.ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        arrayOfPointers;
 
         public VkDeviceOrHostAddressConstKHR data;
     }
@@ -5509,200 +5923,217 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureGeometryKHR
     {
-        public VkStructureType                        sType;
-        public void*                                  pNext;
-        public VkGeometryTypeKHR                      geometryType;
-        public VkAccelerationStructureGeometryDataKHR geometry;
-        public VkGeometryFlagsKHR                     flags;
+        public const VkStructureType                        STYPE = VkStructureType.ACCELERATION_STRUCTURE_GEOMETRY_KHR;
+        public       VkStructureType                        sType;
+        public       void*                                  pNext;
+        public       VkGeometryTypeKHR                      geometryType;
+        public       VkAccelerationStructureGeometryDataKHR geometry;
+        public       VkGeometryFlagsKHR                     flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureBuildGeometryInfoKHR
     {
-        public VkStructureType                      sType;
-        public void*                                pNext;
-        public VkAccelerationStructureTypeKHR       type;
-        public VkBuildAccelerationStructureFlagsKHR flags;
-        public VkBuildAccelerationStructureModeKHR  mode;
-        public VkAccelerationStructureKHR           srcAccelerationStructure;
-        public VkAccelerationStructureKHR           dstAccelerationStructure;
-        public uint                                 geometryCount;
-        public VkAccelerationStructureGeometryKHR*  pGeometries;
-        public VkAccelerationStructureGeometryKHR** ppGeometries;
-        public VkDeviceOrHostAddressKHR             scratchData;
+        public const VkStructureType                      STYPE = VkStructureType.ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR;
+        public       VkStructureType                      sType;
+        public       void*                                pNext;
+        public       VkAccelerationStructureTypeKHR       type;
+        public       VkBuildAccelerationStructureFlagsKHR flags;
+        public       VkBuildAccelerationStructureModeKHR  mode;
+        public       VkAccelerationStructureKHR           srcAccelerationStructure;
+        public       VkAccelerationStructureKHR           dstAccelerationStructure;
+        public       uint                                 geometryCount;
+        public       VkAccelerationStructureGeometryKHR*  pGeometries;
+        public       VkAccelerationStructureGeometryKHR** ppGeometries;
+        public       VkDeviceOrHostAddressKHR             scratchData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureCreateInfoKHR
     {
-        public VkStructureType                       sType;
-        public void*                                 pNext;
-        public VkAccelerationStructureCreateFlagsKHR createFlags;
-        public VkBuffer                              buffer;
-        public VkDeviceSize                          offset;
-        public VkDeviceSize                          size;
-        public VkAccelerationStructureTypeKHR        type;
-        public VkDeviceAddress                       deviceAddress;
+        public const VkStructureType                       STYPE = VkStructureType.ACCELERATION_STRUCTURE_CREATE_INFO_KHR;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkAccelerationStructureCreateFlagsKHR createFlags;
+        public       VkBuffer                              buffer;
+        public       VkDeviceSize                          offset;
+        public       VkDeviceSize                          size;
+        public       VkAccelerationStructureTypeKHR        type;
+        public       VkDeviceAddress                       deviceAddress;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkWriteDescriptorSetAccelerationStructureKHR
     {
-        public VkStructureType             sType;
-        public void*                       pNext;
-        public uint                        accelerationStructureCount;
-        public VkAccelerationStructureKHR* pAccelerationStructures;
+        public const VkStructureType             STYPE = VkStructureType.WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       uint                        accelerationStructureCount;
+        public       VkAccelerationStructureKHR* pAccelerationStructures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceAccelerationStructureFeaturesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        accelerationStructure;
-        public VkBool32        accelerationStructureCaptureReplay;
-        public VkBool32        accelerationStructureIndirectBuild;
-        public VkBool32        accelerationStructureHostCommands;
-        public VkBool32        descriptorBindingAccelerationStructureUpdateAfterBind;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        accelerationStructure;
+        public       VkBool32        accelerationStructureCaptureReplay;
+        public       VkBool32        accelerationStructureIndirectBuild;
+        public       VkBool32        accelerationStructureHostCommands;
+        public       VkBool32        descriptorBindingAccelerationStructureUpdateAfterBind;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceAccelerationStructurePropertiesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public ulong           maxGeometryCount;
-        public ulong           maxInstanceCount;
-        public ulong           maxPrimitiveCount;
-        public uint            maxPerStageDescriptorAccelerationStructures;
-        public uint            maxPerStageDescriptorUpdateAfterBindAccelerationStructures;
-        public uint            maxDescriptorSetAccelerationStructures;
-        public uint            maxDescriptorSetUpdateAfterBindAccelerationStructures;
-        public uint            minAccelerationStructureScratchOffsetAlignment;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       ulong           maxGeometryCount;
+        public       ulong           maxInstanceCount;
+        public       ulong           maxPrimitiveCount;
+        public       uint            maxPerStageDescriptorAccelerationStructures;
+        public       uint            maxPerStageDescriptorUpdateAfterBindAccelerationStructures;
+        public       uint            maxDescriptorSetAccelerationStructures;
+        public       uint            maxDescriptorSetUpdateAfterBindAccelerationStructures;
+        public       uint            minAccelerationStructureScratchOffsetAlignment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureDeviceAddressInfoKHR
     {
-        public VkStructureType            sType;
-        public void*                      pNext;
-        public VkAccelerationStructureKHR accelerationStructure;
+        public const VkStructureType            STYPE = VkStructureType.ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkAccelerationStructureKHR accelerationStructure;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureVersionInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public byte*           pVersionData;
+        public const VkStructureType STYPE = VkStructureType.ACCELERATION_STRUCTURE_VERSION_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       byte*           pVersionData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCopyAccelerationStructureToMemoryInfoKHR
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkAccelerationStructureKHR         src;
-        public VkDeviceOrHostAddressKHR           dst;
-        public VkCopyAccelerationStructureModeKHR mode;
+        public const VkStructureType                    STYPE = VkStructureType.COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkAccelerationStructureKHR         src;
+        public       VkDeviceOrHostAddressKHR           dst;
+        public       VkCopyAccelerationStructureModeKHR mode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCopyMemoryToAccelerationStructureInfoKHR
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkDeviceOrHostAddressConstKHR      src;
-        public VkAccelerationStructureKHR         dst;
-        public VkCopyAccelerationStructureModeKHR mode;
+        public const VkStructureType                    STYPE = VkStructureType.COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkDeviceOrHostAddressConstKHR      src;
+        public       VkAccelerationStructureKHR         dst;
+        public       VkCopyAccelerationStructureModeKHR mode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCopyAccelerationStructureInfoKHR
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkAccelerationStructureKHR         src;
-        public VkAccelerationStructureKHR         dst;
-        public VkCopyAccelerationStructureModeKHR mode;
+        public const VkStructureType                    STYPE = VkStructureType.COPY_ACCELERATION_STRUCTURE_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkAccelerationStructureKHR         src;
+        public       VkAccelerationStructureKHR         dst;
+        public       VkCopyAccelerationStructureModeKHR mode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureBuildSizesInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkDeviceSize    accelerationStructureSize;
-        public VkDeviceSize    updateScratchSize;
-        public VkDeviceSize    buildScratchSize;
+        public const VkStructureType STYPE = VkStructureType.ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceSize    accelerationStructureSize;
+        public       VkDeviceSize    updateScratchSize;
+        public       VkDeviceSize    buildScratchSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRayTracingShaderGroupCreateInfoKHR
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkRayTracingShaderGroupTypeKHR type;
-        public uint                           generalShader;
-        public uint                           closestHitShader;
-        public uint                           anyHitShader;
-        public uint                           intersectionShader;
-        public void*                          pShaderGroupCaptureReplayHandle;
+        public const VkStructureType                STYPE = VkStructureType.RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkRayTracingShaderGroupTypeKHR type;
+        public       uint                           generalShader;
+        public       uint                           closestHitShader;
+        public       uint                           anyHitShader;
+        public       uint                           intersectionShader;
+        public       void*                          pShaderGroupCaptureReplayHandle;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRayTracingPipelineInterfaceCreateInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            maxPipelineRayPayloadSize;
-        public uint            maxPipelineRayHitAttributeSize;
+        public const VkStructureType STYPE = VkStructureType.RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxPipelineRayPayloadSize;
+        public       uint            maxPipelineRayHitAttributeSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRayTracingPipelineCreateInfoKHR
     {
-        public VkStructureType                             sType;
-        public void*                                       pNext;
-        public VkPipelineCreateFlags                       flags;
-        public uint                                        stageCount;
-        public VkPipelineShaderStageCreateInfo*            pStages;
-        public uint                                        groupCount;
-        public VkRayTracingShaderGroupCreateInfoKHR*       pGroups;
-        public uint                                        maxPipelineRayRecursionDepth;
-        public VkPipelineLibraryCreateInfoKHR*             pLibraryInfo;
-        public VkRayTracingPipelineInterfaceCreateInfoKHR* pLibraryInterface;
-        public VkPipelineDynamicStateCreateInfo*           pDynamicState;
-        public VkPipelineLayout                            layout;
-        public VkPipeline                                  basePipelineHandle;
-        public int                                         basePipelineIndex;
+        public const VkStructureType                             STYPE = VkStructureType.RAY_TRACING_PIPELINE_CREATE_INFO_KHR;
+        public       VkStructureType                             sType;
+        public       void*                                       pNext;
+        public       VkPipelineCreateFlags                       flags;
+        public       uint                                        stageCount;
+        public       VkPipelineShaderStageCreateInfo*            pStages;
+        public       uint                                        groupCount;
+        public       VkRayTracingShaderGroupCreateInfoKHR*       pGroups;
+        public       uint                                        maxPipelineRayRecursionDepth;
+        public       VkPipelineLibraryCreateInfoKHR*             pLibraryInfo;
+        public       VkRayTracingPipelineInterfaceCreateInfoKHR* pLibraryInterface;
+        public       VkPipelineDynamicStateCreateInfo*           pDynamicState;
+        public       VkPipelineLayout                            layout;
+        public       VkPipeline                                  basePipelineHandle;
+        public       int                                         basePipelineIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRayTracingPipelineFeaturesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        rayTracingPipeline;
-        public VkBool32        rayTracingPipelineShaderGroupHandleCaptureReplay;
-        public VkBool32        rayTracingPipelineShaderGroupHandleCaptureReplayMixed;
-        public VkBool32        rayTracingPipelineTraceRaysIndirect;
-        public VkBool32        rayTraversalPrimitiveCulling;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        rayTracingPipeline;
+        public       VkBool32        rayTracingPipelineShaderGroupHandleCaptureReplay;
+        public       VkBool32        rayTracingPipelineShaderGroupHandleCaptureReplayMixed;
+        public       VkBool32        rayTracingPipelineTraceRaysIndirect;
+        public       VkBool32        rayTraversalPrimitiveCulling;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            shaderGroupHandleSize;
-        public uint            maxRayRecursionDepth;
-        public uint            maxShaderGroupStride;
-        public uint            shaderGroupBaseAlignment;
-        public uint            shaderGroupHandleCaptureReplaySize;
-        public uint            maxRayDispatchInvocationCount;
-        public uint            shaderGroupHandleAlignment;
-        public uint            maxRayHitAttributeSize;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            shaderGroupHandleSize;
+        public       uint            maxRayRecursionDepth;
+        public       uint            maxShaderGroupStride;
+        public       uint            shaderGroupBaseAlignment;
+        public       uint            shaderGroupHandleCaptureReplaySize;
+        public       uint            maxRayDispatchInvocationCount;
+        public       uint            shaderGroupHandleAlignment;
+        public       uint            maxRayHitAttributeSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5724,8 +6155,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRayQueryFeaturesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public VkBool32        rayQuery;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        rayQuery;
     }
 }
