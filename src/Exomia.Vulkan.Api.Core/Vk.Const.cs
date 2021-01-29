@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core
 {
     public static partial class Vk
     {
-        public const int    VK_HEADER_VERSION                                        = 167;
+        public const int    VK_HEADER_VERSION                                        = 168;
         public const int    VK_NULL_HANDLE                                           = 0;
         public const uint   VK_ATTACHMENT_UNUSED                                     = ~0U;
         public const uint   VK_FALSE                                                 = 0U;
@@ -570,5 +570,11 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_KHR_RAY_QUERY                                         = 1;
         public const int    VK_KHR_RAY_QUERY_SPEC_VERSION                            = 1;
         public const string VK_KHR_RAY_QUERY_EXTENSION_NAME                          = "VK_KHR_ray_query";
+        public const int    VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY                  = 1;
+        public const int    VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_SPEC_VERSION     = 1;
+        public const string VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_EXTENSION_NAME   = "VK_KHR_zero_initialize_workgroup_memory";
+        public const int    VK_KHR_WORKGROUP_MEMORY_EXPLICIT_LAYOUT                  = 1;
+        public const int    VK_KHR_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_SPEC_VERSION     = 1;
+        public const string VK_KHR_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_EXTENSION_NAME   = "VK_KHR_workgroup_memory_explicit_layout";
     }
 }

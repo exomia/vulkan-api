@@ -3418,6 +3418,25 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderZeroInitializeWorkgroupMemory;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        workgroupMemoryExplicitLayout;
+        public       VkBool32        workgroupMemoryExplicitLayoutScalarBlockLayout;
+        public       VkBool32        workgroupMemoryExplicitLayout8BitAccess;
+        public       VkBool32        workgroupMemoryExplicitLayout16BitAccess;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferCopy2KHR
     {
         public const VkStructureType STYPE = VkStructureType.BUFFER_COPY_2_KHR;
