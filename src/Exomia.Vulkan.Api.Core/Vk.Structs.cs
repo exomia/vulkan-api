@@ -3418,7 +3418,8 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
+    public unsafe struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR
+    {
         public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR;
         public       VkStructureType sType;
         public       void*           pNext;
@@ -3426,7 +3427,8 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
+    public unsafe struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR
+    {
         public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR;
         public       VkStructureType sType;
         public       void*           pNext;
