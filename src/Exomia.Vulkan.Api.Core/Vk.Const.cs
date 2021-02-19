@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core
 {
     public static partial class Vk
     {
-        public const int    VK_HEADER_VERSION                                        = 169;
+        public const int    VK_HEADER_VERSION                                        = 170;
         public const int    VK_NULL_HANDLE                                           = 0;
         public const uint   VK_ATTACHMENT_UNUSED                                     = ~0U;
         public const uint   VK_FALSE                                                 = 0U;
@@ -189,6 +189,9 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_KHR_SHADER_NON_SEMANTIC_INFO                          = 1;
         public const int    VK_KHR_SHADER_NON_SEMANTIC_INFO_SPEC_VERSION             = 1;
         public const string VK_KHR_SHADER_NON_SEMANTIC_INFO_EXTENSION_NAME           = "VK_KHR_shader_non_semantic_info";
+        public const int    VK_KHR_synchronization2                                  = 1;
+        public const int    VK_KHR_SYNCHRONIZATION_2_SPEC_VERSION                    = 1;
+        public const string VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME                  = "VK_KHR_synchronization2";
         public const int    VK_EXT_DEBUG_REPORT                                      = 1;
         public const int    VK_EXT_DEBUG_REPORT_SPEC_VERSION                         = 9;
         public const string VK_EXT_DEBUG_REPORT_EXTENSION_NAME                       = "VK_EXT_debug_report";

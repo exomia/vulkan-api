@@ -518,6 +518,16 @@ namespace Exomia.Vulkan.Api.Core
         PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT    = 1000297000,
         PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV                  = 1000300000,
         DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV                        = 1000300001,
+        MEMORY_BARRIER_2_KHR                                            = 1000314000,
+        BUFFER_MEMORY_BARRIER_2_KHR                                     = 1000314001,
+        IMAGE_MEMORY_BARRIER_2_KHR                                      = 1000314002,
+        DEPENDENCY_INFO_KHR                                             = 1000314003,
+        SUBMIT_INFO_2_KHR                                               = 1000314004,
+        SEMAPHORE_SUBMIT_INFO_KHR                                       = 1000314005,
+        COMMAND_BUFFER_SUBMIT_INFO_KHR                                  = 1000314006,
+        PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR                  = 1000314007,
+        QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV                         = 1000314008,
+        CHECKPOINT_DATA_2_NV                                            = 1000314009,
         PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES_KHR   = 1000325000,
         PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV       = 1000326000,
         PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV         = 1000326001,
@@ -692,6 +702,8 @@ namespace Exomia.Vulkan.Api.Core
         SHARED_PRESENT_KHR                             = 1000111000,
         SHADING_RATE_OPTIMAL_NV                        = 1000164003,
         FRAGMENT_DENSITY_MAP_OPTIMAL_EXT               = 1000218000,
+        READ_ONLY_OPTIMAL_KHR                          = 1000314000,
+        ATTACHMENT_OPTIMAL_KHR                         = 1000314001,
         DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL_KHR = DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL,
         DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR = DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL,
         FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR   = SHADING_RATE_OPTIMAL_NV,
@@ -1477,6 +1489,7 @@ namespace Exomia.Vulkan.Api.Core
         FRAGMENT_DENSITY_MAP_READ_BIT_EXT             = 0x01000000,
         COMMAND_PREPROCESS_READ_BIT_NV                = 0x00020000,
         COMMAND_PREPROCESS_WRITE_BIT_NV               = 0x00040000,
+        NONE_KHR                                      = 0,
         ACCELERATION_STRUCTURE_READ_BIT_NV            = ACCELERATION_STRUCTURE_READ_BIT_KHR,
         ACCELERATION_STRUCTURE_WRITE_BIT_NV           = ACCELERATION_STRUCTURE_WRITE_BIT_KHR,
         FRAGMENT_SHADING_RATE_ATTACHMENT_READ_BIT_KHR = SHADING_RATE_IMAGE_READ_BIT_NV,
@@ -1680,6 +1693,7 @@ namespace Exomia.Vulkan.Api.Core
         MESH_SHADER_BIT_NV                       = 0x00100000,
         FRAGMENT_DENSITY_PROCESS_BIT_EXT         = 0x00800000,
         COMMAND_PREPROCESS_BIT_NV                = 0x00020000,
+        NONE_KHR                                 = 0,
         RAY_TRACING_SHADER_BIT_NV                = RAY_TRACING_SHADER_BIT_KHR,
         ACCELERATION_STRUCTURE_BUILD_BIT_NV      = ACCELERATION_STRUCTURE_BUILD_BIT_KHR,
         FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = SHADING_RATE_IMAGE_BIT_NV,
@@ -1707,6 +1721,103 @@ namespace Exomia.Vulkan.Api.Core
     {
         SIGNALED_BIT       = 0x00000001,
         FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
+    }
+
+    [Flags]
+    public enum VkPipelineStageFlags2KHR : ulong
+    {
+        NONE_KHR                                 = 0ul,
+        TOP_OF_PIPE_BIT_KHR                      = 0x00000001ul,
+        DRAW_INDIRECT_BIT_KHR                    = 0x00000002ul,
+        VERTEX_INPUT_BIT_KHR                     = 0x00000004ul,
+        VERTEX_SHADER_BIT_KHR                    = 0x00000008ul,
+        TESSELLATION_CONTROL_SHADER_BIT_KHR      = 0x00000010ul,
+        TESSELLATION_EVALUATION_SHADER_BIT_KHR   = 0x00000020ul,
+        GEOMETRY_SHADER_BIT_KHR                  = 0x00000040ul,
+        FRAGMENT_SHADER_BIT_KHR                  = 0x00000080ul,
+        EARLY_FRAGMENT_TESTS_BIT_KHR             = 0x00000100ul,
+        LATE_FRAGMENT_TESTS_BIT_KHR              = 0x00000200ul,
+        COLOR_ATTACHMENT_OUTPUT_BIT_KHR          = 0x00000400ul,
+        COMPUTE_SHADER_BIT_KHR                   = 0x00000800ul,
+        ALL_TRANSFER_BIT_KHR                     = 0x00001000ul,
+        TRANSFER_BIT_KHR                         = 0x00001000ul,
+        BOTTOM_OF_PIPE_BIT_KHR                   = 0x00002000ul,
+        HOST_BIT_KHR                             = 0x00004000ul,
+        ALL_GRAPHICS_BIT_KHR                     = 0x00008000ul,
+        ALL_COMMANDS_BIT_KHR                     = 0x00010000ul,
+        COPY_BIT_KHR                             = 0x100000000ul,
+        RESOLVE_BIT_KHR                          = 0x200000000ul,
+        BLIT_BIT_KHR                             = 0x400000000ul,
+        CLEAR_BIT_KHR                            = 0x800000000ul,
+        INDEX_INPUT_BIT_KHR                      = 0x1000000000ul,
+        VERTEX_ATTRIBUTE_INPUT_BIT_KHR           = 0x2000000000ul,
+        PRE_RASTERIZATION_SHADERS_BIT_KHR        = 0x4000000000ul,
+        TRANSFORM_FEEDBACK_BIT_EXT               = 0x01000000ul,
+        CONDITIONAL_RENDERING_BIT_EXT            = 0x00040000ul,
+        COMMAND_PREPROCESS_BIT_NV                = 0x00020000ul,
+        FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x00400000ul,
+        SHADING_RATE_IMAGE_BIT_NV                = 0x00400000ul,
+        ACCELERATION_STRUCTURE_BUILD_BIT_KHR     = 0x02000000ul,
+        RAY_TRACING_SHADER_BIT_KHR               = 0x00200000ul,
+        RAY_TRACING_SHADER_BIT_NV                = 0x00200000ul,
+        ACCELERATION_STRUCTURE_BUILD_BIT_NV      = 0x02000000ul,
+        FRAGMENT_DENSITY_PROCESS_BIT_EXT         = 0x00800000ul,
+        TASK_SHADER_BIT_NV                       = 0x00080000ul,
+        MESH_SHADER_BIT_NV                       = 0x00100000ul,
+    }
+
+    [Flags]
+    public enum VkAccessFlags2KHR : ulong
+    {
+        NONE_KHR                                      = 0ul,
+        INDIRECT_COMMAND_READ_BIT_KHR                 = 0x00000001ul,
+        INDEX_READ_BIT_KHR                            = 0x00000002ul,
+        VERTEX_ATTRIBUTE_READ_BIT_KHR                 = 0x00000004ul,
+        UNIFORM_READ_BIT_KHR                          = 0x00000008ul,
+        INPUT_ATTACHMENT_READ_BIT_KHR                 = 0x00000010ul,
+        SHADER_READ_BIT_KHR                           = 0x00000020ul,
+        SHADER_WRITE_BIT_KHR                          = 0x00000040ul,
+        COLOR_ATTACHMENT_READ_BIT_KHR                 = 0x00000080ul,
+        COLOR_ATTACHMENT_WRITE_BIT_KHR                = 0x00000100ul,
+        DEPTH_STENCIL_ATTACHMENT_READ_BIT_KHR         = 0x00000200ul,
+        DEPTH_STENCIL_ATTACHMENT_WRITE_BIT_KHR        = 0x00000400ul,
+        TRANSFER_READ_BIT_KHR                         = 0x00000800ul,
+        TRANSFER_WRITE_BIT_KHR                        = 0x00001000ul,
+        HOST_READ_BIT_KHR                             = 0x00002000ul,
+        HOST_WRITE_BIT_KHR                            = 0x00004000ul,
+        MEMORY_READ_BIT_KHR                           = 0x00008000ul,
+        MEMORY_WRITE_BIT_KHR                          = 0x00010000ul,
+        SHADER_SAMPLED_READ_BIT_KHR                   = 0x100000000ul,
+        SHADER_STORAGE_READ_BIT_KHR                   = 0x200000000ul,
+        SHADER_STORAGE_WRITE_BIT_KHR                  = 0x400000000ul,
+        TRANSFORM_FEEDBACK_WRITE_BIT_EXT              = 0x02000000ul,
+        TRANSFORM_FEEDBACK_COUNTER_READ_BIT_EXT       = 0x04000000ul,
+        TRANSFORM_FEEDBACK_COUNTER_WRITE_BIT_EXT      = 0x08000000ul,
+        CONDITIONAL_RENDERING_READ_BIT_EXT            = 0x00100000ul,
+        COMMAND_PREPROCESS_READ_BIT_NV                = 0x00020000ul,
+        COMMAND_PREPROCESS_WRITE_BIT_NV               = 0x00040000ul,
+        FRAGMENT_SHADING_RATE_ATTACHMENT_READ_BIT_KHR = 0x00800000ul,
+        SHADING_RATE_IMAGE_READ_BIT_NV                = 0x00800000ul,
+        ACCELERATION_STRUCTURE_READ_BIT_KHR           = 0x00200000ul,
+        ACCELERATION_STRUCTURE_WRITE_BIT_KHR          = 0x00400000ul,
+        ACCELERATION_STRUCTURE_READ_BIT_NV            = 0x00200000ul,
+        ACCELERATION_STRUCTURE_WRITE_BIT_NV           = 0x00400000ul,
+        FRAGMENT_DENSITY_MAP_READ_BIT_EXT             = 0x01000000ul,
+        COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT     = 0x00080000ul
+    }
+
+    [Flags]
+    public enum VkSubmitFlagsKHR
+    {
+        PROTECTED_BIT_KHR      = 0x00000001,
+        FLAG_BITS_MAX_ENUM_KHR = 0x7FFFFFFF
+    }
+
+    [Flags]
+    public enum VkEventCreateFlags
+    {
+        DEVICE_ONLY_BIT_KHR = 0x00000001,
+        FLAG_BITS_MAX_ENUM  = 0x7FFFFFFF
     }
 
     [Flags]

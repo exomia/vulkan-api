@@ -6181,4 +6181,131 @@ namespace Exomia.Vulkan.Api.Core
         public       void*           pNext;
         public       VkBool32        rayQuery;
     }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkMemoryBarrier2KHR
+    {
+        public const VkStructureType          STYPE = VkStructureType.MEMORY_BARRIER_2_KHR;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkPipelineStageFlags2KHR srcStageMask;
+        public       VkAccessFlags2KHR        srcAccessMask;
+        public       VkPipelineStageFlags2KHR dstStageMask;
+        public       VkAccessFlags2KHR        dstAccessMask;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkBufferMemoryBarrier2KHR
+    {
+        public const VkStructureType          STYPE = VkStructureType.BUFFER_MEMORY_BARRIER_2_KHR;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkPipelineStageFlags2KHR srcStageMask;
+        public       VkAccessFlags2KHR        srcAccessMask;
+        public       VkPipelineStageFlags2KHR dstStageMask;
+        public       VkAccessFlags2KHR        dstAccessMask;
+        public       uint                     srcQueueFamilyIndex;
+        public       uint                     dstQueueFamilyIndex;
+        public       VkBuffer                 buffer;
+        public       VkDeviceSize             offset;
+        public       VkDeviceSize             size;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkImageMemoryBarrier2KHR
+    {
+        public const VkStructureType          STYPE = VkStructureType.IMAGE_MEMORY_BARRIER_2_KHR;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkPipelineStageFlags2KHR srcStageMask;
+        public       VkAccessFlags2KHR        srcAccessMask;
+        public       VkPipelineStageFlags2KHR dstStageMask;
+        public       VkAccessFlags2KHR        dstAccessMask;
+        public       VkImageLayout            oldLayout;
+        public       VkImageLayout            newLayout;
+        public       uint                     srcQueueFamilyIndex;
+        public       uint                     dstQueueFamilyIndex;
+        public       VkImage                  image;
+        public       VkImageSubresourceRange  subresourceRange;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkDependencyInfoKHR
+    {
+        public const VkStructureType            STYPE = VkStructureType.DEPENDENCY_INFO_KHR;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkDependencyFlags          dependencyFlags;
+        public       uint                       memoryBarrierCount;
+        public       VkMemoryBarrier2KHR*       pMemoryBarriers;
+        public       uint                       bufferMemoryBarrierCount;
+        public       VkBufferMemoryBarrier2KHR* pBufferMemoryBarriers;
+        public       uint                       imageMemoryBarrierCount;
+        public       VkImageMemoryBarrier2KHR*  pImageMemoryBarriers;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkSemaphoreSubmitInfoKHR
+    {
+        public const VkStructureType          STYPE = VkStructureType.SEMAPHORE_SUBMIT_INFO_KHR;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkSemaphore              semaphore;
+        public       ulong                    value;
+        public       VkPipelineStageFlags2KHR stageMask;
+        public       uint                     deviceIndex;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkCommandBufferSubmitInfoKHR
+    {
+        public const VkStructureType STYPE = VkStructureType.COMMAND_BUFFER_SUBMIT_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkCommandBuffer commandBuffer;
+        public       uint            deviceMask;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkSubmitInfo2KHR
+    {
+        public const VkStructureType               STYPE = VkStructureType.SUBMIT_INFO_2_KHR;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkSubmitFlagsKHR              flags;
+        public       uint                          waitSemaphoreInfoCount;
+        public       VkSemaphoreSubmitInfoKHR*     pWaitSemaphoreInfos;
+        public       uint                          commandBufferInfoCount;
+        public       VkCommandBufferSubmitInfoKHR* pCommandBufferInfos;
+        public       uint                          signalSemaphoreInfoCount;
+        public       VkSemaphoreSubmitInfoKHR*     pSignalSemaphoreInfos;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceSynchronization2FeaturesKHR
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        synchronization2;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkQueueFamilyCheckpointProperties2NV
+    {
+        public const VkStructureType          STYPE = VkStructureType.QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkPipelineStageFlags2KHR checkpointExecutionStageMask;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkCheckpointData2NV
+    {
+        public const VkStructureType          STYPE = VkStructureType.CHECKPOINT_DATA_2_NV;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkPipelineStageFlags2KHR stage;
+        public       void*                    pCheckpointMarker;
+    }
 }

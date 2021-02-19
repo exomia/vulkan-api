@@ -1590,6 +1590,66 @@ namespace Exomia.Vulkan.Api.Core
             uint,            /* pipelineStackSize */
             void> VkCmdSetRayTracingPipelineStackSizeKHR;
 
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer,      /* commandBuffer */
+            VkEvent,              /* event */
+            VkDependencyInfoKHR*, /* pDependencyInfo */
+            void> VkCmdSetEvent2KHR;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer,          /* commandBuffer */
+            VkEvent,                  /* event */
+            VkPipelineStageFlags2KHR, /* stageMask */
+            void> VkCmdResetEvent2KHR;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer,      /* commandBuffer */
+            uint,                 /* eventCount */
+            VkEvent*,             /* pEvents */
+            VkDependencyInfoKHR*, /* pDependencyInfos*/
+            void> VkCmdWaitEvents2KHR;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer,      /* commandBuffer */
+            VkDependencyInfoKHR*, /* pDependencyInfo */
+            void> VkCmdPipelineBarrier2KHR;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer,          /* commandBuffer */
+            VkPipelineStageFlags2KHR, /* stage */
+            VkQueryPool,              /* queryPool */
+            uint,                     /* query */
+            void> VkCmdWriteTimestamp2KHR;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkQueue,           /* queue */
+            uint,              /* submitCount */
+            VkSubmitInfo2KHR*, /* pSubmits */
+            VkFence,           /* fence */
+            VkResult> VkQueueSubmit2KHR;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer,          /* commandBuffer*/
+            VkPipelineStageFlags2KHR, /* stage */
+            VkBuffer,                 /* dstBuffer */
+            VkDeviceSize,             /* dstOffset */
+            uint,                     /* marker */
+            void> VkCmdWriteBufferMarker2AMD;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkQueue,              /* queue */
+            uint*,                /* pCheckpointDataCount */
+            VkCheckpointData2NV*, /* pCheckpointData */
+            void> VkGetQueueCheckpointData2NV;
+
         public static implicit operator VkFunction(void* ptr)
         {
             VkFunction value;
@@ -5478,6 +5538,154 @@ namespace Exomia.Vulkan.Api.Core
         public static implicit operator VkCmdSetRayTracingPipelineStackSizeKHR(void* ptr)
         {
             VkCmdSetRayTracingPipelineStackSizeKHR value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdSetEvent2KHR
+    {
+        public static readonly VkCmdSetEvent2KHR Zero = new VkCmdSetEvent2KHR();
+
+        public readonly delegate*<
+            VkCommandBuffer,      /* commandBuffer */
+            VkEvent,              /* event */
+            VkDependencyInfoKHR*, /* pDependencyInfo */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdSetEvent2KHR(void* ptr)
+        {
+            VkCmdSetEvent2KHR value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdResetEvent2KHR
+    {
+        public static readonly VkCmdResetEvent2KHR Zero = new VkCmdResetEvent2KHR();
+
+        public readonly delegate*<
+            VkCommandBuffer,          /* commandBuffer */
+            VkEvent,                  /* event */
+            VkPipelineStageFlags2KHR, /* stageMask */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdResetEvent2KHR(void* ptr)
+        {
+            VkCmdResetEvent2KHR value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdWaitEvents2KHR
+    {
+        public static readonly VkCmdWaitEvents2KHR Zero = new VkCmdWaitEvents2KHR();
+
+        public readonly delegate*<
+            VkCommandBuffer,      /* commandBuffer */
+            uint,                 /* eventCount */
+            VkEvent*,             /* pEvents */
+            VkDependencyInfoKHR*, /* pDependencyInfos */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdWaitEvents2KHR(void* ptr)
+        {
+            VkCmdWaitEvents2KHR value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdPipelineBarrier2KHR
+    {
+        public static readonly VkCmdPipelineBarrier2KHR Zero = new VkCmdPipelineBarrier2KHR();
+
+        public readonly delegate*<
+            VkCommandBuffer,      /* commandBuffer */
+            VkDependencyInfoKHR*, /* pDependencyInfo */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdPipelineBarrier2KHR(void* ptr)
+        {
+            VkCmdPipelineBarrier2KHR value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdWriteTimestamp2KHR
+    {
+        public static readonly VkCmdWriteTimestamp2KHR Zero = new VkCmdWriteTimestamp2KHR();
+
+        public readonly delegate*<
+            VkCommandBuffer,          /* commandBuffer */
+            VkPipelineStageFlags2KHR, /* stage */
+            VkQueryPool,              /* queryPool */
+            uint,                     /* query */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdWriteTimestamp2KHR(void* ptr)
+        {
+            VkCmdWriteTimestamp2KHR value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkQueueSubmit2KHR
+    {
+        public static readonly VkQueueSubmit2KHR Zero = new VkQueueSubmit2KHR();
+
+        public readonly delegate*<
+            VkQueue,           /* queue */
+            uint,              /* submitCount */
+            VkSubmitInfo2KHR*, /* pSubmits */
+            VkFence,           /* fence */
+            VkResult> UnsafeInvoke;
+
+        public static implicit operator VkQueueSubmit2KHR(void* ptr)
+        {
+            VkQueueSubmit2KHR value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdWriteBufferMarker2AMD
+    {
+        public static readonly VkCmdWriteBufferMarker2AMD Zero = new VkCmdWriteBufferMarker2AMD();
+
+        public readonly delegate*<
+            VkCommandBuffer,          /* commandBuffer */
+            VkPipelineStageFlags2KHR, /* stage */
+            VkBuffer,                 /* dstBuffer */
+            VkDeviceSize,             /* dstOffset */
+            uint,                     /* marker */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdWriteBufferMarker2AMD(void* ptr)
+        {
+            VkCmdWriteBufferMarker2AMD value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkGetQueueCheckpointData2NV
+    {
+        public static readonly VkGetQueueCheckpointData2NV Zero = new VkGetQueueCheckpointData2NV();
+
+        public readonly delegate*<
+            VkQueue,              /* queue */
+            uint*,                /* pCheckpointDataCount */
+            VkCheckpointData2NV*, /* pCheckpointData */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkGetQueueCheckpointData2NV(void* ptr)
+        {
+            VkGetQueueCheckpointData2NV value;
             *(void**)&value = ptr;
             return value;
         }
