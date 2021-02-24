@@ -75,8 +75,8 @@ namespace Exomia.Vulkan.Api.Core
             VkFormat                 format,
             VkImageType              type,
             VkImageTiling            tiling,
-            VkImageUsageFlags        usage,
-            VkImageCreateFlags       flags,
+            VkImageUsageFlagBits     usage,
+            VkImageCreateFlagBits    flags,
             VkImageFormatProperties* pImageFormatProperties);
 
         [SuppressUnmanagedCodeSecurity]
@@ -194,12 +194,12 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkMapMemory")]
         public static extern unsafe VkResult MapMemory(
-            VkDevice         device,
-            VkDeviceMemory   memory,
-            VkDeviceSize     offset,
-            VkDeviceSize     size,
-            VkMemoryMapFlags flags,
-            void**           ppData);
+            VkDevice            device,
+            VkDeviceMemory      memory,
+            VkDeviceSize        offset,
+            VkDeviceSize        size,
+            VkMemoryMapFlagBits flags,
+            void**              ppData);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkUnmapMemory")]
@@ -272,8 +272,8 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDevice               physicalDevice,
             VkFormat                       format,
             VkImageType                    type,
-            VkSampleCountFlags             samples,
-            VkImageUsageFlags              usage,
+            VkSampleCountFlagBits          samples,
+            VkImageUsageFlagBits           usage,
             VkImageTiling                  tiling,
             uint*                          pPropertyCount,
             VkSparseImageFormatProperties* pProperties);
@@ -389,14 +389,14 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetQueryPoolResults")]
         public static extern unsafe VkResult GetQueryPoolResults(
-            VkDevice           device,
-            VkQueryPool        queryPool,
-            uint               firstQuery,
-            uint               queryCount,
-            size_t             dataSize,
-            void*              pData,
-            VkDeviceSize       stride,
-            VkQueryResultFlags flags);
+            VkDevice              device,
+            VkQueryPool           queryPool,
+            uint                  firstQuery,
+            uint                  queryCount,
+            size_t                dataSize,
+            void*                 pData,
+            VkDeviceSize          stride,
+            VkQueryResultFlagBits flags);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCreateBuffer")]
@@ -602,9 +602,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkResetDescriptorPool")]
         public static extern VkResult ResetDescriptorPool(
-            VkDevice                   device,
-            VkDescriptorPool           descriptorPool,
-            VkDescriptorPoolResetFlags flags);
+            VkDevice                      device,
+            VkDescriptorPool              descriptorPool,
+            VkDescriptorPoolResetFlagBits flags);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkAllocateDescriptorSets")]
@@ -685,9 +685,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkResetCommandPool")]
         public static extern VkResult ResetCommandPool(
-            VkDevice                device,
-            VkCommandPool           commandPool,
-            VkCommandPoolResetFlags flags);
+            VkDevice                   device,
+            VkCommandPool              commandPool,
+            VkCommandPoolResetFlagBits flags);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkAllocateCommandBuffers")]
@@ -717,8 +717,8 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkResetCommandBuffer")]
         public static extern VkResult ResetCommandBuffer(
-            VkCommandBuffer           commandBuffer,
-            VkCommandBufferResetFlags flags);
+            VkCommandBuffer              commandBuffer,
+            VkCommandBufferResetFlagBits flags);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdBindPipeline")]
@@ -773,23 +773,23 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdSetStencilCompareMask")]
         public static extern void CmdSetStencilCompareMask(
-            VkCommandBuffer    commandBuffer,
-            VkStencilFaceFlags faceMask,
-            uint               compareMask);
+            VkCommandBuffer       commandBuffer,
+            VkStencilFaceFlagBits faceMask,
+            uint                  compareMask);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdSetStencilWriteMask")]
         public static extern void CmdSetStencilWriteMask(
-            VkCommandBuffer    commandBuffer,
-            VkStencilFaceFlags faceMask,
-            uint               writeMask);
+            VkCommandBuffer       commandBuffer,
+            VkStencilFaceFlagBits faceMask,
+            uint                  writeMask);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdSetStencilReference")]
         public static extern void CmdSetStencilReference(
-            VkCommandBuffer    commandBuffer,
-            VkStencilFaceFlags faceMask,
-            uint               reference);
+            VkCommandBuffer       commandBuffer,
+            VkStencilFaceFlagBits faceMask,
+            uint                  reference);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdBindDescriptorSets")]
@@ -985,53 +985,53 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdSetEvent")]
         public static extern void CmdSetEvent(
-            VkCommandBuffer      commandBuffer,
-            VkEvent              @event,
-            VkPipelineStageFlags stageMask);
+            VkCommandBuffer         commandBuffer,
+            VkEvent                 @event,
+            VkPipelineStageFlagBits stageMask);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdResetEvent")]
         public static extern void CmdResetEvent(
-            VkCommandBuffer      commandBuffer,
-            VkEvent              @event,
-            VkPipelineStageFlags stageMask);
+            VkCommandBuffer         commandBuffer,
+            VkEvent                 @event,
+            VkPipelineStageFlagBits stageMask);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdWaitEvents")]
         public static extern unsafe void CmdWaitEvents(
-            VkCommandBuffer        commandBuffer,
-            uint                   eventCount,
-            VkEvent*               pEvents,
-            VkPipelineStageFlags   srcStageMask,
-            VkPipelineStageFlags   dstStageMask,
-            uint                   memoryBarrierCount,
-            VkMemoryBarrier*       pMemoryBarriers,
-            uint                   bufferMemoryBarrierCount,
-            VkBufferMemoryBarrier* pBufferMemoryBarriers,
-            uint                   imageMemoryBarrierCount,
-            VkImageMemoryBarrier*  pImageMemoryBarriers);
+            VkCommandBuffer         commandBuffer,
+            uint                    eventCount,
+            VkEvent*                pEvents,
+            VkPipelineStageFlagBits srcStageMask,
+            VkPipelineStageFlagBits dstStageMask,
+            uint                    memoryBarrierCount,
+            VkMemoryBarrier*        pMemoryBarriers,
+            uint                    bufferMemoryBarrierCount,
+            VkBufferMemoryBarrier*  pBufferMemoryBarriers,
+            uint                    imageMemoryBarrierCount,
+            VkImageMemoryBarrier*   pImageMemoryBarriers);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdPipelineBarrier")]
         public static extern unsafe void CmdPipelineBarrier(
-            VkCommandBuffer        commandBuffer,
-            VkPipelineStageFlags   srcStageMask,
-            VkPipelineStageFlags   dstStageMask,
-            VkDependencyFlags      dependencyFlags,
-            uint                   memoryBarrierCount,
-            VkMemoryBarrier*       pMemoryBarriers,
-            uint                   bufferMemoryBarrierCount,
-            VkBufferMemoryBarrier* pBufferMemoryBarriers,
-            uint                   imageMemoryBarrierCount,
-            VkImageMemoryBarrier*  pImageMemoryBarriers);
+            VkCommandBuffer         commandBuffer,
+            VkPipelineStageFlagBits srcStageMask,
+            VkPipelineStageFlagBits dstStageMask,
+            VkDependencyFlagBits    dependencyFlags,
+            uint                    memoryBarrierCount,
+            VkMemoryBarrier*        pMemoryBarriers,
+            uint                    bufferMemoryBarrierCount,
+            VkBufferMemoryBarrier*  pBufferMemoryBarriers,
+            uint                    imageMemoryBarrierCount,
+            VkImageMemoryBarrier*   pImageMemoryBarriers);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdBeginQuery")]
         public static extern void CmdBeginQuery(
-            VkCommandBuffer     commandBuffer,
-            VkQueryPool         queryPool,
-            uint                query,
-            VkQueryControlFlags flags);
+            VkCommandBuffer        commandBuffer,
+            VkQueryPool            queryPool,
+            uint                   query,
+            VkQueryControlFlagBits flags);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdEndQuery")]
@@ -1051,32 +1051,32 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdWriteTimestamp")]
         public static extern void CmdWriteTimestamp(
-            VkCommandBuffer      commandBuffer,
-            VkPipelineStageFlags pipelineStage,
-            VkQueryPool          queryPool,
-            uint                 query);
+            VkCommandBuffer         commandBuffer,
+            VkPipelineStageFlagBits pipelineStage,
+            VkQueryPool             queryPool,
+            uint                    query);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdCopyQueryPoolResults")]
         public static extern void CmdCopyQueryPoolResults(
-            VkCommandBuffer    commandBuffer,
-            VkQueryPool        queryPool,
-            uint               firstQuery,
-            uint               queryCount,
-            VkBuffer           dstBuffer,
-            VkDeviceSize       dstOffset,
-            VkDeviceSize       stride,
-            VkQueryResultFlags flags);
+            VkCommandBuffer       commandBuffer,
+            VkQueryPool           queryPool,
+            uint                  firstQuery,
+            uint                  queryCount,
+            VkBuffer              dstBuffer,
+            VkDeviceSize          dstOffset,
+            VkDeviceSize          stride,
+            VkQueryResultFlagBits flags);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdPushConstants")]
         public static extern unsafe void CmdPushConstants(
-            VkCommandBuffer    commandBuffer,
-            VkPipelineLayout   layout,
-            VkShaderStageFlags stageFlags,
-            uint               offset,
-            uint               size,
-            void*              pValues);
+            VkCommandBuffer       commandBuffer,
+            VkPipelineLayout      layout,
+            VkShaderStageFlagBits stageFlags,
+            uint                  offset,
+            uint                  size,
+            void*                 pValues);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdBeginRenderPass")]
@@ -1123,11 +1123,11 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetDeviceGroupPeerMemoryFeatures")]
         public static extern unsafe void GetDeviceGroupPeerMemoryFeatures(
-            VkDevice                  device,
-            uint                      heapIndex,
-            uint                      localDeviceIndex,
-            uint                      remoteDeviceIndex,
-            VkPeerMemoryFeatureFlags* pPeerMemoryFeatures);
+            VkDevice                     device,
+            uint                         heapIndex,
+            uint                         localDeviceIndex,
+            uint                         remoteDeviceIndex,
+            VkPeerMemoryFeatureFlagBits* pPeerMemoryFeatures);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkCmdSetDeviceMask")]
@@ -1225,9 +1225,9 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkTrimCommandPool")]
         public static extern void TrimCommandPool(
-            VkDevice               device,
-            VkCommandPool          commandPool,
-            VkCommandPoolTrimFlags flags);
+            VkDevice                  device,
+            VkCommandPool             commandPool,
+            VkCommandPoolTrimFlagBits flags);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetDeviceQueue2")]

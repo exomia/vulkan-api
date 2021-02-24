@@ -142,6 +142,7 @@ namespace Exomia.Vulkan.Api.Core.Tests
         [DataRow(uint.MaxValue)]
         [DataRow(785u)]
         [DataRow(987787898u)]
+
         // ReSharper disable once HeapView.ClosureAllocation
         public void VkArray16_InvalidIndexerUint_Get_ShouldNotWorkAndThrowException(uint index)
         {
@@ -180,6 +181,7 @@ namespace Exomia.Vulkan.Api.Core.Tests
         [DataRow(785)]
         [DataRow(-785)]
         [DataRow(987787898)]
+
         // ReSharper disable once HeapView.ClosureAllocation
         public void VkArray16_InvalidIndexerInt_Get_ShouldNotWorkAndThrowException(int index)
         {
@@ -211,11 +213,12 @@ namespace Exomia.Vulkan.Api.Core.Tests
                 });
         }
 
-          [DataTestMethod]
+        [DataTestMethod]
         [DataRow(45u)]
         [DataRow(uint.MaxValue)]
         [DataRow(785u)]
         [DataRow(987787898u)]
+
         // ReSharper disable once HeapView.ClosureAllocation
         public void VkArray16_InvalidIndexerUint_Set_ShouldNotWorkAndThrowException(uint index)
         {
@@ -254,6 +257,7 @@ namespace Exomia.Vulkan.Api.Core.Tests
         [DataRow(785)]
         [DataRow(-785)]
         [DataRow(987787898)]
+
         // ReSharper disable once HeapView.ClosureAllocation
         public void VkArray16_InvalidIndexerInt_Set_ShouldNotWorkAndThrowException(int index)
         {

@@ -46,7 +46,7 @@ namespace Exomia.Vulkan.Api.Core.Tests
 
         [TestMethod]
         public void VkVersion_ToString_ShouldWork()
-        { 
+        {
             string v10 = VkVersion.VulkanApiVersion10.ToString();
             string v11 = VkVersion.VulkanApiVersion11.ToString();
             string v12 = VkVersion.VulkanApiVersion12.ToString();

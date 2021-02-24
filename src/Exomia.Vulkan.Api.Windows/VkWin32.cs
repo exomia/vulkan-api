@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2020, exomia
+// Copyright (c) 2018-2021, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -48,10 +48,10 @@ namespace Exomia.Vulkan.Api.Windows
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetMemoryWin32HandlePropertiesKHR")]
         public static extern unsafe VkResult GetMemoryWin32HandlePropertiesKHR(
-            VkDevice                          device,
-            VkExternalMemoryHandleTypeFlags   handleType,
-            HANDLE                            handle,
-            VkMemoryWin32HandlePropertiesKHR* pMemoryWin32HandleProperties);
+            VkDevice                           device,
+            VkExternalMemoryHandleTypeFlagBits handleType,
+            HANDLE                             handle,
+            VkMemoryWin32HandlePropertiesKHR*  pMemoryWin32HandleProperties);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceSurfacePresentModes2EXT")]

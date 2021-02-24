@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2020, exomia
+// Copyright (c) 2018-2021, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -31,11 +31,11 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkImportMemoryWin32HandleInfoKHR
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkExternalMemoryHandleTypeFlags handleType;
-        public IntPtr                          handle;
-        public char*                           pName;
+        public VkStructureType                    sType;
+        public void*                              pNext;
+        public VkExternalMemoryHandleTypeFlagBits handleType;
+        public IntPtr                             handle;
+        public char*                              pName;
     }
 
     public unsafe struct VkExportMemoryWin32HandleInfoKHR
@@ -56,10 +56,10 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkMemoryGetWin32HandleInfoKHR
     {
-        public VkStructureType                 sType;
-        public void*                           pNext;
-        public VkDeviceMemory                  memory;
-        public VkExternalMemoryHandleTypeFlags handleType;
+        public VkStructureType                    sType;
+        public void*                              pNext;
+        public VkDeviceMemory                     memory;
+        public VkExternalMemoryHandleTypeFlagBits handleType;
     }
 
     public unsafe struct VkWin32KeyedMutexAcquireReleaseInfoKHR
@@ -77,13 +77,13 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkImportSemaphoreWin32HandleInfoKHR
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkSemaphore                        semaphore;
-        public VkSemaphoreImportFlags             flags;
-        public VkExternalSemaphoreHandleTypeFlags handleType;
-        public HANDLE                             handle;
-        public char*                              pName;
+        public VkStructureType                       sType;
+        public void*                                 pNext;
+        public VkSemaphore                           semaphore;
+        public VkSemaphoreImportFlagBits             flags;
+        public VkExternalSemaphoreHandleTypeFlagBits handleType;
+        public HANDLE                                handle;
+        public char*                                 pName;
     }
 
     public unsafe struct VkExportSemaphoreWin32HandleInfoKHR
@@ -107,10 +107,10 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkSemaphoreGetWin32HandleInfoKHR
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkSemaphore                        semaphore;
-        public VkExternalSemaphoreHandleTypeFlags handleType;
+        public VkStructureType                       sType;
+        public void*                                 pNext;
+        public VkSemaphore                           semaphore;
+        public VkExternalSemaphoreHandleTypeFlagBits handleType;
     }
 
     public unsafe struct VkWin32KeyedMutexAcquireReleaseInfoNV
@@ -149,13 +149,13 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkImportFenceWin32HandleInfoKHR
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkFence                        fence;
-        public VkFenceImportFlags             flags;
-        public VkExternalFenceHandleTypeFlags handleType;
-        public HANDLE                         handle;
-        public char*                          pName;
+        public VkStructureType                   sType;
+        public void*                             pNext;
+        public VkFence                           fence;
+        public VkFenceImportFlagBits             flags;
+        public VkExternalFenceHandleTypeFlagBits handleType;
+        public HANDLE                            handle;
+        public char*                             pName;
     }
 
     public unsafe struct VkExportFenceWin32HandleInfoKHR
@@ -169,10 +169,10 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkFenceGetWin32HandleInfoKHR
     {
-        public VkStructureType                sType;
-        public void*                          pNext;
-        public VkFence                        fence;
-        public VkExternalFenceHandleTypeFlags handleType;
+        public VkStructureType                   sType;
+        public void*                             pNext;
+        public VkFence                           fence;
+        public VkExternalFenceHandleTypeFlagBits handleType;
     }
 
     public unsafe struct VkImportMemoryWin32HandleInfoNV

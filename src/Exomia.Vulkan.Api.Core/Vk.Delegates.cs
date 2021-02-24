@@ -75,8 +75,8 @@ namespace Exomia.Vulkan.Api.Core
         VkFormat                 format,
         VkImageType              type,
         VkImageTiling            tiling,
-        VkImageUsageFlags        usage,
-        VkImageCreateFlags       flags,
+        VkImageUsageFlagBits     usage,
+        VkImageCreateFlagBits    flags,
         VkImageFormatProperties* pImageFormatProperties);
 
     public unsafe delegate void GetPhysicalDeviceProperties(
@@ -158,12 +158,12 @@ namespace Exomia.Vulkan.Api.Core
         VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult MapMemory(
-        VkDevice         device,
-        VkDeviceMemory   memory,
-        VkDeviceSize     offset,
-        VkDeviceSize     size,
-        VkMemoryMapFlags flags,
-        void**           ppData);
+        VkDevice            device,
+        VkDeviceMemory      memory,
+        VkDeviceSize        offset,
+        VkDeviceSize        size,
+        VkMemoryMapFlagBits flags,
+        void**              ppData);
 
     public delegate void UnmapMemory(
         VkDevice       device,
@@ -216,8 +216,8 @@ namespace Exomia.Vulkan.Api.Core
         VkPhysicalDevice               physicalDevice,
         VkFormat                       format,
         VkImageType                    type,
-        VkSampleCountFlags             samples,
-        VkImageUsageFlags              usage,
+        VkSampleCountFlagBits          samples,
+        VkImageUsageFlagBits           usage,
         VkImageTiling                  tiling,
         uint*                          pPropertyCount,
         VkSparseImageFormatProperties* pProperties);
@@ -301,14 +301,14 @@ namespace Exomia.Vulkan.Api.Core
         VkAllocationCallbacks* pAllocator);
 
     public unsafe delegate VkResult GetQueryPoolResults(
-        VkDevice           device,
-        VkQueryPool        queryPool,
-        uint               firstQuery,
-        uint               queryCount,
-        size_t             dataSize,
-        void*              pData,
-        VkDeviceSize       stride,
-        VkQueryResultFlags flags);
+        VkDevice              device,
+        VkQueryPool           queryPool,
+        uint                  firstQuery,
+        uint                  queryCount,
+        size_t                dataSize,
+        void*                 pData,
+        VkDeviceSize          stride,
+        VkQueryResultFlagBits flags);
 
     public unsafe delegate VkResult CreateBuffer(
         VkDevice               device,
@@ -460,9 +460,9 @@ namespace Exomia.Vulkan.Api.Core
         VkAllocationCallbacks* pAllocator);
 
     public delegate VkResult ResetDescriptorPool(
-        VkDevice                   device,
-        VkDescriptorPool           descriptorPool,
-        VkDescriptorPoolResetFlags flags);
+        VkDevice                      device,
+        VkDescriptorPool              descriptorPool,
+        VkDescriptorPoolResetFlagBits flags);
 
     public unsafe delegate VkResult AllocateDescriptorSets(
         VkDevice                     device,
@@ -521,9 +521,9 @@ namespace Exomia.Vulkan.Api.Core
         VkAllocationCallbacks* pAllocator);
 
     public delegate VkResult ResetCommandPool(
-        VkDevice                device,
-        VkCommandPool           commandPool,
-        VkCommandPoolResetFlags flags);
+        VkDevice                   device,
+        VkCommandPool              commandPool,
+        VkCommandPoolResetFlagBits flags);
 
     public unsafe delegate VkResult AllocateCommandBuffers(
         VkDevice                     device,
@@ -543,8 +543,8 @@ namespace Exomia.Vulkan.Api.Core
     public delegate VkResult EndCommandBuffer(VkCommandBuffer commandBuffer);
 
     public delegate VkResult ResetCommandBuffer(
-        VkCommandBuffer           commandBuffer,
-        VkCommandBufferResetFlags flags);
+        VkCommandBuffer              commandBuffer,
+        VkCommandBufferResetFlagBits flags);
 
     public delegate void CmdBindPipeline(
         VkCommandBuffer     commandBuffer,
@@ -583,19 +583,19 @@ namespace Exomia.Vulkan.Api.Core
         float           maxDepthBounds);
 
     public delegate void CmdSetStencilCompareMask(
-        VkCommandBuffer    commandBuffer,
-        VkStencilFaceFlags faceMask,
-        uint               compareMask);
+        VkCommandBuffer       commandBuffer,
+        VkStencilFaceFlagBits faceMask,
+        uint                  compareMask);
 
     public delegate void CmdSetStencilWriteMask(
-        VkCommandBuffer    commandBuffer,
-        VkStencilFaceFlags faceMask,
-        uint               writeMask);
+        VkCommandBuffer       commandBuffer,
+        VkStencilFaceFlagBits faceMask,
+        uint                  writeMask);
 
     public delegate void CmdSetStencilReference(
-        VkCommandBuffer    commandBuffer,
-        VkStencilFaceFlags faceMask,
-        uint               reference);
+        VkCommandBuffer       commandBuffer,
+        VkStencilFaceFlagBits faceMask,
+        uint                  reference);
 
     public unsafe delegate void CmdBindDescriptorSets(
         VkCommandBuffer     commandBuffer,
@@ -749,45 +749,45 @@ namespace Exomia.Vulkan.Api.Core
         VkImageResolve* pRegions);
 
     public delegate void CmdSetEvent(
-        VkCommandBuffer      commandBuffer,
-        VkEvent              @event,
-        VkPipelineStageFlags stageMask);
+        VkCommandBuffer         commandBuffer,
+        VkEvent                 @event,
+        VkPipelineStageFlagBits stageMask);
 
     public delegate void CmdResetEvent(
-        VkCommandBuffer      commandBuffer,
-        VkEvent              @event,
-        VkPipelineStageFlags stageMask);
+        VkCommandBuffer         commandBuffer,
+        VkEvent                 @event,
+        VkPipelineStageFlagBits stageMask);
 
     public unsafe delegate void CmdWaitEvents(
-        VkCommandBuffer        commandBuffer,
-        uint                   eventCount,
-        VkEvent*               pEvents,
-        VkPipelineStageFlags   srcStageMask,
-        VkPipelineStageFlags   dstStageMask,
-        uint                   memoryBarrierCount,
-        VkMemoryBarrier*       pMemoryBarriers,
-        uint                   bufferMemoryBarrierCount,
-        VkBufferMemoryBarrier* pBufferMemoryBarriers,
-        uint                   imageMemoryBarrierCount,
-        VkImageMemoryBarrier*  pImageMemoryBarriers);
+        VkCommandBuffer         commandBuffer,
+        uint                    eventCount,
+        VkEvent*                pEvents,
+        VkPipelineStageFlagBits srcStageMask,
+        VkPipelineStageFlagBits dstStageMask,
+        uint                    memoryBarrierCount,
+        VkMemoryBarrier*        pMemoryBarriers,
+        uint                    bufferMemoryBarrierCount,
+        VkBufferMemoryBarrier*  pBufferMemoryBarriers,
+        uint                    imageMemoryBarrierCount,
+        VkImageMemoryBarrier*   pImageMemoryBarriers);
 
     public unsafe delegate void CmdPipelineBarrier(
-        VkCommandBuffer        commandBuffer,
-        VkPipelineStageFlags   srcStageMask,
-        VkPipelineStageFlags   dstStageMask,
-        VkDependencyFlags      dependencyFlags,
-        uint                   memoryBarrierCount,
-        VkMemoryBarrier*       pMemoryBarriers,
-        uint                   bufferMemoryBarrierCount,
-        VkBufferMemoryBarrier* pBufferMemoryBarriers,
-        uint                   imageMemoryBarrierCount,
-        VkImageMemoryBarrier*  pImageMemoryBarriers);
+        VkCommandBuffer         commandBuffer,
+        VkPipelineStageFlagBits srcStageMask,
+        VkPipelineStageFlagBits dstStageMask,
+        VkDependencyFlagBits    dependencyFlags,
+        uint                    memoryBarrierCount,
+        VkMemoryBarrier*        pMemoryBarriers,
+        uint                    bufferMemoryBarrierCount,
+        VkBufferMemoryBarrier*  pBufferMemoryBarriers,
+        uint                    imageMemoryBarrierCount,
+        VkImageMemoryBarrier*   pImageMemoryBarriers);
 
     public delegate void CmdBeginQuery(
-        VkCommandBuffer     commandBuffer,
-        VkQueryPool         queryPool,
-        uint                query,
-        VkQueryControlFlags flags);
+        VkCommandBuffer        commandBuffer,
+        VkQueryPool            queryPool,
+        uint                   query,
+        VkQueryControlFlagBits flags);
 
     public delegate void CmdEndQuery(
         VkCommandBuffer commandBuffer,
@@ -801,28 +801,28 @@ namespace Exomia.Vulkan.Api.Core
         uint            queryCount);
 
     public delegate void CmdWriteTimestamp(
-        VkCommandBuffer      commandBuffer,
-        VkPipelineStageFlags pipelineStage,
-        VkQueryPool          queryPool,
-        uint                 query);
+        VkCommandBuffer         commandBuffer,
+        VkPipelineStageFlagBits pipelineStage,
+        VkQueryPool             queryPool,
+        uint                    query);
 
     public delegate void CmdCopyQueryPoolResults(
-        VkCommandBuffer    commandBuffer,
-        VkQueryPool        queryPool,
-        uint               firstQuery,
-        uint               queryCount,
-        VkBuffer           dstBuffer,
-        VkDeviceSize       dstOffset,
-        VkDeviceSize       stride,
-        VkQueryResultFlags flags);
+        VkCommandBuffer       commandBuffer,
+        VkQueryPool           queryPool,
+        uint                  firstQuery,
+        uint                  queryCount,
+        VkBuffer              dstBuffer,
+        VkDeviceSize          dstOffset,
+        VkDeviceSize          stride,
+        VkQueryResultFlagBits flags);
 
     public unsafe delegate void CmdPushConstants(
-        VkCommandBuffer    commandBuffer,
-        VkPipelineLayout   layout,
-        VkShaderStageFlags stageFlags,
-        uint               offset,
-        uint               size,
-        void*              pValues);
+        VkCommandBuffer       commandBuffer,
+        VkPipelineLayout      layout,
+        VkShaderStageFlagBits stageFlags,
+        uint                  offset,
+        uint                  size,
+        void*                 pValues);
 
     public unsafe delegate void CmdBeginRenderPass(
         VkCommandBuffer        commandBuffer,
@@ -853,11 +853,11 @@ namespace Exomia.Vulkan.Api.Core
         VkBindImageMemoryInfo* pBindInfos);
 
     public unsafe delegate void GetDeviceGroupPeerMemoryFeatures(
-        VkDevice                  device,
-        uint                      heapIndex,
-        uint                      localDeviceIndex,
-        uint                      remoteDeviceIndex,
-        VkPeerMemoryFeatureFlags* pPeerMemoryFeatures);
+        VkDevice                     device,
+        uint                         heapIndex,
+        uint                         localDeviceIndex,
+        uint                         remoteDeviceIndex,
+        VkPeerMemoryFeatureFlagBits* pPeerMemoryFeatures);
 
     public delegate void CmdSetDeviceMask(
         VkCommandBuffer commandBuffer,
@@ -927,9 +927,9 @@ namespace Exomia.Vulkan.Api.Core
         VkSparseImageFormatProperties2*         pProperties);
 
     public delegate void TrimCommandPool(
-        VkDevice               device,
-        VkCommandPool          commandPool,
-        VkCommandPoolTrimFlags flags);
+        VkDevice                  device,
+        VkCommandPool             commandPool,
+        VkCommandPoolTrimFlagBits flags);
 
     public unsafe delegate void GetDeviceQueue2(
         VkDevice            device,
@@ -1213,11 +1213,11 @@ namespace Exomia.Vulkan.Api.Core
         VkSparseImageFormatProperties2*         pProperties);
 
     public unsafe delegate void GetDeviceGroupPeerMemoryFeaturesKHR(
-        VkDevice                  device,
-        uint                      heapIndex,
-        uint                      localDeviceIndex,
-        uint                      remoteDeviceIndex,
-        VkPeerMemoryFeatureFlags* pPeerMemoryFeatures);
+        VkDevice                     device,
+        uint                         heapIndex,
+        uint                         localDeviceIndex,
+        uint                         remoteDeviceIndex,
+        VkPeerMemoryFeatureFlagBits* pPeerMemoryFeatures);
 
     public delegate void CmdSetDeviceMaskKHR(
         VkCommandBuffer commandBuffer,
@@ -1233,9 +1233,9 @@ namespace Exomia.Vulkan.Api.Core
         uint            groupCountZ);
 
     public delegate void TrimCommandPoolKHR(
-        VkDevice               device,
-        VkCommandPool          commandPool,
-        VkCommandPoolTrimFlags flags);
+        VkDevice                  device,
+        VkCommandPool             commandPool,
+        VkCommandPoolTrimFlagBits flags);
 
     public unsafe delegate VkResult EnumeratePhysicalDeviceGroupsKHR(
         VkInstance                       instance,
@@ -1253,10 +1253,10 @@ namespace Exomia.Vulkan.Api.Core
         int*                  pFd);
 
     public unsafe delegate VkResult GetMemoryFdPropertiesKHR(
-        VkDevice                        device,
-        VkExternalMemoryHandleTypeFlags handleType,
-        int                             fd,
-        VkMemoryFdPropertiesKHR*        pMemoryFdProperties);
+        VkDevice                           device,
+        VkExternalMemoryHandleTypeFlagBits handleType,
+        int                                fd,
+        VkMemoryFdPropertiesKHR*           pMemoryFdProperties);
 
     public unsafe delegate void GetPhysicalDeviceExternalSemaphorePropertiesKHR(
         VkPhysicalDevice                       physicalDevice,
@@ -1626,11 +1626,11 @@ namespace Exomia.Vulkan.Api.Core
         VkDeviceSize*   pCounterBufferOffsets);
 
     public delegate void CmdBeginQueryIndexedEXT(
-        VkCommandBuffer     commandBuffer,
-        VkQueryPool         queryPool,
-        uint                query,
-        VkQueryControlFlags flags,
-        uint                index);
+        VkCommandBuffer        commandBuffer,
+        VkQueryPool            queryPool,
+        uint                   query,
+        VkQueryControlFlagBits flags,
+        uint                   index);
 
     public delegate void CmdEndQueryIndexedEXT(
         VkCommandBuffer commandBuffer,
@@ -1675,20 +1675,20 @@ namespace Exomia.Vulkan.Api.Core
         uint            stride);
 
     public unsafe delegate VkResult GetShaderInfoAMD(
-        VkDevice            device,
-        VkPipeline          pipeline,
-        VkShaderStageFlags  shaderStage,
-        VkShaderInfoTypeAMD infoType,
-        size_t*             pInfoSize,
-        void*               pInfo);
+        VkDevice              device,
+        VkPipeline            pipeline,
+        VkShaderStageFlagBits shaderStage,
+        VkShaderInfoTypeAMD   infoType,
+        size_t*               pInfoSize,
+        void*                 pInfo);
 
     public unsafe delegate VkResult GetPhysicalDeviceExternalImageFormatPropertiesNV(
         VkPhysicalDevice                   physicalDevice,
         VkFormat                           format,
         VkImageType                        type,
         VkImageTiling                      tiling,
-        VkImageUsageFlags                  usage,
-        VkImageCreateFlags                 flags,
+        VkImageUsageFlagBits               usage,
+        VkImageCreateFlagBits              flags,
         VkExternalMemoryHandleTypeFlagsNV  externalHandleType,
         VkExternalImageFormatPropertiesNV* pExternalImageFormatProperties);
 
@@ -1818,7 +1818,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public unsafe delegate void GetPhysicalDeviceMultisamplePropertiesEXT(
         VkPhysicalDevice            physicalDevice,
-        VkSampleCountFlags          samples,
+        VkSampleCountFlagBits       samples,
         VkMultisamplePropertiesEXT* pMultisampleProperties);
 
     public unsafe delegate VkResult GetImageDrmFormatModifierPropertiesEXT(
@@ -1965,17 +1965,17 @@ namespace Exomia.Vulkan.Api.Core
         uint       shader);
 
     public unsafe delegate VkResult GetMemoryHostPointerPropertiesEXT(
-        VkDevice                          device,
-        VkExternalMemoryHandleTypeFlags   handleType,
-        void*                             pHostPointer,
-        VkMemoryHostPointerPropertiesEXT* pMemoryHostPointerProperties);
+        VkDevice                           device,
+        VkExternalMemoryHandleTypeFlagBits handleType,
+        void*                              pHostPointer,
+        VkMemoryHostPointerPropertiesEXT*  pMemoryHostPointerProperties);
 
     public delegate void CmdWriteBufferMarkerAMD(
-        VkCommandBuffer      commandBuffer,
-        VkPipelineStageFlags pipelineStage,
-        VkBuffer             dstBuffer,
-        VkDeviceSize         dstOffset,
-        uint                 marker);
+        VkCommandBuffer         commandBuffer,
+        VkPipelineStageFlagBits pipelineStage,
+        VkBuffer                dstBuffer,
+        VkDeviceSize            dstOffset,
+        uint                    marker);
 
     public unsafe delegate VkResult GetPhysicalDeviceCalibrateableTimeDomainsEXT(
         VkPhysicalDevice physicalDevice,
@@ -2103,8 +2103,8 @@ namespace Exomia.Vulkan.Api.Core
         uint        queryCount);
 
     public delegate void CmdSetCullModeEXT(
-        VkCommandBuffer commandBuffer,
-        VkCullModeFlags cullMode);
+        VkCommandBuffer    commandBuffer,
+        VkCullModeFlagBits cullMode);
 
     public delegate void CmdSetFrontFaceEXT(
         VkCommandBuffer commandBuffer,
@@ -2154,12 +2154,12 @@ namespace Exomia.Vulkan.Api.Core
         uint            stencilTestEnable);
 
     public delegate void CmdSetStencilOpEXT(
-        VkCommandBuffer    commandBuffer,
-        VkStencilFaceFlags faceMask,
-        VkStencilOp        failOp,
-        VkStencilOp        passOp,
-        VkStencilOp        depthFailOp,
-        VkCompareOp        compareOp);
+        VkCommandBuffer       commandBuffer,
+        VkStencilFaceFlagBits faceMask,
+        VkStencilOp           failOp,
+        VkStencilOp           passOp,
+        VkStencilOp           depthFailOp,
+        VkCompareOp           compareOp);
 
     public unsafe delegate void GetGeneratedCommandsMemoryRequirementsNV(
         VkDevice                                     device,

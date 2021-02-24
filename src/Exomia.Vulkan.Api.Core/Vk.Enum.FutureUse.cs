@@ -16,7 +16,7 @@ using System;
 namespace Exomia.Vulkan.Api.Core
 {
     [Flags]
-    public enum VkMemoryMapFlags : uint
+    public enum VkMemoryMapFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -25,7 +25,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkDescriptorPoolResetFlags : uint
+    public enum VkDescriptorPoolResetFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -34,7 +34,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkCommandPoolTrimFlags : uint
+    public enum VkCommandPoolTrimFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -43,7 +43,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkInstanceCreateFlags : uint
+    public enum VkInstanceCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -52,7 +52,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkDeviceCreateFlags : uint
+    public enum VkDeviceCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -61,7 +61,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkSemaphoreCreateFlags : uint
+    public enum VkSemaphoreCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -70,7 +70,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkQueryPoolCreateFlags : uint
+    public enum VkQueryPoolCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -79,7 +79,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkBufferViewCreateFlags : uint
+    public enum VkBufferViewCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -88,7 +88,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineVertexInputStateCreateFlags : uint
+    public enum VkPipelineVertexInputStateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -97,7 +97,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineInputAssemblyStateCreateFlags : uint
+    public enum VkPipelineInputAssemblyStateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -106,7 +106,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineTessellationStateCreateFlags : uint
+    public enum VkPipelineTessellationStateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -115,7 +115,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineViewportStateCreateFlags : uint
+    public enum VkPipelineViewportStateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -124,7 +124,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineRasterizationStateCreateFlags : uint
+    public enum VkPipelineRasterizationStateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -133,7 +133,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineMultisampleStateCreateFlags : uint
+    public enum VkPipelineMultisampleStateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -142,7 +142,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineDepthStencilStateCreateFlags : uint
+    public enum VkPipelineDepthStencilStateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -151,7 +151,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineColorBlendStateCreateFlags : uint
+    public enum VkPipelineColorBlendStateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -160,7 +160,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineDynamicStateCreateFlags : uint
+    public enum VkPipelineDynamicStateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -169,7 +169,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineLayoutCreateFlags : uint
+    public enum VkPipelineLayoutCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use
@@ -178,7 +178,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkDescriptorUpdateTemplateCreateFlags : uint
+    public enum VkDescriptorUpdateTemplateCreateFlagBits : uint
     {
         /// <summary>
         ///     Reserved for future use

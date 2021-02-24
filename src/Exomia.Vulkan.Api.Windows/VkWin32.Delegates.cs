@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2020, exomia
+// Copyright (c) 2018-2021, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -35,10 +35,10 @@ namespace Exomia.Vulkan.Api.Windows
         IntPtr*                        pHandle);
 
     public unsafe delegate VkResult PFN_vkGetMemoryWin32HandlePropertiesKHR(
-        VkDevice                          device,
-        VkExternalMemoryHandleTypeFlags   handleType,
-        IntPtr                            handle,
-        VkMemoryWin32HandlePropertiesKHR* pMemoryWin32HandleProperties);
+        VkDevice                           device,
+        VkExternalMemoryHandleTypeFlagBits handleType,
+        IntPtr                             handle,
+        VkMemoryWin32HandlePropertiesKHR*  pMemoryWin32HandleProperties);
 
     public unsafe delegate VkResult GetPhysicalDeviceSurfacePresentModes2EXT(
         VkPhysicalDevice                 physicalDevice,

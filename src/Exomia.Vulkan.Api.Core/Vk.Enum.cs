@@ -1459,7 +1459,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkAccessFlags
+    public enum VkAccessFlagBits
     {
         INDIRECT_COMMAND_READ_BIT                     = 0x00000001,
         INDEX_READ_BIT                                = 0x00000002,
@@ -1497,7 +1497,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkImageAspectFlags
+    public enum VkImageAspectFlagBits
     {
         COLOR_BIT              = 0x00000001,
         DEPTH_BIT              = 0x00000002,
@@ -1517,7 +1517,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkFormatFeatureFlags
+    public enum VkFormatFeatureFlagBits
     {
         SAMPLED_IMAGE_BIT                                                           = 0x00000001,
         STORAGE_IMAGE_BIT                                                           = 0x00000002,
@@ -1567,7 +1567,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkImageCreateFlags
+    public enum VkImageCreateFlagBits
     {
         SPARSE_BINDING_BIT                        = 0x00000001,
         SPARSE_RESIDENCY_BIT                      = 0x00000002,
@@ -1594,7 +1594,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkSampleCountFlags
+    public enum VkSampleCountFlagBits
     {
         _1_BIT             = 0x00000001,
         _2_BIT             = 0x00000002,
@@ -1607,7 +1607,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkImageUsageFlags
+    public enum VkImageUsageFlagBits
     {
         TRANSFER_SRC_BIT                         = 0x00000001,
         TRANSFER_DST_BIT                         = 0x00000002,
@@ -1624,7 +1624,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkMemoryHeapFlags
+    public enum VkMemoryHeapFlagBits
     {
         DEVICE_LOCAL_BIT       = 0x00000001,
         MULTI_INSTANCE_BIT     = 0x00000002,
@@ -1633,7 +1633,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkMemoryPropertyFlags
+    public enum VkMemoryPropertyFlagBits
     {
         DEVICE_LOCAL_BIT        = 0x00000001,
         HOST_VISIBLE_BIT        = 0x00000002,
@@ -1647,7 +1647,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkQueueFlags
+    public enum VkQueueFlagBits
     {
         GRAPHICS_BIT       = 0x00000001,
         COMPUTE_BIT        = 0x00000002,
@@ -1658,14 +1658,14 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkDeviceQueueCreateFlags
+    public enum VkDeviceQueueCreateFlagBits
     {
         PROTECTED_BIT      = 0x00000001,
         FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkPipelineStageFlags
+    public enum VkPipelineStageFlagBits
     {
         TOP_OF_PIPE_BIT                          = 0x00000001,
         DRAW_INDIRECT_BIT                        = 0x00000002,
@@ -1701,14 +1701,14 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkSparseMemoryBindFlags
+    public enum VkSparseMemoryBindFlagBits
     {
         METADATA_BIT       = 0x00000001,
         FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkSparseImageFormatFlags
+    public enum VkSparseImageFormatFlagBits
     {
         SINGLE_MIPTAIL_BIT         = 0x00000001,
         ALIGNED_MIP_SIZE_BIT       = 0x00000002,
@@ -1717,7 +1717,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkFenceCreateFlags
+    public enum VkFenceCreateFlagBits
     {
         SIGNALED_BIT       = 0x00000001,
         FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
@@ -1814,14 +1814,14 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkEventCreateFlags
+    public enum VkEventCreateFlagBits
     {
         DEVICE_ONLY_BIT_KHR = 0x00000001,
         FLAG_BITS_MAX_ENUM  = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkQueryPipelineStatisticFlags
+    public enum VkQueryPipelineStatisticFlagBits
     {
         INPUT_ASSEMBLY_VERTICES_BIT                    = 0x00000001,
         INPUT_ASSEMBLY_PRIMITIVES_BIT                  = 0x00000002,
@@ -1838,7 +1838,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkQueryResultFlags
+    public enum VkQueryResultFlagBits
     {
         _64_BIT               = 0x00000001,
         WAIT_BIT              = 0x00000002,
@@ -1848,7 +1848,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkBufferCreateFlags
+    public enum VkBufferCreateFlagBits
     {
         SPARSE_BINDING_BIT                    = 0x00000001,
         SPARSE_RESIDENCY_BIT                  = 0x00000002,
@@ -1861,7 +1861,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkBufferUsageFlags
+    public enum VkBufferUsageFlagBits
     {
         TRANSFER_SRC_BIT                                     = 0x00000001,
         TRANSFER_DST_BIT                                     = 0x00000002,
@@ -1886,7 +1886,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkImageViewCreateFlags
+    public enum VkImageViewCreateFlagBits
     {
         VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DYNAMIC_BIT_EXT  = 0x00000001,
         VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DEFERRED_BIT_EXT = 0x00000002,
@@ -1894,20 +1894,20 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkShaderModuleCreateFlags
+    public enum VkShaderModuleCreateFlagBits
     {
         MAX_ENUM = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkPipelineCacheCreateFlags
+    public enum VkPipelineCacheCreateFlagBits
     {
         EXTERNALLY_SYNCHRONIZED_BIT_EXT = 0x00000001,
         FLAG_BITS_MAX_ENUM              = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkColorComponentFlags
+    public enum VkColorComponentFlagBits
     {
         R_BIT              = 0x00000001,
         G_BIT              = 0x00000002,
@@ -1917,7 +1917,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineCreateFlags
+    public enum VkPipelineCreateFlagBits
     {
         DISABLE_OPTIMIZATION_BIT                               = 0x00000001,
         ALLOW_DERIVATIVES_BIT                                  = 0x00000002,
@@ -1945,7 +1945,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPipelineShaderStageCreateFlags
+    public enum VkPipelineShaderStageCreateFlagBits
     {
         ALLOW_VARYING_SUBGROUP_SIZE_BIT_EXT = 0x00000001,
         REQUIRE_FULL_SUBGROUPS_BIT_EXT      = 0x00000002,
@@ -1953,7 +1953,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkShaderStageFlags
+    public enum VkShaderStageFlagBits
     {
         VERTEX_BIT                  = 0x00000001,
         TESSELLATION_CONTROL_BIT    = 0x00000002,
@@ -1981,7 +1981,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkCullModeFlags
+    public enum VkCullModeFlagBits
     {
         NONE               = 0,
         FRONT_BIT          = 0x00000001,
@@ -1991,7 +1991,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkSamplerCreateFlags
+    public enum VkSamplerCreateFlagBits
     {
         SUBSAMPLED_BIT_EXT                       = 0x00000001,
         SUBSAMPLED_COARSE_RECONSTRUCTION_BIT_EXT = 0x00000002,
@@ -1999,7 +1999,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkDescriptorPoolCreateFlags
+    public enum VkDescriptorPoolCreateFlagBits
     {
         FREE_DESCRIPTOR_SET_BIT   = 0x00000001,
         UPDATE_AFTER_BIND_BIT     = 0x00000002,
@@ -2009,7 +2009,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkDescriptorSetLayoutCreateFlags
+    public enum VkDescriptorSetLayoutCreateFlagBits
     {
         UPDATE_AFTER_BIND_POOL_BIT     = 0x00000002,
         PUSH_DESCRIPTOR_BIT_KHR        = 0x00000001,
@@ -2019,14 +2019,14 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkAttachmentDescriptionFlags
+    public enum VkAttachmentDescriptionFlagBits
     {
         MAY_ALIAS_BIT      = 0x00000001,
         FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkDependencyFlags
+    public enum VkDependencyFlagBits
     {
         BY_REGION_BIT        = 0x00000001,
         DEVICE_GROUP_BIT     = 0x00000004,
@@ -2037,7 +2037,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkFramebufferCreateFlags
+    public enum VkFramebufferCreateFlagBits
     {
         IMAGELESS_BIT      = 0x00000001,
         IMAGELESS_BIT_KHR  = IMAGELESS_BIT,
@@ -2045,14 +2045,14 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkRenderPassCreateFlags
+    public enum VkRenderPassCreateFlagBits
     {
         TRANSFORM_BIT_QCOM = 0x00000002,
         FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkSubpassDescriptionFlags
+    public enum VkSubpassDescriptionFlagBits
     {
         PER_VIEW_ATTRIBUTES_BIT_NVX      = 0x00000001,
         PER_VIEW_POSITION_X_ONLY_BIT_NVX = 0x00000002,
@@ -2062,7 +2062,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkCommandPoolCreateFlags
+    public enum VkCommandPoolCreateFlagBits
     {
         TRANSIENT_BIT            = 0x00000001,
         RESET_COMMAND_BUFFER_BIT = 0x00000002,
@@ -2071,14 +2071,14 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkCommandPoolResetFlags
+    public enum VkCommandPoolResetFlagBits
     {
         RELEASE_RESOURCES_BIT = 0x00000001,
         FLAG_BITS_MAX_ENUM    = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkCommandBufferUsageFlags
+    public enum VkCommandBufferUsageFlagBits
     {
         ONE_TIME_SUBMIT_BIT      = 0x00000001,
         RENDER_PASS_CONTINUE_BIT = 0x00000002,
@@ -2087,21 +2087,21 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkQueryControlFlags
+    public enum VkQueryControlFlagBits
     {
         PRECISE_BIT        = 0x00000001,
         FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkCommandBufferResetFlags
+    public enum VkCommandBufferResetFlagBits
     {
         RELEASE_RESOURCES_BIT = 0x00000001,
         FLAG_BITS_MAX_ENUM    = 0x7FFFFFFF
     }
 
     [Flags]
-    public enum VkStencilFaceFlags
+    public enum VkStencilFaceFlagBits
     {
         VK_STENCIL_FACE_FRONT_BIT          = 0x00000001,
         VK_STENCIL_FACE_BACK_BIT           = 0x00000002,
@@ -2170,7 +2170,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkSubgroupFeatureFlags
+    public enum VkSubgroupFeatureFlagBits
     {
         BASIC_BIT            = 0x00000001,
         VOTE_BIT             = 0x00000002,
@@ -2185,7 +2185,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkPeerMemoryFeatureFlags
+    public enum VkPeerMemoryFeatureFlagBits
     {
         COPY_SRC_BIT        = 0x00000001,
         COPY_DST_BIT        = 0x00000002,
@@ -2199,7 +2199,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkMemoryAllocateFlags
+    public enum VkMemoryAllocateFlagBits
     {
         DEVICE_MASK_BIT                       = 0x00000001,
         DEVICE_ADDRESS_BIT                    = 0x00000002,
@@ -2211,7 +2211,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkExternalMemoryHandleTypeFlags
+    public enum VkExternalMemoryHandleTypeFlagBits
     {
         OPAQUE_FD_BIT                       = 0x00000001,
         OPAQUE_WIN32_BIT                    = 0x00000002,
@@ -2235,7 +2235,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkExternalMemoryFeatureFlags
+    public enum VkExternalMemoryFeatureFlagBits
     {
         DEDICATED_ONLY_BIT     = 0x00000001,
         EXPORTABLE_BIT         = 0x00000002,
@@ -2247,7 +2247,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkExternalFenceHandleTypeFlags
+    public enum VkExternalFenceHandleTypeFlagBits
     {
         OPAQUE_FD_BIT            = 0x00000001,
         OPAQUE_WIN32_BIT         = 0x00000002,
@@ -2261,7 +2261,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkExternalFenceFeatureFlags
+    public enum VkExternalFenceFeatureFlagBits
     {
         EXPORTABLE_BIT     = 0x00000001,
         IMPORTABLE_BIT     = 0x00000002,
@@ -2271,7 +2271,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkFenceImportFlags
+    public enum VkFenceImportFlagBits
     {
         TEMPORARY_BIT      = 0x00000001,
         TEMPORARY_BIT_KHR  = TEMPORARY_BIT,
@@ -2279,7 +2279,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkSemaphoreImportFlags
+    public enum VkSemaphoreImportFlagBits
     {
         TEMPORARY_BIT      = 0x00000001,
         TEMPORARY_BIT_KHR  = TEMPORARY_BIT,
@@ -2287,7 +2287,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkExternalSemaphoreHandleTypeFlags
+    public enum VkExternalSemaphoreHandleTypeFlagBits
     {
         OPAQUE_FD_BIT            = 0x00000001,
         OPAQUE_WIN32_BIT         = 0x00000002,
@@ -2304,7 +2304,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkExternalSemaphoreFeatureFlags
+    public enum VkExternalSemaphoreFeatureFlagBits
     {
         EXPORTABLE_BIT     = 0x00000001,
         IMPORTABLE_BIT     = 0x00000002,
@@ -2376,7 +2376,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkResolveModeFlags
+    public enum VkResolveModeFlagBits
     {
         NONE                = 0,
         SAMPLE_ZERO_BIT     = 0x00000001,
@@ -2392,7 +2392,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkDescriptorBindingFlags
+    public enum VkDescriptorBindingFlagBits
     {
         UPDATE_AFTER_BIND_BIT               = 0x00000001,
         UPDATE_UNUSED_WHILE_PENDING_BIT     = 0x00000002,
@@ -2406,7 +2406,7 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkSemaphoreWaitFlags
+    public enum VkSemaphoreWaitFlagBits
     {
         ANY_BIT            = 0x00000001,
         ANY_BIT_KHR        = ANY_BIT,

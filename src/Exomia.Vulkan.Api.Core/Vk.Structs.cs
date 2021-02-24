@@ -73,16 +73,16 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferMemoryBarrier
     {
-        public const VkStructureType STYPE = VkStructureType.BUFFER_MEMORY_BARRIER;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkAccessFlags   srcAccessMask;
-        public       VkAccessFlags   dstAccessMask;
-        public       uint            srcQueueFamilyIndex;
-        public       uint            dstQueueFamilyIndex;
-        public       VkBuffer        buffer;
-        public       VkDeviceSize    offset;
-        public       VkDeviceSize    size;
+        public const VkStructureType  STYPE = VkStructureType.BUFFER_MEMORY_BARRIER;
+        public       VkStructureType  sType;
+        public       void*            pNext;
+        public       VkAccessFlagBits srcAccessMask;
+        public       VkAccessFlagBits dstAccessMask;
+        public       uint             srcQueueFamilyIndex;
+        public       uint             dstQueueFamilyIndex;
+        public       VkBuffer         buffer;
+        public       VkDeviceSize     offset;
+        public       VkDeviceSize     size;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -115,11 +115,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkImageSubresourceRange
     {
-        public VkImageAspectFlags aspectMask;
-        public uint               baseMipLevel;
-        public uint               levelCount;
-        public uint               baseArrayLayer;
-        public uint               layerCount;
+        public VkImageAspectFlagBits aspectMask;
+        public uint                  baseMipLevel;
+        public uint                  levelCount;
+        public uint                  baseArrayLayer;
+        public uint                  layerCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -128,8 +128,8 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType         STYPE = VkStructureType.IMAGE_MEMORY_BARRIER;
         public       VkStructureType         sType;
         public       void*                   pNext;
-        public       VkAccessFlags           srcAccessMask;
-        public       VkAccessFlags           dstAccessMask;
+        public       VkAccessFlagBits        srcAccessMask;
+        public       VkAccessFlagBits        dstAccessMask;
         public       VkImageLayout           oldLayout;
         public       VkImageLayout           newLayout;
         public       uint                    srcQueueFamilyIndex;
@@ -141,11 +141,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryBarrier
     {
-        public const VkStructureType STYPE = VkStructureType.MEMORY_BARRIER;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkAccessFlags   srcAccessMask;
-        public       VkAccessFlags   dstAccessMask;
+        public const VkStructureType  STYPE = VkStructureType.MEMORY_BARRIER;
+        public       VkStructureType  sType;
+        public       void*            pNext;
+        public       VkAccessFlagBits srcAccessMask;
+        public       VkAccessFlagBits dstAccessMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -204,47 +204,47 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkFormatProperties
     {
-        public VkFormatFeatureFlags linearTilingFeatures;
-        public VkFormatFeatureFlags optimalTilingFeatures;
-        public VkFormatFeatureFlags bufferFeatures;
+        public VkFormatFeatureFlagBits linearTilingFeatures;
+        public VkFormatFeatureFlagBits optimalTilingFeatures;
+        public VkFormatFeatureFlagBits bufferFeatures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkImageFormatProperties
     {
-        public VkExtent3D         maxExtent;
-        public uint               maxMipLevels;
-        public uint               maxArrayLayers;
-        public VkSampleCountFlags sampleCounts;
-        public VkDeviceSize       maxResourceSize;
+        public VkExtent3D            maxExtent;
+        public uint                  maxMipLevels;
+        public uint                  maxArrayLayers;
+        public VkSampleCountFlagBits sampleCounts;
+        public VkDeviceSize          maxResourceSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkInstanceCreateInfo
     {
-        public const VkStructureType       STYPE = VkStructureType.INSTANCE_CREATE_INFO;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       VkInstanceCreateFlags flags;
-        public       VkApplicationInfo*    pApplicationInfo;
-        public       uint                  enabledLayerCount;
-        public       sbyte**               ppEnabledLayerNames;
-        public       uint                  enabledExtensionCount;
-        public       sbyte**               ppEnabledExtensionNames;
+        public const VkStructureType          STYPE = VkStructureType.INSTANCE_CREATE_INFO;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkInstanceCreateFlagBits flags;
+        public       VkApplicationInfo*       pApplicationInfo;
+        public       uint                     enabledLayerCount;
+        public       sbyte**                  ppEnabledLayerNames;
+        public       uint                     enabledExtensionCount;
+        public       sbyte**                  ppEnabledExtensionNames;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkMemoryHeap
     {
-        public VkDeviceSize      size;
-        public VkMemoryHeapFlags flags;
+        public VkDeviceSize         size;
+        public VkMemoryHeapFlagBits flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkMemoryType
     {
-        public VkMemoryPropertyFlags propertyFlags;
-        public uint                  heapIndex;
+        public VkMemoryPropertyFlagBits propertyFlags;
+        public uint                     heapIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -310,112 +310,112 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceLimits
     {
-        public       uint               maxImageDimension1D;
-        public       uint               maxImageDimension2D;
-        public       uint               maxImageDimension3D;
-        public       uint               maxImageDimensionCube;
-        public       uint               maxImageArrayLayers;
-        public       uint               maxTexelBufferElements;
-        public       uint               maxUniformBufferRange;
-        public       uint               maxStorageBufferRange;
-        public       uint               maxPushConstantsSize;
-        public       uint               maxMemoryAllocationCount;
-        public       uint               maxSamplerAllocationCount;
-        public       VkDeviceSize       bufferImageGranularity;
-        public       VkDeviceSize       sparseAddressSpaceSize;
-        public       uint               maxBoundDescriptorSets;
-        public       uint               maxPerStageDescriptorSamplers;
-        public       uint               maxPerStageDescriptorUniformBuffers;
-        public       uint               maxPerStageDescriptorStorageBuffers;
-        public       uint               maxPerStageDescriptorSampledImages;
-        public       uint               maxPerStageDescriptorStorageImages;
-        public       uint               maxPerStageDescriptorInputAttachments;
-        public       uint               maxPerStageResources;
-        public       uint               maxDescriptorSetSamplers;
-        public       uint               maxDescriptorSetUniformBuffers;
-        public       uint               maxDescriptorSetUniformBuffersDynamic;
-        public       uint               maxDescriptorSetStorageBuffers;
-        public       uint               maxDescriptorSetStorageBuffersDynamic;
-        public       uint               maxDescriptorSetSampledImages;
-        public       uint               maxDescriptorSetStorageImages;
-        public       uint               maxDescriptorSetInputAttachments;
-        public       uint               maxVertexInputAttributes;
-        public       uint               maxVertexInputBindings;
-        public       uint               maxVertexInputAttributeOffset;
-        public       uint               maxVertexInputBindingStride;
-        public       uint               maxVertexOutputComponents;
-        public       uint               maxTessellationGenerationLevel;
-        public       uint               maxTessellationPatchSize;
-        public       uint               maxTessellationControlPerVertexInputComponents;
-        public       uint               maxTessellationControlPerVertexOutputComponents;
-        public       uint               maxTessellationControlPerPatchOutputComponents;
-        public       uint               maxTessellationControlTotalOutputComponents;
-        public       uint               maxTessellationEvaluationInputComponents;
-        public       uint               maxTessellationEvaluationOutputComponents;
-        public       uint               maxGeometryShaderInvocations;
-        public       uint               maxGeometryInputComponents;
-        public       uint               maxGeometryOutputComponents;
-        public       uint               maxGeometryOutputVertices;
-        public       uint               maxGeometryTotalOutputComponents;
-        public       uint               maxFragmentInputComponents;
-        public       uint               maxFragmentOutputAttachments;
-        public       uint               maxFragmentDualSrcAttachments;
-        public       uint               maxFragmentCombinedOutputResources;
-        public       uint               maxComputeSharedMemorySize;
-        public fixed uint               maxComputeWorkGroupCount[3];
-        public       uint               maxComputeWorkGroupInvocations;
-        public fixed uint               maxComputeWorkGroupSize[3];
-        public       uint               subPixelPrecisionBits;
-        public       uint               subTexelPrecisionBits;
-        public       uint               mipmapPrecisionBits;
-        public       uint               maxDrawIndexedIndexValue;
-        public       uint               maxDrawIndirectCount;
-        public       float              maxSamplerLodBias;
-        public       float              maxSamplerAnisotropy;
-        public       uint               maxViewports;
-        public fixed uint               maxViewportDimensions[2];
-        public fixed float              viewportBoundsRange[2];
-        public       uint               viewportSubPixelBits;
-        public       nuint              minMemoryMapAlignment;
-        public       VkDeviceSize       minTexelBufferOffsetAlignment;
-        public       VkDeviceSize       minUniformBufferOffsetAlignment;
-        public       VkDeviceSize       minStorageBufferOffsetAlignment;
-        public       int                minTexelOffset;
-        public       uint               maxTexelOffset;
-        public       int                minTexelGatherOffset;
-        public       uint               maxTexelGatherOffset;
-        public       float              minInterpolationOffset;
-        public       float              maxInterpolationOffset;
-        public       uint               subPixelInterpolationOffsetBits;
-        public       uint               maxFramebufferWidth;
-        public       uint               maxFramebufferHeight;
-        public       uint               maxFramebufferLayers;
-        public       VkSampleCountFlags framebufferColorSampleCounts;
-        public       VkSampleCountFlags framebufferDepthSampleCounts;
-        public       VkSampleCountFlags framebufferStencilSampleCounts;
-        public       VkSampleCountFlags framebufferNoAttachmentsSampleCounts;
-        public       uint               maxColorAttachments;
-        public       VkSampleCountFlags sampledImageColorSampleCounts;
-        public       VkSampleCountFlags sampledImageIntegerSampleCounts;
-        public       VkSampleCountFlags sampledImageDepthSampleCounts;
-        public       VkSampleCountFlags sampledImageStencilSampleCounts;
-        public       VkSampleCountFlags storageImageSampleCounts;
-        public       uint               maxSampleMaskWords;
-        public       VkBool32           timestampComputeAndGraphics;
-        public       float              timestampPeriod;
-        public       uint               maxClipDistances;
-        public       uint               maxCullDistances;
-        public       uint               maxCombinedClipAndCullDistances;
-        public       uint               discreteQueuePriorities;
-        public fixed float              pointSizeRange[2];
-        public fixed float              lineWidthRange[2];
-        public       float              pointSizeGranularity;
-        public       float              lineWidthGranularity;
-        public       VkBool32           strictLines;
-        public       VkBool32           standardSampleLocations;
-        public       VkDeviceSize       optimalBufferCopyOffsetAlignment;
-        public       VkDeviceSize       optimalBufferCopyRowPitchAlignment;
-        public       VkDeviceSize       nonCoherentAtomSize;
+        public       uint                  maxImageDimension1D;
+        public       uint                  maxImageDimension2D;
+        public       uint                  maxImageDimension3D;
+        public       uint                  maxImageDimensionCube;
+        public       uint                  maxImageArrayLayers;
+        public       uint                  maxTexelBufferElements;
+        public       uint                  maxUniformBufferRange;
+        public       uint                  maxStorageBufferRange;
+        public       uint                  maxPushConstantsSize;
+        public       uint                  maxMemoryAllocationCount;
+        public       uint                  maxSamplerAllocationCount;
+        public       VkDeviceSize          bufferImageGranularity;
+        public       VkDeviceSize          sparseAddressSpaceSize;
+        public       uint                  maxBoundDescriptorSets;
+        public       uint                  maxPerStageDescriptorSamplers;
+        public       uint                  maxPerStageDescriptorUniformBuffers;
+        public       uint                  maxPerStageDescriptorStorageBuffers;
+        public       uint                  maxPerStageDescriptorSampledImages;
+        public       uint                  maxPerStageDescriptorStorageImages;
+        public       uint                  maxPerStageDescriptorInputAttachments;
+        public       uint                  maxPerStageResources;
+        public       uint                  maxDescriptorSetSamplers;
+        public       uint                  maxDescriptorSetUniformBuffers;
+        public       uint                  maxDescriptorSetUniformBuffersDynamic;
+        public       uint                  maxDescriptorSetStorageBuffers;
+        public       uint                  maxDescriptorSetStorageBuffersDynamic;
+        public       uint                  maxDescriptorSetSampledImages;
+        public       uint                  maxDescriptorSetStorageImages;
+        public       uint                  maxDescriptorSetInputAttachments;
+        public       uint                  maxVertexInputAttributes;
+        public       uint                  maxVertexInputBindings;
+        public       uint                  maxVertexInputAttributeOffset;
+        public       uint                  maxVertexInputBindingStride;
+        public       uint                  maxVertexOutputComponents;
+        public       uint                  maxTessellationGenerationLevel;
+        public       uint                  maxTessellationPatchSize;
+        public       uint                  maxTessellationControlPerVertexInputComponents;
+        public       uint                  maxTessellationControlPerVertexOutputComponents;
+        public       uint                  maxTessellationControlPerPatchOutputComponents;
+        public       uint                  maxTessellationControlTotalOutputComponents;
+        public       uint                  maxTessellationEvaluationInputComponents;
+        public       uint                  maxTessellationEvaluationOutputComponents;
+        public       uint                  maxGeometryShaderInvocations;
+        public       uint                  maxGeometryInputComponents;
+        public       uint                  maxGeometryOutputComponents;
+        public       uint                  maxGeometryOutputVertices;
+        public       uint                  maxGeometryTotalOutputComponents;
+        public       uint                  maxFragmentInputComponents;
+        public       uint                  maxFragmentOutputAttachments;
+        public       uint                  maxFragmentDualSrcAttachments;
+        public       uint                  maxFragmentCombinedOutputResources;
+        public       uint                  maxComputeSharedMemorySize;
+        public fixed uint                  maxComputeWorkGroupCount[3];
+        public       uint                  maxComputeWorkGroupInvocations;
+        public fixed uint                  maxComputeWorkGroupSize[3];
+        public       uint                  subPixelPrecisionBits;
+        public       uint                  subTexelPrecisionBits;
+        public       uint                  mipmapPrecisionBits;
+        public       uint                  maxDrawIndexedIndexValue;
+        public       uint                  maxDrawIndirectCount;
+        public       float                 maxSamplerLodBias;
+        public       float                 maxSamplerAnisotropy;
+        public       uint                  maxViewports;
+        public fixed uint                  maxViewportDimensions[2];
+        public fixed float                 viewportBoundsRange[2];
+        public       uint                  viewportSubPixelBits;
+        public       nuint                 minMemoryMapAlignment;
+        public       VkDeviceSize          minTexelBufferOffsetAlignment;
+        public       VkDeviceSize          minUniformBufferOffsetAlignment;
+        public       VkDeviceSize          minStorageBufferOffsetAlignment;
+        public       int                   minTexelOffset;
+        public       uint                  maxTexelOffset;
+        public       int                   minTexelGatherOffset;
+        public       uint                  maxTexelGatherOffset;
+        public       float                 minInterpolationOffset;
+        public       float                 maxInterpolationOffset;
+        public       uint                  subPixelInterpolationOffsetBits;
+        public       uint                  maxFramebufferWidth;
+        public       uint                  maxFramebufferHeight;
+        public       uint                  maxFramebufferLayers;
+        public       VkSampleCountFlagBits framebufferColorSampleCounts;
+        public       VkSampleCountFlagBits framebufferDepthSampleCounts;
+        public       VkSampleCountFlagBits framebufferStencilSampleCounts;
+        public       VkSampleCountFlagBits framebufferNoAttachmentsSampleCounts;
+        public       uint                  maxColorAttachments;
+        public       VkSampleCountFlagBits sampledImageColorSampleCounts;
+        public       VkSampleCountFlagBits sampledImageIntegerSampleCounts;
+        public       VkSampleCountFlagBits sampledImageDepthSampleCounts;
+        public       VkSampleCountFlagBits sampledImageStencilSampleCounts;
+        public       VkSampleCountFlagBits storageImageSampleCounts;
+        public       uint                  maxSampleMaskWords;
+        public       VkBool32              timestampComputeAndGraphics;
+        public       float                 timestampPeriod;
+        public       uint                  maxClipDistances;
+        public       uint                  maxCullDistances;
+        public       uint                  maxCombinedClipAndCullDistances;
+        public       uint                  discreteQueuePriorities;
+        public fixed float                 pointSizeRange[2];
+        public fixed float                 lineWidthRange[2];
+        public       float                 pointSizeGranularity;
+        public       float                 lineWidthGranularity;
+        public       VkBool32              strictLines;
+        public       VkBool32              standardSampleLocations;
+        public       VkDeviceSize          optimalBufferCopyOffsetAlignment;
+        public       VkDeviceSize          optimalBufferCopyRowPitchAlignment;
+        public       VkDeviceSize          nonCoherentAtomSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -454,22 +454,22 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkQueueFamilyProperties
     {
-        public VkQueueFlags queueFlags;
-        public uint         queueCount;
-        public uint         timestampValidBits;
-        public VkExtent3D   minImageTransferGranularity;
+        public VkQueueFlagBits queueFlags;
+        public uint            queueCount;
+        public uint            timestampValidBits;
+        public VkExtent3D      minImageTransferGranularity;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceQueueCreateInfo
     {
-        public const VkStructureType          STYPE = VkStructureType.DEVICE_QUEUE_CREATE_INFO;
-        public       VkStructureType          sType;
-        public       void*                    pNext;
-        public       VkDeviceQueueCreateFlags flags;
-        public       uint                     queueFamilyIndex;
-        public       uint                     queueCount;
-        public       float*                   pQueuePriorities;
+        public const VkStructureType             STYPE = VkStructureType.DEVICE_QUEUE_CREATE_INFO;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       VkDeviceQueueCreateFlagBits flags;
+        public       uint                        queueFamilyIndex;
+        public       uint                        queueCount;
+        public       float*                      pQueuePriorities;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -478,7 +478,7 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType           STYPE = VkStructureType.DEVICE_CREATE_INFO;
         public       VkStructureType           sType;
         public       void*                     pNext;
-        public       VkDeviceCreateFlags       flags;
+        public       VkDeviceCreateFlagBits    flags;
         public       uint                      queueCreateInfoCount;
         public       VkDeviceQueueCreateInfo*  pQueueCreateInfos;
         public       uint                      enabledLayerCount;
@@ -507,16 +507,16 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubmitInfo
     {
-        public const VkStructureType       STYPE = VkStructureType.SUBMIT_INFO;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       uint                  waitSemaphoreCount;
-        public       VkSemaphore*          pWaitSemaphores;
-        public       VkPipelineStageFlags* pWaitDstStageMask;
-        public       uint                  commandBufferCount;
-        public       VkCommandBuffer*      pCommandBuffers;
-        public       uint                  signalSemaphoreCount;
-        public       VkSemaphore*          pSignalSemaphores;
+        public const VkStructureType          STYPE = VkStructureType.SUBMIT_INFO;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       uint                     waitSemaphoreCount;
+        public       VkSemaphore*             pWaitSemaphores;
+        public       VkPipelineStageFlagBits* pWaitDstStageMask;
+        public       uint                     commandBufferCount;
+        public       VkCommandBuffer*         pCommandBuffers;
+        public       uint                     signalSemaphoreCount;
+        public       VkSemaphore*             pSignalSemaphores;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -551,11 +551,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkSparseMemoryBind
     {
-        public VkDeviceSize            resourceOffset;
-        public VkDeviceSize            size;
-        public VkDeviceMemory          memory;
-        public VkDeviceSize            memoryOffset;
-        public VkSparseMemoryBindFlags flags;
+        public VkDeviceSize               resourceOffset;
+        public VkDeviceSize               size;
+        public VkDeviceMemory             memory;
+        public VkDeviceSize               memoryOffset;
+        public VkSparseMemoryBindFlagBits flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -577,20 +577,20 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkImageSubresource
     {
-        public VkImageAspectFlags aspectMask;
-        public uint               mipLevel;
-        public uint               arrayLayer;
+        public VkImageAspectFlagBits aspectMask;
+        public uint                  mipLevel;
+        public uint                  arrayLayer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkSparseImageMemoryBind
     {
-        public VkImageSubresource      subresource;
-        public VkOffset3D              offset;
-        public VkExtent3D              extent;
-        public VkDeviceMemory          memory;
-        public VkDeviceSize            memoryOffset;
-        public VkSparseMemoryBindFlags flags;
+        public VkImageSubresource         subresource;
+        public VkOffset3D                 offset;
+        public VkExtent3D                 extent;
+        public VkDeviceMemory             memory;
+        public VkDeviceSize               memoryOffset;
+        public VkSparseMemoryBindFlagBits flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -622,9 +622,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkSparseImageFormatProperties
     {
-        public VkImageAspectFlags       aspectMask;
-        public VkExtent3D               imageGranularity;
-        public VkSparseImageFormatFlags flags;
+        public VkImageAspectFlagBits       aspectMask;
+        public VkExtent3D                  imageGranularity;
+        public VkSparseImageFormatFlagBits flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -640,88 +640,88 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFenceCreateInfo
     {
-        public const VkStructureType    STYPE = VkStructureType.FENCE_CREATE_INFO;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkFenceCreateFlags flags;
+        public const VkStructureType       STYPE = VkStructureType.FENCE_CREATE_INFO;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkFenceCreateFlagBits flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSemaphoreCreateInfo
     {
-        public const VkStructureType        STYPE = VkStructureType.SEMAPHORE_CREATE_INFO;
-        public       VkStructureType        sType;
-        public       void*                  pNext;
-        public       VkSemaphoreCreateFlags flags;
+        public const VkStructureType           STYPE = VkStructureType.SEMAPHORE_CREATE_INFO;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       VkSemaphoreCreateFlagBits flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkEventCreateInfo
     {
-        public const VkStructureType    STYPE = VkStructureType.EVENT_CREATE_INFO;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkEventCreateFlags flags;
+        public const VkStructureType       STYPE = VkStructureType.EVENT_CREATE_INFO;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkEventCreateFlagBits flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkQueryPoolCreateInfo
     {
-        public const VkStructureType               STYPE = VkStructureType.QUERY_POOL_CREATE_INFO;
-        public       VkStructureType               sType;
-        public       void*                         pNext;
-        public       VkQueryPoolCreateFlags        flags;
-        public       VkQueryType                   queryType;
-        public       uint                          queryCount;
-        public       VkQueryPipelineStatisticFlags pipelineStatistics;
+        public const VkStructureType                  STYPE = VkStructureType.QUERY_POOL_CREATE_INFO;
+        public       VkStructureType                  sType;
+        public       void*                            pNext;
+        public       VkQueryPoolCreateFlagBits        flags;
+        public       VkQueryType                      queryType;
+        public       uint                             queryCount;
+        public       VkQueryPipelineStatisticFlagBits pipelineStatistics;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferCreateInfo
     {
-        public const VkStructureType     STYPE = VkStructureType.BUFFER_CREATE_INFO;
-        public       VkStructureType     sType;
-        public       void*               pNext;
-        public       VkBufferCreateFlags flags;
-        public       VkDeviceSize        size;
-        public       VkBufferUsageFlags  usage;
-        public       VkSharingMode       sharingMode;
-        public       uint                queueFamilyIndexCount;
-        public       uint*               pQueueFamilyIndices;
+        public const VkStructureType        STYPE = VkStructureType.BUFFER_CREATE_INFO;
+        public       VkStructureType        sType;
+        public       void*                  pNext;
+        public       VkBufferCreateFlagBits flags;
+        public       VkDeviceSize           size;
+        public       VkBufferUsageFlagBits  usage;
+        public       VkSharingMode          sharingMode;
+        public       uint                   queueFamilyIndexCount;
+        public       uint*                  pQueueFamilyIndices;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferViewCreateInfo
     {
-        public const VkStructureType         STYPE = VkStructureType.BUFFER_VIEW_CREATE_INFO;
-        public       VkStructureType         sType;
-        public       void*                   pNext;
-        public       VkBufferViewCreateFlags flags;
-        public       VkBuffer                buffer;
-        public       VkFormat                format;
-        public       VkDeviceSize            offset;
-        public       VkDeviceSize            range;
+        public const VkStructureType            STYPE = VkStructureType.BUFFER_VIEW_CREATE_INFO;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkBufferViewCreateFlagBits flags;
+        public       VkBuffer                   buffer;
+        public       VkFormat                   format;
+        public       VkDeviceSize               offset;
+        public       VkDeviceSize               range;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageCreateInfo
     {
-        public const VkStructureType    STYPE = VkStructureType.IMAGE_CREATE_INFO;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkImageCreateFlags flags;
-        public       VkImageType        imageType;
-        public       VkFormat           format;
-        public       VkExtent3D         extent;
-        public       uint               mipLevels;
-        public       uint               arrayLayers;
-        public       VkSampleCountFlags samples;
-        public       VkImageTiling      tiling;
-        public       VkImageUsageFlags  usage;
-        public       VkSharingMode      sharingMode;
-        public       uint               queueFamilyIndexCount;
-        public       uint*              pQueueFamilyIndices;
-        public       VkImageLayout      initialLayout;
+        public const VkStructureType       STYPE = VkStructureType.IMAGE_CREATE_INFO;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkImageCreateFlagBits flags;
+        public       VkImageType           imageType;
+        public       VkFormat              format;
+        public       VkExtent3D            extent;
+        public       uint                  mipLevels;
+        public       uint                  arrayLayers;
+        public       VkSampleCountFlagBits samples;
+        public       VkImageTiling         tiling;
+        public       VkImageUsageFlagBits  usage;
+        public       VkSharingMode         sharingMode;
+        public       uint                  queueFamilyIndexCount;
+        public       uint*                 pQueueFamilyIndices;
+        public       VkImageLayout         initialLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -746,37 +746,37 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewCreateInfo
     {
-        public const VkStructureType         STYPE = VkStructureType.IMAGE_VIEW_CREATE_INFO;
-        public       VkStructureType         sType;
-        public       void*                   pNext;
-        public       VkImageViewCreateFlags  flags;
-        public       VkImage                 image;
-        public       VkImageViewType         viewType;
-        public       VkFormat                format;
-        public       VkComponentMapping      components;
-        public       VkImageSubresourceRange subresourceRange;
+        public const VkStructureType           STYPE = VkStructureType.IMAGE_VIEW_CREATE_INFO;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       VkImageViewCreateFlagBits flags;
+        public       VkImage                   image;
+        public       VkImageViewType           viewType;
+        public       VkFormat                  format;
+        public       VkComponentMapping        components;
+        public       VkImageSubresourceRange   subresourceRange;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkShaderModuleCreateInfo
     {
-        public const VkStructureType           STYPE = VkStructureType.SHADER_MODULE_CREATE_INFO;
-        public       VkStructureType           sType;
-        public       void*                     pNext;
-        public       VkShaderModuleCreateFlags flags;
-        public       nuint                     codeSize;
-        public       uint*                     pCode;
+        public const VkStructureType              STYPE = VkStructureType.SHADER_MODULE_CREATE_INFO;
+        public       VkStructureType              sType;
+        public       void*                        pNext;
+        public       VkShaderModuleCreateFlagBits flags;
+        public       nuint                        codeSize;
+        public       uint*                        pCode;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCacheCreateInfo
     {
-        public const VkStructureType            STYPE = VkStructureType.PIPELINE_CACHE_CREATE_INFO;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       VkPipelineCacheCreateFlags flags;
-        public       nuint                      initialDataSize;
-        public       void*                      pInitialData;
+        public const VkStructureType               STYPE = VkStructureType.PIPELINE_CACHE_CREATE_INFO;
+        public       VkStructureType               sType;
+        public       void*                         pNext;
+        public       VkPipelineCacheCreateFlagBits flags;
+        public       nuint                         initialDataSize;
+        public       void*                         pInitialData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -799,14 +799,14 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineShaderStageCreateInfo
     {
-        public const VkStructureType                  STYPE = VkStructureType.PIPELINE_SHADER_STAGE_CREATE_INFO;
-        public       VkStructureType                  sType;
-        public       void*                            pNext;
-        public       VkPipelineShaderStageCreateFlags flags;
-        public       VkShaderStageFlags               stage;
-        public       VkShaderModule                   module;
-        public       sbyte*                           pName;
-        public       VkSpecializationInfo*            pSpecializationInfo;
+        public const VkStructureType                     STYPE = VkStructureType.PIPELINE_SHADER_STAGE_CREATE_INFO;
+        public       VkStructureType                     sType;
+        public       void*                               pNext;
+        public       VkPipelineShaderStageCreateFlagBits flags;
+        public       VkShaderStageFlagBits               stage;
+        public       VkShaderModule                      module;
+        public       sbyte*                              pName;
+        public       VkSpecializationInfo*               pSpecializationInfo;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -815,7 +815,7 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType                 STYPE = VkStructureType.COMPUTE_PIPELINE_CREATE_INFO;
         public       VkStructureType                 sType;
         public       void*                           pNext;
-        public       VkPipelineCreateFlags           flags;
+        public       VkPipelineCreateFlagBits        flags;
         public       VkPipelineShaderStageCreateInfo stage;
         public       VkPipelineLayout                layout;
         public       VkPipeline                      basePipelineHandle;
@@ -842,35 +842,35 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineVertexInputStateCreateInfo
     {
-        public const VkStructureType                       STYPE = VkStructureType.PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
-        public       VkStructureType                       sType;
-        public       void*                                 pNext;
-        public       VkPipelineVertexInputStateCreateFlags flags;
-        public       uint                                  vertexBindingDescriptionCount;
-        public       VkVertexInputBindingDescription*      pVertexBindingDescriptions;
-        public       uint                                  vertexAttributeDescriptionCount;
-        public       VkVertexInputAttributeDescription*    pVertexAttributeDescriptions;
+        public const VkStructureType                          STYPE = VkStructureType.PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
+        public       VkStructureType                          sType;
+        public       void*                                    pNext;
+        public       VkPipelineVertexInputStateCreateFlagBits flags;
+        public       uint                                     vertexBindingDescriptionCount;
+        public       VkVertexInputBindingDescription*         pVertexBindingDescriptions;
+        public       uint                                     vertexAttributeDescriptionCount;
+        public       VkVertexInputAttributeDescription*       pVertexAttributeDescriptions;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineInputAssemblyStateCreateInfo
     {
-        public const VkStructureType                         STYPE = VkStructureType.PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
-        public       VkStructureType                         sType;
-        public       void*                                   pNext;
-        public       VkPipelineInputAssemblyStateCreateFlags flags;
-        public       VkPrimitiveTopology                     topology;
-        public       VkBool32                                primitiveRestartEnable;
+        public const VkStructureType                            STYPE = VkStructureType.PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
+        public       VkStructureType                            sType;
+        public       void*                                      pNext;
+        public       VkPipelineInputAssemblyStateCreateFlagBits flags;
+        public       VkPrimitiveTopology                        topology;
+        public       VkBool32                                   primitiveRestartEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineTessellationStateCreateInfo
     {
-        public const VkStructureType                        STYPE = VkStructureType.PIPELINE_TESSELLATION_STATE_CREATE_INFO;
-        public       VkStructureType                        sType;
-        public       void*                                  pNext;
-        public       VkPipelineTessellationStateCreateFlags flags;
-        public       uint                                   patchControlPoints;
+        public const VkStructureType                           STYPE = VkStructureType.PIPELINE_TESSELLATION_STATE_CREATE_INFO;
+        public       VkStructureType                           sType;
+        public       void*                                     pNext;
+        public       VkPipelineTessellationStateCreateFlagBits flags;
+        public       uint                                      patchControlPoints;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -887,48 +887,48 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportStateCreateInfo
     {
-        public const VkStructureType                    STYPE = VkStructureType.PIPELINE_VIEWPORT_STATE_CREATE_INFO;
-        public       VkStructureType                    sType;
-        public       void*                              pNext;
-        public       VkPipelineViewportStateCreateFlags flags;
-        public       uint                               viewportCount;
-        public       VkViewport*                        pViewports;
-        public       uint                               scissorCount;
-        public       VkRect2D*                          pScissors;
+        public const VkStructureType                       STYPE = VkStructureType.PIPELINE_VIEWPORT_STATE_CREATE_INFO;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkPipelineViewportStateCreateFlagBits flags;
+        public       uint                                  viewportCount;
+        public       VkViewport*                           pViewports;
+        public       uint                                  scissorCount;
+        public       VkRect2D*                             pScissors;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationStateCreateInfo
     {
-        public const VkStructureType                         STYPE = VkStructureType.PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
-        public       VkStructureType                         sType;
-        public       void*                                   pNext;
-        public       VkPipelineRasterizationStateCreateFlags flags;
-        public       VkBool32                                depthClampEnable;
-        public       VkBool32                                rasterizerDiscardEnable;
-        public       VkPolygonMode                           polygonMode;
-        public       VkCullModeFlags                         cullMode;
-        public       VkFrontFace                             frontFace;
-        public       VkBool32                                depthBiasEnable;
-        public       float                                   depthBiasConstantFactor;
-        public       float                                   depthBiasClamp;
-        public       float                                   depthBiasSlopeFactor;
-        public       float                                   lineWidth;
+        public const VkStructureType                            STYPE = VkStructureType.PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
+        public       VkStructureType                            sType;
+        public       void*                                      pNext;
+        public       VkPipelineRasterizationStateCreateFlagBits flags;
+        public       VkBool32                                   depthClampEnable;
+        public       VkBool32                                   rasterizerDiscardEnable;
+        public       VkPolygonMode                              polygonMode;
+        public       VkCullModeFlagBits                         cullMode;
+        public       VkFrontFace                                frontFace;
+        public       VkBool32                                   depthBiasEnable;
+        public       float                                      depthBiasConstantFactor;
+        public       float                                      depthBiasClamp;
+        public       float                                      depthBiasSlopeFactor;
+        public       float                                      lineWidth;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineMultisampleStateCreateInfo
     {
-        public const VkStructureType                       STYPE = VkStructureType.PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
-        public       VkStructureType                       sType;
-        public       void*                                 pNext;
-        public       VkPipelineMultisampleStateCreateFlags flags;
-        public       VkSampleCountFlags                    rasterizationSamples;
-        public       VkBool32                              sampleShadingEnable;
-        public       float                                 minSampleShading;
-        public       uint*                                 pSampleMask;
-        public       VkBool32                              alphaToCoverageEnable;
-        public       VkBool32                              alphaToOneEnable;
+        public const VkStructureType                          STYPE = VkStructureType.PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
+        public       VkStructureType                          sType;
+        public       void*                                    pNext;
+        public       VkPipelineMultisampleStateCreateFlagBits flags;
+        public       VkSampleCountFlagBits                    rasterizationSamples;
+        public       VkBool32                                 sampleShadingEnable;
+        public       float                                    minSampleShading;
+        public       uint*                                    pSampleMask;
+        public       VkBool32                                 alphaToCoverageEnable;
+        public       VkBool32                                 alphaToOneEnable;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -946,57 +946,57 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineDepthStencilStateCreateInfo
     {
-        public const VkStructureType                        STYPE = VkStructureType.PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
-        public       VkStructureType                        sType;
-        public       void*                                  pNext;
-        public       VkPipelineDepthStencilStateCreateFlags flags;
-        public       VkBool32                               depthTestEnable;
-        public       VkBool32                               depthWriteEnable;
-        public       VkCompareOp                            depthCompareOp;
-        public       VkBool32                               depthBoundsTestEnable;
-        public       VkBool32                               stencilTestEnable;
-        public       VkStencilOpState                       front;
-        public       VkStencilOpState                       back;
-        public       float                                  minDepthBounds;
-        public       float                                  maxDepthBounds;
+        public const VkStructureType                           STYPE = VkStructureType.PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
+        public       VkStructureType                           sType;
+        public       void*                                     pNext;
+        public       VkPipelineDepthStencilStateCreateFlagBits flags;
+        public       VkBool32                                  depthTestEnable;
+        public       VkBool32                                  depthWriteEnable;
+        public       VkCompareOp                               depthCompareOp;
+        public       VkBool32                                  depthBoundsTestEnable;
+        public       VkBool32                                  stencilTestEnable;
+        public       VkStencilOpState                          front;
+        public       VkStencilOpState                          back;
+        public       float                                     minDepthBounds;
+        public       float                                     maxDepthBounds;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPipelineColorBlendAttachmentState
     {
-        public VkBool32              blendEnable;
-        public VkBlendFactor         srcColorBlendFactor;
-        public VkBlendFactor         dstColorBlendFactor;
-        public VkBlendOp             colorBlendOp;
-        public VkBlendFactor         srcAlphaBlendFactor;
-        public VkBlendFactor         dstAlphaBlendFactor;
-        public VkBlendOp             alphaBlendOp;
-        public VkColorComponentFlags colorWriteMask;
+        public VkBool32                 blendEnable;
+        public VkBlendFactor            srcColorBlendFactor;
+        public VkBlendFactor            dstColorBlendFactor;
+        public VkBlendOp                colorBlendOp;
+        public VkBlendFactor            srcAlphaBlendFactor;
+        public VkBlendFactor            dstAlphaBlendFactor;
+        public VkBlendOp                alphaBlendOp;
+        public VkColorComponentFlagBits colorWriteMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineColorBlendStateCreateInfo
     {
-        public const VkStructureType                      STYPE = VkStructureType.PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
-        public       VkStructureType                      sType;
-        public       void*                                pNext;
-        public       VkPipelineColorBlendStateCreateFlags flags;
-        public       VkBool32                             logicOpEnable;
-        public       VkLogicOp                            logicOp;
-        public       uint                                 attachmentCount;
-        public       VkPipelineColorBlendAttachmentState* pAttachments;
-        public fixed float                                blendConstants[4];
+        public const VkStructureType                         STYPE = VkStructureType.PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
+        public       VkStructureType                         sType;
+        public       void*                                   pNext;
+        public       VkPipelineColorBlendStateCreateFlagBits flags;
+        public       VkBool32                                logicOpEnable;
+        public       VkLogicOp                               logicOp;
+        public       uint                                    attachmentCount;
+        public       VkPipelineColorBlendAttachmentState*    pAttachments;
+        public fixed float                                   blendConstants[4];
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineDynamicStateCreateInfo
     {
-        public const VkStructureType                   STYPE = VkStructureType.PIPELINE_DYNAMIC_STATE_CREATE_INFO;
-        public       VkStructureType                   sType;
-        public       void*                             pNext;
-        public       VkPipelineDynamicStateCreateFlags flags;
-        public       uint                              dynamicStateCount;
-        public       VkDynamicState*                   pDynamicStates;
+        public const VkStructureType                      STYPE = VkStructureType.PIPELINE_DYNAMIC_STATE_CREATE_INFO;
+        public       VkStructureType                      sType;
+        public       void*                                pNext;
+        public       VkPipelineDynamicStateCreateFlagBits flags;
+        public       uint                                 dynamicStateCount;
+        public       VkDynamicState*                      pDynamicStates;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1005,7 +1005,7 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType                         STYPE = VkStructureType.GRAPHICS_PIPELINE_CREATE_INFO;
         public       VkStructureType                         sType;
         public       void*                                   pNext;
-        public       VkPipelineCreateFlags                   flags;
+        public       VkPipelineCreateFlagBits                flags;
         public       uint                                    stageCount;
         public       VkPipelineShaderStageCreateInfo*        pStages;
         public       VkPipelineVertexInputStateCreateInfo*   pVertexInputState;
@@ -1027,46 +1027,46 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPushConstantRange
     {
-        public VkShaderStageFlags stageFlags;
-        public uint               offset;
-        public uint               size;
+        public VkShaderStageFlagBits stageFlags;
+        public uint                  offset;
+        public uint                  size;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineLayoutCreateInfo
     {
-        public const VkStructureType             STYPE = VkStructureType.PIPELINE_LAYOUT_CREATE_INFO;
-        public       VkStructureType             sType;
-        public       void*                       pNext;
-        public       VkPipelineLayoutCreateFlags flags;
-        public       uint                        setLayoutCount;
-        public       VkDescriptorSetLayout*      pSetLayouts;
-        public       uint                        pushConstantRangeCount;
-        public       VkPushConstantRange*        pPushConstantRanges;
+        public const VkStructureType                STYPE = VkStructureType.PIPELINE_LAYOUT_CREATE_INFO;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkPipelineLayoutCreateFlagBits flags;
+        public       uint                           setLayoutCount;
+        public       VkDescriptorSetLayout*         pSetLayouts;
+        public       uint                           pushConstantRangeCount;
+        public       VkPushConstantRange*           pPushConstantRanges;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSamplerCreateInfo
     {
-        public const VkStructureType      STYPE = VkStructureType.SAMPLER_CREATE_INFO;
-        public       VkStructureType      sType;
-        public       void*                pNext;
-        public       VkSamplerCreateFlags flags;
-        public       VkFilter             magFilter;
-        public       VkFilter             minFilter;
-        public       VkSamplerMipmapMode  mipmapMode;
-        public       VkSamplerAddressMode addressModeU;
-        public       VkSamplerAddressMode addressModeV;
-        public       VkSamplerAddressMode addressModeW;
-        public       float                mipLodBias;
-        public       VkBool32             anisotropyEnable;
-        public       float                maxAnisotropy;
-        public       VkBool32             compareEnable;
-        public       VkCompareOp          compareOp;
-        public       float                minLod;
-        public       float                maxLod;
-        public       VkBorderColor        borderColor;
-        public       VkBool32             unnormalizedCoordinates;
+        public const VkStructureType         STYPE = VkStructureType.SAMPLER_CREATE_INFO;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkSamplerCreateFlagBits flags;
+        public       VkFilter                magFilter;
+        public       VkFilter                minFilter;
+        public       VkSamplerMipmapMode     mipmapMode;
+        public       VkSamplerAddressMode    addressModeU;
+        public       VkSamplerAddressMode    addressModeV;
+        public       VkSamplerAddressMode    addressModeW;
+        public       float                   mipLodBias;
+        public       VkBool32                anisotropyEnable;
+        public       float                   maxAnisotropy;
+        public       VkBool32                compareEnable;
+        public       VkCompareOp             compareOp;
+        public       float                   minLod;
+        public       float                   maxLod;
+        public       VkBorderColor           borderColor;
+        public       VkBool32                unnormalizedCoordinates;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1110,13 +1110,13 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorPoolCreateInfo
     {
-        public const VkStructureType             STYPE = VkStructureType.DESCRIPTOR_POOL_CREATE_INFO;
-        public       VkStructureType             sType;
-        public       void*                       pNext;
-        public       VkDescriptorPoolCreateFlags flags;
-        public       uint                        maxSets;
-        public       uint                        poolSizeCount;
-        public       VkDescriptorPoolSize*       pPoolSizes;
+        public const VkStructureType                STYPE = VkStructureType.DESCRIPTOR_POOL_CREATE_INFO;
+        public       VkStructureType                sType;
+        public       void*                          pNext;
+        public       VkDescriptorPoolCreateFlagBits flags;
+        public       uint                           maxSets;
+        public       uint                           poolSizeCount;
+        public       VkDescriptorPoolSize*          pPoolSizes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1133,22 +1133,22 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorSetLayoutBinding
     {
-        public uint               binding;
-        public VkDescriptorType   descriptorType;
-        public uint               descriptorCount;
-        public VkShaderStageFlags stageFlags;
-        public VkSampler*         pImmutableSamplers;
+        public uint                  binding;
+        public VkDescriptorType      descriptorType;
+        public uint                  descriptorCount;
+        public VkShaderStageFlagBits stageFlags;
+        public VkSampler*            pImmutableSamplers;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorSetLayoutCreateInfo
     {
-        public const VkStructureType                  STYPE = VkStructureType.DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
-        public       VkStructureType                  sType;
-        public       void*                            pNext;
-        public       VkDescriptorSetLayoutCreateFlags flags;
-        public       uint                             bindingCount;
-        public       VkDescriptorSetLayoutBinding*    pBindings;
+        public const VkStructureType                     STYPE = VkStructureType.DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
+        public       VkStructureType                     sType;
+        public       void*                               pNext;
+        public       VkDescriptorSetLayoutCreateFlagBits flags;
+        public       uint                                bindingCount;
+        public       VkDescriptorSetLayoutBinding*       pBindings;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1170,15 +1170,15 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkAttachmentDescription
     {
-        public VkAttachmentDescriptionFlags flags;
-        public VkFormat                     format;
-        public VkSampleCountFlags           samples;
-        public VkAttachmentLoadOp           loadOp;
-        public VkAttachmentStoreOp          storeOp;
-        public VkAttachmentLoadOp           stencilLoadOp;
-        public VkAttachmentStoreOp          stencilStoreOp;
-        public VkImageLayout                initialLayout;
-        public VkImageLayout                finalLayout;
+        public VkAttachmentDescriptionFlagBits flags;
+        public VkFormat                        format;
+        public VkSampleCountFlagBits           samples;
+        public VkAttachmentLoadOp              loadOp;
+        public VkAttachmentStoreOp             storeOp;
+        public VkAttachmentLoadOp              stencilLoadOp;
+        public VkAttachmentStoreOp             stencilStoreOp;
+        public VkImageLayout                   initialLayout;
+        public VkImageLayout                   finalLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1191,68 +1191,68 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFramebufferCreateInfo
     {
-        public const VkStructureType          STYPE = VkStructureType.FRAMEBUFFER_CREATE_INFO;
-        public       VkStructureType          sType;
-        public       void*                    pNext;
-        public       VkFramebufferCreateFlags flags;
-        public       VkRenderPass             renderPass;
-        public       uint                     attachmentCount;
-        public       VkImageView*             pAttachments;
-        public       uint                     width;
-        public       uint                     height;
-        public       uint                     layers;
+        public const VkStructureType             STYPE = VkStructureType.FRAMEBUFFER_CREATE_INFO;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       VkFramebufferCreateFlagBits flags;
+        public       VkRenderPass                renderPass;
+        public       uint                        attachmentCount;
+        public       VkImageView*                pAttachments;
+        public       uint                        width;
+        public       uint                        height;
+        public       uint                        layers;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassDescription
     {
-        public VkSubpassDescriptionFlags flags;
-        public VkPipelineBindPoint       pipelineBindPoint;
-        public uint                      inputAttachmentCount;
-        public VkAttachmentReference*    pInputAttachments;
-        public uint                      colorAttachmentCount;
-        public VkAttachmentReference*    pColorAttachments;
-        public VkAttachmentReference*    pResolveAttachments;
-        public VkAttachmentReference*    pDepthStencilAttachment;
-        public uint                      preserveAttachmentCount;
-        public uint*                     pPreserveAttachments;
+        public VkSubpassDescriptionFlagBits flags;
+        public VkPipelineBindPoint          pipelineBindPoint;
+        public uint                         inputAttachmentCount;
+        public VkAttachmentReference*       pInputAttachments;
+        public uint                         colorAttachmentCount;
+        public VkAttachmentReference*       pColorAttachments;
+        public VkAttachmentReference*       pResolveAttachments;
+        public VkAttachmentReference*       pDepthStencilAttachment;
+        public uint                         preserveAttachmentCount;
+        public uint*                        pPreserveAttachments;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkSubpassDependency
     {
-        public uint                 srcSubpass;
-        public uint                 dstSubpass;
-        public VkPipelineStageFlags srcStageMask;
-        public VkPipelineStageFlags dstStageMask;
-        public VkAccessFlags        srcAccessMask;
-        public VkAccessFlags        dstAccessMask;
-        public VkDependencyFlags    dependencyFlags;
+        public uint                    srcSubpass;
+        public uint                    dstSubpass;
+        public VkPipelineStageFlagBits srcStageMask;
+        public VkPipelineStageFlagBits dstStageMask;
+        public VkAccessFlagBits        srcAccessMask;
+        public VkAccessFlagBits        dstAccessMask;
+        public VkDependencyFlagBits    dependencyFlags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassCreateInfo
     {
-        public const VkStructureType          STYPE = VkStructureType.RENDER_PASS_CREATE_INFO;
-        public       VkStructureType          sType;
-        public       void*                    pNext;
-        public       VkRenderPassCreateFlags  flags;
-        public       uint                     attachmentCount;
-        public       VkAttachmentDescription* pAttachments;
-        public       uint                     subpassCount;
-        public       VkSubpassDescription*    pSubpasses;
-        public       uint                     dependencyCount;
-        public       VkSubpassDependency*     pDependencies;
+        public const VkStructureType            STYPE = VkStructureType.RENDER_PASS_CREATE_INFO;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkRenderPassCreateFlagBits flags;
+        public       uint                       attachmentCount;
+        public       VkAttachmentDescription*   pAttachments;
+        public       uint                       subpassCount;
+        public       VkSubpassDescription*      pSubpasses;
+        public       uint                       dependencyCount;
+        public       VkSubpassDependency*       pDependencies;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCommandPoolCreateInfo
     {
-        public const VkStructureType          STYPE = VkStructureType.COMMAND_POOL_CREATE_INFO;
-        public       VkStructureType          sType;
-        public       void*                    pNext;
-        public       VkCommandPoolCreateFlags flags;
-        public       uint                     queueFamilyIndex;
+        public const VkStructureType             STYPE = VkStructureType.COMMAND_POOL_CREATE_INFO;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       VkCommandPoolCreateFlagBits flags;
+        public       uint                        queueFamilyIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1269,15 +1269,15 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCommandBufferInheritanceInfo
     {
-        public const VkStructureType               STYPE = VkStructureType.COMMAND_BUFFER_INHERITANCE_INFO;
-        public       VkStructureType               sType;
-        public       void*                         pNext;
-        public       VkRenderPass                  renderPass;
-        public       uint                          subpass;
-        public       VkFramebuffer                 framebuffer;
-        public       VkBool32                      occlusionQueryEnable;
-        public       VkQueryControlFlags           queryFlags;
-        public       VkQueryPipelineStatisticFlags pipelineStatistics;
+        public const VkStructureType                  STYPE = VkStructureType.COMMAND_BUFFER_INHERITANCE_INFO;
+        public       VkStructureType                  sType;
+        public       void*                            pNext;
+        public       VkRenderPass                     renderPass;
+        public       uint                             subpass;
+        public       VkFramebuffer                    framebuffer;
+        public       VkBool32                         occlusionQueryEnable;
+        public       VkQueryControlFlagBits           queryFlags;
+        public       VkQueryPipelineStatisticFlagBits pipelineStatistics;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1286,7 +1286,7 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType                 STYPE = VkStructureType.COMMAND_BUFFER_BEGIN_INFO;
         public       VkStructureType                 sType;
         public       void*                           pNext;
-        public       VkCommandBufferUsageFlags       flags;
+        public       VkCommandBufferUsageFlagBits    flags;
         public       VkCommandBufferInheritanceInfo* pInheritanceInfo;
     }
 
@@ -1301,10 +1301,10 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkImageSubresourceLayers
     {
-        public VkImageAspectFlags aspectMask;
-        public uint               mipLevel;
-        public uint               baseArrayLayer;
-        public uint               layerCount;
+        public VkImageAspectFlagBits aspectMask;
+        public uint                  mipLevel;
+        public uint                  baseArrayLayer;
+        public uint                  layerCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1328,9 +1328,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkClearAttachment
     {
-        public VkImageAspectFlags aspectMask;
-        public uint               colorAttachment;
-        public VkClearValue       clearValue;
+        public VkImageAspectFlagBits aspectMask;
+        public uint                  colorAttachment;
+        public VkClearValue          clearValue;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1388,13 +1388,13 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSubgroupProperties
     {
-        public const VkStructureType        STYPE = VkStructureType.PHYSICAL_DEVICE_SUBGROUP_PROPERTIES;
-        public       VkStructureType        sType;
-        public       void*                  pNext;
-        public       uint                   subgroupSize;
-        public       VkShaderStageFlags     supportedStages;
-        public       VkSubgroupFeatureFlags supportedOperations;
-        public       VkBool32               quadOperationsInAllStages;
+        public const VkStructureType           STYPE = VkStructureType.PHYSICAL_DEVICE_SUBGROUP_PROPERTIES;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public       uint                      subgroupSize;
+        public       VkShaderStageFlagBits     supportedStages;
+        public       VkSubgroupFeatureFlagBits supportedOperations;
+        public       VkBool32                  quadOperationsInAllStages;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1454,11 +1454,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryAllocateFlagsInfo
     {
-        public const VkStructureType       STYPE = VkStructureType.MEMORY_ALLOCATE_FLAGS_INFO;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       VkMemoryAllocateFlags flags;
-        public       uint                  deviceMask;
+        public const VkStructureType          STYPE = VkStructureType.MEMORY_ALLOCATE_FLAGS_INFO;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkMemoryAllocateFlagBits flags;
+        public       uint                     deviceMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1632,14 +1632,14 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceImageFormatInfo2
     {
-        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkFormat           format;
-        public       VkImageType        type;
-        public       VkImageTiling      tiling;
-        public       VkImageUsageFlags  usage;
-        public       VkImageCreateFlags flags;
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkFormat              format;
+        public       VkImageType           type;
+        public       VkImageTiling         tiling;
+        public       VkImageUsageFlagBits  usage;
+        public       VkImageCreateFlagBits flags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1672,14 +1672,14 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSparseImageFormatInfo2
     {
-        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkFormat           format;
-        public       VkImageType        type;
-        public       VkSampleCountFlags samples;
-        public       VkImageUsageFlags  usage;
-        public       VkImageTiling      tiling;
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkFormat              format;
+        public       VkImageType           type;
+        public       VkSampleCountFlagBits samples;
+        public       VkImageUsageFlagBits  usage;
+        public       VkImageTiling         tiling;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1694,9 +1694,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkInputAttachmentAspectReference
     {
-        public uint               subpass;
-        public uint               inputAttachmentIndex;
-        public VkImageAspectFlags aspectMask;
+        public uint                  subpass;
+        public uint                  inputAttachmentIndex;
+        public VkImageAspectFlagBits aspectMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1712,10 +1712,10 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewUsageCreateInfo
     {
-        public const VkStructureType   STYPE = VkStructureType.IMAGE_VIEW_USAGE_CREATE_INFO;
-        public       VkStructureType   sType;
-        public       void*             pNext;
-        public       VkImageUsageFlags usage;
+        public const VkStructureType      STYPE = VkStructureType.IMAGE_VIEW_USAGE_CREATE_INFO;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkImageUsageFlagBits usage;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1793,12 +1793,12 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceQueueInfo2
     {
-        public const VkStructureType          STYPE = VkStructureType.DEVICE_QUEUE_INFO_2;
-        public       VkStructureType          sType;
-        public       void*                    pNext;
-        public       VkDeviceQueueCreateFlags flags;
-        public       uint                     queueFamilyIndex;
-        public       uint                     queueIndex;
+        public const VkStructureType             STYPE = VkStructureType.DEVICE_QUEUE_INFO_2;
+        public       VkStructureType             sType;
+        public       void*                       pNext;
+        public       VkDeviceQueueCreateFlagBits flags;
+        public       uint                        queueFamilyIndex;
+        public       uint                        queueIndex;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1838,19 +1838,19 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindImagePlaneMemoryInfo
     {
-        public const VkStructureType    STYPE = VkStructureType.BIND_IMAGE_PLANE_MEMORY_INFO;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkImageAspectFlags planeAspect;
+        public const VkStructureType       STYPE = VkStructureType.BIND_IMAGE_PLANE_MEMORY_INFO;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkImageAspectFlagBits planeAspect;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImagePlaneMemoryRequirementsInfo
     {
-        public const VkStructureType    STYPE = VkStructureType.IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkImageAspectFlags planeAspect;
+        public const VkStructureType       STYPE = VkStructureType.IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkImageAspectFlagBits planeAspect;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1885,34 +1885,34 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorUpdateTemplateCreateInfo
     {
-        public const VkStructureType                       STYPE = VkStructureType.DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO;
-        public       VkStructureType                       sType;
-        public       void*                                 pNext;
-        public       VkDescriptorUpdateTemplateCreateFlags flags;
-        public       uint                                  descriptorUpdateEntryCount;
-        public       VkDescriptorUpdateTemplateEntry*      pDescriptorUpdateEntries;
-        public       VkDescriptorUpdateTemplateType        templateType;
-        public       VkDescriptorSetLayout                 descriptorSetLayout;
-        public       VkPipelineBindPoint                   pipelineBindPoint;
-        public       VkPipelineLayout                      pipelineLayout;
-        public       uint                                  set;
+        public const VkStructureType                          STYPE = VkStructureType.DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO;
+        public       VkStructureType                          sType;
+        public       void*                                    pNext;
+        public       VkDescriptorUpdateTemplateCreateFlagBits flags;
+        public       uint                                     descriptorUpdateEntryCount;
+        public       VkDescriptorUpdateTemplateEntry*         pDescriptorUpdateEntries;
+        public       VkDescriptorUpdateTemplateType           templateType;
+        public       VkDescriptorSetLayout                    descriptorSetLayout;
+        public       VkPipelineBindPoint                      pipelineBindPoint;
+        public       VkPipelineLayout                         pipelineLayout;
+        public       uint                                     set;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkExternalMemoryProperties
     {
-        public VkExternalMemoryFeatureFlags    externalMemoryFeatures;
-        public VkExternalMemoryHandleTypeFlags exportFromImportedHandleTypes;
-        public VkExternalMemoryHandleTypeFlags compatibleHandleTypes;
+        public VkExternalMemoryFeatureFlagBits    externalMemoryFeatures;
+        public VkExternalMemoryHandleTypeFlagBits exportFromImportedHandleTypes;
+        public VkExternalMemoryHandleTypeFlagBits compatibleHandleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExternalImageFormatInfo
     {
-        public const VkStructureType                 STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkExternalMemoryHandleTypeFlags handleType;
+        public const VkStructureType                    STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalMemoryHandleTypeFlagBits handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1927,12 +1927,12 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExternalBufferInfo
     {
-        public const VkStructureType                 STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkBufferCreateFlags             flags;
-        public       VkBufferUsageFlags              usage;
-        public       VkExternalMemoryHandleTypeFlags handleType;
+        public const VkStructureType                    STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkBufferCreateFlagBits             flags;
+        public       VkBufferUsageFlagBits              usage;
+        public       VkExternalMemoryHandleTypeFlagBits handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -1960,86 +1960,86 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalMemoryImageCreateInfo
     {
-        public const VkStructureType                 STYPE = VkStructureType.EXTERNAL_MEMORY_IMAGE_CREATE_INFO;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkExternalMemoryHandleTypeFlags handleTypes;
+        public const VkStructureType                    STYPE = VkStructureType.EXTERNAL_MEMORY_IMAGE_CREATE_INFO;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalMemoryHandleTypeFlagBits handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalMemoryBufferCreateInfo
     {
-        public const VkStructureType                 STYPE = VkStructureType.EXTERNAL_MEMORY_BUFFER_CREATE_INFO;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkExternalMemoryHandleTypeFlags handleTypes;
+        public const VkStructureType                    STYPE = VkStructureType.EXTERNAL_MEMORY_BUFFER_CREATE_INFO;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalMemoryHandleTypeFlagBits handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExportMemoryAllocateInfo
     {
-        public const VkStructureType                 STYPE = VkStructureType.EXPORT_MEMORY_ALLOCATE_INFO;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkExternalMemoryHandleTypeFlags handleTypes;
+        public const VkStructureType                    STYPE = VkStructureType.EXPORT_MEMORY_ALLOCATE_INFO;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalMemoryHandleTypeFlagBits handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExternalFenceInfo
     {
-        public const VkStructureType                STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO;
-        public       VkStructureType                sType;
-        public       void*                          pNext;
-        public       VkExternalFenceHandleTypeFlags handleType;
+        public const VkStructureType                   STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkExternalFenceHandleTypeFlagBits handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalFenceProperties
     {
-        public const VkStructureType                STYPE = VkStructureType.EXTERNAL_FENCE_PROPERTIES;
-        public       VkStructureType                sType;
-        public       void*                          pNext;
-        public       VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes;
-        public       VkExternalFenceHandleTypeFlags compatibleHandleTypes;
-        public       VkExternalFenceFeatureFlags    externalFenceFeatures;
+        public const VkStructureType                   STYPE = VkStructureType.EXTERNAL_FENCE_PROPERTIES;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkExternalFenceHandleTypeFlagBits exportFromImportedHandleTypes;
+        public       VkExternalFenceHandleTypeFlagBits compatibleHandleTypes;
+        public       VkExternalFenceFeatureFlagBits    externalFenceFeatures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExportFenceCreateInfo
     {
-        public const VkStructureType                STYPE = VkStructureType.EXPORT_FENCE_CREATE_INFO;
-        public       VkStructureType                sType;
-        public       void*                          pNext;
-        public       VkExternalFenceHandleTypeFlags handleTypes;
+        public const VkStructureType                   STYPE = VkStructureType.EXPORT_FENCE_CREATE_INFO;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkExternalFenceHandleTypeFlagBits handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExportSemaphoreCreateInfo
     {
-        public const VkStructureType                    STYPE = VkStructureType.EXPORT_SEMAPHORE_CREATE_INFO;
-        public       VkStructureType                    sType;
-        public       void*                              pNext;
-        public       VkExternalSemaphoreHandleTypeFlags handleTypes;
+        public const VkStructureType                       STYPE = VkStructureType.EXPORT_SEMAPHORE_CREATE_INFO;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkExternalSemaphoreHandleTypeFlagBits handleTypes;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExternalSemaphoreInfo
     {
-        public const VkStructureType                    STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO;
-        public       VkStructureType                    sType;
-        public       void*                              pNext;
-        public       VkExternalSemaphoreHandleTypeFlags handleType;
+        public const VkStructureType                       STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkExternalSemaphoreHandleTypeFlagBits handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalSemaphoreProperties
     {
-        public const VkStructureType                    STYPE = VkStructureType.EXTERNAL_SEMAPHORE_PROPERTIES;
-        public       VkStructureType                    sType;
-        public       void*                              pNext;
-        public       VkExternalSemaphoreHandleTypeFlags exportFromImportedHandleTypes;
-        public       VkExternalSemaphoreHandleTypeFlags compatibleHandleTypes;
-        public       VkExternalSemaphoreFeatureFlags    externalSemaphoreFeatures;
+        public const VkStructureType                       STYPE = VkStructureType.EXTERNAL_SEMAPHORE_PROPERTIES;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkExternalSemaphoreHandleTypeFlagBits exportFromImportedHandleTypes;
+        public       VkExternalSemaphoreHandleTypeFlagBits compatibleHandleTypes;
+        public       VkExternalSemaphoreFeatureFlagBits    externalSemaphoreFeatures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2093,24 +2093,24 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceVulkan11Properties
     {
-        public const VkStructureType         STYPE = VkStructureType.PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES;
-        public       VkStructureType         sType;
-        public       void*                   pNext;
-        public fixed byte                    deviceUUID[VK_UUID_SIZE];
-        public fixed byte                    driverUUID[VK_UUID_SIZE];
-        public fixed byte                    deviceLUID[VK_LUID_SIZE];
-        public       uint                    deviceNodeMask;
-        public       VkBool32                deviceLUIDValid;
-        public       uint                    subgroupSize;
-        public       VkShaderStageFlags      subgroupSupportedStages;
-        public       VkSubgroupFeatureFlags  subgroupSupportedOperations;
-        public       VkBool32                subgroupQuadOperationsInAllStages;
-        public       VkPointClippingBehavior pointClippingBehavior;
-        public       uint                    maxMultiviewViewCount;
-        public       uint                    maxMultiviewInstanceIndex;
-        public       VkBool32                protectedNoFault;
-        public       uint                    maxPerSetDescriptors;
-        public       VkDeviceSize            maxMemoryAllocationSize;
+        public const VkStructureType           STYPE = VkStructureType.PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES;
+        public       VkStructureType           sType;
+        public       void*                     pNext;
+        public fixed byte                      deviceUUID[VK_UUID_SIZE];
+        public fixed byte                      driverUUID[VK_UUID_SIZE];
+        public fixed byte                      deviceLUID[VK_LUID_SIZE];
+        public       uint                      deviceNodeMask;
+        public       VkBool32                  deviceLUIDValid;
+        public       uint                      subgroupSize;
+        public       VkShaderStageFlagBits     subgroupSupportedStages;
+        public       VkSubgroupFeatureFlagBits subgroupSupportedOperations;
+        public       VkBool32                  subgroupQuadOperationsInAllStages;
+        public       VkPointClippingBehavior   pointClippingBehavior;
+        public       uint                      maxMultiviewViewCount;
+        public       uint                      maxMultiviewInstanceIndex;
+        public       VkBool32                  protectedNoFault;
+        public       uint                      maxPerSetDescriptors;
+        public       VkDeviceSize              maxMemoryAllocationSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2227,14 +2227,14 @@ namespace Exomia.Vulkan.Api.Core
         public       uint                              maxDescriptorSetUpdateAfterBindSampledImages;
         public       uint                              maxDescriptorSetUpdateAfterBindStorageImages;
         public       uint                              maxDescriptorSetUpdateAfterBindInputAttachments;
-        public       VkResolveModeFlags                supportedDepthResolveModes;
-        public       VkResolveModeFlags                supportedStencilResolveModes;
+        public       VkResolveModeFlagBits             supportedDepthResolveModes;
+        public       VkResolveModeFlagBits             supportedStencilResolveModes;
         public       VkBool32                          independentResolveNone;
         public       VkBool32                          independentResolve;
         public       VkBool32                          filterMinmaxSingleComponentFormats;
         public       VkBool32                          filterMinmaxImageComponentMapping;
         public       ulong                             maxTimelineSemaphoreValueDifference;
-        public       VkSampleCountFlags                framebufferIntegerColorSampleCounts;
+        public       VkSampleCountFlagBits             framebufferIntegerColorSampleCounts;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2250,81 +2250,81 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAttachmentDescription2
     {
-        public const VkStructureType              STYPE = VkStructureType.ATTACHMENT_DESCRIPTION_2;
-        public       VkStructureType              sType;
-        public       void*                        pNext;
-        public       VkAttachmentDescriptionFlags flags;
-        public       VkFormat                     format;
-        public       VkSampleCountFlags           samples;
-        public       VkAttachmentLoadOp           loadOp;
-        public       VkAttachmentStoreOp          storeOp;
-        public       VkAttachmentLoadOp           stencilLoadOp;
-        public       VkAttachmentStoreOp          stencilStoreOp;
-        public       VkImageLayout                initialLayout;
-        public       VkImageLayout                finalLayout;
+        public const VkStructureType                 STYPE = VkStructureType.ATTACHMENT_DESCRIPTION_2;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkAttachmentDescriptionFlagBits flags;
+        public       VkFormat                        format;
+        public       VkSampleCountFlagBits           samples;
+        public       VkAttachmentLoadOp              loadOp;
+        public       VkAttachmentStoreOp             storeOp;
+        public       VkAttachmentLoadOp              stencilLoadOp;
+        public       VkAttachmentStoreOp             stencilStoreOp;
+        public       VkImageLayout                   initialLayout;
+        public       VkImageLayout                   finalLayout;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAttachmentReference2
     {
-        public const VkStructureType    STYPE = VkStructureType.ATTACHMENT_REFERENCE_2;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       uint               attachment;
-        public       VkImageLayout      layout;
-        public       VkImageAspectFlags aspectMask;
+        public const VkStructureType       STYPE = VkStructureType.ATTACHMENT_REFERENCE_2;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       uint                  attachment;
+        public       VkImageLayout         layout;
+        public       VkImageAspectFlagBits aspectMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassDescription2
     {
-        public const VkStructureType           STYPE = VkStructureType.SUBPASS_DESCRIPTION_2;
-        public       VkStructureType           sType;
-        public       void*                     pNext;
-        public       VkSubpassDescriptionFlags flags;
-        public       VkPipelineBindPoint       pipelineBindPoint;
-        public       uint                      viewMask;
-        public       uint                      inputAttachmentCount;
-        public       VkAttachmentReference2*   pInputAttachments;
-        public       uint                      colorAttachmentCount;
-        public       VkAttachmentReference2*   pColorAttachments;
-        public       VkAttachmentReference2*   pResolveAttachments;
-        public       VkAttachmentReference2*   pDepthStencilAttachment;
-        public       uint                      preserveAttachmentCount;
-        public       uint*                     pPreserveAttachments;
+        public const VkStructureType              STYPE = VkStructureType.SUBPASS_DESCRIPTION_2;
+        public       VkStructureType              sType;
+        public       void*                        pNext;
+        public       VkSubpassDescriptionFlagBits flags;
+        public       VkPipelineBindPoint          pipelineBindPoint;
+        public       uint                         viewMask;
+        public       uint                         inputAttachmentCount;
+        public       VkAttachmentReference2*      pInputAttachments;
+        public       uint                         colorAttachmentCount;
+        public       VkAttachmentReference2*      pColorAttachments;
+        public       VkAttachmentReference2*      pResolveAttachments;
+        public       VkAttachmentReference2*      pDepthStencilAttachment;
+        public       uint                         preserveAttachmentCount;
+        public       uint*                        pPreserveAttachments;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassDependency2
     {
-        public const VkStructureType      STYPE = VkStructureType.SUBPASS_DEPENDENCY_2;
-        public       VkStructureType      sType;
-        public       void*                pNext;
-        public       uint                 srcSubpass;
-        public       uint                 dstSubpass;
-        public       VkPipelineStageFlags srcStageMask;
-        public       VkPipelineStageFlags dstStageMask;
-        public       VkAccessFlags        srcAccessMask;
-        public       VkAccessFlags        dstAccessMask;
-        public       VkDependencyFlags    dependencyFlags;
-        public       int                  viewOffset;
+        public const VkStructureType         STYPE = VkStructureType.SUBPASS_DEPENDENCY_2;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       uint                    srcSubpass;
+        public       uint                    dstSubpass;
+        public       VkPipelineStageFlagBits srcStageMask;
+        public       VkPipelineStageFlagBits dstStageMask;
+        public       VkAccessFlagBits        srcAccessMask;
+        public       VkAccessFlagBits        dstAccessMask;
+        public       VkDependencyFlagBits    dependencyFlags;
+        public       int                     viewOffset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassCreateInfo2
     {
-        public const VkStructureType           STYPE = VkStructureType.RENDER_PASS_CREATE_INFO_2;
-        public       VkStructureType           sType;
-        public       void*                     pNext;
-        public       VkRenderPassCreateFlags   flags;
-        public       uint                      attachmentCount;
-        public       VkAttachmentDescription2* pAttachments;
-        public       uint                      subpassCount;
-        public       VkSubpassDescription2*    pSubpasses;
-        public       uint                      dependencyCount;
-        public       VkSubpassDependency2*     pDependencies;
-        public       uint                      correlatedViewMaskCount;
-        public       uint*                     pCorrelatedViewMasks;
+        public const VkStructureType            STYPE = VkStructureType.RENDER_PASS_CREATE_INFO_2;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkRenderPassCreateFlagBits flags;
+        public       uint                       attachmentCount;
+        public       VkAttachmentDescription2*  pAttachments;
+        public       uint                       subpassCount;
+        public       VkSubpassDescription2*     pSubpasses;
+        public       uint                       dependencyCount;
+        public       VkSubpassDependency2*      pDependencies;
+        public       uint                       correlatedViewMaskCount;
+        public       uint*                      pCorrelatedViewMasks;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2415,11 +2415,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDescriptorSetLayoutBindingFlagsCreateInfo
     {
-        public const VkStructureType           STYPE = VkStructureType.DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO;
-        public       VkStructureType           sType;
-        public       void*                     pNext;
-        public       uint                      bindingCount;
-        public       VkDescriptorBindingFlags* pBindingFlags;
+        public const VkStructureType              STYPE = VkStructureType.DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO;
+        public       VkStructureType              sType;
+        public       void*                        pNext;
+        public       uint                         bindingCount;
+        public       VkDescriptorBindingFlagBits* pBindingFlags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2506,21 +2506,21 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType         STYPE = VkStructureType.SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE;
         public       VkStructureType         sType;
         public       void*                   pNext;
-        public       VkResolveModeFlags      depthResolveMode;
-        public       VkResolveModeFlags      stencilResolveMode;
+        public       VkResolveModeFlagBits   depthResolveMode;
+        public       VkResolveModeFlagBits   stencilResolveMode;
         public       VkAttachmentReference2* pDepthStencilResolveAttachment;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDepthStencilResolveProperties
     {
-        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkResolveModeFlags supportedDepthResolveModes;
-        public       VkResolveModeFlags supportedStencilResolveModes;
-        public       VkBool32           independentResolveNone;
-        public       VkBool32           independentResolve;
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkResolveModeFlagBits supportedDepthResolveModes;
+        public       VkResolveModeFlagBits supportedStencilResolveModes;
+        public       VkBool32              independentResolveNone;
+        public       VkBool32              independentResolve;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2535,10 +2535,10 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageStencilUsageCreateInfo
     {
-        public const VkStructureType   STYPE = VkStructureType.IMAGE_STENCIL_USAGE_CREATE_INFO;
-        public       VkStructureType   sType;
-        public       void*             pNext;
-        public       VkImageUsageFlags stencilUsage;
+        public const VkStructureType      STYPE = VkStructureType.IMAGE_STENCIL_USAGE_CREATE_INFO;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkImageUsageFlagBits stencilUsage;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2583,16 +2583,16 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFramebufferAttachmentImageInfo
     {
-        public const VkStructureType    STYPE = VkStructureType.FRAMEBUFFER_ATTACHMENT_IMAGE_INFO;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkImageCreateFlags flags;
-        public       VkImageUsageFlags  usage;
-        public       uint               width;
-        public       uint               height;
-        public       uint               layerCount;
-        public       uint               viewFormatCount;
-        public       VkFormat*          pViewFormats;
+        public const VkStructureType       STYPE = VkStructureType.FRAMEBUFFER_ATTACHMENT_IMAGE_INFO;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkImageCreateFlagBits flags;
+        public       VkImageUsageFlagBits  usage;
+        public       uint                  width;
+        public       uint                  height;
+        public       uint                  layerCount;
+        public       uint                  viewFormatCount;
+        public       VkFormat*             pViewFormats;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2713,13 +2713,13 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSemaphoreWaitInfo
     {
-        public const VkStructureType      STYPE = VkStructureType.SEMAPHORE_WAIT_INFO;
-        public       VkStructureType      sType;
-        public       void*                pNext;
-        public       VkSemaphoreWaitFlags flags;
-        public       uint                 semaphoreCount;
-        public       VkSemaphore*         pSemaphores;
-        public       ulong*               pValues;
+        public const VkStructureType         STYPE = VkStructureType.SEMAPHORE_WAIT_INFO;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkSemaphoreWaitFlagBits flags;
+        public       uint                    semaphoreCount;
+        public       VkSemaphore*            pSemaphores;
+        public       ulong*                  pValues;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2791,7 +2791,7 @@ namespace Exomia.Vulkan.Api.Core
         public VkSurfaceTransformFlagsKHR supportedTransforms;
         public VkSurfaceTransformFlagsKHR currentTransform;
         public VkCompositeAlphaFlagsKHR   supportedCompositeAlpha;
-        public VkImageUsageFlags          supportedUsageFlags;
+        public VkImageUsageFlagBits       supportedUsageFlags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -2814,7 +2814,7 @@ namespace Exomia.Vulkan.Api.Core
         public       VkColorSpaceKHR            imageColorSpace;
         public       VkExtent2D                 imageExtent;
         public       uint                       imageArrayLayers;
-        public       VkImageUsageFlags          imageUsage;
+        public       VkImageUsageFlagBits       imageUsage;
         public       VkSharingMode              imageSharingMode;
         public       uint                       queueFamilyIndexCount;
         public       uint*                      pQueueFamilyIndices;
@@ -2988,11 +2988,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImportMemoryFdInfoKHR
     {
-        public const VkStructureType                 STYPE = VkStructureType.IMPORT_MEMORY_FD_INFO_KHR;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkExternalMemoryHandleTypeFlags handleType;
-        public       int                             fd;
+        public const VkStructureType                    STYPE = VkStructureType.IMPORT_MEMORY_FD_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalMemoryHandleTypeFlagBits handleType;
+        public       int                                fd;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3007,33 +3007,33 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryGetFdInfoKHR
     {
-        public const VkStructureType                 STYPE = VkStructureType.MEMORY_GET_FD_INFO_KHR;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkDeviceMemory                  memory;
-        public       VkExternalMemoryHandleTypeFlags handleType;
+        public const VkStructureType                    STYPE = VkStructureType.MEMORY_GET_FD_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkDeviceMemory                     memory;
+        public       VkExternalMemoryHandleTypeFlagBits handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImportSemaphoreFdInfoKHR
     {
-        public const VkStructureType                    STYPE = VkStructureType.IMPORT_SEMAPHORE_FD_INFO_KHR;
-        public       VkStructureType                    sType;
-        public       void*                              pNext;
-        public       VkSemaphore                        semaphore;
-        public       VkSemaphoreImportFlags             flags;
-        public       VkExternalSemaphoreHandleTypeFlags handleType;
-        public       int                                fd;
+        public const VkStructureType                       STYPE = VkStructureType.IMPORT_SEMAPHORE_FD_INFO_KHR;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkSemaphore                           semaphore;
+        public       VkSemaphoreImportFlagBits             flags;
+        public       VkExternalSemaphoreHandleTypeFlagBits handleType;
+        public       int                                   fd;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSemaphoreGetFdInfoKHR
     {
-        public const VkStructureType                    STYPE = VkStructureType.SEMAPHORE_GET_FD_INFO_KHR;
-        public       VkStructureType                    sType;
-        public       void*                              pNext;
-        public       VkSemaphore                        semaphore;
-        public       VkExternalSemaphoreHandleTypeFlags handleType;
+        public const VkStructureType                       STYPE = VkStructureType.SEMAPHORE_GET_FD_INFO_KHR;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkSemaphore                           semaphore;
+        public       VkExternalSemaphoreHandleTypeFlagBits handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3073,32 +3073,32 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSharedPresentSurfaceCapabilitiesKHR
     {
-        public const VkStructureType   STYPE = VkStructureType.SHARED_PRESENT_SURFACE_CAPABILITIES_KHR;
-        public       VkStructureType   sType;
-        public       void*             pNext;
-        public       VkImageUsageFlags sharedPresentSupportedUsageFlags;
+        public const VkStructureType      STYPE = VkStructureType.SHARED_PRESENT_SURFACE_CAPABILITIES_KHR;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkImageUsageFlagBits sharedPresentSupportedUsageFlags;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImportFenceFdInfoKHR
     {
-        public const VkStructureType                STYPE = VkStructureType.IMPORT_FENCE_FD_INFO_KHR;
-        public       VkStructureType                sType;
-        public       void*                          pNext;
-        public       VkFence                        fence;
-        public       VkFenceImportFlags             flags;
-        public       VkExternalFenceHandleTypeFlags handleType;
-        public       int                            fd;
+        public const VkStructureType                   STYPE = VkStructureType.IMPORT_FENCE_FD_INFO_KHR;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkFence                           fence;
+        public       VkFenceImportFlagBits             flags;
+        public       VkExternalFenceHandleTypeFlagBits handleType;
+        public       int                               fd;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFenceGetFdInfoKHR
     {
-        public const VkStructureType                STYPE = VkStructureType.FENCE_GET_FD_INFO_KHR;
-        public       VkStructureType                sType;
-        public       void*                          pNext;
-        public       VkFence                        fence;
-        public       VkExternalFenceHandleTypeFlags handleType;
+        public const VkStructureType                   STYPE = VkStructureType.FENCE_GET_FD_INFO_KHR;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkFence                           fence;
+        public       VkExternalFenceHandleTypeFlagBits handleType;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3301,36 +3301,36 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR
     {
-        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkExtent2D         minFragmentShadingRateAttachmentTexelSize;
-        public       VkExtent2D         maxFragmentShadingRateAttachmentTexelSize;
-        public       uint               maxFragmentShadingRateAttachmentTexelSizeAspectRatio;
-        public       VkBool32           primitiveFragmentShadingRateWithMultipleViewports;
-        public       VkBool32           layeredShadingRateAttachments;
-        public       VkBool32           fragmentShadingRateNonTrivialCombinerOps;
-        public       VkExtent2D         maxFragmentSize;
-        public       uint               maxFragmentSizeAspectRatio;
-        public       uint               maxFragmentShadingRateCoverageSamples;
-        public       VkSampleCountFlags maxFragmentShadingRateRasterizationSamples;
-        public       VkBool32           fragmentShadingRateWithShaderDepthStencilWrites;
-        public       VkBool32           fragmentShadingRateWithSampleMask;
-        public       VkBool32           fragmentShadingRateWithShaderSampleMask;
-        public       VkBool32           fragmentShadingRateWithConservativeRasterization;
-        public       VkBool32           fragmentShadingRateWithFragmentShaderInterlock;
-        public       VkBool32           fragmentShadingRateWithCustomSampleLocations;
-        public       VkBool32           fragmentShadingRateStrictMultiplyCombiner;
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkExtent2D            minFragmentShadingRateAttachmentTexelSize;
+        public       VkExtent2D            maxFragmentShadingRateAttachmentTexelSize;
+        public       uint                  maxFragmentShadingRateAttachmentTexelSizeAspectRatio;
+        public       VkBool32              primitiveFragmentShadingRateWithMultipleViewports;
+        public       VkBool32              layeredShadingRateAttachments;
+        public       VkBool32              fragmentShadingRateNonTrivialCombinerOps;
+        public       VkExtent2D            maxFragmentSize;
+        public       uint                  maxFragmentSizeAspectRatio;
+        public       uint                  maxFragmentShadingRateCoverageSamples;
+        public       VkSampleCountFlagBits maxFragmentShadingRateRasterizationSamples;
+        public       VkBool32              fragmentShadingRateWithShaderDepthStencilWrites;
+        public       VkBool32              fragmentShadingRateWithSampleMask;
+        public       VkBool32              fragmentShadingRateWithShaderSampleMask;
+        public       VkBool32              fragmentShadingRateWithConservativeRasterization;
+        public       VkBool32              fragmentShadingRateWithFragmentShaderInterlock;
+        public       VkBool32              fragmentShadingRateWithCustomSampleLocations;
+        public       VkBool32              fragmentShadingRateStrictMultiplyCombiner;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRateKHR
     {
-        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkSampleCountFlags sampleCounts;
-        public       VkExtent2D         fragmentSize;
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkSampleCountFlagBits sampleCounts;
+        public       VkExtent2D            fragmentSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3363,13 +3363,13 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineExecutablePropertiesKHR
     {
-        public const VkStructureType    STYPE = VkStructureType.PIPELINE_EXECUTABLE_PROPERTIES_KHR;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkShaderStageFlags stages;
-        public fixed sbyte              name[VK_MAX_DESCRIPTION_SIZE];
-        public fixed sbyte              description[VK_MAX_DESCRIPTION_SIZE];
-        public       uint               subgroupSize;
+        public const VkStructureType       STYPE = VkStructureType.PIPELINE_EXECUTABLE_PROPERTIES_KHR;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkShaderStageFlagBits stages;
+        public fixed sbyte                 name[VK_MAX_DESCRIPTION_SIZE];
+        public fixed sbyte                 description[VK_MAX_DESCRIPTION_SIZE];
+        public       uint                  subgroupSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3593,7 +3593,7 @@ namespace Exomia.Vulkan.Api.Core
         public       VkDebugReportFlagsEXT flags;
 
         public delegate*<               /*vkDebugReportCallbackEXT*/
-            VkDebugReportFlagsEXT,      /* flags                  */
+            VkDebugReportFlagsEXT,      /* FlagBits                  */
             VkDebugReportObjectTypeEXT, /* objectType             */
             ulong,                      /* @object                */
             nuint,                      /* location               */
@@ -3758,7 +3758,7 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkShaderStatisticsInfoAMD
     {
-        public       VkShaderStageFlags       shaderStageMask;
+        public       VkShaderStageFlagBits    shaderStageMask;
         public       VkShaderResourceUsageAMD resourceUsage;
         public       uint                     numPhysicalVgprs;
         public       uint                     numPhysicalSgprs;
@@ -3903,7 +3903,7 @@ namespace Exomia.Vulkan.Api.Core
         public       VkSurfaceTransformFlagsKHR supportedTransforms;
         public       VkSurfaceTransformFlagsKHR currentTransform;
         public       VkCompositeAlphaFlagsKHR   supportedCompositeAlpha;
-        public       VkImageUsageFlags          supportedUsageFlags;
+        public       VkImageUsageFlagBits       supportedUsageFlags;
         public       VkSurfaceCounterFlagsEXT   supportedSurfaceCounters;
     }
 
@@ -4220,13 +4220,13 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSampleLocationsInfoEXT
     {
-        public const VkStructureType      STYPE = VkStructureType.SAMPLE_LOCATIONS_INFO_EXT;
-        public       VkStructureType      sType;
-        public       void*                pNext;
-        public       VkSampleCountFlags   sampleLocationsPerPixel;
-        public       VkExtent2D           sampleLocationGridSize;
-        public       uint                 sampleLocationsCount;
-        public       VkSampleLocationEXT* pSampleLocations;
+        public const VkStructureType       STYPE = VkStructureType.SAMPLE_LOCATIONS_INFO_EXT;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkSampleCountFlagBits sampleLocationsPerPixel;
+        public       VkExtent2D            sampleLocationGridSize;
+        public       uint                  sampleLocationsCount;
+        public       VkSampleLocationEXT*  pSampleLocations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4268,14 +4268,14 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSampleLocationsPropertiesEXT
     {
-        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkSampleCountFlags sampleLocationSampleCounts;
-        public       VkExtent2D         maxSampleLocationGridSize;
-        public fixed float              sampleLocationCoordinateRange[2];
-        public       uint               sampleLocationSubPixelBits;
-        public       VkBool32           variableSampleLocations;
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkSampleCountFlagBits sampleLocationSampleCounts;
+        public       VkExtent2D            maxSampleLocationGridSize;
+        public fixed float                 sampleLocationCoordinateRange[2];
+        public       uint                  sampleLocationSubPixelBits;
+        public       VkBool32              variableSampleLocations;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4367,9 +4367,9 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public struct VkDrmFormatModifierPropertiesEXT
     {
-        public ulong                drmFormatModifier;
-        public uint                 drmFormatModifierPlaneCount;
-        public VkFormatFeatureFlags drmFormatModifierTilingFeatures;
+        public ulong                   drmFormatModifier;
+        public uint                    drmFormatModifierPlaneCount;
+        public VkFormatFeatureFlagBits drmFormatModifierTilingFeatures;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4530,7 +4530,7 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType                      STYPE = VkStructureType.RAY_TRACING_PIPELINE_CREATE_INFO_NV;
         public       VkStructureType                      sType;
         public       void*                                pNext;
-        public       VkPipelineCreateFlags                flags;
+        public       VkPipelineCreateFlagBits             flags;
         public       uint                                 stageCount;
         public       VkPipelineShaderStageCreateInfo*     pStages;
         public       uint                                 groupCount;
@@ -4716,7 +4716,7 @@ namespace Exomia.Vulkan.Api.Core
             set { value2 = (value2 & 0xFF000000) | (value & 0x00FFFFFF); }
         }
 
-        public VkGeometryInstanceFlagsKHR Flags
+        public VkGeometryInstanceFlagsKHR FlagBits
         {
             get { return (VkGeometryInstanceFlagsKHR)(value2 >> 24); }
             set { value2 = ((uint)value << 24) | (value2 & 0x00FFFFFF); }
@@ -4772,11 +4772,11 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImportMemoryHostPointerInfoEXT
     {
-        public const VkStructureType                 STYPE = VkStructureType.IMPORT_MEMORY_HOST_POINTER_INFO_EXT;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkExternalMemoryHandleTypeFlags handleType;
-        public       void*                           pHostPointer;
+        public const VkStructureType                    STYPE = VkStructureType.IMPORT_MEMORY_HOST_POINTER_INFO_EXT;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalMemoryHandleTypeFlagBits handleType;
+        public       void*                              pHostPointer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4988,20 +4988,20 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkQueueFamilyCheckpointPropertiesNV
     {
-        public const VkStructureType      STYPE = VkStructureType.QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV;
-        public       VkStructureType      sType;
-        public       void*                pNext;
-        public       VkPipelineStageFlags checkpointExecutionStageMask;
+        public const VkStructureType         STYPE = VkStructureType.QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkPipelineStageFlagBits checkpointExecutionStageMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCheckpointDataNV
     {
-        public const VkStructureType      STYPE = VkStructureType.CHECKPOINT_DATA_NV;
-        public       VkStructureType      sType;
-        public       void*                pNext;
-        public       VkPipelineStageFlags stage;
-        public       void*                pCheckpointMarker;
+        public const VkStructureType         STYPE = VkStructureType.CHECKPOINT_DATA_NV;
+        public       VkStructureType         sType;
+        public       void*                   pNext;
+        public       VkPipelineStageFlagBits stage;
+        public       void*                   pCheckpointMarker;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5150,13 +5150,13 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSubgroupSizeControlPropertiesEXT
     {
-        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       uint               minSubgroupSize;
-        public       uint               maxSubgroupSize;
-        public       uint               maxComputeWorkgroupSubgroups;
-        public       VkShaderStageFlags requiredSubgroupSizeStages;
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       uint                  minSubgroupSize;
+        public       uint                  maxSubgroupSize;
+        public       uint                  maxComputeWorkgroupSubgroups;
+        public       VkShaderStageFlagBits requiredSubgroupSizeStages;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5308,10 +5308,10 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCooperativeMatrixPropertiesNV
     {
-        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkShaderStageFlags cooperativeMatrixSupportedStages;
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkShaderStageFlagBits cooperativeMatrixSupportedStages;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5340,9 +5340,9 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType           sType;
         public       void*                     pNext;
         public       VkCoverageReductionModeNV coverageReductionMode;
-        public       VkSampleCountFlags        rasterizationSamples;
-        public       VkSampleCountFlags        depthStencilSamples;
-        public       VkSampleCountFlags        colorSamples;
+        public       VkSampleCountFlagBits     rasterizationSamples;
+        public       VkSampleCountFlagBits     depthStencilSamples;
+        public       VkSampleCountFlagBits     colorSamples;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -5553,7 +5553,7 @@ namespace Exomia.Vulkan.Api.Core
         public       uint                          vertexBindingUnit;
         public       VkBool32                      vertexDynamicStride;
         public       VkPipelineLayout              pushconstantPipelineLayout;
-        public       VkShaderStageFlags            pushconstantShaderStageFlags;
+        public       VkShaderStageFlagBits         pushconstantShaderStageFlags;
         public       uint                          pushconstantOffset;
         public       uint                          pushconstantSize;
         public       VkIndirectStateFlagsNV        indirectStateFlags;
@@ -5802,10 +5802,10 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV
     {
-        public const VkStructureType    STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV;
-        public       VkStructureType    sType;
-        public       void*              pNext;
-        public       VkSampleCountFlags maxFragmentShadingRateInvocationCount;
+        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       VkSampleCountFlagBits maxFragmentShadingRateInvocationCount;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6114,7 +6114,7 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType                             STYPE = VkStructureType.RAY_TRACING_PIPELINE_CREATE_INFO_KHR;
         public       VkStructureType                             sType;
         public       void*                                       pNext;
-        public       VkPipelineCreateFlags                       flags;
+        public       VkPipelineCreateFlagBits                    flags;
         public       uint                                        stageCount;
         public       VkPipelineShaderStageCreateInfo*            pStages;
         public       uint                                        groupCount;
@@ -6235,7 +6235,7 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType            STYPE = VkStructureType.DEPENDENCY_INFO_KHR;
         public       VkStructureType            sType;
         public       void*                      pNext;
-        public       VkDependencyFlags          dependencyFlags;
+        public       VkDependencyFlagBits       dependencyFlags;
         public       uint                       memoryBarrierCount;
         public       VkMemoryBarrier2KHR*       pMemoryBarriers;
         public       uint                       bufferMemoryBarrierCount;

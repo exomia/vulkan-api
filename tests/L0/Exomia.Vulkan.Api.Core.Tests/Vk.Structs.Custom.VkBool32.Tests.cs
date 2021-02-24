@@ -28,8 +28,8 @@ namespace Exomia.Vulkan.Api.Core.Tests
 
         [TestMethod]
         public void VkBool32_ToString_ShouldWorkAndReturnSameAsBooleanToString()
-        { 
-            string vTrue = VkBool32.True.ToString();
+        {
+            string vTrue  = VkBool32.True.ToString();
             string vFalse = VkBool32.False.ToString();
 
             Assert.AreEqual(true.ToString(),  vTrue);
