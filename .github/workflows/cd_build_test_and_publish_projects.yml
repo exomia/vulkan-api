@@ -1,4 +1,4 @@
-name: "[project core] build, test & publish"
+name: '[CD] [Projects] build, test & publish [v${{ github.event.inputs.version }}]'
 on: 
   workflow_dispatch:
     inputs:
@@ -13,57 +13,58 @@ env:
     DOTNET_NOLOGO: 1
     DOTNET_CLI_TELEMETRY_OPTOUT: 1
 jobs:
-  build-windows:
-    name: "[project core] build release and debug"
-    runs-on: windows-latest
+  build-projects:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+        projects: [Windows]
+    name: '[${{ matrix.projects }}] build ${{ matrix.configurations }} on ${{ matrix.os }}'
+    runs-on: ${{ matrix.os }}
     steps: 
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: 5.0.101
-    - name: build debug
+    - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
       run: |
-        dotnet build --configuration Debug --force --nologo -p:Platform=AnyCPU
-        dotnet build --configuration Debug --force --nologo -p:Platform=x86
-        dotnet build --configuration Debug --force --nologo -p:Platform=x64
-      working-directory: src/Exomia.Vulkan.Api.Core
-    - name: build release
-      run: |
-        dotnet build --configuration Release --force --nologo -p:Platform=AnyCPU
-        dotnet build --configuration Release --force --nologo -p:Platform=x86
-        dotnet build --configuration Release --force --nologo -p:Platform=x64
-      working-directory: src/Exomia.Vulkan.Api.Core
-  test-windows:   
-    name: "[project core] test release and debug"
-    needs: [build-windows]
-    runs-on: windows-latest
+        dotnet build --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=AnyCPU
+        dotnet build --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=x86
+        dotnet build --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=x64
+      working-directory: src/Exomia.Vulkan.Api.${{ matrix.projects }}
+  test-projects:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+        projects: [Windows]
+    name: '[${{ matrix.projects }}] test ${{ matrix.configurations }} on ${{ matrix.os }}'
+    needs: [build-core]
+    runs-on: ${{ matrix.os }}
     steps:    
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: 5.0.101
-    - name: test debug
+    - name: '[${{ matrix.projects }}] test ${{ matrix.configurations }}'
       run: |
-        dotnet test --configuration Debug --nologo -p:Platform=AnyCPU
-        dotnet test --configuration Debug --nologo -p:Platform=x86
-        dotnet test --configuration Debug --nologo -p:Platform=x64
-      working-directory: tests/L0/Exomia.Vulkan.Api.Core.Tests
-    - name: test release
-      run: |
-        dotnet test --configuration Release --nologo -p:Platform=AnyCPU
-        dotnet test --configuration Release --nologo -p:Platform=x86
-        dotnet test --configuration Release --nologo -p:Platform=x64
-      working-directory: tests/L0/Exomia.Vulkan.Api.Core.Tests
-  publish-github-windows:
-    name: "[project core] publish debug on github"
-    needs: [test-windows]
-    runs-on: windows-latest
+        dotnet test --configuration ${{ matrix.configurations }} --nologo -p:Platform=AnyCPU
+        dotnet test --configuration ${{ matrix.configurations }} --nologo -p:Platform=x86
+        dotnet test --configuration ${{ matrix.configurations }} --nologo -p:Platform=x64
+      working-directory: src/Exomia.Vulkan.Api.${{ matrix.projects }}
+  publish-projects-on-github:
+    strategy:
+      matrix:
+        projects: [Windows]
+    name: '[${{ matrix.projects }}] publish debug on github'
+    needs: [test-projects]
+    runs-on: ubuntu-latest
     steps:    
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: 5.0.101
-    - name: publish ${{ github.repository }} [v${{ github.event.inputs.version }}]
+    - name: '[${{ matrix.projects }}] publish ${{ github.repository }} [v${{ github.event.inputs.version }}]'
       run: |
         dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=AnyCPU -p:Version=${{ github.event.inputs.version }}
         dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=x86 -p:Version=${{ github.event.inputs.version }}
@@ -75,21 +76,24 @@ jobs:
              if [ "${STATUSCODE}" != 200 ] && [ "${STATUSCODE}" != 409 ]; then exit 1; fi
            done
       shell: bash
-      working-directory: src/Exomia.Vulkan.Api.Core
-  publish-nuget-windows:
-    name: "[project core] publish release on nuget"
-    needs: [test-windows, publish-github-windows]
-    runs-on: windows-latest
+      working-directory: src/Exomia.Vulkan.Api.${{ matrix.projects }}
+  publish-projects-on-nuget:
+    strategy:
+      matrix:
+        projects: [Windows]
+    name: '[${{ matrix.projects }}] publish release on nuget'
+    needs: [publish-projects-on-github]
+    runs-on: ubuntu-latest
     steps:    
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: 5.0.101
-    - name: publish ${{ github.repository }} [v${{ github.event.inputs.version }}]
+    - name: '[${{ matrix.projects }}] publish ${{ github.repository }} [v${{ github.event.inputs.version }}]'
       run: |
         dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=AnyCPU -p:Version=${{ github.event.inputs.version }}
         dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=x86 -p:Version=${{ github.event.inputs.version }}
         dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=x64 -p:Version=${{ github.event.inputs.version }}
         dotnet nuget push **/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
       shell: bash
-      working-directory: src/Exomia.Vulkan.Api.Core
+      working-directory: src/Exomia.Vulkan.Api.${{ matrix.projects }}
