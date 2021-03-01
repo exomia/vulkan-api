@@ -53,7 +53,7 @@ jobs:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
         projects: [Windows]
-    name: '[${{ matrix.projects }}] build release and debug on ${{ matrix.os }}'
+    name: '[${{ matrix.projects }}] build ${{ matrix.configurations }} on ${{ matrix.os }}'
     needs: [test-core]
     runs-on: ${{ matrix.os }}
     steps: 
