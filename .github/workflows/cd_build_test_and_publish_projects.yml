@@ -1,4 +1,4 @@
-name: '[CD] [Projects] build, test & publish [v${{ github.event.inputs.version }}]'
+name: '[CD] [Projects] build, test & publish'
 on: 
   workflow_dispatch:
     inputs:
