@@ -1,5 +1,5 @@
-name: [CI] build & test
-on: 
+name: '[CI] build & test'
+on:
     push:
         branches:
             - master
@@ -11,27 +11,30 @@ env:
     DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
     DOTNET_NOLOGO: 1
     DOTNET_CLI_TELEMETRY_OPTOUT: 1
-strategy:
-  matrix:
-    os: [windows-latest, ubuntu-latest]
-    configurations: [Debug, Release]
-    projects: [Windows]
 jobs:
   build-core:
-    name: [Core] build ${{ matrix.configurations }} on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+    name: '[Core] build ${{ matrix.configurations }} on ${{ matrix.os }}'
     runs-on: ${{ matrix.os }}
     steps: 
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: 5.0.101
-    - name: [Core] build ${{ matrix.configurations }}
+    - name: '[Core] build ${{ matrix.configurations }}'
       run: |
         dotnet build src/Exomia.Vulkan.Api.Core --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=AnyCPU
         dotnet build src/Exomia.Vulkan.Api.Core --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=x86
         dotnet build src/Exomia.Vulkan.Api.Core --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=x64
-  test-core:   
-    name: [Core] test ${{ matrix.configurations }} on ${{ matrix.os }}
+  test-core:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+    name: '[Core] test ${{ matrix.configurations }} on ${{ matrix.os }}'
     needs: [build-core]
     runs-on: ${{ matrix.os }}
     steps:    
@@ -39,13 +42,18 @@ jobs:
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: 5.0.101
-    - name: [Core] test ${{ matrix.configurations }}
+    - name: '[Core] test ${{ matrix.configurations }}'
       run: |
         dotnet test tests/L0/Exomia.Vulkan.Api.Core.Tests --configuration ${{ matrix.configurations }} --nologo -p:Platform=AnyCPU
         dotnet test tests/L0/Exomia.Vulkan.Api.Core.Tests --configuration ${{ matrix.configurations }} --nologo -p:Platform=x86
         dotnet test tests/L0/Exomia.Vulkan.Api.Core.Tests --configuration ${{ matrix.configurations }} --nologo -p:Platform=x64
   build-projects:
-    name: ${{ matrix.projects }} build release and debug on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+        projects: [Windows]
+    name: '[${{ matrix.projects }}] build release and debug on ${{ matrix.os }}'
     needs: [test-core]
     runs-on: ${{ matrix.os }}
     steps: 
@@ -53,13 +61,18 @@ jobs:
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: 5.0.101
-    - name: [${{ matrix.projects }}] build ${{ matrix.configurations }}
+    - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
       run: |
         dotnet build src/Exomia.Vulkan.Api.${{ matrix.projects }} --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=AnyCPU
         dotnet build src/Exomia.Vulkan.Api.${{ matrix.projects }} --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=x86
         dotnet build src/Exomia.Vulkan.Api.${{ matrix.projects }} --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=x64
-  test-projects:   
-    name: ${{ matrix.projects }} test ${{ matrix.configurations }} on ${{ matrix.os }}
+  test-projects:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+        projects: [Windows]   
+    name: '[${{ matrix.projects }}] test ${{ matrix.configurations }} on ${{ matrix.os }}'
     needs: [build-projects]
     runs-on: ${{ matrix.os }}
     steps:    
@@ -67,7 +80,7 @@ jobs:
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: 5.0.101
-    - name: [${{ matrix.projects }}] test ${{ matrix.configurations }}
+    - name: '[${{ matrix.projects }}] test ${{ matrix.configurations }}'
       run: |
         dotnet test tests/L0/Exomia.Vulkan.Api.${{ matrix.projects }}.Tests --configuration ${{ matrix.configurations }} --nologo -p:Platform=AnyCPU
         dotnet test tests/L0/Exomia.Vulkan.Api.${{ matrix.projects }}.Tests --configuration ${{ matrix.configurations }} --nologo -p:Platform=x86
