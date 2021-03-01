@@ -39,7 +39,7 @@ jobs:
         configurations: [Debug, Release]
         projects: [Windows]
     name: '[${{ matrix.projects }}] test ${{ matrix.configurations }} on ${{ matrix.os }}'
-    needs: [build-core]
+    needs: [build-projects]
     runs-on: ${{ matrix.os }}
     steps:    
     - uses: actions/checkout@v2
