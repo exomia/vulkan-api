@@ -127,7 +127,7 @@ namespace Exomia.Vulkan.Api.Core
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkEnumerateInstanceExtensionProperties")]
         public static extern unsafe VkResult EnumerateInstanceExtensionProperties(
-            byte*                  pLayerName,
+            sbyte*                 pLayerName,
             uint*                  pPropertyCount,
             VkExtensionProperties* pProperties);
 
@@ -135,7 +135,7 @@ namespace Exomia.Vulkan.Api.Core
         [DllImport(IMPORT, EntryPoint = "vkEnumerateDeviceExtensionProperties")]
         public static extern unsafe VkResult EnumerateDeviceExtensionProperties(
             VkPhysicalDevice       physicalDevice,
-            byte*                  pLayerName,
+            sbyte*                 pLayerName,
             uint*                  pPropertyCount,
             VkExtensionProperties* pProperties);
 
