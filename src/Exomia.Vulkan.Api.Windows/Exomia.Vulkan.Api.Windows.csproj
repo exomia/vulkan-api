@@ -80,7 +80,28 @@
     <None Include="..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
     <None Include="..\..\icon.png" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="VkWin32.Enum.cs"></Compile>
+    <Compile Update="VkWin32.Enum.*.cs">
+      <DependentUpon>VkWin32.Enum.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="VkWin32.Structs.cs"></Compile>
+    <Compile Update="VkWin32.Structs.*.cs">
+      <DependentUpon>VkWin32.Structs.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="VkWin32.cs"></Compile>
+    <Compile Update="VkWin32.Const.cs">
+      <DependentUpon>VkWin32.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  
   <!-- Source Link Support -->
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
     <IncludeSymbols>true</IncludeSymbols>
