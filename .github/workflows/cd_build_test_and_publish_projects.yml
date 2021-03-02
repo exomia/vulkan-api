@@ -56,7 +56,7 @@ jobs:
     strategy:
       matrix:
         projects: [Windows]
-    name: '[${{ matrix.projects }}] publish debug on github'
+    name: '[${{ matrix.projects }}] publish debug on github [v${{ github.event.inputs.version }}]'
     needs: [test-projects]
     runs-on: ubuntu-latest
     steps:    
@@ -81,7 +81,7 @@ jobs:
     strategy:
       matrix:
         projects: [Windows]
-    name: '[${{ matrix.projects }}] publish release on nuget'
+    name: '[${{ matrix.projects }}] publish release on nuget [v${{ github.event.inputs.version }}]'
     needs: [publish-projects-on-github]
     runs-on: ubuntu-latest
     steps:    
