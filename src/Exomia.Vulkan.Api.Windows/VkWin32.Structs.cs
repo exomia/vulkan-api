@@ -22,15 +22,17 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkWin32SurfaceCreateInfoKHR
     {
-        public VkStructureType              sType;
-        public void*                        pNext;
-        public VkWin32SurfaceCreateFlagsKHR flags;
-        public IntPtr                       hInstance;
-        public IntPtr                       hWnd;
+        public const VkStructureType              STYPE = VkStructureType.WIN32_SURFACE_CREATE_INFO_KHR;
+        public       VkStructureType              sType;
+        public       void*                        pNext;
+        public       VkWin32SurfaceCreateFlagsKHR flags;
+        public       IntPtr                       hInstance;
+        public       IntPtr                       hWnd;
     }
 
     public unsafe struct VkImportMemoryWin32HandleInfoKHR
     {
+        public const VkStructureType STYPE = VkStructureType.IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
         public VkStructureType                    sType;
         public void*                              pNext;
         public VkExternalMemoryHandleTypeFlagBits handleType;
@@ -40,154 +42,171 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkExportMemoryWin32HandleInfoKHR
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public SECURITY_ATTRIBUTES* pAttributes;
-        public uint                 dwAccess;
-        public char*                pName;
+        public const VkStructureType      STYPE = VkStructureType.EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       SECURITY_ATTRIBUTES* pAttributes;
+        public       uint                 dwAccess;
+        public       char*                pName;
     }
 
     public unsafe struct VkMemoryWin32HandlePropertiesKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            memoryTypeBits;
+        public const VkStructureType STYPE = VkStructureType.MEMORY_WIN32_HANDLE_PROPERTIES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            memoryTypeBits;
     }
 
     public unsafe struct VkMemoryGetWin32HandleInfoKHR
     {
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkDeviceMemory                     memory;
-        public VkExternalMemoryHandleTypeFlagBits handleType;
+        public const VkStructureType                    STYPE = VkStructureType.MEMORY_GET_WIN32_HANDLE_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkDeviceMemory                     memory;
+        public       VkExternalMemoryHandleTypeFlagBits handleType;
     }
 
     public unsafe struct VkWin32KeyedMutexAcquireReleaseInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            acquireCount;
-        public VkDeviceMemory* pAcquireSyncs;
-        public ulong*          pAcquireKeys;
-        public uint*           pAcquireTimeouts;
-        public uint            releaseCount;
-        public VkDeviceMemory* pReleaseSyncs;
-        public ulong*          pReleaseKeys;
+        public const VkStructureType STYPE = VkStructureType.WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            acquireCount;
+        public       VkDeviceMemory* pAcquireSyncs;
+        public       ulong*          pAcquireKeys;
+        public       uint*           pAcquireTimeouts;
+        public       uint            releaseCount;
+        public       VkDeviceMemory* pReleaseSyncs;
+        public       ulong*          pReleaseKeys;
     }
 
     public unsafe struct VkImportSemaphoreWin32HandleInfoKHR
     {
-        public VkStructureType                       sType;
-        public void*                                 pNext;
-        public VkSemaphore                           semaphore;
-        public VkSemaphoreImportFlagBits             flags;
-        public VkExternalSemaphoreHandleTypeFlagBits handleType;
-        public HANDLE                                handle;
-        public char*                                 pName;
+        public const VkStructureType                       STYPE = VkStructureType.IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkSemaphore                           semaphore;
+        public       VkSemaphoreImportFlagBits             flags;
+        public       VkExternalSemaphoreHandleTypeFlagBits handleType;
+        public       HANDLE                                handle;
+        public       char*                                 pName;
     }
 
     public unsafe struct VkExportSemaphoreWin32HandleInfoKHR
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public SECURITY_ATTRIBUTES* pAttributes;
-        public uint                 dwAccess;
-        public char*                pName;
+        public const VkStructureType      STYPE = VkStructureType.EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       SECURITY_ATTRIBUTES* pAttributes;
+        public       uint                 dwAccess;
+        public       char*                pName;
     }
 
     public unsafe struct VkD3D12FenceSubmitInfoKHR
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            waitSemaphoreValuesCount;
-        public ulong*          pWaitSemaphoreValues;
-        public uint            signalSemaphoreValuesCount;
-        public ulong*          pSignalSemaphoreValues;
+        public const VkStructureType STYPE = VkStructureType.D3D12_FENCE_SUBMIT_INFO_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            waitSemaphoreValuesCount;
+        public       ulong*          pWaitSemaphoreValues;
+        public       uint            signalSemaphoreValuesCount;
+        public       ulong*          pSignalSemaphoreValues;
     }
 
     public unsafe struct VkSemaphoreGetWin32HandleInfoKHR
     {
-        public VkStructureType                       sType;
-        public void*                                 pNext;
-        public VkSemaphore                           semaphore;
-        public VkExternalSemaphoreHandleTypeFlagBits handleType;
+        public const VkStructureType                       STYPE = VkStructureType.SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR;
+        public       VkStructureType                       sType;
+        public       void*                                 pNext;
+        public       VkSemaphore                           semaphore;
+        public       VkExternalSemaphoreHandleTypeFlagBits handleType;
     }
 
     public unsafe struct VkWin32KeyedMutexAcquireReleaseInfoNV
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public uint            acquireCount;
-        public VkDeviceMemory* pAcquireSyncs;
-        public ulong*          pAcquireKeys;
-        public uint*           pAcquireTimeoutMilliseconds;
-        public uint            releaseCount;
-        public VkDeviceMemory* pReleaseSyncs;
-        public ulong*          pReleaseKeys;
+        public const VkStructureType STYPE = VkStructureType.WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            acquireCount;
+        public       VkDeviceMemory* pAcquireSyncs;
+        public       ulong*          pAcquireKeys;
+        public       uint*           pAcquireTimeoutMilliseconds;
+        public       uint            releaseCount;
+        public       VkDeviceMemory* pReleaseSyncs;
+        public       ulong*          pReleaseKeys;
     }
 
     public unsafe struct VkSurfaceFullScreenExclusiveInfoEXT
     {
-        public VkStructureType          sType;
-        public void*                    pNext;
-        public VkFullScreenExclusiveEXT fullScreenExclusive;
+        public const VkStructureType          STYPE = VkStructureType.SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkFullScreenExclusiveEXT fullScreenExclusive;
     }
 
     public unsafe struct VkSurfaceCapabilitiesFullScreenExclusiveEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public bool            fullScreenExclusiveSupported;
+        public const VkStructureType STYPE = VkStructureType.SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       bool            fullScreenExclusiveSupported;
     }
 
     public unsafe struct VkSurfaceFullScreenExclusiveWin32InfoEXT
     {
-        public VkStructureType sType;
-        public void*           pNext;
-        public IntPtr          hMonitor;
+        public const VkStructureType STYPE = VkStructureType.SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       IntPtr          hMonitor;
     }
 
     public unsafe struct VkImportFenceWin32HandleInfoKHR
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public VkFence                           fence;
-        public VkFenceImportFlagBits             flags;
-        public VkExternalFenceHandleTypeFlagBits handleType;
-        public HANDLE                            handle;
-        public char*                             pName;
+        public const VkStructureType                   STYPE = VkStructureType.IMPORT_FENCE_WIN32_HANDLE_INFO_KHR;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkFence                           fence;
+        public       VkFenceImportFlagBits             flags;
+        public       VkExternalFenceHandleTypeFlagBits handleType;
+        public       HANDLE                            handle;
+        public       char*                             pName;
     }
 
     public unsafe struct VkExportFenceWin32HandleInfoKHR
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public SECURITY_ATTRIBUTES* pAttributes;
-        public uint                 dwAccess;
-        public char*                pName;
+        public const VkStructureType      STYPE = VkStructureType.EXPORT_FENCE_WIN32_HANDLE_INFO_KHR;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       SECURITY_ATTRIBUTES* pAttributes;
+        public       uint                 dwAccess;
+        public       char*                pName;
     }
 
     public unsafe struct VkFenceGetWin32HandleInfoKHR
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public VkFence                           fence;
-        public VkExternalFenceHandleTypeFlagBits handleType;
+        public const VkStructureType                   STYPE = VkStructureType.FENCE_GET_WIN32_HANDLE_INFO_KHR;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkFence                           fence;
+        public       VkExternalFenceHandleTypeFlagBits handleType;
     }
 
     public unsafe struct VkImportMemoryWin32HandleInfoNV
     {
-        public VkStructureType                   sType;
-        public void*                             pNext;
-        public VkExternalMemoryHandleTypeFlagsNV handleType;
-        public HANDLE                            handle;
+        public const VkStructureType                   STYPE = VkStructureType.IMPORT_MEMORY_WIN32_HANDLE_INFO_NV;
+        public       VkStructureType                   sType;
+        public       void*                             pNext;
+        public       VkExternalMemoryHandleTypeFlagsNV handleType;
+        public       HANDLE                            handle;
     }
 
     public unsafe struct VkExportMemoryWin32HandleInfoNV
     {
-        public VkStructureType      sType;
-        public void*                pNext;
-        public SECURITY_ATTRIBUTES* pAttributes;
-        public uint                 dwAccess;
+        public const VkStructureType      STYPE = VkStructureType.EXPORT_MEMORY_WIN32_HANDLE_INFO_NV;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       SECURITY_ATTRIBUTES* pAttributes;
+        public       uint                 dwAccess;
     }
 }
