@@ -115,7 +115,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDevice
     {
-        public static readonly VkDevice Zero = new VkDevice();
+        public static readonly VkDevice Zero = (VkDevice) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -160,7 +160,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDebugReportCallbackEXT
     {
-        public static readonly VkDebugReportCallbackEXT Zero = new VkDebugReportCallbackEXT();
+        public static readonly VkDebugReportCallbackEXT Zero = (VkDebugReportCallbackEXT) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -205,7 +205,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDebugUtilsMessengerEXT
     {
-        public static readonly VkDebugUtilsMessengerEXT Zero = new VkDebugUtilsMessengerEXT();
+        public static readonly VkDebugUtilsMessengerEXT Zero = (VkDebugUtilsMessengerEXT) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -250,7 +250,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDeferredOperationKHR
     {
-        public static readonly VkDeferredOperationKHR Zero = new VkDeferredOperationKHR();
+        public static readonly VkDeferredOperationKHR Zero = (VkDeferredOperationKHR) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -295,7 +295,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkPerformanceConfigurationINTEL
     {
-        public static readonly VkPerformanceConfigurationINTEL Zero = new VkPerformanceConfigurationINTEL();
+        public static readonly VkPerformanceConfigurationINTEL Zero = (VkPerformanceConfigurationINTEL) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -340,7 +340,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDescriptorUpdateTemplate
     {
-        public static readonly VkDescriptorUpdateTemplate Zero = new VkDescriptorUpdateTemplate();
+        public static readonly VkDescriptorUpdateTemplate Zero = (VkDescriptorUpdateTemplate) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -385,7 +385,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkPrivateDataSlotEXT
     {
-        public static readonly VkPrivateDataSlotEXT Zero = new VkPrivateDataSlotEXT();
+        public static readonly VkPrivateDataSlotEXT Zero = (VkPrivateDataSlotEXT) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -430,7 +430,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkInstance
     {
-        public static readonly VkInstance Zero = new VkInstance();
+        public static readonly VkInstance Zero = (VkInstance) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -475,7 +475,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkEvent
     {
-        public static readonly VkEvent Zero = new VkEvent();
+        public static readonly VkEvent Zero = (VkEvent) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -520,7 +520,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkQueue
     {
-        public static readonly VkQueue Zero = new VkQueue();
+        public static readonly VkQueue Zero = (VkQueue) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -565,7 +565,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkQueryPool
     {
-        public static readonly VkQueryPool Zero = new VkQueryPool();
+        public static readonly VkQueryPool Zero = (VkQueryPool) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -610,7 +610,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkPipelineCache
     {
-        public static readonly VkPipelineCache Zero = new VkPipelineCache();
+        public static readonly VkPipelineCache Zero = (VkPipelineCache) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -655,7 +655,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkPhysicalDevice
     {
-        public static readonly VkPhysicalDevice Zero = new VkPhysicalDevice();
+        public static readonly VkPhysicalDevice Zero = (VkPhysicalDevice) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -700,7 +700,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkBuffer
     {
-        public static readonly VkBuffer Zero = new VkBuffer();
+        public static readonly VkBuffer Zero = (VkBuffer) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -745,7 +745,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCommandBuffer
     {
-        public static readonly VkCommandBuffer Zero = new VkCommandBuffer();
+        public static readonly VkCommandBuffer Zero = (VkCommandBuffer) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -790,7 +790,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkImage
     {
-        public static readonly VkImage Zero = new VkImage();
+        public static readonly VkImage Zero = (VkImage) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -835,7 +835,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSemaphore
     {
-        public static readonly VkSemaphore Zero = new VkSemaphore();
+        public static readonly VkSemaphore Zero = (VkSemaphore) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -880,7 +880,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkFence
     {
-        public static readonly VkFence Zero = new VkFence();
+        public static readonly VkFence Zero = (VkFence) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -925,7 +925,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDeviceMemory
     {
-        public static readonly VkDeviceMemory Zero = new VkDeviceMemory();
+        public static readonly VkDeviceMemory Zero = (VkDeviceMemory) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -970,7 +970,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkBufferView
     {
-        public static readonly VkBufferView Zero = new VkBufferView();
+        public static readonly VkBufferView Zero = (VkBufferView) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1015,7 +1015,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkImageView
     {
-        public static readonly VkImageView Zero = new VkImageView();
+        public static readonly VkImageView Zero = (VkImageView) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1060,7 +1060,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkShaderModule
     {
-        public static readonly VkShaderModule Zero = new VkShaderModule();
+        public static readonly VkShaderModule Zero = (VkShaderModule) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1105,7 +1105,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkPipelineLayout
     {
-        public static readonly VkPipelineLayout Zero = new VkPipelineLayout();
+        public static readonly VkPipelineLayout Zero = (VkPipelineLayout) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1150,7 +1150,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkPipeline
     {
-        public static readonly VkPipeline Zero = new VkPipeline();
+        public static readonly VkPipeline Zero = (VkPipeline) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1195,7 +1195,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkRenderPass
     {
-        public static readonly VkRenderPass Zero = new VkRenderPass();
+        public static readonly VkRenderPass Zero = (VkRenderPass) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1240,7 +1240,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDescriptorSetLayout
     {
-        public static readonly VkDescriptorSetLayout Zero = new VkDescriptorSetLayout();
+        public static readonly VkDescriptorSetLayout Zero = (VkDescriptorSetLayout) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1285,7 +1285,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSampler
     {
-        public static readonly VkSampler Zero = new VkSampler();
+        public static readonly VkSampler Zero = (VkSampler) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1330,7 +1330,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDescriptorSet
     {
-        public static readonly VkDescriptorSet Zero = new VkDescriptorSet();
+        public static readonly VkDescriptorSet Zero = (VkDescriptorSet) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1375,7 +1375,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDescriptorPool
     {
-        public static readonly VkDescriptorPool Zero = new VkDescriptorPool();
+        public static readonly VkDescriptorPool Zero = (VkDescriptorPool) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1420,7 +1420,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkFramebuffer
     {
-        public static readonly VkFramebuffer Zero = new VkFramebuffer();
+        public static readonly VkFramebuffer Zero = (VkFramebuffer) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1465,7 +1465,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCommandPool
     {
-        public static readonly VkCommandPool Zero = new VkCommandPool();
+        public static readonly VkCommandPool Zero = (VkCommandPool) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1510,7 +1510,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSamplerYcbcrConversion
     {
-        public static readonly VkSamplerYcbcrConversion Zero = new VkSamplerYcbcrConversion();
+        public static readonly VkSamplerYcbcrConversion Zero = (VkSamplerYcbcrConversion) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1555,7 +1555,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSurfaceKHR
     {
-        public static readonly VkSurfaceKHR Zero = new VkSurfaceKHR();
+        public static readonly VkSurfaceKHR Zero = (VkSurfaceKHR) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1600,7 +1600,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSwapchainKHR
     {
-        public static readonly VkSwapchainKHR Zero = new VkSwapchainKHR();
+        public static readonly VkSwapchainKHR Zero = (VkSwapchainKHR) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1645,7 +1645,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDisplayKHR
     {
-        public static readonly VkDisplayKHR Zero = new VkDisplayKHR();
+        public static readonly VkDisplayKHR Zero = (VkDisplayKHR) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1690,7 +1690,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDisplayModeKHR
     {
-        public static readonly VkDisplayModeKHR Zero = new VkDisplayModeKHR();
+        public static readonly VkDisplayModeKHR Zero = (VkDisplayModeKHR) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1735,7 +1735,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkValidationCacheEXT
     {
-        public static readonly VkValidationCacheEXT Zero = new VkValidationCacheEXT();
+        public static readonly VkValidationCacheEXT Zero = (VkValidationCacheEXT) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1780,7 +1780,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkAccelerationStructureNV
     {
-        public static readonly VkAccelerationStructureNV Zero = new VkAccelerationStructureNV();
+        public static readonly VkAccelerationStructureNV Zero = (VkAccelerationStructureNV) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1825,7 +1825,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkIndirectCommandsLayoutNV
     {
-        public static readonly VkIndirectCommandsLayoutNV Zero = new VkIndirectCommandsLayoutNV();
+        public static readonly VkIndirectCommandsLayoutNV Zero = (VkIndirectCommandsLayoutNV) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
@@ -1870,7 +1870,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkAccelerationStructureKHR
     {
-        public static readonly VkAccelerationStructureKHR Zero = new VkAccelerationStructureKHR();
+        public static readonly VkAccelerationStructureKHR Zero = (VkAccelerationStructureKHR) null;
 #pragma warning disable 649
         private readonly void* _ptr;
 #pragma warning restore 649
