@@ -16,7 +16,6 @@ using System.Runtime.InteropServices;
 namespace Exomia.Vulkan.Api.Core
 {
     using static Vk;
-    using size_t = nuint;
     using VkAccelerationStructureTypeNV = VkAccelerationStructureTypeKHR;
 
     [StructLayout(LayoutKind.Sequential)]
@@ -155,16 +154,16 @@ namespace Exomia.Vulkan.Api.Core
 
         public delegate*<            /*vkAllocationFunction*/
             void*,                   /* pUserData          */
-            size_t,                  /* size               */
-            size_t,                  /* alignment          */
+            nuint,                   /* size               */
+            nuint,                   /* alignment          */
             VkSystemAllocationScope, /* allocationScope    */
             void*> pfnAllocation;
 
         public delegate*<            /*vkReallocationFunction*/
             void*,                   /* pUserData            */
             void*,                   /* pOriginal            */
-            size_t,                  /* size                 */
-            size_t,                  /* alignment            */
+            nuint,                   /* size                 */
+            nuint,                   /* alignment            */
             VkSystemAllocationScope, /* allocationScope      */
             void*> pfnReallocation;
 
@@ -175,14 +174,14 @@ namespace Exomia.Vulkan.Api.Core
 
         public delegate*<             /*vkInternalAllocationNotification*/
             void*,                    /* pUserData                      */
-            size_t,                   /* size                           */
+            nuint,                    /* size                           */
             VkInternalAllocationType, /* allocationType                 */
             VkSystemAllocationScope,  /* allocationScope                */
             void> pfnInternalAllocation;
 
         public delegate*<             /*vkInternalFreeNotification*/
             void*,                    /* pUserData                */
-            size_t,                   /* size                     */
+            nuint,                    /* size                     */
             VkInternalAllocationType, /* allocationType           */
             VkSystemAllocationScope,  /* allocationScope          */
             void> pfnInternalFree;

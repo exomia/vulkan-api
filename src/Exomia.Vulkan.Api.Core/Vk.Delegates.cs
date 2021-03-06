@@ -15,13 +15,12 @@ using System.Runtime.InteropServices;
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core
 {
-    using size_t = nuint;
     using VkMemoryRequirements2KHR = VkMemoryRequirements2;
 
     public unsafe delegate void* AllocationFunction(
         void*                   pUserData,
-        size_t                  size,
-        size_t                  alignment,
+        nuint                   size,
+        nuint                   alignment,
         VkSystemAllocationScope allocationScope);
 
     public unsafe delegate void FreeFunction(
@@ -30,21 +29,21 @@ namespace Exomia.Vulkan.Api.Core
 
     public unsafe delegate void InternalAllocationNotification(
         void*                    pUserData,
-        size_t                   size,
+        nuint                    size,
         VkInternalAllocationType allocationType,
         VkSystemAllocationScope  allocationScope);
 
     public unsafe delegate void InternalFreeNotification(
         void*                    pUserData,
-        size_t                   size,
+        nuint                    size,
         VkInternalAllocationType allocationType,
         VkSystemAllocationScope  allocationScope);
 
     public unsafe delegate void* ReallocationFunction(
         void*                   pUserData,
         void*                   pOriginal,
-        size_t                  size,
-        size_t                  alignment,
+        nuint                   size,
+        nuint                   alignment,
         VkSystemAllocationScope allocationScope);
 
     public unsafe delegate VkResult CreateInstance(
@@ -305,7 +304,7 @@ namespace Exomia.Vulkan.Api.Core
         VkQueryPool           queryPool,
         uint                  firstQuery,
         uint                  queryCount,
-        size_t                dataSize,
+        nuint                 dataSize,
         void*                 pData,
         VkDeviceSize          stride,
         VkQueryResultFlagBits flags);
@@ -385,7 +384,7 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult GetPipelineCacheData(
         VkDevice        device,
         VkPipelineCache pipelineCache,
-        size_t*         pDataSize,
+        nuint*          pDataSize,
         void*           pData);
 
     public unsafe delegate VkResult MergePipelineCaches(
@@ -1580,7 +1579,7 @@ namespace Exomia.Vulkan.Api.Core
         VkDebugReportFlagsEXT      flags,
         VkDebugReportObjectTypeEXT objectType,
         ulong                      @object,
-        size_t                     location,
+        nuint                      location,
         int                        messageCode,
         sbyte*                     pLayerPrefix,
         sbyte*                     pMessage);
@@ -1679,7 +1678,7 @@ namespace Exomia.Vulkan.Api.Core
         VkPipeline            pipeline,
         VkShaderStageFlagBits shaderStage,
         VkShaderInfoTypeAMD   infoType,
-        size_t*               pInfoSize,
+        nuint*                pInfoSize,
         void*                 pInfo);
 
     public unsafe delegate VkResult GetPhysicalDeviceExternalImageFormatPropertiesNV(
@@ -1846,7 +1845,7 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate VkResult GetValidationCacheDataEXT(
         VkDevice             device,
         VkValidationCacheEXT validationCache,
-        size_t*              pDataSize,
+        nuint*               pDataSize,
         void*                pData);
 
     public delegate void CmdBindShadingRateImageNV(
@@ -1934,7 +1933,7 @@ namespace Exomia.Vulkan.Api.Core
         VkPipeline pipeline,
         uint       firstGroup,
         uint       groupCount,
-        size_t     dataSize,
+        nuint      dataSize,
         void*      pData);
 
     public unsafe delegate VkResult GetRayTracingShaderGroupHandlesNV(
@@ -1942,13 +1941,13 @@ namespace Exomia.Vulkan.Api.Core
         VkPipeline pipeline,
         uint       firstGroup,
         uint       groupCount,
-        size_t     dataSize,
+        nuint      dataSize,
         void*      pData);
 
     public unsafe delegate VkResult GetAccelerationStructureHandleNV(
         VkDevice                  device,
         VkAccelerationStructureNV accelerationStructure,
-        size_t                    dataSize,
+        nuint                     dataSize,
         void*                     pData);
 
     public unsafe delegate void CmdWriteAccelerationStructuresPropertiesNV(
@@ -2288,9 +2287,9 @@ namespace Exomia.Vulkan.Api.Core
         uint                        accelerationStructureCount,
         VkAccelerationStructureKHR* pAccelerationStructures,
         VkQueryType                 queryType,
-        size_t                      dataSize,
+        nuint                       dataSize,
         void*                       pData,
-        size_t                      stride);
+        nuint                       stride);
 
     public unsafe delegate void CmdCopyAccelerationStructureKHR(
         VkCommandBuffer                     commandBuffer,
@@ -2352,7 +2351,7 @@ namespace Exomia.Vulkan.Api.Core
         VkPipeline pipeline,
         uint       firstGroup,
         uint       groupCount,
-        size_t     dataSize,
+        nuint      dataSize,
         void*      pData);
 
     public unsafe delegate void CmdTraceRaysIndirectKHR(

@@ -17,7 +17,6 @@ using System.Runtime.InteropServices;
 // ReSharper disable UnassignedReadonlyField
 namespace Exomia.Vulkan.Api.Core
 {
-    using size_t = nuint;
     using VkMemoryRequirements2KHR = VkMemoryRequirements2;
 
     [StructLayout(LayoutKind.Explicit)]
@@ -526,7 +525,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugReportFlagsEXT,      /* FlagBits */
             VkDebugReportObjectTypeEXT, /* objectType */
             ulong,                      /* @object */
-            size_t,                     /* location */
+            nuint,                      /* location */
             int,                        /* messageCode */
             byte*,                      /* pLayerPrefix */
             byte*,                      /* pMessage */
@@ -654,12 +653,12 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkDevice,            /* device */
-            VkPipeline,          /* pipeline */
-            VkShaderStageFlagBits,  /* shaderStage */
-            VkShaderInfoTypeAMD, /* infoType */
-            size_t*,             /* pInfoSize */
-            void*,               /* pInfo */
+            VkDevice,              /* device */
+            VkPipeline,            /* pipeline */
+            VkShaderStageFlagBits, /* shaderStage */
+            VkShaderInfoTypeAMD,   /* infoType */
+            nuint*,                /* pInfoSize */
+            void*,                 /* pInfo */
             VkResult> VkGetShaderInfoAMD;
 
         [FieldOffset(0)]
@@ -885,7 +884,7 @@ namespace Exomia.Vulkan.Api.Core
         public readonly delegate*<
             VkDevice,             /* device */
             VkValidationCacheEXT, /* validationCache */
-            size_t*,              /* pDataSize */
+            nuint*,               /* pDataSize */
             void*,                /* pData */
             VkResult> VkGetValidationCacheDataEXT;
 
@@ -997,7 +996,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipeline, /* pipeline */
             uint,       /* firstGroup */
             uint,       /* groupCount */
-            size_t,     /* dataSize */
+            nuint,      /* dataSize */
             void*,      /* pData */
             VkResult> VkGetRayTracingShaderGroupHandlesKHR;
 
@@ -1007,7 +1006,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipeline, /* pipeline */
             uint,       /* firstGroup */
             uint,       /* groupCount */
-            size_t,     /* dataSize */
+            nuint,      /* dataSize */
             void*,      /* pData */
             VkResult> VkGetRayTracingShaderGroupHandlesNV;
 
@@ -1015,7 +1014,7 @@ namespace Exomia.Vulkan.Api.Core
         public readonly delegate*<
             VkDevice,                  /* device */
             VkAccelerationStructureNV, /* accelerationStructure */
-            size_t,                    /* dataSize */
+            nuint,                     /* dataSize */
             void*,                     /* pData */
             VkResult> VkGetAccelerationStructureHandleNV;
 
@@ -1478,9 +1477,9 @@ namespace Exomia.Vulkan.Api.Core
             uint,                        /* accelerationStructureCount */
             VkAccelerationStructureKHR*, /* pAccelerationStructures */
             VkQueryType,                 /* queryType */
-            size_t,                      /* dataSize */
+            nuint,                       /* dataSize */
             void*,                       /* pData */
-            size_t,                      /* stride */
+            nuint,                       /* stride */
             VkResult> VkWriteAccelerationStructuresPropertiesKHR;
 
         [FieldOffset(0)]
@@ -1562,7 +1561,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipeline, /* pipeline */
             uint,       /* firstGroup */
             uint,       /* groupCount */
-            size_t,     /* dataSize */
+            nuint,      /* dataSize */
             void*,      /* pData */
             VkResult> VkGetRayTracingCaptureReplayShaderGroupHandlesKHR;
 
@@ -2953,7 +2952,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDebugReportFlagsEXT,      /* FlagBits */
             VkDebugReportObjectTypeEXT, /* objectType */
             ulong,                      /* @object */
-            size_t,                     /* location */
+            nuint,                      /* location */
             int,                        /* messageCode */
             byte*,                      /* pLayerPrefix */
             byte*,                      /* pMessage */
@@ -3257,12 +3256,12 @@ namespace Exomia.Vulkan.Api.Core
         public static readonly VkGetShaderInfoAMD Zero = new VkGetShaderInfoAMD();
 
         public readonly delegate*<
-            VkDevice,            /* device */
-            VkPipeline,          /* pipeline */
-            VkShaderStageFlagBits,  /* shaderStage */
-            VkShaderInfoTypeAMD, /* infoType */
-            size_t*,             /* pInfoSize */
-            void*,               /* pInfo */
+            VkDevice,              /* device */
+            VkPipeline,            /* pipeline */
+            VkShaderStageFlagBits, /* shaderStage */
+            VkShaderInfoTypeAMD,   /* infoType */
+            nuint*,                /* pInfoSize */
+            void*,                 /* pInfo */
             VkResult> UnsafeInvoke;
 
         public static implicit operator VkGetShaderInfoAMD(void* ptr)
@@ -3840,7 +3839,7 @@ namespace Exomia.Vulkan.Api.Core
         public readonly delegate*<
             VkDevice,             /* device */
             VkValidationCacheEXT, /* validationCache */
-            size_t*,              /* pDataSize */
+            nuint*,               /* pDataSize */
             void*,                /* pData */
             VkResult> UnsafeInvoke;
 
@@ -4084,7 +4083,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipeline, /* pipeline */
             uint,       /* firstGroup */
             uint,       /* groupCount */
-            size_t,     /* dataSize */
+            nuint,      /* dataSize */
             void*,      /* pData */
             VkResult> UnsafeInvoke;
 
@@ -4105,7 +4104,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipeline, /* pipeline */
             uint,       /* firstGroup */
             uint,       /* groupCount */
-            size_t,     /* dataSize */
+            nuint,      /* dataSize */
             void*,      /* pData */
             VkResult> UnsafeInvoke;
 
@@ -4124,7 +4123,7 @@ namespace Exomia.Vulkan.Api.Core
         public readonly delegate*<
             VkDevice,                  /* device */
             VkAccelerationStructureNV, /* accelerationStructure */
-            size_t,                    /* dataSize */
+            nuint,                     /* dataSize */
             void*,                     /* pData */
             VkResult> UnsafeInvoke;
 
@@ -5280,9 +5279,9 @@ namespace Exomia.Vulkan.Api.Core
             uint,                        /* accelerationStructureCount */
             VkAccelerationStructureKHR*, /* pAccelerationStructures */
             VkQueryType,                 /* queryType */
-            size_t,                      /* dataSize */
+            nuint,                       /* dataSize */
             void*,                       /* pData */
-            size_t,                      /* stride */
+            nuint,                       /* stride */
             VkResult> UnsafeInvoke;
 
         public static implicit operator VkWriteAccelerationStructuresPropertiesKHR(void* ptr)
@@ -5474,7 +5473,7 @@ namespace Exomia.Vulkan.Api.Core
             VkPipeline, /* pipeline */
             uint,       /* firstGroup */
             uint,       /* groupCount */
-            size_t,     /* dataSize */
+            nuint,      /* dataSize */
             void*,      /* pData */
             VkResult> UnsafeInvoke;
 

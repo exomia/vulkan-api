@@ -21,7 +21,6 @@ using System.Security;
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core
 {
-    using size_t = nuint;
     using VkMemoryRequirements2KHR = VkMemoryRequirements2;
 
     public static partial class Vk
@@ -393,7 +392,7 @@ namespace Exomia.Vulkan.Api.Core
             VkQueryPool           queryPool,
             uint                  firstQuery,
             uint                  queryCount,
-            size_t                dataSize,
+            nuint                 dataSize,
             void*                 pData,
             VkDeviceSize          stride,
             VkQueryResultFlagBits flags);
@@ -501,7 +500,7 @@ namespace Exomia.Vulkan.Api.Core
         public static extern unsafe VkResult GetPipelineCacheData(
             VkDevice        device,
             VkPipelineCache pipelineCache,
-            size_t*         pDataSize,
+            nuint*          pDataSize,
             void*           pData);
 
         [SuppressUnmanagedCodeSecurity]
