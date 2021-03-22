@@ -17,7 +17,6 @@ using System.Security;
 // https://github.com/KhronosGroup/Vulkan-Headers/tree/master
 
 [module: SkipLocalsInit]
-
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core
 {
