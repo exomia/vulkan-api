@@ -47,13 +47,6 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDevice* pPhysicalDevices);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint = "vkEnumeratePhysicalDevices")]
-        public static extern unsafe VkResult EnumeratePhysicalDevices(
-            VkInstance           instance,
-            uint*                pPhysicalDeviceCount,
-            ref VkPhysicalDevice pPhysicalDevices);
-
-        [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceFeatures")]
         public static extern unsafe void GetPhysicalDeviceFeatures(
             VkPhysicalDevice          physicalDevice,
