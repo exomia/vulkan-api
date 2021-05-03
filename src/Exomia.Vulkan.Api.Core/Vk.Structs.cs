@@ -6187,10 +6187,10 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType          STYPE = VkStructureType.MEMORY_BARRIER_2_KHR;
         public       VkStructureType          sType;
         public       void*                    pNext;
-        public       VkPipelineStageFlags2KHR srcStageMask;
-        public       VkAccessFlags2KHR        srcAccessMask;
-        public       VkPipelineStageFlags2KHR dstStageMask;
-        public       VkAccessFlags2KHR        dstAccessMask;
+        public       VkPipelineStageFlagBits2KHR srcStageMask;
+        public       VkAccessFlagBits2KHR        srcAccessMask;
+        public       VkPipelineStageFlagBits2KHR dstStageMask;
+        public       VkAccessFlagBits2KHR        dstAccessMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6199,10 +6199,10 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType          STYPE = VkStructureType.BUFFER_MEMORY_BARRIER_2_KHR;
         public       VkStructureType          sType;
         public       void*                    pNext;
-        public       VkPipelineStageFlags2KHR srcStageMask;
-        public       VkAccessFlags2KHR        srcAccessMask;
-        public       VkPipelineStageFlags2KHR dstStageMask;
-        public       VkAccessFlags2KHR        dstAccessMask;
+        public       VkPipelineStageFlagBits2KHR srcStageMask;
+        public       VkAccessFlagBits2KHR        srcAccessMask;
+        public       VkPipelineStageFlagBits2KHR dstStageMask;
+        public       VkAccessFlagBits2KHR        dstAccessMask;
         public       uint                     srcQueueFamilyIndex;
         public       uint                     dstQueueFamilyIndex;
         public       VkBuffer                 buffer;
@@ -6216,10 +6216,10 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType          STYPE = VkStructureType.IMAGE_MEMORY_BARRIER_2_KHR;
         public       VkStructureType          sType;
         public       void*                    pNext;
-        public       VkPipelineStageFlags2KHR srcStageMask;
-        public       VkAccessFlags2KHR        srcAccessMask;
-        public       VkPipelineStageFlags2KHR dstStageMask;
-        public       VkAccessFlags2KHR        dstAccessMask;
+        public       VkPipelineStageFlagBits2KHR srcStageMask;
+        public       VkAccessFlagBits2KHR        srcAccessMask;
+        public       VkPipelineStageFlagBits2KHR dstStageMask;
+        public       VkAccessFlagBits2KHR        dstAccessMask;
         public       VkImageLayout            oldLayout;
         public       VkImageLayout            newLayout;
         public       uint                     srcQueueFamilyIndex;
@@ -6251,7 +6251,7 @@ namespace Exomia.Vulkan.Api.Core
         public       void*                    pNext;
         public       VkSemaphore              semaphore;
         public       ulong                    value;
-        public       VkPipelineStageFlags2KHR stageMask;
+        public       VkPipelineStageFlagBits2KHR stageMask;
         public       uint                     deviceIndex;
     }
 
@@ -6295,7 +6295,7 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType          STYPE = VkStructureType.QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV;
         public       VkStructureType          sType;
         public       void*                    pNext;
-        public       VkPipelineStageFlags2KHR checkpointExecutionStageMask;
+        public       VkPipelineStageFlagBits2KHR checkpointExecutionStageMask;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6304,7 +6304,7 @@ namespace Exomia.Vulkan.Api.Core
         public const VkStructureType          STYPE = VkStructureType.CHECKPOINT_DATA_2_NV;
         public       VkStructureType          sType;
         public       void*                    pNext;
-        public       VkPipelineStageFlags2KHR stage;
+        public       VkPipelineStageFlagBits2KHR stage;
         public       void*                    pCheckpointMarker;
     }
 }

@@ -1600,7 +1600,7 @@ namespace Exomia.Vulkan.Api.Core
         public readonly delegate*<
             VkCommandBuffer,          /* commandBuffer */
             VkEvent,                  /* event */
-            VkPipelineStageFlags2KHR, /* stageMask */
+            VkPipelineStageFlagBits2KHR, /* stageMask */
             void> VkCmdResetEvent2KHR;
 
         [FieldOffset(0)]
@@ -1620,7 +1620,7 @@ namespace Exomia.Vulkan.Api.Core
         [FieldOffset(0)]
         public readonly delegate*<
             VkCommandBuffer,          /* commandBuffer */
-            VkPipelineStageFlags2KHR, /* stage */
+            VkPipelineStageFlagBits2KHR, /* stage */
             VkQueryPool,              /* queryPool */
             uint,                     /* query */
             void> VkCmdWriteTimestamp2KHR;
@@ -1636,7 +1636,7 @@ namespace Exomia.Vulkan.Api.Core
         [FieldOffset(0)]
         public readonly delegate*<
             VkCommandBuffer,          /* commandBuffer*/
-            VkPipelineStageFlags2KHR, /* stage */
+            VkPipelineStageFlagBits2KHR, /* stage */
             VkBuffer,                 /* dstBuffer */
             VkDeviceSize,             /* dstOffset */
             uint,                     /* marker */
@@ -5567,7 +5567,7 @@ namespace Exomia.Vulkan.Api.Core
         public readonly delegate*<
             VkCommandBuffer,          /* commandBuffer */
             VkEvent,                  /* event */
-            VkPipelineStageFlags2KHR, /* stageMask */
+            VkPipelineStageFlagBits2KHR, /* stageMask */
             void> UnsafeInvoke;
 
         public static implicit operator VkCmdResetEvent2KHR(void* ptr)
@@ -5620,7 +5620,7 @@ namespace Exomia.Vulkan.Api.Core
 
         public readonly delegate*<
             VkCommandBuffer,          /* commandBuffer */
-            VkPipelineStageFlags2KHR, /* stage */
+            VkPipelineStageFlagBits2KHR, /* stage */
             VkQueryPool,              /* queryPool */
             uint,                     /* query */
             void> UnsafeInvoke;
@@ -5658,7 +5658,7 @@ namespace Exomia.Vulkan.Api.Core
 
         public readonly delegate*<
             VkCommandBuffer,          /* commandBuffer */
-            VkPipelineStageFlags2KHR, /* stage */
+            VkPipelineStageFlagBits2KHR, /* stage */
             VkBuffer,                 /* dstBuffer */
             VkDeviceSize,             /* dstOffset */
             uint,                     /* marker */
