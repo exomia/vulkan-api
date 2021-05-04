@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exomia.Vulkan.Api.Core.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exomia.Vulkan.Api.Windows.Tests", "tests\L0\Exomia.Vulkan.Api.Windows.Tests\Exomia.Vulkan.Api.Windows.Tests.csproj", "{3400E0CB-EEDC-44B6-9AB3-95D1D3A1A446}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exomia.Vulkan.Api.Beta", "src\Exomia.Vulkan.Api.Beta\Exomia.Vulkan.Api.Beta.csproj", "{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exomia.Vulkan.Api.Beta.Tests", "tests\L0\Exomia.Vulkan.Api.Beta.Tests\Exomia.Vulkan.Api.Beta.Tests.csproj", "{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,30 @@ Global
 		{3400E0CB-EEDC-44B6-9AB3-95D1D3A1A446}.Release|x64.Build.0 = Release|Any CPU
 		{3400E0CB-EEDC-44B6-9AB3-95D1D3A1A446}.Release|x86.ActiveCfg = Release|Any CPU
 		{3400E0CB-EEDC-44B6-9AB3-95D1D3A1A446}.Release|x86.Build.0 = Release|Any CPU
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Debug|x64.ActiveCfg = Debug|x64
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Debug|x64.Build.0 = Debug|x64
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Debug|x86.ActiveCfg = Debug|x86
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Debug|x86.Build.0 = Debug|x86
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Release|x64.ActiveCfg = Release|x64
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Release|x64.Build.0 = Release|x64
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Release|x86.ActiveCfg = Release|x86
+		{81E8D9FB-4AC4-465E-8FCC-3302F86EBCBE}.Release|x86.Build.0 = Release|x86
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Debug|x64.Build.0 = Debug|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Debug|x86.Build.0 = Debug|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Release|x64.ActiveCfg = Release|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Release|x64.Build.0 = Release|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Release|x86.ActiveCfg = Release|Any CPU
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +106,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9BB7AF5D-059C-4AD9-891F-C1709BAC75AA} = {0C693EFF-7745-4445-9BF6-68FE6D83D5C9}
 		{3400E0CB-EEDC-44B6-9AB3-95D1D3A1A446} = {0C693EFF-7745-4445-9BF6-68FE6D83D5C9}
+		{F3450CCE-30D6-451E-B1E0-06A1B249EE0B} = {0C693EFF-7745-4445-9BF6-68FE6D83D5C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3F1AA4D-2C58-415D-9431-AEA84E5B9180}
