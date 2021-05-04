@@ -18,7 +18,8 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
-        projects: [Windows]
+        projects: [Windows, Beta]
+        platforms: [AnyCPU, x86, x64]
     name: '[${{ matrix.projects }}] build ${{ matrix.configurations }} on ${{ matrix.os }}'
     runs-on: ${{ matrix.os }}
     steps: 
@@ -28,16 +29,15 @@ jobs:
         dotnet-version: '5.0.x'
     - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
       run: |
-        dotnet build --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=AnyCPU
-        dotnet build --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=x86
-        dotnet build --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=x64
+        dotnet build --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.platforms }}
       working-directory: src/Exomia.Vulkan.Api.${{ matrix.projects }}
   test-projects:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
-        projects: [Windows]
+        projects: [Windows, Beta]
+        platforms: [AnyCPU, x86, x64]
     name: '[${{ matrix.projects }}] test ${{ matrix.configurations }} on ${{ matrix.os }}'
     needs: [build-projects]
     runs-on: ${{ matrix.os }}
@@ -48,14 +48,13 @@ jobs:
         dotnet-version: '5.0.x'
     - name: '[${{ matrix.projects }}] test ${{ matrix.configurations }}'
       run: |
-        dotnet test --configuration ${{ matrix.configurations }} --nologo -p:Platform=AnyCPU
-        dotnet test --configuration ${{ matrix.configurations }} --nologo -p:Platform=x86
-        dotnet test --configuration ${{ matrix.configurations }} --nologo -p:Platform=x64
+        dotnet test --configuration ${{ matrix.configurations }} --nologo -p:Platform=${{ matrix.platforms }}
       working-directory: src/Exomia.Vulkan.Api.${{ matrix.projects }}
   publish-projects-on-github:
     strategy:
       matrix:
-        projects: [Windows]
+        projects: [Windows, Beta]
+        platforms: [AnyCPU, x86, x64]
     name: '[${{ matrix.projects }}] publish debug on github [v${{ github.event.inputs.version }}]'
     needs: [test-projects]
     runs-on: ubuntu-latest
@@ -66,9 +65,7 @@ jobs:
         dotnet-version: '5.0.x'
     - name: '[${{ matrix.projects }}] publish ${{ github.repository }} [v${{ github.event.inputs.version }}]'
       run: |
-        dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=AnyCPU -p:Version=${{ github.event.inputs.version }}
-        dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=x86 -p:Version=${{ github.event.inputs.version }}
-        dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=x64 -p:Version=${{ github.event.inputs.version }}
+        dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=${{ matrix.platforms }} -p:Version=${{ github.event.inputs.version }}
         for f in ./*.nupkg
            do
              STATUSCODE=$(curl -sSX PUT --retry 3 -o /dev/null -w "%{http_code}" -u "${{ github.repository_owner }}:${{ github.token }}" -F package=@$f https://nuget.pkg.github.com/${{ github.repository_owner }}/)
@@ -80,7 +77,8 @@ jobs:
   publish-projects-on-nuget:
     strategy:
       matrix:
-        projects: [Windows]
+        projects: [Window, Beta]
+        platforms: [AnyCPU, x86, x64]
     name: '[${{ matrix.projects }}] publish release on nuget [v${{ github.event.inputs.version }}]'
     needs: [publish-projects-on-github]
     runs-on: ubuntu-latest
@@ -91,9 +89,7 @@ jobs:
         dotnet-version: '5.0.x'
     - name: '[${{ matrix.projects }}] publish ${{ github.repository }} [v${{ github.event.inputs.version }}]'
       run: |
-        dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=AnyCPU -p:Version=${{ github.event.inputs.version }}
-        dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=x86 -p:Version=${{ github.event.inputs.version }}
-        dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=x64 -p:Version=${{ github.event.inputs.version }}
+        dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=${{ matrix.platforms }} -p:Version=${{ github.event.inputs.version }}
         dotnet nuget push **/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
       shell: bash
       working-directory: src/Exomia.Vulkan.Api.${{ matrix.projects }}
