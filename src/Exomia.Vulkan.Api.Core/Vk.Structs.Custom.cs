@@ -415,7 +415,7 @@ namespace Exomia.Vulkan.Api.Core
         /// <param name="minor"> The minor. </param>
         /// <param name="patch"> The patch. </param>
         public VkVersion(uint major, uint minor, uint patch)
-            : this((major << 22) | ((minor & 0x3FF) << 12) | (patch & 0xFFF)) { }
+            : this((major << 22) | ((minor & 0x3FFU) << 12) | (patch & 0xFFFU)) { }
 
         /// <summary>
         ///     Gets the major.

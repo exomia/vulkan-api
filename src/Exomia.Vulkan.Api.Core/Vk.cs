@@ -17,7 +17,6 @@ using System.Security;
 // https://github.com/KhronosGroup/Vulkan-Headers/tree/master
 
 [module: SkipLocalsInit]
-
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core
 {
@@ -46,13 +45,6 @@ namespace Exomia.Vulkan.Api.Core
             VkInstance        instance,
             uint*             pPhysicalDeviceCount,
             VkPhysicalDevice* pPhysicalDevices);
-
-        [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint = "vkEnumeratePhysicalDevices")]
-        public static extern unsafe VkResult EnumeratePhysicalDevices(
-            VkInstance           instance,
-            uint*                pPhysicalDeviceCount,
-            ref VkPhysicalDevice pPhysicalDevices);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceFeatures")]

@@ -15,11 +15,11 @@ namespace Exomia.Vulkan.Api.Core
 {
     public static partial class Vk
     {
-        public const int    VK_HEADER_VERSION                                        = 171;
+        public const int    VK_HEADER_VERSION                                        = 174;
         public const int    VK_NULL_HANDLE                                           = 0;
         public const uint   VK_ATTACHMENT_UNUSED                                     = ~0U;
         public const uint   VK_FALSE                                                 = 0U;
-        public const float  VK_LOD_CLAMP_NONE                                        = 1000.0f;
+        public const float  VK_LOD_CLAMP_NONE                                        = 1000.0F;
         public const uint   VK_QUEUE_FAMILY_IGNORED                                  = ~0U;
         public const uint   VK_REMAINING_ARRAY_LAYERS                                = ~0U;
         public const uint   VK_REMAINING_MIP_LEVELS                                  = ~0U;
@@ -34,7 +34,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_MAX_DESCRIPTION_SIZE                                  = 256;
         public const int    VK_MAX_DEVICE_GROUP_SIZE                                 = 32;
         public const int    VK_LUID_SIZE                                             = 8;
-        public const uint   VK_QUEUE_FAMILY_EXTERNAL                                 = ~0U - 1;
+        public const uint   VK_QUEUE_FAMILY_EXTERNAL                                 = ~1U;
         public const int    VK_MAX_DRIVER_NAME_SIZE                                  = 256;
         public const int    VK_MAX_DRIVER_INFO_SIZE                                  = 256;
         public const int    VK_KHR_SURFACE                                           = 1;
@@ -381,7 +381,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_EXT_QUEUE_FAMILY_FOREIGN                              = 1;
         public const int    VK_EXT_QUEUE_FAMILY_FOREIGN_SPEC_VERSION                 = 1;
         public const string VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME               = "VK_EXT_queue_family_foreign";
-        public const uint   VK_QUEUE_FAMILY_FOREIGN_EXT                              = ~0U - 2;
+        public const uint   VK_QUEUE_FAMILY_FOREIGN_EXT                              = ~2U;
         public const int    VK_EXT_DEBUG_UTILS                                       = 1;
         public const int    VK_EXT_DEBUG_UTILS_SPEC_VERSION                          = 2;
         public const string VK_EXT_DEBUG_UTILS_EXTENSION_NAME                        = "VK_EXT_debug_utils";
