@@ -590,11 +590,11 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkCommandBuffer,     /* commandBuffer */
-            VkQueryPool,         /* queryPool */
-            uint,                /* query */
+            VkCommandBuffer,        /* commandBuffer */
+            VkQueryPool,            /* queryPool */
+            uint,                   /* query */
             VkQueryControlFlagBits, /* FlagBits */
-            uint,                /* index */
+            uint,                   /* index */
             void> VkCmdBeginQueryIndexedEXT;
 
         [FieldOffset(0)]
@@ -1410,6 +1410,22 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
+            VkCommandBuffer,                        /* commandBuffer */
+            uint,                                   /* vertexBindingDescriptionCount */
+            VkVertexInputBindingDescription2EXT*,   /* pVertexBindingDescriptions */
+            uint,                                   /* vertexAttributeDescriptionCount */
+            VkVertexInputAttributeDescription2EXT*, /* pVertexAttributeDescriptions */
+            void> VkCmdSetVertexInputEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            uint,            /* attachmentCount */
+            VkBool32*,       /* pColorWriteEnables */
+            void> VkCmdSetColorWriteEnableEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
             VkDevice,                              /* device */
             VkAccelerationStructureCreateInfoKHR*, /* pCreateInfo */
             VkAllocationCallbacks*,                /* pAllocator */
@@ -1598,8 +1614,8 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkCommandBuffer,          /* commandBuffer */
-            VkEvent,                  /* event */
+            VkCommandBuffer,             /* commandBuffer */
+            VkEvent,                     /* event */
             VkPipelineStageFlagBits2KHR, /* stageMask */
             void> VkCmdResetEvent2KHR;
 
@@ -1619,10 +1635,10 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkCommandBuffer,          /* commandBuffer */
+            VkCommandBuffer,             /* commandBuffer */
             VkPipelineStageFlagBits2KHR, /* stage */
-            VkQueryPool,              /* queryPool */
-            uint,                     /* query */
+            VkQueryPool,                 /* queryPool */
+            uint,                        /* query */
             void> VkCmdWriteTimestamp2KHR;
 
         [FieldOffset(0)]
@@ -1635,11 +1651,11 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkCommandBuffer,          /* commandBuffer*/
+            VkCommandBuffer,             /* commandBuffer*/
             VkPipelineStageFlagBits2KHR, /* stage */
-            VkBuffer,                 /* dstBuffer */
-            VkDeviceSize,             /* dstOffset */
-            uint,                     /* marker */
+            VkBuffer,                    /* dstBuffer */
+            VkDeviceSize,                /* dstOffset */
+            uint,                        /* marker */
             void> VkCmdWriteBufferMarker2AMD;
 
         [FieldOffset(0)]
@@ -5119,6 +5135,44 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
+    public readonly unsafe struct VkCmdSetVertexInputEXT
+    {
+        public static readonly VkCmdSetVertexInputEXT Zero = null;
+
+        public readonly delegate*<
+            VkCommandBuffer,                        /* commandBuffer */
+            uint,                                   /* vertexBindingDescriptionCount */
+            VkVertexInputBindingDescription2EXT*,   /* pVertexBindingDescriptions */
+            uint,                                   /* vertexAttributeDescriptionCount */
+            VkVertexInputAttributeDescription2EXT*, /* pVertexAttributeDescriptions */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdSetVertexInputEXT(void* ptr)
+        {
+            VkCmdSetVertexInputEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdSetColorWriteEnableEXT
+    {
+        public static readonly VkCmdSetColorWriteEnableEXT Zero = null;
+
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            uint,            /* attachmentCount */
+            VkBool32*,       /* pColorWriteEnables */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdSetColorWriteEnableEXT(void* ptr)
+        {
+            VkCmdSetColorWriteEnableEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
     public readonly unsafe struct VkCreateAccelerationStructureKHR
     {
         public static readonly VkCreateAccelerationStructureKHR Zero = null;
@@ -5565,8 +5619,8 @@ namespace Exomia.Vulkan.Api.Core
         public static readonly VkCmdResetEvent2KHR Zero = null;
 
         public readonly delegate*<
-            VkCommandBuffer,          /* commandBuffer */
-            VkEvent,                  /* event */
+            VkCommandBuffer,             /* commandBuffer */
+            VkEvent,                     /* event */
             VkPipelineStageFlagBits2KHR, /* stageMask */
             void> UnsafeInvoke;
 
@@ -5619,10 +5673,10 @@ namespace Exomia.Vulkan.Api.Core
         public static readonly VkCmdWriteTimestamp2KHR Zero = null;
 
         public readonly delegate*<
-            VkCommandBuffer,          /* commandBuffer */
+            VkCommandBuffer,             /* commandBuffer */
             VkPipelineStageFlagBits2KHR, /* stage */
-            VkQueryPool,              /* queryPool */
-            uint,                     /* query */
+            VkQueryPool,                 /* queryPool */
+            uint,                        /* query */
             void> UnsafeInvoke;
 
         public static implicit operator VkCmdWriteTimestamp2KHR(void* ptr)
@@ -5657,11 +5711,11 @@ namespace Exomia.Vulkan.Api.Core
         public static readonly VkCmdWriteBufferMarker2AMD Zero = null;
 
         public readonly delegate*<
-            VkCommandBuffer,          /* commandBuffer */
+            VkCommandBuffer,             /* commandBuffer */
             VkPipelineStageFlagBits2KHR, /* stage */
-            VkBuffer,                 /* dstBuffer */
-            VkDeviceSize,             /* dstOffset */
-            uint,                     /* marker */
+            VkBuffer,                    /* dstBuffer */
+            VkDeviceSize,                /* dstOffset */
+            uint,                        /* marker */
             void> UnsafeInvoke;
 
         public static implicit operator VkCmdWriteBufferMarker2AMD(void* ptr)

@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core
 {
     public static partial class Vk
     {
-        public const int    VK_HEADER_VERSION                                        = 174;
+        public const int    VK_HEADER_VERSION                                        = 175;
         public const int    VK_NULL_HANDLE                                           = 0;
         public const uint   VK_ATTACHMENT_UNUSED                                     = ~0U;
         public const uint   VK_FALSE                                                 = 0U;
@@ -26,17 +26,17 @@ namespace Exomia.Vulkan.Api.Core
         public const uint   VK_SUBPASS_EXTERNAL                                      = ~0U;
         public const uint   VK_TRUE                                                  = 1U;
         public const ulong  VK_WHOLE_SIZE                                            = ~0UL;
-        public const int    VK_MAX_MEMORY_TYPES                                      = 32;
-        public const int    VK_MAX_MEMORY_HEAPS                                      = 16;
-        public const int    VK_MAX_PHYSICAL_DEVICE_NAME_SIZE                         = 256;
-        public const int    VK_UUID_SIZE                                             = 16;
-        public const int    VK_MAX_EXTENSION_NAME_SIZE                               = 256;
-        public const int    VK_MAX_DESCRIPTION_SIZE                                  = 256;
-        public const int    VK_MAX_DEVICE_GROUP_SIZE                                 = 32;
-        public const int    VK_LUID_SIZE                                             = 8;
+        public const uint   VK_MAX_MEMORY_TYPES                                      = 32U;
+        public const uint   VK_MAX_MEMORY_HEAPS                                      = 16U;
+        public const uint   VK_MAX_PHYSICAL_DEVICE_NAME_SIZE                         = 256U;
+        public const uint   VK_UUID_SIZE                                             = 16U;
+        public const uint   VK_MAX_EXTENSION_NAME_SIZE                               = 256U;
+        public const uint   VK_MAX_DESCRIPTION_SIZE                                  = 256U;
+        public const uint   VK_MAX_DEVICE_GROUP_SIZE                                 = 32U;
+        public const uint   VK_LUID_SIZE                                             = 8U;
         public const uint   VK_QUEUE_FAMILY_EXTERNAL                                 = ~1U;
-        public const int    VK_MAX_DRIVER_NAME_SIZE                                  = 256;
-        public const int    VK_MAX_DRIVER_INFO_SIZE                                  = 256;
+        public const uint   VK_MAX_DRIVER_NAME_SIZE                                  = 256U;
+        public const uint   VK_MAX_DRIVER_INFO_SIZE                                  = 256U;
         public const int    VK_KHR_SURFACE                                           = 1;
         public const int    VK_KHR_SURFACE_SPEC_VERSION                              = 25;
         public const string VK_KHR_SURFACE_EXTENSION_NAME                            = "VK_KHR_surface";
@@ -70,11 +70,11 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_KHR_DEVICE_GROUP_CREATION                             = 1;
         public const int    VK_KHR_DEVICE_GROUP_CREATION_SPEC_VERSION                = 1;
         public const string VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME              = "VK_KHR_device_group_creation";
-        public const int    VK_MAX_DEVICE_GROUP_SIZE_KHR                             = VK_MAX_DEVICE_GROUP_SIZE;
+        public const uint   VK_MAX_DEVICE_GROUP_SIZE_KHR                             = VK_MAX_DEVICE_GROUP_SIZE;
         public const int    VK_KHR_EXTERNAL_MEMORY_CAPABILITIES                      = 1;
         public const int    VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION         = 1;
         public const string VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME       = "VK_KHR_external_memory_capabilities";
-        public const int    VK_LUID_SIZE_KHR                                         = VK_LUID_SIZE;
+        public const uint   VK_LUID_SIZE_KHR                                         = VK_LUID_SIZE;
         public const int    VK_KHR_EXTERNAL_MEMORY                                   = 1;
         public const int    VK_KHR_EXTERNAL_MEMORY_SPEC_VERSION                      = 1;
         public const string VK_KHR_EXTERNAL_MEMORY_EXTENSION_NAME                    = "VK_KHR_external_memory";
@@ -101,7 +101,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_KHR_16BIT_STORAGE_SPEC_VERSION                        = 1;
         public const string VK_KHR_16BIT_STORAGE_EXTENSION_NAME                      = "VK_KHR_16bit_storage";
         public const int    VK_KHR_INCREMENTAL_PRESENT                               = 1;
-        public const int    VK_KHR_INCREMENTAL_PRESENT_SPEC_VERSION                  = 1;
+        public const int    VK_KHR_INCREMENTAL_PRESENT_SPEC_VERSION                  = 2;
         public const string VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME                = "VK_KHR_incremental_present";
         public const int    VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE                        = 1;
         public const int    VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_SPEC_VERSION           = 1;
@@ -181,8 +181,8 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_KHR_DRIVER_PROPERTIES                                 = 1;
         public const int    VK_KHR_DRIVER_PROPERTIES_SPEC_VERSION                    = 1;
         public const string VK_KHR_DRIVER_PROPERTIES_EXTENSION_NAME                  = "VK_KHR_driver_properties";
-        public const int    VK_MAX_DRIVER_NAME_SIZE_KHR                              = VK_MAX_DRIVER_NAME_SIZE;
-        public const int    VK_MAX_DRIVER_INFO_SIZE_KHR                              = VK_MAX_DRIVER_INFO_SIZE;
+        public const uint   VK_MAX_DRIVER_NAME_SIZE_KHR                              = VK_MAX_DRIVER_NAME_SIZE;
+        public const uint   VK_MAX_DRIVER_INFO_SIZE_KHR                              = VK_MAX_DRIVER_INFO_SIZE;
         public const int    VK_KHR_SHADER_FLOAT_CONTROLS                             = 1;
         public const int    VK_KHR_SHADER_FLOAT_CONTROLS_SPEC_VERSION                = 4;
         public const string VK_KHR_SHADER_FLOAT_CONTROLS_EXTENSION_NAME              = "VK_KHR_shader_float_controls";
@@ -594,11 +594,14 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_DEVICE_GENERATED_COMMANDS                          = 1;
         public const int    VK_NV_DEVICE_GENERATED_COMMANDS_SPEC_VERSION             = 3;
         public const string VK_NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME           = "VK_NV_device_generated_commands";
+        public const int    VK_NV_inherited_viewport_scissor                         = 1;
+        public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR_SPEC_VERSION            = 1;
+        public const string VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME          = "VK_NV_inherited_viewport_scissor";
         public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT                            = 1;
         public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT_SPEC_VERSION               = 1;
         public const string VK_EXT_TEXEL_BUFFER_ALIGNMENT_EXTENSION_NAME             = "VK_EXT_texel_buffer_alignment";
         public const int    VK_QCOM_RENDER_PASS_TRANSFORM                            = 1;
-        public const int    VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION               = 1;
+        public const int    VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION               = 2;
         public const string VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME             = "VK_QCOM_render_pass_transform";
         public const int    VK_EXT_DEVICE_MEMORY_REPORT                              = 1;
         public const int    VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION                 = 2;
@@ -627,6 +630,9 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS                        = 1;
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION           = 1;
         public const string VK_NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME         = "VK_NV_fragment_shading_rate_enums";
+        public const int    VK_EXT_ycbcr_2plane_444_formats                          = 1;
+        public const int    VK_EXT_YCBCR_2PLANE_444_FORMATS_SPEC_VERSION             = 1;
+        public const string VK_EXT_YCBCR_2PLANE_444_FORMATS_EXTENSION_NAME           = "VK_EXT_ycbcr_2plane_444_formats";
         public const int    VK_EXT_FRAGMENT_DENSITY_MAP2                             = 1;
         public const int    VK_EXT_FRAGMENT_DENSITY_MAP_2_SPEC_VERSION               = 1;
         public const string VK_EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME             = "VK_EXT_fragment_density_map2";
@@ -645,6 +651,12 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE                         = 1;
         public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION            = 1;
         public const string VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME          = "VK_VALVE_mutable_descriptor_type";
+        public const int    VK_EXT_vertex_input_dynamic_state                        = 1;
+        public const int    VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_SPEC_VERSION           = 2;
+        public const string VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_EXTENSION_NAME         = "VK_EXT_vertex_input_dynamic_state";
+        public const int    VK_EXT_color_write_enable                                = 1;
+        public const int    VK_EXT_COLOR_WRITE_ENABLE_SPEC_VERSION                   = 1;
+        public const string VK_EXT_COLOR_WRITE_ENABLE_EXTENSION_NAME                 = "VK_EXT_color_write_enable";
         public const int    VK_KHR_ACCELERATION_STRUCTURE                            = 1;
         public const int    VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION               = 11;
         public const string VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME             = "VK_KHR_acceleration_structure";

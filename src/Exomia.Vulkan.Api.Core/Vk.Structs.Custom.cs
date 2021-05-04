@@ -207,7 +207,8 @@ namespace Exomia.Vulkan.Api.Core
     /// </summary>
     /// <typeparam name="T"> Generic type parameter. </typeparam>
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkArray16<T> where T : unmanaged
+    public unsafe struct VkArray16<T>
+        where T : unmanaged
     {
         /// <summary>
         ///     The length of <see cref="VkArray16{T}" />.
@@ -288,7 +289,8 @@ namespace Exomia.Vulkan.Api.Core
     ///     Used instead of public fixed T[32].
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkArray32<T> where T : unmanaged
+    public unsafe struct VkArray32<T>
+        where T : unmanaged
     {
         /// <summary>
         ///     The length of <see cref="VkArray32{T}" />.
@@ -389,17 +391,17 @@ namespace Exomia.Vulkan.Api.Core
         /// <summary>
         ///     The version 1.0.
         /// </summary>
-        public static readonly VkVersion VulkanApiVersion10 = new VkVersion(1, 0, 0);
+        public static readonly VkVersion VulkanApiVersion10 = new VkVersion(0, 1, 0, 0);
 
         /// <summary>
         ///     The version 1.1
         /// </summary>
-        public static readonly VkVersion VulkanApiVersion11 = new VkVersion(1, 1, 0);
+        public static readonly VkVersion VulkanApiVersion11 = new VkVersion(0, 1, 1, 0);
 
         /// <summary>
         ///     The version 1.2
         /// </summary>
-        public static readonly VkVersion VulkanApiVersion12 = new VkVersion(1, 2, 0);
+        public static readonly VkVersion VulkanApiVersion12 = new VkVersion(0, 1, 2, 0);
 
         private readonly uint _version;
 
@@ -411,11 +413,23 @@ namespace Exomia.Vulkan.Api.Core
         /// <summary>
         ///     Initializes a new instance of the <see cref="VkVersion" /> struct.
         /// </summary>
+        /// <param name="variant"> The variant. </param>
         /// <param name="major"> The major. </param>
         /// <param name="minor"> The minor. </param>
         /// <param name="patch"> The patch. </param>
-        public VkVersion(uint major, uint minor, uint patch)
-            : this((major << 22) | ((minor & 0x3FFU) << 12) | (patch & 0xFFFU)) { }
+        public VkVersion(uint variant, uint major, uint minor, uint patch)
+            : this((variant << 29) | ((major & 0x7FU) << 22) | ((minor & 0x3FFU) << 12) | (patch & 0xFFFU)) { }
+
+        /// <summary>
+        ///     Gets the major.
+        /// </summary>
+        /// <value>
+        ///     The major.
+        /// </value>
+        public uint Variant
+        {
+            get { return _version >> 29; }
+        }
 
         /// <summary>
         ///     Gets the major.
@@ -425,7 +439,7 @@ namespace Exomia.Vulkan.Api.Core
         /// </value>
         public uint Major
         {
-            get { return _version >> 22; }
+            get { return (_version >> 22) & 0x7FU; }
         }
 
         /// <summary>

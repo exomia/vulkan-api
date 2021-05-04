@@ -2235,6 +2235,18 @@ namespace Exomia.Vulkan.Api.Core
         uint             deviceRelativeId,
         VkDisplayKHR*    pDisplay);
 
+    public unsafe delegate void CmdSetVertexInputEXT(
+        VkCommandBuffer                        commandBuffer,
+        uint                                   vertexBindingDescriptionCount,
+        VkVertexInputBindingDescription2EXT*   pVertexBindingDescriptions,
+        uint                                   vertexAttributeDescriptionCount,
+        VkVertexInputAttributeDescription2EXT* pVertexAttributeDescriptions);
+
+    public unsafe delegate void CmdSetColorWriteEnableEXT(
+        VkCommandBuffer commandBuffer,
+        uint            attachmentCount,
+        VkBool32*       pColorWriteEnables);
+
     public unsafe delegate VkResult CreateAccelerationStructureKHR(
         VkDevice                              device,
         VkAccelerationStructureCreateInfoKHR* pCreateInfo,
