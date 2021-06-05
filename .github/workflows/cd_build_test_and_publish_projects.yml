@@ -77,7 +77,7 @@ jobs:
   publish-projects-on-nuget:
     strategy:
       matrix:
-        projects: [Window, Beta]
+        projects: [Windows, Beta]
         platforms: [AnyCPU, x86, x64]
     name: '[${{ matrix.projects }}] publish release on nuget [v${{ github.event.inputs.version }}]'
     needs: [publish-projects-on-github]
