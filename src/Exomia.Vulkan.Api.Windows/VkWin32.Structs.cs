@@ -32,12 +32,12 @@ namespace Exomia.Vulkan.Api.Windows
 
     public unsafe struct VkImportMemoryWin32HandleInfoKHR
     {
-        public const VkStructureType STYPE = VkStructureType.IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
-        public VkStructureType                    sType;
-        public void*                              pNext;
-        public VkExternalMemoryHandleTypeFlagBits handleType;
-        public IntPtr                             handle;
-        public char*                              pName;
+        public const VkStructureType                    STYPE = VkStructureType.IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
+        public       VkStructureType                    sType;
+        public       void*                              pNext;
+        public       VkExternalMemoryHandleTypeFlagBits handleType;
+        public       HANDLE                             handle;
+        public       char*                              pName;
     }
 
     public unsafe struct VkExportMemoryWin32HandleInfoKHR
@@ -150,7 +150,7 @@ namespace Exomia.Vulkan.Api.Windows
         public const VkStructureType STYPE = VkStructureType.SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT;
         public       VkStructureType sType;
         public       void*           pNext;
-        public       bool            fullScreenExclusiveSupported;
+        public       VkBool32        fullScreenExclusiveSupported;
     }
 
     public unsafe struct VkSurfaceFullScreenExclusiveWin32InfoEXT

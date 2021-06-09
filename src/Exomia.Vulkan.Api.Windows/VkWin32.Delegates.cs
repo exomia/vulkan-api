@@ -32,12 +32,12 @@ namespace Exomia.Vulkan.Api.Windows
     public unsafe delegate VkResult PFN_vkGetMemoryWin32HandleKHR(
         VkDevice                       device,
         VkMemoryGetWin32HandleInfoKHR* pGetWin32HandleInfo,
-        IntPtr*                        pHandle);
+        HANDLE*                        pHandle);
 
     public unsafe delegate VkResult PFN_vkGetMemoryWin32HandlePropertiesKHR(
         VkDevice                           device,
         VkExternalMemoryHandleTypeFlagBits handleType,
-        IntPtr                             handle,
+        HANDLE                             handle,
         VkMemoryWin32HandlePropertiesKHR*  pMemoryWin32HandleProperties);
 
     public unsafe delegate VkResult GetPhysicalDeviceSurfacePresentModes2EXT(
