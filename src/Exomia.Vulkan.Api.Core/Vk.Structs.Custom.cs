@@ -200,6 +200,45 @@ namespace Exomia.Vulkan.Api.Core
                 *((float*)Unsafe.AsPointer(ref this) + index) = value;
             }
         }
+
+        /// <summary> Initializes a new instance of the <see cref="VkColor"/> struct. </summary>
+        /// <param name="r"> The R value between 0.0f and 1.0f. </param>
+        /// <param name="g"> The G value between 0.0f and 1.0f. </param>
+        /// <param name="b"> The B value between 0.0f and 1.0f. </param>
+        /// <param name="a"> (Optional) The A value between 0.0f and 1.0f. </param>
+        public VkColor(float r, float g, float b, float a = 1.0f)
+        {
+            R = r;
+            G = g;
+            B = b;
+            A = a;
+        }
+
+        /// <summary> Initializes a new instance of the <see cref="VkColor"/> struct. </summary>
+        /// <param name="colors"> [in,out] If non-null, the colors. </param>
+        public VkColor(float* colors)
+        {
+            R = *(colors + 0);
+            G = *(colors + 1);
+            B = *(colors + 2);
+            A = *(colors + 3);
+        }
+
+        /// <summary> Implicit cast that converts the given VkColor to a VkClearColorValue. </summary>
+        /// <param name="color"> The color. </param>
+        /// <returns> The result of the operation. </returns>
+        public static implicit operator VkClearColorValue(VkColor color)
+        {
+            return *(VkClearColorValue*)&color;
+        }
+        
+        /// <summary> Implicit cast that converts the given VkClearColorValue to a VkColor. </summary>
+        /// <param name="color"> The color. </param>
+        /// <returns> The result of the operation. </returns>
+        public static implicit operator VkColor(VkClearColorValue color)
+        {
+            return *(VkColor*)&color;
+        }
     }
 
     /// <summary>

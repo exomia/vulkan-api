@@ -28,6 +28,47 @@ namespace Exomia.Vulkan.Api.Core.Tests
         }
 
         [TestMethod]
+        public unsafe void VkColor_Constructor_SetRGBA_ShouldCreateAndHaveCorrectValues()
+        {
+            VkColor color1 = new VkColor(0.1f, 0.2f, 0.3f);
+            Assert.AreEqual(0.1f, color1.R);
+            Assert.AreEqual(0.2f, color1.G);
+            Assert.AreEqual(0.3f, color1.B);
+            Assert.AreEqual(1.0f, color1.A);
+
+            VkColor color2 = new VkColor(0.1f, 0.2f, 0.3f, 0.5f);
+            Assert.AreEqual(0.1f, color2.R);
+            Assert.AreEqual(0.2f, color2.G);
+            Assert.AreEqual(0.3f, color2.B);
+            Assert.AreEqual(0.5f, color2.A);
+
+            float*  colors = stackalloc float[4] { 0.1f, 0.2f, 0.3f, 0.5f };
+            VkColor color3 = new VkColor(colors);
+            Assert.AreEqual(0.1f, color3.R);
+            Assert.AreEqual(0.2f, color3.G);
+            Assert.AreEqual(0.3f, color3.B);
+            Assert.AreEqual(0.5f, color3.A);
+        }
+
+        [TestMethod]
+        public unsafe void VkColor_ImplicitCast_ShouldWork()
+        {
+            VkColor color1 = new VkColor(0.1f, 0.2f, 0.3f);
+
+            VkClearColorValue clearColorValue1 = color1;
+            Assert.AreEqual(0.1f, clearColorValue1.float32[0]);
+            Assert.AreEqual(0.2f, clearColorValue1.float32[1]);
+            Assert.AreEqual(0.3f, clearColorValue1.float32[2]);
+            Assert.AreEqual(1.0f, clearColorValue1.float32[3]);
+
+            VkColor color2 = clearColorValue1;
+            Assert.AreEqual(0.1f, color2.R);
+            Assert.AreEqual(0.2f, color2.G);
+            Assert.AreEqual(0.3f, color2.B);
+            Assert.AreEqual(1.0f, color2.A);
+        }
+
+        [TestMethod]
         public void VkColor_ValidIndexerUint_SetRGBA_ShouldWorkAndNotThrowException()
         {
             VkColor color = new VkColor { [0u] = 0.1f, [1u] = 0.2f, [2u] = 0.3f, [3u] = 0.4f };
