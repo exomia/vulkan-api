@@ -34,7 +34,7 @@ namespace Exomia.Vulkan.Api.Windows
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(IMPORT, EntryPoint = "vkGetPhysicalDeviceWin32PresentationSupportKHR")]
-        public static extern bool GetPhysicalDeviceWin32PresentationSupportKHR(
+        public static extern VkBool32 GetPhysicalDeviceWin32PresentationSupportKHR(
             VkPhysicalDevice physicalDevice,
             uint             queueFamilyIndex);
 

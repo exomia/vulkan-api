@@ -25,7 +25,7 @@ namespace Exomia.Vulkan.Api.Windows
         VkAllocationCallbacks*       pAllocator,
         VkSurfaceKHR*                pSurface);
 
-    public delegate bool PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR(
+    public delegate VkBool32 PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR(
         VkPhysicalDevice physicalDevice,
         uint             queueFamilyIndex);
 
