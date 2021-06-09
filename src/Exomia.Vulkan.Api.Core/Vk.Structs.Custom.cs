@@ -239,6 +239,12 @@ namespace Exomia.Vulkan.Api.Core
         {
             return *(VkColor*)&color;
         }
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"R:{R} G:{G} B:{B} A:{A}";
+        }
     }
 
     /// <summary>
