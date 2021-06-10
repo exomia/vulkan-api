@@ -18,7 +18,7 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
-        projects: [Windows, Beta]
+        projects: [Windows]
         platforms: [AnyCPU, x86, x64]
     name: '[${{ matrix.projects }}] build ${{ matrix.configurations }} on ${{ matrix.os }}'
     runs-on: ${{ matrix.os }}
@@ -36,7 +36,7 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
-        projects: [Windows, Beta]
+        projects: [Windows]
         platforms: [AnyCPU, x86, x64]
     name: '[${{ matrix.projects }}] test ${{ matrix.configurations }} on ${{ matrix.os }}'
     needs: [build-projects]
@@ -53,7 +53,7 @@ jobs:
   publish-projects-on-github:
     strategy:
       matrix:
-        projects: [Windows, Beta]
+        projects: [Windows]
         platforms: [AnyCPU, x86, x64]
     name: '[${{ matrix.projects }}] publish debug on github [v${{ github.event.inputs.version }}]'
     needs: [test-projects]
@@ -77,7 +77,7 @@ jobs:
   publish-projects-on-nuget:
     strategy:
       matrix:
-        projects: [Windows, Beta]
+        projects: [Windows]
         platforms: [AnyCPU, x86, x64]
     name: '[${{ matrix.projects }}] publish release on nuget [v${{ github.event.inputs.version }}]'
     needs: [publish-projects-on-github]
