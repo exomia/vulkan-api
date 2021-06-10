@@ -27,11 +27,18 @@ PM> Install-Package Exomia.Vulkan.Api.Core
 PM> Install-Package Exomia.Vulkan.Api.Windows
 ```
 
-### Linux
+### Linux (comming soon)
 
 ```shell
 [Package Manager]
 PM> Install-Package Exomia.Vulkan.Api.Linux
+```
+
+### Beta
+
+```shell
+[Package Manager]
+PM> Install-Package Exomia.Vulkan.Api.Beta
 ```
 
 ---
