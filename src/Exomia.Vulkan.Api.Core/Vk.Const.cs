@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core
 {
     public static partial class Vk
     {
-        public const int    VK_HEADER_VERSION                                        = 175;
+        public const int    VK_HEADER_VERSION                                        = 176;
         public const int    VK_NULL_HANDLE                                           = 0;
         public const uint   VK_ATTACHMENT_UNUSED                                     = ~0U;
         public const uint   VK_FALSE                                                 = 0U;
@@ -244,7 +244,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_KHR_COPY_COMMANDS_2_SPEC_VERSION                      = 1;
         public const string VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME                    = "VK_KHR_copy_commands2";
         public const int    VK_EXT_DEBUG_REPORT                                      = 1;
-        public const int    VK_EXT_DEBUG_REPORT_SPEC_VERSION                         = 9;
+        public const int    VK_EXT_DEBUG_REPORT_SPEC_VERSION                         = 10;
         public const string VK_EXT_DEBUG_REPORT_EXTENSION_NAME                       = "VK_EXT_debug_report";
         public const int    VK_NV_GLSL_SHADER                                        = 1;
         public const int    VK_NV_GLSL_SHADER_SPEC_VERSION                           = 1;
@@ -466,7 +466,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION            = 1;
         public const string VK_AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME          = "VK_AMD_pipeline_compiler_control";
         public const int    VK_EXT_CALIBRATED_TIMESTAMPS                             = 1;
-        public const int    VK_EXT_CALIBRATED_TIMESTAMPS_SPEC_VERSION                = 1;
+        public const int    VK_EXT_CALIBRATED_TIMESTAMPS_SPEC_VERSION                = 2;
         public const string VK_EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME              = "VK_EXT_calibrated_timestamps";
         public const int    VK_AMD_SHADER_CORE_PROPERTIES                            = 1;
         public const int    VK_AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION               = 2;
@@ -594,7 +594,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_DEVICE_GENERATED_COMMANDS                          = 1;
         public const int    VK_NV_DEVICE_GENERATED_COMMANDS_SPEC_VERSION             = 3;
         public const string VK_NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME           = "VK_NV_device_generated_commands";
-        public const int    VK_NV_inherited_viewport_scissor                         = 1;
+        public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR                         = 1;
         public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR_SPEC_VERSION            = 1;
         public const string VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME          = "VK_NV_inherited_viewport_scissor";
         public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT                            = 1;
@@ -630,14 +630,14 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS                        = 1;
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION           = 1;
         public const string VK_NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME         = "VK_NV_fragment_shading_rate_enums";
-        public const int    VK_EXT_ycbcr_2plane_444_formats                          = 1;
+        public const int    VK_EXT_YCBCR_2PLANE_444_FORMATS                          = 1;
         public const int    VK_EXT_YCBCR_2PLANE_444_FORMATS_SPEC_VERSION             = 1;
         public const string VK_EXT_YCBCR_2PLANE_444_FORMATS_EXTENSION_NAME           = "VK_EXT_ycbcr_2plane_444_formats";
         public const int    VK_EXT_FRAGMENT_DENSITY_MAP2                             = 1;
         public const int    VK_EXT_FRAGMENT_DENSITY_MAP_2_SPEC_VERSION               = 1;
         public const string VK_EXT_FRAGMENT_DENSITY_MAP_2_EXTENSION_NAME             = "VK_EXT_fragment_density_map2";
         public const int    VK_QCOM_ROTATED_COPY_COMMANDS                            = 1;
-        public const int    VK_QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION               = 0;
+        public const int    VK_QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION               = 1;
         public const string VK_QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME             = "VK_QCOM_rotated_copy_commands";
         public const int    VK_EXT_IMAGE_ROBUSTNESS                                  = 1;
         public const int    VK_EXT_IMAGE_ROBUSTNESS_SPEC_VERSION                     = 1;
@@ -651,10 +651,10 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE                         = 1;
         public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION            = 1;
         public const string VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME          = "VK_VALVE_mutable_descriptor_type";
-        public const int    VK_EXT_vertex_input_dynamic_state                        = 1;
+        public const int    VK_EXT_VERTEX_INPUT_DYNAMIC_STATE                        = 1;
         public const int    VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_SPEC_VERSION           = 2;
         public const string VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_EXTENSION_NAME         = "VK_EXT_vertex_input_dynamic_state";
-        public const int    VK_EXT_color_write_enable                                = 1;
+        public const int    VK_EXT_COLOR_WRITE_ENABLE                                = 1;
         public const int    VK_EXT_COLOR_WRITE_ENABLE_SPEC_VERSION                   = 1;
         public const string VK_EXT_COLOR_WRITE_ENABLE_EXTENSION_NAME                 = "VK_EXT_color_write_enable";
         public const int    VK_KHR_ACCELERATION_STRUCTURE                            = 1;
@@ -666,5 +666,8 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_KHR_RAY_QUERY                                         = 1;
         public const int    VK_KHR_RAY_QUERY_SPEC_VERSION                            = 1;
         public const string VK_KHR_RAY_QUERY_EXTENSION_NAME                          = "VK_KHR_ray_query";
+        public const int    VK_EXT_EXTENDED_DYNAMIC_STATE2                           = 1;
+        public const int    VK_EXT_EXTENDED_DYNAMIC_STATE_2_SPEC_VERSION             = 1;
+        public const string VK_EXT_EXTENDED_DYNAMIC_STATE_2_EXTENSION_NAME           = "VK_EXT_extended_dynamic_state2";
     }
 }

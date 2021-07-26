@@ -606,6 +606,7 @@ namespace Exomia.Vulkan.Api.Core
         MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA                           = 1000364002,
         IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA                     = 1000365000,
         SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA                        = 1000365001,
+        PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT           = 1000377000,
         SCREEN_SURFACE_CREATE_INFO_QNX                                  = 1000378000,
         PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT                 = 1000381000,
         PIPELINE_COLOR_WRITE_CREATE_INFO_EXT                            = 1000381001,
@@ -1345,6 +1346,11 @@ namespace Exomia.Vulkan.Api.Core
         STENCIL_TEST_ENABLE_EXT             = 1000267010,
         STENCIL_OP_EXT                      = 1000267011,
         VERTEX_INPUT_EXT                    = 1000352000,
+        PATCH_CONTROL_POINTS_EXT            = 1000377000,
+        RASTERIZER_DISCARD_ENABLE_EXT       = 1000377001,
+        DEPTH_BIAS_ENABLE_EXT               = 1000377002,
+        LOGIC_OP_EXT                        = 1000377003,
+        PRIMITIVE_RESTART_ENABLE_EXT        = 1000377004,
         COLOR_WRITE_ENABLE_EXT              = 1000381000,
         MAX_ENUM                            = 0x7FFFFFFF
     }

@@ -2383,4 +2383,25 @@ namespace Exomia.Vulkan.Api.Core
     public delegate void CmdSetRayTracingPipelineStackSizeKHR(
         VkCommandBuffer commandBuffer,
         uint            pipelineStackSize);
+
+    public delegate void CmdSetPatchControlPointsEXT(
+        VkCommandBuffer commandBuffer,
+        uint            patchControlPoints);
+
+    public delegate void CmdSetRasterizerDiscardEnableEXT(
+        VkCommandBuffer commandBuffer,
+        VkBool32        rasterizerDiscardEnable);
+
+    public delegate void CmdSetDepthBiasEnableEXT(
+        VkCommandBuffer commandBuffer,
+        VkBool32        depthBiasEnable);
+
+    public delegate void CmdSetLogicOpEXT(
+        VkCommandBuffer commandBuffer,
+        VkLogicOp       logicOp);
+
+    public delegate void CmdSetPrimitiveRestartEnableEXT(
+        VkCommandBuffer commandBuffer,
+        VkBool32 primitiveRestartEnable);
+
 }

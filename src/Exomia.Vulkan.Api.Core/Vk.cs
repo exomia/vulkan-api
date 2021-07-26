@@ -1602,5 +1602,36 @@ namespace Exomia.Vulkan.Api.Core
             VkPhysicalDevice                physicalDevice,
             VkDisplayPlaneInfo2KHR*         pDisplayPlaneInfo,
             VkDisplayPlaneCapabilities2KHR* pCapabilities);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkCmdSetPatchControlPointsEXT")]
+        public static extern unsafe void CmdSetPatchControlPointsEXT(
+            VkCommandBuffer commandBuffer,
+            uint            patchControlPoints);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkCmdSetRasterizerDiscardEnableEXT")]
+        public static extern unsafe void CmdSetRasterizerDiscardEnableEXT(
+            VkCommandBuffer commandBuffer,
+            VkBool32        rasterizerDiscardEnable);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkCmdSetDepthBiasEnableEXT")]
+        public static extern unsafe void CmdSetDepthBiasEnableEXT(
+            VkCommandBuffer commandBuffer,
+            VkBool32        depthBiasEnable);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkCmdSetLogicOpEXT")]
+        public static extern unsafe void CmdSetLogicOpEXT(
+            VkCommandBuffer commandBuffer,
+            VkLogicOp       logicOp);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkCmdSetPrimitiveRestartEnableEXT")]
+        public static extern unsafe void CmdSetPrimitiveRestartEnableEXT(
+            VkCommandBuffer commandBuffer,
+            VkBool32        primitiveRestartEnable);
+
     }
 }

@@ -1665,6 +1665,36 @@ namespace Exomia.Vulkan.Api.Core
             VkCheckpointData2NV*, /* pCheckpointData */
             void> vkGetQueueCheckpointData2NV;
 
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            uint,            /* patchControlPoints */
+            void> vkCmdSetPatchControlPointsEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkBool32,        /* rasterizerDiscardEnable */
+            void> vkCmdSetRasterizerDiscardEnableEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkBool32,        /* depthBiasEnable */
+            void> vkCmdSetDepthBiasEnableEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkLogicOp,       /* logicOp */
+            void> vkCmdSetLogicOpEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkBool32,        /* primitiveRestartEnable */
+            void> vkCmdSetPrimitiveRestartEnableEXT;
+
         public static implicit operator VkFunction(void* ptr)
         {
             VkFunction value;
@@ -5739,6 +5769,91 @@ namespace Exomia.Vulkan.Api.Core
         public static implicit operator VkGetQueueCheckpointData2NV(void* ptr)
         {
             VkGetQueueCheckpointData2NV value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdSetPatchControlPointsEXT
+    {
+        public static readonly VkCmdSetPatchControlPointsEXT Zero = null;
+
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            uint,            /* patchControlPoints */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdSetPatchControlPointsEXT(void* ptr)
+        {
+            VkCmdSetPatchControlPointsEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdSetRasterizerDiscardEnableEXT
+    {
+        public static readonly VkCmdSetRasterizerDiscardEnableEXT Zero = null;
+
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkBool32,        /* rasterizerDiscardEnable */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdSetRasterizerDiscardEnableEXT(void* ptr)
+        {
+            VkCmdSetRasterizerDiscardEnableEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdSetDepthBiasEnableEXT
+    {
+        public static readonly VkCmdSetDepthBiasEnableEXT Zero = null;
+
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkBool32,        /* depthBiasEnable */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdSetDepthBiasEnableEXT(void* ptr)
+        {
+            VkCmdSetDepthBiasEnableEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdSetLogicOpEXT
+    {
+        public static readonly VkCmdSetLogicOpEXT Zero = null;
+
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkLogicOp,       /* logicOp */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdSetLogicOpEXT(void* ptr)
+        {
+            VkCmdSetLogicOpEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdSetPrimitiveRestartEnableEXT
+    {
+        public static readonly VkCmdSetPrimitiveRestartEnableEXT Zero = null;
+
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkBool32,        /* primitiveRestartEnable */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdSetPrimitiveRestartEnableEXT(void* ptr)
+        {
+            VkCmdSetPrimitiveRestartEnableEXT value;
             *(void**)&value = ptr;
             return value;
         }
