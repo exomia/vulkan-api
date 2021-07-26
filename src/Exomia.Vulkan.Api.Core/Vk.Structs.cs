@@ -6392,11 +6392,14 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExtendedDynamicState2FeaturesEXT
     {
-        public const VkStructureType STYPE = VkStructureType.;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT;
         public       VkStructureType sType;
         public       void*           pNext;
         public       VkBool32        extendedDynamicState2;
         public       VkBool32        extendedDynamicState2LogicOp;
         public       VkBool32        extendedDynamicState2PatchControlPoints;
     }
+
+    
+
 }
