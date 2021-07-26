@@ -6400,6 +6400,32 @@ namespace Exomia.Vulkan.Api.Core
         public       VkBool32        extendedDynamicState2PatchControlPoints;
     }
 
-    
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceProvokingVertexFeaturesEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        provokingVertexLast;
+        public       VkBool32        transformFeedbackPreservesProvokingVertex;
+    }
 
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceProvokingVertexPropertiesEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        provokingVertexModePerPipeline;
+        public       VkBool32        transformFeedbackPreservesTriangleFanProvokingVertex;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPipelineRasterizationProvokingVertexStateCreateInfoEXT
+    {
+        public const VkStructureType          STYPE = VkStructureType.PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT;
+        public       VkStructureType          sType;
+        public       void*                    pNext;
+        public       VkProvokingVertexModeEXT provokingVertexMode;
+    }
 }
