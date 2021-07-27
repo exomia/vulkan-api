@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core
 {
     public static partial class Vk
     {
-        public const int    VK_HEADER_VERSION                                        = 177;
+        public const int    VK_HEADER_VERSION                                        = 178;
         public const int    VK_NULL_HANDLE                                           = 0;
         public const uint   VK_ATTACHMENT_UNUSED                                     = ~0U;
         public const uint   VK_FALSE                                                 = 0U;
@@ -672,5 +672,8 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_EXT_PROVOKING_VERTEX                                  = 1;
         public const int    VK_EXT_PROVOKING_VERTEX_SPEC_VERSION                     = 1;
         public const string VK_EXT_PROVOKING_VERTEX_EXTENSION_NAME                   = "VK_EXT_provoking_vertex";
+        public const int    VK_NVX_BINARY_IMPORT                                     = 1;
+        public const int    VK_NVX_BINARY_IMPORT_SPEC_VERSION                        = 1;
+        public const string VK_NVX_BINARY_IMPORT_EXTENSION_NAME                      = "VK_NVX_binary_import";
     }
 }

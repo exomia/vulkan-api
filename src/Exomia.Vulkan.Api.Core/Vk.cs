@@ -1633,5 +1633,41 @@ namespace Exomia.Vulkan.Api.Core
             VkCommandBuffer commandBuffer,
             VkBool32        primitiveRestartEnable);
 
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkCreateCuModuleNVX")]
+        public static extern unsafe VkResult CreateCuModuleNVX(
+            VkDevice                 device,
+            VkCuModuleCreateInfoNVX* pCreateInfo,
+            VkAllocationCallbacks*   pAllocator,
+            VkCuModuleNVX*           pModule);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkCreateCuFunctionNVX")]
+        public static extern unsafe VkResult CreateCuFunctionNVX(
+            VkDevice                   device,
+            VkCuFunctionCreateInfoNVX* pCreateInfo,
+            VkAllocationCallbacks*     pAllocator,
+            VkCuFunctionNVX*           pFunction);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkDestroyCuModuleNVX")]
+        public static extern unsafe void DestroyCuModuleNVX(
+            VkDevice               device,
+            VkCuModuleNVX          module,
+            VkAllocationCallbacks* pAllocator);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkDestroyCuFunctionNVX")]
+        public static extern unsafe void DestroyCuFunctionNVX(
+            VkDevice               device,
+            VkCuFunctionNVX        function,
+            VkAllocationCallbacks* pAllocator);
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(IMPORT, EntryPoint ="vkCmdCuLaunchKernelNVX")]
+        public static extern unsafe void CmdCuLaunchKernelNVX(
+            VkCommandBuffer    commandBuffer,
+            VkCuLaunchInfoNVX* pLaunchInfo);
+
     }
 }

@@ -2402,6 +2402,31 @@ namespace Exomia.Vulkan.Api.Core
 
     public delegate void CmdSetPrimitiveRestartEnableEXT(
         VkCommandBuffer commandBuffer,
-        VkBool32 primitiveRestartEnable);
+        VkBool32        primitiveRestartEnable);
 
+    public unsafe delegate void CreateCuModuleNVX(
+        VkDevice                 device,
+        VkCuModuleCreateInfoNVX* pCreateInfo,
+        VkAllocationCallbacks*   pAllocator,
+        VkCuModuleNVX*           pModule);
+
+    public unsafe delegate void CreateCuFunctionNVX(
+        VkDevice                   device,
+        VkCuFunctionCreateInfoNVX* pCreateInfo,
+        VkAllocationCallbacks*     pAllocator,
+        VkCuFunctionNVX*           pFunction);
+
+    public unsafe delegate void DestroyCuModuleNVX(
+        VkDevice               device,
+        VkCuModuleNVX          module,
+        VkAllocationCallbacks* pAllocator);
+
+    public unsafe delegate void DestroyCuFunctionNVX(
+        VkDevice               device,
+        VkCuFunctionNVX        function,
+        VkAllocationCallbacks* pAllocator);
+
+    public unsafe delegate void CmdCuLaunchKernelNVX(
+        VkCommandBuffer    commandBuffer,
+        VkCuLaunchInfoNVX* pLaunchInfo);
 }

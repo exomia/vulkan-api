@@ -1814,4 +1814,94 @@ namespace Exomia.Vulkan.Api.Core
             return value._ptr;
         }
     }
+
+    public readonly unsafe struct VkCuModuleNVX
+    {
+        public static readonly VkCuModuleNVX Zero = (VkCuModuleNVX)null;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        public static explicit operator VkCuModuleNVX(void* ptr)
+        {
+            VkCuModuleNVX value;
+            *(void**)&value = ptr;
+            return value;
+        }
+
+        public static bool operator ==(VkCuModuleNVX left, VkCuModuleNVX right)
+        {
+            return left._ptr == right._ptr;
+        }
+
+        public static bool operator !=(VkCuModuleNVX left, VkCuModuleNVX right)
+        {
+            return left._ptr != right._ptr;
+        }
+
+        public bool Equals(in VkCuModuleNVX obj)
+        {
+            return obj._ptr == _ptr;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is VkCuModuleNVX vkCuModuleNVX && Equals(in vkCuModuleNVX);
+        }
+
+        public override int GetHashCode()
+        {
+            return ((IntPtr)_ptr).GetHashCode();
+        }
+
+        public static explicit operator void*(VkCuModuleNVX value)
+        {
+            return value._ptr;
+        }
+    }
+
+    public readonly unsafe struct VkCuFunctionNVX
+    {
+        public static readonly VkCuFunctionNVX Zero = (VkCuFunctionNVX)null;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        public static explicit operator VkCuFunctionNVX(void* ptr)
+        {
+            VkCuFunctionNVX value;
+            *(void**)&value = ptr;
+            return value;
+        }
+
+        public static bool operator ==(VkCuFunctionNVX left, VkCuFunctionNVX right)
+        {
+            return left._ptr == right._ptr;
+        }
+
+        public static bool operator !=(VkCuFunctionNVX left, VkCuFunctionNVX right)
+        {
+            return left._ptr != right._ptr;
+        }
+
+        public bool Equals(in VkCuFunctionNVX obj)
+        {
+            return obj._ptr == _ptr;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is VkCuFunctionNVX vkCuFunctionNVX && Equals(in vkCuFunctionNVX);
+        }
+
+        public override int GetHashCode()
+        {
+            return ((IntPtr)_ptr).GetHashCode();
+        }
+
+        public static explicit operator void*(VkCuFunctionNVX value)
+        {
+            return value._ptr;
+        }
+    }
 }

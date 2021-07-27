@@ -6428,4 +6428,42 @@ namespace Exomia.Vulkan.Api.Core
         public       void*                    pNext;
         public       VkProvokingVertexModeEXT provokingVertexMode;
     }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkCuModuleCreateInfoNVX
+    {
+        public const VkStructureType STYPE = VkStructureType.CU_MODULE_CREATE_INFO_NVX;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       nuint           dataSize;
+        public       void*           pData;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkCuFunctionCreateInfoNVX
+    {
+        public const VkStructureType STYPE = VkStructureType.CU_FUNCTION_CREATE_INFO_NVX;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkCuModuleNVX   module;
+        public       sbyte*          pName;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkCuLaunchInfoNVX
+    {
+        public const VkStructureType STYPE = VkStructureType.CU_LAUNCH_INFO_NVX;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkCuFunctionNVX function;
+        public       uint            gridDimX;
+        public       uint            gridDimY;
+        public       uint            gridDimZ;
+        public       uint            blockDimX;
+        public       uint            blockDimY;
+        public       uint            blockDimZ;
+        public       uint            sharedMemBytes;
+        public       nuint           paramCount;
+        public       nuint           extraCount;
+    }
 }

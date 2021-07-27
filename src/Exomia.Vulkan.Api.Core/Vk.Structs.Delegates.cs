@@ -1695,6 +1695,42 @@ namespace Exomia.Vulkan.Api.Core
             VkBool32,        /* primitiveRestartEnable */
             void> vkCmdSetPrimitiveRestartEnableEXT;
 
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkDevice,                 /* device */
+            VkCuModuleCreateInfoNVX*, /* pCreateInfo */
+            VkAllocationCallbacks*,   /* pAllocator */
+            VkCuModuleNVX*,           /* pModule */
+            VkResult> vkCreateCuModuleNVX;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkDevice,                   /* device */
+            VkCuFunctionCreateInfoNVX*, /* pCreateInfo */
+            VkAllocationCallbacks*,     /* pAllocator */
+            VkCuFunctionNVX*,           /* pFunction */
+            VkResult> vkCreateCuFunctionNVX;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkDevice,               /* device */
+            VkCuModuleNVX,          /* module */
+            VkAllocationCallbacks*, /* pAllocator */
+            void> vkDestroyCuModuleNVX;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkDevice,               /* device */
+            VkCuFunctionNVX,        /* function */
+            VkAllocationCallbacks*, /* pAllocator */
+            void> vkDestroyCuFunctionNVX;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer,    /* commandBuffer */
+            VkCuLaunchInfoNVX*, /* pLaunchInfo */
+            void> vkCmdCuLaunchKernelNVX;
+
         public static implicit operator VkFunction(void* ptr)
         {
             VkFunction value;
@@ -5854,6 +5890,97 @@ namespace Exomia.Vulkan.Api.Core
         public static implicit operator VkCmdSetPrimitiveRestartEnableEXT(void* ptr)
         {
             VkCmdSetPrimitiveRestartEnableEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCreateCuModuleNVX
+    {
+        public static readonly VkCreateCuModuleNVX Zero = null;
+
+        public readonly delegate*<
+            VkDevice,                 /* device */
+            VkCuModuleCreateInfoNVX*, /* pCreateInfo */
+            VkAllocationCallbacks*,   /* pAllocator */
+            VkCuModuleNVX*,           /* pModule */
+            VkResult> UnsafeInvoke;
+
+        public static implicit operator VkCreateCuModuleNVX(void* ptr)
+        {
+            VkCreateCuModuleNVX value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCreateCuFunctionNVX
+    {
+        public static readonly VkCreateCuFunctionNVX Zero = null;
+
+        public readonly delegate*<
+            VkDevice,                   /* device */
+            VkCuFunctionCreateInfoNVX*, /* pCreateInfo */
+            VkAllocationCallbacks*,     /* pAllocator */
+            VkCuFunctionNVX*,           /* pFunction */
+            VkResult> UnsafeInvoke;
+
+        public static implicit operator VkCreateCuFunctionNVX(void* ptr)
+        {
+            VkCreateCuFunctionNVX value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkDestroyCuModuleNVX
+    {
+        public static readonly VkDestroyCuModuleNVX Zero = null;
+
+        public readonly delegate*<
+            VkDevice,               /* device */
+            VkCuModuleNVX,          /* module */
+            VkAllocationCallbacks*, /* pAllocator */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkDestroyCuModuleNVX(void* ptr)
+        {
+            VkDestroyCuModuleNVX value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkDestroyCuFunctionNVX
+    {
+        public static readonly VkDestroyCuFunctionNVX Zero = null;
+
+        public readonly delegate*<
+            VkDevice,               /* device */
+            VkCuFunctionNVX,        /* function */
+            VkAllocationCallbacks*, /* pAllocator */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkDestroyCuFunctionNVX(void* ptr)
+        {
+            VkDestroyCuFunctionNVX value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdCuLaunchKernelNVX
+    {
+        public static readonly VkCmdCuLaunchKernelNVX Zero = null;
+
+        public readonly delegate*<
+            VkCommandBuffer,    /* commandBuffer */
+            VkCuLaunchInfoNVX*, /* pLaunchInfo */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdCuLaunchKernelNVX(void* ptr)
+        {
+            VkCmdCuLaunchKernelNVX value;
             *(void**)&value = ptr;
             return value;
         }
