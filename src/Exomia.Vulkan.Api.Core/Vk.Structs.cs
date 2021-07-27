@@ -6466,4 +6466,32 @@ namespace Exomia.Vulkan.Api.Core
         public       nuint           paramCount;
         public       nuint           extraCount;
     }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        shaderSubgroupUniformControlFlow;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        globalPriorityQuery;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkQueueFamilyGlobalPriorityPropertiesEXT
+    {
+        public const VkStructureType                     STYPE = VkStructureType.QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT;
+        public       VkStructureType                     sType;
+        public       void*                               pNext;
+        public       uint                                priorityCount;
+        public       VkArray16<VkQueueGlobalPriorityEXT> priorities;
+    }
 }
