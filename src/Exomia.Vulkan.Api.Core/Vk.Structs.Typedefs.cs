@@ -74,6 +74,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDeviceSize
     {
+        public static readonly VkDeviceSize Zero = (VkDeviceSize)0ul;
 #pragma warning disable 649
         private readonly ulong _size;
 #pragma warning restore 649
