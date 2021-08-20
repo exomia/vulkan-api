@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core
     [StructLayout(LayoutKind.Explicit)]
     public readonly unsafe struct VkFunction
     {
-        public static readonly VkFunction Zero = null;
+        public static readonly VkFunction Null = null;
 
         [FieldOffset(0)]
         private readonly void* _ptr;
@@ -1776,7 +1776,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceFeatures2KHR
     {
-        public static readonly VkGetPhysicalDeviceFeatures2KHR Zero = null;
+        public static readonly VkGetPhysicalDeviceFeatures2KHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,           /* physicalDevice */
@@ -1793,7 +1793,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceProperties2KHR
     {
-        public static readonly VkGetPhysicalDeviceProperties2KHR Zero = null;
+        public static readonly VkGetPhysicalDeviceProperties2KHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,             /* physicalDevice */
@@ -1810,7 +1810,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceFormatProperties2KHR
     {
-        public static readonly VkGetPhysicalDeviceFormatProperties2KHR Zero = null;
+        public static readonly VkGetPhysicalDeviceFormatProperties2KHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,     /* physicalDevice */
@@ -1828,7 +1828,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceImageFormatProperties2KHR
     {
-        public static readonly VkGetPhysicalDeviceImageFormatProperties2KHR Zero = null;
+        public static readonly VkGetPhysicalDeviceImageFormatProperties2KHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                  /* physicalDevice */
@@ -1846,7 +1846,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceQueueFamilyProperties2KHR
     {
-        public static readonly VkGetPhysicalDeviceQueueFamilyProperties2KHR Zero = null;
+        public static readonly VkGetPhysicalDeviceQueueFamilyProperties2KHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,          /* physicalDevice */
@@ -1864,7 +1864,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceMemoryProperties2KHR
     {
-        public static readonly VkGetPhysicalDeviceMemoryProperties2KHR Zero = null;
+        public static readonly VkGetPhysicalDeviceMemoryProperties2KHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                   /* physicalDevice */
@@ -1881,7 +1881,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceSparseImageFormatProperties2KHR
     {
-        public static readonly VkGetPhysicalDeviceSparseImageFormatProperties2KHR Zero = null;
+        public static readonly VkGetPhysicalDeviceSparseImageFormatProperties2KHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                        /* physicalDevice */
@@ -1900,7 +1900,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetDeviceGroupPeerMemoryFeaturesKHR
     {
-        public static readonly VkGetDeviceGroupPeerMemoryFeaturesKHR Zero = null;
+        public static readonly VkGetDeviceGroupPeerMemoryFeaturesKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                     /* device */
@@ -1920,7 +1920,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetDeviceMaskKHR
     {
-        public static readonly VkCmdSetDeviceMaskKHR Zero = null;
+        public static readonly VkCmdSetDeviceMaskKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -1937,7 +1937,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDispatchBaseKHR
     {
-        public static readonly VkCmdDispatchBaseKHR Zero = null;
+        public static readonly VkCmdDispatchBaseKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -1959,7 +1959,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkTrimCommandPoolKHR
     {
-        public static readonly VkTrimCommandPoolKHR Zero = null;
+        public static readonly VkTrimCommandPoolKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                  /* device */
@@ -1977,7 +1977,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkEnumeratePhysicalDeviceGroupsKHR
     {
-        public static readonly VkEnumeratePhysicalDeviceGroupsKHR Zero = null;
+        public static readonly VkEnumeratePhysicalDeviceGroupsKHR Null = null;
 
         public readonly delegate*<
             VkInstance,                       /* instance */
@@ -1995,7 +1995,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceExternalBufferPropertiesKHR
     {
-        public static readonly VkGetPhysicalDeviceExternalBufferPropertiesKHR Zero = null;
+        public static readonly VkGetPhysicalDeviceExternalBufferPropertiesKHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                    /* physicalDevice */
@@ -2013,7 +2013,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetMemoryFdKHR
     {
-        public static readonly VkGetMemoryFdKHR Zero = null;
+        public static readonly VkGetMemoryFdKHR Null = null;
 
         public readonly delegate*<
             VkDevice,              /* device */
@@ -2031,7 +2031,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetMemoryFdPropertiesKHR
     {
-        public static readonly VkGetMemoryFdPropertiesKHR Zero = null;
+        public static readonly VkGetMemoryFdPropertiesKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                           /* device */
@@ -2050,7 +2050,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceExternalSemaphorePropertiesKHR
     {
-        public static readonly VkGetPhysicalDeviceExternalSemaphorePropertiesKHR Zero = null;
+        public static readonly VkGetPhysicalDeviceExternalSemaphorePropertiesKHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                       /* physicalDevice */
@@ -2068,7 +2068,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkImportSemaphoreFdKHR
     {
-        public static readonly VkImportSemaphoreFdKHR Zero = null;
+        public static readonly VkImportSemaphoreFdKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                    /* device */
@@ -2085,7 +2085,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetSemaphoreFdKHR
     {
-        public static readonly VkGetSemaphoreFdKHR Zero = null;
+        public static readonly VkGetSemaphoreFdKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                 /* device */
@@ -2103,7 +2103,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdPushDescriptorSetKHR
     {
-        public static readonly VkCmdPushDescriptorSetKHR Zero = null;
+        public static readonly VkCmdPushDescriptorSetKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
@@ -2124,7 +2124,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdPushDescriptorSetWithTemplateKHR
     {
-        public static readonly VkCmdPushDescriptorSetWithTemplateKHR Zero = null;
+        public static readonly VkCmdPushDescriptorSetWithTemplateKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,            /* commandBuffer */
@@ -2144,7 +2144,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateDescriptorUpdateTemplateKHR
     {
-        public static readonly VkCreateDescriptorUpdateTemplateKHR Zero = null;
+        public static readonly VkCreateDescriptorUpdateTemplateKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                              /* device */
@@ -2163,7 +2163,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyDescriptorUpdateTemplateKHR
     {
-        public static readonly VkDestroyDescriptorUpdateTemplateKHR Zero = null;
+        public static readonly VkDestroyDescriptorUpdateTemplateKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                   /* device */
@@ -2181,7 +2181,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkUpdateDescriptorSetWithTemplateKHR
     {
-        public static readonly VkUpdateDescriptorSetWithTemplateKHR Zero = null;
+        public static readonly VkUpdateDescriptorSetWithTemplateKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                   /* device */
@@ -2200,7 +2200,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateRenderPass2KHR
     {
-        public static readonly VkCreateRenderPass2KHR Zero = null;
+        public static readonly VkCreateRenderPass2KHR Null = null;
 
         public readonly delegate*<
             VkDevice,                 /* device */
@@ -2219,7 +2219,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBeginRenderPass2KHR
     {
-        public static readonly VkCmdBeginRenderPass2KHR Zero = null;
+        public static readonly VkCmdBeginRenderPass2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,        /* commandBuffer */
@@ -2237,7 +2237,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdNextSubpass2KHR
     {
-        public static readonly VkCmdNextSubpass2KHR Zero = null;
+        public static readonly VkCmdNextSubpass2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,     /* commandBuffer */
@@ -2255,7 +2255,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdEndRenderPass2KHR
     {
-        public static readonly VkCmdEndRenderPass2KHR Zero = null;
+        public static readonly VkCmdEndRenderPass2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,   /* commandBuffer */
@@ -2272,7 +2272,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetSwapchainStatusKHR
     {
-        public static readonly VkGetSwapchainStatusKHR Zero = null;
+        public static readonly VkGetSwapchainStatusKHR Null = null;
 
         public readonly delegate*<
             VkDevice,       /* device */
@@ -2289,7 +2289,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceExternalFencePropertiesKHR
     {
-        public static readonly VkGetPhysicalDeviceExternalFencePropertiesKHR Zero = null;
+        public static readonly VkGetPhysicalDeviceExternalFencePropertiesKHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                   /* physicalDevice */
@@ -2307,7 +2307,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkImportFenceFdKHR
     {
-        public static readonly VkImportFenceFdKHR Zero = null;
+        public static readonly VkImportFenceFdKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                /* device */
@@ -2324,7 +2324,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetFenceFdKHR
     {
-        public static readonly VkGetFenceFdKHR Zero = null;
+        public static readonly VkGetFenceFdKHR Null = null;
 
         public readonly delegate*<
             VkDevice,             /* device */
@@ -2342,7 +2342,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR
     {
-        public static readonly VkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR Zero = null;
+        public static readonly VkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                    /* physicalDevice */
@@ -2362,7 +2362,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR
     {
-        public static readonly VkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR Zero = null;
+        public static readonly VkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                     /* physicalDevice */
@@ -2380,7 +2380,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkAcquireProfilingLockKHR
     {
-        public static readonly VkAcquireProfilingLockKHR Zero = null;
+        public static readonly VkAcquireProfilingLockKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                       /* device */
@@ -2397,7 +2397,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkReleaseProfilingLockKHR
     {
-        public static readonly VkReleaseProfilingLockKHR Zero = null;
+        public static readonly VkReleaseProfilingLockKHR Null = null;
 
         public readonly delegate*<
             VkDevice, /* device */
@@ -2413,7 +2413,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetImageMemoryRequirements2KHR
     {
-        public static readonly VkGetImageMemoryRequirements2KHR Zero = null;
+        public static readonly VkGetImageMemoryRequirements2KHR Null = null;
 
         public readonly delegate*<
             VkDevice,                        /* device */
@@ -2431,7 +2431,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetBufferMemoryRequirements2KHR
     {
-        public static readonly VkGetBufferMemoryRequirements2KHR Zero = null;
+        public static readonly VkGetBufferMemoryRequirements2KHR Null = null;
 
         public readonly delegate*<
             VkDevice,                         /* device */
@@ -2449,7 +2449,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetImageSparseMemoryRequirements2KHR
     {
-        public static readonly VkGetImageSparseMemoryRequirements2KHR Zero = null;
+        public static readonly VkGetImageSparseMemoryRequirements2KHR Null = null;
 
         public readonly delegate*<
             VkDevice,                              /* device */
@@ -2468,7 +2468,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateSamplerYcbcrConversionKHR
     {
-        public static readonly VkCreateSamplerYcbcrConversionKHR Zero = null;
+        public static readonly VkCreateSamplerYcbcrConversionKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                            /* device */
@@ -2487,7 +2487,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroySamplerYcbcrConversionKHR
     {
-        public static readonly VkDestroySamplerYcbcrConversionKHR Zero = null;
+        public static readonly VkDestroySamplerYcbcrConversionKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                 /* device */
@@ -2505,7 +2505,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkBindBufferMemory2KHR
     {
-        public static readonly VkBindBufferMemory2KHR Zero = null;
+        public static readonly VkBindBufferMemory2KHR Null = null;
 
         public readonly delegate*<
             VkDevice,                /* device */
@@ -2523,7 +2523,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkBindImageMemory2KHR
     {
-        public static readonly VkBindImageMemory2KHR Zero = null;
+        public static readonly VkBindImageMemory2KHR Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -2541,7 +2541,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetDescriptorSetLayoutSupportKHR
     {
-        public static readonly VkGetDescriptorSetLayoutSupportKHR Zero = null;
+        public static readonly VkGetDescriptorSetLayoutSupportKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                         /* device */
@@ -2559,7 +2559,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDrawIndirectCountKHR
     {
-        public static readonly VkCmdDrawIndirectCountKHR Zero = null;
+        public static readonly VkCmdDrawIndirectCountKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -2581,7 +2581,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDrawIndexedIndirectCountKHR
     {
-        public static readonly VkCmdDrawIndexedIndirectCountKHR Zero = null;
+        public static readonly VkCmdDrawIndexedIndirectCountKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -2603,7 +2603,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetSemaphoreCounterValueKHR
     {
-        public static readonly VkGetSemaphoreCounterValueKHR Zero = null;
+        public static readonly VkGetSemaphoreCounterValueKHR Null = null;
 
         public readonly delegate*<
             VkDevice,    /* device */
@@ -2621,7 +2621,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkWaitSemaphoresKHR
     {
-        public static readonly VkWaitSemaphoresKHR Zero = null;
+        public static readonly VkWaitSemaphoresKHR Null = null;
 
         public readonly delegate*<
             VkDevice,             /* device */
@@ -2639,7 +2639,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSignalSemaphoreKHR
     {
-        public static readonly VkSignalSemaphoreKHR Zero = null;
+        public static readonly VkSignalSemaphoreKHR Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -2656,7 +2656,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceFragmentShadingRatesKHR
     {
-        public static readonly VkGetPhysicalDeviceFragmentShadingRatesKHR Zero = null;
+        public static readonly VkGetPhysicalDeviceFragmentShadingRatesKHR Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                        /* physicalDevice */
@@ -2674,7 +2674,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetFragmentShadingRateKHR
     {
-        public static readonly VkCmdSetFragmentShadingRateKHR Zero = null;
+        public static readonly VkCmdSetFragmentShadingRateKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                    /* commandBuffer */
@@ -2693,7 +2693,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetBufferDeviceAddressKHR
     {
-        public static readonly VkGetBufferDeviceAddressKHR Zero = null;
+        public static readonly VkGetBufferDeviceAddressKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                   /* device */
@@ -2710,7 +2710,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetBufferOpaqueCaptureAddressKHR
     {
-        public static readonly VkGetBufferOpaqueCaptureAddressKHR Zero = null;
+        public static readonly VkGetBufferOpaqueCaptureAddressKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                   /* device */
@@ -2727,7 +2727,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetDeviceMemoryOpaqueCaptureAddressKHR
     {
-        public static readonly VkGetDeviceMemoryOpaqueCaptureAddressKHR Zero = null;
+        public static readonly VkGetDeviceMemoryOpaqueCaptureAddressKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                                /* device */
@@ -2744,7 +2744,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateDeferredOperationKHR
     {
-        public static readonly VkCreateDeferredOperationKHR Zero = null;
+        public static readonly VkCreateDeferredOperationKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                /* device */
@@ -2762,7 +2762,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyDeferredOperationKHR
     {
-        public static readonly VkDestroyDeferredOperationKHR Zero = null;
+        public static readonly VkDestroyDeferredOperationKHR Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -2780,7 +2780,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetDeferredOperationMaxConcurrencyKHR
     {
-        public static readonly VkGetDeferredOperationMaxConcurrencyKHR Zero = null;
+        public static readonly VkGetDeferredOperationMaxConcurrencyKHR Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -2797,7 +2797,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetDeferredOperationResultKHR
     {
-        public static readonly VkGetDeferredOperationResultKHR Zero = null;
+        public static readonly VkGetDeferredOperationResultKHR Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -2814,7 +2814,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDeferredOperationJoinKHR
     {
-        public static readonly VkDeferredOperationJoinKHR Zero = null;
+        public static readonly VkDeferredOperationJoinKHR Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -2831,7 +2831,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPipelineExecutablePropertiesKHR
     {
-        public static readonly VkGetPipelineExecutablePropertiesKHR Zero = null;
+        public static readonly VkGetPipelineExecutablePropertiesKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                           /* device */
@@ -2850,7 +2850,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPipelineExecutableStatisticsKHR
     {
-        public static readonly VkGetPipelineExecutableStatisticsKHR Zero = null;
+        public static readonly VkGetPipelineExecutableStatisticsKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                          /* device */
@@ -2869,7 +2869,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPipelineExecutableInternalRepresentationsKHR
     {
-        public static readonly VkGetPipelineExecutableInternalRepresentationsKHR Zero = null;
+        public static readonly VkGetPipelineExecutableInternalRepresentationsKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                                       /* device */
@@ -2888,7 +2888,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdCopyBuffer2KHR
     {
-        public static readonly VkCmdCopyBuffer2KHR Zero = null;
+        public static readonly VkCmdCopyBuffer2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
@@ -2905,7 +2905,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdCopyImage2KHR
     {
-        public static readonly VkCmdCopyImage2KHR Zero = null;
+        public static readonly VkCmdCopyImage2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,      /* commandBuffer */
@@ -2922,7 +2922,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdCopyBufferToImage2KHR
     {
-        public static readonly VkCmdCopyBufferToImage2KHR Zero = null;
+        public static readonly VkCmdCopyBufferToImage2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,              /* commandBuffer */
@@ -2939,7 +2939,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdCopyImageToBuffer2KHR
     {
-        public static readonly VkCmdCopyImageToBuffer2KHR Zero = null;
+        public static readonly VkCmdCopyImageToBuffer2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,              /* commandBuffer */
@@ -2956,7 +2956,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBlitImage2KHR
     {
-        public static readonly VkCmdBlitImage2KHR Zero = null;
+        public static readonly VkCmdBlitImage2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,      /* commandBuffer */
@@ -2973,7 +2973,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdResolveImage2KHR
     {
-        public static readonly VkCmdResolveImage2KHR Zero = null;
+        public static readonly VkCmdResolveImage2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,         /* commandBuffer */
@@ -2990,7 +2990,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateDebugReportCallbackEXT
     {
-        public static readonly VkCreateDebugReportCallbackEXT Zero = null;
+        public static readonly VkCreateDebugReportCallbackEXT Null = null;
 
         public readonly delegate*<
             VkInstance,                          /* instance */
@@ -3009,7 +3009,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyDebugReportCallbackEXT
     {
-        public static readonly VkDestroyDebugReportCallbackEXT Zero = null;
+        public static readonly VkDestroyDebugReportCallbackEXT Null = null;
 
         public readonly delegate*<
             VkInstance,               /* instance */
@@ -3027,7 +3027,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDebugReportMessageEXT
     {
-        public static readonly VkDebugReportMessageEXT Zero = null;
+        public static readonly VkDebugReportMessageEXT Null = null;
 
         public readonly delegate*<
             VkInstance,                 /* instance */
@@ -3050,7 +3050,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDebugMarkerSetObjectTagEXT
     {
-        public static readonly VkDebugMarkerSetObjectTagEXT Zero = null;
+        public static readonly VkDebugMarkerSetObjectTagEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                       /* device */
@@ -3067,7 +3067,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDebugMarkerSetObjectNameEXT
     {
-        public static readonly VkDebugMarkerSetObjectNameEXT Zero = null;
+        public static readonly VkDebugMarkerSetObjectNameEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                        /* device */
@@ -3084,7 +3084,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDebugMarkerBeginEXT
     {
-        public static readonly VkCmdDebugMarkerBeginEXT Zero = null;
+        public static readonly VkCmdDebugMarkerBeginEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,             /* commandBuffer */
@@ -3101,7 +3101,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDebugMarkerEndEXT
     {
-        public static readonly VkCmdDebugMarkerEndEXT Zero = null;
+        public static readonly VkCmdDebugMarkerEndEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3117,7 +3117,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDebugMarkerInsertEXT
     {
-        public static readonly VkCmdDebugMarkerInsertEXT Zero = null;
+        public static readonly VkCmdDebugMarkerInsertEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,             /* commandBuffer */
@@ -3134,7 +3134,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBindTransformFeedbackBuffersEXT
     {
-        public static readonly VkCmdBindTransformFeedbackBuffersEXT Zero = null;
+        public static readonly VkCmdBindTransformFeedbackBuffersEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3155,7 +3155,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBeginTransformFeedbackEXT
     {
-        public static readonly VkCmdBeginTransformFeedbackEXT Zero = null;
+        public static readonly VkCmdBeginTransformFeedbackEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3175,7 +3175,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdEndTransformFeedbackEXT
     {
-        public static readonly VkCmdEndTransformFeedbackEXT Zero = null;
+        public static readonly VkCmdEndTransformFeedbackEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3195,7 +3195,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBeginQueryIndexedEXT
     {
-        public static readonly VkCmdBeginQueryIndexedEXT Zero = null;
+        public static readonly VkCmdBeginQueryIndexedEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,        /* commandBuffer */
@@ -3215,7 +3215,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdEndQueryIndexedEXT
     {
-        public static readonly VkCmdEndQueryIndexedEXT Zero = null;
+        public static readonly VkCmdEndQueryIndexedEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3234,7 +3234,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDrawIndirectByteCountEXT
     {
-        public static readonly VkCmdDrawIndirectByteCountEXT Zero = null;
+        public static readonly VkCmdDrawIndirectByteCountEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3256,7 +3256,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetImageViewHandleNVX
     {
-        public static readonly VkGetImageViewHandleNVX Zero = null;
+        public static readonly VkGetImageViewHandleNVX Null = null;
 
         public readonly delegate*<
             VkDevice,                  /* device */
@@ -3273,7 +3273,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetImageViewAddressNVX
     {
-        public static readonly VkGetImageViewAddressNVX Zero = null;
+        public static readonly VkGetImageViewAddressNVX Null = null;
 
         public readonly delegate*<
             VkDevice,                         /* device */
@@ -3291,7 +3291,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDrawIndirectCountAMD
     {
-        public static readonly VkCmdDrawIndirectCountAMD Zero = null;
+        public static readonly VkCmdDrawIndirectCountAMD Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3313,7 +3313,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDrawIndexedIndirectCountAMD
     {
-        public static readonly VkCmdDrawIndexedIndirectCountAMD Zero = null;
+        public static readonly VkCmdDrawIndexedIndirectCountAMD Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3335,7 +3335,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetShaderInfoAMD
     {
-        public static readonly VkGetShaderInfoAMD Zero = null;
+        public static readonly VkGetShaderInfoAMD Null = null;
 
         public readonly delegate*<
             VkDevice,              /* device */
@@ -3356,7 +3356,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceExternalImageFormatPropertiesNV
     {
-        public static readonly VkGetPhysicalDeviceExternalImageFormatPropertiesNV Zero = null;
+        public static readonly VkGetPhysicalDeviceExternalImageFormatPropertiesNV Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                   /* physicalDevice */
@@ -3379,7 +3379,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBeginConditionalRenderingEXT
     {
-        public static readonly VkCmdBeginConditionalRenderingEXT Zero = null;
+        public static readonly VkCmdBeginConditionalRenderingEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                     /* commandBuffer */
@@ -3396,7 +3396,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdEndConditionalRenderingEXT
     {
-        public static readonly VkCmdEndConditionalRenderingEXT Zero = null;
+        public static readonly VkCmdEndConditionalRenderingEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3412,7 +3412,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetViewportWScalingNV
     {
-        public static readonly VkCmdSetViewportWScalingNV Zero = null;
+        public static readonly VkCmdSetViewportWScalingNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
@@ -3431,7 +3431,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkReleaseDisplayEXT
     {
-        public static readonly VkReleaseDisplayEXT Zero = null;
+        public static readonly VkReleaseDisplayEXT Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice, /* physicalDevice */
@@ -3448,7 +3448,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceSurfaceCapabilities2EXT
     {
-        public static readonly VkGetPhysicalDeviceSurfaceCapabilities2EXT Zero = null;
+        public static readonly VkGetPhysicalDeviceSurfaceCapabilities2EXT Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,           /* physicalDevice */
@@ -3466,7 +3466,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDisplayPowerControlEXT
     {
-        public static readonly VkDisplayPowerControlEXT Zero = null;
+        public static readonly VkDisplayPowerControlEXT Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -3484,7 +3484,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkRegisterDeviceEventEXT
     {
-        public static readonly VkRegisterDeviceEventEXT Zero = null;
+        public static readonly VkRegisterDeviceEventEXT Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -3503,7 +3503,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkRegisterDisplayEventEXT
     {
-        public static readonly VkRegisterDisplayEventEXT Zero = null;
+        public static readonly VkRegisterDisplayEventEXT Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -3523,7 +3523,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetSwapchainCounterEXT
     {
-        public static readonly VkGetSwapchainCounterEXT Zero = null;
+        public static readonly VkGetSwapchainCounterEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                 /* device */
@@ -3542,7 +3542,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetRefreshCycleDurationGOOGLE
     {
-        public static readonly VkGetRefreshCycleDurationGOOGLE Zero = null;
+        public static readonly VkGetRefreshCycleDurationGOOGLE Null = null;
 
         public readonly delegate*<
             VkDevice,                      /* device */
@@ -3560,7 +3560,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPastPresentationTimingGOOGLE
     {
-        public static readonly VkGetPastPresentationTimingGOOGLE Zero = null;
+        public static readonly VkGetPastPresentationTimingGOOGLE Null = null;
 
         public readonly delegate*<
             VkDevice,                        /* device */
@@ -3579,7 +3579,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetDiscardRectangleEXT
     {
-        public static readonly VkCmdSetDiscardRectangleEXT Zero = null;
+        public static readonly VkCmdSetDiscardRectangleEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3598,7 +3598,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSetHdrMetadataEXT
     {
-        public static readonly VkSetHdrMetadataEXT Zero = null;
+        public static readonly VkSetHdrMetadataEXT Null = null;
 
         public readonly delegate*<
             VkDevice,          /* device */
@@ -3617,7 +3617,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSetDebugUtilsObjectNameEXT
     {
-        public static readonly VkSetDebugUtilsObjectNameEXT Zero = null;
+        public static readonly VkSetDebugUtilsObjectNameEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                       /* device */
@@ -3634,7 +3634,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSetDebugUtilsObjectTagEXT
     {
-        public static readonly VkSetDebugUtilsObjectTagEXT Zero = null;
+        public static readonly VkSetDebugUtilsObjectTagEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                      /* device */
@@ -3651,7 +3651,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkQueueBeginDebugUtilsLabelEXT
     {
-        public static readonly VkQueueBeginDebugUtilsLabelEXT Zero = null;
+        public static readonly VkQueueBeginDebugUtilsLabelEXT Null = null;
 
         public readonly delegate*<
             VkQueue,               /* queue */
@@ -3668,7 +3668,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkQueueEndDebugUtilsLabelEXT
     {
-        public static readonly VkQueueEndDebugUtilsLabelEXT Zero = null;
+        public static readonly VkQueueEndDebugUtilsLabelEXT Null = null;
 
         public readonly delegate*<
             VkQueue, /* queue */
@@ -3684,7 +3684,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkQueueInsertDebugUtilsLabelEXT
     {
-        public static readonly VkQueueInsertDebugUtilsLabelEXT Zero = null;
+        public static readonly VkQueueInsertDebugUtilsLabelEXT Null = null;
 
         public readonly delegate*<
             VkQueue,               /* queue */
@@ -3701,7 +3701,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBeginDebugUtilsLabelEXT
     {
-        public static readonly VkCmdBeginDebugUtilsLabelEXT Zero = null;
+        public static readonly VkCmdBeginDebugUtilsLabelEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
@@ -3718,7 +3718,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdEndDebugUtilsLabelEXT
     {
-        public static readonly VkCmdEndDebugUtilsLabelEXT Zero = null;
+        public static readonly VkCmdEndDebugUtilsLabelEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3734,7 +3734,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdInsertDebugUtilsLabelEXT
     {
-        public static readonly VkCmdInsertDebugUtilsLabelEXT Zero = null;
+        public static readonly VkCmdInsertDebugUtilsLabelEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
@@ -3751,7 +3751,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateDebugUtilsMessengerEXT
     {
-        public static readonly VkCreateDebugUtilsMessengerEXT Zero = null;
+        public static readonly VkCreateDebugUtilsMessengerEXT Null = null;
 
         public readonly delegate*<
             VkInstance,                          /* instance */
@@ -3770,7 +3770,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyDebugUtilsMessengerEXT
     {
-        public static readonly VkDestroyDebugUtilsMessengerEXT Zero = null;
+        public static readonly VkDestroyDebugUtilsMessengerEXT Null = null;
 
         public readonly delegate*<
             VkInstance,               /* instance */
@@ -3788,7 +3788,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSubmitDebugUtilsMessageEXT
     {
-        public static readonly VkSubmitDebugUtilsMessageEXT Zero = null;
+        public static readonly VkSubmitDebugUtilsMessageEXT Null = null;
 
         public readonly delegate*<
             VkInstance,                            /* instance */
@@ -3807,7 +3807,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetSampleLocationsEXT
     {
-        public static readonly VkCmdSetSampleLocationsEXT Zero = null;
+        public static readonly VkCmdSetSampleLocationsEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,           /* commandBuffer */
@@ -3824,7 +3824,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceMultisamplePropertiesEXT
     {
-        public static readonly VkGetPhysicalDeviceMultisamplePropertiesEXT Zero = null;
+        public static readonly VkGetPhysicalDeviceMultisamplePropertiesEXT Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,            /* physicalDevice */
@@ -3842,7 +3842,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetImageDrmFormatModifierPropertiesEXT
     {
-        public static readonly VkGetImageDrmFormatModifierPropertiesEXT Zero = null;
+        public static readonly VkGetImageDrmFormatModifierPropertiesEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                               /* device */
@@ -3860,7 +3860,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateValidationCacheEXT
     {
-        public static readonly VkCreateValidationCacheEXT Zero = null;
+        public static readonly VkCreateValidationCacheEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                        /* device */
@@ -3879,7 +3879,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyValidationCacheEXT
     {
-        public static readonly VkDestroyValidationCacheEXT Zero = null;
+        public static readonly VkDestroyValidationCacheEXT Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -3897,7 +3897,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkMergeValidationCachesEXT
     {
-        public static readonly VkMergeValidationCachesEXT Zero = null;
+        public static readonly VkMergeValidationCachesEXT Null = null;
 
         public readonly delegate*<
             VkDevice,              /* device */
@@ -3916,7 +3916,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetValidationCacheDataEXT
     {
-        public static readonly VkGetValidationCacheDataEXT Zero = null;
+        public static readonly VkGetValidationCacheDataEXT Null = null;
 
         public readonly delegate*<
             VkDevice,             /* device */
@@ -3935,7 +3935,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBindShadingRateImageNV
     {
-        public static readonly VkCmdBindShadingRateImageNV Zero = null;
+        public static readonly VkCmdBindShadingRateImageNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -3953,7 +3953,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetViewportShadingRatePaletteNV
     {
-        public static readonly VkCmdSetViewportShadingRatePaletteNV Zero = null;
+        public static readonly VkCmdSetViewportShadingRatePaletteNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,         /* commandBuffer */
@@ -3972,7 +3972,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetCoarseSampleOrderNV
     {
-        public static readonly VkCmdSetCoarseSampleOrderNV Zero = null;
+        public static readonly VkCmdSetCoarseSampleOrderNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,              /* commandBuffer */
@@ -3991,7 +3991,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateAccelerationStructureNV
     {
-        public static readonly VkCreateAccelerationStructureNV Zero = null;
+        public static readonly VkCreateAccelerationStructureNV Null = null;
 
         public readonly delegate*<
             VkDevice,                             /* device */
@@ -4010,7 +4010,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyAccelerationStructureNV
     {
-        public static readonly VkDestroyAccelerationStructureNV Zero = null;
+        public static readonly VkDestroyAccelerationStructureNV Null = null;
 
         public readonly delegate*<
             VkDevice,                  /* device */
@@ -4028,7 +4028,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetAccelerationStructureMemoryRequirementsNV
     {
-        public static readonly VkGetAccelerationStructureMemoryRequirementsNV Zero = null;
+        public static readonly VkGetAccelerationStructureMemoryRequirementsNV Null = null;
 
         public readonly delegate*<
             VkDevice,                                         /* device */
@@ -4046,7 +4046,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkBindAccelerationStructureMemoryNV
     {
-        public static readonly VkBindAccelerationStructureMemoryNV Zero = null;
+        public static readonly VkBindAccelerationStructureMemoryNV Null = null;
 
         public readonly delegate*<
             VkDevice,                                 /* device */
@@ -4064,7 +4064,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBuildAccelerationStructureNV
     {
-        public static readonly VkCmdBuildAccelerationStructureNV Zero = null;
+        public static readonly VkCmdBuildAccelerationStructureNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                /* commandBuffer */
@@ -4088,7 +4088,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdCopyAccelerationStructureNV
     {
-        public static readonly VkCmdCopyAccelerationStructureNV Zero = null;
+        public static readonly VkCmdCopyAccelerationStructureNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                    /* commandBuffer */
@@ -4107,7 +4107,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdTraceRaysNV
     {
-        public static readonly VkCmdTraceRaysNV Zero = null;
+        public static readonly VkCmdTraceRaysNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4137,7 +4137,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateRayTracingPipelinesNV
     {
-        public static readonly VkCreateRayTracingPipelinesNV Zero = null;
+        public static readonly VkCreateRayTracingPipelinesNV Null = null;
 
         public readonly delegate*<
             VkDevice,                          /* device */
@@ -4158,7 +4158,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetRayTracingShaderGroupHandlesKHR
     {
-        public static readonly VkGetRayTracingShaderGroupHandlesKHR Zero = null;
+        public static readonly VkGetRayTracingShaderGroupHandlesKHR Null = null;
 
         public readonly delegate*<
             VkDevice,   /* device */
@@ -4179,7 +4179,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetRayTracingShaderGroupHandlesNV
     {
-        public static readonly VkGetRayTracingShaderGroupHandlesNV Zero = null;
+        public static readonly VkGetRayTracingShaderGroupHandlesNV Null = null;
 
         public readonly delegate*<
             VkDevice,   /* device */
@@ -4200,7 +4200,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetAccelerationStructureHandleNV
     {
-        public static readonly VkGetAccelerationStructureHandleNV Zero = null;
+        public static readonly VkGetAccelerationStructureHandleNV Null = null;
 
         public readonly delegate*<
             VkDevice,                  /* device */
@@ -4219,7 +4219,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdWriteAccelerationStructuresPropertiesNV
     {
-        public static readonly VkCmdWriteAccelerationStructuresPropertiesNV Zero = null;
+        public static readonly VkCmdWriteAccelerationStructuresPropertiesNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,            /* commandBuffer */
@@ -4240,7 +4240,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCompileDeferredNV
     {
-        public static readonly VkCompileDeferredNV Zero = null;
+        public static readonly VkCompileDeferredNV Null = null;
 
         public readonly delegate*<
             VkDevice,   /* device */
@@ -4258,7 +4258,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetMemoryHostPointerPropertiesEXT
     {
-        public static readonly VkGetMemoryHostPointerPropertiesEXT Zero = null;
+        public static readonly VkGetMemoryHostPointerPropertiesEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                           /* device */
@@ -4277,7 +4277,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdWriteBufferMarkerAMD
     {
-        public static readonly VkCmdWriteBufferMarkerAMD Zero = null;
+        public static readonly VkCmdWriteBufferMarkerAMD Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,         /* commandBuffer */
@@ -4297,7 +4297,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceCalibrateableTimeDomainsEXT
     {
-        public static readonly VkGetPhysicalDeviceCalibrateableTimeDomainsEXT Zero = null;
+        public static readonly VkGetPhysicalDeviceCalibrateableTimeDomainsEXT Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice, /* physicalDevice */
@@ -4315,7 +4315,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetCalibratedTimestampsEXT
     {
-        public static readonly VkGetCalibratedTimestampsEXT Zero = null;
+        public static readonly VkGetCalibratedTimestampsEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                      /* device */
@@ -4335,7 +4335,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDrawMeshTasksNV
     {
-        public static readonly VkCmdDrawMeshTasksNV Zero = null;
+        public static readonly VkCmdDrawMeshTasksNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4353,7 +4353,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDrawMeshTasksIndirectNV
     {
-        public static readonly VkCmdDrawMeshTasksIndirectNV Zero = null;
+        public static readonly VkCmdDrawMeshTasksIndirectNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4373,7 +4373,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdDrawMeshTasksIndirectCountNV
     {
-        public static readonly VkCmdDrawMeshTasksIndirectCountNV Zero = null;
+        public static readonly VkCmdDrawMeshTasksIndirectCountNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4395,7 +4395,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetExclusiveScissorNV
     {
-        public static readonly VkCmdSetExclusiveScissorNV Zero = null;
+        public static readonly VkCmdSetExclusiveScissorNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4414,7 +4414,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetCheckpointNV
     {
-        public static readonly VkCmdSetCheckpointNV Zero = null;
+        public static readonly VkCmdSetCheckpointNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4431,7 +4431,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetQueueCheckpointDataNV
     {
-        public static readonly VkGetQueueCheckpointDataNV Zero = null;
+        public static readonly VkGetQueueCheckpointDataNV Null = null;
 
         public readonly delegate*<
             VkQueue,             /* queue */
@@ -4449,7 +4449,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkInitializePerformanceApiINTEL
     {
-        public static readonly VkInitializePerformanceApiINTEL Zero = null;
+        public static readonly VkInitializePerformanceApiINTEL Null = null;
 
         public readonly delegate*<
             VkDevice,                             /* device */
@@ -4466,7 +4466,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkUninitializePerformanceApiINTEL
     {
-        public static readonly VkUninitializePerformanceApiINTEL Zero = null;
+        public static readonly VkUninitializePerformanceApiINTEL Null = null;
 
         public readonly delegate*<
             VkDevice, /* device */
@@ -4482,7 +4482,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetPerformanceMarkerINTEL
     {
-        public static readonly VkCmdSetPerformanceMarkerINTEL Zero = null;
+        public static readonly VkCmdSetPerformanceMarkerINTEL Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,               /* commandBuffer */
@@ -4499,7 +4499,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetPerformanceStreamMarkerINTEL
     {
-        public static readonly VkCmdSetPerformanceStreamMarkerINTEL Zero = null;
+        public static readonly VkCmdSetPerformanceStreamMarkerINTEL Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                     /* commandBuffer */
@@ -4516,7 +4516,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetPerformanceOverrideINTEL
     {
-        public static readonly VkCmdSetPerformanceOverrideINTEL Zero = null;
+        public static readonly VkCmdSetPerformanceOverrideINTEL Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                 /* commandBuffer */
@@ -4533,7 +4533,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkAcquirePerformanceConfigurationINTEL
     {
-        public static readonly VkAcquirePerformanceConfigurationINTEL Zero = null;
+        public static readonly VkAcquirePerformanceConfigurationINTEL Null = null;
 
         public readonly delegate*<
             VkDevice,                                    /* device */
@@ -4551,7 +4551,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkReleasePerformanceConfigurationINTEL
     {
-        public static readonly VkReleasePerformanceConfigurationINTEL Zero = null;
+        public static readonly VkReleasePerformanceConfigurationINTEL Null = null;
 
         public readonly delegate*<
             VkDevice,                        /* device */
@@ -4568,7 +4568,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkQueueSetPerformanceConfigurationINTEL
     {
-        public static readonly VkQueueSetPerformanceConfigurationINTEL Zero = null;
+        public static readonly VkQueueSetPerformanceConfigurationINTEL Null = null;
 
         public readonly delegate*<
             VkQueue,                         /* queue */
@@ -4585,7 +4585,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPerformanceParameterINTEL
     {
-        public static readonly VkGetPerformanceParameterINTEL Zero = null;
+        public static readonly VkGetPerformanceParameterINTEL Null = null;
 
         public readonly delegate*<
             VkDevice,                        /* device */
@@ -4603,7 +4603,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSetLocalDimmingAMD
     {
-        public static readonly VkSetLocalDimmingAMD Zero = null;
+        public static readonly VkSetLocalDimmingAMD Null = null;
 
         public readonly delegate*<
             VkDevice,       /* device */
@@ -4621,7 +4621,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetBufferDeviceAddressEXT
     {
-        public static readonly VkGetBufferDeviceAddressEXT Zero = null;
+        public static readonly VkGetBufferDeviceAddressEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                   /* device */
@@ -4638,7 +4638,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceToolPropertiesEXT
     {
-        public static readonly VkGetPhysicalDeviceToolPropertiesEXT Zero = null;
+        public static readonly VkGetPhysicalDeviceToolPropertiesEXT Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                   /* physicalDevice */
@@ -4656,7 +4656,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceCooperativeMatrixPropertiesNV
     {
-        public static readonly VkGetPhysicalDeviceCooperativeMatrixPropertiesNV Zero = null;
+        public static readonly VkGetPhysicalDeviceCooperativeMatrixPropertiesNV Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                 /* physicalDevice */
@@ -4674,7 +4674,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV
     {
-        public static readonly VkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV Zero = null;
+        public static readonly VkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice,                        /* physicalDevice */
@@ -4692,7 +4692,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateHeadlessSurfaceEXT
     {
-        public static readonly VkCreateHeadlessSurfaceEXT Zero = null;
+        public static readonly VkCreateHeadlessSurfaceEXT Null = null;
 
         public readonly delegate*<
             VkInstance,                      /* instance */
@@ -4711,7 +4711,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetLineStippleEXT
     {
-        public static readonly VkCmdSetLineStippleEXT Zero = null;
+        public static readonly VkCmdSetLineStippleEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4729,7 +4729,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkResetQueryPoolEXT
     {
-        public static readonly VkResetQueryPoolEXT Zero = null;
+        public static readonly VkResetQueryPoolEXT Null = null;
 
         public readonly delegate*<
             VkDevice,    /* device */
@@ -4748,7 +4748,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetCullModeEXT
     {
-        public static readonly VkCmdSetCullModeEXT Zero = null;
+        public static readonly VkCmdSetCullModeEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,    /* commandBuffer */
@@ -4765,7 +4765,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetFrontFaceEXT
     {
-        public static readonly VkCmdSetFrontFaceEXT Zero = null;
+        public static readonly VkCmdSetFrontFaceEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4782,7 +4782,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetPrimitiveTopologyEXT
     {
-        public static readonly VkCmdSetPrimitiveTopologyEXT Zero = null;
+        public static readonly VkCmdSetPrimitiveTopologyEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,     /* commandBuffer */
@@ -4799,7 +4799,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetViewportWithCountEXT
     {
-        public static readonly VkCmdSetViewportWithCountEXT Zero = null;
+        public static readonly VkCmdSetViewportWithCountEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4817,7 +4817,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetScissorWithCountEXT
     {
-        public static readonly VkCmdSetScissorWithCountEXT Zero = null;
+        public static readonly VkCmdSetScissorWithCountEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4835,7 +4835,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBindVertexBuffers2EXT
     {
-        public static readonly VkCmdBindVertexBuffers2EXT Zero = null;
+        public static readonly VkCmdBindVertexBuffers2EXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4857,7 +4857,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetDepthTestEnableEXT
     {
-        public static readonly VkCmdSetDepthTestEnableEXT Zero = null;
+        public static readonly VkCmdSetDepthTestEnableEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4874,7 +4874,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetDepthWriteEnableEXT
     {
-        public static readonly VkCmdSetDepthWriteEnableEXT Zero = null;
+        public static readonly VkCmdSetDepthWriteEnableEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4891,7 +4891,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetDepthCompareOpEXT
     {
-        public static readonly VkCmdSetDepthCompareOpEXT Zero = null;
+        public static readonly VkCmdSetDepthCompareOpEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4908,7 +4908,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetDepthBoundsTestEnableEXT
     {
-        public static readonly VkCmdSetDepthBoundsTestEnableEXT Zero = null;
+        public static readonly VkCmdSetDepthBoundsTestEnableEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4925,7 +4925,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetStencilTestEnableEXT
     {
-        public static readonly VkCmdSetStencilTestEnableEXT Zero = null;
+        public static readonly VkCmdSetStencilTestEnableEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -4942,7 +4942,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetStencilOpEXT
     {
-        public static readonly VkCmdSetStencilOpEXT Zero = null;
+        public static readonly VkCmdSetStencilOpEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
@@ -4963,7 +4963,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetGeneratedCommandsMemoryRequirementsNV
     {
-        public static readonly VkGetGeneratedCommandsMemoryRequirementsNV Zero = null;
+        public static readonly VkGetGeneratedCommandsMemoryRequirementsNV Null = null;
 
         public readonly delegate*<
             VkDevice,                                     /* device */
@@ -4981,7 +4981,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdPreprocessGeneratedCommandsNV
     {
-        public static readonly VkCmdPreprocessGeneratedCommandsNV Zero = null;
+        public static readonly VkCmdPreprocessGeneratedCommandsNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,            /* commandBuffer */
@@ -4998,7 +4998,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdExecuteGeneratedCommandsNV
     {
-        public static readonly VkCmdExecuteGeneratedCommandsNV Zero = null;
+        public static readonly VkCmdExecuteGeneratedCommandsNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,            /* commandBuffer */
@@ -5016,7 +5016,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBindPipelineShaderGroupNV
     {
-        public static readonly VkCmdBindPipelineShaderGroupNV Zero = null;
+        public static readonly VkCmdBindPipelineShaderGroupNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,     /* commandBuffer */
@@ -5035,7 +5035,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateIndirectCommandsLayoutNV
     {
-        public static readonly VkCreateIndirectCommandsLayoutNV Zero = null;
+        public static readonly VkCreateIndirectCommandsLayoutNV Null = null;
 
         public readonly delegate*<
             VkDevice,                              /* device */
@@ -5054,7 +5054,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyIndirectCommandsLayoutNV
     {
-        public static readonly VkDestroyIndirectCommandsLayoutNV Zero = null;
+        public static readonly VkDestroyIndirectCommandsLayoutNV Null = null;
 
         public readonly delegate*<
             VkDevice,                   /* device */
@@ -5072,7 +5072,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreatePrivateDataSlotEXT
     {
-        public static readonly VkCreatePrivateDataSlotEXT Zero = null;
+        public static readonly VkCreatePrivateDataSlotEXT Null = null;
 
         public readonly delegate*<
             VkDevice,                        /* device */
@@ -5091,7 +5091,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyPrivateDataSlotEXT
     {
-        public static readonly VkDestroyPrivateDataSlotEXT Zero = null;
+        public static readonly VkDestroyPrivateDataSlotEXT Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -5109,7 +5109,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkSetPrivateDataEXT
     {
-        public static readonly VkSetPrivateDataEXT Zero = null;
+        public static readonly VkSetPrivateDataEXT Null = null;
 
         public readonly delegate*<
             VkDevice,             /* device */
@@ -5129,7 +5129,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetPrivateDataEXT
     {
-        public static readonly VkGetPrivateDataEXT Zero = null;
+        public static readonly VkGetPrivateDataEXT Null = null;
 
         public readonly delegate*<
             VkDevice,             /* device */
@@ -5149,7 +5149,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetFragmentShadingRateEnumNV
     {
-        public static readonly VkCmdSetFragmentShadingRateEnumNV Zero = null;
+        public static readonly VkCmdSetFragmentShadingRateEnumNV Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                    /* commandBuffer */
@@ -5168,7 +5168,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkAcquireWinrtDisplayNV
     {
-        public static readonly VkAcquireWinrtDisplayNV Zero = null;
+        public static readonly VkAcquireWinrtDisplayNV Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice, /* physicalDevice */
@@ -5185,7 +5185,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetWinrtDisplayNV
     {
-        public static readonly VkGetWinrtDisplayNV Zero = null;
+        public static readonly VkGetWinrtDisplayNV Null = null;
 
         public readonly delegate*<
             VkPhysicalDevice, /* physicalDevice */
@@ -5203,7 +5203,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetVertexInputEXT
     {
-        public static readonly VkCmdSetVertexInputEXT Zero = null;
+        public static readonly VkCmdSetVertexInputEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                        /* commandBuffer */
@@ -5223,7 +5223,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetColorWriteEnableEXT
     {
-        public static readonly VkCmdSetColorWriteEnableEXT Zero = null;
+        public static readonly VkCmdSetColorWriteEnableEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -5241,7 +5241,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateAccelerationStructureKHR
     {
-        public static readonly VkCreateAccelerationStructureKHR Zero = null;
+        public static readonly VkCreateAccelerationStructureKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                              /* device */
@@ -5260,7 +5260,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyAccelerationStructureKHR
     {
-        public static readonly VkDestroyAccelerationStructureKHR Zero = null;
+        public static readonly VkDestroyAccelerationStructureKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                   /* device */
@@ -5278,7 +5278,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBuildAccelerationStructuresKHR
     {
-        public static readonly VkCmdBuildAccelerationStructuresKHR Zero = null;
+        public static readonly VkCmdBuildAccelerationStructuresKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                              /* commandBuffer */
@@ -5297,7 +5297,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdBuildAccelerationStructuresIndirectKHR
     {
-        public static readonly VkCmdBuildAccelerationStructuresIndirectKHR Zero = null;
+        public static readonly VkCmdBuildAccelerationStructuresIndirectKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                              /* commandBuffer */
@@ -5318,7 +5318,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkBuildAccelerationStructuresKHR
     {
-        public static readonly VkBuildAccelerationStructuresKHR Zero = null;
+        public static readonly VkBuildAccelerationStructuresKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                                     /* device */
@@ -5338,7 +5338,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCopyAccelerationStructureKHR
     {
-        public static readonly VkCopyAccelerationStructureKHR Zero = null;
+        public static readonly VkCopyAccelerationStructureKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                            /* device */
@@ -5356,7 +5356,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCopyAccelerationStructureToMemoryKHR
     {
-        public static readonly VkCopyAccelerationStructureToMemoryKHR Zero = null;
+        public static readonly VkCopyAccelerationStructureToMemoryKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                                    /* device */
@@ -5374,7 +5374,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCopyMemoryToAccelerationStructureKHR
     {
-        public static readonly VkCopyMemoryToAccelerationStructureKHR Zero = null;
+        public static readonly VkCopyMemoryToAccelerationStructureKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                                    /* device */
@@ -5392,7 +5392,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkWriteAccelerationStructuresPropertiesKHR
     {
-        public static readonly VkWriteAccelerationStructuresPropertiesKHR Zero = null;
+        public static readonly VkWriteAccelerationStructuresPropertiesKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                    /* device */
@@ -5414,7 +5414,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdCopyAccelerationStructureKHR
     {
-        public static readonly VkCmdCopyAccelerationStructureKHR Zero = null;
+        public static readonly VkCmdCopyAccelerationStructureKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                     /* commandBuffer */
@@ -5431,7 +5431,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdCopyAccelerationStructureToMemoryKHR
     {
-        public static readonly VkCmdCopyAccelerationStructureToMemoryKHR Zero = null;
+        public static readonly VkCmdCopyAccelerationStructureToMemoryKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                             /* commandBuffer */
@@ -5448,7 +5448,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdCopyMemoryToAccelerationStructureKHR
     {
-        public static readonly VkCmdCopyMemoryToAccelerationStructureKHR Zero = null;
+        public static readonly VkCmdCopyMemoryToAccelerationStructureKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                             /* commandBuffer */
@@ -5465,7 +5465,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetAccelerationStructureDeviceAddressKHR
     {
-        public static readonly VkGetAccelerationStructureDeviceAddressKHR Zero = null;
+        public static readonly VkGetAccelerationStructureDeviceAddressKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                                     /* device */
@@ -5482,7 +5482,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdWriteAccelerationStructuresPropertiesKHR
     {
-        public static readonly VkCmdWriteAccelerationStructuresPropertiesKHR Zero = null;
+        public static readonly VkCmdWriteAccelerationStructuresPropertiesKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,             /* commandBuffer */
@@ -5503,7 +5503,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetDeviceAccelerationStructureCompatibilityKHR
     {
-        public static readonly VkGetDeviceAccelerationStructureCompatibilityKHR Zero = null;
+        public static readonly VkGetDeviceAccelerationStructureCompatibilityKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                                 /* device */
@@ -5521,7 +5521,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetAccelerationStructureBuildSizesKHR
     {
-        public static readonly VkGetAccelerationStructureBuildSizesKHR Zero = null;
+        public static readonly VkGetAccelerationStructureBuildSizesKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                                     /* device */
@@ -5541,7 +5541,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdTraceRaysKHR
     {
-        public static readonly VkCmdTraceRaysKHR Zero = null;
+        public static readonly VkCmdTraceRaysKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                  /* commandBuffer */
@@ -5564,7 +5564,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateRayTracingPipelinesKHR
     {
-        public static readonly VkCreateRayTracingPipelinesKHR Zero = null;
+        public static readonly VkCreateRayTracingPipelinesKHR Null = null;
 
         public readonly delegate*<
             VkDevice,                           /* device */
@@ -5586,7 +5586,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetRayTracingCaptureReplayShaderGroupHandlesKHR
     {
-        public static readonly VkGetRayTracingCaptureReplayShaderGroupHandlesKHR Zero = null;
+        public static readonly VkGetRayTracingCaptureReplayShaderGroupHandlesKHR Null = null;
 
         public readonly delegate*<
             VkDevice,   /* device */
@@ -5607,7 +5607,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdTraceRaysIndirectKHR
     {
-        public static readonly VkCmdTraceRaysIndirectKHR Zero = null;
+        public static readonly VkCmdTraceRaysIndirectKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,                  /* commandBuffer */
@@ -5628,7 +5628,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetRayTracingShaderGroupStackSizeKHR
     {
-        public static readonly VkGetRayTracingShaderGroupStackSizeKHR Zero = null;
+        public static readonly VkGetRayTracingShaderGroupStackSizeKHR Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -5647,7 +5647,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetRayTracingPipelineStackSizeKHR
     {
-        public static readonly VkCmdSetRayTracingPipelineStackSizeKHR Zero = null;
+        public static readonly VkCmdSetRayTracingPipelineStackSizeKHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -5664,7 +5664,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetEvent2KHR
     {
-        public static readonly VkCmdSetEvent2KHR Zero = null;
+        public static readonly VkCmdSetEvent2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,      /* commandBuffer */
@@ -5682,7 +5682,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdResetEvent2KHR
     {
-        public static readonly VkCmdResetEvent2KHR Zero = null;
+        public static readonly VkCmdResetEvent2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,             /* commandBuffer */
@@ -5700,7 +5700,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdWaitEvents2KHR
     {
-        public static readonly VkCmdWaitEvents2KHR Zero = null;
+        public static readonly VkCmdWaitEvents2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,      /* commandBuffer */
@@ -5719,7 +5719,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdPipelineBarrier2KHR
     {
-        public static readonly VkCmdPipelineBarrier2KHR Zero = null;
+        public static readonly VkCmdPipelineBarrier2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,      /* commandBuffer */
@@ -5736,7 +5736,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdWriteTimestamp2KHR
     {
-        public static readonly VkCmdWriteTimestamp2KHR Zero = null;
+        public static readonly VkCmdWriteTimestamp2KHR Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,             /* commandBuffer */
@@ -5755,7 +5755,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkQueueSubmit2KHR
     {
-        public static readonly VkQueueSubmit2KHR Zero = null;
+        public static readonly VkQueueSubmit2KHR Null = null;
 
         public readonly delegate*<
             VkQueue,           /* queue */
@@ -5774,7 +5774,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdWriteBufferMarker2AMD
     {
-        public static readonly VkCmdWriteBufferMarker2AMD Zero = null;
+        public static readonly VkCmdWriteBufferMarker2AMD Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,             /* commandBuffer */
@@ -5794,7 +5794,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkGetQueueCheckpointData2NV
     {
-        public static readonly VkGetQueueCheckpointData2NV Zero = null;
+        public static readonly VkGetQueueCheckpointData2NV Null = null;
 
         public readonly delegate*<
             VkQueue,              /* queue */
@@ -5812,7 +5812,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetPatchControlPointsEXT
     {
-        public static readonly VkCmdSetPatchControlPointsEXT Zero = null;
+        public static readonly VkCmdSetPatchControlPointsEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -5829,7 +5829,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetRasterizerDiscardEnableEXT
     {
-        public static readonly VkCmdSetRasterizerDiscardEnableEXT Zero = null;
+        public static readonly VkCmdSetRasterizerDiscardEnableEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -5846,7 +5846,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetDepthBiasEnableEXT
     {
-        public static readonly VkCmdSetDepthBiasEnableEXT Zero = null;
+        public static readonly VkCmdSetDepthBiasEnableEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -5863,7 +5863,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetLogicOpEXT
     {
-        public static readonly VkCmdSetLogicOpEXT Zero = null;
+        public static readonly VkCmdSetLogicOpEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -5880,7 +5880,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdSetPrimitiveRestartEnableEXT
     {
-        public static readonly VkCmdSetPrimitiveRestartEnableEXT Zero = null;
+        public static readonly VkCmdSetPrimitiveRestartEnableEXT Null = null;
 
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
@@ -5897,7 +5897,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateCuModuleNVX
     {
-        public static readonly VkCreateCuModuleNVX Zero = null;
+        public static readonly VkCreateCuModuleNVX Null = null;
 
         public readonly delegate*<
             VkDevice,                 /* device */
@@ -5916,7 +5916,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCreateCuFunctionNVX
     {
-        public static readonly VkCreateCuFunctionNVX Zero = null;
+        public static readonly VkCreateCuFunctionNVX Null = null;
 
         public readonly delegate*<
             VkDevice,                   /* device */
@@ -5935,7 +5935,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyCuModuleNVX
     {
-        public static readonly VkDestroyCuModuleNVX Zero = null;
+        public static readonly VkDestroyCuModuleNVX Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -5953,7 +5953,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkDestroyCuFunctionNVX
     {
-        public static readonly VkDestroyCuFunctionNVX Zero = null;
+        public static readonly VkDestroyCuFunctionNVX Null = null;
 
         public readonly delegate*<
             VkDevice,               /* device */
@@ -5971,7 +5971,7 @@ namespace Exomia.Vulkan.Api.Core
 
     public readonly unsafe struct VkCmdCuLaunchKernelNVX
     {
-        public static readonly VkCmdCuLaunchKernelNVX Zero = null;
+        public static readonly VkCmdCuLaunchKernelNVX Null = null;
 
         public readonly delegate*<
             VkCommandBuffer,    /* commandBuffer */
