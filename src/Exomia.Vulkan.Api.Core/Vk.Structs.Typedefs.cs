@@ -108,6 +108,30 @@ namespace Exomia.Vulkan.Api.Core
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator ==(VkDeviceSize left, ulong right)
+        {
+            return left._size == right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator !=(VkDeviceSize left, ulong right)
+        {
+            return left._size != right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator ==(VkDeviceSize left, long right)
+        {
+            return left._size == (ulong)right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator !=(VkDeviceSize left, long right)
+        {
+            return left._size != (ulong)right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator >=(VkDeviceSize left, VkDeviceSize right)
         {
             return left._size >= right._size;
@@ -117,6 +141,30 @@ namespace Exomia.Vulkan.Api.Core
         public static bool operator <=(VkDeviceSize left, VkDeviceSize right)
         {
             return left._size <= right._size;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator >=(VkDeviceSize left, ulong right)
+        {
+            return left._size >= right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator <=(VkDeviceSize left, ulong right)
+        {
+            return left._size <= right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator >=(VkDeviceSize left, long right)
+        {
+            return left._size >= (ulong)right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator <=(VkDeviceSize left, long right)
+        {
+            return left._size < (ulong)right;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -132,6 +180,30 @@ namespace Exomia.Vulkan.Api.Core
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator >(VkDeviceSize left, ulong right)
+        {
+            return left._size > right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator <(VkDeviceSize left, ulong right)
+        {
+            return left._size < right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator >(VkDeviceSize left, long right)
+        {
+            return left._size > (ulong)right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool operator <(VkDeviceSize left, long right)
+        {
+            return left._size < (ulong)right;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static VkDeviceSize operator +(VkDeviceSize left, VkDeviceSize right)
         {
             return (VkDeviceSize)(left._size + right._size);
@@ -141,6 +213,66 @@ namespace Exomia.Vulkan.Api.Core
         public static VkDeviceSize operator -(VkDeviceSize left, VkDeviceSize right)
         {
             return (VkDeviceSize)(left._size - right._size);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator +(VkDeviceSize left, ulong right)
+        {
+            return (VkDeviceSize)(left._size + right);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator -(VkDeviceSize left, ulong right)
+        {
+            return (VkDeviceSize)(left._size - right);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator +(VkDeviceSize left, long right)
+        {
+            return (VkDeviceSize)(left._size + (ulong)right);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator -(VkDeviceSize left, long right)
+        {
+            return (VkDeviceSize)(left._size - (ulong)right);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator *(VkDeviceSize left, VkDeviceSize right)
+        {
+            return (VkDeviceSize)(left._size * right._size);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator /(VkDeviceSize left, VkDeviceSize right)
+        {
+            return (VkDeviceSize)(left._size / right._size);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator *(VkDeviceSize left, ulong right)
+        {
+            return (VkDeviceSize)(left._size * right);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator /(VkDeviceSize left, ulong right)
+        {
+            return (VkDeviceSize)(left._size / right);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator *(VkDeviceSize left, long right)
+        {
+            return (VkDeviceSize)(left._size * (ulong)right);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static VkDeviceSize operator /(VkDeviceSize left, long right)
+        {
+            return (VkDeviceSize)(left._size / (ulong)right);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
