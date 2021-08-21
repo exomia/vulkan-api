@@ -88,6 +88,14 @@ namespace Exomia.Vulkan.Api.Core
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static implicit operator VkDeviceSize(long size)
+        {
+            VkDeviceSize value;
+            *(long*)&value = size;
+            return value;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator ==(VkDeviceSize left, VkDeviceSize right)
         {
             return left._size == right._size;
