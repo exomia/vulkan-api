@@ -88,7 +88,7 @@ namespace Exomia.Vulkan.Api.Core
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator VkDeviceSize(long size)
+        public static explicit operator VkDeviceSize(long size)
         {
             VkDeviceSize value;
             *(long*)&value = size;
