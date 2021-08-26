@@ -2242,6 +2242,13 @@ namespace Exomia.Vulkan.Api.Core
         uint                                   vertexAttributeDescriptionCount,
         VkVertexInputAttributeDescription2EXT* pVertexAttributeDescriptions);
 
+    public unsafe delegate void GetSubpassShadingMaxWorkgroupSizeHUAWEI(
+        VkRenderPass renderpass,
+        VkExtent2D*  pMaxWorkgroupSize);
+
+    public delegate void CmdSubpassShadingHUAWEI(
+        VkCommandBuffer commandBuffer);
+
     public unsafe delegate void CmdSetColorWriteEnableEXT(
         VkCommandBuffer commandBuffer,
         uint            attachmentCount,
@@ -2429,4 +2436,16 @@ namespace Exomia.Vulkan.Api.Core
     public unsafe delegate void CmdCuLaunchKernelNVX(
         VkCommandBuffer    commandBuffer,
         VkCuLaunchInfoNVX* pLaunchInfo);
+
+    public delegate void AcquireDrmDisplayEXT(
+        VkPhysicalDevice physicalDevice,
+        int drmFd,
+        VkDisplayKHR display);
+
+    public unsafe delegate void GetDrmDisplayEXT(
+        VkPhysicalDevice physicalDevice,
+        int drmFd,
+        uint connectorId,
+        VkDisplayKHR* display);
+
 }

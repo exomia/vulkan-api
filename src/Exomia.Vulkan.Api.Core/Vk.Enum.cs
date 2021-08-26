@@ -584,6 +584,9 @@ namespace Exomia.Vulkan.Api.Core
         PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV         = 1000326000,
         PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV           = 1000326001,
         PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV          = 1000326002,
+        ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV          = 1000327000,
+        PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV               = 1000327001,
+        ACCELERATION_STRUCTURE_MOTION_INFO_NV                             = 1000327002,
         PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT            = 1000330000,
         PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT               = 1000332000,
         PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT             = 1000332001,
@@ -608,10 +611,14 @@ namespace Exomia.Vulkan.Api.Core
         PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT           = 1000352000,
         VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT                            = 1000352001,
         VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT                          = 1000352002,
+        PHYSICAL_DEVICE_DRM_PROPERTIES_EXT                                = 1000353000,
         IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA                          = 1000364000,
         MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA                           = 1000364001,
         MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA                             = 1000364002,
         IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA                       = 1000365000,
+        SUBPASSS_SHADING_PIPELINE_CREATE_INFO_HUAWEI                      = 1000369000,
+        PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI                   = 1000369001,
+        PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI                 = 1000369002,
         SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA                          = 1000365001,
         PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT             = 1000377000,
         SCREEN_SURFACE_CREATE_INFO_QNX                                    = 1000378000,
@@ -619,6 +626,8 @@ namespace Exomia.Vulkan.Api.Core
         PIPELINE_COLOR_WRITE_CREATE_INFO_EXT                              = 1000381001,
         PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT                = 1000388000,
         QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT                       = 1000388001,
+        PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT                           = 1000392000,
+        PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT                         = 1000392001,
         PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES                         = PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES,
         PHYSICAL_DEVICE_SHADER_DRAW_PARAMETER_FEATURES                    = PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES,
         DEBUG_REPORT_CREATE_INFO_EXT                                      = DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT,
@@ -1517,11 +1526,12 @@ namespace Exomia.Vulkan.Api.Core
 
     public enum VkPipelineBindPoint
     {
-        GRAPHICS        = 0,
-        COMPUTE         = 1,
-        RAY_TRACING_KHR = 1000165000,
-        RAY_TRACING_NV  = RAY_TRACING_KHR,
-        MAX_ENUM        = 0x7FFFFFFF
+        GRAPHICS               = 0,
+        COMPUTE                = 1,
+        RAY_TRACING_KHR        = 1000165000,
+        SUBPASS_SHADING_HUAWEI = 1000369003,
+        RAY_TRACING_NV         = RAY_TRACING_KHR,
+        MAX_ENUM               = 0x7FFFFFFF
     }
 
     public enum VkCommandBufferLevel
@@ -1870,6 +1880,7 @@ namespace Exomia.Vulkan.Api.Core
         FRAGMENT_DENSITY_PROCESS_BIT_EXT         = 0x00800000UL,
         TASK_SHADER_BIT_NV                       = 0x00080000UL,
         MESH_SHADER_BIT_NV                       = 0x00100000UL,
+        SUBPASS_SHADING_BIT_HUAWEI               = 0x8000000000UL
     }
 
     [Flags]
@@ -2057,6 +2068,7 @@ namespace Exomia.Vulkan.Api.Core
         LIBRARY_BIT_KHR                                        = 0x00000800,
         FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT_EXT              = 0x00000100,
         EARLY_RETURN_ON_FAILURE_BIT_EXT                        = 0x00000200,
+        RAY_TRACING_ALLOW_MOTION_BIT_NV                        = 0x00100000,
         DISPATCH_BASE                                          = DISPATCH_BASE_BIT,
         VIEW_INDEX_FROM_DEVICE_INDEX_BIT_KHR                   = VIEW_INDEX_FROM_DEVICE_INDEX_BIT,
         DISPATCH_BASE_KHR                                      = DISPATCH_BASE,
@@ -2090,6 +2102,7 @@ namespace Exomia.Vulkan.Api.Core
         CALLABLE_BIT_KHR            = 0x00002000,
         TASK_BIT_NV                 = 0x00000040,
         MESH_BIT_NV                 = 0x00000080,
+        SUBPASS_SHADING_BIT_HUAWEI  = 0x00004000,
         RAYGEN_BIT_NV               = RAYGEN_BIT_KHR,
         ANY_HIT_BIT_NV              = ANY_HIT_BIT_KHR,
         CLOSEST_HIT_BIT_NV          = CLOSEST_HIT_BIT_KHR,
@@ -3009,6 +3022,7 @@ namespace Exomia.Vulkan.Api.Core
         PREFER_FAST_TRACE_BIT_KHR = 0x00000004,
         PREFER_FAST_BUILD_BIT_KHR = 0x00000008,
         LOW_MEMORY_BIT_KHR        = 0x00000010,
+        STRUCTURE_MOTION_BIT_NV   = 0x00000020,
         ALLOW_UPDATE_BIT_NV       = ALLOW_UPDATE_BIT_KHR,
         ALLOW_COMPACTION_BIT_NV   = ALLOW_COMPACTION_BIT_KHR,
         PREFER_FAST_TRACE_BIT_NV  = PREFER_FAST_TRACE_BIT_KHR,
@@ -3281,6 +3295,7 @@ namespace Exomia.Vulkan.Api.Core
     public enum VkAccelerationStructureCreateFlagsKHR
     {
         DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHR = 0x00000001,
+        MOTION_BIT_NV                         = 0x00000004,
         FLAG_BITS_MAX_ENUM_KHR                = 0x7FFFFFFF
     }
 
@@ -3297,5 +3312,13 @@ namespace Exomia.Vulkan.Api.Core
         FIRST_VERTEX_EXT = 0,
         LAST_VERTEX_EXT  = 1,
         MAX_ENUM_EXT     = 0x7FFFFFFF
-    } 
+    }
+
+    public enum VkAccelerationStructureMotionInstanceTypeNV
+    {
+        STATIC_NV        = 0,
+        MATRIX_MOTION_NV = 1,
+        SRT_MOTION_NV    = 2,
+        MAX_ENUM_NV      = 0x7FFFFFFF
+    }
 }

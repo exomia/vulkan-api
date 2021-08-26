@@ -1356,6 +1356,21 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
+            VkPhysicalDevice, /* physicalDevice */
+            int,              /* drmFd */
+            VkDisplayKHR,     /* display */
+            VkResult> vkAcquireDrmDisplayEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkPhysicalDevice, /* physicalDevice */
+            int,              /* drmFd */
+            uint,             /* connectorId */
+            VkDisplayKHR*,    /* display */
+            VkResult> vkGetDrmDisplayEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
             VkDevice,                        /* device */
             VkPrivateDataSlotCreateInfoEXT*, /* pCreateInfo */
             VkAllocationCallbacks*,          /* pAllocator */
@@ -1419,10 +1434,42 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
+            VkRenderPass, /* renderpass */
+            VkExtent2D*,  /* pMaxWorkgroupSize */
+            VkResult> vkGetSubpassShadingMaxWorkgroupSizeHUAWEI;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            void> vkCmdSubpassShadingHUAWEI;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* attachmentCount */
             VkBool32*,       /* pColorWriteEnables */
             void> vkCmdSetColorWriteEnableEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer,     /* commandBuffer */
+            uint,                /* drawCount */
+            VkMultiDrawInfoEXT*, /* pVertexInfo */
+            uint,                /* instanceCount */
+            uint,                /* firstInstance */
+            uint,                /* stride */
+            void> vkCmdDrawMultiEXT;
+
+        [FieldOffset(0)]
+        public readonly delegate*<
+            VkCommandBuffer,            /* commandBuffer */
+            uint,                       /* drawCount */
+            VkMultiDrawIndexedInfoEXT*, /* pIndexInfo */
+            uint,                       /* instanceCount */
+            uint,                       /* firstInstance */
+            uint,                       /* stride */
+            int*,                       /* pVertexOffset */
+            void> vkCmdDrawMultiIndexedEXT;
 
         [FieldOffset(0)]
         public readonly delegate*<
@@ -5070,6 +5117,43 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
+    public readonly unsafe struct VkAcquireDrmDisplayEXT
+    {
+        public static readonly VkAcquireDrmDisplayEXT Null = null;
+
+        public readonly delegate*<
+            VkPhysicalDevice, /* physicalDevice */
+            int,              /* drmFd */
+            VkDisplayKHR,     /* display */
+            VkResult> UnsafeInvoke;
+
+        public static implicit operator VkAcquireDrmDisplayEXT(void* ptr)
+        {
+            VkAcquireDrmDisplayEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkGetDrmDisplayEXT
+    {
+        public static readonly VkGetDrmDisplayEXT Null = null;
+
+        public readonly delegate*<
+            VkPhysicalDevice, /* physicalDevice */
+            int,              /* drmFd */
+            uint,             /* connectorId */
+            VkDisplayKHR*,    /* display */
+            VkResult> UnsafeInvoke;
+
+        public static implicit operator VkGetDrmDisplayEXT(void* ptr)
+        {
+            VkGetDrmDisplayEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
     public readonly unsafe struct VkCreatePrivateDataSlotEXT
     {
         public static readonly VkCreatePrivateDataSlotEXT Null = null;
@@ -5220,6 +5304,38 @@ namespace Exomia.Vulkan.Api.Core
             return value;
         }
     }
+    
+    public readonly unsafe struct VkGetSubpassShadingMaxWorkgroupSizeHUAWEI
+    {
+        public static readonly VkGetSubpassShadingMaxWorkgroupSizeHUAWEI Null = null;
+
+        public readonly delegate*<
+            VkRenderPass, /* renderpass */
+            VkExtent2D*,  /* pMaxWorkgroupSize */
+            VkResult> UnsafeInvoke;
+
+        public static implicit operator VkGetSubpassShadingMaxWorkgroupSizeHUAWEI(void* ptr)
+        {
+            VkGetSubpassShadingMaxWorkgroupSizeHUAWEI value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+    public readonly unsafe struct VkCmdSubpassShadingHUAWEI
+    {
+        public static readonly VkCmdSubpassShadingHUAWEI Null = null;
+
+        public readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdSubpassShadingHUAWEI(void* ptr)
+        {
+            VkCmdSubpassShadingHUAWEI value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
 
     public readonly unsafe struct VkCmdSetColorWriteEnableEXT
     {
@@ -5234,6 +5350,49 @@ namespace Exomia.Vulkan.Api.Core
         public static implicit operator VkCmdSetColorWriteEnableEXT(void* ptr)
         {
             VkCmdSetColorWriteEnableEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdDrawMultiEXT
+    {
+        public static readonly VkCmdDrawMultiEXT Null = null;
+
+        public readonly delegate*<
+            VkCommandBuffer,     /* commandBuffer */
+            uint,                /* drawCount */
+            VkMultiDrawInfoEXT*, /* pVertexInfo */
+            uint,                /* instanceCount */
+            uint,                /* firstInstance */
+            uint,                /* stride */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdDrawMultiEXT(void* ptr)
+        {
+            VkCmdDrawMultiEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+    }
+
+    public readonly unsafe struct VkCmdDrawMultiIndexedEXT
+    {
+        public static readonly VkCmdDrawMultiIndexedEXT Null = null;
+
+        public readonly delegate*<
+            VkCommandBuffer,            /* commandBuffer */
+            uint,                       /* drawCount */
+            VkMultiDrawIndexedInfoEXT*, /* pIndexInfo */
+            uint,                       /* instanceCount */
+            uint,                       /* firstInstance */
+            uint,                       /* stride */
+            int*,                       /* pVertexOffset */
+            void> UnsafeInvoke;
+
+        public static implicit operator VkCmdDrawMultiIndexedEXT(void* ptr)
+        {
+            VkCmdDrawMultiIndexedEXT value;
             *(void**)&value = ptr;
             return value;
         }

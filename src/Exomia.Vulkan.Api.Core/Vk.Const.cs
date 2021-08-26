@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core
 {
     public static partial class Vk
     {
-        public const int    VK_HEADER_VERSION                                          = 181;
+        public const int    VK_HEADER_VERSION                                          = 182;
         public const int    VK_NULL_HANDLE                                             = 0;
         public const uint   VK_ATTACHMENT_UNUSED                                       = ~0U;
         public const uint   VK_FALSE                                                   = 0U;
@@ -606,6 +606,9 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_EXT_DEVICE_MEMORY_REPORT                                = 1;
         public const int    VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION                   = 2;
         public const string VK_EXT_DEVICE_MEMORY_REPORT_EXTENSION_NAME                 = "VK_EXT_device_memory_report";
+        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                                 = 1;
+        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION                    = 1;
+        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME                  = "VK_EXT_acquire_drm_display";
         public const int    VK_EXT_ROBUSTNESS2                                         = 1;
         public const int    VK_EXT_ROBUSTNESS_2_SPEC_VERSION                           = 1;
         public const string VK_EXT_ROBUSTNESS_2_EXTENSION_NAME                         = "VK_EXT_robustness2";
@@ -630,6 +633,9 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS                          = 1;
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION             = 1;
         public const string VK_NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME           = "VK_NV_fragment_shading_rate_enums";
+        public const int    VK_NV_RAY_TRACING_MOTION_BLUR                              = 1;
+        public const int    VK_NV_RAY_TRACING_MOTION_BLUR_SPEC_VERSION                 = 1;
+        public const string VK_NV_RAY_TRACING_MOTION_BLUR_EXTENSION_NAME               = "VK_NV_ray_tracing_motion_blur";
         public const int    VK_EXT_YCBCR_2PLANE_444_FORMATS                            = 1;
         public const int    VK_EXT_YCBCR_2PLANE_444_FORMATS_SPEC_VERSION               = 1;
         public const string VK_EXT_YCBCR_2PLANE_444_FORMATS_EXTENSION_NAME             = "VK_EXT_ycbcr_2plane_444_formats";
@@ -654,9 +660,22 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_EXT_VERTEX_INPUT_DYNAMIC_STATE                          = 1;
         public const int    VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_SPEC_VERSION             = 2;
         public const string VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_EXTENSION_NAME           = "VK_EXT_vertex_input_dynamic_state";
+        public const int    VK_EXT_PHYSICAL_DEVICE_DRM                                 = 1;
+        public const int    VK_EXT_PHYSICAL_DEVICE_DRM_SPEC_VERSION                    = 1;
+        public const string VK_EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME                  = "VK_EXT_physical_device_drm";
+        public const int    VK_HUAWEI_SUBPASS_SHADING                                  = 1;
+        public const int    VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION                     = 0;
+        public const string VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME                   = "VK_HUAWEI_subpass_shading";
         public const int    VK_EXT_COLOR_WRITE_ENABLE                                  = 1;
         public const int    VK_EXT_COLOR_WRITE_ENABLE_SPEC_VERSION                     = 1;
         public const string VK_EXT_COLOR_WRITE_ENABLE_EXTENSION_NAME                   = "VK_EXT_color_write_enable";
+        public const int    VK_EXT_GLOBAL_PRIORITY_QUERY                               = 1;
+        public const uint   VK_MAX_GLOBAL_PRIORITY_SIZE_EXT                            = 16U;
+        public const int    VK_EXT_GLOBAL_PRIORITY_QUERY_SPEC_VERSION                  = 1;
+        public const string VK_EXT_GLOBAL_PRIORITY_QUERY_EXTENSION_NAME                = "VK_EXT_global_priority_query";
+        public const int    VK_EXT_MULTI_DRAW                                          = 1;
+        public const int    VK_EXT_MULTI_DRAW_SPEC_VERSION                             = 1;
+        public const string VK_EXT_MULTI_DRAW_EXTENSION_NAME                           = "VK_EXT_multi_draw";
         public const int    VK_KHR_ACCELERATION_STRUCTURE                              = 1;
         public const int    VK_KHR_ACCELERATION_STRUCTURE_SPEC_VERSION                 = 11;
         public const string VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME               = "VK_KHR_acceleration_structure";
@@ -678,9 +697,5 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_KHR_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW                = 1;
         public const int    VK_KHR_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_SPEC_VERSION   = 1;
         public const string VK_KHR_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_EXTENSION_NAME = "VK_KHR_shader_subgroup_uniform_control_flow";
-        public const int    VK_EXT_GLOBAL_PRIORITY_QUERY                               = 1;
-        public const uint   VK_MAX_GLOBAL_PRIORITY_SIZE_EXT                            = 16U;
-        public const int    VK_EXT_GLOBAL_PRIORITY_QUERY_SPEC_VERSION                  = 1;
-        public const string VK_EXT_GLOBAL_PRIORITY_QUERY_EXTENSION_NAME                = "VK_EXT_global_priority_query";
     }
 }

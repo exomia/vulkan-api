@@ -329,4 +329,22 @@ namespace Exomia.Vulkan.Api.Core
         /// </summary>
         Reserved = 0
     }
+
+    [Flags]
+    public enum VkAccelerationStructureMotionInfoFlagsNV : uint
+    {
+        /// <summary>
+        ///     Reserved for future use
+        /// </summary>
+        Reserved = 0
+    }
+
+    [Flags]
+    public enum VkAccelerationStructureMotionInstanceFlagsNV : uint
+    {
+        /// <summary>
+        ///     Reserved for future use
+        /// </summary>
+        Reserved = 0
+    }
 }

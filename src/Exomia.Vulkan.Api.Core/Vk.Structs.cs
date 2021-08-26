@@ -10,6 +10,7 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
 using System.Runtime.InteropServices;
 
 // ReSharper disable UnusedMember.Global
@@ -5840,6 +5841,132 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkAccelerationStructureGeometryMotionTrianglesDataNV
+    {
+        public const VkStructureType STYPE = VkStructureType.ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV;
+        public VkStructureType sType;
+        public void* pNext;
+        public VkDeviceOrHostAddressConstKHR vertexData;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkAccelerationStructureMotionInfoNV
+    {
+        public const VkStructureType STYPE = VkStructureType.ACCELERATION_STRUCTURE_MOTION_INFO_NV;
+        public VkStructureType sType;
+        public void* pNext;
+        public uint maxInstances;
+        public VkAccelerationStructureMotionInfoFlagsNV flags;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkAccelerationStructureMatrixMotionInstanceNV
+    {
+        public  VkTransformMatrixKHR       transformT0;
+        public  VkTransformMatrixKHR       transformT1;
+        
+        private uint                       value1;
+        public uint instanceCustomIndex
+        {
+            get { return value1 & 0x00FFFFFF; }
+            set { value1 = (value1 & 0xFF000000) | (value & 0x00FFFFFF); }
+        }
+        public uint mask
+        {
+            get { return value1 >> 24; }
+            set { value1 = (value << 24) | (value1 & 0x00FFFFFF); }
+        }
+
+        private uint value2;
+        public uint instanceShaderBindingTableRecordOffset
+        {
+            get { return value2 & 0x00FFFFFF; }
+            set { value2 = (value2 & 0xFF000000) | (value & 0x00FFFFFF); }
+        }
+
+        public VkGeometryInstanceFlagsKHR flags
+        {
+            get { return (VkGeometryInstanceFlagsKHR)(value2 >> 24); }
+            set { value2 = ((uint)value << 24) | (value2 & 0x00FFFFFF); }
+        }
+        
+        public  ulong                      accelerationStructureReference;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkSRTDataNV
+    {
+        public float sx;
+        public float a;
+        public float b;
+        public float pvx;
+        public float sy;
+        public float c;
+        public float pvy;
+        public float sz;
+        public float pvz;
+        public float qx;
+        public float qy;
+        public float qz;
+        public float qw;
+        public float tx;
+        public float ty;
+        public float tz;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkAccelerationStructureSRTMotionInstanceNV
+    {
+        public  VkSRTDataNV transformT0;
+        public  VkSRTDataNV transformT1;
+        private uint        value1;
+        public uint instanceCustomIndex
+        {
+            get { return value1 & 0x00FFFFFF; }
+            set { value1 = (value1 & 0xFF000000) | (value & 0x00FFFFFF); }
+        }
+
+        public uint mask
+        {
+            get { return value1 >> 24; }
+            set { value1 = (value << 24) | (value1 & 0x00FFFFFF); }
+        }
+
+        private uint value2;
+        public uint instanceShaderBindingTableRecordOffset
+        {
+            get { return value2 & 0x00FFFFFF; }
+            set { value2 = (value2 & 0xFF000000) | (value & 0x00FFFFFF); }
+        }
+
+        public VkGeometryInstanceFlagsKHR flags
+        {
+            get { return (VkGeometryInstanceFlagsKHR)(value2 >> 24); }
+            set { value2 = ((uint)value << 24) | (value2 & 0x00FFFFFF); }
+        }
+
+        public ulong accelerationStructureReference;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkAccelerationStructureMotionInstanceNV
+    {
+        public VkAccelerationStructureMotionInstanceTypeNV  type;
+        public VkAccelerationStructureMotionInstanceFlagsNV flags;
+        public VkAccelerationStructureMotionInstanceDataNV  data;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV;
+        public VkStructureType sType;
+        public void* pNext;
+        public VkBool32 rayTracingMotionBlur;
+        public VkBool32 rayTracingMotionBlurPipelineTraceRaysIndirect;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT
     {
         public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT;
@@ -5958,6 +6085,48 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceDrmPropertiesEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DRM_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        hasPrimary;
+        public       VkBool32        hasRender;
+        public       long            primaryMajor;
+        public       long            primaryMinor;
+        public       long            renderMajor;
+        public       long            renderMinor;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkSubpassShadingPipelineCreateInfoHUAWEI
+    {
+        public const VkStructureType STYPE = VkStructureType.SUBPASSS_SHADING_PIPELINE_CREATE_INFO_HUAWEI;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkRenderPass    renderPass;
+        public       uint            subpass;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceSubpassShadingFeaturesHUAWEI
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        subpassShading;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxSubpassShadingWorkgroupSizeAspectRatio;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceColorWriteEnableFeaturesEXT
     {
         public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT;
@@ -5974,6 +6143,58 @@ namespace Exomia.Vulkan.Api.Core
         public       void*           pNext;
         public       uint            attachmentCount;
         public       VkBool32*       pColorWriteEnables;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        globalPriorityQuery;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkQueueFamilyGlobalPriorityPropertiesEXT
+    {
+        public const VkStructureType                     STYPE = VkStructureType.QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT;
+        public       VkStructureType                     sType;
+        public       void*                               pNext;
+        public       uint                                priorityCount;
+        public       VkArray16<VkQueueGlobalPriorityEXT> priorities;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceMultiDrawFeaturesEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        multiDraw;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceMultiDrawPropertiesEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxMultiDrawCount;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkMultiDrawInfoEXT
+    {
+        public uint firstVertex;
+        public uint vertexCount;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkMultiDrawIndexedInfoEXT
+    {
+        public uint firstIndex;
+        public uint indexCount;
+        public int  vertexOffset;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -6474,24 +6695,5 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType sType;
         public       void*           pNext;
         public       VkBool32        shaderSubgroupUniformControlFlow;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        globalPriorityQuery;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkQueueFamilyGlobalPriorityPropertiesEXT
-    {
-        public const VkStructureType                     STYPE = VkStructureType.QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT;
-        public       VkStructureType                     sType;
-        public       void*                               pNext;
-        public       uint                                priorityCount;
-        public       VkArray16<VkQueueGlobalPriorityEXT> priorities;
     }
 }
