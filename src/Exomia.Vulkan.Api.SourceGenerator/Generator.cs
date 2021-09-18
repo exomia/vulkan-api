@@ -8,6 +8,7 @@
 
 #endregion
 
+using System.Text;
 using Exomia.Vulkan.Api.SourceGenerator.Models;
 using Microsoft.CodeAnalysis;
 
@@ -22,8 +23,8 @@ namespace Exomia.Vulkan.Api.SourceGenerator
             {
                 foreach (VkExtensionClass className in syntaxReceiver.VkExtensionFunctionModel)
                 {
-                    SourceCodeBuilder codeBuilder = new SourceCodeBuilder();
-                    codeBuilder.InsertCode(
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.Append(
                         $@"using System.Runtime.CompilerServices;
 using System;
 using System.Runtime.InteropServices;
@@ -33,7 +34,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
     {SourceCodeGenerator.GetExtensionClass(className)}
 }}");
 
-                    string sourceCode = codeBuilder.Build();
+                    string sourceCode = stringBuilder.FormatCode();
                     context.AddSource($"{className.NamespaceName}.{className.ClassName}.g.cs", sourceCode);
                 }
             }

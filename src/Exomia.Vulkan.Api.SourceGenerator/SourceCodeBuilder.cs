@@ -15,23 +15,11 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace Exomia.Vulkan.Api.SourceGenerator
 {
-    class SourceCodeBuilder
+    static class StringBuilderExtensions
     {
-        private readonly StringBuilder _src;
-
-        public SourceCodeBuilder()
+        public static string FormatCode(this StringBuilder stringBuilder)
         {
-            _src = new StringBuilder();
-        }
-
-        public void InsertCode(string code)
-        {
-            _src.Append(code);
-        }
-
-        public string Build()
-        {
-            return SyntaxFactory.ParseSyntaxTree(SourceText.From(_src.ToString()))
+            return SyntaxFactory.ParseSyntaxTree(SourceText.From(stringBuilder.ToString()))
                                 .GetRoot()
                                 .NormalizeWhitespace()
                                 .ToFullString();
