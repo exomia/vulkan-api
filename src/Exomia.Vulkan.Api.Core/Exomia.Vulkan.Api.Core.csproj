@@ -80,8 +80,7 @@
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 		</ProjectReference>
 	</ItemGroup>
-
-
+  
 	<ItemGroup>
 		<None Include="..\..\.editorconfig" Link=".editorconfig" />
 		<None Include="..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
@@ -93,8 +92,7 @@
 			<DependentUpon>Vk.Ext.$([System.String]::new('%(filename)').Split('.')[2]).cs</DependentUpon>
 		</Compile>
 	</ItemGroup>
-	
-
+  
 	<ItemGroup>
 		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
 			<_Parameter1>$(MSBuildProjectName).Tests, PublicKey=00240000048000009400000006020000002400005253413100040000010001003d9ac8d29ada5d124f348c936b77ca66bf389a8198423092cc07cf72ccf68913bc9820623be930666b1ff45341d378d933e5e84d6a7ba93965ab4719e738ab346e25e0b6f75f967126c55a18332b576acc5a3f15e4b693a626d88f23f6242b8b520185e47f5651e1a288a454013a2147dd4654b93ac54fe9bfd60bc91c085bd8</_Parameter1>
@@ -113,5 +111,4 @@
 	<ItemGroup Condition="'$(Configuration)'=='Debug'">
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
 	</ItemGroup>
-
 </Project>
