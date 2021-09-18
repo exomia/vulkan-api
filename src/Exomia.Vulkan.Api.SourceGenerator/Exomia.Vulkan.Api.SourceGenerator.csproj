@@ -2,12 +2,27 @@
   <PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>AnyCPU;x64;x86</Platforms>
-		<LangVersion>latest</LangVersion>
-		<IsRoslynComponent>true</IsRoslynComponent>
-		<Configurations>Debug;Release</Configurations>
-		<Nullable>enable</Nullable>
-		<NullableReferenceTypes>true</NullableReferenceTypes>
-	</PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+    <NullableReferenceTypes>true</NullableReferenceTypes>
+    <DefineConstants>TRACE;$(Platform)</DefineConstants>
+    <CheckForDuplicateItems>false</CheckForDuplicateItems>
+    <Configurations>Debug;Release</Configurations>
+    <IsRoslynComponent>true</IsRoslynComponent>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Platform)'=='AnyCPU'">
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <PackageId>$(MSBuildProjectName)</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)'!='AnyCPU'">
+    <AssemblyName>$(MSBuildProjectName).$(Platform)</AssemblyName>
+    <PackageId>$(MSBuildProjectName).$(Platform)</PackageId>
+  </PropertyGroup>
 
 	<ItemGroup>
 		<Compile Remove="Attributes\*.cs" />
