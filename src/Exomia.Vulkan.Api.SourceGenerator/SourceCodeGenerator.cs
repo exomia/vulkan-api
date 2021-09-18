@@ -18,6 +18,8 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 {
     static class SourceCodeGenerator
     {
+        private const string VULKAN_VERSION = "1.2";
+
         public static string GetDelegateParameter(FunctionPointerParameter fpp)
         {
             return $"{fpp.Type} {fpp.Name}";
@@ -102,6 +104,14 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 {{
     public const string {extensionClass.VarExtensionName}_UTF8_NT = ""{GetUtf8StringAsUtf16(extensionClass.ExtensionName)}"";
        
+    /// <summary>
+    /// Loads all functions for this extension.
+    /// </summary>
+    /// <param name=""{parameterName}""> The {parameterType}. </param>
+    /// <remarks>
+    ///     {extensionClass.ExtensionName} - {parameterType} extension <br />
+    ///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
+    /// </remarks>
     public static partial void Load({parameterType} {parameterName})
     {{
         {string.Join(Environment.NewLine, extensionClass.Functions.Select(x => extLoaderFuncBuilder(x)))}

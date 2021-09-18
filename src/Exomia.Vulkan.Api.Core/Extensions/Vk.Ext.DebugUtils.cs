@@ -1,20 +1,18 @@
 ﻿#pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.CompilerServices;
-using System;
-using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
+// ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
-{
+{ 
     [VkExtGenerator]
-    public unsafe static partial class VkExtDebugUtils
-    {
+    public static unsafe partial class VkExtDebugUtils
+    { 
         public const int VK_EXT_DEBUG_UTILS = 1;
         public const int VK_EXT_DEBUG_UTILS_SPEC_VERSION = 2;
         public const string VK_EXT_DEBUG_UTILS_EXTENSION_NAME = "VK_EXT_debug_utils";
-
+        
         public static delegate*<
             VkDevice,                       /* device */
             VkDebugUtilsObjectNameInfoEXT*, /* pNameInfo */
@@ -72,16 +70,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkDebugUtilsMessageTypeFlagsEXT,       /* messageTypes */
             VkDebugUtilsMessengerCallbackDataEXT*, /* pCallbackData */
             void> vkSubmitDebugUtilsMessageEXT;
-
-
-        /// <summary>
-        /// Loads all functions for this extension.
-        /// </summary>
-        /// <param name="vkInstance"> The vk instance. </param>
-        /// <remarks>
-        ///     VK_EXT_debug_utils - instance extension
-        /// </remarks>
+        
         public static partial void Load(VkInstance vkInstance);
-
     }
 }
