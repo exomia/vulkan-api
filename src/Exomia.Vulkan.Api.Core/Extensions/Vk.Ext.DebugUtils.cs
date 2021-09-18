@@ -5,7 +5,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
-{ 
+{
     [VkExtGenerator]
     public static unsafe partial class VkExtDebugUtils
     { 

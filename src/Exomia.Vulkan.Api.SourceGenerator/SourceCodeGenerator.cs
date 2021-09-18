@@ -100,7 +100,12 @@ namespace Exomia.Vulkan.Api.SourceGenerator
                 _            => throw new NotSupportedException()
             };
 
-            return $@"public unsafe static partial class {extensionClass.ClassName}
+            return $@"/// <summary> {extensionClass.ClassName} class. </summary>
+/// <remarks>
+///     {extensionClass.ExtensionName} - {parameterType} extension <br />
+///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
+/// </remarks>
+public unsafe static partial class {extensionClass.ClassName}
 {{
     public const string {extensionClass.VarExtensionName}_UTF8_NT = ""{GetUtf8StringAsUtf16(extensionClass.ExtensionName)}"";
        
