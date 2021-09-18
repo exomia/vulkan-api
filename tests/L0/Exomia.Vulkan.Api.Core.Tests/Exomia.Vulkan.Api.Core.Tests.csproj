@@ -5,6 +5,7 @@
     
     <IsPackable>false</IsPackable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Configurations>Debug;Release;CodeGenDebug</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

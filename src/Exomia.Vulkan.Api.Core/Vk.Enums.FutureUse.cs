@@ -250,24 +250,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkDebugUtilsMessengerCallbackDataFlagsEXT : uint
-    {
-        /// <summary>
-        ///     Reserved for future use
-        /// </summary>
-        Reserved = 0
-    }
-
-    [Flags]
-    public enum VkDebugUtilsMessengerCreateFlagsEXT : uint
-    {
-        /// <summary>
-        ///     Reserved for future use
-        /// </summary>
-        Reserved = 0
-    }
-
-    [Flags]
     public enum VkPipelineCoverageToColorStateCreateFlagsNV : uint
     {
         /// <summary>

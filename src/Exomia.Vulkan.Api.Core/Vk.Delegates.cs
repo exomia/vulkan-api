@@ -1759,58 +1759,6 @@ namespace Exomia.Vulkan.Api.Core
         VkSwapchainKHR*   pSwapchains,
         VkHdrMetadataEXT* pMetadata);
 
-    [return: MarshalAs(UnmanagedType.Bool)]
-    public unsafe delegate VkBool32 DebugUtilsMessengerCallbackEXT(
-        [MarshalAs(UnmanagedType.U4)] VkDebugUtilsMessageSeverityFlagsEXT messageSeverity,
-        [MarshalAs(UnmanagedType.U4)] VkDebugUtilsMessageTypeFlagsEXT     messageTypes,
-        VkDebugUtilsMessengerCallbackDataEXT*                             pCallbackData,
-        void*                                                             pUserData);
-
-    public unsafe delegate VkResult SetDebugUtilsObjectNameEXT(
-        VkDevice                       device,
-        VkDebugUtilsObjectNameInfoEXT* pNameInfo);
-
-    public unsafe delegate VkResult SetDebugUtilsObjectTagEXT(
-        VkDevice                      device,
-        VkDebugUtilsObjectTagInfoEXT* pTagInfo);
-
-    public unsafe delegate void QueueBeginDebugUtilsLabelEXT(
-        VkQueue               queue,
-        VkDebugUtilsLabelEXT* pLabelInfo);
-
-    public delegate void QueueEndDebugUtilsLabelEXT(VkQueue queue);
-
-    public unsafe delegate void QueueInsertDebugUtilsLabelEXT(
-        VkQueue               queue,
-        VkDebugUtilsLabelEXT* pLabelInfo);
-
-    public unsafe delegate void CmdBeginDebugUtilsLabelEXT(
-        VkCommandBuffer       commandBuffer,
-        VkDebugUtilsLabelEXT* pLabelInfo);
-
-    public delegate void CmdEndDebugUtilsLabelEXT(VkCommandBuffer commandBuffer);
-
-    public unsafe delegate void CmdInsertDebugUtilsLabelEXT(
-        VkCommandBuffer       commandBuffer,
-        VkDebugUtilsLabelEXT* pLabelInfo);
-
-    public unsafe delegate VkResult CreateDebugUtilsMessengerEXT(
-        VkInstance                          instance,
-        VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo,
-        VkAllocationCallbacks*              pAllocator,
-        VkDebugUtilsMessengerEXT*           pMessenger);
-
-    public unsafe delegate void DestroyDebugUtilsMessengerEXT(
-        VkInstance               instance,
-        VkDebugUtilsMessengerEXT messenger,
-        VkAllocationCallbacks*   pAllocator);
-
-    public unsafe delegate void SubmitDebugUtilsMessageEXT(
-        VkInstance                            instance,
-        VkDebugUtilsMessageSeverityFlagsEXT   messageSeverity,
-        VkDebugUtilsMessageTypeFlagsEXT       messageTypes,
-        VkDebugUtilsMessengerCallbackDataEXT* pCallbackData);
-
     public unsafe delegate void CmdSetSampleLocationsEXT(
         VkCommandBuffer           commandBuffer,
         VkSampleLocationsInfoEXT* pSampleLocationsInfo);

@@ -2872,25 +2872,6 @@ namespace Exomia.Vulkan.Api.Core
         MAX_ENUM_EXT      = 0x7FFFFFFF
     }
 
-    [Flags]
-    public enum VkDebugUtilsMessageSeverityFlagsEXT
-    {
-        VERBOSE_BIT_EXT        = 0x00000001,
-        INFO_BIT_EXT           = 0x00000010,
-        WARNING_BIT_EXT        = 0x00000100,
-        ERROR_BIT_EXT          = 0x00001000,
-        FLAG_BITS_MAX_ENUM_EXT = 0x7FFFFFFF
-    }
-
-    [Flags]
-    public enum VkDebugUtilsMessageTypeFlagsEXT
-    {
-        GENERAL_BIT_EXT        = 0x00000001,
-        VALIDATION_BIT_EXT     = 0x00000002,
-        PERFORMANCE_BIT_EXT    = 0x00000004,
-        FLAG_BITS_MAX_ENUM_EXT = 0x7FFFFFFF
-    }
-
     public enum VkBlendOverlapEXT
     {
         UNCORRELATED_EXT = 0,
