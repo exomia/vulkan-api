@@ -1,24 +1,33 @@
-﻿using Microsoft.CodeAnalysis;
+﻿#region License
+
+// Copyright (c) 2018-2021, exomia
+// All rights reserved.
+// 
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree.
+
+#endregion
+
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
+using Microsoft.CodeAnalysis;
 
 namespace Exomia.Vulkan.Api.SourceGenerator
 {
-    internal static class CodeGenerationLibraryLoader
+    static class CodeGenerationLibraryLoader
     {
         internal static void AddLibraryFilesToContext(GeneratorPostInitializationContext context)
         {
-            var assembly = typeof(CodeGenerationLibraryLoader).Assembly;
-            var embeddedLibraryCodeFiles = assembly.GetManifestResourceNames().Where(x => x.EndsWith(nameof(Attribute) + ".cs"));
+            Assembly            assembly                 = typeof(CodeGenerationLibraryLoader).Assembly;
+            IEnumerable<string> embeddedLibraryCodeFiles = assembly.GetManifestResourceNames().Where(x => x.EndsWith(nameof(Attribute) + ".cs"));
 
             foreach (var codeFile in embeddedLibraryCodeFiles)
             {
-                var codeFileContent = GetContentOfEmbeddedResource(assembly, codeFile);
-                var fileNameHint = codeFile.Replace(".cs", ".g.cs");
+                string codeFileContent = GetContentOfEmbeddedResource(assembly, codeFile);
+                string fileNameHint    = codeFile.Replace(".cs", ".g.cs");
 
                 context.AddSource(fileNameHint, codeFileContent);
             }
@@ -26,9 +35,8 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 
         private static string GetContentOfEmbeddedResource(Assembly assembly, string resourceName)
         {
-            using var resourceStream = assembly.GetManifestResourceStream(resourceName);
-            using var streamReader = new StreamReader(resourceStream);
-
+            using Stream       resourceStream = assembly.GetManifestResourceStream(resourceName) ?? throw new NullReferenceException(nameof(resourceName));
+            using StreamReader streamReader   = new StreamReader(resourceStream);
             return streamReader.ReadToEnd();
         }
     }

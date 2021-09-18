@@ -1,4 +1,15 @@
-﻿using Microsoft.CodeAnalysis;
+﻿#region License
+
+// Copyright (c) 2018-2021, exomia
+// All rights reserved.
+// 
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree.
+
+#endregion
+
+using Exomia.Vulkan.Api.SourceGenerator.Models;
+using Microsoft.CodeAnalysis;
 
 namespace Exomia.Vulkan.Api.SourceGenerator
 {
@@ -7,24 +18,23 @@ namespace Exomia.Vulkan.Api.SourceGenerator
     {
         public void Execute(GeneratorExecutionContext context)
         {
-            var mainMethod = context.Compilation.GetEntryPoint(context.CancellationToken);
-
             if (context.SyntaxContextReceiver is SyntaxReceiver syntaxReceiver)
             {
-                foreach (var className in syntaxReceiver.VkExtentionFunctionModel)
+                foreach (VkExtensionClass className in syntaxReceiver.VkExtensionFunctionModel)
                 {
                     SourceCodeBuilder codeBuilder = new SourceCodeBuilder();
-                    codeBuilder.InsertCode($@"using System.Runtime.CompilerServices;
+                    codeBuilder.InsertCode(
+                        $@"using System.Runtime.CompilerServices;
 using System;
 using System.Runtime.InteropServices;
 
 namespace Exomia.Vulkan.Api.Core.Extensions 
 {{
-    {SourceCodeGenerator.GetExtentionClass(className)}
+    {SourceCodeGenerator.GetExtensionClass(className)}
 }}");
 
                     string sourceCode = codeBuilder.Build();
-                    context.AddSource($"{className.ClassName}.g.cs", sourceCode);
+                    context.AddSource($"{className.NamespaceName}.{className.ClassName}.g.cs", sourceCode);
                 }
             }
         }
@@ -35,6 +45,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             context.RegisterForSyntaxNotifications(() => new SyntaxReceiver());
         }
     }
-
 }
-

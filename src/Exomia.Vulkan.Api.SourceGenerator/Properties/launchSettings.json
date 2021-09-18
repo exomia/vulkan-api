@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Exomia.Vulkan.Api.SourceGenerator": {
+      "commandName": "Project"
+    },
+    "Exomia.Vulkan.Api.SourceGenerator DebugAsRoslynComponent": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\Exomia.Vulkan.Api.Core\\Exomia.Vulkan.Api.Core.csproj"
+    }
+  }
+}

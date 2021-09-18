@@ -1,27 +1,37 @@
-﻿using Exomia.Vulkan.Api.SourceGenerator.Models;
+﻿#region License
+
+// Copyright (c) 2018-2021, exomia
+// All rights reserved.
+// 
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree.
+
+#endregion
+
+using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
+using System.Threading.Tasks;
+using Exomia.Vulkan.Api.SourceGenerator.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Exomia.Vulkan.Api.SourceGenerator
 {
-    internal class VkGeneratorInspector
+    class VkGeneratorInspector
     {
-        const string VK_IGNORE_ATTRIBUTE = "Exomia.Vulkan.Api.SourceGenerator.VkIgnoreAttribute";
+        private const string VK_IGNORE_ATTRIBUTE = "Exomia.Vulkan.Api.SourceGenerator.VkIgnoreAttribute";
 
         internal static async Task<VkExtensionClass> InspectAsync(INamedTypeSymbol viewModelClassSymbol)
         {
-            VkExtensionClass vkExtentionClass = new()
+            VkExtensionClass vkExtensionClass = new()
             {
-                ClassName = viewModelClassSymbol.Name,
-                Functions = new List<FunctionPointerInfo>()
+                NamespaceName = viewModelClassSymbol.ContainingNamespace.ToDisplayString(), ClassName = viewModelClassSymbol.Name, Functions = new List<FunctionPointerInfo>()
             };
 
-            foreach (var member in viewModelClassSymbol.GetMembers())
+            foreach (ISymbol member in viewModelClassSymbol.GetMembers())
             {
                 Console.WriteLine(member.Name);
                 switch (member)
@@ -29,68 +39,66 @@ namespace Exomia.Vulkan.Api.SourceGenerator
                     case IMethodSymbol methodSymbol:
                         if (methodSymbol.Name == "Load")
                         {
-                            vkExtentionClass.LoadFunction = methodSymbol;
+                            vkExtensionClass.LoadFunction = methodSymbol;
                         }
                         break;
                     case IFieldSymbol fieldSymbol:
-                        vkExtentionClass = await FindPropertiesToGenerateAsync(fieldSymbol, vkExtentionClass);
+                        vkExtensionClass = await FindPropertiesToGenerateAsync(fieldSymbol, vkExtensionClass);
                         break;
                 }
             }
 
-            return vkExtentionClass;
+            return vkExtensionClass;
         }
 
-
-        private static async Task<VkExtensionClass> FindPropertiesToGenerateAsync(IFieldSymbol fieldSymbol, VkExtensionClass vkExtentionClass)
+        private static async Task<VkExtensionClass> FindPropertiesToGenerateAsync(IFieldSymbol fieldSymbol, VkExtensionClass vkExtensionClass)
         {
-
             if (fieldSymbol.IsConst && fieldSymbol.Name.EndsWith("EXTENSION_NAME") && fieldSymbol.Type.Name == "String")
             {
-                vkExtentionClass.VarExtentionName = fieldSymbol.Name;
-                vkExtentionClass.ExtentionName = fieldSymbol.ConstantValue as string;
-                return vkExtentionClass;
+                vkExtensionClass.VarExtensionName = fieldSymbol.Name;
+                vkExtensionClass.ExtensionName    = fieldSymbol.ConstantValue as string ?? throw new NullReferenceException(nameof(fieldSymbol.ConstantValue));
+                return vkExtensionClass;
             }
 
-            var attributeDatas = fieldSymbol.GetAttributes();
-            var fieldAttributeData = attributeDatas.FirstOrDefault(x => x.AttributeClass?.ToDisplayString() == VK_IGNORE_ATTRIBUTE);
+            ImmutableArray<AttributeData> attributeData      = fieldSymbol.GetAttributes();
+            AttributeData?                fieldAttributeData = attributeData.FirstOrDefault(x => x.AttributeClass?.ToDisplayString() == VK_IGNORE_ATTRIBUTE);
 
-            if(fieldAttributeData is not null) // vkIgnore is present 
+            if (fieldAttributeData is not null) // vkIgnore is present 
             {
-                return vkExtentionClass;
+                return vkExtensionClass;
             }
 
-            var fieldSyntax = (await fieldSymbol.DeclaringSyntaxReferences[0].GetSyntaxAsync()).Parent;
-            var fieldSyntaxChilds = fieldSyntax.DescendantNodes()?.OfType<FunctionPointerTypeSyntax>()?.FirstOrDefault();
-            if(fieldSyntaxChilds is null) // field is not a function pointer
+            SyntaxNode?                fieldSyntax         = (await fieldSymbol.DeclaringSyntaxReferences[0].GetSyntaxAsync()).Parent;
+            FunctionPointerTypeSyntax? fieldSyntaxChildren = fieldSyntax?.DescendantNodes().OfType<FunctionPointerTypeSyntax>().FirstOrDefault();
+            if (fieldSyntaxChildren is null) // field is not a function pointer
             {
-                return vkExtentionClass;
+                return vkExtensionClass;
             }
 
             FunctionPointerInfo fpi;
-            fpi.Name = fieldSymbol.Name;
+            fpi.Name       = fieldSymbol.Name;
             fpi.Parameters = new List<FunctionPointerParameter>();
-           
-            var properties = fieldSyntaxChilds.ParameterList.DescendantNodesAndTokens()
-                .Where(x => x.AsNode() as FunctionPointerParameterSyntax is not null || x.AsToken().IsKind(SyntaxKind.CommaToken))
-                .ToArray();
-            
+
+            SyntaxNodeOrToken[] properties = fieldSyntaxChildren.ParameterList.DescendantNodesAndTokens()
+                                                                .Where(x => x.AsNode() is FunctionPointerParameterSyntax || x.AsToken().IsKind(SyntaxKind.CommaToken))
+                                                                .ToArray();
+
             for (int i = 0; i < properties.Length - 1; i += 2)
-			{
-                FunctionPointerParameterSyntax parameterSyntax = properties[i].AsNode() as FunctionPointerParameterSyntax;
-                SyntaxTrivia trivias = properties[i + 1].AsToken().TrailingTrivia.Where(x => x.IsKind(SyntaxKind.MultiLineCommentTrivia)).First();
+            {
+                FunctionPointerParameterSyntax parameterSyntax = properties[i].AsNode() as FunctionPointerParameterSyntax ?? throw new NullReferenceException(nameof(fieldSymbol.ConstantValue));
+                SyntaxTrivia                   trivia          = properties[i + 1].AsToken().TrailingTrivia.First(x => x.IsKind(SyntaxKind.MultiLineCommentTrivia));
 
                 FunctionPointerParameter fpp;
                 fpp.IsReturnParameter = false;
-                fpp.ParameterSyntax = parameterSyntax;
-                fpp.Name = trivias.ToFullString().Trim(' ', '*', '/');
-                fpp.Type = parameterSyntax.ToString();
+                fpp.ParameterSyntax   = parameterSyntax;
+                fpp.Name              = trivia.ToFullString().Trim(' ', '*', '/');
+                fpp.Type              = parameterSyntax.ToString();
 
                 fpi.Parameters.Add(fpp);
             }
 
-            vkExtentionClass.Functions.Add(fpi);
-            return vkExtentionClass;
+            vkExtensionClass.Functions.Add(fpi);
+            return vkExtensionClass;
         }
     }
 }

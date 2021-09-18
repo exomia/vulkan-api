@@ -1,23 +1,22 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
+﻿#region License
+
+// Copyright (c) 2018-2021, exomia
+// All rights reserved.
+// 
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree.
+
+#endregion
+
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.Operations;
-using Microsoft.CodeAnalysis.Text;
-using System;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
 
 namespace Exomia.Vulkan.Api.SourceGenerator.Models
 {
     struct FunctionPointerParameter
     {
-        public bool IsReturnParameter;
-        public FunctionPointerParameterSyntax ParameterSyntax;
-        public string Name;
-        public string Type;
-        
+        public bool                            IsReturnParameter;
+        public FunctionPointerParameterSyntax? ParameterSyntax;
+        public string                          Name;
+        public string                          Type;
     }
-
-
 }

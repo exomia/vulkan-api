@@ -10,7 +10,7 @@
 		<NullableReferenceTypes>true</NullableReferenceTypes>
 		<DefineConstants>TRACE;$(Platform)</DefineConstants>
 		<CheckForDuplicateItems>false</CheckForDuplicateItems>
-		<Configurations>Debug;Release;CodeGenDebug</Configurations>
+		<Configurations>Debug;Release</Configurations>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -42,14 +42,6 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
-		<DebugType>portable</DebugType>
-		<DebugSymbols>true</DebugSymbols>
-		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-		<DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)'=='CodeGenDebug'">
-		<OutputType>Exe</OutputType>
 		<DebugType>portable</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
@@ -117,23 +109,9 @@
 		<Deterministic>True</Deterministic>
 		<ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)'=='true'">True</ContinuousIntegrationBuild>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)'=='CodeGenDebug'">
-	  <IncludeSymbols>true</IncludeSymbols>
-	  <EmbedUntrackedSources>true</EmbedUntrackedSources>
-	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	  <Deterministic>True</Deterministic>
-	  <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)'=='true'">True</ContinuousIntegrationBuild>
-	</PropertyGroup>
-
+	
 	<ItemGroup Condition="'$(Configuration)'=='Debug'">
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(Configuration)'=='CodeGenDebug'">
-	  <PackageReference Include="Microsoft.SourceLink.GitHub">
-	    <Version>1.0.0</Version>
-	    <PrivateAssets>All</PrivateAssets>
-	  </PackageReference>
 	</ItemGroup>
 
 </Project>

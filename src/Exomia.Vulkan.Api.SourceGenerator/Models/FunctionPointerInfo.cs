@@ -1,11 +1,20 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+﻿#region License
+
+// Copyright (c) 2018-2021, exomia
+// All rights reserved.
+// 
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree.
+
+#endregion
+
 using System.Collections.Generic;
 
 namespace Exomia.Vulkan.Api.SourceGenerator.Models
 {
     struct FunctionPointerInfo
     {
-        public string Name;
+        public string                         Name;
         public List<FunctionPointerParameter> Parameters;
     }
 }

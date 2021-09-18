@@ -1,30 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exomia.Vulkan.Api.Core
 {
     static class Utils
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe static VkFunction LoadVkFunction(VkInstance vkInstance, string vkFunctionName)
+        public static unsafe VkFunction LoadVkFunction(VkInstance vkInstance, string vkFunctionName)
         {
             fixed (char* pVkFunctionName = vkFunctionName)
             {
-                void* vkInstaceProcAddr = Vk.GetInstanceProcAddr(vkInstance, (sbyte*)pVkFunctionName);
-                if(vkInstaceProcAddr != null)
+                void* vkInstanceProcAddr = Vk.GetInstanceProcAddr(vkInstance, (sbyte*)pVkFunctionName);
+                if(vkInstanceProcAddr != null)
                 {
-                    return vkInstaceProcAddr;
+                    return vkInstanceProcAddr;
                 }
                 throw new EntryPointNotFoundException(new string((sbyte*) pVkFunctionName));
             }
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe static VkFunction LoadVkFunction(VkDevice vkDevice, string vkFunctionName)
+        public static unsafe VkFunction LoadVkFunction(VkDevice vkDevice, string vkFunctionName)
         {
             fixed (char* pVkFunctionName = vkFunctionName)
             {
