@@ -24,7 +24,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
     {
         private const string VK_IGNORE_ATTRIBUTE = "Exomia.Vulkan.Api.SourceGenerator.VkIgnoreAttribute";
 
-        internal static async Task<VkExtensionClass> InspectAsync(INamedTypeSymbol viewModelClassSymbol)
+        internal static async Task<VkExtensionClass?> InspectAsync(INamedTypeSymbol viewModelClassSymbol)
         {
             VkExtensionClass vkExtensionClass = new()
             {
@@ -33,7 +33,6 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 
             foreach (ISymbol member in viewModelClassSymbol.GetMembers())
             {
-                Console.WriteLine(member.Name);
                 switch (member)
                 {
                     case IMethodSymbol methodSymbol:

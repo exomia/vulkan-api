@@ -243,15 +243,13 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_KHR_COPY_COMMANDS2                                      = 1;
         public const int    VK_KHR_COPY_COMMANDS_2_SPEC_VERSION                        = 1;
         public const string VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME                      = "VK_KHR_copy_commands2";
-        public const int    VK_EXT_DEBUG_REPORT                                        = 1;
-        public const int    VK_EXT_DEBUG_REPORT_SPEC_VERSION                           = 10;
-        public const string VK_EXT_DEBUG_REPORT_EXTENSION_NAME                         = "VK_EXT_debug_report";
+
+
+
         public const int    VK_NV_GLSL_SHADER                                          = 1;
         public const int    VK_NV_GLSL_SHADER_SPEC_VERSION                             = 1;
         public const string VK_NV_GLSL_SHADER_EXTENSION_NAME                           = "VK_NV_glsl_shader";
-        public const int    VK_EXT_DEPTH_RANGE_UNRESTRICTED                            = 1;
-        public const int    VK_EXT_DEPTH_RANGE_UNRESTRICTED_SPEC_VERSION               = 1;
-        public const string VK_EXT_DEPTH_RANGE_UNRESTRICTED_EXTENSION_NAME             = "VK_EXT_depth_range_unrestricted";
+
         public const int    VK_IMG_FILTER_CUBIC                                        = 1;
         public const int    VK_IMG_FILTER_CUBIC_SPEC_VERSION                           = 1;
         public const string VK_IMG_FILTER_CUBIC_EXTENSION_NAME                         = "VK_IMG_filter_cubic";
@@ -264,9 +262,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER                    = 1;
         public const int    VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_SPEC_VERSION       = 1;
         public const string VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_EXTENSION_NAME     = "VK_AMD_shader_explicit_vertex_parameter";
-        public const int    VK_EXT_DEBUG_MARKER                                        = 1;
-        public const int    VK_EXT_DEBUG_MARKER_SPEC_VERSION                           = 4;
-        public const string VK_EXT_DEBUG_MARKER_EXTENSION_NAME                         = "VK_EXT_debug_marker";
+
         public const int    VK_AMD_GCN_SHADER                                          = 1;
         public const int    VK_AMD_GCN_SHADER_SPEC_VERSION                             = 1;
         public const string VK_AMD_GCN_SHADER_EXTENSION_NAME                           = "VK_AMD_gcn_shader";
@@ -312,9 +308,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_EXTERNAL_MEMORY                                      = 1;
         public const int    VK_NV_EXTERNAL_MEMORY_SPEC_VERSION                         = 1;
         public const string VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME                       = "VK_NV_external_memory";
-        public const int    VK_EXT_VALIDATION_FLAGS                                    = 1;
-        public const int    VK_EXT_VALIDATION_FLAGS_SPEC_VERSION                       = 2;
-        public const string VK_EXT_VALIDATION_FLAGS_EXTENSION_NAME                     = "VK_EXT_validation_flags";
+
         public const int    VK_EXT_SHADER_SUBGROUP_BALLOT                              = 1;
         public const int    VK_EXT_SHADER_SUBGROUP_BALLOT_SPEC_VERSION                 = 1;
         public const string VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME               = "VK_EXT_shader_subgroup_ballot";
@@ -382,9 +376,8 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_EXT_QUEUE_FAMILY_FOREIGN_SPEC_VERSION                   = 1;
         public const string VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME                 = "VK_EXT_queue_family_foreign";
         public const uint   VK_QUEUE_FAMILY_FOREIGN_EXT                                = ~2U;
-        public const int    VK_EXT_DEBUG_UTILS                                         = 1;
-        public const int    VK_EXT_DEBUG_UTILS_SPEC_VERSION                            = 2;
-        public const string VK_EXT_DEBUG_UTILS_EXTENSION_NAME                          = "VK_EXT_debug_utils";
+
+
         public const int    VK_EXT_SAMPLER_FILTER_MINMAX                               = 1;
         public const int    VK_EXT_SAMPLER_FILTER_MINMAX_SPEC_VERSION                  = 2;
         public const string VK_EXT_SAMPLER_FILTER_MINMAX_EXTENSION_NAME                = "VK_EXT_sampler_filter_minmax";

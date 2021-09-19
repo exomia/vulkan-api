@@ -19,7 +19,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator.Models
         public string                    ClassName;
         public string                    VarExtensionName;
         public string                    ExtensionName;
-        public IMethodSymbol             LoadFunction;
+        public IMethodSymbol?            LoadFunction;
         public List<FunctionPointerInfo> Functions;
     }
 }

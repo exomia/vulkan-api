@@ -10,6 +10,7 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using Exomia.Vulkan.Api.Core.Extensions;
 using System;
 using System.Runtime.InteropServices;
 
@@ -3585,68 +3586,12 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDebugReportCallbackCreateInfoEXT
-    {
-        public const VkStructureType       STYPE = VkStructureType.DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       VkDebugReportFlagsEXT flags;
-
-        public delegate*<               /*vkDebugReportCallbackEXT*/
-            VkDebugReportFlagsEXT,      /* FlagBits                  */
-            VkDebugReportObjectTypeEXT, /* objectType             */
-            ulong,                      /* @object                */
-            nuint,                      /* location               */
-            int,                        /* messageCode            */
-            sbyte*,                     /* pLayerPrefix           */
-            sbyte*,                     /* pMessage               */
-            void*,                      /* pUserData              */
-            VkBool32> pfnCallback;
-
-        public void* pUserData;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationStateRasterizationOrderAMD
     {
         public const VkStructureType         STYPE = VkStructureType.PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD;
         public       VkStructureType         sType;
         public       void*                   pNext;
         public       VkRasterizationOrderAMD rasterizationOrder;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDebugMarkerObjectNameInfoEXT
-    {
-        public const VkStructureType            STYPE = VkStructureType.DEBUG_MARKER_OBJECT_NAME_INFO_EXT;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       VkDebugReportObjectTypeEXT objectType;
-        public       ulong                      @object;
-        public       sbyte*                     pObjectName;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDebugMarkerObjectTagInfoEXT
-    {
-        public const VkStructureType            STYPE = VkStructureType.DEBUG_MARKER_OBJECT_TAG_INFO_EXT;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       VkDebugReportObjectTypeEXT objectType;
-        public       ulong                      @object;
-        public       ulong                      tagName;
-        public       nuint                      tagSize;
-        public       void*                      pTag;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDebugMarkerMarkerInfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.DEBUG_MARKER_MARKER_INFO_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       sbyte*          pMarkerName;
-        public fixed float           color[4];
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -3801,16 +3746,6 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType                   sType;
         public       void*                             pNext;
         public       VkExternalMemoryHandleTypeFlagsNV handleTypes;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkValidationFlagsEXT
-    {
-        public const VkStructureType       STYPE = VkStructureType.VALIDATION_FLAGS_EXT;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       uint                  disabledValidationCheckCount;
-        public       VkValidationCheckEXT* pDisabledValidationChecks;
     }
 
     [StructLayout(LayoutKind.Sequential)]

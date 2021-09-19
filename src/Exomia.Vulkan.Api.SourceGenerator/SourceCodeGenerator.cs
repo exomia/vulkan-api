@@ -89,30 +89,42 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 
         public static string GetExtensionClass(VkExtensionClass extensionClass)
         {
-            IParameterSymbol parameterSymbol = extensionClass.LoadFunction.Parameters[0]; // must have one item!!!
-            string           parameterType   = parameterSymbol.Type.Name;
-            string           parameterName   = parameterSymbol.Name;
-
-            Func<FunctionPointerInfo, string> extLoaderFuncBuilder = parameterType switch
-            {
-                "VkInstance" => GetInstanceLoadingFunction,
-                "VkDevice"   => GetDeviceLoadingFunction,
-                _            => throw new NotSupportedException()
-            };
-
-            return $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+            StringBuilder sb = new StringBuilder($@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 /// <summary> {extensionClass.ClassName} class. </summary>
 /// <remarks>
-///     {extensionClass.ExtensionName} - {parameterType} extension <br />
 ///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
 /// </remarks>
 public unsafe static partial class {extensionClass.ClassName}
 {{
-    public const string {extensionClass.VarExtensionName}_UTF8_NT = ""{GetUtf8StringAsUtf16(extensionClass.ExtensionName)}"";
-       
-    /// <summary>
-    /// Loads all functions for this extension.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version represented by an UTF16 string. </summary>
+    /// <remarks>
+    ///     Example usage:<br />
+    ///     <br />
+    ///     sbyte** ppEnabledLayerNames = stackalloc sbyte*[1];<br />
+    ///     <br />
+    ///     fixed(char* ptr = {extensionClass.VarExtensionName}_UTF8_NT) {{<br />
+    ///         ppEnabledLayerNames[0] = (sbyte*)ptr;<br />
+    ///         <br />
+    ///         VkInstanceCreateInfo.ppEnabledLayerNames = ppEnabledLayerNames;<br />
+    ///     }}
+    /// </remarks>
+    public const string {extensionClass.VarExtensionName}_UTF8_NT = ""{GetUtf8StringAsUtf16(extensionClass.ExtensionName)}"";");
+
+            if (extensionClass.LoadFunction != null)
+            {
+                IParameterSymbol parameterSymbol = extensionClass.LoadFunction.Parameters[0]; // must have one item!!!
+                string           parameterType   = parameterSymbol.Type.Name;
+                string           parameterName   = parameterSymbol.Name;
+
+                Func<FunctionPointerInfo, string> extLoaderFuncBuilder = parameterType switch
+                {
+                    "VkInstance" => GetInstanceLoadingFunction,
+                    "VkDevice"   => GetDeviceLoadingFunction,
+                    _            => throw new NotSupportedException()
+                };
+
+                sb.AppendLine($@"
+    /// <summary> Loads all functions for this extension. </summary>
     /// <param name=""{parameterName}""> The {parameterType}. </param>
     /// <remarks>
     ///     {extensionClass.ExtensionName} - {parameterType} extension <br />
@@ -121,8 +133,10 @@ public unsafe static partial class {extensionClass.ClassName}
     public static partial void Load({parameterType} {parameterName})
     {{
         {string.Join(Environment.NewLine, extensionClass.Functions.Select(x => extLoaderFuncBuilder(x)))}
-    }}
-}}";
+    }}");
+            }
+
+            return sb.AppendLine("}").ToString();
         }
     }
 }

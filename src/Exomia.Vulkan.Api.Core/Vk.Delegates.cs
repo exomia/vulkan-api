@@ -1552,56 +1552,6 @@ namespace Exomia.Vulkan.Api.Core
         VkCommandBuffer         commandBuffer,
         VkResolveImageInfo2KHR* pResolveImageInfo);
 
-    [return: MarshalAs(UnmanagedType.Bool)]
-    public unsafe delegate VkBool32 DebugReportCallbackEXT(
-        [MarshalAs(UnmanagedType.U4)] VkDebugReportFlagsEXT      flags,
-        [MarshalAs(UnmanagedType.U4)] VkDebugReportObjectTypeEXT objectType,
-        ulong                                                    @object,
-        nuint                                                    location,
-        int                                                      messageCode,
-        sbyte*                                                   pLayerPrefix,
-        sbyte*                                                   pMessage,
-        void*                                                    pUserData);
-
-    public unsafe delegate VkResult CreateDebugReportCallbackEXT(
-        VkInstance                          instance,
-        VkDebugReportCallbackCreateInfoEXT* pCreateInfo,
-        VkAllocationCallbacks*              pAllocator,
-        VkDebugReportCallbackEXT*           pCallback);
-
-    public unsafe delegate void DestroyDebugReportCallbackEXT(
-        VkInstance               instance,
-        VkDebugReportCallbackEXT callback,
-        VkAllocationCallbacks*   pAllocator);
-
-    public unsafe delegate void DebugReportMessageEXT(
-        VkInstance                 instance,
-        VkDebugReportFlagsEXT      flags,
-        VkDebugReportObjectTypeEXT objectType,
-        ulong                      @object,
-        nuint                      location,
-        int                        messageCode,
-        sbyte*                     pLayerPrefix,
-        sbyte*                     pMessage);
-
-    public unsafe delegate VkResult DebugMarkerSetObjectTagEXT(
-        VkDevice                       device,
-        VkDebugMarkerObjectTagInfoEXT* pTagInfo);
-
-    public unsafe delegate VkResult DebugMarkerSetObjectNameEXT(
-        VkDevice                        device,
-        VkDebugMarkerObjectNameInfoEXT* pNameInfo);
-
-    public unsafe delegate void CmdDebugMarkerBeginEXT(
-        VkCommandBuffer             commandBuffer,
-        VkDebugMarkerMarkerInfoEXT* pMarkerInfo);
-
-    public delegate void CmdDebugMarkerEndEXT(VkCommandBuffer commandBuffer);
-
-    public unsafe delegate void CmdDebugMarkerInsertEXT(
-        VkCommandBuffer             commandBuffer,
-        VkDebugMarkerMarkerInfoEXT* pMarkerInfo);
-
     public unsafe delegate void CmdBindTransformFeedbackBuffersEXT(
         VkCommandBuffer commandBuffer,
         uint            firstBinding,

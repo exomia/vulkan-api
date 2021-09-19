@@ -10,8 +10,6 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
 {

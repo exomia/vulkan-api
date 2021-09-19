@@ -71,6 +71,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Extensions\Vk.Ext.DebugReport.Structs.Delegates.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
 	</ItemGroup>
 
@@ -86,6 +90,7 @@
 		<None Include="..\..\.editorconfig" Link=".editorconfig" />
 		<None Include="..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
 		<None Include="..\..\icon.png" Pack="true" Visible="false" PackagePath="" />
+		<None Include="Extensions\Vk.Ext.DebugReport.Structs.Delegates.cs" />
 	</ItemGroup>
 	
 	<ItemGroup>

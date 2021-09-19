@@ -70,7 +70,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkDebugUtilsMessageTypeFlagsEXT,       /* messageTypes */
             VkDebugUtilsMessengerCallbackDataEXT*, /* pCallbackData */
             void> vkSubmitDebugUtilsMessageEXT;
-        
+
         public static partial void Load(VkInstance vkInstance);
     }
 }

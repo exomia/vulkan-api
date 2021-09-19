@@ -35,15 +35,16 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 
                 if (viewModelClassSymbol is not null && viewModelAttributeData is not null)
                 {
-                    VkExtensionClass res =
+                    VkExtensionClass? res =
                         VkGeneratorInspector.InspectAsync(viewModelClassSymbol)
                                             .ConfigureAwait(false)
                                             .GetAwaiter()
                                             .GetResult();
-                    VkExtensionFunctionModel.Add(res);
+                    if (res.HasValue)
+                    {
+                        VkExtensionFunctionModel.Add(res.Value);
+                    }
                 }
-
-                string? className = classDeclaration.Identifier.Text;
             }
         }
     }
