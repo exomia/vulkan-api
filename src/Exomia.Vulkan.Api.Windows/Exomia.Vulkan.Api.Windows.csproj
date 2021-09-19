@@ -1,7 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<!--EXTERNAL_PROPERTIES: GITHUB_ACTIONS-->
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net5.0</TargetFrameworks>
-    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Platforms>AnyCPU;x64</Platforms>
     <LangVersion>9.0</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DocumentationFile></DocumentationFile>

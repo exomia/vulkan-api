@@ -18,9 +18,9 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
+        platforms: [AnyCPU, x64]
         projects: [Windows, Beta]
-        platforms: [AnyCPU, x86, x64]
-    name: '[${{ matrix.projects }}] build ${{ matrix.configurations }} on ${{ matrix.os }}'
+    name: '[${{ matrix.projects }}] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
     runs-on: ${{ matrix.os }}
     steps: 
     - uses: actions/checkout@v2
@@ -36,9 +36,9 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
+        platforms: [AnyCPU, x64]
         projects: [Windows, Beta]
-        platforms: [AnyCPU, x86, x64]
-    name: '[${{ matrix.projects }}] test ${{ matrix.configurations }} on ${{ matrix.os }}'
+    name: '[${{ matrix.projects }}] test ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
     needs: [build-projects]
     runs-on: ${{ matrix.os }}
     steps:    
@@ -53,9 +53,9 @@ jobs:
   publish-projects-on-github:
     strategy:
       matrix:
+        platforms: [AnyCPU, x64]
         projects: [Windows, Beta]
-        platforms: [AnyCPU, x86, x64]
-    name: '[${{ matrix.projects }}] publish debug on github [v${{ github.event.inputs.version }}]'
+    name: '[${{ matrix.projects }}] publish debug on github [v${{ github.event.inputs.version }}][${{ matrix.platforms }}]'
     needs: [test-projects]
     runs-on: ubuntu-latest
     steps:    
@@ -77,9 +77,9 @@ jobs:
   publish-projects-on-nuget:
     strategy:
       matrix:
+        platforms: [AnyCPU, x64]
         projects: [Windows, Beta]
-        platforms: [AnyCPU, x86, x64]
-    name: '[${{ matrix.projects }}] publish release on nuget [v${{ github.event.inputs.version }}]'
+    name: '[${{ matrix.projects }}] publish release on nuget [v${{ github.event.inputs.version }}][${{ matrix.platforms }}]'
     needs: [publish-projects-on-github]
     runs-on: ubuntu-latest
     steps:    
