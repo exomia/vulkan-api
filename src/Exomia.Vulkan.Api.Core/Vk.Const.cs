@@ -309,15 +309,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_EXTERNAL_MEMORY_SPEC_VERSION                         = 1;
         public const string VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME                       = "VK_NV_external_memory";
 
-        public const int    VK_EXT_SHADER_SUBGROUP_BALLOT                              = 1;
-        public const int    VK_EXT_SHADER_SUBGROUP_BALLOT_SPEC_VERSION                 = 1;
-        public const string VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME               = "VK_EXT_shader_subgroup_ballot";
-        public const int    VK_EXT_SHADER_SUBGROUP_VOTE                                = 1;
-        public const int    VK_EXT_SHADER_SUBGROUP_VOTE_SPEC_VERSION                   = 1;
-        public const string VK_EXT_SHADER_SUBGROUP_VOTE_EXTENSION_NAME                 = "VK_EXT_shader_subgroup_vote";
-        public const int    VK_EXT_TEXTURE_COMPRESSION_ASTC_HDR                        = 1;
-        public const int    VK_EXT_TEXTURE_COMPRESSION_ASTC_HDR_SPEC_VERSION           = 1;
-        public const string VK_EXT_TEXTURE_COMPRESSION_ASTC_HDR_EXTENSION_NAME         = "VK_EXT_texture_compression_astc_hdr";
+
         public const int    VK_EXT_ASTC_DECODE_MODE                                    = 1;
         public const int    VK_EXT_ASTC_DECODE_MODE_SPEC_VERSION                       = 1;
         public const string VK_EXT_ASTC_DECODE_MODE_EXTENSION_NAME                     = "VK_EXT_astc_decode_mode";
