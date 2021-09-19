@@ -1668,6 +1668,5 @@ namespace Exomia.Vulkan.Api.Core
         public static extern unsafe void CmdCuLaunchKernelNVX(
             VkCommandBuffer    commandBuffer,
             VkCuLaunchInfoNVX* pLaunchInfo);
-
     }
 }

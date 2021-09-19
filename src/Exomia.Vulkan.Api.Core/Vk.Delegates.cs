@@ -2395,5 +2395,4 @@ namespace Exomia.Vulkan.Api.Core
         int drmFd,
         uint connectorId,
         VkDisplayKHR* display);
-
 }
