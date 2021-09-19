@@ -14,9 +14,11 @@ using Microsoft.CodeAnalysis;
 
 namespace Exomia.Vulkan.Api.SourceGenerator
 {
+    /// <summary> A generator. </summary>
     [Generator]
     public class Generator : ISourceGenerator
     {
+        /// <inheritdoc/>
         public void Execute(GeneratorExecutionContext context)
         {
             if (context.SyntaxContextReceiver is SyntaxReceiver syntaxReceiver)
@@ -40,6 +42,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             }
         }
 
+        /// <inheritdoc/>
         public void Initialize(GeneratorInitializationContext context)
         {
             context.RegisterForPostInitialization(CodeGenerationLibraryLoader.AddLibraryFilesToContext);

@@ -100,7 +100,8 @@ namespace Exomia.Vulkan.Api.SourceGenerator
                 _            => throw new NotSupportedException()
             };
 
-            return $@"/// <summary> {extensionClass.ClassName} class. </summary>
+            return $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+/// <summary> {extensionClass.ClassName} class. </summary>
 /// <remarks>
 ///     {extensionClass.ExtensionName} - {parameterType} extension <br />
 ///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>

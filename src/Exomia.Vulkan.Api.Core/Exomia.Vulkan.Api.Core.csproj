@@ -1,4 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<!--EXTERNAL_PROPERTIES: GITHUB_ACTIONS-->
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworks>net5.0</TargetFrameworks>
 		<Platforms>AnyCPU;x64;x86</Platforms>
@@ -65,7 +66,7 @@
 
 	<PropertyGroup>
 		<NoWarn>1701;1702;IDE0063;IDE0079;CA1401;CA1069</NoWarn>
-		<WarningsAsErrors>NU1605</WarningsAsErrors>
+		<WarningsAsErrors>NU1605;CS8034</WarningsAsErrors>
 		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
 	</PropertyGroup>
 
