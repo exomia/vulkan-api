@@ -95,7 +95,7 @@ public unsafe static partial class {extensionClass.ClassName}
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = {extensionClass.VarExtensionName}_UTF8_NT) {{<br />
-    ///         sbyte* utf8NtPtr = (sbyte*)ptr;<br />  // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code. 
+    ///         sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.<br />
     ///     }}
     /// </remarks>
     public const string {extensionClass.VarExtensionName}_UTF8_NT = ""{GetUtf8StringAsUtf16(extensionClass.ExtensionName)}"";");
