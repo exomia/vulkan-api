@@ -333,15 +333,6 @@ namespace Exomia.Vulkan.Api.Core
         public const string VK_NV_VIEWPORT_SWIZZLE_EXTENSION_NAME                      = "VK_NV_viewport_swizzle";
 
 
-        public const int    VK_EXT_EXTERNAL_MEMORY_DMA_BUF                             = 1;
-        public const int    VK_EXT_EXTERNAL_MEMORY_DMA_BUF_SPEC_VERSION                = 1;
-        public const string VK_EXT_EXTERNAL_MEMORY_DMA_BUF_EXTENSION_NAME              = "VK_EXT_external_memory_dma_buf";
-        public const int    VK_EXT_QUEUE_FAMILY_FOREIGN                                = 1;
-        public const int    VK_EXT_QUEUE_FAMILY_FOREIGN_SPEC_VERSION                   = 1;
-        public const string VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME                 = "VK_EXT_queue_family_foreign";
-        public const uint   VK_QUEUE_FAMILY_FOREIGN_EXT                                = ~2U;
-
-
 
         public const int    VK_AMD_GPU_SHADER_INT16                                    = 1;
         public const int    VK_AMD_GPU_SHADER_INT16_SPEC_VERSION                       = 2;
@@ -352,18 +343,9 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_AMD_SHADER_FRAGMENT_MASK                                = 1;
         public const int    VK_AMD_SHADER_FRAGMENT_MASK_SPEC_VERSION                   = 1;
         public const string VK_AMD_SHADER_FRAGMENT_MASK_EXTENSION_NAME                 = "VK_AMD_shader_fragment_mask";
-        public const int    VK_EXT_INLINE_UNIFORM_BLOCK                                = 1;
-        public const int    VK_EXT_INLINE_UNIFORM_BLOCK_SPEC_VERSION                   = 1;
-        public const string VK_EXT_INLINE_UNIFORM_BLOCK_EXTENSION_NAME                 = "VK_EXT_inline_uniform_block";
-        public const int    VK_EXT_SHADER_STENCIL_EXPORT                               = 1;
-        public const int    VK_EXT_SHADER_STENCIL_EXPORT_SPEC_VERSION                  = 1;
-        public const string VK_EXT_SHADER_STENCIL_EXPORT_EXTENSION_NAME                = "VK_EXT_shader_stencil_export";
-        public const int    VK_EXT_SAMPLE_LOCATIONS                                    = 1;
-        public const int    VK_EXT_SAMPLE_LOCATIONS_SPEC_VERSION                       = 1;
-        public const string VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME                     = "VK_EXT_sample_locations";
-        public const int    VK_EXT_BLEND_OPERATION_ADVANCED                            = 1;
-        public const int    VK_EXT_BLEND_OPERATION_ADVANCED_SPEC_VERSION               = 2;
-        public const string VK_EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME             = "VK_EXT_blend_operation_advanced";
+
+
+        
         public const int    VK_NV_FRAGMENT_COVERAGE_TO_COLOR                           = 1;
         public const int    VK_NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION              = 1;
         public const string VK_NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME            = "VK_NV_fragment_coverage_to_color";
@@ -376,12 +358,9 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_SHADER_SM_BUILTINS                                   = 1;
         public const int    VK_NV_SHADER_SM_BUILTINS_SPEC_VERSION                      = 1;
         public const string VK_NV_SHADER_SM_BUILTINS_EXTENSION_NAME                    = "VK_NV_shader_sm_builtins";
-        public const int    VK_EXT_POST_DEPTH_COVERAGE                                 = 1;
-        public const int    VK_EXT_POST_DEPTH_COVERAGE_SPEC_VERSION                    = 1;
-        public const string VK_EXT_POST_DEPTH_COVERAGE_EXTENSION_NAME                  = "VK_EXT_post_depth_coverage";
-        public const int    VK_EXT_IMAGE_DRM_FORMAT_MODIFIER                           = 1;
-        public const int    VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION              = 1;
-        public const string VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME            = "VK_EXT_image_drm_format_modifier";
+
+
+
         public const int    VK_EXT_VALIDATION_CACHE                                    = 1;
         public const int    VK_EXT_VALIDATION_CACHE_SPEC_VERSION                       = 1;
         public const string VK_EXT_VALIDATION_CACHE_EXTENSION_NAME                     = "VK_EXT_validation_cache";

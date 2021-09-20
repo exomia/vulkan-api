@@ -1612,20 +1612,6 @@ namespace Exomia.Vulkan.Api.Core
         uint*                           pPresentationTimingCount,
         VkPastPresentationTimingGOOGLE* pPresentationTimings);
 
-    public unsafe delegate void CmdSetSampleLocationsEXT(
-        VkCommandBuffer           commandBuffer,
-        VkSampleLocationsInfoEXT* pSampleLocationsInfo);
-
-    public unsafe delegate void GetPhysicalDeviceMultisamplePropertiesEXT(
-        VkPhysicalDevice            physicalDevice,
-        VkSampleCountFlagBits       samples,
-        VkMultisamplePropertiesEXT* pMultisampleProperties);
-
-    public unsafe delegate VkResult GetImageDrmFormatModifierPropertiesEXT(
-        VkDevice                               device,
-        VkImage                                image,
-        VkImageDrmFormatModifierPropertiesEXT* pProperties);
-
     public unsafe delegate VkResult CreateValidationCacheEXT(
         VkDevice                        device,
         VkValidationCacheCreateInfoEXT* pCreateInfo,

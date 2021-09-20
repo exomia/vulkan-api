@@ -7,7 +7,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
     [VkExtGenerator]
-    public static unsafe partial classVkExtConservativeRasterization
+    public static unsafe partial class VkExtConservativeRasterization
     {
         public const int    VK_EXT_CONSERVATIVE_RASTERIZATION                = 1;
         public const int    VK_EXT_CONSERVATIVE_RASTERIZATION_SPEC_VERSION   = 1;

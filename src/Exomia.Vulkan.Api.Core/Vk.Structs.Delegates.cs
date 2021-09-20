@@ -1409,59 +1409,6 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public readonly unsafe struct VkCmdSetSampleLocationsEXT
-    {
-        public static readonly VkCmdSetSampleLocationsEXT Null = null;
-
-        public readonly delegate*<
-            VkCommandBuffer,           /* commandBuffer */
-            VkSampleLocationsInfoEXT*, /* pSampleLocationsInfo */
-            void> UnsafeInvoke;
-
-        public static implicit operator VkCmdSetSampleLocationsEXT(void* ptr)
-        {
-            VkCmdSetSampleLocationsEXT value;
-            *(void**)&value = ptr;
-            return value;
-        }
-    }
-
-    public readonly unsafe struct VkGetPhysicalDeviceMultisamplePropertiesEXT
-    {
-        public static readonly VkGetPhysicalDeviceMultisamplePropertiesEXT Null = null;
-
-        public readonly delegate*<
-            VkPhysicalDevice,            /* physicalDevice */
-            VkSampleCountFlagBits,       /* samples */
-            VkMultisamplePropertiesEXT*, /* pMultisampleProperties */
-            void> UnsafeInvoke;
-
-        public static implicit operator VkGetPhysicalDeviceMultisamplePropertiesEXT(void* ptr)
-        {
-            VkGetPhysicalDeviceMultisamplePropertiesEXT value;
-            *(void**)&value = ptr;
-            return value;
-        }
-    }
-
-    public readonly unsafe struct VkGetImageDrmFormatModifierPropertiesEXT
-    {
-        public static readonly VkGetImageDrmFormatModifierPropertiesEXT Null = null;
-
-        public readonly delegate*<
-            VkDevice,                               /* device */
-            VkImage,                                /* image */
-            VkImageDrmFormatModifierPropertiesEXT*, /* pProperties */
-            VkResult> UnsafeInvoke;
-
-        public static implicit operator VkGetImageDrmFormatModifierPropertiesEXT(void* ptr)
-        {
-            VkGetImageDrmFormatModifierPropertiesEXT value;
-            *(void**)&value = ptr;
-            return value;
-        }
-    }
-
     public readonly unsafe struct VkCreateValidationCacheEXT
     {
         public static readonly VkCreateValidationCacheEXT Null = null;

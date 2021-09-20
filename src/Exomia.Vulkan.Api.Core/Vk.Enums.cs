@@ -2757,14 +2757,6 @@ namespace Exomia.Vulkan.Api.Core
         MAX_ENUM_NV   = 0x7FFFFFFF
     }
 
-    public enum VkBlendOverlapEXT
-    {
-        UNCORRELATED_EXT = 0,
-        DISJOINT_EXT     = 1,
-        CONJOINT_EXT     = 2,
-        MAX_ENUM_EXT     = 0x7FFFFFFF
-    }
-
     public enum VkCoverageModulationModeNV
     {
         NONE_NV     = 0,
