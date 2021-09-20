@@ -27,9 +27,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 
         public static string GetFunctionPointerParameter(FunctionPointerParameter fpp, int maxTypeNameLen)
         {
-            return fpp.IsReturnParameter
-                ? fpp.Type ?? throw new NullReferenceException(nameof(fpp.Type))
-                : $"{(fpp.Type + ',').PadRight(maxTypeNameLen)} /* {fpp.Name} */";
+            return $"{(fpp.Type + ',').PadRight(maxTypeNameLen)} /* {fpp.Name} */";
         }
 
         public static string GetUtf8StringAsUtf16(string value)
@@ -51,32 +49,28 @@ namespace Exomia.Vulkan.Api.SourceGenerator
                    .ToString();
         }
 
-        public static string GetInstanceLoadingFunction(FunctionPointerInfo fpi)
+        public static string GetInstanceLoadingFunction(FunctionPointerInfo fpi, string paramName)
         {
-            return $@"{fpi.Name} = Utils.LoadVkFunction(vkInstance,
-    ""{GetUtf8StringAsUtf16(fpi.Name)}"")
-    .{fpi.Name};";
+            return $@"{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");";
         }
 
-        public static string GetDeviceLoadingFunction(FunctionPointerInfo fpi)
+        public static string GetDeviceLoadingFunction(FunctionPointerInfo fpi, string paramName)
         {
-            return $@"{fpi.Name} = Utils.LoadVkFunction(vkDevice,
-    ""{GetUtf8StringAsUtf16(fpi.Name)}"")
-    .{fpi.Name};";
+            return $@"{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");";
         }
 
         public static string GetDelegateStruct(FunctionPointerInfo fpi)
         {
             string structName = $"{char.ToUpper(fpi.Name[0])}{fpi.Name.Substring(1)}";
-            int maxTypeNameLen = fpi.Parameters.Where(x => !x.IsReturnParameter)
-                                    .Max(x => x.Type.Length) + 1;
+            int maxTypeNameLen = fpi.Parameters.Max(x => x.Type.Length) + 1;
 
             return $@"public readonly unsafe struct {structName}
 {{
     public static readonly {structName} Null = null;
 
     public readonly delegate*<
-           {string.Join(Environment.NewLine, fpi.Parameters.Select(x => GetFunctionPointerParameter(x, maxTypeNameLen)))}> UnsafeInvoke;
+           {string.Join(Environment.NewLine, fpi.Parameters.Select(x => GetFunctionPointerParameter(x, maxTypeNameLen)))}
+           {fpi.ReturnType}> UnsafeInvoke;
 
     public static implicit operator {structName}(void* ptr)
     {{
@@ -112,7 +106,7 @@ public unsafe static partial class {extensionClass.ClassName}
                 string           parameterType   = parameterSymbol.Type.Name;
                 string           parameterName   = parameterSymbol.Name;
 
-                Func<FunctionPointerInfo, string> extLoaderFuncBuilder = parameterType switch
+                Func<FunctionPointerInfo, string, string> extLoaderFuncBuilder = parameterType switch
                 {
                     "VkInstance" => GetInstanceLoadingFunction,
                     "VkDevice"   => GetDeviceLoadingFunction,
@@ -128,7 +122,7 @@ public unsafe static partial class {extensionClass.ClassName}
     /// </remarks>
     public static partial void Load({parameterType} {parameterName})
     {{
-        {string.Join(Environment.NewLine, extensionClass.Functions.Select(x => extLoaderFuncBuilder(x)))}
+        {string.Join(Environment.NewLine, extensionClass.Functions.Select(x => extLoaderFuncBuilder(x, parameterName)))}
     }}");
             }
 

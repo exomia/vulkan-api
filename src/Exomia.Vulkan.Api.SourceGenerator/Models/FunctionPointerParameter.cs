@@ -14,7 +14,6 @@ namespace Exomia.Vulkan.Api.SourceGenerator.Models
 {
     struct FunctionPointerParameter
     {
-        public bool                            IsReturnParameter;
         public FunctionPointerParameterSyntax? ParameterSyntax;
         public string                          Name;
         public string                          Type;

@@ -342,9 +342,7 @@ namespace Exomia.Vulkan.Api.Core
         public const uint   VK_QUEUE_FAMILY_FOREIGN_EXT                                = ~2U;
 
 
-        public const int    VK_EXT_SAMPLER_FILTER_MINMAX                               = 1;
-        public const int    VK_EXT_SAMPLER_FILTER_MINMAX_SPEC_VERSION                  = 2;
-        public const string VK_EXT_SAMPLER_FILTER_MINMAX_EXTENSION_NAME                = "VK_EXT_sampler_filter_minmax";
+
         public const int    VK_AMD_GPU_SHADER_INT16                                    = 1;
         public const int    VK_AMD_GPU_SHADER_INT16_SPEC_VERSION                       = 2;
         public const string VK_AMD_GPU_SHADER_INT16_EXTENSION_NAME                     = "VK_AMD_gpu_shader_int16";

@@ -9,6 +9,7 @@
 #endregion
 
 using System.Collections.Generic;
+using Microsoft.CodeAnalysis;
 
 namespace Exomia.Vulkan.Api.SourceGenerator.Models
 {
@@ -16,5 +17,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator.Models
     {
         public string                         Name;
         public List<FunctionPointerParameter> Parameters;
+        public string                         ReturnType;
+        public ITypeSymbol                    TypeSymbol;
     }
 }

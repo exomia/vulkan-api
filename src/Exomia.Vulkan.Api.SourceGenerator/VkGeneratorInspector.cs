@@ -77,18 +77,16 @@ namespace Exomia.Vulkan.Api.SourceGenerator
             FunctionPointerInfo fpi;
             fpi.Name       = fieldSymbol.Name;
             fpi.Parameters = new List<FunctionPointerParameter>();
-
             SyntaxNodeOrToken[] properties = fieldSyntaxChildren.ParameterList.DescendantNodesAndTokens()
                                                                 .Where(x => x.AsNode() is FunctionPointerParameterSyntax || x.AsToken().IsKind(SyntaxKind.CommaToken))
                                                                 .ToArray();
 
             for (int i = 0; i < properties.Length - 1; i += 2)
             {
-                FunctionPointerParameterSyntax parameterSyntax = properties[i].AsNode() as FunctionPointerParameterSyntax ?? throw new NullReferenceException(nameof(fieldSymbol.ConstantValue));
+                FunctionPointerParameterSyntax parameterSyntax = properties[i].AsNode() as FunctionPointerParameterSyntax ?? throw new NullReferenceException("AsNode() returned null!");
                 SyntaxTrivia                   trivia          = properties[i + 1].AsToken().TrailingTrivia.First(x => x.IsKind(SyntaxKind.MultiLineCommentTrivia));
-
+                
                 FunctionPointerParameter fpp;
-                fpp.IsReturnParameter = false;
                 fpp.ParameterSyntax   = parameterSyntax;
                 fpp.Name              = trivia.ToFullString().Trim(' ', '*', '/');
                 fpp.Type              = parameterSyntax.ToString();
@@ -96,6 +94,10 @@ namespace Exomia.Vulkan.Api.SourceGenerator
                 fpi.Parameters.Add(fpp);
             }
 
+            fpi.ReturnType = (properties[properties.Length - 1].AsNode() as FunctionPointerParameterSyntax ?? throw new NullReferenceException("AsNode() returned null!")).ToString();
+
+            fpi.TypeSymbol = fieldSymbol.Type;
+            
             vkExtensionClass.Functions.Add(fpi);
             return vkExtensionClass;
         }

@@ -6,7 +6,7 @@ namespace Exomia.Vulkan.Api.Core
     static class Utils
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe VkFunction LoadVkFunction(VkInstance vkInstance, string vkFunctionName)
+        public static unsafe void* LoadVkFunction(VkInstance vkInstance, string vkFunctionName)
         {
             fixed (char* pVkFunctionName = vkFunctionName)
             {
@@ -20,7 +20,7 @@ namespace Exomia.Vulkan.Api.Core
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe VkFunction LoadVkFunction(VkDevice vkDevice, string vkFunctionName)
+        public static unsafe void* LoadVkFunction(VkDevice vkDevice, string vkFunctionName)
         {
             fixed (char* pVkFunctionName = vkFunctionName)
             {
