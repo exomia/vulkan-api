@@ -1612,29 +1612,6 @@ namespace Exomia.Vulkan.Api.Core
         uint*                           pPresentationTimingCount,
         VkPastPresentationTimingGOOGLE* pPresentationTimings);
 
-    public unsafe delegate VkResult CreateValidationCacheEXT(
-        VkDevice                        device,
-        VkValidationCacheCreateInfoEXT* pCreateInfo,
-        VkAllocationCallbacks*          pAllocator,
-        VkValidationCacheEXT*           pValidationCache);
-
-    public unsafe delegate void DestroyValidationCacheEXT(
-        VkDevice               device,
-        VkValidationCacheEXT   validationCache,
-        VkAllocationCallbacks* pAllocator);
-
-    public unsafe delegate VkResult MergeValidationCachesEXT(
-        VkDevice              device,
-        VkValidationCacheEXT  dstCache,
-        uint                  srcCacheCount,
-        VkValidationCacheEXT* pSrcCaches);
-
-    public unsafe delegate VkResult GetValidationCacheDataEXT(
-        VkDevice             device,
-        VkValidationCacheEXT validationCache,
-        nuint*               pDataSize,
-        void*                pData);
-
     public delegate void CmdBindShadingRateImageNV(
         VkCommandBuffer commandBuffer,
         VkImageView     imageView,

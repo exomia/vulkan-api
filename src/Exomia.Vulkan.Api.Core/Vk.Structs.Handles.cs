@@ -1545,51 +1545,6 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public readonly unsafe struct VkValidationCacheEXT
-    {
-        public static readonly VkValidationCacheEXT Null = (VkValidationCacheEXT)null;
-#pragma warning disable 649
-        private readonly void* _ptr;
-#pragma warning restore 649
-
-        public static explicit operator VkValidationCacheEXT(void* ptr)
-        {
-            VkValidationCacheEXT value;
-            *(void**)&value = ptr;
-            return value;
-        }
-
-        public static bool operator ==(VkValidationCacheEXT left, VkValidationCacheEXT right)
-        {
-            return left._ptr == right._ptr;
-        }
-
-        public static bool operator !=(VkValidationCacheEXT left, VkValidationCacheEXT right)
-        {
-            return left._ptr != right._ptr;
-        }
-
-        public bool Equals(in VkValidationCacheEXT obj)
-        {
-            return obj._ptr == _ptr;
-        }
-
-        public override bool Equals(object? obj)
-        {
-            return obj is VkValidationCacheEXT vkValidationCacheEXT && Equals(in vkValidationCacheEXT);
-        }
-
-        public override int GetHashCode()
-        {
-            return ((IntPtr)_ptr).GetHashCode();
-        }
-
-        public static explicit operator void*(VkValidationCacheEXT value)
-        {
-            return value._ptr;
-        }
-    }
-
     public readonly unsafe struct VkAccelerationStructureNV
     {
         public static readonly VkAccelerationStructureNV Null = (VkAccelerationStructureNV)null;

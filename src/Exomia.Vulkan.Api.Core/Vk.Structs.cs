@@ -3832,26 +3832,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkValidationCacheCreateInfoEXT
-    {
-        public const VkStructureType                 STYPE = VkStructureType.VALIDATION_CACHE_CREATE_INFO_EXT;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkValidationCacheCreateFlagsEXT flags;
-        public       nuint                           initialDataSize;
-        public       void*                           pInitialData;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkShaderModuleValidationCacheCreateInfoEXT
-    {
-        public const VkStructureType      STYPE = VkStructureType.SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT;
-        public       VkStructureType      sType;
-        public       void*                pNext;
-        public       VkValidationCacheEXT validationCache;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkShadingRatePaletteNV
     {
         public uint                         shadingRatePaletteEntryCount;

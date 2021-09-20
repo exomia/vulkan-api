@@ -359,17 +359,8 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_SHADER_SM_BUILTINS_SPEC_VERSION                      = 1;
         public const string VK_NV_SHADER_SM_BUILTINS_EXTENSION_NAME                    = "VK_NV_shader_sm_builtins";
 
-
-
-        public const int    VK_EXT_VALIDATION_CACHE                                    = 1;
-        public const int    VK_EXT_VALIDATION_CACHE_SPEC_VERSION                       = 1;
-        public const string VK_EXT_VALIDATION_CACHE_EXTENSION_NAME                     = "VK_EXT_validation_cache";
-        public const int    VK_EXT_DESCRIPTOR_INDEXING                                 = 1;
-        public const int    VK_EXT_DESCRIPTOR_INDEXING_SPEC_VERSION                    = 2;
-        public const string VK_EXT_DESCRIPTOR_INDEXING_EXTENSION_NAME                  = "VK_EXT_descriptor_indexing";
-        public const int    VK_EXT_SHADER_VIEWPORT_INDEX_LAYER                         = 1;
-        public const int    VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_SPEC_VERSION            = 1;
-        public const string VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_EXTENSION_NAME          = "VK_EXT_shader_viewport_index_layer";
+        
+        
         public const int    VK_NV_SHADING_RATE_IMAGE                                   = 1;
         public const int    VK_NV_SHADING_RATE_IMAGE_SPEC_VERSION                      = 3;
         public const string VK_NV_SHADING_RATE_IMAGE_EXTENSION_NAME                    = "VK_NV_shading_rate_image";

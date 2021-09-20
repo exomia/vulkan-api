@@ -8,7 +8,6 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
     [Obsolete("Promoted to Vulkan 1.2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_sampler_filter_minmax.html#_deprecation_state")]
-
     [VkExtGenerator]
     public static partial class VkExtSamplerFilterMinmax
     {

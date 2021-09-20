@@ -2766,12 +2766,6 @@ namespace Exomia.Vulkan.Api.Core
         MAX_ENUM_NV = 0x7FFFFFFF
     }
 
-    public enum VkValidationCacheHeaderVersionEXT
-    {
-        ONE_EXT      = 1,
-        MAX_ENUM_EXT = 0x7FFFFFFF
-    }
-
     public enum VkShadingRatePaletteEntryNV
     {
         NO_INVOCATIONS_NV               = 0,
