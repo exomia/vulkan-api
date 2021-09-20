@@ -203,16 +203,7 @@ namespace Exomia.Vulkan.Api.Core
         /// </summary>
         Reserved = 0
     }
-
-    [Flags]
-    public enum VkPipelineRasterizationStateStreamCreateFlagsEXT : uint
-    {
-        /// <summary>
-        ///     Reserved for future use
-        /// </summary>
-        Reserved = 0
-    }
-
+    
     [Flags]
     public enum VkPipelineViewportSwizzleStateCreateFlagsNV : uint
     {

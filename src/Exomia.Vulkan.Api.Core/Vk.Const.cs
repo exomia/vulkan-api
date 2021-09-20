@@ -269,9 +269,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_DEDICATED_ALLOCATION                                 = 1;
         public const int    VK_NV_DEDICATED_ALLOCATION_SPEC_VERSION                    = 1;
         public const string VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME                  = "VK_NV_dedicated_allocation";
-        public const int    VK_EXT_TRANSFORM_FEEDBACK                                  = 1;
-        public const int    VK_EXT_TRANSFORM_FEEDBACK_SPEC_VERSION                     = 1;
-        public const string VK_EXT_TRANSFORM_FEEDBACK_EXTENSION_NAME                   = "VK_EXT_transform_feedback";
+
         public const int    VK_NVX_IMAGE_VIEW_HANDLE                                   = 1;
         public const int    VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION                      = 2;
         public const string VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME                    = "VK_NVX_image_view_handle";
@@ -310,24 +308,11 @@ namespace Exomia.Vulkan.Api.Core
         public const string VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME                       = "VK_NV_external_memory";
 
 
-        public const int    VK_EXT_ASTC_DECODE_MODE                                    = 1;
-        public const int    VK_EXT_ASTC_DECODE_MODE_SPEC_VERSION                       = 1;
-        public const string VK_EXT_ASTC_DECODE_MODE_EXTENSION_NAME                     = "VK_EXT_astc_decode_mode";
-        public const int    VK_EXT_CONDITIONAL_RENDERING                               = 1;
-        public const int    VK_EXT_CONDITIONAL_RENDERING_SPEC_VERSION                  = 2;
-        public const string VK_EXT_CONDITIONAL_RENDERING_EXTENSION_NAME                = "VK_EXT_conditional_rendering";
+        
         public const int    VK_NV_CLIP_SPACE_W_SCALING                                 = 1;
         public const int    VK_NV_CLIP_SPACE_W_SCALING_SPEC_VERSION                    = 1;
         public const string VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME                  = "VK_NV_clip_space_w_scaling";
-        public const int    VK_EXT_DIRECT_MODE_DISPLAY                                 = 1;
-        public const int    VK_EXT_DIRECT_MODE_DISPLAY_SPEC_VERSION                    = 1;
-        public const string VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME                  = "VK_EXT_direct_mode_display";
-        public const int    VK_EXT_DISPLAY_SURFACE_COUNTER                             = 1;
-        public const int    VK_EXT_DISPLAY_SURFACE_COUNTER_SPEC_VERSION                = 1;
-        public const string VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME              = "VK_EXT_display_surface_counter";
-        public const int    VK_EXT_DISPLAY_CONTROL                                     = 1;
-        public const int    VK_EXT_DISPLAY_CONTROL_SPEC_VERSION                        = 1;
-        public const string VK_EXT_DISPLAY_CONTROL_EXTENSION_NAME                      = "VK_EXT_display_control";
+        
         public const int    VK_GOOGLE_DISPLAY_TIMING                                   = 1;
         public const int    VK_GOOGLE_DISPLAY_TIMING_SPEC_VERSION                      = 1;
         public const string VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME                    = "VK_GOOGLE_display_timing";

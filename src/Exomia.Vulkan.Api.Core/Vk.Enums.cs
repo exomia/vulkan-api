@@ -2744,41 +2744,6 @@ namespace Exomia.Vulkan.Api.Core
         FLAG_BITS_MAX_ENUM_NV = 0x7FFFFFFF
     }
 
-    [Flags]
-    public enum VkConditionalRenderingFlagsEXT
-    {
-        INVERTED_BIT_EXT       = 0x00000001,
-        FLAG_BITS_MAX_ENUM_EXT = 0x7FFFFFFF
-    }
-
-    [Flags]
-    public enum VkSurfaceCounterFlagsEXT
-    {
-        VBLANK_BIT_EXT         = 0x00000001,
-        VBLANK_EXT             = VBLANK_BIT_EXT,
-        FLAG_BITS_MAX_ENUM_EXT = 0x7FFFFFFF
-    }
-
-    public enum VkDisplayPowerStateEXT
-    {
-        OFF_EXT      = 0,
-        SUSPEND_EXT  = 1,
-        ON_EXT       = 2,
-        MAX_ENUM_EXT = 0x7FFFFFFF
-    }
-
-    public enum VkDeviceEventTypeEXT
-    {
-        DISPLAY_HOTPLUG_EXT = 0,
-        MAX_ENUM_EXT        = 0x7FFFFFFF
-    }
-
-    public enum VkDisplayEventTypeEXT
-    {
-        FIRST_PIXEL_OUT_EXT = 0,
-        MAX_ENUM_EXT        = 0x7FFFFFFF
-    }
-
     public enum VkViewportCoordinateSwizzleNV
     {
         POSITIVE_X_NV = 0,

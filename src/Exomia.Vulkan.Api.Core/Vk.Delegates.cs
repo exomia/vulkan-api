@@ -10,8 +10,6 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core
 {
@@ -1552,50 +1550,6 @@ namespace Exomia.Vulkan.Api.Core
         VkCommandBuffer         commandBuffer,
         VkResolveImageInfo2KHR* pResolveImageInfo);
 
-    public unsafe delegate void CmdBindTransformFeedbackBuffersEXT(
-        VkCommandBuffer commandBuffer,
-        uint            firstBinding,
-        uint            bindingCount,
-        VkBuffer*       pBuffers,
-        VkDeviceSize*   pOffsets,
-        VkDeviceSize*   pSizes);
-
-    public unsafe delegate void CmdBeginTransformFeedbackEXT(
-        VkCommandBuffer commandBuffer,
-        uint            firstCounterBuffer,
-        uint            counterBufferCount,
-        VkBuffer*       pCounterBuffers,
-        VkDeviceSize*   pCounterBufferOffsets);
-
-    public unsafe delegate void CmdEndTransformFeedbackEXT(
-        VkCommandBuffer commandBuffer,
-        uint            firstCounterBuffer,
-        uint            counterBufferCount,
-        VkBuffer*       pCounterBuffers,
-        VkDeviceSize*   pCounterBufferOffsets);
-
-    public delegate void CmdBeginQueryIndexedEXT(
-        VkCommandBuffer        commandBuffer,
-        VkQueryPool            queryPool,
-        uint                   query,
-        VkQueryControlFlagBits flags,
-        uint                   index);
-
-    public delegate void CmdEndQueryIndexedEXT(
-        VkCommandBuffer commandBuffer,
-        VkQueryPool     queryPool,
-        uint            query,
-        uint            index);
-
-    public delegate void CmdDrawIndirectByteCountEXT(
-        VkCommandBuffer commandBuffer,
-        uint            instanceCount,
-        uint            firstInstance,
-        VkBuffer        counterBuffer,
-        VkDeviceSize    counterBufferOffset,
-        uint            counterOffset,
-        uint            vertexStride);
-
     public unsafe delegate uint GetImageViewHandleNVX(
         VkDevice                  device,
         VkImageViewHandleInfoNVX* pInfo);
@@ -1641,50 +1595,11 @@ namespace Exomia.Vulkan.Api.Core
         VkExternalMemoryHandleTypeFlagsNV  externalHandleType,
         VkExternalImageFormatPropertiesNV* pExternalImageFormatProperties);
 
-    public unsafe delegate void CmdBeginConditionalRenderingEXT(
-        VkCommandBuffer                     commandBuffer,
-        VkConditionalRenderingBeginInfoEXT* pConditionalRenderingBegin);
-
-    public delegate void CmdEndConditionalRenderingEXT(VkCommandBuffer commandBuffer);
-
     public unsafe delegate void CmdSetViewportWScalingNV(
         VkCommandBuffer       commandBuffer,
         uint                  firstViewport,
         uint                  viewportCount,
         VkViewportWScalingNV* pViewportWScalings);
-
-    public delegate VkResult ReleaseDisplayEXT(
-        VkPhysicalDevice physicalDevice,
-        VkDisplayKHR     display);
-
-    public unsafe delegate VkResult GetPhysicalDeviceSurfaceCapabilities2EXT(
-        VkPhysicalDevice           physicalDevice,
-        VkSurfaceKHR               surface,
-        VkSurfaceCapabilities2EXT* pSurfaceCapabilities);
-
-    public unsafe delegate VkResult DisplayPowerControlEXT(
-        VkDevice               device,
-        VkDisplayKHR           display,
-        VkDisplayPowerInfoEXT* pDisplayPowerInfo);
-
-    public unsafe delegate VkResult RegisterDeviceEventEXT(
-        VkDevice               device,
-        VkDeviceEventInfoEXT*  pDeviceEventInfo,
-        VkAllocationCallbacks* pAllocator,
-        VkFence*               pFence);
-
-    public unsafe delegate VkResult RegisterDisplayEventEXT(
-        VkDevice               device,
-        VkDisplayKHR           display,
-        VkDisplayEventInfoEXT* pDisplayEventInfo,
-        VkAllocationCallbacks* pAllocator,
-        VkFence*               pFence);
-
-    public unsafe delegate VkResult GetSwapchainCounterEXT(
-        VkDevice                 device,
-        VkSwapchainKHR           swapchain,
-        VkSurfaceCounterFlagsEXT counter,
-        ulong*                   pCounterValue);
 
     public unsafe delegate VkResult GetRefreshCycleDurationGOOGLE(
         VkDevice                      device,

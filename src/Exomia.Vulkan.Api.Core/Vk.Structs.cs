@@ -10,7 +10,6 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using Exomia.Vulkan.Api.Core.Extensions;
 using System;
 using System.Runtime.InteropServices;
 
@@ -3623,44 +3622,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceTransformFeedbackFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        transformFeedback;
-        public       VkBool32        geometryStreams;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceTransformFeedbackPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            maxTransformFeedbackStreams;
-        public       uint            maxTransformFeedbackBuffers;
-        public       VkDeviceSize    maxTransformFeedbackBufferSize;
-        public       uint            maxTransformFeedbackStreamDataSize;
-        public       uint            maxTransformFeedbackBufferDataSize;
-        public       uint            maxTransformFeedbackBufferDataStride;
-        public       VkBool32        transformFeedbackQueries;
-        public       VkBool32        transformFeedbackStreamsLinesTriangles;
-        public       VkBool32        transformFeedbackRasterizationStreamSelect;
-        public       VkBool32        transformFeedbackDraw;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineRasterizationStateStreamCreateInfoEXT
-    {
-        public const VkStructureType                                  STYPE = VkStructureType.PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT;
-        public       VkStructureType                                  sType;
-        public       void*                                            pNext;
-        public       VkPipelineRasterizationStateStreamCreateFlagsEXT flags;
-        public       uint                                             rasterizationStream;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewHandleInfoNVX
     {
         public const VkStructureType  STYPE = VkStructureType.IMAGE_VIEW_HANDLE_INFO_NVX;
@@ -3747,54 +3708,6 @@ namespace Exomia.Vulkan.Api.Core
         public       void*                             pNext;
         public       VkExternalMemoryHandleTypeFlagsNV handleTypes;
     }
-    
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkImageViewASTCDecodeModeEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.IMAGE_VIEW_ASTC_DECODE_MODE_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkFormat        decodeMode;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceASTCDecodeFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        decodeModeSharedExponent;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkConditionalRenderingBeginInfoEXT
-    {
-        public const VkStructureType                STYPE = VkStructureType.CONDITIONAL_RENDERING_BEGIN_INFO_EXT;
-        public       VkStructureType                sType;
-        public       void*                          pNext;
-        public       VkBuffer                       buffer;
-        public       VkDeviceSize                   offset;
-        public       VkConditionalRenderingFlagsEXT flags;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceConditionalRenderingFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        conditionalRendering;
-        public       VkBool32        inheritedConditionalRendering;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkCommandBufferInheritanceConditionalRenderingInfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        conditionalRenderingEnable;
-    }
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkViewportWScalingNV
@@ -3812,61 +3725,6 @@ namespace Exomia.Vulkan.Api.Core
         public       VkBool32              viewportWScalingEnable;
         public       uint                  viewportCount;
         public       VkViewportWScalingNV* pViewportWScalings;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkSurfaceCapabilities2EXT
-    {
-        public const VkStructureType            STYPE = VkStructureType.SURFACE_CAPABILITIES_2_EXT;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       uint                       minImageCount;
-        public       uint                       maxImageCount;
-        public       VkExtent2D                 currentExtent;
-        public       VkExtent2D                 minImageExtent;
-        public       VkExtent2D                 maxImageExtent;
-        public       uint                       maxImageArrayLayers;
-        public       VkSurfaceTransformFlagsKHR supportedTransforms;
-        public       VkSurfaceTransformFlagsKHR currentTransform;
-        public       VkCompositeAlphaFlagsKHR   supportedCompositeAlpha;
-        public       VkImageUsageFlagBits       supportedUsageFlags;
-        public       VkSurfaceCounterFlagsEXT   supportedSurfaceCounters;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDisplayPowerInfoEXT
-    {
-        public const VkStructureType        STYPE = VkStructureType.DISPLAY_POWER_INFO_EXT;
-        public       VkStructureType        sType;
-        public       void*                  pNext;
-        public       VkDisplayPowerStateEXT powerState;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDeviceEventInfoEXT
-    {
-        public const VkStructureType      STYPE = VkStructureType.DEVICE_EVENT_INFO_EXT;
-        public       VkStructureType      sType;
-        public       void*                pNext;
-        public       VkDeviceEventTypeEXT deviceEvent;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDisplayEventInfoEXT
-    {
-        public const VkStructureType       STYPE = VkStructureType.DISPLAY_EVENT_INFO_EXT;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       VkDisplayEventTypeEXT displayEvent;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkSwapchainCounterCreateInfoEXT
-    {
-        public const VkStructureType          STYPE = VkStructureType.SWAPCHAIN_COUNTER_CREATE_INFO_EXT;
-        public       VkStructureType          sType;
-        public       void*                    pNext;
-        public       VkSurfaceCounterFlagsEXT surfaceCounters;
     }
 
     [StructLayout(LayoutKind.Sequential)]
