@@ -1612,18 +1612,6 @@ namespace Exomia.Vulkan.Api.Core
         uint*                           pPresentationTimingCount,
         VkPastPresentationTimingGOOGLE* pPresentationTimings);
 
-    public unsafe delegate void CmdSetDiscardRectangleEXT(
-        VkCommandBuffer commandBuffer,
-        uint            firstDiscardRectangle,
-        uint            discardRectangleCount,
-        VkRect2D*       pDiscardRectangles);
-
-    public unsafe delegate void SetHdrMetadataEXT(
-        VkDevice          device,
-        uint              swapchainCount,
-        VkSwapchainKHR*   pSwapchains,
-        VkHdrMetadataEXT* pMetadata);
-
     public unsafe delegate void CmdSetSampleLocationsEXT(
         VkCommandBuffer           commandBuffer,
         VkSampleLocationsInfoEXT* pSampleLocationsInfo);

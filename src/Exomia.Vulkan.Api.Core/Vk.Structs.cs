@@ -10,7 +10,6 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 
 // ReSharper disable UnusedMember.Global
@@ -3787,97 +3786,6 @@ namespace Exomia.Vulkan.Api.Core
         public       VkPipelineViewportSwizzleStateCreateFlagsNV flags;
         public       uint                                        viewportCount;
         public       VkViewportSwizzleNV*                        pViewportSwizzles;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceDiscardRectanglePropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            maxDiscardRectangles;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineDiscardRectangleStateCreateInfoEXT
-    {
-        public const VkStructureType                               STYPE = VkStructureType.PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT;
-        public       VkStructureType                               sType;
-        public       void*                                         pNext;
-        public       VkPipelineDiscardRectangleStateCreateFlagsEXT flags;
-        public       VkDiscardRectangleModeEXT                     discardRectangleMode;
-        public       uint                                          discardRectangleCount;
-        public       VkRect2D*                                     pDiscardRectangles;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       float           primitiveOverestimationSize;
-        public       float           maxExtraPrimitiveOverestimationSize;
-        public       float           extraPrimitiveOverestimationSizeGranularity;
-        public       VkBool32        primitiveUnderestimation;
-        public       VkBool32        conservativePointAndLineRasterization;
-        public       VkBool32        degenerateTrianglesRasterized;
-        public       VkBool32        degenerateLinesRasterized;
-        public       VkBool32        fullyCoveredFragmentShaderInputVariable;
-        public       VkBool32        conservativeRasterizationPostDepthCoverage;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineRasterizationConservativeStateCreateInfoEXT
-    {
-        public const VkStructureType                                        STYPE = VkStructureType.PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT;
-        public       VkStructureType                                        sType;
-        public       void*                                                  pNext;
-        public       VkPipelineRasterizationConservativeStateCreateFlagsEXT flags;
-        public       VkConservativeRasterizationModeEXT                     conservativeRasterizationMode;
-        public       float                                                  extraPrimitiveOverestimationSize;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceDepthClipEnableFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        depthClipEnable;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineRasterizationDepthClipStateCreateInfoEXT
-    {
-        public const VkStructureType                                     STYPE = VkStructureType.PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT;
-        public       VkStructureType                                     sType;
-        public       void*                                               pNext;
-        public       VkPipelineRasterizationDepthClipStateCreateFlagsEXT flags;
-        public       VkBool32                                            depthClipEnable;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkXYColorEXT
-    {
-        public float x;
-        public float y;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkHdrMetadataEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.HDR_METADATA_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkXYColorEXT    displayPrimaryRed;
-        public       VkXYColorEXT    displayPrimaryGreen;
-        public       VkXYColorEXT    displayPrimaryBlue;
-        public       VkXYColorEXT    whitePoint;
-        public       float           maxLuminance;
-        public       float           minLuminance;
-        public       float           maxContentLightLevel;
-        public       float           maxFrameAverageLightLevel;
     }
 
     [StructLayout(LayoutKind.Sequential)]

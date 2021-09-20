@@ -2757,21 +2757,6 @@ namespace Exomia.Vulkan.Api.Core
         MAX_ENUM_NV   = 0x7FFFFFFF
     }
 
-    public enum VkDiscardRectangleModeEXT
-    {
-        INCLUSIVE_EXT = 0,
-        EXCLUSIVE_EXT = 1,
-        MAX_ENUM_EXT  = 0x7FFFFFFF
-    }
-
-    public enum VkConservativeRasterizationModeEXT
-    {
-        DISABLED_EXT      = 0,
-        OVERESTIMATE_EXT  = 1,
-        UNDERESTIMATE_EXT = 2,
-        MAX_ENUM_EXT      = 0x7FFFFFFF
-    }
-
     public enum VkBlendOverlapEXT
     {
         UNCORRELATED_EXT = 0,

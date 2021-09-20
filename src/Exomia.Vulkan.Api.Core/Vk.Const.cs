@@ -331,21 +331,8 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_VIEWPORT_SWIZZLE                                     = 1;
         public const int    VK_NV_VIEWPORT_SWIZZLE_SPEC_VERSION                        = 1;
         public const string VK_NV_VIEWPORT_SWIZZLE_EXTENSION_NAME                      = "VK_NV_viewport_swizzle";
-        public const int    VK_EXT_DISCARD_RECTANGLES                                  = 1;
-        public const int    VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION                     = 1;
-        public const string VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME                   = "VK_EXT_discard_rectangles";
-        public const int    VK_EXT_CONSERVATIVE_RASTERIZATION                          = 1;
-        public const int    VK_EXT_CONSERVATIVE_RASTERIZATION_SPEC_VERSION             = 1;
-        public const string VK_EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME           = "VK_EXT_conservative_rasterization";
-        public const int    VK_EXT_DEPTH_CLIP_ENABLE                                   = 1;
-        public const int    VK_EXT_DEPTH_CLIP_ENABLE_SPEC_VERSION                      = 1;
-        public const string VK_EXT_DEPTH_CLIP_ENABLE_EXTENSION_NAME                    = "VK_EXT_depth_clip_enable";
-        public const int    VK_EXT_SWAPCHAIN_COLORSPACE                                = 1;
-        public const int    VK_EXT_SWAPCHAIN_COLOR_SPACE_SPEC_VERSION                  = 4;
-        public const string VK_EXT_SWAPCHAIN_COLOR_SPACE_EXTENSION_NAME                = "VK_EXT_swapchain_colorspace";
-        public const int    VK_EXT_HDR_METADATA                                        = 1;
-        public const int    VK_EXT_HDR_METADATA_SPEC_VERSION                           = 2;
-        public const string VK_EXT_HDR_METADATA_EXTENSION_NAME                         = "VK_EXT_hdr_metadata";
+
+
         public const int    VK_EXT_EXTERNAL_MEMORY_DMA_BUF                             = 1;
         public const int    VK_EXT_EXTERNAL_MEMORY_DMA_BUF_SPEC_VERSION                = 1;
         public const string VK_EXT_EXTERNAL_MEMORY_DMA_BUF_EXTENSION_NAME              = "VK_EXT_external_memory_dma_buf";

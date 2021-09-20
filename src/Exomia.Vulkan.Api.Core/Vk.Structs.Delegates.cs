@@ -1409,44 +1409,6 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public readonly unsafe struct VkCmdSetDiscardRectangleEXT
-    {
-        public static readonly VkCmdSetDiscardRectangleEXT Null = null;
-
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* firstDiscardRectangle */
-            uint,            /* discardRectangleCount */
-            VkRect2D*,       /* pDiscardRectangles */
-            void> UnsafeInvoke;
-
-        public static implicit operator VkCmdSetDiscardRectangleEXT(void* ptr)
-        {
-            VkCmdSetDiscardRectangleEXT value;
-            *(void**)&value = ptr;
-            return value;
-        }
-    }
-
-    public readonly unsafe struct VkSetHdrMetadataEXT
-    {
-        public static readonly VkSetHdrMetadataEXT Null = null;
-
-        public readonly delegate*<
-            VkDevice,          /* device */
-            uint,              /* swapchainCount */
-            VkSwapchainKHR*,   /* pSwapchains */
-            VkHdrMetadataEXT*, /* pMetadata */
-            void> UnsafeInvoke;
-
-        public static implicit operator VkSetHdrMetadataEXT(void* ptr)
-        {
-            VkSetHdrMetadataEXT value;
-            *(void**)&value = ptr;
-            return value;
-        }
-    }
-
     public readonly unsafe struct VkCmdSetSampleLocationsEXT
     {
         public static readonly VkCmdSetSampleLocationsEXT Null = null;
