@@ -1732,25 +1732,6 @@ namespace Exomia.Vulkan.Api.Core
         }
     }
 
-    public readonly unsafe struct VkGetMemoryHostPointerPropertiesEXT
-    {
-        public static readonly VkGetMemoryHostPointerPropertiesEXT Null = null;
-
-        public readonly delegate*<
-            VkDevice,                           /* device */
-            VkExternalMemoryHandleTypeFlagBits, /* handleType */
-            void*,                              /* pHostPointer */
-            VkMemoryHostPointerPropertiesEXT*,  /* pMemoryHostPointerProperties */
-            VkResult> UnsafeInvoke;
-
-        public static implicit operator VkGetMemoryHostPointerPropertiesEXT(void* ptr)
-        {
-            VkGetMemoryHostPointerPropertiesEXT value;
-            *(void**)&value = ptr;
-            return value;
-        }
-    }
-
     public readonly unsafe struct VkCmdWriteBufferMarkerAMD
     {
         public static readonly VkCmdWriteBufferMarkerAMD Null = null;

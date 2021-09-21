@@ -85,11 +85,11 @@ namespace Exomia.Vulkan.Api.SourceGenerator
             {
                 FunctionPointerParameterSyntax parameterSyntax = properties[i].AsNode() as FunctionPointerParameterSyntax ?? throw new NullReferenceException("AsNode() returned null!");
                 SyntaxTrivia                   trivia          = properties[i + 1].AsToken().TrailingTrivia.First(x => x.IsKind(SyntaxKind.MultiLineCommentTrivia));
-                
+
                 FunctionPointerParameter fpp;
-                fpp.ParameterSyntax   = parameterSyntax;
-                fpp.Name              = trivia.ToFullString().Trim(' ', '*', '/');
-                fpp.Type              = parameterSyntax.ToString();
+                fpp.ParameterSyntax = parameterSyntax;
+                fpp.Name            = trivia.ToFullString().Trim(' ', '*', '/');
+                fpp.Type            = parameterSyntax.ToString();
 
                 fpi.Parameters.Add(fpp);
             }
@@ -97,7 +97,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
             fpi.ReturnType = (properties[properties.Length - 1].AsNode() as FunctionPointerParameterSyntax ?? throw new NullReferenceException("AsNode() returned null!")).ToString();
 
             fpi.TypeSymbol = fieldSymbol.Type;
-            
+
             vkExtensionClass.Functions.Add(fpi);
             return vkExtensionClass;
         }

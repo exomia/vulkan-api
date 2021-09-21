@@ -20,16 +20,6 @@ namespace Exomia.Vulkan.Api.SourceGenerator
     {
         private const string VULKAN_VERSION = "1.2";
 
-        public static string GetDelegateParameter(FunctionPointerParameter fpp)
-        {
-            return $"{fpp.Type} {fpp.Name}";
-        }
-
-        public static string GetFunctionPointerParameter(FunctionPointerParameter fpp, int maxTypeNameLen)
-        {
-            return $"{(fpp.Type + ',').PadRight(maxTypeNameLen)} /* {fpp.Name} */";
-        }
-
         public static string GetUtf8StringAsUtf16(string value)
         {
             StringBuilder valueAsUft8InUft16 = new StringBuilder((value.Length * 2) + 1);
@@ -59,18 +49,20 @@ namespace Exomia.Vulkan.Api.SourceGenerator
             return $@"{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");";
         }
 
-        public static string GetDelegateStruct(FunctionPointerInfo fpi)
+        public static string GetDelegates(FunctionPointerInfo fpi)
+        {
+            return $@"public unsafe delegate {fpi.ReturnType} {fpi.Name.Substring(2)}({string.Join(", ", fpi.Parameters.Select(p => $"{p.Type} {p.Name}"))});";
+        }
+
+        public static string GetStructsDelegates(FunctionPointerInfo fpi)
         {
             string structName = $"{char.ToUpper(fpi.Name[0])}{fpi.Name.Substring(1)}";
-            int maxTypeNameLen = fpi.Parameters.Max(x => x.Type.Length) + 1;
 
             return $@"public readonly unsafe struct {structName}
 {{
-    public static readonly {structName} Null = null;
+    public static readonly {structName} Null = ({structName})null;
 
-    public readonly delegate*<
-           {string.Join(Environment.NewLine, fpi.Parameters.Select(x => GetFunctionPointerParameter(x, maxTypeNameLen)))}
-           {fpi.ReturnType}> UnsafeInvoke;
+    public readonly delegate*<{string.Join(", ", fpi.Parameters.Select(p => $"{p.Type} /* {p.Name} */"))}, {fpi.ReturnType}> UnsafeInvoke;
 
     public static implicit operator {structName}(void* ptr)
     {{
@@ -83,7 +75,8 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 
         public static string GetExtensionClass(VkExtensionClass extensionClass)
         {
-            StringBuilder sb = new StringBuilder($@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+            StringBuilder sb = new StringBuilder(
+                $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 /// <summary> {extensionClass.ClassName} class. </summary>
 /// <remarks>
 ///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
@@ -113,7 +106,8 @@ public unsafe static partial class {extensionClass.ClassName}
                     _            => throw new NotSupportedException()
                 };
 
-                sb.AppendLine($@"
+                sb.AppendLine(
+                    $@"
     /// <summary> Loads all functions for this extension. </summary>
     /// <param name=""{parameterName}""> The {parameterType}. </param>
     /// <remarks>

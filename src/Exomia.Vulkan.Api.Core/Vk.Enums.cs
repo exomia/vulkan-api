@@ -2883,15 +2883,6 @@ namespace Exomia.Vulkan.Api.Core
         FLAG_BITS_MAX_ENUM_KHR    = 0x7FFFFFFF
     }
 
-    public enum VkQueueGlobalPriorityEXT
-    {
-        LOW_EXT      = 128,
-        MEDIUM_EXT   = 256,
-        HIGH_EXT     = 512,
-        REALTIME_EXT = 1024,
-        MAX_ENUM_EXT = 0x7FFFFFFF
-    }
-
     [Flags]
     public enum VkPipelineCompilerControlFlagsAMD
     {

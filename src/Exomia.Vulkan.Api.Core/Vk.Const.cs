@@ -372,18 +372,14 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_REPRESENTATIVE_FRAGMENT_TEST                         = 1;
         public const int    VK_NV_REPRESENTATIVE_FRAGMENT_TEST_SPEC_VERSION            = 2;
         public const string VK_NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME          = "VK_NV_representative_fragment_test";
-        public const int    VK_EXT_FILTER_CUBIC                                        = 1;
-        public const int    VK_EXT_FILTER_CUBIC_SPEC_VERSION                           = 3;
-        public const string VK_EXT_FILTER_CUBIC_EXTENSION_NAME                         = "VK_EXT_filter_cubic";
+
+
         public const int    VK_QCOM_RENDER_PASS_SHADER_RESOLVE                         = 1;
         public const int    VK_QCOM_RENDER_PASS_SHADER_RESOLVE_SPEC_VERSION            = 4;
         public const string VK_QCOM_RENDER_PASS_SHADER_RESOLVE_EXTENSION_NAME          = "VK_QCOM_render_pass_shader_resolve";
-        public const int    VK_EXT_GLOBAL_PRIORITY                                     = 1;
-        public const int    VK_EXT_GLOBAL_PRIORITY_SPEC_VERSION                        = 2;
-        public const string VK_EXT_GLOBAL_PRIORITY_EXTENSION_NAME                      = "VK_EXT_global_priority";
-        public const int    VK_EXT_EXTERNAL_MEMORY_HOST                                = 1;
-        public const int    VK_EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION                   = 1;
-        public const string VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME                 = "VK_EXT_external_memory_host";
+
+
+
         public const int    VK_AMD_BUFFER_MARKER                                       = 1;
         public const int    VK_AMD_BUFFER_MARKER_SPEC_VERSION                          = 1;
         public const string VK_AMD_BUFFER_MARKER_EXTENSION_NAME                        = "VK_AMD_buffer_marker";

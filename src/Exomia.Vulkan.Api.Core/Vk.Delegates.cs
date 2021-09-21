@@ -1727,12 +1727,6 @@ namespace Exomia.Vulkan.Api.Core
         VkPipeline pipeline,
         uint       shader);
 
-    public unsafe delegate VkResult GetMemoryHostPointerPropertiesEXT(
-        VkDevice                           device,
-        VkExternalMemoryHandleTypeFlagBits handleType,
-        void*                              pHostPointer,
-        VkMemoryHostPointerPropertiesEXT*  pMemoryHostPointerProperties);
-
     public delegate void CmdWriteBufferMarkerAMD(
         VkCommandBuffer         commandBuffer,
         VkPipelineStageFlagBits pipelineStage,

@@ -4127,63 +4127,7 @@ namespace Exomia.Vulkan.Api.Core
         public       void*           pNext;
         public       VkBool32        representativeFragmentTestEnable;
     }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceImageViewImageFormatInfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkImageViewType imageViewType;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkFilterCubicImageViewImageFormatPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        filterCubic;
-        public       VkBool32        filterCubicMinmax;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDeviceQueueGlobalPriorityCreateInfoEXT
-    {
-        public const VkStructureType          STYPE = VkStructureType.DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT;
-        public       VkStructureType          sType;
-        public       void*                    pNext;
-        public       VkQueueGlobalPriorityEXT globalPriority;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkImportMemoryHostPointerInfoEXT
-    {
-        public const VkStructureType                    STYPE = VkStructureType.IMPORT_MEMORY_HOST_POINTER_INFO_EXT;
-        public       VkStructureType                    sType;
-        public       void*                              pNext;
-        public       VkExternalMemoryHandleTypeFlagBits handleType;
-        public       void*                              pHostPointer;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkMemoryHostPointerPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.MEMORY_HOST_POINTER_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            memoryTypeBits;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceExternalMemoryHostPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkDeviceSize    minImportedHostPointerAlignment;
-    }
-
+    
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCompilerControlCreateInfoAMD
     {
