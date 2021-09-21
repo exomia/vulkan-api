@@ -14,7 +14,6 @@
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
-
     public enum VkQueueGlobalPriorityEXT
     {
         LOW_EXT      = 128,

@@ -590,10 +590,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_EXT_COLOR_WRITE_ENABLE                                  = 1;
         public const int    VK_EXT_COLOR_WRITE_ENABLE_SPEC_VERSION                     = 1;
         public const string VK_EXT_COLOR_WRITE_ENABLE_EXTENSION_NAME                   = "VK_EXT_color_write_enable";
-        public const int    VK_EXT_GLOBAL_PRIORITY_QUERY                               = 1;
-        public const uint   VK_MAX_GLOBAL_PRIORITY_SIZE_EXT                            = 16U;
-        public const int    VK_EXT_GLOBAL_PRIORITY_QUERY_SPEC_VERSION                  = 1;
-        public const string VK_EXT_GLOBAL_PRIORITY_QUERY_EXTENSION_NAME                = "VK_EXT_global_priority_query";
+
         public const int    VK_EXT_MULTI_DRAW                                          = 1;
         public const int    VK_EXT_MULTI_DRAW_SPEC_VERSION                             = 1;
         public const string VK_EXT_MULTI_DRAW_EXTENSION_NAME                           = "VK_EXT_multi_draw";
