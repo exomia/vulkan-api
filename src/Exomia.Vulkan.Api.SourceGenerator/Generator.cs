@@ -50,7 +50,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
                         context.AddSource($"{className.NamespaceName}.{className.ClassName}.Delegates.g.cs", sourceCode);
                     }
 
-                    if (className.Functions.Any()) // *Structs.Delegates.g.cs
+                    if (className.Functions.Any()) // *.Structs.Delegates.g.cs
                     {
                         string sourceCode = $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
