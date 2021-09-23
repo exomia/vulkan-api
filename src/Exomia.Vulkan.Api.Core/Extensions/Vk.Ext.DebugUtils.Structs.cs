@@ -16,7 +16,6 @@ using System.Runtime.InteropServices;
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDebugUtilsLabelEXT
     {

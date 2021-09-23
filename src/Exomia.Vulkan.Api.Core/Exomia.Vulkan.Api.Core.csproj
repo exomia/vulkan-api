@@ -14,7 +14,7 @@
 		<Configurations>Debug;Release</Configurations>
 	</PropertyGroup>
 
-	<PropertyGroup>
+  <PropertyGroup>
 		<Company>exomia</Company>
 		<Authors>exomia; Daniel Bätz; Daniel Baumert</Authors>
 		<Description>Low-level library for C#/.Net 5 to access the Vulkan API.</Description>
@@ -42,7 +42,7 @@
 		<AssemblyOriginatorKeyFile>Exomia.Vulkan.Api.Core.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
 		<DebugType>portable</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
@@ -53,6 +53,11 @@
 		<DebugType>none</DebugType>
 		<DebugSymbols>false</DebugSymbols>
 	</PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)\GeneratedFiles</CompilerGeneratedFilesOutputPath>
+  </PropertyGroup>
 
 	<PropertyGroup Condition="'$(Platform)'=='AnyCPU'">
 		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
