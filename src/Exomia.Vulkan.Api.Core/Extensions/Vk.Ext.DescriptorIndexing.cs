@@ -11,8 +11,9 @@ namespace Exomia.Vulkan.Api.Core.Extensions
     [VkExtGenerator]
     public static partial class VkExtDescriptorIndexing
     {
-        public const int    VK_EXT_DESCRIPTOR_INDEXING                = 1;
-        public const int    VK_EXT_DESCRIPTOR_INDEXING_SPEC_VERSION   = 2;
+        public const int VK_EXT_DESCRIPTOR_INDEXING              = 1;
+        public const int VK_EXT_DESCRIPTOR_INDEXING_SPEC_VERSION = 2;
+
         [Obsolete("Promoted to Vulkan 1.2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_descriptor_indexing.html#_promotion_to_vulkan_1_2")]
         public const string VK_EXT_DESCRIPTOR_INDEXING_EXTENSION_NAME = "VK_EXT_descriptor_indexing";
     }

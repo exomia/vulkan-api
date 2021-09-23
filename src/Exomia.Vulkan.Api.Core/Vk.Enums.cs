@@ -2889,30 +2889,12 @@ namespace Exomia.Vulkan.Api.Core
         MAX_ENUM_AMD = 0x7FFFFFFF
     }
 
-    public enum VkTimeDomainEXT
-    {
-        DEVICE_EXT                    = 0,
-        CLOCK_MONOTONIC_EXT           = 1,
-        CLOCK_MONOTONIC_RAW_EXT       = 2,
-        QUERY_PERFORMANCE_COUNTER_EXT = 3,
-        MAX_ENUM_EXT                  = 0x7FFFFFFF
-    }
-
     public enum VkMemoryOverallocationBehaviorAMD
     {
         DEFAULT_AMD    = 0,
         ALLOWED_AMD    = 1,
         DISALLOWED_AMD = 2,
         MAX_ENUM_AMD   = 0x7FFFFFFF
-    }
-
-    [Flags]
-    public enum VkPipelineCreationFeedbackFlagsEXT
-    {
-        VALID_BIT_EXT                          = 0x00000001,
-        APPLICATION_PIPELINE_CACHE_HIT_BIT_EXT = 0x00000002,
-        BASE_PIPELINE_ACCELERATION_BIT_EXT     = 0x00000004,
-        FLAG_BITS_MAX_ENUM_EXT                 = 0x7FFFFFFF
     }
 
     public enum VkPerformanceConfigurationTypeINTEL
@@ -2957,18 +2939,6 @@ namespace Exomia.Vulkan.Api.Core
         MAX_ENUM_AMD = 0x7FFFFFFF
     }
 
-    [Flags]
-    public enum VkToolPurposeFlagsEXT
-    {
-        VALIDATION_BIT_EXT          = 0x00000001,
-        PROFILING_BIT_EXT           = 0x00000002,
-        TRACING_BIT_EXT             = 0x00000004,
-        ADDITIONAL_FEATURES_BIT_EXT = 0x00000008,
-        MODIFYING_FEATURES_BIT_EXT  = 0x00000010,
-        DEBUG_REPORTING_BIT_EXT     = 0x00000020,
-        DEBUG_MARKERS_BIT_EXT       = 0x00000040,
-        FLAG_BITS_MAX_ENUM_EXT      = 0x7FFFFFFF
-    }
 
     public enum VkValidationFeatureEnableEXT
     {

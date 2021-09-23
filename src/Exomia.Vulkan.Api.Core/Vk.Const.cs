@@ -386,21 +386,16 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_AMD_PIPELINE_COMPILER_CONTROL                           = 1;
         public const int    VK_AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION              = 1;
         public const string VK_AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME            = "VK_AMD_pipeline_compiler_control";
-        public const int    VK_EXT_CALIBRATED_TIMESTAMPS                               = 1;
-        public const int    VK_EXT_CALIBRATED_TIMESTAMPS_SPEC_VERSION                  = 2;
-        public const string VK_EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME                = "VK_EXT_calibrated_timestamps";
+
         public const int    VK_AMD_SHADER_CORE_PROPERTIES                              = 1;
         public const int    VK_AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION                 = 2;
         public const string VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME               = "VK_AMD_shader_core_properties";
         public const int    VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR                      = 1;
         public const int    VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_SPEC_VERSION         = 1;
         public const string VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME       = "VK_AMD_memory_overallocation_behavior";
-        public const int    VK_EXT_VERTEX_ATTRIBUTE_DIVISOR                            = 1;
-        public const int    VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_SPEC_VERSION               = 3;
-        public const string VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME             = "VK_EXT_vertex_attribute_divisor";
-        public const int    VK_EXT_PIPELINE_CREATION_FEEDBACK                          = 1;
-        public const int    VK_EXT_PIPELINE_CREATION_FEEDBACK_SPEC_VERSION             = 1;
-        public const string VK_EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME           = "VK_EXT_pipeline_creation_feedback";
+
+
+
         public const int    VK_NV_SHADER_SUBGROUP_PARTITIONED                          = 1;
         public const int    VK_NV_SHADER_SUBGROUP_PARTITIONED_SPEC_VERSION             = 1;
         public const string VK_NV_SHADER_SUBGROUP_PARTITIONED_EXTENSION_NAME           = "VK_NV_shader_subgroup_partitioned";
@@ -428,51 +423,35 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_INTEL_PERFORMANCE_QUERY                                 = 1;
         public const int    VK_INTEL_PERFORMANCE_QUERY_SPEC_VERSION                    = 2;
         public const string VK_INTEL_PERFORMANCE_QUERY_EXTENSION_NAME                  = "VK_INTEL_performance_query";
-        public const int    VK_EXT_PCI_BUS_INFO                                        = 1;
-        public const int    VK_EXT_PCI_BUS_INFO_SPEC_VERSION                           = 2;
-        public const string VK_EXT_PCI_BUS_INFO_EXTENSION_NAME                         = "VK_EXT_pci_bus_info";
+
+
         public const int    VK_AMD_DISPLAY_NATIVE_HDR                                  = 1;
         public const int    VK_AMD_DISPLAY_NATIVE_HDR_SPEC_VERSION                     = 1;
         public const string VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME                   = "VK_AMD_display_native_hdr";
-        public const int    VK_EXT_FRAGMENT_DENSITY_MAP                                = 1;
-        public const int    VK_EXT_FRAGMENT_DENSITY_MAP_SPEC_VERSION                   = 1;
-        public const string VK_EXT_FRAGMENT_DENSITY_MAP_EXTENSION_NAME                 = "VK_EXT_fragment_density_map";
-        public const int    VK_EXT_SCALAR_BLOCK_LAYOUT                                 = 1;
-        public const int    VK_EXT_SCALAR_BLOCK_LAYOUT_SPEC_VERSION                    = 1;
-        public const string VK_EXT_SCALAR_BLOCK_LAYOUT_EXTENSION_NAME                  = "VK_EXT_scalar_block_layout";
+
+
         public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1                              = 1;
         public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1_SPEC_VERSION                 = 1;
         public const string VK_GOOGLE_HLSL_FUNCTIONALITY1_EXTENSION_NAME               = "VK_GOOGLE_hlsl_functionality1";
         public const int    VK_GOOGLE_DECORATE_STRING                                  = 1;
         public const int    VK_GOOGLE_DECORATE_STRING_SPEC_VERSION                     = 1;
         public const string VK_GOOGLE_DECORATE_STRING_EXTENSION_NAME                   = "VK_GOOGLE_decorate_string";
-        public const int    VK_EXT_SUBGROUP_SIZE_CONTROL                               = 1;
-        public const int    VK_EXT_SUBGROUP_SIZE_CONTROL_SPEC_VERSION                  = 2;
-        public const string VK_EXT_SUBGROUP_SIZE_CONTROL_EXTENSION_NAME                = "VK_EXT_subgroup_size_control";
+
+
         public const int    VK_AMD_SHADER_CORE_PROPERTIES2                             = 1;
         public const int    VK_AMD_SHADER_CORE_PROPERTIES_2_SPEC_VERSION               = 1;
         public const string VK_AMD_SHADER_CORE_PROPERTIES_2_EXTENSION_NAME             = "VK_AMD_shader_core_properties2";
         public const int    VK_AMD_DEVICE_COHERENT_MEMORY                              = 1;
         public const int    VK_AMD_DEVICE_COHERENT_MEMORY_SPEC_VERSION                 = 1;
         public const string VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME               = "VK_AMD_device_coherent_memory";
-        public const int    VK_EXT_SHADER_IMAGE_ATOMIC_INT64                           = 1;
-        public const int    VK_EXT_SHADER_IMAGE_ATOMIC_INT64_SPEC_VERSION              = 1;
-        public const string VK_EXT_SHADER_IMAGE_ATOMIC_INT64_EXTENSION_NAME            = "VK_EXT_shader_image_atomic_int64";
-        public const int    VK_EXT_MEMORY_BUDGET                                       = 1;
-        public const int    VK_EXT_MEMORY_BUDGET_SPEC_VERSION                          = 1;
-        public const string VK_EXT_MEMORY_BUDGET_EXTENSION_NAME                        = "VK_EXT_memory_budget";
-        public const int    VK_EXT_MEMORY_PRIORITY                                     = 1;
-        public const int    VK_EXT_MEMORY_PRIORITY_SPEC_VERSION                        = 1;
-        public const string VK_EXT_MEMORY_PRIORITY_EXTENSION_NAME                      = "VK_EXT_memory_priority";
+
+
+
+
         public const int    VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING                  = 1;
         public const int    VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING_SPEC_VERSION     = 1;
         public const string VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING_EXTENSION_NAME   = "VK_NV_dedicated_allocation_image_aliasing";
-        public const int    VK_EXT_BUFFER_DEVICE_ADDRESS                               = 1;
-        public const int    VK_EXT_BUFFER_DEVICE_ADDRESS_SPEC_VERSION                  = 2;
-        public const string VK_EXT_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME                = "VK_EXT_buffer_device_address";
-        public const int    VK_EXT_TOOLING_INFO                                        = 1;
-        public const int    VK_EXT_TOOLING_INFO_SPEC_VERSION                           = 1;
-        public const string VK_EXT_TOOLING_INFO_EXTENSION_NAME                         = "VK_EXT_tooling_info";
+
         public const int    VK_EXT_SEPARATE_STENCIL_USAGE                              = 1;
         public const int    VK_EXT_SEPARATE_STENCIL_USAGE_SPEC_VERSION                 = 1;
         public const string VK_EXT_SEPARATE_STENCIL_USAGE_EXTENSION_NAME               = "VK_EXT_separate_stencil_usage";

@@ -11,8 +11,9 @@ namespace Exomia.Vulkan.Api.Core.Extensions
     [VkExtGenerator]
     public static partial class VkExtSamplerFilterMinmax
     {
-        public const int    VK_EXT_SAMPLER_FILTER_MINMAX                = 1;
-        public const int    VK_EXT_SAMPLER_FILTER_MINMAX_SPEC_VERSION   = 2;
+        public const int VK_EXT_SAMPLER_FILTER_MINMAX              = 1;
+        public const int VK_EXT_SAMPLER_FILTER_MINMAX_SPEC_VERSION = 2;
+
         [Obsolete("Promoted to Vulkan 1.2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_sampler_filter_minmax.html#_promotion_to_vulkan_1_2")]
         public const string VK_EXT_SAMPLER_FILTER_MINMAX_EXTENSION_NAME = "VK_EXT_sampler_filter_minmax";
     }

@@ -4138,15 +4138,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkCalibratedTimestampInfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.CALIBRATED_TIMESTAMP_INFO_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkTimeDomainEXT timeDomain;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderCorePropertiesAMD
     {
         public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD;
@@ -4175,60 +4166,6 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType                   sType;
         public       void*                             pNext;
         public       VkMemoryOverallocationBehaviorAMD overallocationBehavior;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            maxVertexAttribDivisor;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkVertexInputBindingDivisorDescriptionEXT
-    {
-        public uint binding;
-        public uint divisor;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineVertexInputDivisorStateCreateInfoEXT
-    {
-        public const VkStructureType                            STYPE = VkStructureType.PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT;
-        public       VkStructureType                            sType;
-        public       void*                                      pNext;
-        public       uint                                       vertexBindingDivisorCount;
-        public       VkVertexInputBindingDivisorDescriptionEXT* pVertexBindingDivisors;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        vertexAttributeInstanceRateDivisor;
-        public       VkBool32        vertexAttributeInstanceRateZeroDivisor;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkPipelineCreationFeedbackEXT
-    {
-        public VkPipelineCreationFeedbackFlagsEXT flags;
-        public ulong                              duration;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineCreationFeedbackCreateInfoEXT
-    {
-        public const VkStructureType                STYPE = VkStructureType.PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT;
-        public       VkStructureType                sType;
-        public       void*                          pNext;
-        public       VkPipelineCreationFeedbackEXT* pPipelineCreationFeedback;
-        public       uint                           pipelineStageCreationFeedbackCount;
-        public       VkPipelineCreationFeedbackEXT* pPipelineStageCreationFeedbacks;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4408,18 +4345,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDevicePCIBusInfoPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            pciDomain;
-        public       uint            pciBus;
-        public       uint            pciDevice;
-        public       uint            pciFunction;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayNativeHdrSurfaceCapabilitiesAMD
     {
         public const VkStructureType STYPE = VkStructureType.DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD;
@@ -4435,68 +4360,6 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType sType;
         public       void*           pNext;
         public       VkBool32        localDimmingEnable;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        fragmentDensityMap;
-        public       VkBool32        fragmentDensityMapDynamic;
-        public       VkBool32        fragmentDensityMapNonSubsampledImages;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkExtent2D      minFragmentDensityTexelSize;
-        public       VkExtent2D      maxFragmentDensityTexelSize;
-        public       VkBool32        fragmentDensityInvocations;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkRenderPassFragmentDensityMapCreateInfoEXT
-    {
-        public const VkStructureType       STYPE = VkStructureType.RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       VkAttachmentReference fragmentDensityMapAttachment;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceSubgroupSizeControlFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        subgroupSizeControl;
-        public       VkBool32        computeFullSubgroups;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceSubgroupSizeControlPropertiesEXT
-    {
-        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES_EXT;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       uint                  minSubgroupSize;
-        public       uint                  maxSubgroupSize;
-        public       uint                  maxComputeWorkgroupSubgroups;
-        public       VkShaderStageFlagBits requiredSubgroupSizeStages;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            requiredSubgroupSize;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4516,44 +4379,6 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType sType;
         public       void*           pNext;
         public       VkBool32        deviceCoherentMemory;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        shaderImageInt64Atomics;
-        public       VkBool32        sparseImageInt64Atomics;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceMemoryBudgetPropertiesEXT
-    {
-        public const VkStructureType         STYPE = VkStructureType.PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT;
-        public       VkStructureType         sType;
-        public       void*                   pNext;
-        public       VkArray16<VkDeviceSize> heapBudget;
-        public       VkArray16<VkDeviceSize> heapUsage;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceMemoryPriorityFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        memoryPriority;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkMemoryPriorityAllocateInfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.MEMORY_PRIORITY_ALLOCATE_INFO_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       float           priority;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4583,19 +4408,6 @@ namespace Exomia.Vulkan.Api.Core
         public       VkStructureType sType;
         public       void*           pNext;
         public       VkDeviceAddress deviceAddress;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceToolPropertiesEXT
-    {
-        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public fixed sbyte                 name[(int)VK_MAX_EXTENSION_NAME_SIZE];
-        public fixed sbyte                 version[(int)VK_MAX_EXTENSION_NAME_SIZE];
-        public       VkToolPurposeFlagsEXT purposes;
-        public fixed sbyte                 description[(int)VK_MAX_DESCRIPTION_SIZE];
-        public fixed sbyte                 layer[(int)VK_MAX_EXTENSION_NAME_SIZE];
     }
 
     [StructLayout(LayoutKind.Sequential)]
