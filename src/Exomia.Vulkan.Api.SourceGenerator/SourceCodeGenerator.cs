@@ -22,16 +22,16 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 
         public static string GetUtf8StringAsUtf16(string value)
         {
-            StringBuilder valueAsUft8InUft16 = new StringBuilder((value.Length * 2) + 1);
+            StringBuilder valueAsUtf8InUtf16 = new StringBuilder((value.Length * 2) + 1);
 
             for (int i = 0, n = value.Length - 1; i < n; i += 2)
             {
                 byte low  = (byte)value[i];     // is okay, because only ascii is supported
                 byte high = (byte)value[i + 1]; // is okay, because only ascii is supported
-                valueAsUft8InUft16.Append($"\\u{high:x2}{low:x2}");
+                valueAsUtf8InUtf16.Append($"\\u{high:x2}{low:x2}");
             }
 
-            return valueAsUft8InUft16
+            return valueAsUtf8InUtf16
                    .Append(
                        value.Length % 2 == 0
                            ? "\\u0000"
