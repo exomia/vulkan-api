@@ -4813,41 +4813,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceDeviceMemoryReportFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        deviceMemoryReport;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDeviceMemoryReportCallbackDataEXT
-    {
-        public const VkStructureType                  STYPE = VkStructureType.DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT;
-        public       VkStructureType                  sType;
-        public       void*                            pNext;
-        public       VkDeviceMemoryReportFlagsEXT     flags;
-        public       VkDeviceMemoryReportEventTypeEXT type;
-        public       ulong                            memoryObjectId;
-        public       VkDeviceSize                     size;
-        public       VkObjectType                     objectType;
-        public       ulong                            objectHandle;
-        public       uint                             heapIndex;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDeviceDeviceMemoryReportCreateInfoEXT
-    {
-        public const VkStructureType               STYPE = VkStructureType.DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT;
-        public       VkStructureType               sType;
-        public       void*                         pNext;
-        public       VkDeviceMemoryReportFlagsEXT  flags;
-        public       DeviceMemoryReportCallbackEXT pfnUserCallback;
-        public       void*                         pUserData;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRobustness2FeaturesEXT
     {
         public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT;

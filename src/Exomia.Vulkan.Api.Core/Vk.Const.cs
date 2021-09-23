@@ -503,9 +503,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_QCOM_RENDER_PASS_TRANSFORM                              = 1;
         public const int    VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION                 = 2;
         public const string VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME               = "VK_QCOM_render_pass_transform";
-        public const int    VK_EXT_DEVICE_MEMORY_REPORT                                = 1;
-        public const int    VK_EXT_DEVICE_MEMORY_REPORT_SPEC_VERSION                   = 2;
-        public const string VK_EXT_DEVICE_MEMORY_REPORT_EXTENSION_NAME                 = "VK_EXT_device_memory_report";
+
         public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                                 = 1;
         public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION                    = 1;
         public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME                  = "VK_EXT_acquire_drm_display";

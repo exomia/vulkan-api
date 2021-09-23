@@ -3033,16 +3033,6 @@ namespace Exomia.Vulkan.Api.Core
         FLAG_BITS_MAX_ENUM_NV      = 0x7FFFFFFF
     }
 
-    public enum VkDeviceMemoryReportEventTypeEXT
-    {
-        ALLOCATE_EXT          = 0,
-        FREE_EXT              = 1,
-        IMPORT_EXT            = 2,
-        UNIMPORT_EXT          = 3,
-        ALLOCATION_FAILED_EXT = 4,
-        MAX_ENUM_EXT          = 0x7FFFFFFF
-    }
-
     [Flags]
     public enum VkPrivateDataSlotCreateFlagsEXT
     {
