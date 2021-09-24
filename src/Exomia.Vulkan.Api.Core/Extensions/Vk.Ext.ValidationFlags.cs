@@ -1,8 +1,9 @@
-﻿#pragma warning disable CA2211 // Non-constant fields should not be visible
+#pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using System;
 using Exomia.Vulkan.Api.SourceGenerator;
+using System.Runtime.InteropServices;
 
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
@@ -14,5 +15,22 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_VALIDATION_FLAGS                = 1;
         public const int    VK_EXT_VALIDATION_FLAGS_SPEC_VERSION   = 2;
         public const string VK_EXT_VALIDATION_FLAGS_EXTENSION_NAME = "VK_EXT_validation_flags";
+    }
+
+    public enum VkValidationCheckEXT
+    {
+        ALL_EXT      = 0,
+        SHADERS_EXT  = 1,
+        MAX_ENUM_EXT = 0x7FFFFFFF
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkValidationFlagsEXT
+    {
+        public const VkStructureType       STYPE = VkStructureType.VALIDATION_FLAGS_EXT;
+        public       VkStructureType       sType;
+        public       void*                 pNext;
+        public       uint                  disabledValidationCheckCount;
+        public       VkValidationCheckEXT* pDisabledValidationChecks;
     }
 }

@@ -1,7 +1,9 @@
-﻿#pragma warning disable CA2211 // Non-constant fields should not be visible
+#pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using Exomia.Vulkan.Api.SourceGenerator;
+using System;
+using System.Runtime.InteropServices;
 
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
@@ -12,5 +14,33 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_DEPTH_CLIP_ENABLE                = 1;
         public const int    VK_EXT_DEPTH_CLIP_ENABLE_SPEC_VERSION   = 1;
         public const string VK_EXT_DEPTH_CLIP_ENABLE_EXTENSION_NAME = "VK_EXT_depth_clip_enable";
+    }
+
+    [Flags]
+    public enum VkPipelineRasterizationDepthClipStateCreateFlagsEXT : uint
+    {
+        /// <summary>
+        ///     Reserved for future use
+        /// </summary>
+        Reserved = 0
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceDepthClipEnableFeaturesEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        depthClipEnable;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPipelineRasterizationDepthClipStateCreateInfoEXT
+    {
+        public const VkStructureType                                     STYPE = VkStructureType.PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT;
+        public       VkStructureType                                     sType;
+        public       void*                                               pNext;
+        public       VkPipelineRasterizationDepthClipStateCreateFlagsEXT flags;
+        public       VkBool32                                            depthClipEnable;
     }
 }

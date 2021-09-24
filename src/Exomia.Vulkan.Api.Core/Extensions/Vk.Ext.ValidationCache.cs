@@ -1,7 +1,9 @@
-﻿#pragma warning disable CA2211 // Non-constant fields should not be visible
+#pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using Exomia.Vulkan.Api.SourceGenerator;
+using System;
+using System.Runtime.InteropServices;
 
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
@@ -41,5 +43,77 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkResult> vkGetValidationCacheDataEXT;
 
         public static partial void Load(VkDevice vkDevice);
+    }
+
+
+    public enum VkValidationCacheHeaderVersionEXT
+    {
+        ONE_EXT      = 1,
+        MAX_ENUM_EXT = 0x7FFFFFFF
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkValidationCacheCreateInfoEXT
+    {
+        public const VkStructureType                 STYPE = VkStructureType.VALIDATION_CACHE_CREATE_INFO_EXT;
+        public       VkStructureType                 sType;
+        public       void*                           pNext;
+        public       VkValidationCacheCreateFlagsEXT flags;
+        public       nuint                           initialDataSize;
+        public       void*                           pInitialData;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkShaderModuleValidationCacheCreateInfoEXT
+    {
+        public const VkStructureType      STYPE = VkStructureType.SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT;
+        public       VkStructureType      sType;
+        public       void*                pNext;
+        public       VkValidationCacheEXT validationCache;
+    }
+
+    public readonly unsafe struct VkValidationCacheEXT
+    {
+        public static readonly VkValidationCacheEXT Null = (VkValidationCacheEXT)null;
+#pragma warning disable 649
+        private readonly void* _ptr;
+#pragma warning restore 649
+
+        public static explicit operator VkValidationCacheEXT(void* ptr)
+        {
+            VkValidationCacheEXT value;
+            *(void**)&value = ptr;
+            return value;
+        }
+
+        public static bool operator ==(VkValidationCacheEXT left, VkValidationCacheEXT right)
+        {
+            return left._ptr == right._ptr;
+        }
+
+        public static bool operator !=(VkValidationCacheEXT left, VkValidationCacheEXT right)
+        {
+            return left._ptr != right._ptr;
+        }
+
+        public bool Equals(in VkValidationCacheEXT obj)
+        {
+            return obj._ptr == _ptr;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is VkValidationCacheEXT vkValidationCacheEXT && Equals(in vkValidationCacheEXT);
+        }
+
+        public override int GetHashCode()
+        {
+            return ((IntPtr)_ptr).GetHashCode();
+        }
+
+        public static explicit operator void*(VkValidationCacheEXT value)
+        {
+            return value._ptr;
+        }
     }
 }

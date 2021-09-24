@@ -1,7 +1,8 @@
-﻿#pragma warning disable CA2211 // Non-constant fields should not be visible
+#pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using Exomia.Vulkan.Api.SourceGenerator;
+using System.Runtime.InteropServices;
 
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
@@ -38,5 +39,40 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             void> vkCmdDebugMarkerInsertEXT;
 
         public static partial void Load(VkDevice vkDevice);
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkDebugMarkerObjectNameInfoEXT
+    {
+        public const VkStructureType            STYPE = VkStructureType.DEBUG_MARKER_OBJECT_NAME_INFO_EXT;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkDebugReportObjectTypeEXT objectType;
+        public       ulong                      @object;
+        public       sbyte*                     pObjectName;
+    }
+
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkDebugMarkerObjectTagInfoEXT
+    {
+        public const VkStructureType            STYPE = VkStructureType.DEBUG_MARKER_OBJECT_TAG_INFO_EXT;
+        public       VkStructureType            sType;
+        public       void*                      pNext;
+        public       VkDebugReportObjectTypeEXT objectType;
+        public       ulong                      @object;
+        public       ulong                      tagName;
+        public       nuint                      tagSize;
+        public       void*                      pTag;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkDebugMarkerMarkerInfoEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.DEBUG_MARKER_MARKER_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       sbyte*          pMarkerName;
+        public fixed float           color[4];
     }
 }
