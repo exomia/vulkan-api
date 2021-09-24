@@ -7,6 +7,8 @@ using System.Runtime.InteropServices;
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
+
+
     [VkExtGenerator]
     public static partial class VkExtGlobalPriorityQuery
     {

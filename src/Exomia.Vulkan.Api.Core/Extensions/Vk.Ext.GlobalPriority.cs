@@ -33,31 +33,5 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public       VkQueueGlobalPriorityEXT globalPriority;
     }
 
-    [VkExtGenerator]
-    public static partial class VkExtGlobalPriorityQuery
-    {
-        public const int    VK_EXT_GLOBAL_PRIORITY_QUERY                = 1;
-        public const uint   VK_MAX_GLOBAL_PRIORITY_SIZE_EXT             = 16U;
-        public const int    VK_EXT_GLOBAL_PRIORITY_QUERY_SPEC_VERSION   = 1;
-        public const string VK_EXT_GLOBAL_PRIORITY_QUERY_EXTENSION_NAME = "VK_EXT_global_priority_query";
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        globalPriorityQuery;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkQueueFamilyGlobalPriorityPropertiesEXT
-    {
-        public const VkStructureType                     STYPE = VkStructureType.QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT;
-        public       VkStructureType                     sType;
-        public       void*                               pNext;
-        public       uint                                priorityCount;
-        public       VkArray16<VkQueueGlobalPriorityEXT> priorities;
-    }
+   
 }
