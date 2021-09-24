@@ -1,11 +1,21 @@
+#region License
+
+// Copyright (c) 2018-2021, exomia
+// All rights reserved.
+// 
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree.
+
+#endregion
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using Exomia.Vulkan.Api.SourceGenerator;
-using System;
 using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
     [VkExtGenerator]
@@ -14,13 +24,13 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_DISPLAY_CONTROL                = 1;
         public const int    VK_EXT_DISPLAY_CONTROL_SPEC_VERSION   = 1;
         public const string VK_EXT_DISPLAY_CONTROL_EXTENSION_NAME = "VK_EXT_display_control";
-        
+
         public static delegate*<
             VkDevice,               /* device */
             VkDisplayKHR,           /* display */
             VkDisplayPowerInfoEXT*, /* pDisplayPowerInfo */
             VkResult> vkDisplayPowerControlEXT;
-        
+
         public static delegate*<
             VkDevice,               /* device */
             VkDeviceEventInfoEXT*,  /* pDeviceEventInfo */
@@ -35,7 +45,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkAllocationCallbacks*, /* pAllocator */
             VkFence*,               /* pFence */
             VkResult> vkRegisterDisplayEventEXT;
-        
+
         public static delegate*<
             VkDevice,                 /* device */
             VkSwapchainKHR,           /* swapchain */

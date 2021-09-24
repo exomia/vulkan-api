@@ -1,9 +1,19 @@
+#region License
+
+// Copyright (c) 2018-2021, exomia
+// All rights reserved.
+// 
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree.
+
+#endregion
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using Exomia.Vulkan.Api.SourceGenerator;
 using System;
 using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
 namespace Exomia.Vulkan.Api.Core.Extensions
@@ -23,7 +33,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkDeviceSize*,   /* pOffsets */
             VkDeviceSize*,   /* pSizes */
             void> vkCmdBindTransformFeedbackBuffersEXT;
-        
+
         public static delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* firstCounterBuffer */
@@ -31,7 +41,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkBuffer*,       /* pCounterBuffers */
             VkDeviceSize*,   /* pCounterBufferOffsets */
             void> vkCmdBeginTransformFeedbackEXT;
-        
+
         public static delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* firstCounterBuffer */
@@ -39,7 +49,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkBuffer*,       /* pCounterBuffers */
             VkDeviceSize*,   /* pCounterBufferOffsets */
             void> vkCmdEndTransformFeedbackEXT;
-        
+
         public static delegate*<
             VkCommandBuffer,        /* commandBuffer */
             VkQueryPool,            /* queryPool */
@@ -54,7 +64,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             uint,            /* query */
             uint,            /* index */
             void> vkCmdEndQueryIndexedEXT;
-        
+
         public static delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* instanceCount */
@@ -64,7 +74,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             uint,            /* counterOffset */
             uint,            /* vertexStride */
             void> vkCmdDrawIndirectByteCountEXT;
-        
+
         public static partial void Load(VkDevice vkDevice);
     }
 
@@ -81,37 +91,37 @@ namespace Exomia.Vulkan.Api.Core.Extensions
     public unsafe struct VkPhysicalDeviceTransformFeedbackFeaturesEXT
     {
         public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT;
-        public VkStructureType sType;
-        public void* pNext;
-        public VkBool32 transformFeedback;
-        public VkBool32 geometryStreams;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        transformFeedback;
+        public       VkBool32        geometryStreams;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceTransformFeedbackPropertiesEXT
     {
         public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT;
-        public VkStructureType sType;
-        public void* pNext;
-        public uint maxTransformFeedbackStreams;
-        public uint maxTransformFeedbackBuffers;
-        public VkDeviceSize maxTransformFeedbackBufferSize;
-        public uint maxTransformFeedbackStreamDataSize;
-        public uint maxTransformFeedbackBufferDataSize;
-        public uint maxTransformFeedbackBufferDataStride;
-        public VkBool32 transformFeedbackQueries;
-        public VkBool32 transformFeedbackStreamsLinesTriangles;
-        public VkBool32 transformFeedbackRasterizationStreamSelect;
-        public VkBool32 transformFeedbackDraw;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       uint            maxTransformFeedbackStreams;
+        public       uint            maxTransformFeedbackBuffers;
+        public       VkDeviceSize    maxTransformFeedbackBufferSize;
+        public       uint            maxTransformFeedbackStreamDataSize;
+        public       uint            maxTransformFeedbackBufferDataSize;
+        public       uint            maxTransformFeedbackBufferDataStride;
+        public       VkBool32        transformFeedbackQueries;
+        public       VkBool32        transformFeedbackStreamsLinesTriangles;
+        public       VkBool32        transformFeedbackRasterizationStreamSelect;
+        public       VkBool32        transformFeedbackDraw;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationStateStreamCreateInfoEXT
     {
-        public const VkStructureType STYPE = VkStructureType.PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT;
-        public VkStructureType sType;
-        public void* pNext;
-        public VkPipelineRasterizationStateStreamCreateFlagsEXT flags;
-        public uint rasterizationStream;
+        public const VkStructureType                                  STYPE = VkStructureType.PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT;
+        public       VkStructureType                                  sType;
+        public       void*                                            pNext;
+        public       VkPipelineRasterizationStateStreamCreateFlagsEXT flags;
+        public       uint                                             rasterizationStream;
     }
 }
