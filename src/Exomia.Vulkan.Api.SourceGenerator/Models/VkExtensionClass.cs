@@ -10,6 +10,7 @@
 
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Exomia.Vulkan.Api.SourceGenerator.Models
 {
@@ -21,5 +22,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator.Models
         public string                    ExtensionName;
         public IMethodSymbol?            LoadFunction;
         public List<FunctionPointerInfo> Functions;
+        public INamedTypeSymbol          Symbol;
+        public ClassDeclarationSyntax    Syntax;
     }
 }

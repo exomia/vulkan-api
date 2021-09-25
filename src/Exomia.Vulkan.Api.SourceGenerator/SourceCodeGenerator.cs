@@ -62,6 +62,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 {{
     public static readonly {structName} Null = ({structName})null;
 
+    /// <summary> vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/{fpi.Name}.html"">{fpi.Name}</see>. </summary>
     public readonly delegate*<{string.Join(", ", fpi.Parameters.Select(p => $"{p.Type} /* {p.Name} */"))}, {fpi.ReturnType}> UnsafeInvoke;
 
     public static implicit operator {structName}(void* ptr)
@@ -81,7 +82,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 /// <remarks>
 ///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
 /// </remarks>
-public unsafe static partial class {extensionClass.ClassName}
+{GetClassDeclaration(extensionClass)}
 {{
     /// <summary> An UTF8 null terminated version represented by an UTF16 string. </summary>
     /// <remarks>
@@ -121,6 +122,36 @@ public unsafe static partial class {extensionClass.ClassName}
             }
 
             return sb.AppendLine("}").ToString();
+        }
+
+        public static string GetVkFunctions(FunctionPointerInfo fpi)
+        {
+            return $@"/// <summary> vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/{fpi.Name}.html"">{fpi.Name}</see>. </summary>
+[FieldOffset(0)] public readonly delegate*<{string.Join(", ", fpi.Parameters.Select(p => $"{p.Type} /* {p.Name} */"))}, {fpi.ReturnType}> {fpi.Name};";
+        }
+
+        public static string GetClassDeclaration(VkExtensionClass f)
+        {
+            string accessibility = f.Symbol.DeclaredAccessibility switch
+            {
+                Accessibility.Private  => string.Empty,
+                Accessibility.Internal => "internal",
+                Accessibility.Public   => "public",
+                _                      => throw new NotSupportedException(nameof(f.Symbol.DeclaredAccessibility))
+            };
+            return $@"{accessibility} unsafe{(f.Symbol.IsStatic ? " static " : " ")} partial class {f.ClassName}";
+        }
+
+        public static string GetStructDeclaration(VkFunctionClass f)
+        {
+            string accessibility = f.Symbol.DeclaredAccessibility switch
+            {
+                Accessibility.Private  => string.Empty,
+                Accessibility.Internal => "internal",
+                Accessibility.Public   => "public",
+                _                      => throw new NotSupportedException(nameof(f.Symbol.DeclaredAccessibility))
+            };
+            return $@"{accessibility} {(f.Symbol.IsReadOnly ? "readonly " : " ")}unsafe partial struct {f.ClassName}";
         }
     }
 }

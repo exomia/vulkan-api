@@ -12,7 +12,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using System.Threading.Tasks;
 using Exomia.Vulkan.Api.SourceGenerator.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -20,58 +19,30 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Exomia.Vulkan.Api.SourceGenerator
 {
-    class VkGeneratorInspector
+    class VkExtensionClassInspector
     {
         private const string VK_IGNORE_ATTRIBUTE = "Exomia.Vulkan.Api.SourceGenerator.VkIgnoreAttribute";
-
-        internal static async Task<VkExtensionClass?> InspectAsync(INamedTypeSymbol viewModelClassSymbol)
-        {
-            VkExtensionClass vkExtensionClass = new()
-            {
-                NamespaceName = viewModelClassSymbol.ContainingNamespace.ToDisplayString(), ClassName = viewModelClassSymbol.Name, Functions = new List<FunctionPointerInfo>()
-            };
-
-            foreach (ISymbol member in viewModelClassSymbol.GetMembers())
-            {
-                switch (member)
-                {
-                    case IMethodSymbol methodSymbol:
-                        if (methodSymbol.Name == "Load")
-                        {
-                            vkExtensionClass.LoadFunction = methodSymbol;
-                        }
-                        break;
-                    case IFieldSymbol fieldSymbol:
-                        vkExtensionClass = await FindPropertiesToGenerateAsync(fieldSymbol, vkExtensionClass);
-                        break;
-                }
-            }
-
-            return vkExtensionClass;
-        }
-
-        private static async Task<VkExtensionClass> FindPropertiesToGenerateAsync(IFieldSymbol fieldSymbol, VkExtensionClass vkExtensionClass)
+        public static void FindPropertiesToGenerate(IFieldSymbol fieldSymbol, ref VkExtensionClass vkExtensionClass)
         {
             if (fieldSymbol.IsConst && fieldSymbol.Name.EndsWith("EXTENSION_NAME") && fieldSymbol.Type.Name == "String")
             {
                 vkExtensionClass.VarExtensionName = fieldSymbol.Name;
                 vkExtensionClass.ExtensionName    = fieldSymbol.ConstantValue as string ?? throw new NullReferenceException(nameof(fieldSymbol.ConstantValue));
-                return vkExtensionClass;
             }
 
             ImmutableArray<AttributeData> attributeData      = fieldSymbol.GetAttributes();
-            AttributeData?                fieldAttributeData = attributeData.FirstOrDefault(x => x.AttributeClass?.ToDisplayString() == VK_IGNORE_ATTRIBUTE);
+            AttributeData?                vkIgnoreAttributeData = attributeData.FirstOrDefault(x => x.AttributeClass?.ToDisplayString() == VK_IGNORE_ATTRIBUTE);
 
-            if (fieldAttributeData is not null) // vkIgnore is present 
+            if (vkIgnoreAttributeData is not null) // vkIgnore is present 
             {
-                return vkExtensionClass;
+                return;
             }
 
-            SyntaxNode?                fieldSyntax         = (await fieldSymbol.DeclaringSyntaxReferences[0].GetSyntaxAsync()).Parent;
+            SyntaxNode?                fieldSyntax         = fieldSymbol.DeclaringSyntaxReferences[0].GetSyntax().Parent;
             FunctionPointerTypeSyntax? fieldSyntaxChildren = fieldSyntax?.DescendantNodes().OfType<FunctionPointerTypeSyntax>().FirstOrDefault();
             if (fieldSyntaxChildren is null) // field is not a function pointer
             {
-                return vkExtensionClass;
+                return;
             }
 
             FunctionPointerInfo fpi;
@@ -99,7 +70,6 @@ namespace Exomia.Vulkan.Api.SourceGenerator
             fpi.TypeSymbol = fieldSymbol.Type;
 
             vkExtensionClass.Functions.Add(fpi);
-            return vkExtensionClass;
         }
     }
 }

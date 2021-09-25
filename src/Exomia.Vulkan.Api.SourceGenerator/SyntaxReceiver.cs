@@ -19,30 +19,75 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 {
     class SyntaxReceiver : ISyntaxContextReceiver
     {
-        private const string SOURCE_GENERATOR_ACTIVE_NAME = "Exomia.Vulkan.Api.SourceGenerator.VkExtGeneratorAttribute";
+        private const string VK_EXT_GENERATOR_ATTRIBUTE      = "Exomia.Vulkan.Api.SourceGenerator.VkExtGeneratorAttribute";
+        private const string VK_FUNCTION_GENERATOR_ATTRIBUTE = "Exomia.Vulkan.Api.SourceGenerator.VkFunctionGeneratorAttribute";
 
-        public List<VkExtensionClass> VkExtensionFunctionModel { get; } = new();
+        public List<VkExtensionClass> VkExtensions { get; } = new();
+        public List<VkFunctionClass>  VkFunctions  { get; } = new();
 
         public void OnVisitSyntaxNode(GeneratorSyntaxContext context)
         {
             if (context.Node is ClassDeclarationSyntax { AttributeLists: { Count: > 0 } } classDeclaration)
             {
-                INamedTypeSymbol? viewModelClassSymbol = context.SemanticModel.GetDeclaredSymbol(classDeclaration);
-                AttributeData? viewModelAttributeData =
-                    viewModelClassSymbol?
-                        .GetAttributes()
-                        .SingleOrDefault(x => x.AttributeClass?.ToDisplayString() == SOURCE_GENERATOR_ACTIVE_NAME);
+                INamedTypeSymbol? classSymbol = context.SemanticModel.GetDeclaredSymbol(classDeclaration);
 
-                if (viewModelClassSymbol is not null && viewModelAttributeData is not null)
+                if (classSymbol is not null)
                 {
-                    VkExtensionClass? res =
-                        VkGeneratorInspector.InspectAsync(viewModelClassSymbol)
-                                            .ConfigureAwait(false)
-                                            .GetAwaiter()
-                                            .GetResult();
-                    if (res.HasValue)
+                    AttributeData? vkExtensionAttributeData =
+                        classSymbol.GetAttributes()
+                                   .SingleOrDefault(x => x.AttributeClass?.ToDisplayString() == VK_EXT_GENERATOR_ATTRIBUTE);
+                    if (vkExtensionAttributeData is not null)
                     {
-                        VkExtensionFunctionModel.Add(res.Value);
+                        VkExtensionClass vkExtensionClass = new()
+                        {
+                            NamespaceName = classSymbol.ContainingNamespace.ToDisplayString(),
+                            ClassName     = classSymbol.Name,
+                            Functions     = new List<FunctionPointerInfo>(),
+                            Symbol        = classSymbol,
+                            Syntax        = classDeclaration
+                        };
+
+                        foreach (ISymbol member in classSymbol.GetMembers())
+                        {
+                            switch (member)
+                            {
+                                case IMethodSymbol methodSymbol:
+                                    if (methodSymbol.Name == "Load")
+                                    {
+                                        vkExtensionClass.LoadFunction = methodSymbol;
+                                    }
+                                    break;
+                                case IFieldSymbol fieldSymbol:
+                                    VkExtensionClassInspector.FindPropertiesToGenerate(fieldSymbol, ref vkExtensionClass);
+                                    break;
+                            }
+                        }
+                        VkExtensions.Add(vkExtensionClass);
+                    }
+                }
+            }
+
+            if (context.Node is StructDeclarationSyntax { AttributeLists: { Count: > 0 } } structDeclaration)
+            {
+                INamedTypeSymbol? structSymbol = context.SemanticModel.GetDeclaredSymbol(structDeclaration);
+
+                if (structSymbol is not null)
+                {
+                    AttributeData? vkFunctionAttributeData =
+                        structSymbol.GetAttributes()
+                                    .SingleOrDefault(x => x.AttributeClass?.ToDisplayString() == VK_FUNCTION_GENERATOR_ATTRIBUTE);
+
+                    if (vkFunctionAttributeData is not null)
+                    {
+                        VkFunctionClass vkFunctionClass = new()
+                        {
+                            NamespaceName = structSymbol.ContainingNamespace.ToDisplayString(), 
+                            ClassName = structSymbol.Name,
+                            Symbol = structSymbol,
+                            Syntax = structDeclaration
+                        };
+
+                        VkFunctions.Add(vkFunctionClass);
                     }
                 }
             }
