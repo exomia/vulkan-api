@@ -4631,25 +4631,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkRenderPassTransformBeginInfoQCOM
-    {
-        public const VkStructureType            STYPE = VkStructureType.RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       VkSurfaceTransformFlagsKHR transform;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM
-    {
-        public const VkStructureType            STYPE = VkStructureType.COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       VkSurfaceTransformFlagsKHR transform;
-        public       VkRect2D                   renderArea;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDiagnosticsConfigFeaturesNV
     {
         public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV;
@@ -4829,15 +4810,7 @@ namespace Exomia.Vulkan.Api.Core
         public       VkBool32        rayTracingMotionBlur;
         public       VkBool32        rayTracingMotionBlurPipelineTraceRaysIndirect;
     }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkCopyCommandTransformInfoQCOM
-    {
-        public const VkStructureType            STYPE = VkStructureType.COPY_COMMAND_TRANSFORM_INFO_QCOM;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       VkSurfaceTransformFlagsKHR transform;
-    }
+    
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE

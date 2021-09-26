@@ -10,7 +10,8 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Global 
+// ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core
 {
     public static partial class Vk
@@ -248,9 +249,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_GLSL_SHADER_SPEC_VERSION   = 1;
         public const string VK_NV_GLSL_SHADER_EXTENSION_NAME = "VK_NV_glsl_shader";
 
-        public const int    VK_IMG_FILTER_CUBIC                                    = 1;
-        public const int    VK_IMG_FILTER_CUBIC_SPEC_VERSION                       = 1;
-        public const string VK_IMG_FILTER_CUBIC_EXTENSION_NAME                     = "VK_IMG_filter_cubic";
+
         public const int    VK_AMD_RASTERIZATION_ORDER                             = 1;
         public const int    VK_AMD_RASTERIZATION_ORDER_SPEC_VERSION                = 1;
         public const string VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME              = "VK_AMD_rasterization_order";
@@ -295,9 +294,7 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_CORNER_SAMPLED_IMAGE                        = 1;
         public const int    VK_NV_CORNER_SAMPLED_IMAGE_SPEC_VERSION           = 2;
         public const string VK_NV_CORNER_SAMPLED_IMAGE_EXTENSION_NAME         = "VK_NV_corner_sampled_image";
-        public const int    VK_IMG_FORMAT_PVRTC                               = 1;
-        public const int    VK_IMG_FORMAT_PVRTC_SPEC_VERSION                  = 1;
-        public const string VK_IMG_FORMAT_PVRTC_EXTENSION_NAME                = "VK_IMG_format_pvrtc";
+
         public const int    VK_NV_EXTERNAL_MEMORY_CAPABILITIES                = 1;
         public const int    VK_NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION   = 1;
         public const string VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME = "VK_NV_external_memory_capabilities";
@@ -363,9 +360,6 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_REPRESENTATIVE_FRAGMENT_TEST_SPEC_VERSION   = 2;
         public const string VK_NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME = "VK_NV_representative_fragment_test";
 
-        public const int    VK_QCOM_RENDER_PASS_SHADER_RESOLVE                = 1;
-        public const int    VK_QCOM_RENDER_PASS_SHADER_RESOLVE_SPEC_VERSION   = 4;
-        public const string VK_QCOM_RENDER_PASS_SHADER_RESOLVE_EXTENSION_NAME = "VK_QCOM_render_pass_shader_resolve";
 
         public const int    VK_AMD_BUFFER_MARKER                            = 1;
         public const int    VK_AMD_BUFFER_MARKER_SPEC_VERSION               = 1;
@@ -445,9 +439,6 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR_SPEC_VERSION   = 1;
         public const string VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME = "VK_NV_inherited_viewport_scissor";
 
-        public const int    VK_QCOM_RENDER_PASS_TRANSFORM                = 1;
-        public const int    VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION   = 2;
-        public const string VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME = "VK_QCOM_render_pass_transform";
 
         public const int    VK_GOOGLE_USER_TYPE                = 1;
         public const int    VK_GOOGLE_USER_TYPE_SPEC_VERSION   = 1;
@@ -456,9 +447,8 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG                  = 1;
         public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION     = 1;
         public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME   = "VK_NV_device_diagnostics_config";
-        public const int    VK_QCOM_RENDER_PASS_STORE_OPS                    = 1;
-        public const int    VK_QCOM_RENDER_PASS_STORE_OPS_SPEC_VERSION       = 2;
-        public const string VK_QCOM_RENDER_PASS_STORE_OPS_EXTENSION_NAME     = "VK_QCOM_render_pass_store_ops";
+
+
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS                = 1;
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION   = 1;
         public const string VK_NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME = "VK_NV_fragment_shading_rate_enums";
@@ -466,9 +456,6 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_RAY_TRACING_MOTION_BLUR_SPEC_VERSION       = 1;
         public const string VK_NV_RAY_TRACING_MOTION_BLUR_EXTENSION_NAME     = "VK_NV_ray_tracing_motion_blur";
 
-        public const int    VK_QCOM_ROTATED_COPY_COMMANDS                = 1;
-        public const int    VK_QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION   = 1;
-        public const string VK_QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME = "VK_QCOM_rotated_copy_commands";
 
         public const int    VK_NV_ACQUIRE_WINRT_DISPLAY                     = 1;
         public const int    VK_NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION        = 1;
