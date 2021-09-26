@@ -26,11 +26,11 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_TOOLING_INFO_SPEC_VERSION   = 1;
         public const string VK_EXT_TOOLING_INFO_EXTENSION_NAME = "VK_EXT_tooling_info";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkPhysicalDevice,                   /* physicalDevice */
             uint*,                              /* pToolCount */
             VkPhysicalDeviceToolPropertiesEXT*, /* pToolProperties */
-            VkResult> vkGetPhysicalDeviceToolPropertiesEXT;
+            VkResult> vkGetPhysicalDeviceToolPropertiesEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

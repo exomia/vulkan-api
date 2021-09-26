@@ -24,13 +24,13 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_SPEC_VERSION   = 2;
         public const string VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_EXTENSION_NAME = "VK_EXT_vertex_input_dynamic_state";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,                        /* commandBuffer */
             uint,                                   /* vertexBindingDescriptionCount */
             VkVertexInputBindingDescription2EXT*,   /* pVertexBindingDescriptions */
             uint,                                   /* vertexAttributeDescriptionCount */
             VkVertexInputAttributeDescription2EXT*, /* pVertexAttributeDescriptions */
-            void> vkCmdSetVertexInputEXT;
+            void> vkCmdSetVertexInputEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

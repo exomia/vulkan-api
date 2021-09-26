@@ -29,12 +29,12 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         [Obsolete("Promoted to Vulkan 1.2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_host_query_reset.html#_promotion_to_vulkan_1_2")]
         public const string VK_EXT_HOST_QUERY_RESET_EXTENSION_NAME = "VK_EXT_host_query_reset";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,    /* device */
             VkQueryPool, /* queryPool */
             uint,        /* firstQuery */
             uint,        /* queryCount */
-            void> vkResetQueryPoolEXT;
+            void> vkResetQueryPoolEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

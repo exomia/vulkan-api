@@ -24,29 +24,29 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_DEBUG_MARKER_SPEC_VERSION   = 4;
         public const string VK_EXT_DEBUG_MARKER_EXTENSION_NAME = "VK_EXT_debug_marker";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                       /* device */
             VkDebugMarkerObjectTagInfoEXT*, /* pTagInfo */
-            VkResult> vkDebugMarkerSetObjectTagEXT;
+            VkResult> vkDebugMarkerSetObjectTagEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                        /* device */
             VkDebugMarkerObjectNameInfoEXT*, /* pNameInfo */
-            VkResult> vkDebugMarkerSetObjectNameEXT;
+            VkResult> vkDebugMarkerSetObjectNameEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,             /* commandBuffer */
             VkDebugMarkerMarkerInfoEXT*, /* pMarkerInfo */
-            void> vkCmdDebugMarkerBeginEXT;
+            void> vkCmdDebugMarkerBeginEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
-            void> vkCmdDebugMarkerEndEXT;
+            void> vkCmdDebugMarkerEndEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,             /* commandBuffer */
             VkDebugMarkerMarkerInfoEXT*, /* pMarkerInfo */
-            void> vkCmdDebugMarkerInsertEXT;
+            void> vkCmdDebugMarkerInsertEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

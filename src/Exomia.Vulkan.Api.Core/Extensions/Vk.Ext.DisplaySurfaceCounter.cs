@@ -26,11 +26,11 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_DISPLAY_SURFACE_COUNTER_SPEC_VERSION   = 1;
         public const string VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME = "VK_EXT_display_surface_counter";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkPhysicalDevice,           /* physicalDevice */
             VkSurfaceKHR,               /* surface */
             VkSurfaceCapabilities2EXT*, /* pSurfaceCapabilities */
-            VkResult> vkGetPhysicalDeviceSurfaceCapabilities2EXT;
+            VkResult> vkGetPhysicalDeviceSurfaceCapabilities2EXT = null;
 
         public static partial void Load(VkInstance vkInstance);
     }

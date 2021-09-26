@@ -24,12 +24,12 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_HDR_METADATA_SPEC_VERSION   = 2;
         public const string VK_EXT_HDR_METADATA_EXTENSION_NAME = "VK_EXT_hdr_metadata";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,          /* device */
             uint,              /* swapchainCount */
             VkSwapchainKHR*,   /* pSwapchains */
             VkHdrMetadataEXT*, /* pMetadata */
-            void> vkSetHdrMetadataEXT;
+            void> vkSetHdrMetadataEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

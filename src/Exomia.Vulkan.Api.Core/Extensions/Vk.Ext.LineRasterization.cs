@@ -25,11 +25,11 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_LINE_RASTERIZATION_SPEC_VERSION   = 1;
         public const string VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME = "VK_EXT_line_rasterization";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* lineStippleFactor */
             ushort,          /* lineStipplePattern */
-            void> vkCmdSetLineStippleEXT;
+            void> vkCmdSetLineStippleEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

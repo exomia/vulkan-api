@@ -25,34 +25,34 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_EXTENDED_DYNAMIC_STATE_SPEC_VERSION   = 1;
         public const string VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME = "VK_EXT_extended_dynamic_state";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,    /* commandBuffer */
             VkCullModeFlagBits, /* cullMode */
-            void> vkCmdSetCullModeEXT;
+            void> vkCmdSetCullModeEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             VkFrontFace,     /* frontFace */
-            void> vkCmdSetFrontFaceEXT;
+            void> vkCmdSetFrontFaceEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,     /* commandBuffer */
             VkPrimitiveTopology, /* primitiveTopology */
-            void> vkCmdSetPrimitiveTopologyEXT;
+            void> vkCmdSetPrimitiveTopologyEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* viewportCount */
             VkViewport*,     /* pViewports */
-            void> vkCmdSetViewportWithCountEXT;
+            void> vkCmdSetViewportWithCountEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* scissorCount */
             VkRect2D*,       /* pScissors */
-            void> vkCmdSetScissorWithCountEXT;
+            void> vkCmdSetScissorWithCountEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* firstBinding */
             uint,            /* bindingCount */
@@ -60,41 +60,41 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkDeviceSize*,   /* pOffsets */
             VkDeviceSize*,   /* pSizes */
             VkDeviceSize*,   /* pStrides */
-            void> vkCmdBindVertexBuffers2EXT;
+            void> vkCmdBindVertexBuffers2EXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* depthTestEnable */
-            void> vkCmdSetDepthTestEnableEXT;
+            void> vkCmdSetDepthTestEnableEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* depthWriteEnable */
-            void> vkCmdSetDepthWriteEnableEXT;
+            void> vkCmdSetDepthWriteEnableEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             VkCompareOp,     /* depthCompareOp */
-            void> vkCmdSetDepthCompareOpEXT;
+            void> vkCmdSetDepthCompareOpEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* depthBoundsTestEnable */
-            void> vkCmdSetDepthBoundsTestEnableEXT;
+            void> vkCmdSetDepthBoundsTestEnableEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* stencilTestEnable */
-            void> vkCmdSetStencilTestEnableEXT;
+            void> vkCmdSetStencilTestEnableEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
             VkStencilFaceFlagBits, /* faceMask */
             VkStencilOp,           /* failOp */
             VkStencilOp,           /* passOp */
             VkStencilOp,           /* depthFailOp */
             VkCompareOp,           /* compareOp */
-            void> vkCmdSetStencilOpEXT;
+            void> vkCmdSetStencilOpEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

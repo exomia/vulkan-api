@@ -26,20 +26,20 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_DEBUG_REPORT_SPEC_VERSION   = 10;
         public const string VK_EXT_DEBUG_REPORT_EXTENSION_NAME = "VK_EXT_debug_report";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkInstance,                          /* instance */
             VkDebugReportCallbackCreateInfoEXT*, /* pCreateInfo */
             VkAllocationCallbacks*,              /* pAllocator */
             VkDebugReportCallbackEXT*,           /* pCallback */
-            VkResult> vkCreateDebugReportCallbackEXT;
+            VkResult> vkCreateDebugReportCallbackEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkInstance,               /* instance */
             VkDebugReportCallbackEXT, /* callback */
             VkAllocationCallbacks*,   /* pAllocator */
-            void> vkDestroyDebugReportCallbackEXT;
+            void> vkDestroyDebugReportCallbackEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkInstance,                 /* instance */
             VkDebugReportFlagsEXT,      /* FlagBits */
             VkDebugReportObjectTypeEXT, /* objectType */
@@ -48,7 +48,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             int,                        /* messageCode */
             byte*,                      /* pLayerPrefix */
             byte*,                      /* pMessage */
-            void> vkDebugReportMessageEXT;
+            void> vkDebugReportMessageEXT = null;
 
         public static partial void Load(VkInstance vkInstance);
     }

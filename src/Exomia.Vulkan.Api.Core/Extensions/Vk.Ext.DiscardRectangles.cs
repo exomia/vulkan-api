@@ -25,12 +25,12 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION   = 1;
         public const string VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME = "VK_EXT_discard_rectangles";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* firstDiscardRectangle */
             uint,            /* discardRectangleCount */
             VkRect2D*,       /* pDiscardRectangles */
-            void> vkCmdSetDiscardRectangleEXT;
+            void> vkCmdSetDiscardRectangleEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

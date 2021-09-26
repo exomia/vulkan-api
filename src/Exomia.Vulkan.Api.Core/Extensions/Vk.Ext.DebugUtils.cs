@@ -26,63 +26,63 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_DEBUG_UTILS_SPEC_VERSION   = 2;
         public const string VK_EXT_DEBUG_UTILS_EXTENSION_NAME = "VK_EXT_debug_utils";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                       /* device */
             VkDebugUtilsObjectNameInfoEXT*, /* pNameInfo */
-            VkResult> vkSetDebugUtilsObjectNameEXT;
+            VkResult> vkSetDebugUtilsObjectNameEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                      /* device */
             VkDebugUtilsObjectTagInfoEXT*, /* pTagInfo */
-            VkResult> vkSetDebugUtilsObjectTagEXT;
+            VkResult> vkSetDebugUtilsObjectTagEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkQueue,               /* queue */
             VkDebugUtilsLabelEXT*, /* pLabelInfo */
-            void> vkQueueBeginDebugUtilsLabelEXT;
+            void> vkQueueBeginDebugUtilsLabelEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkQueue, /* queue */
-            void> vkQueueEndDebugUtilsLabelEXT;
+            void> vkQueueEndDebugUtilsLabelEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkQueue,               /* queue */
             VkDebugUtilsLabelEXT*, /* pLabelInfo */
-            void> vkQueueInsertDebugUtilsLabelEXT;
+            void> vkQueueInsertDebugUtilsLabelEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
             VkDebugUtilsLabelEXT*, /* pLabelInfo */
-            void> vkCmdBeginDebugUtilsLabelEXT;
+            void> vkCmdBeginDebugUtilsLabelEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
-            void> vkCmdEndDebugUtilsLabelEXT;
+            void> vkCmdEndDebugUtilsLabelEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
             VkDebugUtilsLabelEXT*, /* pLabelInfo */
-            void> vkCmdInsertDebugUtilsLabelEXT;
+            void> vkCmdInsertDebugUtilsLabelEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkInstance,                          /* instance */
             VkDebugUtilsMessengerCreateInfoEXT*, /* pCreateInfo */
             VkAllocationCallbacks*,              /* pAllocator */
             VkDebugUtilsMessengerEXT*,           /* pMessenger */
-            VkResult> vkCreateDebugUtilsMessengerEXT;
+            VkResult> vkCreateDebugUtilsMessengerEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkInstance,               /* instance */
             VkDebugUtilsMessengerEXT, /* messenger */
             VkAllocationCallbacks*,   /* pAllocator */
-            void> vkDestroyDebugUtilsMessengerEXT;
+            void> vkDestroyDebugUtilsMessengerEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkInstance,                            /* instance */
             VkDebugUtilsMessageSeverityFlagsEXT,   /* messageSeverity */
             VkDebugUtilsMessageTypeFlagsEXT,       /* messageTypes */
             VkDebugUtilsMessengerCallbackDataEXT*, /* pCallbackData */
-            void> vkSubmitDebugUtilsMessageEXT;
+            void> vkSubmitDebugUtilsMessageEXT = null;
 
         public static partial void Load(VkInstance vkInstance);
     }

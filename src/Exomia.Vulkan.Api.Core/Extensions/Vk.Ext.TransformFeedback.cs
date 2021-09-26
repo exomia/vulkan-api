@@ -25,47 +25,47 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_TRANSFORM_FEEDBACK_SPEC_VERSION   = 1;
         public const string VK_EXT_TRANSFORM_FEEDBACK_EXTENSION_NAME = "VK_EXT_transform_feedback";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* firstBinding */
             uint,            /* bindingCount */
             VkBuffer*,       /* pBuffers */
             VkDeviceSize*,   /* pOffsets */
             VkDeviceSize*,   /* pSizes */
-            void> vkCmdBindTransformFeedbackBuffersEXT;
+            void> vkCmdBindTransformFeedbackBuffersEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* firstCounterBuffer */
             uint,            /* counterBufferCount */
             VkBuffer*,       /* pCounterBuffers */
             VkDeviceSize*,   /* pCounterBufferOffsets */
-            void> vkCmdBeginTransformFeedbackEXT;
+            void> vkCmdBeginTransformFeedbackEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* firstCounterBuffer */
             uint,            /* counterBufferCount */
             VkBuffer*,       /* pCounterBuffers */
             VkDeviceSize*,   /* pCounterBufferOffsets */
-            void> vkCmdEndTransformFeedbackEXT;
+            void> vkCmdEndTransformFeedbackEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,        /* commandBuffer */
             VkQueryPool,            /* queryPool */
             uint,                   /* query */
             VkQueryControlFlagBits, /* FlagBits */
             uint,                   /* index */
-            void> vkCmdBeginQueryIndexedEXT;
+            void> vkCmdBeginQueryIndexedEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             VkQueryPool,     /* queryPool */
             uint,            /* query */
             uint,            /* index */
-            void> vkCmdEndQueryIndexedEXT;
+            void> vkCmdEndQueryIndexedEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* instanceCount */
             uint,            /* firstInstance */
@@ -73,7 +73,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkDeviceSize,    /* counterBufferOffset */
             uint,            /* counterOffset */
             uint,            /* vertexStride */
-            void> vkCmdDrawIndirectByteCountEXT;
+            void> vkCmdDrawIndirectByteCountEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

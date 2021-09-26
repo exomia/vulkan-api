@@ -23,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_DIRECT_MODE_DISPLAY_SPEC_VERSION   = 1;
         public const string VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME = "VK_EXT_direct_mode_display";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkPhysicalDevice, /* physicalDevice */
             VkDisplayKHR,     /* display */
-            VkResult> vkReleaseDisplayEXT;
+            VkResult> vkReleaseDisplayEXT = null;
 
         public static partial void Load(VkInstance vkInstance);
     }

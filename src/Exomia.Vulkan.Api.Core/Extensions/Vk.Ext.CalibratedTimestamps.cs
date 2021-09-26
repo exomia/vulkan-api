@@ -25,19 +25,19 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_CALIBRATED_TIMESTAMPS_SPEC_VERSION   = 2;
         public const string VK_EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME = "VK_EXT_calibrated_timestamps";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkPhysicalDevice, /* physicalDevice */
             uint*,            /* pTimeDomainCount */
             VkTimeDomainEXT*, /* pTimeDomains */
-            VkResult> vkGetPhysicalDeviceCalibrateableTimeDomainsEXT;
+            VkResult> vkGetPhysicalDeviceCalibrateableTimeDomainsEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                      /* device */
             uint,                          /* timestampCount */
             VkCalibratedTimestampInfoEXT*, /* pTimestampInfos */
             ulong*,                        /* pTimestamps */
             ulong*,                        /* pMaxDeviation */
-            VkResult> vkGetCalibratedTimestampsEXT;
+            VkResult> vkGetCalibratedTimestampsEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

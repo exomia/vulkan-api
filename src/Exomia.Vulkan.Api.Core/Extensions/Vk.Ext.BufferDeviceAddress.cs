@@ -28,10 +28,10 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_BUFFER_DEVICE_ADDRESS_SPEC_VERSION   = 2;
         public const string VK_EXT_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME = "VK_EXT_buffer_device_address";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                      /* device */
             VkBufferDeviceAddressInfoEXT*, /* pInfo */
-            VkDeviceAddress> vkGetBufferDeviceAddressEXT;
+            VkDeviceAddress> vkGetBufferDeviceAddressEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

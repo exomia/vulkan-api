@@ -24,16 +24,16 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_SAMPLE_LOCATIONS_SPEC_VERSION   = 1;
         public const string VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME = "VK_EXT_sample_locations";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,           /* commandBuffer */
             VkSampleLocationsInfoEXT*, /* pSampleLocationsInfo */
-            void> vkCmdSetSampleLocationsEXT;
+            void> vkCmdSetSampleLocationsEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkPhysicalDevice,            /* physicalDevice */
             VkSampleCountFlagBits,       /* samples */
             VkMultisamplePropertiesEXT*, /* pMultisampleProperties */
-            void> vkGetPhysicalDeviceMultisamplePropertiesEXT;
+            void> vkGetPhysicalDeviceMultisamplePropertiesEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

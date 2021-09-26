@@ -26,32 +26,32 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_VALIDATION_CACHE_SPEC_VERSION   = 1;
         public const string VK_EXT_VALIDATION_CACHE_EXTENSION_NAME = "VK_EXT_validation_cache";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                        /* device */
             VkValidationCacheCreateInfoEXT*, /* pCreateInfo */
             VkAllocationCallbacks*,          /* pAllocator */
             VkValidationCacheEXT*,           /* pValidationCache */
-            VkResult> vkCreateValidationCacheEXT;
+            VkResult> vkCreateValidationCacheEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,               /* device */
             VkValidationCacheEXT,   /* validationCache */
             VkAllocationCallbacks*, /* pAllocator */
-            void> vkDestroyValidationCacheEXT;
+            void> vkDestroyValidationCacheEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,              /* device */
             VkValidationCacheEXT,  /* dstCache */
             uint,                  /* srcCacheCount */
             VkValidationCacheEXT*, /* pSrcCaches */
-            VkResult> vkMergeValidationCachesEXT;
+            VkResult> vkMergeValidationCachesEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,             /* device */
             VkValidationCacheEXT, /* validationCache */
             nuint*,               /* pDataSize */
             void*,                /* pData */
-            VkResult> vkGetValidationCacheDataEXT;
+            VkResult> vkGetValidationCacheDataEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

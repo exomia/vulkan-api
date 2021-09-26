@@ -24,16 +24,16 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_MULTI_DRAW_SPEC_VERSION   = 1;
         public const string VK_EXT_MULTI_DRAW_EXTENSION_NAME = "VK_EXT_multi_draw";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,     /* commandBuffer */
             uint,                /* drawCount */
             VkMultiDrawInfoEXT*, /* pVertexInfo */
             uint,                /* instanceCount */
             uint,                /* firstInstance */
             uint,                /* stride */
-            void> vkCmdDrawMultiEXT;
+            void> vkCmdDrawMultiEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,            /* commandBuffer */
             uint,                       /* drawCount */
             VkMultiDrawIndexedInfoEXT*, /* pIndexInfo */
@@ -41,7 +41,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             uint,                       /* firstInstance */
             uint,                       /* stride */
             int*,                       /* pVertexOffset */
-            void> vkCmdDrawMultiIndexedEXT;
+            void> vkCmdDrawMultiIndexedEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

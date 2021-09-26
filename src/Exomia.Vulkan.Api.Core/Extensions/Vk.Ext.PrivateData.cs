@@ -26,34 +26,34 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_PRIVATE_DATA_SPEC_VERSION   = 1;
         public const string VK_EXT_PRIVATE_DATA_EXTENSION_NAME = "VK_EXT_private_data";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                        /* device */
             VkPrivateDataSlotCreateInfoEXT*, /* pCreateInfo */
             VkAllocationCallbacks*,          /* pAllocator */
             VkPrivateDataSlotEXT*,           /* pPrivateDataSlot */
-            VkResult> vkCreatePrivateDataSlotEXT;
+            VkResult> vkCreatePrivateDataSlotEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,               /* device */
             VkPrivateDataSlotEXT,   /* privateDataSlot */
             VkAllocationCallbacks*, /* pAllocator */
-            void> vkDestroyPrivateDataSlotEXT;
+            void> vkDestroyPrivateDataSlotEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,             /* device */
             VkObjectType,         /* objectType */
             ulong,                /* objectHandle */
             VkPrivateDataSlotEXT, /* privateDataSlot */
             ulong,                /* data */
-            VkResult> vkSetPrivateDataEXT;
+            VkResult> vkSetPrivateDataEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,             /* device */
             VkObjectType,         /* objectType */
             ulong,                /* objectHandle */
             VkPrivateDataSlotEXT, /* privateDataSlot */
             ulong*,               /* pData */
-            void> vkGetPrivateDataEXT;
+            void> vkGetPrivateDataEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

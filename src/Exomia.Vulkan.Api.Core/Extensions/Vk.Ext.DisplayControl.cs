@@ -25,33 +25,33 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_DISPLAY_CONTROL_SPEC_VERSION   = 1;
         public const string VK_EXT_DISPLAY_CONTROL_EXTENSION_NAME = "VK_EXT_display_control";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,               /* device */
             VkDisplayKHR,           /* display */
             VkDisplayPowerInfoEXT*, /* pDisplayPowerInfo */
-            VkResult> vkDisplayPowerControlEXT;
+            VkResult> vkDisplayPowerControlEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,               /* device */
             VkDeviceEventInfoEXT*,  /* pDeviceEventInfo */
             VkAllocationCallbacks*, /* pAllocator */
             VkFence*,               /* pFence */
-            VkResult> vkRegisterDeviceEventEXT;
+            VkResult> vkRegisterDeviceEventEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,               /* device */
             VkDisplayKHR,           /* display */
             VkDisplayEventInfoEXT*, /* pDisplayEventInfo */
             VkAllocationCallbacks*, /* pAllocator */
             VkFence*,               /* pFence */
-            VkResult> vkRegisterDisplayEventEXT;
+            VkResult> vkRegisterDisplayEventEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                 /* device */
             VkSwapchainKHR,           /* swapchain */
             VkSurfaceCounterFlagsEXT, /* counter */
             ulong*,                   /* pCounterValue */
-            VkResult> vkGetSwapchainCounterEXT;
+            VkResult> vkGetSwapchainCounterEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

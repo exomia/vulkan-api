@@ -24,12 +24,12 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION   = 1;
         public const string VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME = "VK_EXT_external_memory_host";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                           /* device */
             VkExternalMemoryHandleTypeFlagBits, /* handleType */
             void*,                              /* pHostPointer */
             VkMemoryHostPointerPropertiesEXT*,  /* pMemoryHostPointerProperties */
-            VkResult> vkGetMemoryHostPointerPropertiesEXT;
+            VkResult> vkGetMemoryHostPointerPropertiesEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

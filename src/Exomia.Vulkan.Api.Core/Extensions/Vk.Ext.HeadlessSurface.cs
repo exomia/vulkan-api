@@ -25,12 +25,12 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_HEADLESS_SURFACE_SPEC_VERSION   = 1;
         public const string VK_EXT_HEADLESS_SURFACE_EXTENSION_NAME = "VK_EXT_headless_surface";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkInstance,                      /* instance */
             VkHeadlessSurfaceCreateInfoEXT*, /* pCreateInfo */
             VkAllocationCallbacks*,          /* pAllocator */
             VkSurfaceKHR*,                   /* pSurface */
-            VkResult> vkCreateHeadlessSurfaceEXT;
+            VkResult> vkCreateHeadlessSurfaceEXT = null;
 
         public static partial void Load(VkInstance vkInstance);
     }

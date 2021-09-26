@@ -24,11 +24,11 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_SPEC_VERSION   = 1;
         public const string VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME = "VK_EXT_image_drm_format_modifier";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkDevice,                               /* device */
             VkImage,                                /* image */
             VkImageDrmFormatModifierPropertiesEXT*, /* pProperties */
-            VkResult> vkGetImageDrmFormatModifierPropertiesEXT;
+            VkResult> vkGetImageDrmFormatModifierPropertiesEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

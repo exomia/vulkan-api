@@ -24,11 +24,11 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_COLOR_WRITE_ENABLE_SPEC_VERSION   = 1;
         public const string VK_EXT_COLOR_WRITE_ENABLE_EXTENSION_NAME = "VK_EXT_color_write_enable";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* attachmentCount */
             VkBool32*,       /* pColorWriteEnables */
-            void> vkCmdSetColorWriteEnableEXT;
+            void> vkCmdSetColorWriteEnableEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

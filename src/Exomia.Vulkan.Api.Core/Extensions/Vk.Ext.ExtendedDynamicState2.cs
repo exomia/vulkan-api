@@ -24,30 +24,30 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_EXTENDED_DYNAMIC_STATE_2_SPEC_VERSION   = 1;
         public const string VK_EXT_EXTENDED_DYNAMIC_STATE_2_EXTENSION_NAME = "VK_EXT_extended_dynamic_state2";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             uint,            /* patchControlPoints */
-            void> vkCmdSetPatchControlPointsEXT;
+            void> vkCmdSetPatchControlPointsEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             VkBool32,        /* rasterizerDiscardEnable */
-            void> vkCmdSetRasterizerDiscardEnableEXT;
+            void> vkCmdSetRasterizerDiscardEnableEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             VkBool32,        /* depthBiasEnable */
-            void> vkCmdSetDepthBiasEnableEXT;
+            void> vkCmdSetDepthBiasEnableEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             VkLogicOp,       /* logicOp */
-            void> vkCmdSetLogicOpEXT;
+            void> vkCmdSetLogicOpEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             VkBool32,        /* primitiveRestartEnable */
-            void> vkCmdSetPrimitiveRestartEnableEXT;
+            void> vkCmdSetPrimitiveRestartEnableEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }

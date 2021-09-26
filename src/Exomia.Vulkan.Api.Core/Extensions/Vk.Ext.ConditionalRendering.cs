@@ -26,14 +26,14 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_CONDITIONAL_RENDERING_SPEC_VERSION   = 2;
         public const string VK_EXT_CONDITIONAL_RENDERING_EXTENSION_NAME = "VK_EXT_conditional_rendering";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer,                     /* commandBuffer */
             VkConditionalRenderingBeginInfoEXT*, /* pConditionalRenderingBegin */
-            void> vkCmdBeginConditionalRenderingEXT;
+            void> vkCmdBeginConditionalRenderingEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
-            void> vkCmdEndConditionalRenderingEXT;
+            void> vkCmdEndConditionalRenderingEXT = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
