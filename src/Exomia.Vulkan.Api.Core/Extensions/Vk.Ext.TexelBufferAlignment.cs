@@ -18,13 +18,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtTexelBufferAlignment
+    public static partial class VkExtTexelBufferAlignment
     {
         public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT                = 1;
         public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT_SPEC_VERSION   = 1;
         public const string VK_EXT_TEXEL_BUFFER_ALIGNMENT_EXTENSION_NAME = "VK_EXT_texel_buffer_alignment";
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT

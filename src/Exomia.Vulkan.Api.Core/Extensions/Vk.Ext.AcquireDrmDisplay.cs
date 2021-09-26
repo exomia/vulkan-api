@@ -22,13 +22,13 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
         public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
         public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_EXT_acquire_drm_display";
-        
+
         public static delegate*<
             VkPhysicalDevice, /* physicalDevice */
             int,              /* drmFd */
             VkDisplayKHR,     /* display */
             VkResult> vkAcquireDrmDisplayEXT;
-        
+
         public static delegate*<
             VkPhysicalDevice, /* physicalDevice */
             int,              /* drmFd */

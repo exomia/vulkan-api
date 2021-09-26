@@ -18,19 +18,20 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
     [VkExtGenerator]
-    public static partial class VkExtShaderDemoteToHelperInvocation
+    public static partial class VkExt4444Formats
     {
-        public const int    VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION                = 1;
-        public const int    VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_SPEC_VERSION   = 1;
-        public const string VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_EXTENSION_NAME = "VK_EXT_shader_demote_to_helper_invocation";
+        public const int    VK_EXT_4444_FORMATS                = 1;
+        public const int    VK_EXT_4444_FORMATS_SPEC_VERSION   = 1;
+        public const string VK_EXT_4444_FORMATS_EXTENSION_NAME = "VK_EXT_4444_formats";
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
+    public unsafe struct VkPhysicalDevice4444FormatsFeaturesEXT
     {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT;
         public       VkStructureType sType;
         public       void*           pNext;
-        public       VkBool32        shaderDemoteToHelperInvocation;
+        public       VkBool32        formatA4R4G4B4;
+        public       VkBool32        formatA4B4G4R4;
     }
 }

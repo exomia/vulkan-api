@@ -25,20 +25,20 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_PRIVATE_DATA                = 1;
         public const int    VK_EXT_PRIVATE_DATA_SPEC_VERSION   = 1;
         public const string VK_EXT_PRIVATE_DATA_EXTENSION_NAME = "VK_EXT_private_data";
-        
+
         public static delegate*<
             VkDevice,                        /* device */
             VkPrivateDataSlotCreateInfoEXT*, /* pCreateInfo */
             VkAllocationCallbacks*,          /* pAllocator */
             VkPrivateDataSlotEXT*,           /* pPrivateDataSlot */
             VkResult> vkCreatePrivateDataSlotEXT;
-        
+
         public static delegate*<
             VkDevice,               /* device */
             VkPrivateDataSlotEXT,   /* privateDataSlot */
             VkAllocationCallbacks*, /* pAllocator */
             void> vkDestroyPrivateDataSlotEXT;
-        
+
         public static delegate*<
             VkDevice,             /* device */
             VkObjectType,         /* objectType */
@@ -46,7 +46,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions
             VkPrivateDataSlotEXT, /* privateDataSlot */
             ulong,                /* data */
             VkResult> vkSetPrivateDataEXT;
-        
+
         public static delegate*<
             VkDevice,             /* device */
             VkObjectType,         /* objectType */

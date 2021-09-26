@@ -507,118 +507,6 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkInstance,                          /* instance */
-            VkDebugReportCallbackCreateInfoEXT*, /* pCreateInfo */
-            VkAllocationCallbacks*,              /* pAllocator */
-            VkDebugReportCallbackEXT*,           /* pCallback */
-            VkResult> vkCreateDebugReportCallbackEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkInstance,               /* instance */
-            VkDebugReportCallbackEXT, /* callback */
-            VkAllocationCallbacks*,   /* pAllocator */
-            void> vkDestroyDebugReportCallbackEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkInstance,                 /* instance */
-            VkDebugReportFlagsEXT,      /* FlagBits */
-            VkDebugReportObjectTypeEXT, /* objectType */
-            ulong,                      /* @object */
-            nuint,                      /* location */
-            int,                        /* messageCode */
-            byte*,                      /* pLayerPrefix */
-            byte*,                      /* pMessage */
-            void> vkDebugReportMessageEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,                       /* device */
-            VkDebugMarkerObjectTagInfoEXT*, /* pTagInfo */
-            VkResult> vkDebugMarkerSetObjectTagEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,                        /* device */
-            VkDebugMarkerObjectNameInfoEXT*, /* pNameInfo */
-            VkResult> vkDebugMarkerSetObjectNameEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,             /* commandBuffer */
-            VkDebugMarkerMarkerInfoEXT*, /* pMarkerInfo */
-            void> vkCmdDebugMarkerBeginEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            void> vkCmdDebugMarkerEndEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,             /* commandBuffer */
-            VkDebugMarkerMarkerInfoEXT*, /* pMarkerInfo */
-            void> vkCmdDebugMarkerInsertEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* firstBinding */
-            uint,            /* bindingCount */
-            VkBuffer*,       /* pBuffers */
-            VkDeviceSize*,   /* pOffsets */
-            VkDeviceSize*,   /* pSizes */
-            void> vkCmdBindTransformFeedbackBuffersEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* firstCounterBuffer */
-            uint,            /* counterBufferCount */
-            VkBuffer*,       /* pCounterBuffers */
-            VkDeviceSize*,   /* pCounterBufferOffsets */
-            void> vkCmdBeginTransformFeedbackEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* firstCounterBuffer */
-            uint,            /* counterBufferCount */
-            VkBuffer*,       /* pCounterBuffers */
-            VkDeviceSize*,   /* pCounterBufferOffsets */
-            void> vkCmdEndTransformFeedbackEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,        /* commandBuffer */
-            VkQueryPool,            /* queryPool */
-            uint,                   /* query */
-            VkQueryControlFlagBits, /* FlagBits */
-            uint,                   /* index */
-            void> vkCmdBeginQueryIndexedEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            VkQueryPool,     /* queryPool */
-            uint,            /* query */
-            uint,            /* index */
-            void> vkCmdEndQueryIndexedEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* instanceCount */
-            uint,            /* firstInstance */
-            VkBuffer,        /* counterBuffer */
-            VkDeviceSize,    /* counterBufferOffset */
-            uint,            /* counterOffset */
-            uint,            /* vertexStride */
-            void> vkCmdDrawIndirectByteCountEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
             VkDevice,                  /* device */
             VkImageViewHandleInfoNVX*, /* pInfo */
             uint> vkGetImageViewHandleNVX;
@@ -676,67 +564,11 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkCommandBuffer,                     /* commandBuffer */
-            VkConditionalRenderingBeginInfoEXT*, /* pConditionalRenderingBegin */
-            void> vkCmdBeginConditionalRenderingEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            void> vkCmdEndConditionalRenderingEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
             VkCommandBuffer,       /* commandBuffer */
             uint,                  /* firstViewport */
             uint,                  /* viewportCount */
             VkViewportWScalingNV*, /* pViewportWScalings */
             void> vkCmdSetViewportWScalingNV;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkPhysicalDevice, /* physicalDevice */
-            VkDisplayKHR,     /* display */
-            VkResult> vkReleaseDisplayEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkPhysicalDevice,           /* physicalDevice */
-            VkSurfaceKHR,               /* surface */
-            VkSurfaceCapabilities2EXT*, /* pSurfaceCapabilities */
-            VkResult> vkGetPhysicalDeviceSurfaceCapabilities2EXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,               /* device */
-            VkDisplayKHR,           /* display */
-            VkDisplayPowerInfoEXT*, /* pDisplayPowerInfo */
-            VkResult> vkDisplayPowerControlEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,               /* device */
-            VkDeviceEventInfoEXT*,  /* pDeviceEventInfo */
-            VkAllocationCallbacks*, /* pAllocator */
-            VkFence*,               /* pFence */
-            VkResult> vkRegisterDeviceEventEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,               /* device */
-            VkDisplayKHR,           /* display */
-            VkDisplayEventInfoEXT*, /* pDisplayEventInfo */
-            VkAllocationCallbacks*, /* pAllocator */
-            VkFence*,               /* pFence */
-            VkResult> vkRegisterDisplayEventEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,                 /* device */
-            VkSwapchainKHR,           /* swapchain */
-            VkSurfaceCounterFlagsEXT, /* counter */
-            ulong*,                   /* pCounterValue */
-            VkResult> vkGetSwapchainCounterEXT;
 
         [FieldOffset(0)]
         public readonly delegate*<
@@ -752,142 +584,6 @@ namespace Exomia.Vulkan.Api.Core
             uint*,                           /* pPresentationTimingCount */
             VkPastPresentationTimingGOOGLE*, /* pPresentationTimings */
             VkResult> vkGetPastPresentationTimingGOOGLE;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* firstDiscardRectangle */
-            uint,            /* discardRectangleCount */
-            VkRect2D*,       /* pDiscardRectangles */
-            void> vkCmdSetDiscardRectangleEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,          /* device */
-            uint,              /* swapchainCount */
-            VkSwapchainKHR*,   /* pSwapchains */
-            VkHdrMetadataEXT*, /* pMetadata */
-            void> vkSetHdrMetadataEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,                       /* device */
-            VkDebugUtilsObjectNameInfoEXT*, /* pNameInfo */
-            VkResult> vkSetDebugUtilsObjectNameEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,                      /* device */
-            VkDebugUtilsObjectTagInfoEXT*, /* pTagInfo */
-            VkResult> vkSetDebugUtilsObjectTagEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkQueue,               /* queue */
-            VkDebugUtilsLabelEXT*, /* pLabelInfo */
-            void> vkQueueBeginDebugUtilsLabelEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkQueue, /* queue */
-            void> vkQueueEndDebugUtilsLabelEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkQueue,               /* queue */
-            VkDebugUtilsLabelEXT*, /* pLabelInfo */
-            void> vkQueueInsertDebugUtilsLabelEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,       /* commandBuffer */
-            VkDebugUtilsLabelEXT*, /* pLabelInfo */
-            void> vkCmdBeginDebugUtilsLabelEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            void> vkCmdEndDebugUtilsLabelEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,       /* commandBuffer */
-            VkDebugUtilsLabelEXT*, /* pLabelInfo */
-            void> vkCmdInsertDebugUtilsLabelEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkInstance,                          /* instance */
-            VkDebugUtilsMessengerCreateInfoEXT*, /* pCreateInfo */
-            VkAllocationCallbacks*,              /* pAllocator */
-            VkDebugUtilsMessengerEXT*,           /* pMessenger */
-            VkResult> vkCreateDebugUtilsMessengerEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkInstance,               /* instance */
-            VkDebugUtilsMessengerEXT, /* messenger */
-            VkAllocationCallbacks*,   /* pAllocator */
-            void> vkDestroyDebugUtilsMessengerEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkInstance,                            /* instance */
-            VkDebugUtilsMessageSeverityFlagsEXT,   /* messageSeverity */
-            VkDebugUtilsMessageTypeFlagsEXT,       /* messageTypes */
-            VkDebugUtilsMessengerCallbackDataEXT*, /* pCallbackData */
-            void> vkSubmitDebugUtilsMessageEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,           /* commandBuffer */
-            VkSampleLocationsInfoEXT*, /* pSampleLocationsInfo */
-            void> vkCmdSetSampleLocationsEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkPhysicalDevice,            /* physicalDevice */
-            VkSampleCountFlagBits,       /* samples */
-            VkMultisamplePropertiesEXT*, /* pMultisampleProperties */
-            void> vkGetPhysicalDeviceMultisamplePropertiesEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,                               /* device */
-            VkImage,                                /* image */
-            VkImageDrmFormatModifierPropertiesEXT*, /* pProperties */
-            VkResult> vkGetImageDrmFormatModifierPropertiesEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,                        /* device */
-            VkValidationCacheCreateInfoEXT*, /* pCreateInfo */
-            VkAllocationCallbacks*,          /* pAllocator */
-            VkValidationCacheEXT*,           /* pValidationCache */
-            VkResult> vkCreateValidationCacheEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,               /* device */
-            VkValidationCacheEXT,   /* validationCache */
-            VkAllocationCallbacks*, /* pAllocator */
-            void> vkDestroyValidationCacheEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,              /* device */
-            VkValidationCacheEXT,  /* dstCache */
-            uint,                  /* srcCacheCount */
-            VkValidationCacheEXT*, /* pSrcCaches */
-            VkResult> vkMergeValidationCachesEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,             /* device */
-            VkValidationCacheEXT, /* validationCache */
-            nuint*,               /* pDataSize */
-            void*,                /* pData */
-            VkResult> vkGetValidationCacheDataEXT;
 
         [FieldOffset(0)]
         public readonly delegate*<
@@ -1038,36 +734,12 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkDevice,                           /* device */
-            VkExternalMemoryHandleTypeFlagBits, /* handleType */
-            void*,                              /* pHostPointer */
-            VkMemoryHostPointerPropertiesEXT*,  /* pMemoryHostPointerProperties */
-            VkResult> vkGetMemoryHostPointerPropertiesEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
             VkCommandBuffer,         /* commandBuffer */
             VkPipelineStageFlagBits, /* pipelineStage */
             VkBuffer,                /* dstBuffer */
             VkDeviceSize,            /* dstOffset */
             uint,                    /* marker */
             void> vkCmdWriteBufferMarkerAMD;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkPhysicalDevice, /* physicalDevice */
-            uint*,            /* pTimeDomainCount */
-            VkTimeDomainEXT*, /* pTimeDomains */
-            VkResult> vkGetPhysicalDeviceCalibrateableTimeDomainsEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,                      /* device */
-            uint,                          /* timestampCount */
-            VkCalibratedTimestampInfoEXT*, /* pTimestampInfos */
-            ulong*,                        /* pTimestamps */
-            ulong*,                        /* pMaxDeviation */
-            VkResult> vkGetCalibratedTimestampsEXT;
 
         [FieldOffset(0)]
         public readonly delegate*<
@@ -1181,19 +853,6 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkDevice,                   /* device */
-            VkBufferDeviceAddressInfo*, /* pInfo */
-            VkDeviceAddress> vkGetBufferDeviceAddressEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkPhysicalDevice,                   /* physicalDevice */
-            uint*,                              /* pToolCount */
-            VkPhysicalDeviceToolPropertiesEXT*, /* pToolProperties */
-            VkResult> vkGetPhysicalDeviceToolPropertiesEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
             VkPhysicalDevice,                 /* physicalDevice */
             uint*,                            /* pPropertyCount */
             VkCooperativeMatrixPropertiesNV*, /* pProperties */
@@ -1205,112 +864,6 @@ namespace Exomia.Vulkan.Api.Core
             uint*,                                   /* pCombinationCount */
             VkFramebufferMixedSamplesCombinationNV*, /* pCombinations */
             VkResult> vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkInstance,                      /* instance */
-            VkHeadlessSurfaceCreateInfoEXT*, /* pCreateInfo */
-            VkAllocationCallbacks*,          /* pAllocator */
-            VkSurfaceKHR*,                   /* pSurface */
-            VkResult> vkCreateHeadlessSurfaceEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* lineStippleFactor */
-            ushort,          /* lineStipplePattern */
-            void> vkCmdSetLineStippleEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,    /* device */
-            VkQueryPool, /* queryPool */
-            uint,        /* firstQuery */
-            uint,        /* queryCount */
-            void> vkResetQueryPoolEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,    /* commandBuffer */
-            VkCullModeFlagBits, /* cullMode */
-            void> vkCmdSetCullModeEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            VkFrontFace,     /* frontFace */
-            void> vkCmdSetFrontFaceEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,     /* commandBuffer */
-            VkPrimitiveTopology, /* primitiveTopology */
-            void> vkCmdSetPrimitiveTopologyEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* viewportCount */
-            VkViewport*,     /* pViewports */
-            void> vkCmdSetViewportWithCountEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* scissorCount */
-            VkRect2D*,       /* pScissors */
-            void> vkCmdSetScissorWithCountEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* firstBinding */
-            uint,            /* bindingCount */
-            VkBuffer*,       /* pBuffers */
-            VkDeviceSize*,   /* pOffsets */
-            VkDeviceSize*,   /* pSizes */
-            VkDeviceSize*,   /* pStrides */
-            void> vkCmdBindVertexBuffers2EXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* depthTestEnable */
-            void> vkCmdSetDepthTestEnableEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* depthWriteEnable */
-            void> vkCmdSetDepthWriteEnableEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            VkCompareOp,     /* depthCompareOp */
-            void> vkCmdSetDepthCompareOpEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* depthBoundsTestEnable */
-            void> vkCmdSetDepthBoundsTestEnableEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* stencilTestEnable */
-            void> vkCmdSetStencilTestEnableEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,       /* commandBuffer */
-            VkStencilFaceFlagBits, /* faceMask */
-            VkStencilOp,           /* failOp */
-            VkStencilOp,           /* passOp */
-            VkStencilOp,           /* depthFailOp */
-            VkCompareOp,           /* compareOp */
-            void> vkCmdSetStencilOpEXT;
 
         [FieldOffset(0)]
         public readonly delegate*<
@@ -1357,54 +910,6 @@ namespace Exomia.Vulkan.Api.Core
 
         [FieldOffset(0)]
         public readonly delegate*<
-            VkPhysicalDevice, /* physicalDevice */
-            int,              /* drmFd */
-            VkDisplayKHR,     /* display */
-            VkResult> vkAcquireDrmDisplayEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkPhysicalDevice, /* physicalDevice */
-            int,              /* drmFd */
-            uint,             /* connectorId */
-            VkDisplayKHR*,    /* display */
-            VkResult> vkGetDrmDisplayEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,                        /* device */
-            VkPrivateDataSlotCreateInfoEXT*, /* pCreateInfo */
-            VkAllocationCallbacks*,          /* pAllocator */
-            VkPrivateDataSlotEXT*,           /* pPrivateDataSlot */
-            VkResult> vkCreatePrivateDataSlotEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,               /* device */
-            VkPrivateDataSlotEXT,   /* privateDataSlot */
-            VkAllocationCallbacks*, /* pAllocator */
-            void> vkDestroyPrivateDataSlotEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,             /* device */
-            VkObjectType,         /* objectType */
-            ulong,                /* objectHandle */
-            VkPrivateDataSlotEXT, /* privateDataSlot */
-            ulong,                /* data */
-            VkResult> vkSetPrivateDataEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkDevice,             /* device */
-            VkObjectType,         /* objectType */
-            ulong,                /* objectHandle */
-            VkPrivateDataSlotEXT, /* privateDataSlot */
-            ulong*,               /* pData */
-            void> vkGetPrivateDataEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
             VkCommandBuffer,                    /* commandBuffer */
             VkFragmentShadingRateNV,            /* shadingRate */
             VkFragmentShadingRateCombinerOpKHR, /* combinerOps1 */
@@ -1443,34 +948,6 @@ namespace Exomia.Vulkan.Api.Core
         public readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             void> vkCmdSubpassShadingHUAWEI;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* attachmentCount */
-            VkBool32*,       /* pColorWriteEnables */
-            void> vkCmdSetColorWriteEnableEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,     /* commandBuffer */
-            uint,                /* drawCount */
-            VkMultiDrawInfoEXT*, /* pVertexInfo */
-            uint,                /* instanceCount */
-            uint,                /* firstInstance */
-            uint,                /* stride */
-            void> vkCmdDrawMultiEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer,            /* commandBuffer */
-            uint,                       /* drawCount */
-            VkMultiDrawIndexedInfoEXT*, /* pIndexInfo */
-            uint,                       /* instanceCount */
-            uint,                       /* firstInstance */
-            uint,                       /* stride */
-            int*,                       /* pVertexOffset */
-            void> vkCmdDrawMultiIndexedEXT;
 
         [FieldOffset(0)]
         public readonly delegate*<
@@ -1712,36 +1189,6 @@ namespace Exomia.Vulkan.Api.Core
             uint*,                /* pCheckpointDataCount */
             VkCheckpointData2NV*, /* pCheckpointData */
             void> vkGetQueueCheckpointData2NV;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            uint,            /* patchControlPoints */
-            void> vkCmdSetPatchControlPointsEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            VkBool32,        /* rasterizerDiscardEnable */
-            void> vkCmdSetRasterizerDiscardEnableEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            VkBool32,        /* depthBiasEnable */
-            void> vkCmdSetDepthBiasEnableEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            VkLogicOp,       /* logicOp */
-            void> vkCmdSetLogicOpEXT;
-
-        [FieldOffset(0)]
-        public readonly delegate*<
-            VkCommandBuffer, /* commandBuffer */
-            VkBool32,        /* primitiveRestartEnable */
-            void> vkCmdSetPrimitiveRestartEnableEXT;
 
         [FieldOffset(0)]
         public readonly delegate*<

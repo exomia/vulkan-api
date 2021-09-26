@@ -15,22 +15,23 @@ using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
     [VkExtGenerator]
-    public static partial class VkExtShaderDemoteToHelperInvocation
+    public static partial class VkExtImageRobustness
     {
-        public const int    VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION                = 1;
-        public const int    VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_SPEC_VERSION   = 1;
-        public const string VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_EXTENSION_NAME = "VK_EXT_shader_demote_to_helper_invocation";
+        public const int    VK_EXT_IMAGE_ROBUSTNESS                = 1;
+        public const int    VK_EXT_IMAGE_ROBUSTNESS_SPEC_VERSION   = 1;
+        public const string VK_EXT_IMAGE_ROBUSTNESS_EXTENSION_NAME = "VK_EXT_image_robustness";
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
+    public unsafe struct VkPhysicalDeviceImageRobustnessFeaturesEXT
     {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES_EXT;
         public       VkStructureType sType;
         public       void*           pNext;
-        public       VkBool32        shaderDemoteToHelperInvocation;
+        public       VkBool32        robustImageAccess;
     }
 }

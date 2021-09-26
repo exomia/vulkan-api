@@ -2028,7 +2028,6 @@ namespace Exomia.Vulkan.Api.Core
     {
         MAX_ENUM = 0x7FFFFFFF
     }
-    
 
     [Flags]
     public enum VkColorComponentFlagBits
@@ -2933,30 +2932,6 @@ namespace Exomia.Vulkan.Api.Core
         MAX_ENUM_AMD = 0x7FFFFFFF
     }
 
-
-    public enum VkValidationFeatureEnableEXT
-    {
-        GPU_ASSISTED_EXT                      = 0,
-        GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT = 1,
-        BEST_PRACTICES_EXT                    = 2,
-        DEBUG_PRINTF_EXT                      = 3,
-        SYNCHRONIZATION_VALIDATION_EXT        = 4,
-        MAX_ENUM_EXT                          = 0x7FFFFFFF
-    }
-
-    public enum VkValidationFeatureDisableEXT
-    {
-        ALL_EXT                     = 0,
-        SHADERS_EXT                 = 1,
-        THREAD_SAFETY_EXT           = 2,
-        API_PARAMETERS_EXT          = 3,
-        OBJECT_LIFETIMES_EXT        = 4,
-        CORE_CHECKS_EXT             = 5,
-        UNIQUE_HANDLES_EXT          = 6,
-        SHADER_VALIDATION_CACHE_EXT = 7,
-        MAX_ENUM_EXT                = 0x7FFFFFFF
-    }
-
     public enum VkComponentTypeNV
     {
         FLOAT16_NV  = 0,
@@ -2988,7 +2963,6 @@ namespace Exomia.Vulkan.Api.Core
         TRUNCATE_NV = 1,
         MAX_ENUM_NV = 0x7FFFFFFF
     }
-    
 
     public enum VkIndirectCommandsTokenTypeNV
     {
@@ -3089,12 +3063,6 @@ namespace Exomia.Vulkan.Api.Core
         ANY_HIT_KHR      = 2,
         INTERSECTION_KHR = 3,
         MAX_ENUM_KHR     = 0x7FFFFFFF
-    }
-
-    public enum VkProvokingVertexModeEXT {
-        FIRST_VERTEX_EXT = 0,
-        LAST_VERTEX_EXT  = 1,
-        MAX_ENUM_EXT     = 0x7FFFFFFF
     }
 
     public enum VkAccelerationStructureMotionInstanceTypeNV

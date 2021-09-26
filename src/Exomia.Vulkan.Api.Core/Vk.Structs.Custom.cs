@@ -201,7 +201,7 @@ namespace Exomia.Vulkan.Api.Core
             }
         }
 
-        /// <summary> Initializes a new instance of the <see cref="VkColor"/> struct. </summary>
+        /// <summary> Initializes a new instance of the <see cref="VkColor" /> struct. </summary>
         /// <param name="r"> The R value between 0.0f and 1.0f. </param>
         /// <param name="g"> The G value between 0.0f and 1.0f. </param>
         /// <param name="b"> The B value between 0.0f and 1.0f. </param>
@@ -214,7 +214,7 @@ namespace Exomia.Vulkan.Api.Core
             A = a;
         }
 
-        /// <summary> Initializes a new instance of the <see cref="VkColor"/> struct. </summary>
+        /// <summary> Initializes a new instance of the <see cref="VkColor" /> struct. </summary>
         /// <param name="colors"> [in,out] If non-null, the colors. </param>
         public VkColor(float* colors)
         {
@@ -231,7 +231,7 @@ namespace Exomia.Vulkan.Api.Core
         {
             return *(VkClearColorValue*)&color;
         }
-        
+
         /// <summary> Implicit cast that converts the given VkClearColorValue to a VkColor. </summary>
         /// <param name="color"> The color. </param>
         /// <returns> The result of the operation. </returns>

@@ -194,7 +194,6 @@ namespace Exomia.Vulkan.Api.Core
             return value._ptr;
         }
     }
-    
 
     public readonly unsafe struct VkInstance
     {

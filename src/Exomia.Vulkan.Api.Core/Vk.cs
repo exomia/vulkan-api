@@ -1604,37 +1604,7 @@ namespace Exomia.Vulkan.Api.Core
             VkDisplayPlaneCapabilities2KHR* pCapabilities);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkCmdSetPatchControlPointsEXT")]
-        public static extern unsafe void CmdSetPatchControlPointsEXT(
-            VkCommandBuffer commandBuffer,
-            uint            patchControlPoints);
-
-        [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkCmdSetRasterizerDiscardEnableEXT")]
-        public static extern unsafe void CmdSetRasterizerDiscardEnableEXT(
-            VkCommandBuffer commandBuffer,
-            VkBool32        rasterizerDiscardEnable);
-
-        [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkCmdSetDepthBiasEnableEXT")]
-        public static extern unsafe void CmdSetDepthBiasEnableEXT(
-            VkCommandBuffer commandBuffer,
-            VkBool32        depthBiasEnable);
-
-        [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkCmdSetLogicOpEXT")]
-        public static extern unsafe void CmdSetLogicOpEXT(
-            VkCommandBuffer commandBuffer,
-            VkLogicOp       logicOp);
-
-        [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkCmdSetPrimitiveRestartEnableEXT")]
-        public static extern unsafe void CmdSetPrimitiveRestartEnableEXT(
-            VkCommandBuffer commandBuffer,
-            VkBool32        primitiveRestartEnable);
-
-        [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkCreateCuModuleNVX")]
+        [DllImport(IMPORT, EntryPoint = "vkCreateCuModuleNVX")]
         public static extern unsafe VkResult CreateCuModuleNVX(
             VkDevice                 device,
             VkCuModuleCreateInfoNVX* pCreateInfo,
@@ -1642,7 +1612,7 @@ namespace Exomia.Vulkan.Api.Core
             VkCuModuleNVX*           pModule);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkCreateCuFunctionNVX")]
+        [DllImport(IMPORT, EntryPoint = "vkCreateCuFunctionNVX")]
         public static extern unsafe VkResult CreateCuFunctionNVX(
             VkDevice                   device,
             VkCuFunctionCreateInfoNVX* pCreateInfo,
@@ -1650,21 +1620,21 @@ namespace Exomia.Vulkan.Api.Core
             VkCuFunctionNVX*           pFunction);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkDestroyCuModuleNVX")]
+        [DllImport(IMPORT, EntryPoint = "vkDestroyCuModuleNVX")]
         public static extern unsafe void DestroyCuModuleNVX(
             VkDevice               device,
             VkCuModuleNVX          module,
             VkAllocationCallbacks* pAllocator);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkDestroyCuFunctionNVX")]
+        [DllImport(IMPORT, EntryPoint = "vkDestroyCuFunctionNVX")]
         public static extern unsafe void DestroyCuFunctionNVX(
             VkDevice               device,
             VkCuFunctionNVX        function,
             VkAllocationCallbacks* pAllocator);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport(IMPORT, EntryPoint ="vkCmdCuLaunchKernelNVX")]
+        [DllImport(IMPORT, EntryPoint = "vkCmdCuLaunchKernelNVX")]
         public static extern unsafe void CmdCuLaunchKernelNVX(
             VkCommandBuffer    commandBuffer,
             VkCuLaunchInfoNVX* pLaunchInfo);

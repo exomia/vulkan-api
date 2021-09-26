@@ -133,10 +133,10 @@ namespace Exomia.Vulkan.Api.Core
     {
         [FieldOffset(0)]
         public VkAccelerationStructureInstanceKHR staticInstance;
-        
+
         [FieldOffset(0)]
         public VkAccelerationStructureMatrixMotionInstanceNV matrixMotionInstance;
-        
+
         [FieldOffset(0)]
         public VkAccelerationStructureSRTMotionInstanceNV srtMotionInstance;
     }

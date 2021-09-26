@@ -21,7 +21,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions
     [VkExtGenerator]
     public static partial class VkExtShaderAtomicFloat
     {
-
         public const int    VK_EXT_SHADER_ATOMIC_FLOAT                = 1;
         public const int    VK_EXT_SHADER_ATOMIC_FLOAT_SPEC_VERSION   = 1;
         public const string VK_EXT_SHADER_ATOMIC_FLOAT_EXTENSION_NAME = "VK_EXT_shader_atomic_float";
