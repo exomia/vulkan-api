@@ -4372,14 +4372,23 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT
+    public unsafe struct VkPhysicalDeviceBufferDeviceAddressFeatures
     {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT;
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES;
         public       VkStructureType sType;
         public       void*           pNext;
         public       VkBool32        bufferDeviceAddress;
         public       VkBool32        bufferDeviceAddressCaptureReplay;
         public       VkBool32        bufferDeviceAddressMultiDevice;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkBufferDeviceAddressInfo
+    {
+        public const VkStructureType STYPE = VkStructureType.BUFFER_DEVICE_ADDRESS_INFO;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBuffer        buffer;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -4459,33 +4468,7 @@ namespace Exomia.Vulkan.Api.Core
         public       VkSampleCountFlagBits     depthStencilSamples;
         public       VkSampleCountFlagBits     colorSamples;
     }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceIndexTypeUint8FeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        indexTypeUint8;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceExtendedDynamicStateFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        extendedDynamicState;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        shaderDemoteToHelperInvocation;
-    }
+    
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV
@@ -4661,27 +4644,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        texelBufferAlignment;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkDeviceSize    storageTexelBufferOffsetAlignmentBytes;
-        public       VkBool32        storageTexelBufferOffsetSingleTexelAlignment;
-        public       VkDeviceSize    uniformTexelBufferOffsetAlignmentBytes;
-        public       VkBool32        uniformTexelBufferOffsetSingleTexelAlignment;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRenderPassTransformBeginInfoQCOM
     {
         public const VkStructureType            STYPE = VkStructureType.RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM;
@@ -4699,92 +4661,7 @@ namespace Exomia.Vulkan.Api.Core
         public       VkSurfaceTransformFlagsKHR transform;
         public       VkRect2D                   renderArea;
     }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceRobustness2FeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        robustBufferAccess2;
-        public       VkBool32        robustImageAccess2;
-        public       VkBool32        nullDescriptor;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceRobustness2PropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkDeviceSize    robustStorageBufferAccessSizeAlignment;
-        public       VkDeviceSize    robustUniformBufferAccessSizeAlignment;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkSamplerCustomBorderColorCreateInfoEXT
-    {
-        public const VkStructureType   STYPE = VkStructureType.SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT;
-        public       VkStructureType   sType;
-        public       void*             pNext;
-        public       VkClearColorValue customBorderColor;
-        public       VkFormat          format;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceCustomBorderColorPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            maxCustomBorderColorSamplers;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceCustomBorderColorFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        customBorderColors;
-        public       VkBool32        customBorderColorWithoutFormat;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDevicePrivateDataFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        privateData;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDevicePrivateDataCreateInfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.DEVICE_PRIVATE_DATA_CREATE_INFO_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            privateDataSlotRequestCount;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPrivateDataSlotCreateInfoEXT
-    {
-        public const VkStructureType                 STYPE = VkStructureType.PRIVATE_DATA_SLOT_CREATE_INFO_EXT;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkPrivateDataSlotCreateFlagsEXT flags;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        pipelineCreationCacheControl;
-    }
+    
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDiagnosticsConfigFeaturesNV

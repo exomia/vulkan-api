@@ -194,51 +194,7 @@ namespace Exomia.Vulkan.Api.Core
             return value._ptr;
         }
     }
-
-    public readonly unsafe struct VkPrivateDataSlotEXT
-    {
-        public static readonly VkPrivateDataSlotEXT Null = (VkPrivateDataSlotEXT)null;
-#pragma warning disable 649
-        private readonly void* _ptr;
-#pragma warning restore 649
-
-        public static explicit operator VkPrivateDataSlotEXT(void* ptr)
-        {
-            VkPrivateDataSlotEXT value;
-            *(void**)&value = ptr;
-            return value;
-        }
-
-        public static bool operator ==(VkPrivateDataSlotEXT left, VkPrivateDataSlotEXT right)
-        {
-            return left._ptr == right._ptr;
-        }
-
-        public static bool operator !=(VkPrivateDataSlotEXT left, VkPrivateDataSlotEXT right)
-        {
-            return left._ptr != right._ptr;
-        }
-
-        public bool Equals(in VkPrivateDataSlotEXT obj)
-        {
-            return obj._ptr == _ptr;
-        }
-
-        public override bool Equals(object? obj)
-        {
-            return obj is VkPrivateDataSlotEXT vkPrivateDataSlotEXT && Equals(in vkPrivateDataSlotEXT);
-        }
-
-        public override int GetHashCode()
-        {
-            return ((IntPtr)_ptr).GetHashCode();
-        }
-
-        public static explicit operator void*(VkPrivateDataSlotEXT value)
-        {
-            return value._ptr;
-        }
-    }
+    
 
     public readonly unsafe struct VkInstance
     {

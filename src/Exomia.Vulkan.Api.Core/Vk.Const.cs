@@ -466,50 +466,27 @@ namespace Exomia.Vulkan.Api.Core
         public const string VK_NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME               = "VK_NV_coverage_reduction_mode";
 
 
-
-        public const int    VK_EXT_HOST_QUERY_RESET                                    = 1;
-        public const int    VK_EXT_HOST_QUERY_RESET_SPEC_VERSION                       = 1;
-        public const string VK_EXT_HOST_QUERY_RESET_EXTENSION_NAME                     = "VK_EXT_host_query_reset";
-        public const int    VK_EXT_INDEX_TYPE_UINT8                                    = 1;
-        public const int    VK_EXT_INDEX_TYPE_UINT8_SPEC_VERSION                       = 1;
-        public const string VK_EXT_INDEX_TYPE_UINT8_EXTENSION_NAME                     = "VK_EXT_index_type_uint8";
-        public const int    VK_EXT_EXTENDED_DYNAMIC_STATE                              = 1;
-        public const int    VK_EXT_EXTENDED_DYNAMIC_STATE_SPEC_VERSION                 = 1;
-        public const string VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME               = "VK_EXT_extended_dynamic_state";
-        public const int    VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION                  = 1;
-        public const int    VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_SPEC_VERSION     = 1;
-        public const string VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_EXTENSION_NAME   = "VK_EXT_shader_demote_to_helper_invocation";
+        
         public const int    VK_NV_DEVICE_GENERATED_COMMANDS                            = 1;
         public const int    VK_NV_DEVICE_GENERATED_COMMANDS_SPEC_VERSION               = 3;
         public const string VK_NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME             = "VK_NV_device_generated_commands";
         public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR                           = 1;
         public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR_SPEC_VERSION              = 1;
         public const string VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME            = "VK_NV_inherited_viewport_scissor";
-        public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT                              = 1;
-        public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT_SPEC_VERSION                 = 1;
-        public const string VK_EXT_TEXEL_BUFFER_ALIGNMENT_EXTENSION_NAME               = "VK_EXT_texel_buffer_alignment";
+
+
         public const int    VK_QCOM_RENDER_PASS_TRANSFORM                              = 1;
         public const int    VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION                 = 2;
         public const string VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME               = "VK_QCOM_render_pass_transform";
 
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                                 = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION                    = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME                  = "VK_EXT_acquire_drm_display";
-        public const int    VK_EXT_ROBUSTNESS2                                         = 1;
-        public const int    VK_EXT_ROBUSTNESS_2_SPEC_VERSION                           = 1;
-        public const string VK_EXT_ROBUSTNESS_2_EXTENSION_NAME                         = "VK_EXT_robustness2";
-        public const int    VK_EXT_CUSTOM_BORDER_COLOR                                 = 1;
-        public const int    VK_EXT_CUSTOM_BORDER_COLOR_SPEC_VERSION                    = 12;
-        public const string VK_EXT_CUSTOM_BORDER_COLOR_EXTENSION_NAME                  = "VK_EXT_custom_border_color";
+
+
+
         public const int    VK_GOOGLE_USER_TYPE                                        = 1;
         public const int    VK_GOOGLE_USER_TYPE_SPEC_VERSION                           = 1;
         public const string VK_GOOGLE_USER_TYPE_EXTENSION_NAME                         = "VK_GOOGLE_user_type";
-        public const int    VK_EXT_PRIVATE_DATA                                        = 1;
-        public const int    VK_EXT_PRIVATE_DATA_SPEC_VERSION                           = 1;
-        public const string VK_EXT_PRIVATE_DATA_EXTENSION_NAME                         = "VK_EXT_private_data";
-        public const int    VK_EXT_PIPELINE_CREATION_CACHE_CONTROL                     = 1;
-        public const int    VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_SPEC_VERSION        = 3;
-        public const string VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_EXTENSION_NAME      = "VK_EXT_pipeline_creation_cache_control";
+
+
         public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG                            = 1;
         public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION               = 1;
         public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME             = "VK_NV_device_diagnostics_config";

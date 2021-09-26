@@ -2028,13 +2028,7 @@ namespace Exomia.Vulkan.Api.Core
     {
         MAX_ENUM = 0x7FFFFFFF
     }
-
-    [Flags]
-    public enum VkPipelineCacheCreateFlagBits
-    {
-        EXTERNALLY_SYNCHRONIZED_BIT_EXT = 0x00000001,
-        FLAG_BITS_MAX_ENUM              = 0x7FFFFFFF
-    }
+    
 
     [Flags]
     public enum VkColorComponentFlagBits
@@ -3023,12 +3017,6 @@ namespace Exomia.Vulkan.Api.Core
         INDEXED_SEQUENCES_BIT_NV   = 0x00000002,
         UNORDERED_SEQUENCES_BIT_NV = 0x00000004,
         FLAG_BITS_MAX_ENUM_NV      = 0x7FFFFFFF
-    }
-
-    [Flags]
-    public enum VkPrivateDataSlotCreateFlagsEXT
-    {
-        MAX_ENUM_EXT = 0x7FFFFFFF
     }
 
     [Flags]
