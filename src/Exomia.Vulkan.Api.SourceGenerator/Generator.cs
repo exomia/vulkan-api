@@ -26,42 +26,23 @@ namespace Exomia.Vulkan.Api.SourceGenerator
             {
                 foreach (VkExtensionClass vkExtensionClass in syntaxReceiver.VkExtensions)
                 {
-                    {
-                        string sourceCode = $@"using System.Runtime.CompilerServices;
+                    string sourceCode = $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
+using System.Runtime.CompilerServices;
 using System;
 using System.Runtime.InteropServices;
 
+// ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 namespace {vkExtensionClass.NamespaceName}
 {{
-    {SourceCodeGenerator.GetExtensionClass(vkExtensionClass)}
-}}".FormatCode();
-                        context.AddSource($"{vkExtensionClass.NamespaceName}.{vkExtensionClass.ClassName}.g.cs", sourceCode);
-                    }
+{SourceCodeGenerator.GetExtensionClass(vkExtensionClass)}
 
-                    if (vkExtensionClass.Functions.Any()) // *.Delegates.g.cs
-                    {
-                        string sourceCode = $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+    {(vkExtensionClass.Functions.Count > 0 ? string.Join($"{Environment.NewLine}    ", vkExtensionClass.Functions.Select(SourceCodeGenerator.GetDelegates)) : string.Empty)}
 
-// ReSharper disable UnusedMember.Global
-namespace {vkExtensionClass.NamespaceName} 
-{{
-    {string.Join(Environment.NewLine, vkExtensionClass.Functions.Select(SourceCodeGenerator.GetDelegates))}
-}}".FormatCode();
-                        context.AddSource($"{vkExtensionClass.NamespaceName}.{vkExtensionClass.ClassName}.Delegates.g.cs", sourceCode);
-                    }
-
-                    if (vkExtensionClass.Functions.Any()) // *.Structs.Delegates.g.cs
-                    {
-                        string sourceCode = $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-// ReSharper disable UnusedMember.Global
-// ReSharper disable UnassignedReadonlyField
-namespace {vkExtensionClass.NamespaceName}
-{{
-    {string.Join(Environment.NewLine, vkExtensionClass.Functions.Select(SourceCodeGenerator.GetStructsDelegates))}
-}}".FormatCode();
-                        context.AddSource($"{vkExtensionClass.NamespaceName}.{vkExtensionClass.ClassName}.Structs.Delegates.g.cs", sourceCode);
-                    }
+    {(vkExtensionClass.Functions.Count > 0 ? string.Join($"{Environment.NewLine}    ", vkExtensionClass.Functions.Select(SourceCodeGenerator.GetStructsDelegates)) : string.Empty)}
+}}".FormatCode(false);
+                    context.AddSource($"{vkExtensionClass.NamespaceName}.{vkExtensionClass.ClassName}.g.cs", sourceCode);
                 }
 
                 foreach (VkFunctionClass vkFunctionClass in syntaxReceiver.VkFunctions)
@@ -77,9 +58,9 @@ namespace {vkFunctionClass.NamespaceName}
 {{
     {SourceCodeGenerator.GetStructDeclaration(vkFunctionClass)}
     {{
-        {string.Join(Environment.NewLine, syntaxReceiver.VkExtensions.SelectMany(e => e.Functions).Select(SourceCodeGenerator.GetVkFunctions))}
+        {string.Concat(syntaxReceiver.VkExtensions.SelectMany(e => e.Functions).Select(SourceCodeGenerator.GetVkFunctions))}
     }}
-}}".FormatCode();
+}}".FormatCode(false);
                     context.AddSource($"{vkFunctionClass.NamespaceName}.{vkFunctionClass.ClassName}.g.cs", sourceCode);
                 }
             }

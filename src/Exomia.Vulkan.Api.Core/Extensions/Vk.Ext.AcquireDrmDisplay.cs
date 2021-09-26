@@ -14,6 +14,7 @@
 using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
     [VkExtGenerator]
@@ -23,18 +24,18 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
         public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_EXT_acquire_drm_display";
 
-        public static delegate*<
+        public static readonly delegate*<
             VkPhysicalDevice, /* physicalDevice */
             int,              /* drmFd */
             VkDisplayKHR,     /* display */
-            VkResult> vkAcquireDrmDisplayEXT;
+            VkResult> vkAcquireDrmDisplayEXT = null;
 
-        public static delegate*<
+        public static readonly delegate*<
             VkPhysicalDevice, /* physicalDevice */
             int,              /* drmFd */
             uint,             /* connectorId */
             VkDisplayKHR*,    /* display */
-            VkResult> vkGetDrmDisplayEXT;
+            VkResult> vkGetDrmDisplayEXT = null;
 
         public static partial void Load(VkInstance vkInstance);
     }

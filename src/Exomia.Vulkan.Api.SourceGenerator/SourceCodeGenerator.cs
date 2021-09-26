@@ -41,12 +41,18 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 
         public static string GetInstanceLoadingFunction(FunctionPointerInfo fpi, string paramName)
         {
-            return $@"{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");";
+            return $@"            fixed({fpi.TypeSymbol.ToDisplayString()} *p{fpi.Name} = &{fpi.Name}) 
+            {{
+                *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
+            }}";
         }
 
         public static string GetDeviceLoadingFunction(FunctionPointerInfo fpi, string paramName)
         {
-            return $@"{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");";
+            return $@"            fixed({fpi.TypeSymbol.ToDisplayString()} *p{fpi.Name} = &{fpi.Name}) 
+            {{
+                    *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
+            }}";
         }
 
         public static string GetDelegates(FunctionPointerInfo fpi)
@@ -59,40 +65,39 @@ namespace Exomia.Vulkan.Api.SourceGenerator
             string structName = $"{char.ToUpper(fpi.Name[0])}{fpi.Name.Substring(1)}";
 
             return $@"public readonly unsafe struct {structName}
-{{
-    public static readonly {structName} Null = ({structName})null;
-
-    /// <summary> vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/{fpi.Name}.html"">{fpi.Name}</see>. </summary>
-    public readonly delegate*<{string.Join(", ", fpi.Parameters.Select(p => $"{p.Type} /* {p.Name} */"))}, {fpi.ReturnType}> UnsafeInvoke;
-
-    public static implicit operator {structName}(void* ptr)
     {{
-        {structName} value;
-        *(void**)&value = ptr;
-        return value;
-    }}
-}}";
+        public static readonly {structName} Null = ({structName})null;
+
+        /// <summary> vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/{fpi.Name}.html"">{fpi.Name}</see>. </summary>
+        public readonly delegate*<{string.Join(", ", fpi.Parameters.Select(p => $"{p.Type} /* {p.Name} */"))}, {fpi.ReturnType}> UnsafeInvoke;
+
+        public static implicit operator {structName}(void* ptr)
+        {{
+            {structName} value;
+            *(void**)&value = ptr;
+            return value;
+        }}
+    }}";
         }
 
         public static string GetExtensionClass(VkExtensionClass extensionClass)
         {
             StringBuilder sb = new StringBuilder(
-                $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-/// <summary> {extensionClass.ClassName} class. </summary>
-/// <remarks>
-///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
-/// </remarks>
-{GetClassDeclaration(extensionClass)}
-{{
-    /// <summary> An UTF8 null terminated version represented by an UTF16 string. </summary>
+                $@"    /// <summary> {extensionClass.ClassName} class. </summary>
     /// <remarks>
-    ///     Example usage:<br />
-    ///     <br />
-    ///     fixed(char* ptr = {extensionClass.VarExtensionName}_UTF8_NT) {{<br />
-    ///         sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.<br />
-    ///     }}
+    ///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
     /// </remarks>
-    public const string {extensionClass.VarExtensionName}_UTF8_NT = ""{GetUtf8StringAsUtf16(extensionClass.ExtensionName)}"";");
+    {GetClassDeclaration(extensionClass)}
+    {{
+        /// <summary> An UTF8 null terminated version represented by an UTF16 string. </summary>
+        /// <remarks>
+        ///     Example usage:<br />
+        ///     <br />
+        ///     fixed(char* ptr = {extensionClass.VarExtensionName}_UTF8_NT) {{<br />
+        ///         sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.<br />
+        ///     }}
+        /// </remarks>
+        public const string {extensionClass.VarExtensionName}_UTF8_NT = ""{GetUtf8StringAsUtf16(extensionClass.ExtensionName)}"";");
 
             if (extensionClass.LoadFunction != null)
             {
@@ -107,27 +112,28 @@ namespace Exomia.Vulkan.Api.SourceGenerator
                     _            => throw new NotSupportedException()
                 };
 
-                sb.AppendLine(
-                    $@"
-    /// <summary> Loads all functions for this extension. </summary>
-    /// <param name=""{parameterName}""> The {parameterType}. </param>
-    /// <remarks>
-    ///     {extensionClass.ExtensionName} - {parameterType} extension <br />
-    ///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
-    /// </remarks>
-    public static partial void Load({parameterType} {parameterName})
-    {{
-        {string.Join(Environment.NewLine, extensionClass.Functions.Select(x => extLoaderFuncBuilder(x, parameterName)))}
-    }}");
+                sb.AppendLine($@"
+
+        /// <summary> Loads all functions for this extension. </summary>
+        /// <param name=""{parameterName}""> The {parameterType}. </param>
+        /// <remarks>
+        ///     {extensionClass.ExtensionName} - {parameterType} extension <br />
+        ///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
+        /// </remarks>
+        public static partial void Load({parameterType} {parameterName})
+        {{
+{string.Join(Environment.NewLine, extensionClass.Functions.Select(x => extLoaderFuncBuilder(x, parameterName)))}
+        }}");
             }
 
-            return sb.AppendLine("}").ToString();
+            return sb.AppendLine().AppendLine("    }").ToString();
         }
 
         public static string GetVkFunctions(FunctionPointerInfo fpi)
         {
-            return $@"/// <summary> vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/{fpi.Name}.html"">{fpi.Name}</see>. </summary>
-[FieldOffset(0)] public readonly delegate*<{string.Join(", ", fpi.Parameters.Select(p => $"{p.Type} /* {p.Name} */"))}, {fpi.ReturnType}> {fpi.Name};";
+            return $@"
+        /// <summary> vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/{fpi.Name}.html"">{fpi.Name}</see>. </summary>
+        [FieldOffset(0)] public readonly delegate*<{string.Join(", ", fpi.Parameters.Select(p => $"{p.Type} /* {p.Name} */"))}, {fpi.ReturnType}> {fpi.Name};";
         }
 
         public static string GetClassDeclaration(VkExtensionClass f)
@@ -139,7 +145,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
                 Accessibility.Public   => "public",
                 _                      => throw new NotSupportedException(nameof(f.Symbol.DeclaredAccessibility))
             };
-            return $@"{accessibility} unsafe{(f.Symbol.IsStatic ? " static " : " ")} partial class {f.ClassName}";
+            return $@"{accessibility} unsafe{(f.Symbol.IsStatic ? " static " : " ")}partial class {f.ClassName}";
         }
 
         public static string GetStructDeclaration(VkFunctionClass f)
