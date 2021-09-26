@@ -12,6 +12,7 @@
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using System;
+using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
@@ -29,9 +30,38 @@ namespace Exomia.Vulkan.Api.Core.Extensions
 
         public static delegate*<
             VkDevice,                   /* device */
-            VkBufferDeviceAddressInfo*, /* pInfo */
+            VkBufferDeviceAddressInfoEXT*, /* pInfo */
             VkDeviceAddress> vkGetBufferDeviceAddressEXT;
 
         public static partial void Load(VkDevice vkDevice);
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkBufferDeviceAddressCreateInfoEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkDeviceAddress deviceAddress;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBool32        bufferDeviceAddress;
+        public       VkBool32        bufferDeviceAddressCaptureReplay;
+        public       VkBool32        bufferDeviceAddressMultiDevice;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct VkBufferDeviceAddressInfoEXT
+    {
+        public const VkStructureType STYPE = VkStructureType.BUFFER_DEVICE_ADDRESS_INFO_EXT;
+        public       VkStructureType sType;
+        public       void*           pNext;
+        public       VkBuffer        buffer;
     }
 }

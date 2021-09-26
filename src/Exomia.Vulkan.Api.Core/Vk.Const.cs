@@ -464,21 +464,9 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_COVERAGE_REDUCTION_MODE                              = 1;
         public const int    VK_NV_COVERAGE_REDUCTION_MODE_SPEC_VERSION                 = 1;
         public const string VK_NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME               = "VK_NV_coverage_reduction_mode";
-        public const int    VK_EXT_FRAGMENT_SHADER_INTERLOCK                           = 1;
-        public const int    VK_EXT_FRAGMENT_SHADER_INTERLOCK_SPEC_VERSION              = 1;
-        public const string VK_EXT_FRAGMENT_SHADER_INTERLOCK_EXTENSION_NAME            = "VK_EXT_fragment_shader_interlock";
-        public const int    VK_EXT_YCBCR_IMAGE_ARRAYS                                  = 1;
-        public const int    VK_EXT_YCBCR_IMAGE_ARRAYS_SPEC_VERSION                     = 1;
-        public const string VK_EXT_YCBCR_IMAGE_ARRAYS_EXTENSION_NAME                   = "VK_EXT_ycbcr_image_arrays";
-        public const int    VK_EXT_HEADLESS_SURFACE                                    = 1;
-        public const int    VK_EXT_HEADLESS_SURFACE_SPEC_VERSION                       = 1;
-        public const string VK_EXT_HEADLESS_SURFACE_EXTENSION_NAME                     = "VK_EXT_headless_surface";
-        public const int    VK_EXT_LINE_RASTERIZATION                                  = 1;
-        public const int    VK_EXT_LINE_RASTERIZATION_SPEC_VERSION                     = 1;
-        public const string VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME                   = "VK_EXT_line_rasterization";
-        public const int    VK_EXT_SHADER_ATOMIC_FLOAT                                 = 1;
-        public const int    VK_EXT_SHADER_ATOMIC_FLOAT_SPEC_VERSION                    = 1;
-        public const string VK_EXT_SHADER_ATOMIC_FLOAT_EXTENSION_NAME                  = "VK_EXT_shader_atomic_float";
+
+
+
         public const int    VK_EXT_HOST_QUERY_RESET                                    = 1;
         public const int    VK_EXT_HOST_QUERY_RESET_SPEC_VERSION                       = 1;
         public const string VK_EXT_HOST_QUERY_RESET_EXTENSION_NAME                     = "VK_EXT_host_query_reset";

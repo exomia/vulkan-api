@@ -2994,15 +2994,7 @@ namespace Exomia.Vulkan.Api.Core
         TRUNCATE_NV = 1,
         MAX_ENUM_NV = 0x7FFFFFFF
     }
-
-    public enum VkLineRasterizationModeEXT
-    {
-        DEFAULT_EXT            = 0,
-        RECTANGULAR_EXT        = 1,
-        BRESENHAM_EXT          = 2,
-        RECTANGULAR_SMOOTH_EXT = 3,
-        MAX_ENUM_EXT           = 0x7FFFFFFF
-    }
+    
 
     public enum VkIndirectCommandsTokenTypeNV
     {

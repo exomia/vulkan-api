@@ -277,15 +277,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [Flags]
-    public enum VkHeadlessSurfaceCreateFlagsEXT : uint
-    {
-        /// <summary>
-        ///     Reserved for future use
-        /// </summary>
-        Reserved = 0
-    }
-
-    [Flags]
     public enum VkAccelerationStructureMotionInfoFlagsNV : uint
     {
         /// <summary>

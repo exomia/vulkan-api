@@ -2731,25 +2731,6 @@ namespace Exomia.Vulkan.Api.Core
         public       ulong           value;
     }
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceBufferDeviceAddressFeatures
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        bufferDeviceAddress;
-        public       VkBool32        bufferDeviceAddressCaptureReplay;
-        public       VkBool32        bufferDeviceAddressMultiDevice;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkBufferDeviceAddressInfo
-    {
-        public const VkStructureType STYPE = VkStructureType.BUFFER_DEVICE_ADDRESS_INFO;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBuffer        buffer;
-    }
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBufferOpaqueCaptureAddressCreateInfo
@@ -4402,15 +4383,6 @@ namespace Exomia.Vulkan.Api.Core
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkBufferDeviceAddressCreateInfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkDeviceAddress deviceAddress;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkValidationFeaturesEXT
     {
         public const VkStructureType                STYPE = VkStructureType.VALIDATION_FEATURES_EXT;
@@ -4486,90 +4458,6 @@ namespace Exomia.Vulkan.Api.Core
         public       VkSampleCountFlagBits     rasterizationSamples;
         public       VkSampleCountFlagBits     depthStencilSamples;
         public       VkSampleCountFlagBits     colorSamples;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        fragmentShaderSampleInterlock;
-        public       VkBool32        fragmentShaderPixelInterlock;
-        public       VkBool32        fragmentShaderShadingRateInterlock;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceYcbcrImageArraysFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        ycbcrImageArrays;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkHeadlessSurfaceCreateInfoEXT
-    {
-        public const VkStructureType                 STYPE = VkStructureType.HEADLESS_SURFACE_CREATE_INFO_EXT;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkHeadlessSurfaceCreateFlagsEXT flags;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceLineRasterizationFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        rectangularLines;
-        public       VkBool32        bresenhamLines;
-        public       VkBool32        smoothLines;
-        public       VkBool32        stippledRectangularLines;
-        public       VkBool32        stippledBresenhamLines;
-        public       VkBool32        stippledSmoothLines;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceLineRasterizationPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            lineSubPixelPrecisionBits;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineRasterizationLineStateCreateInfoEXT
-    {
-        public const VkStructureType            STYPE = VkStructureType.PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       VkLineRasterizationModeEXT lineRasterizationMode;
-        public       VkBool32                   stippledLineEnable;
-        public       uint                       lineStippleFactor;
-        public       ushort                     lineStipplePattern;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        shaderBufferFloat32Atomics;
-        public       VkBool32        shaderBufferFloat32AtomicAdd;
-        public       VkBool32        shaderBufferFloat64Atomics;
-        public       VkBool32        shaderBufferFloat64AtomicAdd;
-        public       VkBool32        shaderSharedFloat32Atomics;
-        public       VkBool32        shaderSharedFloat32AtomicAdd;
-        public       VkBool32        shaderSharedFloat64Atomics;
-        public       VkBool32        shaderSharedFloat64AtomicAdd;
-        public       VkBool32        shaderImageFloat32Atomics;
-        public       VkBool32        shaderImageFloat32AtomicAdd;
-        public       VkBool32        sparseImageFloat32Atomics;
-        public       VkBool32        sparseImageFloat32AtomicAdd;
     }
 
     [StructLayout(LayoutKind.Sequential)]
