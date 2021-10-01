@@ -14,6 +14,7 @@
 using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions
 {
     [VkExtGenerator]
