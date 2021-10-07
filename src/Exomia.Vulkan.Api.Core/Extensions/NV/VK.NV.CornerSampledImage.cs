@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -20,15 +19,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvCornerSampledImage
+    public static partial class VKNvCornerSampledImage
     {
         public const int    VK_NV_CORNER_SAMPLED_IMAGE                = 1;
         public const int    VK_NV_CORNER_SAMPLED_IMAGE_SPEC_VERSION   = 2;
         public const string VK_NV_CORNER_SAMPLED_IMAGE_EXTENSION_NAME = "VK_NV_corner_sampled_image";
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCornerSampledImageFeaturesNV
@@ -38,8 +34,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*           pNext;
         public       VkBool32        cornerSampledImage;
     }
-
-
-
-
 }

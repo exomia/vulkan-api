@@ -62,6 +62,15 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         MAX_ENUM_EXT = 0x7FFFFFFF
     }
 
+    [Flags]
+    public enum VkValidationCacheCreateFlagsEXT : uint
+    {
+        /// <summary>
+        ///     Reserved for future use
+        /// </summary>
+        Reserved = 0
+    }
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkValidationCacheCreateInfoEXT
     {

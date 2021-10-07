@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -20,15 +19,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvComputeShaderDerivatives
+    public static partial class VKNvComputeShaderDerivatives
     {
         public const int    VK_NV_COMPUTE_SHADER_DERIVATIVES                = 1;
         public const int    VK_NV_COMPUTE_SHADER_DERIVATIVES_SPEC_VERSION   = 1;
         public const string VK_NV_COMPUTE_SHADER_DERIVATIVES_EXTENSION_NAME = "VK_NV_compute_shader_derivatives";
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV
@@ -39,8 +35,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkBool32        computeDerivativeGroupQuads;
         public       VkBool32        computeDerivativeGroupLinear;
     }
-
-
-
-
 }

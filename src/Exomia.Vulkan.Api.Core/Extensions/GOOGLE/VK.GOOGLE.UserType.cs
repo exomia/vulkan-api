@@ -11,8 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
@@ -20,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
 {
     [VkExtGenerator]
-    public static unsafe partial class VKGoogleUserType
+    public static partial class VKGoogleUserType
     {
         public const int    VK_GOOGLE_USER_TYPE                = 1;
         public const int    VK_GOOGLE_USER_TYPE_SPEC_VERSION   = 1;

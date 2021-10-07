@@ -11,8 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -21,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VKAmdShaderCoreProperties
+    public static partial class VKAmdShaderCoreProperties
     {
         public const int    VK_AMD_SHADER_CORE_PROPERTIES                = 1;
         public const int    VK_AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION   = 2;

@@ -13,7 +13,7 @@ using System.Runtime.CompilerServices;
 
 namespace Exomia.Vulkan.Api.Core
 {
-    internal static class Utils
+    static class Utils
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static unsafe void* LoadVkFunction(VkInstance vkInstance, string vkFunctionName)

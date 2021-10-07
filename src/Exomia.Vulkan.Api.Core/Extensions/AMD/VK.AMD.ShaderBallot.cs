@@ -11,8 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
@@ -20,11 +18,10 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VKAmdShaderBallot
+    public static partial class VKAmdShaderBallot
     {
         public const int    VK_AMD_SHADER_BALLOT                = 1;
         public const int    VK_AMD_SHADER_BALLOT_SPEC_VERSION   = 1;
         public const string VK_AMD_SHADER_BALLOT_EXTENSION_NAME = "VK_AMD_shader_ballot";
-
     }
 }

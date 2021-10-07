@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -25,18 +24,13 @@ namespace Exomia.Vulkan.Api.Core.Extensions.HUAWEI
         public const int    VK_HUAWEI_SUBPASS_SHADING                = 1;
         public const int    VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION   = 2;
         public const string VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME = "VK_HUAWEI_subpass_shading";
-        
+
         public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    void> vkCmdSubpassShadingHUAWEI = null;
-
-
+            VkCommandBuffer, /* commandBuffer */
+            void> vkCmdSubpassShadingHUAWEI = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassShadingPipelineCreateInfoHUAWEI
@@ -48,7 +42,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.HUAWEI
         public       uint            subpass;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSubpassShadingFeaturesHUAWEI
     {
@@ -58,7 +51,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.HUAWEI
         public       VkBool32        subpassShading;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI
     {
@@ -67,8 +59,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.HUAWEI
         public       void*           pNext;
         public       uint            maxSubpassShadingWorkgroupSizeAspectRatio;
     }
-
-
-
-
 }

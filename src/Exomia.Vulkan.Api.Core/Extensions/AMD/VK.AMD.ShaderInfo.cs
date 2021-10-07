@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -25,19 +24,18 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_SHADER_INFO                = 1;
         public const int    VK_AMD_SHADER_INFO_SPEC_VERSION   = 1;
         public const string VK_AMD_SHADER_INFO_EXTENSION_NAME = "VK_AMD_shader_info";
-        
+
         public static readonly delegate*<
-            VkDevice, /* device */
-            VkPipeline, /* pipeline */
+            VkDevice,              /* device */
+            VkPipeline,            /* pipeline */
             VkShaderStageFlagBits, /* shaderStage */
-            VkShaderInfoTypeAMD, /* infoType */
-            nuint*, /* pInfoSize */
-            void*, /* pInfo */
+            VkShaderInfoTypeAMD,   /* infoType */
+            nuint*,                /* pInfoSize */
+            void*,                 /* pInfo */
             VkResult> vkGetShaderInfoAMD = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
-
 
     public enum VkShaderInfoTypeAMD
     {

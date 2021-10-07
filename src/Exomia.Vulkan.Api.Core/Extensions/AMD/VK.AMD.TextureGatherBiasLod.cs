@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -20,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VKAmdTextureGatherBiasLod
+    public static partial class VKAmdTextureGatherBiasLod
     {
         public const int    VK_AMD_TEXTURE_GATHER_BIAS_LOD                = 1;
         public const int    VK_AMD_TEXTURE_GATHER_BIAS_LOD_SPEC_VERSION   = 1;

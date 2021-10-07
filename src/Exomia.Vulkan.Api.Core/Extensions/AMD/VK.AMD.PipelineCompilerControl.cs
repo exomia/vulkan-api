@@ -20,13 +20,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VKAmdPipelineCompilerControl
+    public static partial class VKAmdPipelineCompilerControl
     {
         public const int    VK_AMD_PIPELINE_COMPILER_CONTROL                = 1;
         public const int    VK_AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION   = 1;
         public const string VK_AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME = "VK_AMD_pipeline_compiler_control";
     }
-
 
     [Flags]
     public enum VkPipelineCompilerControlFlagsAMD
@@ -42,5 +41,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       void*                             pNext;
         public       VkPipelineCompilerControlFlagsAMD compilerControlFlags;
     }
-
 }

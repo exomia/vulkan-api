@@ -25,18 +25,15 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_COVERAGE_REDUCTION_MODE                = 1;
         public const int    VK_NV_COVERAGE_REDUCTION_MODE_SPEC_VERSION   = 1;
         public const string VK_NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME = "VK_NV_coverage_reduction_mode";
-        
+
         public static readonly delegate*<
-    VkPhysicalDevice, /* physicalDevice */
-    uint*, /* pCombinationCount */
-    VkFramebufferMixedSamplesCombinationNV*, /* pCombinations */
-    VkResult> vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = null;
-
-
+            VkPhysicalDevice,                        /* physicalDevice */
+            uint*,                                   /* pCombinationCount */
+            VkFramebufferMixedSamplesCombinationNV*, /* pCombinations */
+            VkResult> vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
-
 
     public enum VkCoverageReductionModeNV
     {
@@ -44,8 +41,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         TRUNCATE_NV = 1,
         MAX_ENUM_NV = 0x7FFFFFFF
     }
-
-
 
     [Flags]
     public enum VkPipelineCoverageReductionStateCreateFlagsNV : uint
@@ -55,8 +50,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         /// </summary>
         Reserved = 0
     }
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkFramebufferMixedSamplesCombinationNV
@@ -70,7 +63,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkSampleCountFlagBits     colorSamples;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCoverageReductionModeFeaturesNV
     {
@@ -79,7 +71,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*           pNext;
         public       VkBool32        coverageReductionMode;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCoverageReductionStateCreateInfoNV
@@ -90,8 +81,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkPipelineCoverageReductionStateCreateFlagsNV flags;
         public       VkCoverageReductionModeNV                     coverageReductionMode;
     }
-
-
-
-
 }

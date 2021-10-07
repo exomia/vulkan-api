@@ -20,13 +20,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VKAmdShaderCoreProperties2
+    public static partial class VKAmdShaderCoreProperties2
     {
         public const int    VK_AMD_SHADER_CORE_PROPERTIES2                = 1;
         public const int    VK_AMD_SHADER_CORE_PROPERTIES2_SPEC_VERSION   = 1;
         public const string VK_AMD_SHADER_CORE_PROPERTIES2_EXTENSION_NAME = "VK_AMD_shader_core_properties2";
     }
-
 
     [Flags]
     public enum VkShaderCorePropertiesFlagsAMD
@@ -43,5 +42,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       VkShaderCorePropertiesFlagsAMD shaderCoreFeatures;
         public       uint                           activeComputeUnitCount;
     }
-
 }

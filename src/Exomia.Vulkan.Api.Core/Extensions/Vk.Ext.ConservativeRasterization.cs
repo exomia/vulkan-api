@@ -11,6 +11,7 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -32,6 +33,15 @@ namespace Exomia.Vulkan.Api.Core.Extensions
         OVERESTIMATE_EXT  = 1,
         UNDERESTIMATE_EXT = 2,
         MAX_ENUM_EXT      = 0x7FFFFFFF
+    }
+
+    [Flags]
+    public enum VkPipelineRasterizationConservativeStateCreateFlagsEXT : uint
+    {
+        /// <summary>
+        ///     Reserved for future use
+        /// </summary>
+        Reserved = 0
     }
 
     [StructLayout(LayoutKind.Sequential)]

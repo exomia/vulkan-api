@@ -11,8 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
@@ -20,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VKAmdShaderExplicitVertexParameter
+    public static partial class VKAmdShaderExplicitVertexParameter
     {
         public const int    VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER                = 1;
         public const int    VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_SPEC_VERSION   = 1;

@@ -20,14 +20,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvRayTracingMotionBlur
+    public static partial class VKNvRayTracingMotionBlur
     {
         public const int    VK_NV_RAY_TRACING_MOTION_BLUR                = 1;
         public const int    VK_NV_RAY_TRACING_MOTION_BLUR_SPEC_VERSION   = 1;
         public const string VK_NV_RAY_TRACING_MOTION_BLUR_EXTENSION_NAME = "VK_NV_ray_tracing_motion_blur";
-      
     }
-
 
     public enum VkAccelerationStructureMotionInstanceTypeNV
     {
@@ -36,8 +34,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         SRT_MOTION_NV    = 2,
         MAX_ENUM_NV      = 0x7FFFFFFF
     }
-
-
 
     [Flags]
     public enum VkAccelerationStructureMotionInfoFlagsNV : uint
@@ -48,7 +44,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         Reserved = 0
     }
 
-
     [Flags]
     public enum VkAccelerationStructureMotionInstanceFlagsNV : uint
     {
@@ -57,8 +52,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         /// </summary>
         Reserved = 0
     }
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkAccelerationStructureMatrixMotionInstanceNV
@@ -97,7 +90,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public ulong accelerationStructureReference;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public struct VkAccelerationStructureMotionInstanceNV
     {
@@ -105,7 +97,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public VkAccelerationStructureMotionInstanceFlagsNV flags;
         public VkAccelerationStructureMotionInstanceDataNV  data;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkAccelerationStructureSRTMotionInstanceNV
@@ -143,7 +134,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public ulong accelerationStructureReference;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public struct VkSRTDataNV
     {
@@ -165,7 +155,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public float tz;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureMotionInfoNV
     {
@@ -176,7 +165,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkAccelerationStructureMotionInfoFlagsNV flags;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureGeometryMotionTrianglesDataNV
     {
@@ -185,7 +173,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*                         pNext;
         public       VkDeviceOrHostAddressConstKHR vertexData;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV
@@ -196,9 +183,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkBool32        rayTracingMotionBlur;
         public       VkBool32        rayTracingMotionBlurPipelineTraceRaysIndirect;
     }
-
-
-
 
     [StructLayout(LayoutKind.Explicit)]
     public struct VkAccelerationStructureMotionInstanceDataNV
@@ -212,6 +196,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         [FieldOffset(0)]
         public VkAccelerationStructureSRTMotionInstanceNV srtMotionInstance;
     }
-
-
 }

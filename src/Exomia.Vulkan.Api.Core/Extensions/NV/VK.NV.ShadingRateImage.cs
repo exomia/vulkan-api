@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -25,32 +24,29 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_SHADING_RATE_IMAGE                = 1;
         public const int    VK_NV_SHADING_RATE_IMAGE_SPEC_VERSION   = 3;
         public const string VK_NV_SHADING_RATE_IMAGE_EXTENSION_NAME = "VK_NV_shading_rate_image";
-        
+
         public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    VkImageView, /* imageView */
-    VkImageLayout, /* imageLayout */
-    void> vkCmdBindShadingRateImageNV = null;
+            VkCommandBuffer, /* commandBuffer */
+            VkImageView,     /* imageView */
+            VkImageLayout,   /* imageLayout */
+            void> vkCmdBindShadingRateImageNV = null;
 
-public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    VkCoarseSampleOrderTypeNV, /* sampleOrderType */
-    uint, /* customSampleOrderCount */
-    VkCoarseSampleOrderCustomNV*, /* pCustomSampleOrders */
-    void> vkCmdSetCoarseSampleOrderNV = null;
+        public static readonly delegate*<
+            VkCommandBuffer,              /* commandBuffer */
+            VkCoarseSampleOrderTypeNV,    /* sampleOrderType */
+            uint,                         /* customSampleOrderCount */
+            VkCoarseSampleOrderCustomNV*, /* pCustomSampleOrders */
+            void> vkCmdSetCoarseSampleOrderNV = null;
 
-public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    uint, /* firstViewport */
-    uint, /* viewportCount */
-    VkShadingRatePaletteNV*, /* pShadingRatePalettes */
-    void> vkCmdSetViewportShadingRatePaletteNV = null;
-
-
+        public static readonly delegate*<
+            VkCommandBuffer,         /* commandBuffer */
+            uint,                    /* firstViewport */
+            uint,                    /* viewportCount */
+            VkShadingRatePaletteNV*, /* pShadingRatePalettes */
+            void> vkCmdSetViewportShadingRatePaletteNV = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
-
 
     public enum VkCoarseSampleOrderTypeNV
     {
@@ -60,7 +56,6 @@ public static readonly delegate*<
         SAMPLE_MAJOR_NV = 3,
         MAX_ENUM_NV     = 0x7FFFFFFF
     }
-
 
     public enum VkShadingRatePaletteEntryNV
     {
@@ -79,9 +74,6 @@ public static readonly delegate*<
         MAX_ENUM_NV                     = 0x7FFFFFFF
     }
 
-
-
-
     [StructLayout(LayoutKind.Sequential)]
     public struct VkCoarseSampleLocationNV
     {
@@ -89,7 +81,6 @@ public static readonly delegate*<
         public uint pixelY;
         public uint sample;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCoarseSampleOrderCustomNV
@@ -100,14 +91,12 @@ public static readonly delegate*<
         public VkCoarseSampleLocationNV*   pSampleLocations;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkShadingRatePaletteNV
     {
         public uint                         shadingRatePaletteEntryCount;
         public VkShadingRatePaletteEntryNV* pShadingRatePaletteEntries;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShadingRateImageFeaturesNV
@@ -118,7 +107,6 @@ public static readonly delegate*<
         public       VkBool32        shadingRateImage;
         public       VkBool32        shadingRateCoarseSampleOrder;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShadingRateImagePropertiesNV
@@ -131,7 +119,6 @@ public static readonly delegate*<
         public       uint            shadingRateMaxCoarseSamples;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV
     {
@@ -143,7 +130,6 @@ public static readonly delegate*<
         public       VkCoarseSampleOrderCustomNV* pCustomSampleOrders;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportShadingRateImageStateCreateInfoNV
     {
@@ -154,8 +140,4 @@ public static readonly delegate*<
         public       uint                    viewportCount;
         public       VkShadingRatePaletteNV* pShadingRatePalettes;
     }
-
-
-
-
 }

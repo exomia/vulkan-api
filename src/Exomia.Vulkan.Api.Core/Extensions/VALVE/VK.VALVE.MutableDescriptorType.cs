@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -20,17 +19,14 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
 {
     [VkExtGenerator]
-    public static unsafe partial class VKValveMutableDescriptorType
+    public static partial class VKValveMutableDescriptorType
     {
         public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE                = 1;
         public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION   = 1;
         public const string VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME = "VK_VALVE_mutable_descriptor_type";
-        
+
         public static partial void Load(VkDevice vkDevice);
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMutableDescriptorTypeListVALVE
@@ -38,7 +34,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
         public uint              descriptorTypeCount;
         public VkDescriptorType* pDescriptorTypes;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMutableDescriptorTypeCreateInfoVALVE
@@ -50,8 +45,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
         public       VkMutableDescriptorTypeListVALVE* pMutableDescriptorTypeLists;
     }
 
-    
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE
     {
@@ -60,8 +53,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
         public       void*           pNext;
         public       VkBool32        mutableDescriptorType;
     }
-
-
-
-
 }

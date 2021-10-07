@@ -25,45 +25,40 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NVX
         public const int    VK_NVX_BINARY_IMPORT                = 1;
         public const int    VK_NVX_BINARY_IMPORT_SPEC_VERSION   = 1;
         public const string VK_NVX_BINARY_IMPORT_EXTENSION_NAME = "VK_NVX_binary_import";
-        
+
         public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    VkCuLaunchInfoNVX*, /* pLaunchInfo */
-    void> vkCmdCuLaunchKernelNVX = null;
+            VkCommandBuffer,    /* commandBuffer */
+            VkCuLaunchInfoNVX*, /* pLaunchInfo */
+            void> vkCmdCuLaunchKernelNVX = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkCuFunctionCreateInfoNVX*, /* pCreateInfo */
-    VkAllocationCallbacks*, /* pAllocator */
-    VkCuFunctionNVX*, /* pFunction */
-    VkResult> vkCreateCuFunctionNVX = null;
+        public static readonly delegate*<
+            VkDevice,                   /* device */
+            VkCuFunctionCreateInfoNVX*, /* pCreateInfo */
+            VkAllocationCallbacks*,     /* pAllocator */
+            VkCuFunctionNVX*,           /* pFunction */
+            VkResult> vkCreateCuFunctionNVX = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkCuModuleCreateInfoNVX*, /* pCreateInfo */
-    VkAllocationCallbacks*, /* pAllocator */
-    VkCuModuleNVX*, /* pModule */
-    VkResult> vkCreateCuModuleNVX = null;
+        public static readonly delegate*<
+            VkDevice,                 /* device */
+            VkCuModuleCreateInfoNVX*, /* pCreateInfo */
+            VkAllocationCallbacks*,   /* pAllocator */
+            VkCuModuleNVX*,           /* pModule */
+            VkResult> vkCreateCuModuleNVX = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkCuFunctionNVX, /* function */
-    VkAllocationCallbacks*, /* pAllocator */
-    void> vkDestroyCuFunctionNVX = null;
+        public static readonly delegate*<
+            VkDevice,               /* device */
+            VkCuFunctionNVX,        /* function */
+            VkAllocationCallbacks*, /* pAllocator */
+            void> vkDestroyCuFunctionNVX = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkCuModuleNVX, /* module */
-    VkAllocationCallbacks*, /* pAllocator */
-    void> vkDestroyCuModuleNVX = null;
-
-
+        public static readonly delegate*<
+            VkDevice,               /* device */
+            VkCuModuleNVX,          /* module */
+            VkAllocationCallbacks*, /* pAllocator */
+            void> vkDestroyCuModuleNVX = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCuFunctionCreateInfoNVX
@@ -74,7 +69,6 @@ public static readonly delegate*<
         public       VkCuModuleNVX   module;
         public       sbyte*          pName;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCuLaunchInfoNVX
@@ -94,7 +88,6 @@ public static readonly delegate*<
         public       nuint           extraCount;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCuModuleCreateInfoNVX
     {
@@ -104,8 +97,6 @@ public static readonly delegate*<
         public       nuint           dataSize;
         public       void*           pData;
     }
-
-
 
     public readonly unsafe struct VkCuFunctionNVX
     {
@@ -196,6 +187,4 @@ public static readonly delegate*<
             return value._ptr;
         }
     }
-
-
 }

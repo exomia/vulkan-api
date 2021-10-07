@@ -12,7 +12,6 @@
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using System;
-using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
@@ -20,20 +19,13 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [Obsolete(
-             "Deprecated without replacement", false,
-             UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_glsl_shader.html#_deprecation_state")]
+        "Deprecated without replacement", false,
+        UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_glsl_shader.html#_deprecation_state")]
     [VkExtGenerator]
-    public static unsafe partial class VKNvGlslShader
+    public static partial class VKNvGlslShader
     {
         public const int    VK_NV_GLSL_SHADER                = 1;
         public const int    VK_NV_GLSL_SHADER_SPEC_VERSION   = 1;
         public const string VK_NV_GLSL_SHADER_EXTENSION_NAME = "VK_NV_glsl_shader";
-        
     }
-
-
-
-
-
-
 }

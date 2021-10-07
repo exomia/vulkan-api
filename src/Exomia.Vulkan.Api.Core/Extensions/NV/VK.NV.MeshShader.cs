@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -25,38 +24,33 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_MESH_SHADER                = 1;
         public const int    VK_NV_MESH_SHADER_SPEC_VERSION   = 1;
         public const string VK_NV_MESH_SHADER_EXTENSION_NAME = "VK_NV_mesh_shader";
-        
+
         public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    VkBuffer, /* buffer */
-    VkDeviceSize, /* offset */
-    VkBuffer, /* countBuffer */
-    VkDeviceSize, /* countBufferOffset */
-    uint, /* maxDrawCount */
-    uint, /* stride */
-    void> vkCmdDrawMeshTasksIndirectCountNV = null;
+            VkCommandBuffer, /* commandBuffer */
+            VkBuffer,        /* buffer */
+            VkDeviceSize,    /* offset */
+            VkBuffer,        /* countBuffer */
+            VkDeviceSize,    /* countBufferOffset */
+            uint,            /* maxDrawCount */
+            uint,            /* stride */
+            void> vkCmdDrawMeshTasksIndirectCountNV = null;
 
-public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    VkBuffer, /* buffer */
-    VkDeviceSize, /* offset */
-    uint, /* drawCount */
-    uint, /* stride */
-    void> vkCmdDrawMeshTasksIndirectNV = null;
+        public static readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkBuffer,        /* buffer */
+            VkDeviceSize,    /* offset */
+            uint,            /* drawCount */
+            uint,            /* stride */
+            void> vkCmdDrawMeshTasksIndirectNV = null;
 
-public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    uint, /* taskCount */
-    uint, /* firstTask */
-    void> vkCmdDrawMeshTasksNV = null;
-
-
+        public static readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            uint,            /* taskCount */
+            uint,            /* firstTask */
+            void> vkCmdDrawMeshTasksNV = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkDrawMeshTasksIndirectCommandNV
@@ -64,7 +58,6 @@ public static readonly delegate*<
         public uint taskCount;
         public uint firstTask;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMeshShaderFeaturesNV
@@ -75,7 +68,6 @@ public static readonly delegate*<
         public       VkBool32        taskShader;
         public       VkBool32        meshShader;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMeshShaderPropertiesNV
@@ -97,8 +89,4 @@ public static readonly delegate*<
         public       uint            meshOutputPerVertexGranularity;
         public       uint            meshOutputPerPrimitiveGranularity;
     }
-
-
-
-
 }

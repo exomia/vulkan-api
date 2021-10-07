@@ -20,13 +20,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvDeviceDiagnosticsConfig
+    public static partial class VKNvDeviceDiagnosticsConfig
     {
         public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG                = 1;
         public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION   = 1;
         public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME = "VK_NV_device_diagnostics_config";
     }
-
 
     [Flags]
     public enum VkDeviceDiagnosticsConfigFlagsNV
@@ -46,7 +45,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkDeviceDiagnosticsConfigFlagsNV flags;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDiagnosticsConfigFeaturesNV
     {
@@ -55,8 +53,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*           pNext;
         public       VkBool32        diagnosticsConfig;
     }
-
-
-
-
 }

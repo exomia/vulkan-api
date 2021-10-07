@@ -20,31 +20,28 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [Obsolete(
-             "Deprecated by VK_KHR_external_memory_capabilities extension - Which in turn was promoted to Vulkan 1.1", false,
-             UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory_capabilities.html#_deprecation_state")]
+        "Deprecated by VK_KHR_external_memory_capabilities extension - Which in turn was promoted to Vulkan 1.1", false,
+        UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory_capabilities.html#_deprecation_state")]
     [VkExtGenerator]
     public static unsafe partial class VKNvExternalMemoryCapabilities
     {
         public const int    VK_NV_EXTERNAL_MEMORY_CAPABILITIES                = 1;
         public const int    VK_NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION   = 1;
         public const string VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME = "VK_NV_external_memory_capabilities";
-        
+
         public static readonly delegate*<
-    VkPhysicalDevice, /* physicalDevice */
-    VkFormat, /* format */
-    VkImageType, /* type */
-    VkImageTiling, /* tiling */
-    VkImageUsageFlagBits, /* usage */
-    VkImageCreateFlagBits, /* FlagBits */
-    VkExternalMemoryHandleTypeFlagsNV, /* externalHandleType */
-    VkExternalImageFormatPropertiesNV*, /* pExternalImageFormatProperties */
-    VkResult> vkGetPhysicalDeviceExternalImageFormatPropertiesNV = null;
-
-
+            VkPhysicalDevice,                   /* physicalDevice */
+            VkFormat,                           /* format */
+            VkImageType,                        /* type */
+            VkImageTiling,                      /* tiling */
+            VkImageUsageFlagBits,               /* usage */
+            VkImageCreateFlagBits,              /* FlagBits */
+            VkExternalMemoryHandleTypeFlagsNV,  /* externalHandleType */
+            VkExternalImageFormatPropertiesNV*, /* pExternalImageFormatProperties */
+            VkResult> vkGetPhysicalDeviceExternalImageFormatPropertiesNV = null;
 
         public static partial void Load(VkInstance vkInstance);
     }
-
 
     [Flags]
     public enum VkExternalMemoryFeatureFlagsNV
@@ -54,7 +51,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         IMPORTABLE_BIT_NV     = 0x00000004,
         FLAG_BITS_MAX_ENUM_NV = 0x7FFFFFFF
     }
-
 
     [Flags]
     public enum VkExternalMemoryHandleTypeFlagsNV
@@ -66,7 +62,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         FLAG_BITS_MAX_ENUM_NV   = 0x7FFFFFFF
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public struct VkExternalImageFormatPropertiesNV
     {
@@ -75,8 +70,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public VkExternalMemoryHandleTypeFlagsNV exportFromImportedHandleTypes;
         public VkExternalMemoryHandleTypeFlagsNV compatibleHandleTypes;
     }
-
-
-
-
 }

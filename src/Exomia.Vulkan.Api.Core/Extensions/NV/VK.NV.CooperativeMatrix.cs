@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -25,18 +24,15 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_COOPERATIVE_MATRIX                = 1;
         public const int    VK_NV_COOPERATIVE_MATRIX_SPEC_VERSION   = 1;
         public const string VK_NV_COOPERATIVE_MATRIX_EXTENSION_NAME = "VK_NV_cooperative_matrix";
-        
+
         public static readonly delegate*<
-    VkPhysicalDevice, /* physicalDevice */
-    uint*, /* pPropertyCount */
-    VkCooperativeMatrixPropertiesNV*, /* pProperties */
-    VkResult> vkGetPhysicalDeviceCooperativeMatrixPropertiesNV = null;
-
-
+            VkPhysicalDevice,                 /* physicalDevice */
+            uint*,                            /* pPropertyCount */
+            VkCooperativeMatrixPropertiesNV*, /* pProperties */
+            VkResult> vkGetPhysicalDeviceCooperativeMatrixPropertiesNV = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
-
 
     public enum VkComponentTypeNV
     {
@@ -54,7 +50,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         MAX_ENUM_NV = 0x7FFFFFFF
     }
 
-
     public enum VkScopeNV
     {
         DEVICE_NV       = 1,
@@ -63,9 +58,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         QUEUE_FAMILY_NV = 5,
         MAX_ENUM_NV     = 0x7FFFFFFF
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCooperativeMatrixPropertiesNV
@@ -83,7 +75,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkScopeNV         scope;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCooperativeMatrixFeaturesNV
     {
@@ -94,7 +85,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkBool32        cooperativeMatrixRobustBufferAccess;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCooperativeMatrixPropertiesNV
     {
@@ -103,8 +93,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*                 pNext;
         public       VkShaderStageFlagBits cooperativeMatrixSupportedStages;
     }
-
-
-
-
 }

@@ -20,19 +20,15 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [Obsolete(
-          "Deprecated by VK_KHR_external_memory extension - Which in turn was promoted to Vulkan 1.1", false,
-          UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory.html#_deprecation_state")]
+        "Deprecated by VK_KHR_external_memory extension - Which in turn was promoted to Vulkan 1.1", false,
+        UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory.html#_deprecation_state")]
     [VkExtGenerator]
-    public static unsafe partial class VKNvExternalMemory
+    public static partial class VKNvExternalMemory
     {
         public const int    VK_NV_EXTERNAL_MEMORY                = 1;
         public const int    VK_NV_EXTERNAL_MEMORY_SPEC_VERSION   = 1;
         public const string VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME = "VK_NV_external_memory";
-       
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalMemoryImageCreateInfoNV
@@ -43,7 +39,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkExternalMemoryHandleTypeFlagsNV handleTypes;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExportMemoryAllocateInfoNV
     {
@@ -52,8 +47,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*                             pNext;
         public       VkExternalMemoryHandleTypeFlagsNV handleTypes;
     }
-
-
-
-
 }

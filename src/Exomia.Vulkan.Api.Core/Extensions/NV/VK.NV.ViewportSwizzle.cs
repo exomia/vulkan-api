@@ -20,14 +20,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvViewportSwizzle
+    public static partial class VKNvViewportSwizzle
     {
         public const int    VK_NV_VIEWPORT_SWIZZLE                = 1;
         public const int    VK_NV_VIEWPORT_SWIZZLE_SPEC_VERSION   = 1;
         public const string VK_NV_VIEWPORT_SWIZZLE_EXTENSION_NAME = "VK_NV_viewport_swizzle";
-       
     }
-
 
     public enum VkViewportCoordinateSwizzleNV
     {
@@ -42,8 +40,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         MAX_ENUM_NV   = 0x7FFFFFFF
     }
 
-
-
     [Flags]
     public enum VkPipelineViewportSwizzleStateCreateFlagsNV : uint
     {
@@ -53,8 +49,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         Reserved = 0
     }
 
-
-
     [StructLayout(LayoutKind.Sequential)]
     public struct VkViewportSwizzleNV
     {
@@ -63,7 +57,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public VkViewportCoordinateSwizzleNV z;
         public VkViewportCoordinateSwizzleNV w;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportSwizzleStateCreateInfoNV
@@ -75,8 +68,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       uint                                        viewportCount;
         public       VkViewportSwizzleNV*                        pViewportSwizzles;
     }
-
-
-
-
 }

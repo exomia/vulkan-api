@@ -249,7 +249,6 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_GLSL_SHADER_SPEC_VERSION   = 1;
         public const string VK_NV_GLSL_SHADER_EXTENSION_NAME = "VK_NV_glsl_shader";
 
-
         public const int    VK_AMD_RASTERIZATION_ORDER                             = 1;
         public const int    VK_AMD_RASTERIZATION_ORDER_SPEC_VERSION                = 1;
         public const string VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME              = "VK_AMD_rasterization_order";
@@ -360,7 +359,6 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_REPRESENTATIVE_FRAGMENT_TEST_SPEC_VERSION   = 2;
         public const string VK_NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME = "VK_NV_representative_fragment_test";
 
-
         public const int    VK_AMD_BUFFER_MARKER                            = 1;
         public const int    VK_AMD_BUFFER_MARKER_SPEC_VERSION               = 1;
         public const string VK_AMD_BUFFER_MARKER_EXTENSION_NAME             = "VK_AMD_buffer_marker";
@@ -439,15 +437,13 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR_SPEC_VERSION   = 1;
         public const string VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME = "VK_NV_inherited_viewport_scissor";
 
-
         public const int    VK_GOOGLE_USER_TYPE                = 1;
         public const int    VK_GOOGLE_USER_TYPE_SPEC_VERSION   = 1;
         public const string VK_GOOGLE_USER_TYPE_EXTENSION_NAME = "VK_GOOGLE_user_type";
 
-        public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG                  = 1;
-        public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION     = 1;
-        public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME   = "VK_NV_device_diagnostics_config";
-
+        public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG                = 1;
+        public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION   = 1;
+        public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME = "VK_NV_device_diagnostics_config";
 
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS                = 1;
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION   = 1;
@@ -455,7 +451,6 @@ namespace Exomia.Vulkan.Api.Core
         public const int    VK_NV_RAY_TRACING_MOTION_BLUR                    = 1;
         public const int    VK_NV_RAY_TRACING_MOTION_BLUR_SPEC_VERSION       = 1;
         public const string VK_NV_RAY_TRACING_MOTION_BLUR_EXTENSION_NAME     = "VK_NV_ray_tracing_motion_blur";
-
 
         public const int    VK_NV_ACQUIRE_WINRT_DISPLAY                     = 1;
         public const int    VK_NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION        = 1;

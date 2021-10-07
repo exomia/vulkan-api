@@ -37,10 +37,6 @@ using System.Runtime.InteropServices;
 namespace {vkExtensionClass.NamespaceName}
 {{
 {SourceCodeGenerator.GetExtensionClass(vkExtensionClass)}
-
-    {(vkExtensionClass.Functions.Count > 0 ? string.Join($"{Environment.NewLine}    ", vkExtensionClass.Functions.Select(SourceCodeGenerator.GetDelegates)) : string.Empty)}
-
-    {(vkExtensionClass.Functions.Count > 0 ? string.Join($"{Environment.NewLine}    ", vkExtensionClass.Functions.Select(SourceCodeGenerator.GetStructsDelegates)) : string.Empty)}
 }}".FormatCode(false);
                     context.AddSource($"{vkExtensionClass.NamespaceName}.{vkExtensionClass.ClassName}.g.cs", sourceCode);
                 }
@@ -51,6 +47,15 @@ namespace {vkExtensionClass.NamespaceName}
 
 using System;
 using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.Core.Extensions.AMD;
+using Exomia.Vulkan.Api.Core.Extensions.GOOGLE;
+using Exomia.Vulkan.Api.Core.Extensions.HUAWEI;
+using Exomia.Vulkan.Api.Core.Extensions.IMG;
+using Exomia.Vulkan.Api.Core.Extensions.INTEL;
+using Exomia.Vulkan.Api.Core.Extensions.NV;
+using Exomia.Vulkan.Api.Core.Extensions.NVX;
+using Exomia.Vulkan.Api.Core.Extensions.QCOM;
+using Exomia.Vulkan.Api.Core.Extensions.VALVE;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable UnassignedReadonlyField

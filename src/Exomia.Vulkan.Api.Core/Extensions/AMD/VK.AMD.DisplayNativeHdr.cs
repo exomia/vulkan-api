@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -25,11 +24,11 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_DISPLAY_NATIVE_HDR                = 1;
         public const int    VK_AMD_DISPLAY_NATIVE_HDR_SPEC_VERSION   = 1;
         public const string VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME = "VK_AMD_display_native_hdr";
-        
+
         public static readonly delegate*<
-            VkDevice, /* device */
+            VkDevice,       /* device */
             VkSwapchainKHR, /* swapChain */
-            uint, /* localDimmingEnable */
+            uint,           /* localDimmingEnable */
             void> vkSetLocalDimmingAMD = null;
 
         public static partial void Load(VkDevice vkDevice);
@@ -43,7 +42,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       void*           pNext;
         public       VkBool32        localDimmingSupport;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSwapchainDisplayNativeHdrCreateInfoAMD

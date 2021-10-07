@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -20,15 +19,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NVX
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvxMultiviewPerViewAttributes
+    public static partial class VKNvxMultiviewPerViewAttributes
     {
         public const int    VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES                = 1;
         public const int    VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_SPEC_VERSION   = 1;
         public const string VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME = "VK_NVX_multiview_per_view_attributes";
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX
@@ -38,8 +34,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NVX
         public       void*           pNext;
         public       VkBool32        perViewPositionAllComponents;
     }
-
-
-
-
 }

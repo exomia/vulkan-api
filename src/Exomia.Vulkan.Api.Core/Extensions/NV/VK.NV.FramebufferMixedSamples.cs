@@ -20,15 +20,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvFramebufferMixedSamples
+    public static partial class VKNvFramebufferMixedSamples
     {
         public const int    VK_NV_FRAMEBUFFER_MIXED_SAMPLES                = 1;
         public const int    VK_NV_FRAMEBUFFER_MIXED_SAMPLES_SPEC_VERSION   = 1;
         public const string VK_NV_FRAMEBUFFER_MIXED_SAMPLES_EXTENSION_NAME = "VK_NV_framebuffer_mixed_samples";
-        
-      
     }
-
 
     public enum VkCoverageModulationModeNV
     {
@@ -39,8 +36,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         MAX_ENUM_NV = 0x7FFFFFFF
     }
 
-
-
     [Flags]
     public enum VkPipelineCoverageModulationStateCreateFlagsNV : uint
     {
@@ -49,8 +44,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         /// </summary>
         Reserved = 0
     }
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCoverageModulationStateCreateInfoNV
@@ -64,8 +57,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       uint                                           coverageModulationTableCount;
         public       float*                                         pCoverageModulationTable;
     }
-
-
-
-
 }

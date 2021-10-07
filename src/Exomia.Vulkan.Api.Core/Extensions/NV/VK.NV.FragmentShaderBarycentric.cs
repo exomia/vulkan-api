@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -20,17 +19,12 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvFragmentShaderBarycentric
+    public static partial class VKNvFragmentShaderBarycentric
     {
         public const int    VK_NV_FRAGMENT_SHADER_BARYCENTRIC                = 1;
         public const int    VK_NV_FRAGMENT_SHADER_BARYCENTRIC_SPEC_VERSION   = 1;
         public const string VK_NV_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME = "VK_NV_fragment_shader_barycentric";
-        
-       
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV
@@ -40,8 +34,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*           pNext;
         public       VkBool32        fragmentShaderBarycentric;
     }
-
-
-
-
 }

@@ -19,123 +19,117 @@ using Exomia.Vulkan.Api.SourceGenerator;
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
-    using VkMemoryRequirements2KHR = VkMemoryRequirements2;
-    using VkAccelerationStructureTypeNV = VkAccelerationStructureTypeKHR;
-
     [VkExtGenerator]
     public static unsafe partial class VKNvRayTracing
     {
         public const int    VK_NV_RAY_TRACING                = 1;
         public const int    VK_NV_RAY_TRACING_SPEC_VERSION   = 3;
         public const string VK_NV_RAY_TRACING_EXTENSION_NAME = "VK_NV_ray_tracing";
-        
+
         public static readonly delegate*<
-    VkDevice, /* device */
-    uint, /* bindInfoCount */
-    VkBindAccelerationStructureMemoryInfoNV*, /* pBindInfos */
-    VkResult> vkBindAccelerationStructureMemoryNV = null;
+            VkDevice,                                 /* device */
+            uint,                                     /* bindInfoCount */
+            VkBindAccelerationStructureMemoryInfoNV*, /* pBindInfos */
+            VkResult> vkBindAccelerationStructureMemoryNV = null;
 
-public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    VkAccelerationStructureInfoNV*, /* pInfo */
-    VkBuffer, /* instanceData */
-    VkDeviceSize, /* instanceOffset */
-    uint, /* update */
-    VkAccelerationStructureNV, /* dst */
-    VkAccelerationStructureNV, /* src */
-    VkBuffer, /* scratch */
-    VkDeviceSize, /* scratchOffset */
-    void> vkCmdBuildAccelerationStructureNV = null;
+        public static readonly delegate*<
+            VkCommandBuffer,                /* commandBuffer */
+            VkAccelerationStructureInfoNV*, /* pInfo */
+            VkBuffer,                       /* instanceData */
+            VkDeviceSize,                   /* instanceOffset */
+            uint,                           /* update */
+            VkAccelerationStructureNV,      /* dst */
+            VkAccelerationStructureNV,      /* src */
+            VkBuffer,                       /* scratch */
+            VkDeviceSize,                   /* scratchOffset */
+            void> vkCmdBuildAccelerationStructureNV = null;
 
-public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    VkAccelerationStructureNV, /* dst */
-    VkAccelerationStructureNV, /* src */
-    VkCopyAccelerationStructureModeKHR, /* mode */
-    void> vkCmdCopyAccelerationStructureNV = null;
+        public static readonly delegate*<
+            VkCommandBuffer,                    /* commandBuffer */
+            VkAccelerationStructureNV,          /* dst */
+            VkAccelerationStructureNV,          /* src */
+            VkCopyAccelerationStructureModeKHR, /* mode */
+            void> vkCmdCopyAccelerationStructureNV = null;
 
-public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    VkBuffer, /* raygenShaderBindingTableBuffer */
-    VkDeviceSize, /* raygenShaderBindingOffset */
-    VkBuffer, /* missShaderBindingTableBuffer */
-    VkDeviceSize, /* missShaderBindingOffset */
-    VkDeviceSize, /* missShaderBindingStride */
-    VkBuffer, /* hitShaderBindingTableBuffer */
-    VkDeviceSize, /* hitShaderBindingOffset */
-    VkDeviceSize, /* hitShaderBindingStride */
-    VkBuffer, /* callableShaderBindingTableBuffer */
-    VkDeviceSize, /* callableShaderBindingOffset */
-    VkDeviceSize, /* callableShaderBindingStride */
-    uint, /* width */
-    uint, /* height */
-    uint, /* depth */
-    void> vkCmdTraceRaysNV = null;
+        public static readonly delegate*<
+            VkCommandBuffer, /* commandBuffer */
+            VkBuffer,        /* raygenShaderBindingTableBuffer */
+            VkDeviceSize,    /* raygenShaderBindingOffset */
+            VkBuffer,        /* missShaderBindingTableBuffer */
+            VkDeviceSize,    /* missShaderBindingOffset */
+            VkDeviceSize,    /* missShaderBindingStride */
+            VkBuffer,        /* hitShaderBindingTableBuffer */
+            VkDeviceSize,    /* hitShaderBindingOffset */
+            VkDeviceSize,    /* hitShaderBindingStride */
+            VkBuffer,        /* callableShaderBindingTableBuffer */
+            VkDeviceSize,    /* callableShaderBindingOffset */
+            VkDeviceSize,    /* callableShaderBindingStride */
+            uint,            /* width */
+            uint,            /* height */
+            uint,            /* depth */
+            void> vkCmdTraceRaysNV = null;
 
-public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    uint, /* accelerationStructureCount */
-    VkAccelerationStructureNV*, /* pAccelerationStructures */
-    VkQueryType, /* queryType */
-    VkQueryPool, /* queryPool */
-    uint, /* firstQuery */
-    void> vkCmdWriteAccelerationStructuresPropertiesNV = null;
+        public static readonly delegate*<
+            VkCommandBuffer,            /* commandBuffer */
+            uint,                       /* accelerationStructureCount */
+            VkAccelerationStructureNV*, /* pAccelerationStructures */
+            VkQueryType,                /* queryType */
+            VkQueryPool,                /* queryPool */
+            uint,                       /* firstQuery */
+            void> vkCmdWriteAccelerationStructuresPropertiesNV = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkPipeline, /* pipeline */
-    uint, /* shader */
-    VkResult> vkCompileDeferredNV = null;
+        public static readonly delegate*<
+            VkDevice,   /* device */
+            VkPipeline, /* pipeline */
+            uint,       /* shader */
+            VkResult> vkCompileDeferredNV = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkAccelerationStructureCreateInfoNV*, /* pCreateInfo */
-    VkAllocationCallbacks*, /* pAllocator */
-    VkAccelerationStructureNV*, /* pAccelerationStructure */
-    VkResult> vkCreateAccelerationStructureNV = null;
+        public static readonly delegate*<
+            VkDevice,                             /* device */
+            VkAccelerationStructureCreateInfoNV*, /* pCreateInfo */
+            VkAllocationCallbacks*,               /* pAllocator */
+            VkAccelerationStructureNV*,           /* pAccelerationStructure */
+            VkResult> vkCreateAccelerationStructureNV = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkPipelineCache, /* pipelineCache */
-    uint, /* createInfoCount */
-    VkRayTracingPipelineCreateInfoNV*, /* pCreateInfos */
-    VkAllocationCallbacks*, /* pAllocator */
-    VkPipeline*, /* pPipelines */
-    VkResult> vkCreateRayTracingPipelinesNV = null;
+        public static readonly delegate*<
+            VkDevice,                          /* device */
+            VkPipelineCache,                   /* pipelineCache */
+            uint,                              /* createInfoCount */
+            VkRayTracingPipelineCreateInfoNV*, /* pCreateInfos */
+            VkAllocationCallbacks*,            /* pAllocator */
+            VkPipeline*,                       /* pPipelines */
+            VkResult> vkCreateRayTracingPipelinesNV = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkAccelerationStructureNV, /* accelerationStructure */
-    VkAllocationCallbacks*, /* pAllocator */
-    void> vkDestroyAccelerationStructureNV = null;
+        public static readonly delegate*<
+            VkDevice,                  /* device */
+            VkAccelerationStructureNV, /* accelerationStructure */
+            VkAllocationCallbacks*,    /* pAllocator */
+            void> vkDestroyAccelerationStructureNV = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkAccelerationStructureNV, /* accelerationStructure */
-    nuint, /* dataSize */
-    void*, /* pData */
-    VkResult> vkGetAccelerationStructureHandleNV = null;
+        public static readonly delegate*<
+            VkDevice,                  /* device */
+            VkAccelerationStructureNV, /* accelerationStructure */
+            nuint,                     /* dataSize */
+            void*,                     /* pData */
+            VkResult> vkGetAccelerationStructureHandleNV = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkAccelerationStructureMemoryRequirementsInfoNV*, /* pInfo */
-    VkMemoryRequirements2KHR*, /* pMemoryRequirements */
-    void> vkGetAccelerationStructureMemoryRequirementsNV = null;
+        public static readonly delegate*<
+            VkDevice,                                         /* device */
+            VkAccelerationStructureMemoryRequirementsInfoNV*, /* pInfo */
+            VkMemoryRequirements2*,                           /* pMemoryRequirements */
+            void> vkGetAccelerationStructureMemoryRequirementsNV = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkPipeline, /* pipeline */
-    uint, /* firstGroup */
-    uint, /* groupCount */
-    nuint, /* dataSize */
-    void*, /* pData */
-    VkResult> vkGetRayTracingShaderGroupHandlesNV = null;
-
-
+        public static readonly delegate*<
+            VkDevice,   /* device */
+            VkPipeline, /* pipeline */
+            uint,       /* firstGroup */
+            uint,       /* groupCount */
+            nuint,      /* dataSize */
+            void*,      /* pData */
+            VkResult> vkGetRayTracingShaderGroupHandlesNV = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
-
 
     public enum VkAccelerationStructureMemoryRequirementsTypeNV
     {
@@ -144,7 +138,6 @@ public static readonly delegate*<
         UPDATE_SCRATCH_NV = 2,
         MAX_ENUM_NV       = 0x7FFFFFFF
     }
-
 
     public enum VkAccelerationStructureTypeKHR
     {
@@ -156,7 +149,6 @@ public static readonly delegate*<
         MAX_ENUM_KHR     = 0x7FFFFFFF
     }
 
-
     [Flags]
     public enum VkBuildAccelerationStructureFlagsNV : uint
     {
@@ -165,7 +157,6 @@ public static readonly delegate*<
         /// </summary>
         Reserved = 0
     }
-
 
     public enum VkCopyAccelerationStructureModeKHR
     {
@@ -178,7 +169,6 @@ public static readonly delegate*<
         MAX_ENUM_KHR    = 0x7FFFFFFF
     }
 
-
     [Flags]
     public enum VkGeometryFlagsKHR
     {
@@ -188,7 +178,6 @@ public static readonly delegate*<
         NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_NV  = NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR,
         FLAG_BITS_MAX_ENUM_KHR                  = 0x7FFFFFFF
     }
-
 
     [Flags]
     public enum VkGeometryInstanceFlagsKHR
@@ -204,7 +193,6 @@ public static readonly delegate*<
         FLAG_BITS_MAX_ENUM_KHR                  = 0x7FFFFFFF
     }
 
-
     public enum VkGeometryTypeKHR
     {
         TRIANGLES_KHR = 0,
@@ -214,7 +202,6 @@ public static readonly delegate*<
         AABBS_NV      = AABBS_KHR,
         MAX_ENUM_KHR  = 0x7FFFFFFF
     }
-
 
     public enum VkRayTracingShaderGroupTypeKHR
     {
@@ -238,7 +225,6 @@ public static readonly delegate*<
         public float maxZ;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureCreateInfoNV
     {
@@ -249,20 +235,18 @@ public static readonly delegate*<
         public       VkAccelerationStructureInfoNV info;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureInfoNV
     {
         public const VkStructureType                     STYPE = VkStructureType.ACCELERATION_STRUCTURE_INFO_NV;
         public       VkStructureType                     sType;
         public       void*                               pNext;
-        public       VkAccelerationStructureTypeNV       type;
+        public       VkAccelerationStructureTypeKHR      type;
         public       VkBuildAccelerationStructureFlagsNV flags;
         public       uint                                instanceCount;
         public       uint                                geometryCount;
         public       VkGeometryNV*                       pGeometries;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkAccelerationStructureInstanceKHR
@@ -297,7 +281,6 @@ public static readonly delegate*<
         }
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureMemoryRequirementsInfoNV
     {
@@ -307,7 +290,6 @@ public static readonly delegate*<
         public       VkAccelerationStructureMemoryRequirementsTypeNV type;
         public       VkAccelerationStructureNV                       accelerationStructure;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindAccelerationStructureMemoryInfoNV
@@ -322,7 +304,6 @@ public static readonly delegate*<
         public       uint*                     pDeviceIndices;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeometryAABBNV
     {
@@ -335,14 +316,12 @@ public static readonly delegate*<
         public       VkDeviceSize    offset;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public struct VkGeometryDataNV
     {
         public VkGeometryTrianglesNV triangles;
         public VkGeometryAABBNV      aabbs;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeometryNV
@@ -354,7 +333,6 @@ public static readonly delegate*<
         public       VkGeometryDataNV   geometry;
         public       VkGeometryFlagsKHR flags;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeometryTrianglesNV
@@ -375,7 +353,6 @@ public static readonly delegate*<
         public       VkDeviceSize    transformOffset;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryRequirements2
     {
@@ -384,7 +361,6 @@ public static readonly delegate*<
         public       void*                pNext;
         public       VkMemoryRequirements memoryRequirements;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRayTracingPipelineCreateInfoNV
@@ -403,7 +379,6 @@ public static readonly delegate*<
         public       int                                  basePipelineIndex;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRayTracingShaderGroupCreateInfoNV
     {
@@ -416,7 +391,6 @@ public static readonly delegate*<
         public       uint                           anyHitShader;
         public       uint                           intersectionShader;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkTransformMatrixKHR
@@ -435,7 +409,6 @@ public static readonly delegate*<
         public float M34;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRayTracingPropertiesNV
     {
@@ -452,7 +425,6 @@ public static readonly delegate*<
         public       uint            maxDescriptorSetAccelerationStructures;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkWriteDescriptorSetAccelerationStructureNV
     {
@@ -462,8 +434,6 @@ public static readonly delegate*<
         public       uint                       accelerationStructureCount;
         public       VkAccelerationStructureNV* pAccelerationStructures;
     }
-
-
 
     public readonly unsafe struct VkAccelerationStructureNV
     {
@@ -509,6 +479,4 @@ public static readonly delegate*<
             return value._ptr;
         }
     }
-
-
 }

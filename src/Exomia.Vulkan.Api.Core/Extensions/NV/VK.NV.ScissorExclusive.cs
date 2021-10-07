@@ -11,7 +11,6 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -25,21 +24,16 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_SCISSOR_EXCLUSIVE                = 1;
         public const int    VK_NV_SCISSOR_EXCLUSIVE_SPEC_VERSION   = 1;
         public const string VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME = "VK_NV_scissor_exclusive";
-        
+
         public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    uint, /* firstExclusiveScissor */
-    uint, /* exclusiveScissorCount */
-    VkRect2D*, /* pExclusiveScissors */
-    void> vkCmdSetExclusiveScissorNV = null;
-
-
+            VkCommandBuffer, /* commandBuffer */
+            uint,            /* firstExclusiveScissor */
+            uint,            /* exclusiveScissorCount */
+            VkRect2D*,       /* pExclusiveScissors */
+            void> vkCmdSetExclusiveScissorNV = null;
 
         public static partial void Load(VkDevice vkDevice);
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceExclusiveScissorFeaturesNV
@@ -50,7 +44,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkBool32        exclusiveScissor;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineViewportExclusiveScissorStateCreateInfoNV
     {
@@ -60,8 +53,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       uint            exclusiveScissorCount;
         public       VkRect2D*       pExclusiveScissors;
     }
-
-
-
-
 }
