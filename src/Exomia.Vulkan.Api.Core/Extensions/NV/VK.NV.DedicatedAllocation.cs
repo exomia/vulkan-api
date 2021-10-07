@@ -11,19 +11,28 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvDedicatedAllocation
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_dedicated_allocation";
+        public const int    VK_NV_DEDICATED_ALLOCATION                = 1;
+        public const int    VK_NV_DEDICATED_ALLOCATION_SPEC_VERSION   = 1;
+        public const string VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME = "VK_NV_dedicated_allocation";
+        
+        
 
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDedicatedAllocationBufferCreateInfoNV
@@ -34,6 +43,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkBool32        dedicatedAllocation;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDedicatedAllocationImageCreateInfoNV
     {
@@ -42,6 +52,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*           pNext;
         public       VkBool32        dedicatedAllocation;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDedicatedAllocationMemoryAllocateInfoNV
@@ -52,4 +63,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkImage         image;
         public       VkBuffer        buffer;
     }
+
+
+
+
 }

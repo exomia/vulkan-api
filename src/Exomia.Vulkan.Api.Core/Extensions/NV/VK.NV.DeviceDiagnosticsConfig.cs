@@ -11,28 +11,26 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvDeviceDiagnosticsConfig
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_device_diagnostics_config";
+        public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG                = 1;
+        public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION   = 1;
+        public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME = "VK_NV_device_diagnostics_config";
+        
+        
 
         public static partial void Load(VkInstance vkInstance);
     }
 
-    [Flags]
-    public enum VkDeviceDiagnosticsConfigFlagsNV
-    {
-        ENABLE_SHADER_DEBUG_INFO_BIT_NV     = 0x00000001,
-        ENABLE_RESOURCE_TRACKING_BIT_NV     = 0x00000002,
-        ENABLE_AUTOMATIC_CHECKPOINTS_BIT_NV = 0x00000004,
-        FLAG_BITS_MAX_ENUM_NV               = 0x7FFFFFFF
-    }
 
     [Flags]
     public enum VkDeviceDiagnosticsConfigFlagsNV
@@ -42,6 +40,19 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         ENABLE_AUTOMATIC_CHECKPOINTS_BIT_NV = 0x00000004,
         FLAG_BITS_MAX_ENUM_NV               = 0x7FFFFFFF
     }
+
+
+
+    [Flags]
+    public enum VkDeviceDiagnosticsConfigFlagsNV
+    {
+        ENABLE_SHADER_DEBUG_INFO_BIT_NV     = 0x00000001,
+        ENABLE_RESOURCE_TRACKING_BIT_NV     = 0x00000002,
+        ENABLE_AUTOMATIC_CHECKPOINTS_BIT_NV = 0x00000004,
+        FLAG_BITS_MAX_ENUM_NV               = 0x7FFFFFFF
+    }
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceDiagnosticsConfigCreateInfoNV
@@ -52,6 +63,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkDeviceDiagnosticsConfigFlagsNV flags;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDiagnosticsConfigFeaturesNV
     {
@@ -60,4 +72,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*           pNext;
         public       VkBool32        diagnosticsConfig;
     }
+
+
+
+
 }

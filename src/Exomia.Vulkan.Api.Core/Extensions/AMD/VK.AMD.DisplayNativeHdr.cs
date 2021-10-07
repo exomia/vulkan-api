@@ -11,25 +11,34 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKAmdDisplayNativeHdr
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_AMD_display_native_hdr";
+        public const int    VK_AMD_DISPLAY_NATIVE_HDR                = 1;
+        public const int    VK_AMD_DISPLAY_NATIVE_HDR_SPEC_VERSION   = 1;
+        public const string VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME = "VK_AMD_display_native_hdr";
         
         public static readonly delegate*<
-            VkDevice, /* device */
-            VkSwapchainKHR, /* swapChain */
-            uint, /* localDimmingEnable */
-            void> vkSetLocalDimmingAMD = null;
+    VkDevice, /* device */
+    VkSwapchainKHR, /* swapChain */
+    uint, /* localDimmingEnable */
+    void> vkSetLocalDimmingAMD = null;
+
+
 
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayNativeHdrSurfaceCapabilitiesAMD
@@ -40,6 +49,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       VkBool32        localDimmingSupport;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSwapchainDisplayNativeHdrCreateInfoAMD
     {
@@ -48,4 +58,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       void*           pNext;
         public       VkBool32        localDimmingEnable;
     }
+
+
+
+
 }

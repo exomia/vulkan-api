@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NVX
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvxImageViewHandle
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 2;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NVX_image_view_handle";
+        public const int    VK_NVX_IMAGE_VIEW_HANDLE                = 1;
+        public const int    VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION   = 2;
+        public const string VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME = "VK_NVX_image_view_handle";
+        
         public static readonly delegate*<
     VkDevice, /* device */
     VkImageView, /* imageView */
@@ -32,8 +37,13 @@ public static readonly delegate*<
     VkImageViewHandleInfoNVX*, /* pInfo */
     uint> vkGetImageViewHandleNVX = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewAddressPropertiesNVX
@@ -45,6 +55,7 @@ public static readonly delegate*<
         public       VkDeviceSize    size;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkImageViewHandleInfoNVX
     {
@@ -55,4 +66,8 @@ public static readonly delegate*<
         public       VkDescriptorType descriptorType;
         public       VkSampler        sampler;
     }
+
+
+
+
 }

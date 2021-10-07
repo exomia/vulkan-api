@@ -11,17 +11,29 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKAmdShaderFragmentMask
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_AMD_shader_fragment_mask";
+        public const int    VK_AMD_SHADER_FRAGMENT_MASK                = 1;
+        public const int    VK_AMD_SHADER_FRAGMENT_MASK_SPEC_VERSION   = 1;
+        public const string VK_AMD_SHADER_FRAGMENT_MASK_EXTENSION_NAME = "VK_AMD_shader_fragment_mask";
+        
+        
 
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
+
+
+
 }

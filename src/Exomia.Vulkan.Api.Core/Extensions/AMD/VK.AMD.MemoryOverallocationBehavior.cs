@@ -11,19 +11,26 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKAmdMemoryOverallocationBehavior
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_AMD_memory_overallocation_behavior";
+        public const int    VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR                = 1;
+        public const int    VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_SPEC_VERSION   = 1;
+        public const string VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME = "VK_AMD_memory_overallocation_behavior";
+        
+        
 
         public static partial void Load(VkInstance vkInstance);
     }
+
 
     public enum VkMemoryOverallocationBehaviorAMD
     {
@@ -33,6 +40,9 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         MAX_ENUM_AMD   = 0x7FFFFFFF
     }
 
+
+
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceMemoryOverallocationCreateInfoAMD
     {
@@ -41,4 +51,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       void*                             pNext;
         public       VkMemoryOverallocationBehaviorAMD overallocationBehavior;
     }
+
+
+
+
 }

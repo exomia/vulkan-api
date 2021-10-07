@@ -11,19 +11,28 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.INTEL
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKIntelShaderIntegerFunctions2
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_INTEL_shader_integer_functions2";
+        public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2                = 1;
+        public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2_SPEC_VERSION   = 1;
+        public const string VK_INTEL_SHADER_INTEGER_FUNCTIONS2_EXTENSION_NAME = "VK_INTEL_shader_integer_functions2";
+        
+        
 
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL
@@ -33,4 +42,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.INTEL
         public       void*           pNext;
         public       VkBool32        shaderIntegerFunctions2;
     }
+
+
+
+
 }

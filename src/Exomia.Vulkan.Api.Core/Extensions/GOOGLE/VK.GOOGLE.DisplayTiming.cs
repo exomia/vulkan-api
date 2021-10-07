@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKGoogleDisplayTiming
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_GOOGLE_display_timing";
+        public const int    VK_GOOGLE_DISPLAY_TIMING                = 1;
+        public const int    VK_GOOGLE_DISPLAY_TIMING_SPEC_VERSION   = 1;
+        public const string VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME = "VK_GOOGLE_display_timing";
+        
         public static readonly delegate*<
     VkDevice, /* device */
     VkSwapchainKHR, /* swapchain */
@@ -34,8 +39,13 @@ public static readonly delegate*<
     VkRefreshCycleDurationGOOGLE*, /* pDisplayTimingProperties */
     VkResult> vkGetRefreshCycleDurationGOOGLE = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPastPresentationTimingGOOGLE
@@ -47,6 +57,7 @@ public static readonly delegate*<
         public ulong presentMargin;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPresentTimeGOOGLE
     {
@@ -54,11 +65,13 @@ public static readonly delegate*<
         public ulong desiredPresentTime;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public struct VkRefreshCycleDurationGOOGLE
     {
         public ulong refreshDuration;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPresentTimesInfoGOOGLE
@@ -69,4 +82,8 @@ public static readonly delegate*<
         public       uint                 swapchainCount;
         public       VkPresentTimeGOOGLE* pTimes;
     }
+
+
+
+
 }

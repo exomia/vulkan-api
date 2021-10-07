@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKAmdShaderInfo
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_AMD_shader_info";
+        public const int    VK_AMD_SHADER_INFO                = 1;
+        public const int    VK_AMD_SHADER_INFO_SPEC_VERSION   = 1;
+        public const string VK_AMD_SHADER_INFO_EXTENSION_NAME = "VK_AMD_shader_info";
+        
         public static readonly delegate*<
     VkDevice, /* device */
     VkPipeline, /* pipeline */
@@ -30,8 +35,11 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
     void*, /* pInfo */
     VkResult> vkGetShaderInfoAMD = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
 
     public enum VkShaderInfoTypeAMD
     {
@@ -40,6 +48,9 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         DISASSEMBLY_AMD = 2,
         MAX_ENUM_AMD    = 0x7FFFFFFF
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkShaderResourceUsageAMD
@@ -50,6 +61,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public nuint ldsUsageSizeInBytes;
         public nuint scratchMemUsageInBytes;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkShaderStatisticsInfoAMD
@@ -62,4 +74,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       uint                     numAvailableSgprs;
         public fixed uint                     computeWorkGroupSize[3];
     }
+
+
+
+
 }

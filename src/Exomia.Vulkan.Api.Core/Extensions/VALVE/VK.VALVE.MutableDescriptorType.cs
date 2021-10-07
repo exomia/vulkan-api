@@ -11,19 +11,28 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKValveMutableDescriptorType
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_VALVE_mutable_descriptor_type";
+        public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE                = 1;
+        public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION   = 1;
+        public const string VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME = "VK_VALVE_mutable_descriptor_type";
+        
+        
 
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMutableDescriptorTypeListVALVE
@@ -31,6 +40,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
         public uint              descriptorTypeCount;
         public VkDescriptorType* pDescriptorTypes;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMutableDescriptorTypeCreateInfoVALVE
@@ -42,6 +52,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
         public       VkMutableDescriptorTypeListVALVE* pMutableDescriptorTypeLists;
     }
 
+    
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE
@@ -51,4 +62,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
         public       void*           pNext;
         public       VkBool32        mutableDescriptorType;
     }
+
+
+
+
 }

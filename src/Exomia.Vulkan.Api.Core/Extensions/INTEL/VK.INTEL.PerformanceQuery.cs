@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.INTEL
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKIntelPerformanceQuery
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 2;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_INTEL_performance_query";
+        public const int    VK_INTEL_PERFORMANCE_QUERY                = 1;
+        public const int    VK_INTEL_PERFORMANCE_QUERY_SPEC_VERSION   = 2;
+        public const string VK_INTEL_PERFORMANCE_QUERY_EXTENSION_NAME = "VK_INTEL_performance_query";
+        
         public static readonly delegate*<
     VkDevice, /* device */
     VkPerformanceConfigurationAcquireInfoINTEL*, /* pAcquireInfo */
@@ -67,14 +72,18 @@ public static readonly delegate*<
     VkDevice, /* device */
     void> vkUninitializePerformanceApiINTEL = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
 
     public enum VkPerformanceConfigurationTypeINTEL
     {
         COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL = 0,
         MAX_ENUM_INTEL                                  = 0x7FFFFFFF
     }
+
 
     public enum VkPerformanceOverrideTypeINTEL
     {
@@ -83,12 +92,14 @@ public static readonly delegate*<
         MAX_ENUM_INTEL         = 0x7FFFFFFF
     }
 
+
     public enum VkPerformanceParameterTypeINTEL
     {
         HW_COUNTERS_SUPPORTED_INTEL    = 0,
         STREAM_MARKER_VALID_BITS_INTEL = 1,
         MAX_ENUM_INTEL                 = 0x7FFFFFFF
     }
+
 
     public enum VkPerformanceValueTypeINTEL
     {
@@ -100,11 +111,15 @@ public static readonly delegate*<
         MAX_ENUM_INTEL = 0x7FFFFFFF
     }
 
+
     public enum VkQueryPoolSamplingModeINTEL
     {
         MANUAL_INTEL   = 0,
         MAX_ENUM_INTEL = 0x7FFFFFFF
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkInitializePerformanceApiInfoINTEL
@@ -115,6 +130,7 @@ public static readonly delegate*<
         public       void*           pUserData;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceConfigurationAcquireInfoINTEL
     {
@@ -124,6 +140,7 @@ public static readonly delegate*<
         public       VkPerformanceConfigurationTypeINTEL type;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceMarkerInfoINTEL
     {
@@ -132,6 +149,7 @@ public static readonly delegate*<
         public       void*           pNext;
         public       ulong           marker;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceOverrideInfoINTEL
@@ -144,6 +162,7 @@ public static readonly delegate*<
         public       ulong                          parameter;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPerformanceStreamMarkerInfoINTEL
     {
@@ -153,12 +172,14 @@ public static readonly delegate*<
         public       uint            marker;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPerformanceValueINTEL
     {
         public VkPerformanceValueTypeINTEL type;
         public VkPerformanceValueDataINTEL data;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkQueryPoolPerformanceQueryCreateInfoINTEL
@@ -168,6 +189,8 @@ public static readonly delegate*<
         public       void*                        pNext;
         public       VkQueryPoolSamplingModeINTEL performanceCountersSampling;
     }
+
+
 
     public readonly unsafe struct VkPerformanceConfigurationINTEL
     {
@@ -214,6 +237,7 @@ public static readonly delegate*<
         }
     }
 
+
     [StructLayout(LayoutKind.Explicit)]
     public unsafe struct VkPerformanceValueDataINTEL
     {
@@ -232,4 +256,6 @@ public static readonly delegate*<
         [FieldOffset(0)]
         public sbyte* valueString;
     }
+
+
 }

@@ -11,19 +11,26 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvFramebufferMixedSamples
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_framebuffer_mixed_samples";
+        public const int    VK_NV_FRAMEBUFFER_MIXED_SAMPLES                = 1;
+        public const int    VK_NV_FRAMEBUFFER_MIXED_SAMPLES_SPEC_VERSION   = 1;
+        public const string VK_NV_FRAMEBUFFER_MIXED_SAMPLES_EXTENSION_NAME = "VK_NV_framebuffer_mixed_samples";
+        
+        
 
         public static partial void Load(VkInstance vkInstance);
     }
+
 
     public enum VkCoverageModulationModeNV
     {
@@ -34,6 +41,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         MAX_ENUM_NV = 0x7FFFFFFF
     }
 
+
+
     [Flags]
     public enum VkPipelineCoverageModulationStateCreateFlagsNV : uint
     {
@@ -42,6 +51,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         /// </summary>
         Reserved = 0
     }
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCoverageModulationStateCreateInfoNV
@@ -55,4 +66,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       uint                                           coverageModulationTableCount;
         public       float*                                         pCoverageModulationTable;
     }
+
+
+
+
 }

@@ -11,19 +11,28 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvExternalMemory
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_external_memory";
+        public const int    VK_NV_EXTERNAL_MEMORY                = 1;
+        public const int    VK_NV_EXTERNAL_MEMORY_SPEC_VERSION   = 1;
+        public const string VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME = "VK_NV_external_memory";
+        
+        
 
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExternalMemoryImageCreateInfoNV
@@ -34,6 +43,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkExternalMemoryHandleTypeFlagsNV handleTypes;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkExportMemoryAllocateInfoNV
     {
@@ -42,4 +52,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*                             pNext;
         public       VkExternalMemoryHandleTypeFlagsNV handleTypes;
     }
+
+
+
+
 }

@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvMeshShader
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_mesh_shader";
+        public const int    VK_NV_MESH_SHADER                = 1;
+        public const int    VK_NV_MESH_SHADER_SPEC_VERSION   = 1;
+        public const string VK_NV_MESH_SHADER_EXTENSION_NAME = "VK_NV_mesh_shader";
+        
         public static readonly delegate*<
     VkCommandBuffer, /* commandBuffer */
     VkBuffer, /* buffer */
@@ -45,8 +50,13 @@ public static readonly delegate*<
     uint, /* firstTask */
     void> vkCmdDrawMeshTasksNV = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkDrawMeshTasksIndirectCommandNV
@@ -54,6 +64,7 @@ public static readonly delegate*<
         public uint taskCount;
         public uint firstTask;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMeshShaderFeaturesNV
@@ -64,6 +75,7 @@ public static readonly delegate*<
         public       VkBool32        taskShader;
         public       VkBool32        meshShader;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceMeshShaderPropertiesNV
@@ -85,4 +97,8 @@ public static readonly delegate*<
         public       uint            meshOutputPerVertexGranularity;
         public       uint            meshOutputPerPrimitiveGranularity;
     }
+
+
+
+
 }

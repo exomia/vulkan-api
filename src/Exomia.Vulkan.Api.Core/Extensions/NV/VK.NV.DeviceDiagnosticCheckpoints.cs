@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvDeviceDiagnosticCheckpoints
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 2;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_device_diagnostic_checkpoints";
+        public const int    VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS                = 1;
+        public const int    VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_SPEC_VERSION   = 2;
+        public const string VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME = "VK_NV_device_diagnostic_checkpoints";
+        
         public static readonly delegate*<
     VkCommandBuffer, /* commandBuffer */
     void*, /* pCheckpointMarker */
@@ -32,8 +37,13 @@ public static readonly delegate*<
     VkCheckpointDataNV*, /* pCheckpointData */
     void> vkGetQueueCheckpointDataNV = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCheckpointDataNV
@@ -45,6 +55,7 @@ public static readonly delegate*<
         public       void*                   pCheckpointMarker;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkQueueFamilyCheckpointPropertiesNV
     {
@@ -53,4 +64,8 @@ public static readonly delegate*<
         public       void*                   pNext;
         public       VkPipelineStageFlagBits checkpointExecutionStageMask;
     }
+
+
+
+
 }

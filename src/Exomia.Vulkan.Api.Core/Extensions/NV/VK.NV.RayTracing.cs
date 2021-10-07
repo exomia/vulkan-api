@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvRayTracing
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 3;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_ray_tracing";
+        public const int    VK_NV_RAY_TRACING                = 1;
+        public const int    VK_NV_RAY_TRACING_SPEC_VERSION   = 3;
+        public const string VK_NV_RAY_TRACING_EXTENSION_NAME = "VK_NV_ray_tracing";
+        
         public static readonly delegate*<
     VkDevice, /* device */
     uint, /* bindInfoCount */
@@ -123,8 +128,11 @@ public static readonly delegate*<
     void*, /* pData */
     VkResult> vkGetRayTracingShaderGroupHandlesNV = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
 
     public enum VkAccelerationStructureMemoryRequirementsTypeNV
     {
@@ -133,6 +141,7 @@ public static readonly delegate*<
         UPDATE_SCRATCH_NV = 2,
         MAX_ENUM_NV       = 0x7FFFFFFF
     }
+
 
     public enum VkAccelerationStructureTypeKHR
     {
@@ -144,6 +153,7 @@ public static readonly delegate*<
         MAX_ENUM_KHR     = 0x7FFFFFFF
     }
 
+
     [Flags]
     public enum VkBuildAccelerationStructureFlagsNV : uint
     {
@@ -152,6 +162,7 @@ public static readonly delegate*<
         /// </summary>
         Reserved = 0
     }
+
 
     public enum VkCopyAccelerationStructureModeKHR
     {
@@ -164,6 +175,7 @@ public static readonly delegate*<
         MAX_ENUM_KHR    = 0x7FFFFFFF
     }
 
+
     [Flags]
     public enum VkGeometryFlagsKHR
     {
@@ -173,6 +185,7 @@ public static readonly delegate*<
         NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_NV  = NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR,
         FLAG_BITS_MAX_ENUM_KHR                  = 0x7FFFFFFF
     }
+
 
     [Flags]
     public enum VkGeometryInstanceFlagsKHR
@@ -188,6 +201,7 @@ public static readonly delegate*<
         FLAG_BITS_MAX_ENUM_KHR                  = 0x7FFFFFFF
     }
 
+
     public enum VkGeometryTypeKHR
     {
         TRIANGLES_KHR = 0,
@@ -197,6 +211,7 @@ public static readonly delegate*<
         AABBS_NV      = AABBS_KHR,
         MAX_ENUM_KHR  = 0x7FFFFFFF
     }
+
 
     public enum VkRayTracingShaderGroupTypeKHR
     {
@@ -209,6 +224,8 @@ public static readonly delegate*<
         MAX_ENUM_KHR             = 0x7FFFFFFF
     }
 
+
+
     [Flags]
     public enum VkBuildAccelerationStructureFlagsNV : uint
     {
@@ -217,6 +234,7 @@ public static readonly delegate*<
         /// </summary>
         Reserved = 0
     }
+
 
     [Flags]
     public enum VkGeometryFlagsKHR
@@ -227,6 +245,7 @@ public static readonly delegate*<
         NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_NV  = NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR,
         FLAG_BITS_MAX_ENUM_KHR                  = 0x7FFFFFFF
     }
+
 
     [Flags]
     public enum VkGeometryInstanceFlagsKHR
@@ -242,6 +261,8 @@ public static readonly delegate*<
         FLAG_BITS_MAX_ENUM_KHR                  = 0x7FFFFFFF
     }
 
+
+
     [StructLayout(LayoutKind.Sequential)]
     public struct VkAabbPositionsKHR
     {
@@ -253,6 +274,7 @@ public static readonly delegate*<
         public float maxZ;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureCreateInfoNV
     {
@@ -262,6 +284,7 @@ public static readonly delegate*<
         public       VkDeviceSize                  compactedSize;
         public       VkAccelerationStructureInfoNV info;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureInfoNV
@@ -275,6 +298,7 @@ public static readonly delegate*<
         public       uint                                geometryCount;
         public       VkGeometryNV*                       pGeometries;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkAccelerationStructureInstanceKHR
@@ -309,6 +333,7 @@ public static readonly delegate*<
         }
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkAccelerationStructureMemoryRequirementsInfoNV
     {
@@ -318,6 +343,7 @@ public static readonly delegate*<
         public       VkAccelerationStructureMemoryRequirementsTypeNV type;
         public       VkAccelerationStructureNV                       accelerationStructure;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkBindAccelerationStructureMemoryInfoNV
@@ -332,6 +358,7 @@ public static readonly delegate*<
         public       uint*                     pDeviceIndices;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeometryAABBNV
     {
@@ -344,12 +371,14 @@ public static readonly delegate*<
         public       VkDeviceSize    offset;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public struct VkGeometryDataNV
     {
         public VkGeometryTrianglesNV triangles;
         public VkGeometryAABBNV      aabbs;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeometryNV
@@ -361,6 +390,7 @@ public static readonly delegate*<
         public       VkGeometryDataNV   geometry;
         public       VkGeometryFlagsKHR flags;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeometryTrianglesNV
@@ -381,6 +411,7 @@ public static readonly delegate*<
         public       VkDeviceSize    transformOffset;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkMemoryRequirements2
     {
@@ -389,6 +420,7 @@ public static readonly delegate*<
         public       void*                pNext;
         public       VkMemoryRequirements memoryRequirements;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRayTracingPipelineCreateInfoNV
@@ -407,6 +439,7 @@ public static readonly delegate*<
         public       int                                  basePipelineIndex;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkRayTracingShaderGroupCreateInfoNV
     {
@@ -419,6 +452,7 @@ public static readonly delegate*<
         public       uint                           anyHitShader;
         public       uint                           intersectionShader;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkTransformMatrixKHR
@@ -437,6 +471,7 @@ public static readonly delegate*<
         public float M34;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceRayTracingPropertiesNV
     {
@@ -453,6 +488,7 @@ public static readonly delegate*<
         public       uint            maxDescriptorSetAccelerationStructures;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkWriteDescriptorSetAccelerationStructureNV
     {
@@ -462,6 +498,8 @@ public static readonly delegate*<
         public       uint                       accelerationStructureCount;
         public       VkAccelerationStructureNV* pAccelerationStructures;
     }
+
+
 
     public readonly unsafe struct VkAccelerationStructureNV
     {
@@ -507,4 +545,6 @@ public static readonly delegate*<
             return value._ptr;
         }
     }
+
+
 }

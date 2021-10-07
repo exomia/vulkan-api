@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvAcquireWinrtDisplay
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_acquire_winrt_display";
+        public const int    VK_NV_ACQUIRE_WINRT_DISPLAY                = 1;
+        public const int    VK_NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION   = 1;
+        public const string VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME = "VK_NV_acquire_winrt_display";
+        
         public static readonly delegate*<
     VkPhysicalDevice, /* physicalDevice */
     VkDisplayKHR, /* display */
@@ -32,6 +37,14 @@ public static readonly delegate*<
     VkDisplayKHR*, /* pDisplay */
     VkResult> vkGetWinrtDisplayNV = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
+
+
+
 }

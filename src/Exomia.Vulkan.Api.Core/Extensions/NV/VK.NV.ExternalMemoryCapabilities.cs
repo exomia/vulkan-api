@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvExternalMemoryCapabilities
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_external_memory_capabilities";
+        public const int    VK_NV_EXTERNAL_MEMORY_CAPABILITIES                = 1;
+        public const int    VK_NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION   = 1;
+        public const string VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME = "VK_NV_external_memory_capabilities";
+        
         public static readonly delegate*<
     VkPhysicalDevice, /* physicalDevice */
     VkFormat, /* format */
@@ -32,9 +37,12 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
     VkExternalImageFormatPropertiesNV*, /* pExternalImageFormatProperties */
     VkResult> vkGetPhysicalDeviceExternalImageFormatPropertiesNV = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
 
+
     [Flags]
     public enum VkExternalMemoryFeatureFlagsNV
     {
@@ -43,6 +51,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         IMPORTABLE_BIT_NV     = 0x00000004,
         FLAG_BITS_MAX_ENUM_NV = 0x7FFFFFFF
     }
+
 
     [Flags]
     public enum VkExternalMemoryHandleTypeFlagsNV
@@ -54,6 +63,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         FLAG_BITS_MAX_ENUM_NV   = 0x7FFFFFFF
     }
 
+
+
     [Flags]
     public enum VkExternalMemoryFeatureFlagsNV
     {
@@ -62,6 +73,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         IMPORTABLE_BIT_NV     = 0x00000004,
         FLAG_BITS_MAX_ENUM_NV = 0x7FFFFFFF
     }
+
 
     [Flags]
     public enum VkExternalMemoryHandleTypeFlagsNV
@@ -72,6 +84,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         D3D11_IMAGE_KMT_BIT_NV  = 0x00000008,
         FLAG_BITS_MAX_ENUM_NV   = 0x7FFFFFFF
     }
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkExternalImageFormatPropertiesNV
@@ -81,4 +95,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public VkExternalMemoryHandleTypeFlagsNV exportFromImportedHandleTypes;
         public VkExternalMemoryHandleTypeFlagsNV compatibleHandleTypes;
     }
+
+
+
+
 }

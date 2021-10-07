@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvFragmentShadingRateEnums
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_fragment_shading_rate_enums";
+        public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS                = 1;
+        public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION   = 1;
+        public const string VK_NV_FRAGMENT_SHADING_RATE_ENUMS_EXTENSION_NAME = "VK_NV_fragment_shading_rate_enums";
+        
         public static readonly delegate*<
     VkCommandBuffer, /* commandBuffer */
     VkFragmentShadingRateNV, /* shadingRate */
@@ -28,8 +33,11 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
     VkFragmentShadingRateCombinerOpKHR, /* combinerOps2 */
     void> vkCmdSetFragmentShadingRateEnumNV = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
 
     public enum VkFragmentShadingRateNV
     {
@@ -48,12 +56,16 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         MAX_ENUM_NV                     = 0x7FFFFFFF
     }
 
+
     public enum VkFragmentShadingRateTypeNV
     {
         FRAGMENT_SIZE_NV = 0,
         ENUMS_NV         = 1,
         MAX_ENUM_NV      = 0x7FFFFFFF
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineFragmentShadingRateEnumStateCreateInfoNV
@@ -67,6 +79,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkFragmentShadingRateCombinerOpKHR combinerOps2;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV
     {
@@ -78,6 +91,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       VkBool32        noInvocationFragmentShadingRates;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV
     {
@@ -86,4 +100,8 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public       void*                 pNext;
         public       VkSampleCountFlagBits maxFragmentShadingRateInvocationCount;
     }
+
+
+
+
 }

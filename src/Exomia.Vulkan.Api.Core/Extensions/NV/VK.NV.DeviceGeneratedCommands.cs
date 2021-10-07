@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvDeviceGeneratedCommands
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 3;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NV_device_generated_commands";
+        public const int    VK_NV_DEVICE_GENERATED_COMMANDS                = 1;
+        public const int    VK_NV_DEVICE_GENERATED_COMMANDS_SPEC_VERSION   = 3;
+        public const string VK_NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME = "VK_NV_device_generated_commands";
+        
         public static readonly delegate*<
     VkCommandBuffer, /* commandBuffer */
     VkPipelineBindPoint, /* pipelineBindPoint */
@@ -58,8 +63,11 @@ public static readonly delegate*<
     VkMemoryRequirements2*, /* pMemoryRequirements */
     void> vkGetGeneratedCommandsMemoryRequirementsNV = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
 
     [Flags]
     public enum VkIndirectCommandsLayoutUsageFlagsNV
@@ -69,6 +77,7 @@ public static readonly delegate*<
         UNORDERED_SEQUENCES_BIT_NV = 0x00000004,
         FLAG_BITS_MAX_ENUM_NV      = 0x7FFFFFFF
     }
+
 
     public enum VkIndirectCommandsTokenTypeNV
     {
@@ -83,12 +92,15 @@ public static readonly delegate*<
         MAX_ENUM_NV      = 0x7FFFFFFF
     }
 
+
     [Flags]
     public enum VkIndirectStateFlagsNV
     {
         FRONTFACE_BIT_NV = 0x00000001,
         BITS_MAX_ENUM_NV = 0x7FFFFFFF
     }
+
+
 
     [Flags]
     public enum VkIndirectCommandsLayoutUsageFlagsNV
@@ -99,12 +111,15 @@ public static readonly delegate*<
         FLAG_BITS_MAX_ENUM_NV      = 0x7FFFFFFF
     }
 
+
     [Flags]
     public enum VkIndirectStateFlagsNV
     {
         FRONTFACE_BIT_NV = 0x00000001,
         BITS_MAX_ENUM_NV = 0x7FFFFFFF
     }
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkBindIndexBufferIndirectCommandNV
@@ -114,11 +129,13 @@ public static readonly delegate*<
         public VkIndexType     indexType;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public struct VkBindShaderGroupIndirectCommandNV
     {
         public uint groupIndex;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkBindVertexBufferIndirectCommandNV
@@ -127,6 +144,7 @@ public static readonly delegate*<
         public uint            size;
         public uint            stride;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeneratedCommandsInfoNV
@@ -149,6 +167,7 @@ public static readonly delegate*<
         public       VkDeviceSize                sequencesIndexOffset;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGeneratedCommandsMemoryRequirementsInfoNV
     {
@@ -161,6 +180,7 @@ public static readonly delegate*<
         public       uint                       maxSequencesCount;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGraphicsShaderGroupCreateInfoNV
     {
@@ -172,6 +192,7 @@ public static readonly delegate*<
         public       VkPipelineVertexInputStateCreateInfo*  pVertexInputState;
         public       VkPipelineTessellationStateCreateInfo* pTessellationState;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkIndirectCommandsLayoutCreateInfoNV
@@ -186,6 +207,7 @@ public static readonly delegate*<
         public       uint                                 streamCount;
         public       uint*                                pStreamStrides;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkIndirectCommandsLayoutTokenNV
@@ -208,6 +230,7 @@ public static readonly delegate*<
         public       uint*                         pIndexTypeValues;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public struct VkIndirectCommandsStreamNV
     {
@@ -215,11 +238,13 @@ public static readonly delegate*<
         public VkDeviceSize offset;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public struct VkSetStateFlagsIndirectCommandNV
     {
         public uint data;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkGraphicsPipelineShaderGroupsCreateInfoNV
@@ -233,6 +258,7 @@ public static readonly delegate*<
         public       VkPipeline*                        pPipelines;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV
     {
@@ -241,6 +267,7 @@ public static readonly delegate*<
         public       void*           pNext;
         public       VkBool32        deviceGeneratedCommands;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV
@@ -258,6 +285,8 @@ public static readonly delegate*<
         public       uint            minSequencesIndexBufferOffsetAlignment;
         public       uint            minIndirectCommandsBufferOffsetAlignment;
     }
+
+
 
     public readonly unsafe struct VkIndirectCommandsLayoutNV
     {
@@ -303,4 +332,6 @@ public static readonly delegate*<
             return value._ptr;
         }
     }
+
+
 }

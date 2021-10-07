@@ -11,16 +11,21 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+using System;
+using System.Runtime.InteropServices;
+using Exomia.Vulkan.Api.SourceGenerator;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NVX
 {
     [VkExtGenerator]
-    public static unsafe partial class VkExtAcquireDrmDisplay
+    public static unsafe partial class VKNvxBinaryImport
     {
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY                = 1;
-        public const int    VK_EXT_ACQUIRE_DRM_DISPLAY_SPEC_VERSION   = 1;
-        public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_NVX_binary_import";
+        public const int    VK_NVX_BINARY_IMPORT                = 1;
+        public const int    VK_NVX_BINARY_IMPORT_SPEC_VERSION   = 1;
+        public const string VK_NVX_BINARY_IMPORT_EXTENSION_NAME = "VK_NVX_binary_import";
+        
         public static readonly delegate*<
     VkCommandBuffer, /* commandBuffer */
     VkCuLaunchInfoNVX*, /* pLaunchInfo */
@@ -52,8 +57,13 @@ public static readonly delegate*<
     VkAllocationCallbacks*, /* pAllocator */
     void> vkDestroyCuModuleNVX = null;
 
+
+
         public static partial void Load(VkInstance vkInstance);
     }
+
+
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCuFunctionCreateInfoNVX
@@ -64,6 +74,7 @@ public static readonly delegate*<
         public       VkCuModuleNVX   module;
         public       sbyte*          pName;
     }
+
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCuLaunchInfoNVX
@@ -83,6 +94,7 @@ public static readonly delegate*<
         public       nuint           extraCount;
     }
 
+
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkCuModuleCreateInfoNVX
     {
@@ -92,6 +104,8 @@ public static readonly delegate*<
         public       nuint           dataSize;
         public       void*           pData;
     }
+
+
 
     public readonly unsafe struct VkCuFunctionNVX
     {
@@ -182,4 +196,6 @@ public static readonly delegate*<
             return value._ptr;
         }
     }
+
+
 }
