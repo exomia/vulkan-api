@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
 {
     [VkExtGenerator]
-    public static unsafe partial class VKGoogleDisplayTiming
+    public static unsafe partial class VkGoogleDisplayTiming
     {
         public const int    VK_GOOGLE_DISPLAY_TIMING                = 1;
         public const int    VK_GOOGLE_DISPLAY_TIMING_SPEC_VERSION   = 1;

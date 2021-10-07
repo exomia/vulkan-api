@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
 {
     [VkExtGenerator]
-    public static partial class VKGoogleUserType
+    public static partial class VkGoogleUserType
     {
         public const int    VK_GOOGLE_USER_TYPE                = 1;
         public const int    VK_GOOGLE_USER_TYPE_SPEC_VERSION   = 1;

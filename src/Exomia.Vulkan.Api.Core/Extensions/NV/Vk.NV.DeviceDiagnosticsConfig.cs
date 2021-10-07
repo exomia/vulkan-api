@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvDeviceDiagnosticsConfig
+    public static partial class VkNvDeviceDiagnosticsConfig
     {
         public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG                = 1;
         public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION   = 1;

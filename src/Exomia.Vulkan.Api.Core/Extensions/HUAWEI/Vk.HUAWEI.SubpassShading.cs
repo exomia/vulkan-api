@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.HUAWEI
 {
     [VkExtGenerator]
-    public static unsafe partial class VKHuaweiSubpassShading
+    public static unsafe partial class VkHuaweiSubpassShading
     {
         public const int    VK_HUAWEI_SUBPASS_SHADING                = 1;
         public const int    VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION   = 2;

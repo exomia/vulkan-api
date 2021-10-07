@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvViewportArray2
+    public static partial class VkNvViewportArray2
     {
         public const int    VK_NV_VIEWPORT_ARRAY2                = 1;
         public const int    VK_NV_VIEWPORT_ARRAY2_SPEC_VERSION   = 1;

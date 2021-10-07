@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvDeviceGeneratedCommands
+    public static unsafe partial class VkNvDeviceGeneratedCommands
     {
         public const int    VK_NV_DEVICE_GENERATED_COMMANDS                = 1;
         public const int    VK_NV_DEVICE_GENERATED_COMMANDS_SPEC_VERSION   = 3;

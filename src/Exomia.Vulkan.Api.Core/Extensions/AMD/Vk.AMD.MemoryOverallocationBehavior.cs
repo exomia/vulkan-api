@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdMemoryOverallocationBehavior
+    public static partial class VkAmdMemoryOverallocationBehavior
     {
         public const int    VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR                = 1;
         public const int    VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_SPEC_VERSION   = 1;

@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvInheritedViewportScissor
+    public static partial class VkNvInheritedViewportScissor
     {
         public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR                = 1;
         public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR_SPEC_VERSION   = 1;

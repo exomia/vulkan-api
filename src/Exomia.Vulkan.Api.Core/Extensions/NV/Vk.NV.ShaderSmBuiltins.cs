@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvShaderSmBuiltins
+    public static partial class VkNvShaderSmBuiltins
     {
         public const int    VK_NV_SHADER_SM_BUILTINS                = 1;
         public const int    VK_NV_SHADER_SM_BUILTINS_SPEC_VERSION   = 1;

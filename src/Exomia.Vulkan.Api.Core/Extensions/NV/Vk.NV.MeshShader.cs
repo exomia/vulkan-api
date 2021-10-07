@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvMeshShader
+    public static unsafe partial class VkNvMeshShader
     {
         public const int    VK_NV_MESH_SHADER                = 1;
         public const int    VK_NV_MESH_SHADER_SPEC_VERSION   = 1;

@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdShaderTrinaryMinmax
+    public static partial class VkAmdShaderTrinaryMinmax
     {
         public const int    VK_AMD_SHADER_TRINARY_MINMAX                = 1;
         public const int    VK_AMD_SHADER_TRINARY_MINMAX_SPEC_VERSION   = 1;

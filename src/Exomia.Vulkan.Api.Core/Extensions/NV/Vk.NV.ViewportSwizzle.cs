@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvViewportSwizzle
+    public static partial class VkNvViewportSwizzle
     {
         public const int    VK_NV_VIEWPORT_SWIZZLE                = 1;
         public const int    VK_NV_VIEWPORT_SWIZZLE_SPEC_VERSION   = 1;

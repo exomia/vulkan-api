@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvFragmentShadingRateEnums
+    public static unsafe partial class VkNvFragmentShadingRateEnums
     {
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS                = 1;
         public const int    VK_NV_FRAGMENT_SHADING_RATE_ENUMS_SPEC_VERSION   = 1;

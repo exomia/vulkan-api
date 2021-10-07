@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvDedicatedAllocationImageAliasing
+    public static partial class VkNvDedicatedAllocationImageAliasing
     {
         public const int    VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING                = 1;
         public const int    VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING_SPEC_VERSION   = 1;

@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
 {
     [VkExtGenerator]
-    public static partial class VKGoogleHlslFunctionality1
+    public static partial class VkGoogleHlslFunctionality1
     {
         public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1                = 1;
         public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1_SPEC_VERSION   = 1;

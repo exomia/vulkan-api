@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdShaderBallot
+    public static partial class VkAmdShaderBallot
     {
         public const int    VK_AMD_SHADER_BALLOT                = 1;
         public const int    VK_AMD_SHADER_BALLOT_SPEC_VERSION   = 1;

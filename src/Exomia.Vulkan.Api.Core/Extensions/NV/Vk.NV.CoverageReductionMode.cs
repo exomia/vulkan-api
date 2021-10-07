@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvCoverageReductionMode
+    public static unsafe partial class VkNvCoverageReductionMode
     {
         public const int    VK_NV_COVERAGE_REDUCTION_MODE                = 1;
         public const int    VK_NV_COVERAGE_REDUCTION_MODE_SPEC_VERSION   = 1;

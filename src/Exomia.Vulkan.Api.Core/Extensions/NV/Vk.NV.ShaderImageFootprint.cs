@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvShaderImageFootprint
+    public static partial class VkNvShaderImageFootprint
     {
         public const int    VK_NV_SHADER_IMAGE_FOOTPRINT                = 1;
         public const int    VK_NV_SHADER_IMAGE_FOOTPRINT_SPEC_VERSION   = 2;

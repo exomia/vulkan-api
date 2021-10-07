@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
 {
     [VkExtGenerator]
-    public static partial class VKValveMutableDescriptorType
+    public static partial class VkValveMutableDescriptorType
     {
         public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE                = 1;
         public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION   = 1;

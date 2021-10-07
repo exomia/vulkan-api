@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvFragmentCoverageToColor
+    public static partial class VkNvFragmentCoverageToColor
     {
         public const int    VK_NV_FRAGMENT_COVERAGE_TO_COLOR                = 1;
         public const int    VK_NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION   = 1;

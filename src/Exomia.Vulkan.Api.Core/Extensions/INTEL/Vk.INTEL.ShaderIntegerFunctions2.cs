@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.INTEL
 {
     [VkExtGenerator]
-    public static partial class VKIntelShaderIntegerFunctions2
+    public static partial class VkIntelShaderIntegerFunctions2
     {
         public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2                = 1;
         public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2_SPEC_VERSION   = 1;

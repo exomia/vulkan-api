@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdShaderImageLoadStoreLod
+    public static partial class VkAmdShaderImageLoadStoreLod
     {
         public const int    VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD                = 1;
         public const int    VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_SPEC_VERSION   = 1;

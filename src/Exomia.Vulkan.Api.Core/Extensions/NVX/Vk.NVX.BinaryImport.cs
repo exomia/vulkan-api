@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NVX
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvxBinaryImport
+    public static unsafe partial class VkNvxBinaryImport
     {
         public const int    VK_NVX_BINARY_IMPORT                = 1;
         public const int    VK_NVX_BINARY_IMPORT_SPEC_VERSION   = 1;

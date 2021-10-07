@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvFramebufferMixedSamples
+    public static partial class VkNvFramebufferMixedSamples
     {
         public const int    VK_NV_FRAMEBUFFER_MIXED_SAMPLES                = 1;
         public const int    VK_NV_FRAMEBUFFER_MIXED_SAMPLES_SPEC_VERSION   = 1;

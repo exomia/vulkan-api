@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvFragmentShaderBarycentric
+    public static partial class VkNvFragmentShaderBarycentric
     {
         public const int    VK_NV_FRAGMENT_SHADER_BARYCENTRIC                = 1;
         public const int    VK_NV_FRAGMENT_SHADER_BARYCENTRIC_SPEC_VERSION   = 1;

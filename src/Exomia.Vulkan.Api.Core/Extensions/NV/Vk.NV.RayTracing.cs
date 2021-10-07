@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvRayTracing
+    public static unsafe partial class VkNvRayTracing
     {
         public const int    VK_NV_RAY_TRACING                = 1;
         public const int    VK_NV_RAY_TRACING_SPEC_VERSION   = 3;

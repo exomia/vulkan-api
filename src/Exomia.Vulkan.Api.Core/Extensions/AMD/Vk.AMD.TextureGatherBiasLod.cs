@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdTextureGatherBiasLod
+    public static partial class VkAmdTextureGatherBiasLod
     {
         public const int    VK_AMD_TEXTURE_GATHER_BIAS_LOD                = 1;
         public const int    VK_AMD_TEXTURE_GATHER_BIAS_LOD_SPEC_VERSION   = 1;

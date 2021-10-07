@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NVX
 {
     [VkExtGenerator]
-    public static partial class VKNvxMultiviewPerViewAttributes
+    public static partial class VkNvxMultiviewPerViewAttributes
     {
         public const int    VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES                = 1;
         public const int    VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_SPEC_VERSION   = 1;

@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvGeometryShaderPassthrough
+    public static partial class VkNvGeometryShaderPassthrough
     {
         public const int    VK_NV_GEOMETRY_SHADER_PASSTHROUGH                = 1;
         public const int    VK_NV_GEOMETRY_SHADER_PASSTHROUGH_SPEC_VERSION   = 1;

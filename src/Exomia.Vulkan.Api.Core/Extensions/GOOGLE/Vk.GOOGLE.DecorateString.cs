@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
 {
     [VkExtGenerator]
-    public static partial class VKGoogleDecorateString
+    public static partial class VkGoogleDecorateString
     {
         public const int    VK_GOOGLE_DECORATE_STRING                = 1;
         public const int    VK_GOOGLE_DECORATE_STRING_SPEC_VERSION   = 1;

@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvRayTracingMotionBlur
+    public static partial class VkNvRayTracingMotionBlur
     {
         public const int    VK_NV_RAY_TRACING_MOTION_BLUR                = 1;
         public const int    VK_NV_RAY_TRACING_MOTION_BLUR_SPEC_VERSION   = 1;

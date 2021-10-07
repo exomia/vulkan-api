@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdMixedAttachmentSamples
+    public static partial class VkAmdMixedAttachmentSamples
     {
         public const int    VK_AMD_MIXED_ATTACHMENT_SAMPLES                = 1;
         public const int    VK_AMD_MIXED_ATTACHMENT_SAMPLES_SPEC_VERSION   = 1;

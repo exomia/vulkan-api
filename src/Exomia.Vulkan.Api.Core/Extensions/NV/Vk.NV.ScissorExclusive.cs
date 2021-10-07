@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvScissorExclusive
+    public static unsafe partial class VkNvScissorExclusive
     {
         public const int    VK_NV_SCISSOR_EXCLUSIVE                = 1;
         public const int    VK_NV_SCISSOR_EXCLUSIVE_SPEC_VERSION   = 1;

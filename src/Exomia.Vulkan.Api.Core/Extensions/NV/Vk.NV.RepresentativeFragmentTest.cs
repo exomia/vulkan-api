@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvRepresentativeFragmentTest
+    public static partial class VkNvRepresentativeFragmentTest
     {
         public const int    VK_NV_REPRESENTATIVE_FRAGMENT_TEST                = 1;
         public const int    VK_NV_REPRESENTATIVE_FRAGMENT_TEST_SPEC_VERSION   = 2;

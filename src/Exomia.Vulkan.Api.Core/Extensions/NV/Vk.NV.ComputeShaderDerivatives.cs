@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvComputeShaderDerivatives
+    public static partial class VkNvComputeShaderDerivatives
     {
         public const int    VK_NV_COMPUTE_SHADER_DERIVATIVES                = 1;
         public const int    VK_NV_COMPUTE_SHADER_DERIVATIVES_SPEC_VERSION   = 1;

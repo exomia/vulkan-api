@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvFillRectangle
+    public static partial class VkNvFillRectangle
     {
         public const int    VK_NV_FILL_RECTANGLE                = 1;
         public const int    VK_NV_FILL_RECTANGLE_SPEC_VERSION   = 1;

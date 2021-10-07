@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VKAmdShaderInfo
+    public static unsafe partial class VkAmdShaderInfo
     {
         public const int    VK_AMD_SHADER_INFO                = 1;
         public const int    VK_AMD_SHADER_INFO_SPEC_VERSION   = 1;

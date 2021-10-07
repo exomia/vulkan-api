@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VKAmdBufferMarker
+    public static unsafe partial class VkAmdBufferMarker
     {
         public const int    VK_AMD_BUFFER_MARKER                = 1;
         public const int    VK_AMD_BUFFER_MARKER_SPEC_VERSION   = 1;

@@ -20,7 +20,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.INTEL
 {
     [VkExtGenerator]
-    public static unsafe partial class VKIntelPerformanceQuery
+    public static unsafe partial class VkIntelPerformanceQuery
     {
         public const int    VK_INTEL_PERFORMANCE_QUERY                = 1;
         public const int    VK_INTEL_PERFORMANCE_QUERY_SPEC_VERSION   = 2;

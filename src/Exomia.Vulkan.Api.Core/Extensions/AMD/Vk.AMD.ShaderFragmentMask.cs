@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdShaderFragmentMask
+    public static partial class VkAmdShaderFragmentMask
     {
         public const int    VK_AMD_SHADER_FRAGMENT_MASK                = 1;
         public const int    VK_AMD_SHADER_FRAGMENT_MASK_SPEC_VERSION   = 1;

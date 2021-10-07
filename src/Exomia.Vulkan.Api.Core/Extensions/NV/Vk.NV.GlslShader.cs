@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         "Deprecated without replacement", false,
         UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_glsl_shader.html#_deprecation_state")]
     [VkExtGenerator]
-    public static partial class VKNvGlslShader
+    public static partial class VkNvGlslShader
     {
         public const int    VK_NV_GLSL_SHADER                = 1;
         public const int    VK_NV_GLSL_SHADER_SPEC_VERSION   = 1;

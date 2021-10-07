@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NVX
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvxImageViewHandle
+    public static unsafe partial class VkNvxImageViewHandle
     {
         public const int    VK_NVX_IMAGE_VIEW_HANDLE                = 1;
         public const int    VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION   = 2;

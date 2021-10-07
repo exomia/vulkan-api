@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         "Deprecated by VK_KHR_shader_float16_int8 extension - Which in turn was promoted to Vulkan 1.2", false,
         UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_AMD_gpu_shader_half_float.html#_deprecation_state")]
     [VkExtGenerator]
-    public static partial class VKAmdGpuShaderHalfFloat
+    public static partial class VkAmdGpuShaderHalfFloat
     {
         public const int VK_AMD_GPU_SHADER_HALF_FLOAT              = 1;
         public const int VK_AMD_GPU_SHADER_HALF_FLOAT_SPEC_VERSION = 2;

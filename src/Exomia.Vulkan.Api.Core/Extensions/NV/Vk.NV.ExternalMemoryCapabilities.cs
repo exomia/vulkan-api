@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         "Deprecated by VK_KHR_external_memory_capabilities extension - Which in turn was promoted to Vulkan 1.1", false,
         UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory_capabilities.html#_deprecation_state")]
     [VkExtGenerator]
-    public static unsafe partial class VKNvExternalMemoryCapabilities
+    public static unsafe partial class VkNvExternalMemoryCapabilities
     {
         public const int    VK_NV_EXTERNAL_MEMORY_CAPABILITIES                = 1;
         public const int    VK_NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION   = 1;

@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvClipSpaceWScaling
+    public static unsafe partial class VkNvClipSpaceWScaling
     {
         public const int    VK_NV_CLIP_SPACE_W_SCALING                = 1;
         public const int    VK_NV_CLIP_SPACE_W_SCALING_SPEC_VERSION   = 1;

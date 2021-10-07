@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvCornerSampledImage
+    public static partial class VkNvCornerSampledImage
     {
         public const int    VK_NV_CORNER_SAMPLED_IMAGE                = 1;
         public const int    VK_NV_CORNER_SAMPLED_IMAGE_SPEC_VERSION   = 2;

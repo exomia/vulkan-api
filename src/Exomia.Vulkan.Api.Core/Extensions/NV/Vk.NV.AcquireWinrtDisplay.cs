@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvAcquireWinrtDisplay
+    public static unsafe partial class VkNvAcquireWinrtDisplay
     {
         public const int    VK_NV_ACQUIRE_WINRT_DISPLAY                = 1;
         public const int    VK_NV_ACQUIRE_WINRT_DISPLAY_SPEC_VERSION   = 1;

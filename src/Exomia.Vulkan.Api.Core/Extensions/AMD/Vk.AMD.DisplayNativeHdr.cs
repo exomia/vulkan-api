@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static unsafe partial class VKAmdDisplayNativeHdr
+    public static unsafe partial class VkAmdDisplayNativeHdr
     {
         public const int    VK_AMD_DISPLAY_NATIVE_HDR                = 1;
         public const int    VK_AMD_DISPLAY_NATIVE_HDR_SPEC_VERSION   = 1;

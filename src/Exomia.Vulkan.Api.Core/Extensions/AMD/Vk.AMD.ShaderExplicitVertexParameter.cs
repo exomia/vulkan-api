@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdShaderExplicitVertexParameter
+    public static partial class VkAmdShaderExplicitVertexParameter
     {
         public const int    VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER                = 1;
         public const int    VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_SPEC_VERSION   = 1;

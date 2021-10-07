@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdRasterizationOrder
+    public static partial class VkAmdRasterizationOrder
     {
         public const int    VK_AMD_RASTERIZATION_ORDER                = 1;
         public const int    VK_AMD_RASTERIZATION_ORDER_SPEC_VERSION   = 1;

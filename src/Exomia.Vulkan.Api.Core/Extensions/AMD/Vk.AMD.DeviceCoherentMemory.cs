@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdDeviceCoherentMemory
+    public static partial class VkAmdDeviceCoherentMemory
     {
         public const int    VK_AMD_DEVICE_COHERENT_MEMORY                = 1;
         public const int    VK_AMD_DEVICE_COHERENT_MEMORY_SPEC_VERSION   = 1;

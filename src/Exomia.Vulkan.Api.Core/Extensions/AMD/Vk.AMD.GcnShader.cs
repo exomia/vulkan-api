@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
     [VkExtGenerator]
-    public static partial class VKAmdGcnShader
+    public static partial class VkAmdGcnShader
     {
         public const int    VK_AMD_GCN_SHADER                = 1;
         public const int    VK_AMD_GCN_SHADER_SPEC_VERSION   = 1;

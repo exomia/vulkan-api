@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvDeviceDiagnosticCheckpoints
+    public static unsafe partial class VkNvDeviceDiagnosticCheckpoints
     {
         public const int    VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS                = 1;
         public const int    VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_SPEC_VERSION   = 2;

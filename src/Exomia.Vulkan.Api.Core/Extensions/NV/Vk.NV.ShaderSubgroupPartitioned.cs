@@ -18,7 +18,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static partial class VKNvShaderSubgroupPartitioned
+    public static partial class VkNvShaderSubgroupPartitioned
     {
         public const int    VK_NV_SHADER_SUBGROUP_PARTITIONED                = 1;
         public const int    VK_NV_SHADER_SUBGROUP_PARTITIONED_SPEC_VERSION   = 1;

@@ -19,7 +19,7 @@ using Exomia.Vulkan.Api.SourceGenerator;
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
     [VkExtGenerator]
-    public static unsafe partial class VKNvCooperativeMatrix
+    public static unsafe partial class VkNvCooperativeMatrix
     {
         public const int    VK_NV_COOPERATIVE_MATRIX                = 1;
         public const int    VK_NV_COOPERATIVE_MATRIX_SPEC_VERSION   = 1;
