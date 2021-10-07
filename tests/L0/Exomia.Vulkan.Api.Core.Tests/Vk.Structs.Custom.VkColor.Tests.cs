@@ -9,6 +9,7 @@
 #endregion
 
 using System;
+using Exomia.Vulkan.Api.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 #pragma warning disable 168

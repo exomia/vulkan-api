@@ -1,7 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<!--EXTERNAL_PROPERTIES: GITHUB_ACTIONS-->
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net5.0</TargetFrameworks>
-    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Platforms>AnyCPU;x64</Platforms>
     <LangVersion>9.0</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DocumentationFile></DocumentationFile>
@@ -9,6 +10,7 @@
     <Nullable>enable</Nullable>
     <NullableReferenceTypes>true</NullableReferenceTypes>
     <DefineConstants>TRACE;$(Platform)</DefineConstants>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -68,11 +70,11 @@
   </PropertyGroup>
 
   <ItemGroup Condition="'$(Platform)'=='AnyCPU'">
-    <PackageReference Include="Exomia.Vulkan.Api.Core" Version="0.*" IncludeAssets="all"/>
+    <PackageReference Include="Exomia.Vulkan.Api.Core" Version="0.*" IncludeAssets="all" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(Platform)'!='AnyCPU'">
-    <PackageReference Include="Exomia.Vulkan.Api.Core.$(Platform)" Version="0.*" IncludeAssets="all"/>
+    <PackageReference Include="Exomia.Vulkan.Api.Core.$(Platform)" Version="0.*" IncludeAssets="all" />
   </ItemGroup>
   
   <ItemGroup>
