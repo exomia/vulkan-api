@@ -19,6 +19,9 @@ using Exomia.Vulkan.Api.SourceGenerator;
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
+    [Obsolete(
+             "Deprecated by VK_KHR_external_memory_capabilities extension - Which in turn was promoted to Vulkan 1.1", false,
+             UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory_capabilities.html#_deprecation_state")]
     [VkExtGenerator]
     public static unsafe partial class VKNvExternalMemoryCapabilities
     {
@@ -62,29 +65,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         D3D11_IMAGE_KMT_BIT_NV  = 0x00000008,
         FLAG_BITS_MAX_ENUM_NV   = 0x7FFFFFFF
     }
-
-
-
-    [Flags]
-    public enum VkExternalMemoryFeatureFlagsNV
-    {
-        DEDICATED_ONLY_BIT_NV = 0x00000001,
-        EXPORTABLE_BIT_NV     = 0x00000002,
-        IMPORTABLE_BIT_NV     = 0x00000004,
-        FLAG_BITS_MAX_ENUM_NV = 0x7FFFFFFF
-    }
-
-
-    [Flags]
-    public enum VkExternalMemoryHandleTypeFlagsNV
-    {
-        OPAQUE_WIN32_BIT_NV     = 0x00000001,
-        OPAQUE_WIN32_KMT_BIT_NV = 0x00000002,
-        D3D11_IMAGE_BIT_NV      = 0x00000004,
-        D3D11_IMAGE_KMT_BIT_NV  = 0x00000008,
-        FLAG_BITS_MAX_ENUM_NV   = 0x7FFFFFFF
-    }
-
 
 
     [StructLayout(LayoutKind.Sequential)]

@@ -19,6 +19,9 @@ using Exomia.Vulkan.Api.SourceGenerator;
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
+    [Obsolete(
+             "Deprecated without replacement", false,
+             UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_glsl_shader.html#_deprecation_state")]
     [VkExtGenerator]
     public static unsafe partial class VKNvGlslShader
     {
@@ -26,9 +29,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_GLSL_SHADER_SPEC_VERSION   = 1;
         public const string VK_NV_GLSL_SHADER_EXTENSION_NAME = "VK_NV_glsl_shader";
         
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

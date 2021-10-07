@@ -25,10 +25,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_COMPUTE_SHADER_DERIVATIVES                = 1;
         public const int    VK_NV_COMPUTE_SHADER_DERIVATIVES_SPEC_VERSION   = 1;
         public const string VK_NV_COMPUTE_SHADER_DERIVATIVES_EXTENSION_NAME = "VK_NV_compute_shader_derivatives";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

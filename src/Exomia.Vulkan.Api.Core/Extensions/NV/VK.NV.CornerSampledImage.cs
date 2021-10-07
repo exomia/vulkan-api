@@ -25,10 +25,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_CORNER_SAMPLED_IMAGE                = 1;
         public const int    VK_NV_CORNER_SAMPLED_IMAGE_SPEC_VERSION   = 2;
         public const string VK_NV_CORNER_SAMPLED_IMAGE_EXTENSION_NAME = "VK_NV_corner_sampled_image";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

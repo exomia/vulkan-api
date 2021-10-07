@@ -26,9 +26,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_VIEWPORT_ARRAY2_SPEC_VERSION   = 1;
         public const string VK_NV_VIEWPORT_ARRAY2_EXTENSION_NAME = "VK_NV_viewport_array2";
         
-        
 
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

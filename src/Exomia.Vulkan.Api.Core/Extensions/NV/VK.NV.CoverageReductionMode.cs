@@ -34,7 +34,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
 
 
 
-        public static partial void Load(VkInstance vkInstance);
+        public static partial void Load(VkDevice vkDevice);
     }
 
 

@@ -25,10 +25,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_FRAGMENT_COVERAGE_TO_COLOR                = 1;
         public const int    VK_NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION   = 1;
         public const string VK_NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME = "VK_NV_fragment_coverage_to_color";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

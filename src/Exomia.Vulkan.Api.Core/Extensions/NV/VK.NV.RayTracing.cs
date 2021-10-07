@@ -19,6 +19,9 @@ using Exomia.Vulkan.Api.SourceGenerator;
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
+    using VkMemoryRequirements2KHR = VkMemoryRequirements2;
+    using VkAccelerationStructureTypeNV = VkAccelerationStructureTypeKHR;
+
     [VkExtGenerator]
     public static unsafe partial class VKNvRayTracing
     {
@@ -130,7 +133,7 @@ public static readonly delegate*<
 
 
 
-        public static partial void Load(VkInstance vkInstance);
+        public static partial void Load(VkDevice vkDevice);
     }
 
 
@@ -223,45 +226,6 @@ public static readonly delegate*<
         PROCEDURAL_HIT_GROUP_NV  = PROCEDURAL_HIT_GROUP_KHR,
         MAX_ENUM_KHR             = 0x7FFFFFFF
     }
-
-
-
-    [Flags]
-    public enum VkBuildAccelerationStructureFlagsNV : uint
-    {
-        /// <summary>
-        ///     Reserved for future use
-        /// </summary>
-        Reserved = 0
-    }
-
-
-    [Flags]
-    public enum VkGeometryFlagsKHR
-    {
-        OPAQUE_BIT_KHR                          = 0x00000001,
-        NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR = 0x00000002,
-        OPAQUE_BIT_NV                           = OPAQUE_BIT_KHR,
-        NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_NV  = NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR,
-        FLAG_BITS_MAX_ENUM_KHR                  = 0x7FFFFFFF
-    }
-
-
-    [Flags]
-    public enum VkGeometryInstanceFlagsKHR
-    {
-        TRIANGLE_FACING_CULL_DISABLE_BIT_KHR    = 0x00000001,
-        TRIANGLE_FRONT_COUNTERCLOCKWISE_BIT_KHR = 0x00000002,
-        FORCE_OPAQUE_BIT_KHR                    = 0x00000004,
-        FORCE_NO_OPAQUE_BIT_KHR                 = 0x00000008,
-        TRIANGLE_CULL_DISABLE_BIT_NV            = TRIANGLE_FACING_CULL_DISABLE_BIT_KHR,
-        TRIANGLE_FRONT_COUNTERCLOCKWISE_BIT_NV  = TRIANGLE_FRONT_COUNTERCLOCKWISE_BIT_KHR,
-        FORCE_OPAQUE_BIT_NV                     = FORCE_OPAQUE_BIT_KHR,
-        FORCE_NO_OPAQUE_BIT_NV                  = FORCE_NO_OPAQUE_BIT_KHR,
-        FLAG_BITS_MAX_ENUM_KHR                  = 0x7FFFFFFF
-    }
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkAabbPositionsKHR

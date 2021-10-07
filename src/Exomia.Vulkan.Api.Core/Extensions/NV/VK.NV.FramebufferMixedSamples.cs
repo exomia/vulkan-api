@@ -26,9 +26,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_FRAMEBUFFER_MIXED_SAMPLES_SPEC_VERSION   = 1;
         public const string VK_NV_FRAMEBUFFER_MIXED_SAMPLES_EXTENSION_NAME = "VK_NV_framebuffer_mixed_samples";
         
-        
-
-        public static partial void Load(VkInstance vkInstance);
+      
     }
 
 

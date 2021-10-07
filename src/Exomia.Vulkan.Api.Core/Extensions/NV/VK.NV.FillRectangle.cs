@@ -25,10 +25,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_FILL_RECTANGLE                = 1;
         public const int    VK_NV_FILL_RECTANGLE_SPEC_VERSION   = 1;
         public const string VK_NV_FILL_RECTANGLE_EXTENSION_NAME = "VK_NV_fill_rectangle";
-        
-        
 
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

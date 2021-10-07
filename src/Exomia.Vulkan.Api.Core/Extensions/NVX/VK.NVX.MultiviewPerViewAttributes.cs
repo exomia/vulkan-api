@@ -25,10 +25,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NVX
         public const int    VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES                = 1;
         public const int    VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_SPEC_VERSION   = 1;
         public const string VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME = "VK_NVX_multiview_per_view_attributes";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

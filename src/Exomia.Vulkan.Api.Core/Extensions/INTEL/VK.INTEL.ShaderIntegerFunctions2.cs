@@ -25,10 +25,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.INTEL
         public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2                = 1;
         public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2_SPEC_VERSION   = 1;
         public const string VK_INTEL_SHADER_INTEGER_FUNCTIONS2_EXTENSION_NAME = "VK_INTEL_shader_integer_functions2";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

@@ -25,10 +25,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE                = 1;
         public const int    VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_SPEC_VERSION   = 1;
         public const string VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_EXTENSION_NAME = "VK_NV_sample_mask_override_coverage";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
+       
     }
 
 

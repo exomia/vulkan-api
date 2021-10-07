@@ -26,9 +26,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_REPRESENTATIVE_FRAGMENT_TEST_SPEC_VERSION   = 2;
         public const string VK_NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME = "VK_NV_representative_fragment_test";
         
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

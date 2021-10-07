@@ -26,9 +26,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_SHADER_SM_BUILTINS_SPEC_VERSION   = 1;
         public const string VK_NV_SHADER_SM_BUILTINS_EXTENSION_NAME = "VK_NV_shader_sm_builtins";
         
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

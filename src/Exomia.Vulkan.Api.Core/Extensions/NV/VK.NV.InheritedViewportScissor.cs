@@ -26,9 +26,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_INHERITED_VIEWPORT_SCISSOR_SPEC_VERSION   = 1;
         public const string VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME = "VK_NV_inherited_viewport_scissor";
         
-        
-
-        public static partial void Load(VkInstance vkInstance);
+       
     }
 
 

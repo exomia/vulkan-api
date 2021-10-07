@@ -26,9 +26,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
         public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION   = 1;
         public const string VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME = "VK_VALVE_mutable_descriptor_type";
         
-        
-
-        public static partial void Load(VkInstance vkInstance);
+        public static partial void Load(VkDevice vkDevice);
     }
 
 

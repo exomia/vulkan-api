@@ -19,16 +19,15 @@ using Exomia.Vulkan.Api.SourceGenerator;
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.NV
 {
+    [Obsolete(
+        "Deprecated by VK_KHR_dedicated_allocation extension - Which in turn was promoted to Vulkan 1.1", false,
+        UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_dedicated_allocation.html#_deprecation_state")]
     [VkExtGenerator]
     public static unsafe partial class VKNvDedicatedAllocation
     {
         public const int    VK_NV_DEDICATED_ALLOCATION                = 1;
         public const int    VK_NV_DEDICATED_ALLOCATION_SPEC_VERSION   = 1;
         public const string VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME = "VK_NV_dedicated_allocation";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 

@@ -26,9 +26,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_FRAGMENT_SHADER_BARYCENTRIC_SPEC_VERSION   = 1;
         public const string VK_NV_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME = "VK_NV_fragment_shader_barycentric";
         
-        
-
-        public static partial void Load(VkInstance vkInstance);
+       
     }
 
 

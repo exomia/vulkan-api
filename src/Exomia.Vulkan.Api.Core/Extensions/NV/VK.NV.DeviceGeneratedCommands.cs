@@ -65,7 +65,7 @@ public static readonly delegate*<
 
 
 
-        public static partial void Load(VkInstance vkInstance);
+        public static partial void Load(VkDevice vkDevice);
     }
 
 
@@ -99,27 +99,6 @@ public static readonly delegate*<
         FRONTFACE_BIT_NV = 0x00000001,
         BITS_MAX_ENUM_NV = 0x7FFFFFFF
     }
-
-
-
-    [Flags]
-    public enum VkIndirectCommandsLayoutUsageFlagsNV
-    {
-        EXPLICIT_PREPROCESS_BIT_NV = 0x00000001,
-        INDEXED_SEQUENCES_BIT_NV   = 0x00000002,
-        UNORDERED_SEQUENCES_BIT_NV = 0x00000004,
-        FLAG_BITS_MAX_ENUM_NV      = 0x7FFFFFFF
-    }
-
-
-    [Flags]
-    public enum VkIndirectStateFlagsNV
-    {
-        FRONTFACE_BIT_NV = 0x00000001,
-        BITS_MAX_ENUM_NV = 0x7FFFFFFF
-    }
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkBindIndexBufferIndirectCommandNV

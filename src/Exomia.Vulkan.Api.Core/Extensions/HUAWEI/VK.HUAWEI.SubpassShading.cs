@@ -32,7 +32,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.HUAWEI
 
 
 
-        public static partial void Load(VkInstance vkInstance);
+        public static partial void Load(VkDevice vkDevice);
     }
 
 

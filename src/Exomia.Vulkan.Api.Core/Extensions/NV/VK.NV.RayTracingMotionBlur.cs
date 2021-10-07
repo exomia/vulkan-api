@@ -25,10 +25,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_RAY_TRACING_MOTION_BLUR                = 1;
         public const int    VK_NV_RAY_TRACING_MOTION_BLUR_SPEC_VERSION   = 1;
         public const string VK_NV_RAY_TRACING_MOTION_BLUR_EXTENSION_NAME = "VK_NV_ray_tracing_motion_blur";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
+      
     }
 
 

@@ -25,10 +25,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_SHADER_SUBGROUP_PARTITIONED                = 1;
         public const int    VK_NV_SHADER_SUBGROUP_PARTITIONED_SPEC_VERSION   = 1;
         public const string VK_NV_SHADER_SUBGROUP_PARTITIONED_EXTENSION_NAME = "VK_NV_shader_subgroup_partitioned";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
+       
     }
 
 

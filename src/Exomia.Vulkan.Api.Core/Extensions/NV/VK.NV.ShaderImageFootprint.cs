@@ -25,10 +25,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_SHADER_IMAGE_FOOTPRINT                = 1;
         public const int    VK_NV_SHADER_IMAGE_FOOTPRINT_SPEC_VERSION   = 2;
         public const string VK_NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME = "VK_NV_shader_image_footprint";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
+       
     }
 
 

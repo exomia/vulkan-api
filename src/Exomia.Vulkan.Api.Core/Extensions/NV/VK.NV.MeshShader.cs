@@ -52,7 +52,7 @@ public static readonly delegate*<
 
 
 
-        public static partial void Load(VkInstance vkInstance);
+        public static partial void Load(VkDevice vkDevice);
     }
 
 

@@ -26,9 +26,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_GEOMETRY_SHADER_PASSTHROUGH_SPEC_VERSION   = 1;
         public const string VK_NV_GEOMETRY_SHADER_PASSTHROUGH_EXTENSION_NAME = "VK_NV_geometry_shader_passthrough";
         
-        
-
-        public static partial void Load(VkInstance vkInstance);
+       
     }
 
 

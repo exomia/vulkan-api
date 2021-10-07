@@ -25,10 +25,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.NV
         public const int    VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING                = 1;
         public const int    VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING_SPEC_VERSION   = 1;
         public const string VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING_EXTENSION_NAME = "VK_NV_dedicated_allocation_image_aliasing";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 
