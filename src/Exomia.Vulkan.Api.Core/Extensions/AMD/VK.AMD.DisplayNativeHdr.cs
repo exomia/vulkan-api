@@ -27,18 +27,13 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const string VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME = "VK_AMD_display_native_hdr";
         
         public static readonly delegate*<
-    VkDevice, /* device */
-    VkSwapchainKHR, /* swapChain */
-    uint, /* localDimmingEnable */
-    void> vkSetLocalDimmingAMD = null;
+            VkDevice, /* device */
+            VkSwapchainKHR, /* swapChain */
+            uint, /* localDimmingEnable */
+            void> vkSetLocalDimmingAMD = null;
 
-
-
-        public static partial void Load(VkInstance vkInstance);
+        public static partial void Load(VkDevice vkDevice);
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDisplayNativeHdrSurfaceCapabilitiesAMD
@@ -58,8 +53,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       void*           pNext;
         public       VkBool32        localDimmingEnable;
     }
-
-
-
-
 }

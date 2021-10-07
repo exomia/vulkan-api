@@ -25,15 +25,5 @@ namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
         public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1                = 1;
         public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1_SPEC_VERSION   = 1;
         public const string VK_GOOGLE_HLSL_FUNCTIONALITY1_EXTENSION_NAME = "VK_GOOGLE_hlsl_functionality1";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
-
-
-
 }

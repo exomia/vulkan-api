@@ -27,17 +27,15 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const string VK_AMD_SHADER_INFO_EXTENSION_NAME = "VK_AMD_shader_info";
         
         public static readonly delegate*<
-    VkDevice, /* device */
-    VkPipeline, /* pipeline */
-    VkShaderStageFlagBits, /* shaderStage */
-    VkShaderInfoTypeAMD, /* infoType */
-    nuint*, /* pInfoSize */
-    void*, /* pInfo */
-    VkResult> vkGetShaderInfoAMD = null;
+            VkDevice, /* device */
+            VkPipeline, /* pipeline */
+            VkShaderStageFlagBits, /* shaderStage */
+            VkShaderInfoTypeAMD, /* infoType */
+            nuint*, /* pInfoSize */
+            void*, /* pInfo */
+            VkResult> vkGetShaderInfoAMD = null;
 
-
-
-        public static partial void Load(VkInstance vkInstance);
+        public static partial void Load(VkDevice vkDevice);
     }
 
 
@@ -49,9 +47,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         MAX_ENUM_AMD    = 0x7FFFFFFF
     }
 
-
-
-
     [StructLayout(LayoutKind.Sequential)]
     public struct VkShaderResourceUsageAMD
     {
@@ -61,7 +56,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public nuint ldsUsageSizeInBytes;
         public nuint scratchMemUsageInBytes;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkShaderStatisticsInfoAMD
@@ -74,8 +68,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       uint                     numAvailableSgprs;
         public fixed uint                     computeWorkGroupSize[3];
     }
-
-
-
-
 }

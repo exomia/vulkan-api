@@ -25,15 +25,5 @@ namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
         public const int    VK_GOOGLE_USER_TYPE                = 1;
         public const int    VK_GOOGLE_USER_TYPE_SPEC_VERSION   = 1;
         public const string VK_GOOGLE_USER_TYPE_EXTENSION_NAME = "VK_GOOGLE_user_type";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
-
-
-
 }

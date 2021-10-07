@@ -26,11 +26,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_SPEC_VERSION   = 1;
         public const string VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME = "VK_AMD_memory_overallocation_behavior";
         
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
 
     public enum VkMemoryOverallocationBehaviorAMD
     {
@@ -40,9 +36,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         MAX_ENUM_AMD   = 0x7FFFFFFF
     }
 
-
-
-
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkDeviceMemoryOverallocationCreateInfoAMD
     {
@@ -51,8 +44,5 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       void*                             pNext;
         public       VkMemoryOverallocationBehaviorAMD overallocationBehavior;
     }
-
-
-
 
 }

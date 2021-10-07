@@ -27,25 +27,20 @@ namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
         public const string VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME = "VK_GOOGLE_display_timing";
         
         public static readonly delegate*<
-    VkDevice, /* device */
-    VkSwapchainKHR, /* swapchain */
-    uint*, /* pPresentationTimingCount */
-    VkPastPresentationTimingGOOGLE*, /* pPresentationTimings */
-    VkResult> vkGetPastPresentationTimingGOOGLE = null;
+            VkDevice, /* device */
+            VkSwapchainKHR, /* swapchain */
+            uint*, /* pPresentationTimingCount */
+            VkPastPresentationTimingGOOGLE*, /* pPresentationTimings */
+            VkResult> vkGetPastPresentationTimingGOOGLE = null;
 
-public static readonly delegate*<
-    VkDevice, /* device */
-    VkSwapchainKHR, /* swapchain */
-    VkRefreshCycleDurationGOOGLE*, /* pDisplayTimingProperties */
-    VkResult> vkGetRefreshCycleDurationGOOGLE = null;
+        public static readonly delegate*<
+            VkDevice, /* device */
+            VkSwapchainKHR, /* swapchain */
+            VkRefreshCycleDurationGOOGLE*, /* pDisplayTimingProperties */
+            VkResult> vkGetRefreshCycleDurationGOOGLE = null;
 
-
-
-        public static partial void Load(VkInstance vkInstance);
+        public static partial void Load(VkDevice vkDevice);
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPastPresentationTimingGOOGLE
@@ -57,7 +52,6 @@ public static readonly delegate*<
         public ulong presentMargin;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public struct VkPresentTimeGOOGLE
     {
@@ -65,13 +59,11 @@ public static readonly delegate*<
         public ulong desiredPresentTime;
     }
 
-
     [StructLayout(LayoutKind.Sequential)]
     public struct VkRefreshCycleDurationGOOGLE
     {
         public ulong refreshDuration;
     }
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPresentTimesInfoGOOGLE
@@ -82,8 +74,4 @@ public static readonly delegate*<
         public       uint                 swapchainCount;
         public       VkPresentTimeGOOGLE* pTimes;
     }
-
-
-
-
 }

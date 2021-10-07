@@ -25,15 +25,5 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_MIXED_ATTACHMENT_SAMPLES                = 1;
         public const int    VK_AMD_MIXED_ATTACHMENT_SAMPLES_SPEC_VERSION   = 1;
         public const string VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME = "VK_AMD_mixed_attachment_samples";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
-
-
-
 }

@@ -25,12 +25,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_RASTERIZATION_ORDER                = 1;
         public const int    VK_AMD_RASTERIZATION_ORDER_SPEC_VERSION   = 1;
         public const string VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME = "VK_AMD_rasterization_order";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
 
     public enum VkRasterizationOrderAMD
     {
@@ -38,9 +33,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         RELAXED_AMD  = 1,
         MAX_ENUM_AMD = 0x7FFFFFFF
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineRasterizationStateRasterizationOrderAMD
@@ -50,8 +42,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       void*                   pNext;
         public       VkRasterizationOrderAMD rasterizationOrder;
     }
-
-
-
-
 }

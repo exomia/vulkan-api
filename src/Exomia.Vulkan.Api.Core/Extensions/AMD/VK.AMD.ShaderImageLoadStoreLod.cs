@@ -25,15 +25,5 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD                = 1;
         public const int    VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_SPEC_VERSION   = 1;
         public const string VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_EXTENSION_NAME = "VK_AMD_shader_image_load_store_lod";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
-
-
-
 }

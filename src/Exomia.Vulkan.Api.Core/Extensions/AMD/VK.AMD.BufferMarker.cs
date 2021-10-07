@@ -27,21 +27,15 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const string VK_AMD_BUFFER_MARKER_EXTENSION_NAME = "VK_AMD_buffer_marker";
         
         public static readonly delegate*<
-    VkCommandBuffer, /* commandBuffer */
-    VkPipelineStageFlagBits, /* pipelineStage */
-    VkBuffer, /* dstBuffer */
-    VkDeviceSize, /* dstOffset */
-    uint, /* marker */
-    void> vkCmdWriteBufferMarkerAMD = null;
+            VkCommandBuffer, /* commandBuffer */
+            VkPipelineStageFlagBits, /* pipelineStage */
+            VkBuffer, /* dstBuffer */
+            VkDeviceSize, /* dstOffset */
+            uint, /* marker */
+            void> vkCmdWriteBufferMarkerAMD = null;
 
+        public static partial void Load(VkDevice vkDevice);
 
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
-
-
 
 }

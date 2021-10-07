@@ -12,6 +12,7 @@
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using System;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Exomia.Vulkan.Api.SourceGenerator;
 
@@ -25,14 +26,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_SHADER_CORE_PROPERTIES                = 1;
         public const int    VK_AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION   = 2;
         public const string VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME = "VK_AMD_shader_core_properties";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceShaderCorePropertiesAMD
@@ -55,8 +49,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       uint            maxVgprAllocation;
         public       uint            vgprAllocationGranularity;
     }
-
-
-
-
 }

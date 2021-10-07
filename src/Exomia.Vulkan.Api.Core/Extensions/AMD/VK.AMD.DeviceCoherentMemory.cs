@@ -25,14 +25,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_DEVICE_COHERENT_MEMORY                = 1;
         public const int    VK_AMD_DEVICE_COHERENT_MEMORY_SPEC_VERSION   = 1;
         public const string VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME = "VK_AMD_device_coherent_memory";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPhysicalDeviceCoherentMemoryFeaturesAMD
@@ -42,8 +35,4 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       void*           pNext;
         public       VkBool32        deviceCoherentMemory;
     }
-
-
-
-
 }

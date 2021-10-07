@@ -19,21 +19,13 @@ using Exomia.Vulkan.Api.SourceGenerator;
 // ReSharper disable InconsistentNaming
 namespace Exomia.Vulkan.Api.Core.Extensions.AMD
 {
+    [Obsolete("Deprecated by VK_KHR_shader_float16_int8 extension - Which in turn was promoted to Vulkan 1.2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_AMD_gpu_shader_int16.html#_deprecation_state")]
     [VkExtGenerator]
     public static unsafe partial class VKAmdGpuShaderInt16
     {
         public const int    VK_AMD_GPU_SHADER_INT16                = 1;
         public const int    VK_AMD_GPU_SHADER_INT16_SPEC_VERSION   = 2;
+        [Obsolete("Deprecation by VK_KHR_shader_float16_int8", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_AMD_gpu_shader_int16.html#_deprecation_by_vk_khr_shader_float16_int8")]
         public const string VK_AMD_GPU_SHADER_INT16_EXTENSION_NAME = "VK_AMD_gpu_shader_int16";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
-
-
-
 }

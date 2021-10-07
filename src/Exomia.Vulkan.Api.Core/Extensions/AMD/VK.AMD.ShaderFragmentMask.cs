@@ -25,15 +25,5 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_SHADER_FRAGMENT_MASK                = 1;
         public const int    VK_AMD_SHADER_FRAGMENT_MASK_SPEC_VERSION   = 1;
         public const string VK_AMD_SHADER_FRAGMENT_MASK_EXTENSION_NAME = "VK_AMD_shader_fragment_mask";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
-
-
-
 }

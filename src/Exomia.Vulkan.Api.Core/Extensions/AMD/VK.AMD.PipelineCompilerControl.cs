@@ -25,10 +25,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_PIPELINE_COMPILER_CONTROL                = 1;
         public const int    VK_AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION   = 1;
         public const string VK_AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME = "VK_AMD_pipeline_compiler_control";
-        
-        
-
-        public static partial void Load(VkInstance vkInstance);
     }
 
 
@@ -37,16 +33,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
     {
         MAX_ENUM_AMD = 0x7FFFFFFF
     }
-
-
-
-    [Flags]
-    public enum VkPipelineCompilerControlFlagsAMD
-    {
-        MAX_ENUM_AMD = 0x7FFFFFFF
-    }
-
-
 
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkPipelineCompilerControlCreateInfoAMD
@@ -56,8 +42,5 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public       void*                             pNext;
         public       VkPipelineCompilerControlFlagsAMD compilerControlFlags;
     }
-
-
-
 
 }

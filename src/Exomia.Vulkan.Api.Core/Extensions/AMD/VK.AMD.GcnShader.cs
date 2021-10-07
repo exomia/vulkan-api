@@ -25,15 +25,6 @@ namespace Exomia.Vulkan.Api.Core.Extensions.AMD
         public const int    VK_AMD_GCN_SHADER                = 1;
         public const int    VK_AMD_GCN_SHADER_SPEC_VERSION   = 1;
         public const string VK_AMD_GCN_SHADER_EXTENSION_NAME = "VK_AMD_gcn_shader";
-        
-        
 
-        public static partial void Load(VkInstance vkInstance);
     }
-
-
-
-
-
-
 }
