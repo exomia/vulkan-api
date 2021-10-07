@@ -43,7 +43,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
         {
             return $@"            fixed({fpi.TypeSymbol.ToDisplayString()} *p{fpi.Name} = &{fpi.Name}) 
             {{
-                *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
+                *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Exomia.Vulkan.Api.Core.Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
             }}";
         }
 
@@ -51,7 +51,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
         {
             return $@"            fixed({fpi.TypeSymbol.ToDisplayString()} *p{fpi.Name} = &{fpi.Name}) 
             {{
-                *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
+                *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Exomia.Vulkan.Api.Core.Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
             }}";
         }
 
@@ -102,10 +102,8 @@ namespace Exomia.Vulkan.Api.SourceGenerator
             if (extensionClass.LoadFunction != null)
             {
                 IParameterSymbol parameterSymbol = extensionClass.LoadFunction.Parameters[0]; // must have one item!!!
-                string           parameterType   = parameterSymbol.Type.Name;
-                string           parameterName   = parameterSymbol.Name;
 
-                Func<FunctionPointerInfo, string, string> extLoaderFuncBuilder = parameterType switch
+                Func<FunctionPointerInfo, string, string> extLoaderFuncBuilder = parameterSymbol.Type.Name switch
                 {
                     "VkInstance" => GetInstanceLoadingFunction,
                     "VkDevice"   => GetDeviceLoadingFunction,
@@ -115,14 +113,14 @@ namespace Exomia.Vulkan.Api.SourceGenerator
                 sb.AppendLine($@"
 
         /// <summary> Loads all functions for this extension. </summary>
-        /// <param name=""{parameterName}""> The {parameterType}. </param>
+        /// <param name=""{parameterSymbol.Name}""> The {parameterSymbol.Type.Name}. </param>
         /// <remarks>
-        ///     {extensionClass.ExtensionName} - {parameterType} extension <br />
+        ///     {extensionClass.ExtensionName} - {parameterSymbol.Type.Name} extension <br />
         ///     vulkan specs <see href=""https://www.khronos.org/registry/vulkan/specs/{VULKAN_VERSION}-extensions/man/html/{extensionClass.ExtensionName}.html"">{extensionClass.ExtensionName}</see>
         /// </remarks>
-        public static partial void Load({parameterType} {parameterName})
+        public static partial void Load({parameterSymbol.Type.ToDisplayString()} {parameterSymbol.Name})
         {{
-{string.Join(Environment.NewLine, extensionClass.Functions.Select(x => extLoaderFuncBuilder(x, parameterName)))}
+{string.Join(Environment.NewLine, extensionClass.Functions.Select(x => extLoaderFuncBuilder(x, parameterSymbol.Name)))}
         }}");
             }
 

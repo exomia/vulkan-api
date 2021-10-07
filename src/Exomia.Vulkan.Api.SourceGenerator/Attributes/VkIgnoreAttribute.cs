@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 {
     /// <summary> Attribute for vk ignore. This class cannot be inherited. </summary>
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
-    public sealed class VkIgnoreAttribute: Attribute
+    sealed class VkIgnoreAttribute: Attribute
     {
         /// <summary> Gets the name of the function. </summary>
         /// <value> The name of the function. </value>

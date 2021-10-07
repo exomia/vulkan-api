@@ -12,6 +12,7 @@
 
 using System;
 
+// ReSharper disable once CheckNamespace
 namespace Exomia.Vulkan.Api.Windows
 {
     [Flags]

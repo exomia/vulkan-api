@@ -14,6 +14,6 @@ namespace Exomia.Vulkan.Api.SourceGenerator
 {
     /// <summary> Attribute for vk extension generation. This class cannot be inherited. </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-    public sealed class VkExtGeneratorAttribute : Attribute { }
+    sealed class VkExtGeneratorAttribute : Attribute { }
 }
 
