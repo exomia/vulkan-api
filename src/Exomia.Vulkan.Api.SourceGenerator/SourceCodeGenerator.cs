@@ -43,7 +43,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
         {
             return $@"            fixed({fpi.TypeSymbol.ToDisplayString()} *p{fpi.Name} = &{fpi.Name}) 
             {{
-                *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Exomia.Vulkan.Api.Core.Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
+                *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Exomia.Vulkan.Api.SourceGenerator.Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
             }}";
         }
 
@@ -51,7 +51,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
         {
             return $@"            fixed({fpi.TypeSymbol.ToDisplayString()} *p{fpi.Name} = &{fpi.Name}) 
             {{
-                *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Exomia.Vulkan.Api.Core.Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
+                *p{fpi.Name} = ({fpi.TypeSymbol.ToDisplayString()})Exomia.Vulkan.Api.SourceGenerator.Utils.LoadVkFunction({paramName}, ""{GetUtf8StringAsUtf16(fpi.Name)}"");
             }}";
         }
 

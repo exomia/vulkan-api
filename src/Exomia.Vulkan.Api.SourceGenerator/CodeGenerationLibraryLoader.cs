@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.SourceGenerator
         internal static void AddLibraryFilesToContext(GeneratorPostInitializationContext context)
         {
             Assembly            assembly                 = typeof(CodeGenerationLibraryLoader).Assembly;
-            IEnumerable<string> embeddedLibraryCodeFiles = assembly.GetManifestResourceNames().Where(x => x.EndsWith(nameof(Attribute) + ".cs"));
+            IEnumerable<string> embeddedLibraryCodeFiles = assembly.GetManifestResourceNames().Where(x => x.EndsWith(".cs"));
 
             foreach (var codeFile in embeddedLibraryCodeFiles)
             {

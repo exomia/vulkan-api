@@ -11,16 +11,16 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.SourceGenerator
 {
-    internal static class Utils
+    static class Utils
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe void* LoadVkFunction(VkInstance vkInstance, string vkFunctionName)
+        public static unsafe void* LoadVkFunction(Exomia.Vulkan.Api.Core.VkInstance vkInstance, string vkFunctionName)
         {
             fixed (char* pVkFunctionName = vkFunctionName)
             {
-                void* vkInstanceProcAddr = Vk.GetInstanceProcAddr(vkInstance, (sbyte*)pVkFunctionName);
+                void* vkInstanceProcAddr = Exomia.Vulkan.Api.Core.Vk.GetInstanceProcAddr(vkInstance, (sbyte*)pVkFunctionName);
                 if (vkInstanceProcAddr != null)
                 {
                     return vkInstanceProcAddr;
@@ -30,11 +30,11 @@ namespace Exomia.Vulkan.Api.Core
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe void* LoadVkFunction(VkDevice vkDevice, string vkFunctionName)
+        public static unsafe void* LoadVkFunction(Exomia.Vulkan.Api.Core.VkDevice vkDevice, string vkFunctionName)
         {
             fixed (char* pVkFunctionName = vkFunctionName)
             {
-                void* vkDeviceProcAddr = Vk.GetDeviceProcAddr(vkDevice, (sbyte*)pVkFunctionName);
+                void* vkDeviceProcAddr = Exomia.Vulkan.Api.Core.Vk.GetDeviceProcAddr(vkDevice, (sbyte*)pVkFunctionName);
                 if (vkDeviceProcAddr != null)
                 {
                     return vkDeviceProcAddr;
