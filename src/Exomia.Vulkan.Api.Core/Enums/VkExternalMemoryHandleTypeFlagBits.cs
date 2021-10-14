@@ -32,6 +32,7 @@ namespace Exomia.Vulkan.Api.Core
         HOST_ALLOCATION_BIT_EXT             = 0x00000080,
         HOST_MAPPED_FOREIGN_MEMORY_BIT_EXT  = 0x00000100,
         ZIRCON_VMO_BIT_FUCHSIA              = 0x00000800,
+        RDMA_ADDRESS_BIT_NV                 = 0x00001000,
         OPAQUE_FD_BIT_KHR                   = OPAQUE_FD_BIT,
         OPAQUE_WIN32_BIT_KHR                = OPAQUE_WIN32_BIT,
         OPAQUE_WIN32_KMT_BIT_KHR            = OPAQUE_WIN32_KMT_BIT,

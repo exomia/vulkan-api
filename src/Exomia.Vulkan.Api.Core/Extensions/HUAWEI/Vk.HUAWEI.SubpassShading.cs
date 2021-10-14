@@ -26,6 +26,12 @@ namespace Exomia.Vulkan.Api.Core.Extensions.HUAWEI
         public const string VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME = "VK_HUAWEI_subpass_shading";
 
         public static readonly delegate*<
+            VkDevice,     /* device */
+            VkRenderPass, /* renderpass */
+            VkExtent2D*,  /* pMaxWorkgroupSize */
+            VkResult> vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI = null;
+
+        public static readonly delegate*<
             VkCommandBuffer, /* commandBuffer */
             void> vkCmdSubpassShadingHUAWEI = null;
 

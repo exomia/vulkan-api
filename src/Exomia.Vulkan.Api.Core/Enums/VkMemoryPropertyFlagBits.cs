@@ -30,6 +30,7 @@ namespace Exomia.Vulkan.Api.Core
         VIDEO_ENCODE_BIT_KHR    = 0x00000040,
         DEVICE_COHERENT_BIT_AMD = 0x00000040,
         DEVICE_UNCACHED_BIT_AMD = 0x00000080,
+        RDMA_CAPABLE_BIT_NV     = 0x00000100,
         FLAG_BITS_MAX_ENUM      = 0x7FFFFFFF
     }
 }
