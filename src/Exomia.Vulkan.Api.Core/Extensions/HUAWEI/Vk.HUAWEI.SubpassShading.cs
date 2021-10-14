@@ -35,7 +35,7 @@ namespace Exomia.Vulkan.Api.Core.Extensions.HUAWEI
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct VkSubpassShadingPipelineCreateInfoHUAWEI
     {
-        public const VkStructureType STYPE = VkStructureType.SUBPASSS_SHADING_PIPELINE_CREATE_INFO_HUAWEI;
+        public const VkStructureType STYPE = VkStructureType.SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI;
         public       VkStructureType sType;
         public       void*           pNext;
         public       VkRenderPass    renderPass;
