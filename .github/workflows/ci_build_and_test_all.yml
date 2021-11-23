@@ -47,3 +47,15 @@ jobs:
     - name: '[${{ matrix.projects }}] test ${{ matrix.configurations }}'
       run: |
         dotnet test tests/L0/Exomia.Vulkan.Api.${{ matrix.projects }}.Tests --configuration ${{ matrix.configurations }} --nologo -p:Platform=${{ matrix.plattforms }}
+  check:
+    if: ${{ always() }}  
+    name: '[CHECK] BUILD & TEST SUCCESS'
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    steps:    
+    - name: '[CHECK] build matrix status'
+      if: ${{ needs.build.result != 'success' }}
+      run: exit 1
+    - name: '[CHECK] test matrix status'
+      if: ${{ needs.test.result != 'success' }}
+      run: exit 1
