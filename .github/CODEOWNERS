@@ -1,0 +1,6 @@
+# These owners will be the default owners for everything in the repo.
+@baetz-daniel
+
+# code owners
+src/* @baetz-daniel @DanielBaumert
+tests/* @baetz-daniel @DanielBaumert
