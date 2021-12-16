@@ -25,7 +25,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
-        dotnet-version: '5.0.x'
+        dotnet-version: '6.0.x'
     - name: '[Core] build ${{ matrix.configurations }}'
       run: |
         dotnet build src/Exomia.Vulkan.Api.Core --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.platforms }}
@@ -42,7 +42,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
-        dotnet-version: '5.0.x'
+        dotnet-version: '6.0.x'
     - name: '[Core] test ${{ matrix.configurations }}'
       run: |
         dotnet test tests/L0/Exomia.Vulkan.Api.Core.Tests --configuration ${{ matrix.configurations }} --nologo -p:Platform=${{ matrix.platforms }}
@@ -57,7 +57,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
-        dotnet-version: '5.0.x'
+        dotnet-version: '6.0.x'
     - name: publish ${{ github.repository }} [v${{ github.event.inputs.version }}]
       run: |
         dotnet pack --configuration Debug --verbosity m --force --nologo -p:Platform=${{ matrix.platforms }} -p:Version=${{ github.event.inputs.version }}
@@ -80,7 +80,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
-        dotnet-version: '5.0.x'
+        dotnet-version: '6.0.x'
     - name: publish ${{ github.repository }} [v${{ github.event.inputs.version }}]
       run: |
         dotnet pack --configuration Release --verbosity m --force --nologo -p:Platform=${{ matrix.platforms }} -p:Version=${{ github.event.inputs.version }}

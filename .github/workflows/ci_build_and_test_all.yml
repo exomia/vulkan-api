@@ -25,7 +25,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
-        dotnet-version: '5.0.x'
+        dotnet-version: '6.0.x'
     - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
       run: |
         dotnet build src/Exomia.Vulkan.Api.${{ matrix.projects }} --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.plattforms }}
@@ -43,7 +43,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
-        dotnet-version: '5.0.x'
+        dotnet-version: '6.0.x'
     - name: '[${{ matrix.projects }}] test ${{ matrix.configurations }}'
       run: |
         dotnet test tests/L0/Exomia.Vulkan.Api.${{ matrix.projects }}.Tests --configuration ${{ matrix.configurations }} --nologo -p:Platform=${{ matrix.plattforms }}
