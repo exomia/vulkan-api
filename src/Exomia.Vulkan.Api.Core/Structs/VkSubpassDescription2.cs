@@ -10,28 +10,25 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkSubpassDescription2
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkSubpassDescription2
-    {
-        public const VkStructureType              STYPE = VkStructureType.SUBPASS_DESCRIPTION_2;
-        public       VkStructureType              sType;
-        public       void*                        pNext;
-        public       VkSubpassDescriptionFlagBits flags;
-        public       VkPipelineBindPoint          pipelineBindPoint;
-        public       uint                         viewMask;
-        public       uint                         inputAttachmentCount;
-        public       VkAttachmentReference2*      pInputAttachments;
-        public       uint                         colorAttachmentCount;
-        public       VkAttachmentReference2*      pColorAttachments;
-        public       VkAttachmentReference2*      pResolveAttachments;
-        public       VkAttachmentReference2*      pDepthStencilAttachment;
-        public       uint                         preserveAttachmentCount;
-        public       uint*                        pPreserveAttachments;
-    }
+    public const VkStructureType              STYPE = VkStructureType.SUBPASS_DESCRIPTION_2;
+    public       VkStructureType              sType;
+    public       void*                        pNext;
+    public       VkSubpassDescriptionFlagBits flags;
+    public       VkPipelineBindPoint          pipelineBindPoint;
+    public       uint                         viewMask;
+    public       uint                         inputAttachmentCount;
+    public       VkAttachmentReference2*      pInputAttachments;
+    public       uint                         colorAttachmentCount;
+    public       VkAttachmentReference2*      pColorAttachments;
+    public       VkAttachmentReference2*      pResolveAttachments;
+    public       VkAttachmentReference2*      pDepthStencilAttachment;
+    public       uint                         preserveAttachmentCount;
+    public       uint*                        pPreserveAttachments;
 }

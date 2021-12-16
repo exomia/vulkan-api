@@ -12,17 +12,16 @@ using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace Exomia.Vulkan.Api.SourceGenerator.Models
+namespace Exomia.Vulkan.Api.SourceGenerator.Models;
+
+struct VkExtensionClass
 {
-    struct VkExtensionClass
-    {
-        public string                    NamespaceName;
-        public string                    ClassName;
-        public string                    VarExtensionName;
-        public string                    ExtensionName;
-        public IMethodSymbol?            LoadFunction;
-        public List<FunctionPointerInfo> Functions;
-        public INamedTypeSymbol          Symbol;
-        public ClassDeclarationSyntax    Syntax;
-    }
+    public string                    NamespaceName;
+    public string                    ClassName;
+    public string                    VarExtensionName;
+    public string                    ExtensionName;
+    public IMethodSymbol?            LoadFunction;
+    public List<FunctionPointerInfo> Functions;
+    public INamedTypeSymbol          Symbol;
+    public ClassDeclarationSyntax    Syntax;
 }

@@ -10,22 +10,19 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceAccelerationStructureFeaturesKHR
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceAccelerationStructureFeaturesKHR
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        accelerationStructure;
-        public       VkBool32        accelerationStructureCaptureReplay;
-        public       VkBool32        accelerationStructureIndirectBuild;
-        public       VkBool32        accelerationStructureHostCommands;
-        public       VkBool32        descriptorBindingAccelerationStructureUpdateAfterBind;
-    }
+    public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkBool32        accelerationStructure;
+    public       VkBool32        accelerationStructureCaptureReplay;
+    public       VkBool32        accelerationStructureIndirectBuild;
+    public       VkBool32        accelerationStructureHostCommands;
+    public       VkBool32        descriptorBindingAccelerationStructureUpdateAfterBind;
 }

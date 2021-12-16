@@ -11,27 +11,23 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.AMD
-{
-    [VkExtGenerator]
-    public static partial class VkAmdDeviceCoherentMemory
-    {
-        public const int    VK_AMD_DEVICE_COHERENT_MEMORY                = 1;
-        public const int    VK_AMD_DEVICE_COHERENT_MEMORY_SPEC_VERSION   = 1;
-        public const string VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME = "VK_AMD_device_coherent_memory";
-    }
+namespace Exomia.Vulkan.Api.Core.Extensions.AMD;
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceCoherentMemoryFeaturesAMD
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        deviceCoherentMemory;
-    }
+[VkExtGenerator]
+public static partial class VkAmdDeviceCoherentMemory
+{
+    public const int    VK_AMD_DEVICE_COHERENT_MEMORY                = 1;
+    public const int    VK_AMD_DEVICE_COHERENT_MEMORY_SPEC_VERSION   = 1;
+    public const string VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME = "VK_AMD_device_coherent_memory";
+}
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceCoherentMemoryFeaturesAMD
+{
+    public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkBool32        deviceCoherentMemory;
 }

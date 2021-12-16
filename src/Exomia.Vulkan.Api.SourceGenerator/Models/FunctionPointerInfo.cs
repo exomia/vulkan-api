@@ -11,13 +11,12 @@
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
 
-namespace Exomia.Vulkan.Api.SourceGenerator.Models
+namespace Exomia.Vulkan.Api.SourceGenerator.Models;
+
+struct FunctionPointerInfo
 {
-    struct FunctionPointerInfo
-    {
-        public string                         Name;
-        public List<FunctionPointerParameter> Parameters;
-        public string                         ReturnType;
-        public ITypeSymbol                    TypeSymbol;
-    }
+    public string                         Name;
+    public List<FunctionPointerParameter> Parameters;
+    public string                         ReturnType;
+    public ITypeSymbol                    TypeSymbol;
 }

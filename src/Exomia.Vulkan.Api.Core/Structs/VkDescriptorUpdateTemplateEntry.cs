@@ -10,20 +10,17 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public struct VkDescriptorUpdateTemplateEntry
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkDescriptorUpdateTemplateEntry
-    {
-        public uint             dstBinding;
-        public uint             dstArrayElement;
-        public uint             descriptorCount;
-        public VkDescriptorType descriptorType;
-        public nuint            offset;
-        public nuint            stride;
-    }
+    public uint             dstBinding;
+    public uint             dstArrayElement;
+    public uint             descriptorCount;
+    public VkDescriptorType descriptorType;
+    public nuint            offset;
+    public nuint            stride;
 }

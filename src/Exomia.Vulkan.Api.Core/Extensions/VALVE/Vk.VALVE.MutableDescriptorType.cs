@@ -11,46 +11,46 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-using Exomia.Vulkan.Api.SourceGenerator;
+using Exomia.Vulkan.Api.Core.Attributes;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.VALVE
+namespace Exomia.Vulkan.Api.Core.Extensions.VALVE;
+
+[VkRequires(Vk.REQUIRES_VULKAN_10)]
+[VkRequires(Vk.VK_KHR_MAINTENANCE3_EXTENSION_NAME)]
+[VkExtGenerator]
+public static partial class VkValveMutableDescriptorType
 {
-    [VkExtGenerator]
-    public static partial class VkValveMutableDescriptorType
-    {
-        public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE                = 1;
-        public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION   = 1;
-        public const string VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME = "VK_VALVE_mutable_descriptor_type";
+    public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE                = 1;
+    public const int    VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_SPEC_VERSION   = 1;
+    public const string VK_VALVE_MUTABLE_DESCRIPTOR_TYPE_EXTENSION_NAME = "VK_VALVE_mutable_descriptor_type";
 
-        public static partial void Load(VkDevice vkDevice);
-    }
+    public static partial void Load(VkDevice vkDevice);
+}
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkMutableDescriptorTypeListVALVE
-    {
-        public uint              descriptorTypeCount;
-        public VkDescriptorType* pDescriptorTypes;
-    }
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkMutableDescriptorTypeListVALVE
+{
+    public uint              descriptorTypeCount;
+    public VkDescriptorType* pDescriptorTypes;
+}
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkMutableDescriptorTypeCreateInfoVALVE
-    {
-        public const VkStructureType                   STYPE = VkStructureType.MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE;
-        public       VkStructureType                   sType;
-        public       void*                             pNext;
-        public       uint                              mutableDescriptorTypeListCount;
-        public       VkMutableDescriptorTypeListVALVE* pMutableDescriptorTypeLists;
-    }
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkMutableDescriptorTypeCreateInfoVALVE
+{
+    public const VkStructureType                   STYPE = VkStructureType.MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE;
+    public       VkStructureType                   sType;
+    public       void*                             pNext;
+    public       uint                              mutableDescriptorTypeListCount;
+    public       VkMutableDescriptorTypeListVALVE* pMutableDescriptorTypeLists;
+}
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        mutableDescriptorType;
-    }
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE
+{
+    public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkBool32        mutableDescriptorType;
 }

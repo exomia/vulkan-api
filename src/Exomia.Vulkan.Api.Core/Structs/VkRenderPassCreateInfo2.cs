@@ -10,26 +10,23 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkRenderPassCreateInfo2
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkRenderPassCreateInfo2
-    {
-        public const VkStructureType            STYPE = VkStructureType.RENDER_PASS_CREATE_INFO_2;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       VkRenderPassCreateFlagBits flags;
-        public       uint                       attachmentCount;
-        public       VkAttachmentDescription2*  pAttachments;
-        public       uint                       subpassCount;
-        public       VkSubpassDescription2*     pSubpasses;
-        public       uint                       dependencyCount;
-        public       VkSubpassDependency2*      pDependencies;
-        public       uint                       correlatedViewMaskCount;
-        public       uint*                      pCorrelatedViewMasks;
-    }
+    public const VkStructureType            STYPE = VkStructureType.RENDER_PASS_CREATE_INFO_2;
+    public       VkStructureType            sType;
+    public       void*                      pNext;
+    public       VkRenderPassCreateFlagBits flags;
+    public       uint                       attachmentCount;
+    public       VkAttachmentDescription2*  pAttachments;
+    public       uint                       subpassCount;
+    public       VkSubpassDescription2*     pSubpasses;
+    public       uint                       dependencyCount;
+    public       VkSubpassDependency2*      pDependencies;
+    public       uint                       correlatedViewMaskCount;
+    public       uint*                      pCorrelatedViewMasks;
 }

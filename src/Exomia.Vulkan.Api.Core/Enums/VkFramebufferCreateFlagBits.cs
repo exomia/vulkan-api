@@ -10,18 +10,15 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[Flags]
+public enum VkFramebufferCreateFlagBits
 {
-    [Flags]
-    public enum VkFramebufferCreateFlagBits
-    {
-        IMAGELESS_BIT      = 0x00000001,
-        IMAGELESS_BIT_KHR  = IMAGELESS_BIT,
-        FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
-    }
+    IMAGELESS_BIT      = 0x00000001,
+    IMAGELESS_BIT_KHR  = IMAGELESS_BIT,
+    FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
 }

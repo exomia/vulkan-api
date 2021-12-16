@@ -10,12 +10,11 @@
 
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace Exomia.Vulkan.Api.SourceGenerator.Models
+namespace Exomia.Vulkan.Api.SourceGenerator.Models;
+
+struct FunctionPointerParameter
 {
-    struct FunctionPointerParameter
-    {
-        public FunctionPointerParameterSyntax? ParameterSyntax;
-        public string                          Name;
-        public string                          Type;
-    }
+    public FunctionPointerParameterSyntax? ParameterSyntax;
+    public string                          Name;
+    public string                          Type;
 }

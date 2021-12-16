@@ -10,18 +10,15 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[Flags]
+public enum VkImageViewCreateFlagBits
 {
-    [Flags]
-    public enum VkImageViewCreateFlagBits
-    {
-        VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DYNAMIC_BIT_EXT  = 0x00000001,
-        VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DEFERRED_BIT_EXT = 0x00000002,
-        VK_IMAGE_VIEW_CREATE_FLAG_BITS_MAX_ENUM                    = 0x7FFFFFFF
-    }
+    VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DYNAMIC_BIT_EXT  = 0x00000001,
+    VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DEFERRED_BIT_EXT = 0x00000002,
+    VK_IMAGE_VIEW_CREATE_FLAG_BITS_MAX_ENUM                    = 0x7FFFFFFF
 }

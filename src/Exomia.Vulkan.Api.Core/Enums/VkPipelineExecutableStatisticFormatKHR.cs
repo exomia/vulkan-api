@@ -10,19 +10,16 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkPipelineExecutableStatisticFormatKHR
 {
-    public enum VkPipelineExecutableStatisticFormatKHR
-    {
-        BOOL32_KHR   = 0,
-        INT64_KHR    = 1,
-        UINT64_KHR   = 2,
-        FLOAT64_KHR  = 3,
-        MAX_ENUM_KHR = 0x7FFFFFFF
-    }
+    BOOL32_KHR   = 0,
+    INT64_KHR    = 1,
+    UINT64_KHR   = 2,
+    FLOAT64_KHR  = 3,
+    MAX_ENUM_KHR = 0x7FFFFFFF
 }

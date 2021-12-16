@@ -10,29 +10,26 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkRayTracingPipelineCreateInfoKHR
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkRayTracingPipelineCreateInfoKHR
-    {
-        public const VkStructureType                             STYPE = VkStructureType.RAY_TRACING_PIPELINE_CREATE_INFO_KHR;
-        public       VkStructureType                             sType;
-        public       void*                                       pNext;
-        public       VkPipelineCreateFlagBits                    flags;
-        public       uint                                        stageCount;
-        public       VkPipelineShaderStageCreateInfo*            pStages;
-        public       uint                                        groupCount;
-        public       VkRayTracingShaderGroupCreateInfoKHR*       pGroups;
-        public       uint                                        maxPipelineRayRecursionDepth;
-        public       VkPipelineLibraryCreateInfoKHR*             pLibraryInfo;
-        public       VkRayTracingPipelineInterfaceCreateInfoKHR* pLibraryInterface;
-        public       VkPipelineDynamicStateCreateInfo*           pDynamicState;
-        public       VkPipelineLayout                            layout;
-        public       VkPipeline                                  basePipelineHandle;
-        public       int                                         basePipelineIndex;
-    }
+    public const VkStructureType                             STYPE = VkStructureType.RAY_TRACING_PIPELINE_CREATE_INFO_KHR;
+    public       VkStructureType                             sType;
+    public       void*                                       pNext;
+    public       VkPipelineCreateFlagBits                    flags;
+    public       uint                                        stageCount;
+    public       VkPipelineShaderStageCreateInfo*            pStages;
+    public       uint                                        groupCount;
+    public       VkRayTracingShaderGroupCreateInfoKHR*       pGroups;
+    public       uint                                        maxPipelineRayRecursionDepth;
+    public       VkPipelineLibraryCreateInfoKHR*             pLibraryInfo;
+    public       VkRayTracingPipelineInterfaceCreateInfoKHR* pLibraryInterface;
+    public       VkPipelineDynamicStateCreateInfo*           pDynamicState;
+    public       VkPipelineLayout                            layout;
+    public       VkPipeline                                  basePipelineHandle;
+    public       int                                         basePipelineIndex;
 }

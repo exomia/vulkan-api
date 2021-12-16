@@ -10,30 +10,27 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[Flags]
+public enum VkImageAspectFlagBits
 {
-    [Flags]
-    public enum VkImageAspectFlagBits
-    {
-        COLOR_BIT              = 0x00000001,
-        DEPTH_BIT              = 0x00000002,
-        STENCIL_BIT            = 0x00000004,
-        METADATA_BIT           = 0x00000008,
-        PLANE_0_BIT            = 0x00000010,
-        PLANE_1_BIT            = 0x00000020,
-        PLANE_2_BIT            = 0x00000040,
-        MEMORY_PLANE_0_BIT_EXT = 0x00000080,
-        MEMORY_PLANE_1_BIT_EXT = 0x00000100,
-        MEMORY_PLANE_2_BIT_EXT = 0x00000200,
-        MEMORY_PLANE_3_BIT_EXT = 0x00000400,
-        PLANE_0_BIT_KHR        = PLANE_0_BIT,
-        PLANE_1_BIT_KHR        = PLANE_1_BIT,
-        PLANE_2_BIT_KHR        = PLANE_2_BIT,
-        FLAG_BITS_MAX_ENUM     = 0x7FFFFFFF
-    }
+    COLOR_BIT              = 0x00000001,
+    DEPTH_BIT              = 0x00000002,
+    STENCIL_BIT            = 0x00000004,
+    METADATA_BIT           = 0x00000008,
+    PLANE_0_BIT            = 0x00000010,
+    PLANE_1_BIT            = 0x00000020,
+    PLANE_2_BIT            = 0x00000040,
+    MEMORY_PLANE_0_BIT_EXT = 0x00000080,
+    MEMORY_PLANE_1_BIT_EXT = 0x00000100,
+    MEMORY_PLANE_2_BIT_EXT = 0x00000200,
+    MEMORY_PLANE_3_BIT_EXT = 0x00000400,
+    PLANE_0_BIT_KHR        = PLANE_0_BIT,
+    PLANE_1_BIT_KHR        = PLANE_1_BIT,
+    PLANE_2_BIT_KHR        = PLANE_2_BIT,
+    FLAG_BITS_MAX_ENUM     = 0x7FFFFFFF
 }

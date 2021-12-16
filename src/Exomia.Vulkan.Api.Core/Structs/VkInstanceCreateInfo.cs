@@ -10,23 +10,20 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkInstanceCreateInfo
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkInstanceCreateInfo
-    {
-        public const VkStructureType          STYPE = VkStructureType.INSTANCE_CREATE_INFO;
-        public       VkStructureType          sType;
-        public       void*                    pNext;
-        public       VkInstanceCreateFlagBits flags;
-        public       VkApplicationInfo*       pApplicationInfo;
-        public       uint                     enabledLayerCount;
-        public       sbyte**                  ppEnabledLayerNames;
-        public       uint                     enabledExtensionCount;
-        public       sbyte**                  ppEnabledExtensionNames;
-    }
+    public const VkStructureType          STYPE = VkStructureType.INSTANCE_CREATE_INFO;
+    public       VkStructureType          sType;
+    public       void*                    pNext;
+    public       VkInstanceCreateFlagBits flags;
+    public       VkApplicationInfo*       pApplicationInfo;
+    public       uint                     enabledLayerCount;
+    public       sbyte**                  ppEnabledLayerNames;
+    public       uint                     enabledExtensionCount;
+    public       sbyte**                  ppEnabledExtensionNames;
 }

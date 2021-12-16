@@ -10,17 +10,14 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkSubpassContents
 {
-    public enum VkSubpassContents
-    {
-        INLINE                    = 0,
-        SECONDARY_COMMAND_BUFFERS = 1,
-        MAX_ENUM                  = 0x7FFFFFFF
-    }
+    INLINE                    = 0,
+    SECONDARY_COMMAND_BUFFERS = 1,
+    MAX_ENUM                  = 0x7FFFFFFF
 }

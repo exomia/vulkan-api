@@ -10,20 +10,17 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkSystemAllocationScope
 {
-    public enum VkSystemAllocationScope
-    {
-        COMMAND  = 0,
-        OBJECT   = 1,
-        CACHE    = 2,
-        DEVICE   = 3,
-        INSTANCE = 4,
-        MAX_ENUM = 0x7FFFFFFF
-    }
+    COMMAND  = 0,
+    OBJECT   = 1,
+    CACHE    = 2,
+    DEVICE   = 3,
+    INSTANCE = 4,
+    MAX_ENUM = 0x7FFFFFFF
 }

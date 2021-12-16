@@ -10,18 +10,15 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkDescriptorUpdateTemplateType
 {
-    public enum VkDescriptorUpdateTemplateType
-    {
-        DESCRIPTOR_SET       = 0,
-        PUSH_DESCRIPTORS_KHR = 1,
-        DESCRIPTOR_SET_KHR   = DESCRIPTOR_SET,
-        MAX_ENUM             = 0x7FFFFFFF
-    }
+    DESCRIPTOR_SET       = 0,
+    PUSH_DESCRIPTORS_KHR = 1,
+    DESCRIPTOR_SET_KHR   = DESCRIPTOR_SET,
+    MAX_ENUM             = 0x7FFFFFFF
 }

@@ -11,34 +11,29 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-using System.Runtime.InteropServices;
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.AMD
+namespace Exomia.Vulkan.Api.Core.Extensions.AMD;
+
+[VkExtGenerator]
+public static partial class VkAmdPipelineCompilerControl
 {
-    [VkExtGenerator]
-    public static partial class VkAmdPipelineCompilerControl
-    {
-        public const int    VK_AMD_PIPELINE_COMPILER_CONTROL                = 1;
-        public const int    VK_AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION   = 1;
-        public const string VK_AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME = "VK_AMD_pipeline_compiler_control";
-    }
+    public const int    VK_AMD_PIPELINE_COMPILER_CONTROL                = 1;
+    public const int    VK_AMD_PIPELINE_COMPILER_CONTROL_SPEC_VERSION   = 1;
+    public const string VK_AMD_PIPELINE_COMPILER_CONTROL_EXTENSION_NAME = "VK_AMD_pipeline_compiler_control";
+}
 
-    [Flags]
-    public enum VkPipelineCompilerControlFlagsAMD
-    {
-        MAX_ENUM_AMD = 0x7FFFFFFF
-    }
+[Flags]
+public enum VkPipelineCompilerControlFlagsAMD
+{
+    MAX_ENUM_AMD = 0x7FFFFFFF
+}
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineCompilerControlCreateInfoAMD
-    {
-        public const VkStructureType                   STYPE = VkStructureType.PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD;
-        public       VkStructureType                   sType;
-        public       void*                             pNext;
-        public       VkPipelineCompilerControlFlagsAMD compilerControlFlags;
-    }
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPipelineCompilerControlCreateInfoAMD
+{
+    public const VkStructureType                   STYPE = VkStructureType.PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD;
+    public       VkStructureType                   sType;
+    public       void*                             pNext;
+    public       VkPipelineCompilerControlFlagsAMD compilerControlFlags;
 }

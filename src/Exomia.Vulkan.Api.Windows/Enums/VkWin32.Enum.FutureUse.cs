@@ -13,14 +13,13 @@
 using System;
 
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Windows
+namespace Exomia.Vulkan.Api.Windows;
+
+[Flags]
+public enum VkWin32SurfaceCreateFlagsKHR
 {
-    [Flags]
-    public enum VkWin32SurfaceCreateFlagsKHR
-    {
-        /// <summary>
-        ///     Reserved for future use
-        /// </summary>
-        Reserved = 0
-    }
+    /// <summary>
+    ///     Reserved for future use
+    /// </summary>
+    Reserved = 0
 }

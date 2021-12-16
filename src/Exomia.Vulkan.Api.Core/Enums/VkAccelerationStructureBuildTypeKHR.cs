@@ -13,13 +13,12 @@
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkAccelerationStructureBuildTypeKHR
 {
-    public enum VkAccelerationStructureBuildTypeKHR
-    {
-        HOST_KHR           = 0,
-        DEVICE_KHR         = 1,
-        HOST_OR_DEVICE_KHR = 2,
-        MAX_ENUM_KHR       = 0x7FFFFFFF
-    }
+    HOST_KHR           = 0,
+    DEVICE_KHR         = 1,
+    HOST_OR_DEVICE_KHR = 2,
+    MAX_ENUM_KHR       = 0x7FFFFFFF
 }

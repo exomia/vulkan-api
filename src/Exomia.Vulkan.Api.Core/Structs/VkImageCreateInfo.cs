@@ -10,30 +10,27 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkImageCreateInfo
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkImageCreateInfo
-    {
-        public const VkStructureType       STYPE = VkStructureType.IMAGE_CREATE_INFO;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       VkImageCreateFlagBits flags;
-        public       VkImageType           imageType;
-        public       VkFormat              format;
-        public       VkExtent3D            extent;
-        public       uint                  mipLevels;
-        public       uint                  arrayLayers;
-        public       VkSampleCountFlagBits samples;
-        public       VkImageTiling         tiling;
-        public       VkImageUsageFlagBits  usage;
-        public       VkSharingMode         sharingMode;
-        public       uint                  queueFamilyIndexCount;
-        public       uint*                 pQueueFamilyIndices;
-        public       VkImageLayout         initialLayout;
-    }
+    public const VkStructureType       STYPE = VkStructureType.IMAGE_CREATE_INFO;
+    public       VkStructureType       sType;
+    public       void*                 pNext;
+    public       VkImageCreateFlagBits flags;
+    public       VkImageType           imageType;
+    public       VkFormat              format;
+    public       VkExtent3D            extent;
+    public       uint                  mipLevels;
+    public       uint                  arrayLayers;
+    public       VkSampleCountFlagBits samples;
+    public       VkImageTiling         tiling;
+    public       VkImageUsageFlagBits  usage;
+    public       VkSharingMode         sharingMode;
+    public       uint                  queueFamilyIndexCount;
+    public       uint*                 pQueueFamilyIndices;
+    public       VkImageLayout         initialLayout;
 }

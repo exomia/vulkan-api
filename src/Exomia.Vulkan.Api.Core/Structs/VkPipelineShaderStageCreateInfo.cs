@@ -10,22 +10,19 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPipelineShaderStageCreateInfo
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineShaderStageCreateInfo
-    {
-        public const VkStructureType                     STYPE = VkStructureType.PIPELINE_SHADER_STAGE_CREATE_INFO;
-        public       VkStructureType                     sType;
-        public       void*                               pNext;
-        public       VkPipelineShaderStageCreateFlagBits flags;
-        public       VkShaderStageFlagBits               stage;
-        public       VkShaderModule                      module;
-        public       sbyte*                              pName;
-        public       VkSpecializationInfo*               pSpecializationInfo;
-    }
+    public const VkStructureType                     STYPE = VkStructureType.PIPELINE_SHADER_STAGE_CREATE_INFO;
+    public       VkStructureType                     sType;
+    public       void*                               pNext;
+    public       VkPipelineShaderStageCreateFlagBits flags;
+    public       VkShaderStageFlagBits               stage;
+    public       VkShaderModule                      module;
+    public       sbyte*                              pName;
+    public       VkSpecializationInfo*               pSpecializationInfo;
 }

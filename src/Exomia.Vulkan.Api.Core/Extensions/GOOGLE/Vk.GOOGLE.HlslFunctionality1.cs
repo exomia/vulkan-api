@@ -11,17 +11,14 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE
+namespace Exomia.Vulkan.Api.Core.Extensions.GOOGLE;
+
+[VkExtGenerator]
+public static partial class VkGoogleHlslFunctionality1
 {
-    [VkExtGenerator]
-    public static partial class VkGoogleHlslFunctionality1
-    {
-        public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1                = 1;
-        public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1_SPEC_VERSION   = 1;
-        public const string VK_GOOGLE_HLSL_FUNCTIONALITY1_EXTENSION_NAME = "VK_GOOGLE_hlsl_functionality1";
-    }
+    public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1                = 1;
+    public const int    VK_GOOGLE_HLSL_FUNCTIONALITY1_SPEC_VERSION   = 1;
+    public const string VK_GOOGLE_HLSL_FUNCTIONALITY1_EXTENSION_NAME = "VK_GOOGLE_hlsl_functionality1";
 }

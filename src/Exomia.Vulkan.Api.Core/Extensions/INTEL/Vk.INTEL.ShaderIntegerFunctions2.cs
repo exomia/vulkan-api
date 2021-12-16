@@ -11,27 +11,23 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.INTEL
-{
-    [VkExtGenerator]
-    public static partial class VkIntelShaderIntegerFunctions2
-    {
-        public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2                = 1;
-        public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2_SPEC_VERSION   = 1;
-        public const string VK_INTEL_SHADER_INTEGER_FUNCTIONS2_EXTENSION_NAME = "VK_INTEL_shader_integer_functions2";
-    }
+namespace Exomia.Vulkan.Api.Core.Extensions.INTEL;
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        shaderIntegerFunctions2;
-    }
+[VkExtGenerator]
+public static partial class VkIntelShaderIntegerFunctions2
+{
+    public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2                = 1;
+    public const int    VK_INTEL_SHADER_INTEGER_FUNCTIONS2_SPEC_VERSION   = 1;
+    public const string VK_INTEL_SHADER_INTEGER_FUNCTIONS2_EXTENSION_NAME = "VK_INTEL_shader_integer_functions2";
+}
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL
+{
+    public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkBool32        shaderIntegerFunctions2;
 }

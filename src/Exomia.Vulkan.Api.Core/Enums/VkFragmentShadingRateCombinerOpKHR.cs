@@ -10,20 +10,17 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkFragmentShadingRateCombinerOpKHR
 {
-    public enum VkFragmentShadingRateCombinerOpKHR
-    {
-        KEEP_KHR     = 0,
-        REPLACE_KHR  = 1,
-        MIN_KHR      = 2,
-        MAX_KHR      = 3,
-        MUL_KHR      = 4,
-        MAX_ENUM_KHR = 0x7FFFFFFF
-    }
+    KEEP_KHR     = 0,
+    REPLACE_KHR  = 1,
+    MIN_KHR      = 2,
+    MAX_KHR      = 3,
+    MUL_KHR      = 4,
+    MAX_ENUM_KHR = 0x7FFFFFFF
 }

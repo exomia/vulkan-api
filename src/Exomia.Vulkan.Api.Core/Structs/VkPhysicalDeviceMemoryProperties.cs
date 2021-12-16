@@ -10,18 +10,15 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public struct VkPhysicalDeviceMemoryProperties
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkPhysicalDeviceMemoryProperties
-    {
-        public uint                    memoryTypeCount;
-        public VkArray32<VkMemoryType> memoryTypes;
-        public uint                    memoryHeapCount;
-        public VkArray16<VkMemoryHeap> memoryHeaps;
-    }
+    public uint                    memoryTypeCount;
+    public VkArray32<VkMemoryType> memoryTypes;
+    public uint                    memoryHeapCount;
+    public VkArray16<VkMemoryHeap> memoryHeaps;
 }

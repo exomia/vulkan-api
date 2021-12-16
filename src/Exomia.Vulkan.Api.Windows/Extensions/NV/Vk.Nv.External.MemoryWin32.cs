@@ -19,43 +19,42 @@ using Exomia.Vulkan.Api.Windows.Native;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Windows.Extensions.NV
+namespace Exomia.Vulkan.Api.Windows.Extensions.NV;
+
+[Obsolete(
+    "Deprecated by VK_KHR_external_memory_win32 extension", false,
+    UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory_win32.html#_deprecation_state")]
+[VkExtGenerator]
+public static unsafe partial class VkNvExternalMemoryWin32
 {
-    [Obsolete(
-        "Deprecated by VK_KHR_external_memory_win32 extension", false,
-        UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_external_memory_win32.html#_deprecation_state")]
-    [VkExtGenerator]
-    public static unsafe partial class VkNvExternalMemoryWin32
-    {
-        public const int    VK_NV_EXTERNAL_MEMORY_WIN32                = 1;
-        public const int    VK_NV_EXTERNAL_MEMORY_WIN32_SPEC_VERSION   = 1;
-        public const string VK_NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME = "VK_NV_external_memory_win32";
-        
-        public static readonly delegate*<
-            VkDevice,                          /* commandBuffer */
-            VkDeviceMemory,                    /* lineStippleFactor */
-            VkExternalMemoryHandleTypeFlagsNV, /* lineStipplePattern */
-            IntPtr,                            /* pHandle */
-            VkResult> vkGetMemoryWin32HandleNV = null;
-        
-        public static partial void Load(VkDevice vkDevice);
-    }
+    public const int    VK_NV_EXTERNAL_MEMORY_WIN32                = 1;
+    public const int    VK_NV_EXTERNAL_MEMORY_WIN32_SPEC_VERSION   = 1;
+    public const string VK_NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME = "VK_NV_external_memory_win32";
 
-    public unsafe struct VkExportMemoryWin32HandleInfoNV
-    {
-        public const VkStructureType      STYPE = VkStructureType.EXPORT_MEMORY_WIN32_HANDLE_INFO_NV;
-        public       VkStructureType      sType;
-        public       void*                pNext;
-        public       SECURITY_ATTRIBUTES* pAttributes;
-        public       uint                 dwAccess;
-    }
+    public static readonly delegate*<
+        VkDevice,                          /* commandBuffer */
+        VkDeviceMemory,                    /* lineStippleFactor */
+        VkExternalMemoryHandleTypeFlagsNV, /* lineStipplePattern */
+        IntPtr,                            /* pHandle */
+        VkResult> vkGetMemoryWin32HandleNV = null;
 
-    public unsafe struct VkImportMemoryWin32HandleInfoNV
-    {
-        public const VkStructureType                   STYPE = VkStructureType.IMPORT_MEMORY_WIN32_HANDLE_INFO_NV;
-        public       VkStructureType                   sType;
-        public       void*                             pNext;
-        public       VkExternalMemoryHandleTypeFlagsNV handleType;
-        public       IntPtr                            handle;
-    }
+    public static partial void Load(VkDevice vkDevice);
+}
+
+public unsafe struct VkExportMemoryWin32HandleInfoNV
+{
+    public const VkStructureType      STYPE = VkStructureType.EXPORT_MEMORY_WIN32_HANDLE_INFO_NV;
+    public       VkStructureType      sType;
+    public       void*                pNext;
+    public       SECURITY_ATTRIBUTES* pAttributes;
+    public       uint                 dwAccess;
+}
+
+public unsafe struct VkImportMemoryWin32HandleInfoNV
+{
+    public const VkStructureType                   STYPE = VkStructureType.IMPORT_MEMORY_WIN32_HANDLE_INFO_NV;
+    public       VkStructureType                   sType;
+    public       void*                             pNext;
+    public       VkExternalMemoryHandleTypeFlagsNV handleType;
+    public       IntPtr                            handle;
 }

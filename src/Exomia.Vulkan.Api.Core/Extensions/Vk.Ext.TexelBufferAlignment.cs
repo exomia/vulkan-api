@@ -11,38 +11,34 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
-namespace Exomia.Vulkan.Api.Core.Extensions
+namespace Exomia.Vulkan.Api.Core.Extensions;
+
+[VkExtGenerator]
+public static partial class VkExtTexelBufferAlignment
 {
-    [VkExtGenerator]
-    public static partial class VkExtTexelBufferAlignment
-    {
-        public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT                = 1;
-        public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT_SPEC_VERSION   = 1;
-        public const string VK_EXT_TEXEL_BUFFER_ALIGNMENT_EXTENSION_NAME = "VK_EXT_texel_buffer_alignment";
-    }
+    public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT                = 1;
+    public const int    VK_EXT_TEXEL_BUFFER_ALIGNMENT_SPEC_VERSION   = 1;
+    public const string VK_EXT_TEXEL_BUFFER_ALIGNMENT_EXTENSION_NAME = "VK_EXT_texel_buffer_alignment";
+}
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        texelBufferAlignment;
-    }
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT
+{
+    public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkBool32        texelBufferAlignment;
+}
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkDeviceSize    storageTexelBufferOffsetAlignmentBytes;
-        public       VkBool32        storageTexelBufferOffsetSingleTexelAlignment;
-        public       VkDeviceSize    uniformTexelBufferOffsetAlignmentBytes;
-        public       VkBool32        uniformTexelBufferOffsetSingleTexelAlignment;
-    }
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT
+{
+    public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES_EXT;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkDeviceSize    storageTexelBufferOffsetAlignmentBytes;
+    public       VkBool32        storageTexelBufferOffsetSingleTexelAlignment;
+    public       VkDeviceSize    uniformTexelBufferOffsetAlignmentBytes;
+    public       VkBool32        uniformTexelBufferOffsetSingleTexelAlignment;
 }

@@ -10,21 +10,18 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkImportSemaphoreFdInfoKHR
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkImportSemaphoreFdInfoKHR
-    {
-        public const VkStructureType                       STYPE = VkStructureType.IMPORT_SEMAPHORE_FD_INFO_KHR;
-        public       VkStructureType                       sType;
-        public       void*                                 pNext;
-        public       VkSemaphore                           semaphore;
-        public       VkSemaphoreImportFlagBits             flags;
-        public       VkExternalSemaphoreHandleTypeFlagBits handleType;
-        public       int                                   fd;
-    }
+    public const VkStructureType                       STYPE = VkStructureType.IMPORT_SEMAPHORE_FD_INFO_KHR;
+    public       VkStructureType                       sType;
+    public       void*                                 pNext;
+    public       VkSemaphore                           semaphore;
+    public       VkSemaphoreImportFlagBits             flags;
+    public       VkExternalSemaphoreHandleTypeFlagBits handleType;
+    public       int                                   fd;
 }

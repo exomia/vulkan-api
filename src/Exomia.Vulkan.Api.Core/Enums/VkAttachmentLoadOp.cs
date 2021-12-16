@@ -10,18 +10,15 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkAttachmentLoadOp
 {
-    public enum VkAttachmentLoadOp
-    {
-        LOAD      = 0,
-        CLEAR     = 1,
-        DONT_CARE = 2,
-        MAX_ENUM  = 0x7FFFFFFF
-    }
+    LOAD      = 0,
+    CLEAR     = 1,
+    DONT_CARE = 2,
+    MAX_ENUM  = 0x7FFFFFFF
 }

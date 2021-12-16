@@ -11,17 +11,14 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.AMD
+namespace Exomia.Vulkan.Api.Core.Extensions.AMD;
+
+[VkExtGenerator]
+public static partial class VkAmdShaderBallot
 {
-    [VkExtGenerator]
-    public static partial class VkAmdShaderBallot
-    {
-        public const int    VK_AMD_SHADER_BALLOT                = 1;
-        public const int    VK_AMD_SHADER_BALLOT_SPEC_VERSION   = 1;
-        public const string VK_AMD_SHADER_BALLOT_EXTENSION_NAME = "VK_AMD_shader_ballot";
-    }
+    public const int    VK_AMD_SHADER_BALLOT                = 1;
+    public const int    VK_AMD_SHADER_BALLOT_SPEC_VERSION   = 1;
+    public const string VK_AMD_SHADER_BALLOT_EXTENSION_NAME = "VK_AMD_shader_ballot";
 }

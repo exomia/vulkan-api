@@ -10,21 +10,18 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPerformanceCounterKHR
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPerformanceCounterKHR
-    {
-        public const VkStructureType                STYPE = VkStructureType.PERFORMANCE_COUNTER_KHR;
-        public       VkStructureType                sType;
-        public       void*                          pNext;
-        public       VkPerformanceCounterUnitKHR    unit;
-        public       VkPerformanceCounterScopeKHR   scope;
-        public       VkPerformanceCounterStorageKHR storage;
-        public fixed byte                           uuid[(int)Vk.VK_UUID_SIZE];
-    }
+    public const VkStructureType                STYPE = VkStructureType.PERFORMANCE_COUNTER_KHR;
+    public       VkStructureType                sType;
+    public       void*                          pNext;
+    public       VkPerformanceCounterUnitKHR    unit;
+    public       VkPerformanceCounterScopeKHR   scope;
+    public       VkPerformanceCounterStorageKHR storage;
+    public fixed byte                           uuid[(int)Vk.VK_UUID_SIZE];
 }

@@ -10,54 +10,51 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public readonly unsafe struct VkCommandBuffer
 {
-    public readonly unsafe struct VkCommandBuffer
-    {
-        public static readonly VkCommandBuffer Null = (VkCommandBuffer)null;
+    public static readonly VkCommandBuffer Null = (VkCommandBuffer)null;
 #pragma warning disable 649
-        private readonly void* _ptr;
+    private readonly void* _ptr;
 #pragma warning restore 649
 
-        public static explicit operator VkCommandBuffer(void* ptr)
-        {
-            VkCommandBuffer value;
-            *(void**)&value = ptr;
-            return value;
-        }
+    public static explicit operator VkCommandBuffer(void* ptr)
+    {
+        VkCommandBuffer value;
+        *(void**)&value = ptr;
+        return value;
+    }
 
-        public static bool operator ==(VkCommandBuffer left, VkCommandBuffer right)
-        {
-            return left._ptr == right._ptr;
-        }
+    public static bool operator ==(VkCommandBuffer left, VkCommandBuffer right)
+    {
+        return left._ptr == right._ptr;
+    }
 
-        public static bool operator !=(VkCommandBuffer left, VkCommandBuffer right)
-        {
-            return left._ptr != right._ptr;
-        }
+    public static bool operator !=(VkCommandBuffer left, VkCommandBuffer right)
+    {
+        return left._ptr != right._ptr;
+    }
 
-        public bool Equals(in VkCommandBuffer obj)
-        {
-            return obj._ptr == _ptr;
-        }
+    public bool Equals(in VkCommandBuffer obj)
+    {
+        return obj._ptr == _ptr;
+    }
 
-        public override bool Equals(object? obj)
-        {
-            return obj is VkCommandBuffer vkCommandBuffer && Equals(in vkCommandBuffer);
-        }
+    public override bool Equals(object? obj)
+    {
+        return obj is VkCommandBuffer vkCommandBuffer && Equals(in vkCommandBuffer);
+    }
 
-        public override int GetHashCode()
-        {
-            return ((IntPtr)_ptr).GetHashCode();
-        }
+    public override int GetHashCode()
+    {
+        return ((IntPtr)_ptr).GetHashCode();
+    }
 
-        public static explicit operator void*(VkCommandBuffer value)
-        {
-            return value._ptr;
-        }
+    public static explicit operator void*(VkCommandBuffer value)
+    {
+        return value._ptr;
     }
 }

@@ -8,195 +8,194 @@
 
 #endregion
 
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     A vk version.
+/// </summary>
+public readonly struct VkVersion
 {
     /// <summary>
-    ///     A vk version.
+    ///     The version 1.0.
     /// </summary>
-    public readonly struct VkVersion
+    public static readonly VkVersion VulkanApiVersion10 = new VkVersion(0, 1, 0, 0);
+
+    /// <summary>
+    ///     The version 1.1
+    /// </summary>
+    public static readonly VkVersion VulkanApiVersion11 = new VkVersion(0, 1, 1, 0);
+
+    /// <summary>
+    ///     The version 1.2
+    /// </summary>
+    public static readonly VkVersion VulkanApiVersion12 = new VkVersion(0, 1, 2, 0);
+
+    private readonly uint _version;
+
+    internal VkVersion(uint version)
     {
-        /// <summary>
-        ///     The version 1.0.
-        /// </summary>
-        public static readonly VkVersion VulkanApiVersion10 = new VkVersion(0, 1, 0, 0);
+        _version = version;
+    }
 
-        /// <summary>
-        ///     The version 1.1
-        /// </summary>
-        public static readonly VkVersion VulkanApiVersion11 = new VkVersion(0, 1, 1, 0);
+    /// <summary>
+    ///     Initializes a new instance of the <see cref="VkVersion" /> struct.
+    /// </summary>
+    /// <param name="variant"> The variant. </param>
+    /// <param name="major"> The major. </param>
+    /// <param name="minor"> The minor. </param>
+    /// <param name="patch"> The patch. </param>
+    public VkVersion(uint variant, uint major, uint minor, uint patch)
+        : this((variant << 29) | ((major & 0x7FU) << 22) | ((minor & 0x3FFU) << 12) | (patch & 0xFFFU)) { }
 
-        /// <summary>
-        ///     The version 1.2
-        /// </summary>
-        public static readonly VkVersion VulkanApiVersion12 = new VkVersion(0, 1, 2, 0);
+    /// <summary>
+    ///     Gets the major.
+    /// </summary>
+    /// <value>
+    ///     The major.
+    /// </value>
+    public uint Variant
+    {
+        get { return _version >> 29; }
+    }
 
-        private readonly uint _version;
+    /// <summary>
+    ///     Gets the major.
+    /// </summary>
+    /// <value>
+    ///     The major.
+    /// </value>
+    public uint Major
+    {
+        get { return (_version >> 22) & 0x7FU; }
+    }
 
-        internal VkVersion(uint version)
-        {
-            _version = version;
-        }
+    /// <summary>
+    ///     Gets the minor.
+    /// </summary>
+    /// <value>
+    ///     The minor.
+    /// </value>
+    public uint Minor
+    {
+        get { return (_version >> 12) & 0x3FF; }
+    }
 
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="VkVersion" /> struct.
-        /// </summary>
-        /// <param name="variant"> The variant. </param>
-        /// <param name="major"> The major. </param>
-        /// <param name="minor"> The minor. </param>
-        /// <param name="patch"> The patch. </param>
-        public VkVersion(uint variant, uint major, uint minor, uint patch)
-            : this((variant << 29) | ((major & 0x7FU) << 22) | ((minor & 0x3FFU) << 12) | (patch & 0xFFFU)) { }
+    /// <summary>
+    ///     Gets the patch.
+    /// </summary>
+    /// <value>
+    ///     The patch.
+    /// </value>
+    public uint Patch
+    {
+        get { return _version & 0xFFF; }
+    }
 
-        /// <summary>
-        ///     Gets the major.
-        /// </summary>
-        /// <value>
-        ///     The major.
-        /// </value>
-        public uint Variant
-        {
-            get { return _version >> 29; }
-        }
+    /// <inheritdoc />
+    public override string ToString()
+    {
+        return $"{Major.ToString()}.{Minor.ToString()}.{Patch.ToString()}";
+    }
 
-        /// <summary>
-        ///     Gets the major.
-        /// </summary>
-        /// <value>
-        ///     The major.
-        /// </value>
-        public uint Major
-        {
-            get { return (_version >> 22) & 0x7FU; }
-        }
+    /// <summary>
+    ///     Tests if this VkVersion is considered equal to another.
+    /// </summary>
+    /// <param name="other"> The vk version to compare to this object. </param>
+    /// <returns>
+    ///     True if the objects are considered equal, false if they are not.
+    /// </returns>
+    public bool Equals(VkVersion other)
+    {
+        return _version == other._version;
+    }
 
-        /// <summary>
-        ///     Gets the minor.
-        /// </summary>
-        /// <value>
-        ///     The minor.
-        /// </value>
-        public uint Minor
-        {
-            get { return (_version >> 12) & 0x3FF; }
-        }
+    /// <inheritdoc />
+    public override bool Equals(object? obj)
+    {
+        return obj is VkVersion other && Equals(other);
+    }
 
-        /// <summary>
-        ///     Gets the patch.
-        /// </summary>
-        /// <value>
-        ///     The patch.
-        /// </value>
-        public uint Patch
-        {
-            get { return _version & 0xFFF; }
-        }
+    /// <inheritdoc />
+    public override int GetHashCode()
+    {
+        return (int)_version;
+    }
 
-        /// <inheritdoc />
-        public override string ToString()
-        {
-            return $"{Major.ToString()}.{Minor.ToString()}.{Patch.ToString()}";
-        }
+    /// <summary>
+    ///     Equality operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator ==(VkVersion a, VkVersion b)
+    {
+        return a._version == b._version;
+    }
 
-        /// <summary>
-        ///     Tests if this VkVersion is considered equal to another.
-        /// </summary>
-        /// <param name="other"> The vk version to compare to this object. </param>
-        /// <returns>
-        ///     True if the objects are considered equal, false if they are not.
-        /// </returns>
-        public bool Equals(VkVersion other)
-        {
-            return _version == other._version;
-        }
+    /// <summary>
+    ///     Inequality operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator !=(VkVersion a, VkVersion b)
+    {
+        return a._version != b._version;
+    }
 
-        /// <inheritdoc />
-        public override bool Equals(object? obj)
-        {
-            return obj is VkVersion other && Equals(other);
-        }
+    /// <summary>
+    ///     Less-than comparison operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator <(VkVersion a, VkVersion b)
+    {
+        return a._version < b._version;
+    }
 
-        /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return (int)_version;
-        }
+    /// <summary>
+    ///     Greater-than comparison operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator >(VkVersion a, VkVersion b)
+    {
+        return a._version > b._version;
+    }
 
-        /// <summary>
-        ///     Equality operator.
-        /// </summary>
-        /// <param name="a"> The first instance to compare. </param>
-        /// <param name="b"> The second instance to compare. </param>
-        /// <returns>
-        ///     The result of the operation.
-        /// </returns>
-        public static bool operator ==(VkVersion a, VkVersion b)
-        {
-            return a._version == b._version;
-        }
+    /// <summary>
+    ///     Less-than-or-equal comparison operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator <=(VkVersion a, VkVersion b)
+    {
+        return a._version <= b._version;
+    }
 
-        /// <summary>
-        ///     Inequality operator.
-        /// </summary>
-        /// <param name="a"> The first instance to compare. </param>
-        /// <param name="b"> The second instance to compare. </param>
-        /// <returns>
-        ///     The result of the operation.
-        /// </returns>
-        public static bool operator !=(VkVersion a, VkVersion b)
-        {
-            return a._version != b._version;
-        }
-
-        /// <summary>
-        ///     Less-than comparison operator.
-        /// </summary>
-        /// <param name="a"> The first instance to compare. </param>
-        /// <param name="b"> The second instance to compare. </param>
-        /// <returns>
-        ///     The result of the operation.
-        /// </returns>
-        public static bool operator <(VkVersion a, VkVersion b)
-        {
-            return a._version < b._version;
-        }
-
-        /// <summary>
-        ///     Greater-than comparison operator.
-        /// </summary>
-        /// <param name="a"> The first instance to compare. </param>
-        /// <param name="b"> The second instance to compare. </param>
-        /// <returns>
-        ///     The result of the operation.
-        /// </returns>
-        public static bool operator >(VkVersion a, VkVersion b)
-        {
-            return a._version > b._version;
-        }
-
-        /// <summary>
-        ///     Less-than-or-equal comparison operator.
-        /// </summary>
-        /// <param name="a"> The first instance to compare. </param>
-        /// <param name="b"> The second instance to compare. </param>
-        /// <returns>
-        ///     The result of the operation.
-        /// </returns>
-        public static bool operator <=(VkVersion a, VkVersion b)
-        {
-            return a._version <= b._version;
-        }
-
-        /// <summary>
-        ///     Greater-than-or-equal comparison operator.
-        /// </summary>
-        /// <param name="a"> The first instance to compare. </param>
-        /// <param name="b"> The second instance to compare. </param>
-        /// <returns>
-        ///     The result of the operation.
-        /// </returns>
-        public static bool operator >=(VkVersion a, VkVersion b)
-        {
-            return a._version >= b._version;
-        }
+    /// <summary>
+    ///     Greater-than-or-equal comparison operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator >=(VkVersion a, VkVersion b)
+    {
+        return a._version >= b._version;
     }
 }

@@ -10,54 +10,51 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public readonly unsafe struct VkBuffer
 {
-    public readonly unsafe struct VkBuffer
-    {
-        public static readonly VkBuffer Null = (VkBuffer)null;
+    public static readonly VkBuffer Null = (VkBuffer)null;
 #pragma warning disable 649
-        private readonly void* _ptr;
+    private readonly void* _ptr;
 #pragma warning restore 649
 
-        public static explicit operator VkBuffer(void* ptr)
-        {
-            VkBuffer value;
-            *(void**)&value = ptr;
-            return value;
-        }
+    public static explicit operator VkBuffer(void* ptr)
+    {
+        VkBuffer value;
+        *(void**)&value = ptr;
+        return value;
+    }
 
-        public static bool operator ==(VkBuffer left, VkBuffer right)
-        {
-            return left._ptr == right._ptr;
-        }
+    public static bool operator ==(VkBuffer left, VkBuffer right)
+    {
+        return left._ptr == right._ptr;
+    }
 
-        public static bool operator !=(VkBuffer left, VkBuffer right)
-        {
-            return left._ptr != right._ptr;
-        }
+    public static bool operator !=(VkBuffer left, VkBuffer right)
+    {
+        return left._ptr != right._ptr;
+    }
 
-        public bool Equals(in VkBuffer obj)
-        {
-            return obj._ptr == _ptr;
-        }
+    public bool Equals(in VkBuffer obj)
+    {
+        return obj._ptr == _ptr;
+    }
 
-        public override bool Equals(object? obj)
-        {
-            return obj is VkBuffer vkBuffer && Equals(in vkBuffer);
-        }
+    public override bool Equals(object? obj)
+    {
+        return obj is VkBuffer vkBuffer && Equals(in vkBuffer);
+    }
 
-        public override int GetHashCode()
-        {
-            return ((IntPtr)_ptr).GetHashCode();
-        }
+    public override int GetHashCode()
+    {
+        return ((IntPtr)_ptr).GetHashCode();
+    }
 
-        public static explicit operator void*(VkBuffer value)
-        {
-            return value._ptr;
-        }
+    public static explicit operator void*(VkBuffer value)
+    {
+        return value._ptr;
     }
 }

@@ -10,24 +10,21 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public struct VkSurfaceCapabilitiesKHR
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkSurfaceCapabilitiesKHR
-    {
-        public uint                       minImageCount;
-        public uint                       maxImageCount;
-        public VkExtent2D                 currentExtent;
-        public VkExtent2D                 minImageExtent;
-        public VkExtent2D                 maxImageExtent;
-        public uint                       maxImageArrayLayers;
-        public VkSurfaceTransformFlagsKHR supportedTransforms;
-        public VkSurfaceTransformFlagsKHR currentTransform;
-        public VkCompositeAlphaFlagsKHR   supportedCompositeAlpha;
-        public VkImageUsageFlagBits       supportedUsageFlags;
-    }
+    public uint                       minImageCount;
+    public uint                       maxImageCount;
+    public VkExtent2D                 currentExtent;
+    public VkExtent2D                 minImageExtent;
+    public VkExtent2D                 maxImageExtent;
+    public uint                       maxImageArrayLayers;
+    public VkSurfaceTransformFlagsKHR supportedTransforms;
+    public VkSurfaceTransformFlagsKHR currentTransform;
+    public VkCompositeAlphaFlagsKHR   supportedCompositeAlpha;
+    public VkImageUsageFlagBits       supportedUsageFlags;
 }

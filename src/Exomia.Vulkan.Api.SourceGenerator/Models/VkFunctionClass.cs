@@ -11,13 +11,12 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace Exomia.Vulkan.Api.SourceGenerator.Models
+namespace Exomia.Vulkan.Api.SourceGenerator.Models;
+
+struct VkFunctionClass
 {
-    struct VkFunctionClass
-    {
-        public string                  NamespaceName;
-        public string                  ClassName;
-        public INamedTypeSymbol        Symbol;
-        public StructDeclarationSyntax Syntax;
-    }
+    public string                  NamespaceName;
+    public string                  ClassName;
+    public INamedTypeSymbol        Symbol;
+    public StructDeclarationSyntax Syntax;
 }

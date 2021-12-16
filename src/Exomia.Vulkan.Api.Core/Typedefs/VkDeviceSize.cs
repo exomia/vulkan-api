@@ -8,251 +8,248 @@
 
 #endregion
 
-using System.Runtime.CompilerServices;
-
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public readonly unsafe struct VkDeviceSize
 {
-    public readonly unsafe struct VkDeviceSize
-    {
-        public static readonly VkDeviceSize Zero = 0ul;
+    public static readonly VkDeviceSize Zero = 0ul;
 #pragma warning disable 649
-        private readonly ulong _size;
+    private readonly ulong _size;
 #pragma warning restore 649
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator VkDeviceSize(ulong size)
-        {
-            VkDeviceSize value;
-            *(ulong*)&value = size;
-            return value;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static implicit operator VkDeviceSize(ulong size)
+    {
+        VkDeviceSize value;
+        *(ulong*)&value = size;
+        return value;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static explicit operator VkDeviceSize(long size)
-        {
-            VkDeviceSize value;
-            *(long*)&value = size;
-            return value;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static explicit operator VkDeviceSize(long size)
+    {
+        VkDeviceSize value;
+        *(long*)&value = size;
+        return value;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator ==(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size == right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator ==(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size == right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator !=(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size != right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator !=(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size != right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator ==(VkDeviceSize left, ulong right)
-        {
-            return left._size == right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator ==(VkDeviceSize left, ulong right)
+    {
+        return left._size == right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator !=(VkDeviceSize left, ulong right)
-        {
-            return left._size != right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator !=(VkDeviceSize left, ulong right)
+    {
+        return left._size != right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator ==(VkDeviceSize left, long right)
-        {
-            return left._size == (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator ==(VkDeviceSize left, long right)
+    {
+        return left._size == (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator !=(VkDeviceSize left, long right)
-        {
-            return left._size != (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator !=(VkDeviceSize left, long right)
+    {
+        return left._size != (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator >=(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size >= right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >=(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size >= right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator <=(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size <= right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <=(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size <= right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator >=(VkDeviceSize left, ulong right)
-        {
-            return left._size >= right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >=(VkDeviceSize left, ulong right)
+    {
+        return left._size >= right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator <=(VkDeviceSize left, ulong right)
-        {
-            return left._size <= right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <=(VkDeviceSize left, ulong right)
+    {
+        return left._size <= right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator >=(VkDeviceSize left, long right)
-        {
-            return left._size >= (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >=(VkDeviceSize left, long right)
+    {
+        return left._size >= (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator <=(VkDeviceSize left, long right)
-        {
-            return left._size < (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <=(VkDeviceSize left, long right)
+    {
+        return left._size < (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator >(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size > right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size > right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator <(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size < right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size < right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator >(VkDeviceSize left, ulong right)
-        {
-            return left._size > right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >(VkDeviceSize left, ulong right)
+    {
+        return left._size > right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator <(VkDeviceSize left, ulong right)
-        {
-            return left._size < right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <(VkDeviceSize left, ulong right)
+    {
+        return left._size < right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator >(VkDeviceSize left, long right)
-        {
-            return left._size > (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >(VkDeviceSize left, long right)
+    {
+        return left._size > (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool operator <(VkDeviceSize left, long right)
-        {
-            return left._size < (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <(VkDeviceSize left, long right)
+    {
+        return left._size < (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator +(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size + right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator +(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size + right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator -(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size - right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator -(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size - right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator +(VkDeviceSize left, ulong right)
-        {
-            return left._size + right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator +(VkDeviceSize left, ulong right)
+    {
+        return left._size + right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator -(VkDeviceSize left, ulong right)
-        {
-            return left._size - right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator -(VkDeviceSize left, ulong right)
+    {
+        return left._size - right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator +(VkDeviceSize left, long right)
-        {
-            return left._size + (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator +(VkDeviceSize left, long right)
+    {
+        return left._size + (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator -(VkDeviceSize left, long right)
-        {
-            return left._size - (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator -(VkDeviceSize left, long right)
+    {
+        return left._size - (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator *(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size * right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator *(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size * right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator /(VkDeviceSize left, VkDeviceSize right)
-        {
-            return left._size / right._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator /(VkDeviceSize left, VkDeviceSize right)
+    {
+        return left._size / right._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator *(VkDeviceSize left, ulong right)
-        {
-            return left._size * right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator *(VkDeviceSize left, ulong right)
+    {
+        return left._size * right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator /(VkDeviceSize left, ulong right)
-        {
-            return left._size / right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator /(VkDeviceSize left, ulong right)
+    {
+        return left._size / right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator *(VkDeviceSize left, long right)
-        {
-            return left._size * (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator *(VkDeviceSize left, long right)
+    {
+        return left._size * (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static VkDeviceSize operator /(VkDeviceSize left, long right)
-        {
-            return left._size / (ulong)right;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static VkDeviceSize operator /(VkDeviceSize left, long right)
+    {
+        return left._size / (ulong)right;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool Equals(in VkDeviceSize obj)
-        {
-            return obj._size == _size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public bool Equals(in VkDeviceSize obj)
+    {
+        return obj._size == _size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public override bool Equals(object? obj)
-        {
-            return obj is VkDeviceSize vkDeviceSize && Equals(in vkDeviceSize);
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public override bool Equals(object? obj)
+    {
+        return obj is VkDeviceSize vkDeviceSize && Equals(in vkDeviceSize);
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public override int GetHashCode()
-        {
-            return _size.GetHashCode();
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public override int GetHashCode()
+    {
+        return _size.GetHashCode();
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator ulong(VkDeviceSize value)
-        {
-            return value._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static implicit operator ulong(VkDeviceSize value)
+    {
+        return value._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator uint(VkDeviceSize value)
-        {
-            return (uint)value._size;
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static implicit operator uint(VkDeviceSize value)
+    {
+        return (uint)value._size;
+    }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public override string ToString()
-        {
-            return _size.ToString();
-        }
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public override string ToString()
+    {
+        return _size.ToString();
     }
 }

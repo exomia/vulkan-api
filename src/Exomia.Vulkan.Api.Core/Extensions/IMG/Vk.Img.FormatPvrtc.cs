@@ -11,17 +11,14 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.IMG
+namespace Exomia.Vulkan.Api.Core.Extensions.IMG;
+
+[VkExtGenerator]
+public static partial class VkImgFormatPvrtc
 {
-    [VkExtGenerator]
-    public static partial class VkImgFormatPvrtc
-    {
-        public const int    VK_IMG_FORMAT_PVRTC                = 1;
-        public const int    VK_IMG_FORMAT_PVRTC_SPEC_VERSION   = 1;
-        public const string VK_IMG_FORMAT_PVRTC_EXTENSION_NAME = "VK_IMG_format_pvrtc";
-    }
+    public const int    VK_IMG_FORMAT_PVRTC                = 1;
+    public const int    VK_IMG_FORMAT_PVRTC_SPEC_VERSION   = 1;
+    public const string VK_IMG_FORMAT_PVRTC_EXTENSION_NAME = "VK_IMG_format_pvrtc";
 }

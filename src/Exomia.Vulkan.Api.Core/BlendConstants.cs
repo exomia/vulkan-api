@@ -8,34 +8,31 @@
 
 #endregion
 
-using System.Runtime.InteropServices;
+namespace Exomia.Vulkan.Api.Core;
 
-namespace Exomia.Vulkan.Api.Core
+/// <summary>
+///     Used instead of public fixed float blendConstants[4].
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct BlendConstants
 {
     /// <summary>
-    ///     Used instead of public fixed float blendConstants[4].
+    ///     The R value
     /// </summary>
-    [StructLayout(LayoutKind.Sequential)]
-    public struct BlendConstants
-    {
-        /// <summary>
-        ///     The R value
-        /// </summary>
-        public float R;
+    public float R;
 
-        /// <summary>
-        ///     The G value
-        /// </summary>
-        public float G;
+    /// <summary>
+    ///     The G value
+    /// </summary>
+    public float G;
 
-        /// <summary>
-        ///     The B value
-        /// </summary>
-        public float B;
+    /// <summary>
+    ///     The B value
+    /// </summary>
+    public float B;
 
-        /// <summary>
-        ///     The A value
-        /// </summary>
-        public float A;
-    }
+    /// <summary>
+    ///     The A value
+    /// </summary>
+    public float A;
 }

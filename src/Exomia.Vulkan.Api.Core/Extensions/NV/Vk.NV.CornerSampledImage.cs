@@ -11,27 +11,23 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.NV
-{
-    [VkExtGenerator]
-    public static partial class VkNvCornerSampledImage
-    {
-        public const int    VK_NV_CORNER_SAMPLED_IMAGE                = 1;
-        public const int    VK_NV_CORNER_SAMPLED_IMAGE_SPEC_VERSION   = 2;
-        public const string VK_NV_CORNER_SAMPLED_IMAGE_EXTENSION_NAME = "VK_NV_corner_sampled_image";
-    }
+namespace Exomia.Vulkan.Api.Core.Extensions.NV;
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceCornerSampledImageFeaturesNV
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        cornerSampledImage;
-    }
+[VkExtGenerator]
+public static partial class VkNvCornerSampledImage
+{
+    public const int    VK_NV_CORNER_SAMPLED_IMAGE                = 1;
+    public const int    VK_NV_CORNER_SAMPLED_IMAGE_SPEC_VERSION   = 2;
+    public const string VK_NV_CORNER_SAMPLED_IMAGE_EXTENSION_NAME = "VK_NV_corner_sampled_image";
+}
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceCornerSampledImageFeaturesNV
+{
+    public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkBool32        cornerSampledImage;
 }

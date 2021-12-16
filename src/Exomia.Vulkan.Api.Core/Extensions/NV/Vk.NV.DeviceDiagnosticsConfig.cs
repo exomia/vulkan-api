@@ -11,46 +11,41 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-using System.Runtime.InteropServices;
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.NV
+namespace Exomia.Vulkan.Api.Core.Extensions.NV;
+
+[VkExtGenerator]
+public static partial class VkNvDeviceDiagnosticsConfig
 {
-    [VkExtGenerator]
-    public static partial class VkNvDeviceDiagnosticsConfig
-    {
-        public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG                = 1;
-        public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION   = 1;
-        public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME = "VK_NV_device_diagnostics_config";
-    }
+    public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG                = 1;
+    public const int    VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION   = 1;
+    public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME = "VK_NV_device_diagnostics_config";
+}
 
-    [Flags]
-    public enum VkDeviceDiagnosticsConfigFlagsNV
-    {
-        ENABLE_SHADER_DEBUG_INFO_BIT_NV     = 0x00000001,
-        ENABLE_RESOURCE_TRACKING_BIT_NV     = 0x00000002,
-        ENABLE_AUTOMATIC_CHECKPOINTS_BIT_NV = 0x00000004,
-        FLAG_BITS_MAX_ENUM_NV               = 0x7FFFFFFF
-    }
+[Flags]
+public enum VkDeviceDiagnosticsConfigFlagsNV
+{
+    ENABLE_SHADER_DEBUG_INFO_BIT_NV     = 0x00000001,
+    ENABLE_RESOURCE_TRACKING_BIT_NV     = 0x00000002,
+    ENABLE_AUTOMATIC_CHECKPOINTS_BIT_NV = 0x00000004,
+    FLAG_BITS_MAX_ENUM_NV               = 0x7FFFFFFF
+}
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDeviceDiagnosticsConfigCreateInfoNV
-    {
-        public const VkStructureType                  STYPE = VkStructureType.DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV;
-        public       VkStructureType                  sType;
-        public       void*                            pNext;
-        public       VkDeviceDiagnosticsConfigFlagsNV flags;
-    }
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkDeviceDiagnosticsConfigCreateInfoNV
+{
+    public const VkStructureType                  STYPE = VkStructureType.DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV;
+    public       VkStructureType                  sType;
+    public       void*                            pNext;
+    public       VkDeviceDiagnosticsConfigFlagsNV flags;
+}
 
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceDiagnosticsConfigFeaturesNV
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        diagnosticsConfig;
-    }
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceDiagnosticsConfigFeaturesNV
+{
+    public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkBool32        diagnosticsConfig;
 }

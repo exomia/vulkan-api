@@ -10,19 +10,16 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public struct VkDrawIndexedIndirectCommand
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkDrawIndexedIndirectCommand
-    {
-        public uint indexCount;
-        public uint instanceCount;
-        public uint firstIndex;
-        public int  vertexOffset;
-        public uint firstInstance;
-    }
+    public uint indexCount;
+    public uint instanceCount;
+    public uint firstIndex;
+    public int  vertexOffset;
+    public uint firstInstance;
 }

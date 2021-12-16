@@ -10,21 +10,18 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR
-    {
-        public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       VkBool32        workgroupMemoryExplicitLayout;
-        public       VkBool32        workgroupMemoryExplicitLayoutScalarBlockLayout;
-        public       VkBool32        workgroupMemoryExplicitLayout8BitAccess;
-        public       VkBool32        workgroupMemoryExplicitLayout16BitAccess;
-    }
+    public const VkStructureType STYPE = VkStructureType.PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkBool32        workgroupMemoryExplicitLayout;
+    public       VkBool32        workgroupMemoryExplicitLayoutScalarBlockLayout;
+    public       VkBool32        workgroupMemoryExplicitLayout8BitAccess;
+    public       VkBool32        workgroupMemoryExplicitLayout16BitAccess;
 }

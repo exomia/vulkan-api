@@ -11,17 +11,14 @@
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using Exomia.Vulkan.Api.SourceGenerator;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Core.Extensions.NV
+namespace Exomia.Vulkan.Api.Core.Extensions.NV;
+
+[VkExtGenerator]
+public static partial class VkNvSampleMaskOverrideCoverage
 {
-    [VkExtGenerator]
-    public static partial class VkNvSampleMaskOverrideCoverage
-    {
-        public const int    VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE                = 1;
-        public const int    VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_SPEC_VERSION   = 1;
-        public const string VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_EXTENSION_NAME = "VK_NV_sample_mask_override_coverage";
-    }
+    public const int    VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE                = 1;
+    public const int    VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_SPEC_VERSION   = 1;
+    public const string VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_EXTENSION_NAME = "VK_NV_sample_mask_override_coverage";
 }

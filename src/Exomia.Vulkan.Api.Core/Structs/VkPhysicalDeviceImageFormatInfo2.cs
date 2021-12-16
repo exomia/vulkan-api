@@ -10,22 +10,19 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceImageFormatInfo2
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceImageFormatInfo2
-    {
-        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       VkFormat              format;
-        public       VkImageType           type;
-        public       VkImageTiling         tiling;
-        public       VkImageUsageFlagBits  usage;
-        public       VkImageCreateFlagBits flags;
-    }
+    public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2;
+    public       VkStructureType       sType;
+    public       void*                 pNext;
+    public       VkFormat              format;
+    public       VkImageType           type;
+    public       VkImageTiling         tiling;
+    public       VkImageUsageFlagBits  usage;
+    public       VkImageCreateFlagBits flags;
 }

@@ -10,21 +10,18 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkVendorId
 {
-    public enum VkVendorId
-    {
-        VIV      = 0x10001,
-        VSI      = 0x10002,
-        KAZAN    = 0x10003,
-        CODEPLAY = 0x10004,
-        MESA     = 0x10005,
-        POCL     = 0x10006,
-        MAX_ENUM = 0x7FFFFFFF
-    }
+    VIV      = 0x10001,
+    VSI      = 0x10002,
+    KAZAN    = 0x10003,
+    CODEPLAY = 0x10004,
+    MESA     = 0x10005,
+    POCL     = 0x10006,
+    MAX_ENUM = 0x7FFFFFFF
 }

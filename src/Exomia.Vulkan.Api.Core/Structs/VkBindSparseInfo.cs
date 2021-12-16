@@ -10,27 +10,24 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkBindSparseInfo
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkBindSparseInfo
-    {
-        public const VkStructureType                    STYPE = VkStructureType.BIND_SPARSE_INFO;
-        public       VkStructureType                    sType;
-        public       void*                              pNext;
-        public       uint                               waitSemaphoreCount;
-        public       VkSemaphore*                       pWaitSemaphores;
-        public       uint                               bufferBindCount;
-        public       VkSparseBufferMemoryBindInfo*      pBufferBinds;
-        public       uint                               imageOpaqueBindCount;
-        public       VkSparseImageOpaqueMemoryBindInfo* pImageOpaqueBinds;
-        public       uint                               imageBindCount;
-        public       VkSparseImageMemoryBindInfo*       pImageBinds;
-        public       uint                               signalSemaphoreCount;
-        public       VkSemaphore*                       pSignalSemaphores;
-    }
+    public const VkStructureType                    STYPE = VkStructureType.BIND_SPARSE_INFO;
+    public       VkStructureType                    sType;
+    public       void*                              pNext;
+    public       uint                               waitSemaphoreCount;
+    public       VkSemaphore*                       pWaitSemaphores;
+    public       uint                               bufferBindCount;
+    public       VkSparseBufferMemoryBindInfo*      pBufferBinds;
+    public       uint                               imageOpaqueBindCount;
+    public       VkSparseImageOpaqueMemoryBindInfo* pImageOpaqueBinds;
+    public       uint                               imageBindCount;
+    public       VkSparseImageMemoryBindInfo*       pImageBinds;
+    public       uint                               signalSemaphoreCount;
+    public       VkSemaphore*                       pSignalSemaphores;
 }

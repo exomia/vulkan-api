@@ -10,20 +10,17 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkPipelineBindPoint
 {
-    public enum VkPipelineBindPoint
-    {
-        GRAPHICS               = 0,
-        COMPUTE                = 1,
-        RAY_TRACING_KHR        = 1000165000,
-        SUBPASS_SHADING_HUAWEI = 1000369003,
-        RAY_TRACING_NV         = RAY_TRACING_KHR,
-        MAX_ENUM               = 0x7FFFFFFF
-    }
+    GRAPHICS               = 0,
+    COMPUTE                = 1,
+    RAY_TRACING_KHR        = 1000165000,
+    SUBPASS_SHADING_HUAWEI = 1000369003,
+    RAY_TRACING_NV         = RAY_TRACING_KHR,
+    MAX_ENUM               = 0x7FFFFFFF
 }

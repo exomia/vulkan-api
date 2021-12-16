@@ -10,22 +10,19 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[Flags]
+public enum VkMemoryAllocateFlagBits
 {
-    [Flags]
-    public enum VkMemoryAllocateFlagBits
-    {
-        DEVICE_MASK_BIT                       = 0x00000001,
-        DEVICE_ADDRESS_BIT                    = 0x00000002,
-        DEVICE_ADDRESS_CAPTURE_REPLAY_BIT     = 0x00000004,
-        DEVICE_MASK_BIT_KHR                   = DEVICE_MASK_BIT,
-        DEVICE_ADDRESS_BIT_KHR                = DEVICE_ADDRESS_BIT,
-        DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHR = DEVICE_ADDRESS_CAPTURE_REPLAY_BIT,
-        FLAG_BITS_MAX_ENUM                    = 0x7FFFFFFF
-    }
+    DEVICE_MASK_BIT                       = 0x00000001,
+    DEVICE_ADDRESS_BIT                    = 0x00000002,
+    DEVICE_ADDRESS_CAPTURE_REPLAY_BIT     = 0x00000004,
+    DEVICE_MASK_BIT_KHR                   = DEVICE_MASK_BIT,
+    DEVICE_ADDRESS_BIT_KHR                = DEVICE_ADDRESS_BIT,
+    DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHR = DEVICE_ADDRESS_CAPTURE_REPLAY_BIT,
+    FLAG_BITS_MAX_ENUM                    = 0x7FFFFFFF
 }

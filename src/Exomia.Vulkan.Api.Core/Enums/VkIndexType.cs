@@ -10,20 +10,17 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkIndexType
 {
-    public enum VkIndexType
-    {
-        UINT16    = 0,
-        UINT32    = 1,
-        NONE_KHR  = 1000165000,
-        UINT8_EXT = 1000265000,
-        NONE_NV   = NONE_KHR,
-        MAX_ENUM  = 0x7FFFFFFF
-    }
+    UINT16    = 0,
+    UINT32    = 1,
+    NONE_KHR  = 1000165000,
+    UINT8_EXT = 1000265000,
+    NONE_NV   = NONE_KHR,
+    MAX_ENUM  = 0x7FFFFFFF
 }

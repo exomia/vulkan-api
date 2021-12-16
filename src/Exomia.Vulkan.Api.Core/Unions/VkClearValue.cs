@@ -10,19 +10,16 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
-{
-    [StructLayout(LayoutKind.Explicit)]
-    public struct VkClearValue
-    {
-        [FieldOffset(0)]
-        public VkClearColorValue color;
+namespace Exomia.Vulkan.Api.Core;
 
-        [FieldOffset(0)]
-        public VkClearDepthStencilValue depthStencil;
-    }
+[StructLayout(LayoutKind.Explicit)]
+public struct VkClearValue
+{
+    [FieldOffset(0)]
+    public VkClearColorValue color;
+
+    [FieldOffset(0)]
+    public VkClearDepthStencilValue depthStencil;
 }

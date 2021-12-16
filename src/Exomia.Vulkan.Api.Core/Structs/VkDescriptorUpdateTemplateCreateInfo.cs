@@ -10,25 +10,22 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkDescriptorUpdateTemplateCreateInfo
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkDescriptorUpdateTemplateCreateInfo
-    {
-        public const VkStructureType                          STYPE = VkStructureType.DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO;
-        public       VkStructureType                          sType;
-        public       void*                                    pNext;
-        public       VkDescriptorUpdateTemplateCreateFlagBits flags;
-        public       uint                                     descriptorUpdateEntryCount;
-        public       VkDescriptorUpdateTemplateEntry*         pDescriptorUpdateEntries;
-        public       VkDescriptorUpdateTemplateType           templateType;
-        public       VkDescriptorSetLayout                    descriptorSetLayout;
-        public       VkPipelineBindPoint                      pipelineBindPoint;
-        public       VkPipelineLayout                         pipelineLayout;
-        public       uint                                     set;
-    }
+    public const VkStructureType                          STYPE = VkStructureType.DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO;
+    public       VkStructureType                          sType;
+    public       void*                                    pNext;
+    public       VkDescriptorUpdateTemplateCreateFlagBits flags;
+    public       uint                                     descriptorUpdateEntryCount;
+    public       VkDescriptorUpdateTemplateEntry*         pDescriptorUpdateEntries;
+    public       VkDescriptorUpdateTemplateType           templateType;
+    public       VkDescriptorSetLayout                    descriptorSetLayout;
+    public       VkPipelineBindPoint                      pipelineBindPoint;
+    public       VkPipelineLayout                         pipelineLayout;
+    public       uint                                     set;
 }

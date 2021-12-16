@@ -10,26 +10,23 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkPrimitiveTopology
 {
-    public enum VkPrimitiveTopology
-    {
-        POINT_LIST                    = 0,
-        LINE_LIST                     = 1,
-        LINE_STRIP                    = 2,
-        TRIANGLE_LIST                 = 3,
-        TRIANGLE_STRIP                = 4,
-        TRIANGLE_FAN                  = 5,
-        LINE_LIST_WITH_ADJACENCY      = 6,
-        LINE_STRIP_WITH_ADJACENCY     = 7,
-        TRIANGLE_LIST_WITH_ADJACENCY  = 8,
-        TRIANGLE_STRIP_WITH_ADJACENCY = 9,
-        PATCH_LIST                    = 10,
-        MAX_ENUM                      = 0x7FFFFFFF
-    }
+    POINT_LIST                    = 0,
+    LINE_LIST                     = 1,
+    LINE_STRIP                    = 2,
+    TRIANGLE_LIST                 = 3,
+    TRIANGLE_STRIP                = 4,
+    TRIANGLE_FAN                  = 5,
+    LINE_LIST_WITH_ADJACENCY      = 6,
+    LINE_STRIP_WITH_ADJACENCY     = 7,
+    TRIANGLE_LIST_WITH_ADJACENCY  = 8,
+    TRIANGLE_STRIP_WITH_ADJACENCY = 9,
+    PATCH_LIST                    = 10,
+    MAX_ENUM                      = 0x7FFFFFFF
 }

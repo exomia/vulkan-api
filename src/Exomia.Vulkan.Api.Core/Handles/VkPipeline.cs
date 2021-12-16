@@ -10,54 +10,51 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public readonly unsafe struct VkPipeline
 {
-    public readonly unsafe struct VkPipeline
-    {
-        public static readonly VkPipeline Null = (VkPipeline)null;
+    public static readonly VkPipeline Null = (VkPipeline)null;
 #pragma warning disable 649
-        private readonly void* _ptr;
+    private readonly void* _ptr;
 #pragma warning restore 649
 
-        public static explicit operator VkPipeline(void* ptr)
-        {
-            VkPipeline value;
-            *(void**)&value = ptr;
-            return value;
-        }
+    public static explicit operator VkPipeline(void* ptr)
+    {
+        VkPipeline value;
+        *(void**)&value = ptr;
+        return value;
+    }
 
-        public static bool operator ==(VkPipeline left, VkPipeline right)
-        {
-            return left._ptr == right._ptr;
-        }
+    public static bool operator ==(VkPipeline left, VkPipeline right)
+    {
+        return left._ptr == right._ptr;
+    }
 
-        public static bool operator !=(VkPipeline left, VkPipeline right)
-        {
-            return left._ptr != right._ptr;
-        }
+    public static bool operator !=(VkPipeline left, VkPipeline right)
+    {
+        return left._ptr != right._ptr;
+    }
 
-        public bool Equals(in VkPipeline obj)
-        {
-            return obj._ptr == _ptr;
-        }
+    public bool Equals(in VkPipeline obj)
+    {
+        return obj._ptr == _ptr;
+    }
 
-        public override bool Equals(object? obj)
-        {
-            return obj is VkPipeline vkPipeline && Equals(in vkPipeline);
-        }
+    public override bool Equals(object? obj)
+    {
+        return obj is VkPipeline vkPipeline && Equals(in vkPipeline);
+    }
 
-        public override int GetHashCode()
-        {
-            return ((IntPtr)_ptr).GetHashCode();
-        }
+    public override int GetHashCode()
+    {
+        return ((IntPtr)_ptr).GetHashCode();
+    }
 
-        public static explicit operator void*(VkPipeline value)
-        {
-            return value._ptr;
-        }
+    public static explicit operator void*(VkPipeline value)
+    {
+        return value._ptr;
     }
 }

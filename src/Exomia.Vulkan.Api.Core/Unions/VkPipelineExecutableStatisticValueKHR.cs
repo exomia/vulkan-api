@@ -10,25 +10,22 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Explicit)]
+public struct VkPipelineExecutableStatisticValueKHR
 {
-    [StructLayout(LayoutKind.Explicit)]
-    public struct VkPipelineExecutableStatisticValueKHR
-    {
-        [FieldOffset(0)]
-        public VkBool32 b32;
+    [FieldOffset(0)]
+    public VkBool32 b32;
 
-        [FieldOffset(0)]
-        public long i64;
+    [FieldOffset(0)]
+    public long i64;
 
-        [FieldOffset(0)]
-        public ulong u64;
+    [FieldOffset(0)]
+    public ulong u64;
 
-        [FieldOffset(0)]
-        public double f64;
-    }
+    [FieldOffset(0)]
+    public double f64;
 }

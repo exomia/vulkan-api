@@ -10,22 +10,19 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public struct VkPipelineColorBlendAttachmentState
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkPipelineColorBlendAttachmentState
-    {
-        public VkBool32                 blendEnable;
-        public VkBlendFactor            srcColorBlendFactor;
-        public VkBlendFactor            dstColorBlendFactor;
-        public VkBlendOp                colorBlendOp;
-        public VkBlendFactor            srcAlphaBlendFactor;
-        public VkBlendFactor            dstAlphaBlendFactor;
-        public VkBlendOp                alphaBlendOp;
-        public VkColorComponentFlagBits colorWriteMask;
-    }
+    public VkBool32                 blendEnable;
+    public VkBlendFactor            srcColorBlendFactor;
+    public VkBlendFactor            dstColorBlendFactor;
+    public VkBlendOp                colorBlendOp;
+    public VkBlendFactor            srcAlphaBlendFactor;
+    public VkBlendFactor            dstAlphaBlendFactor;
+    public VkBlendOp                alphaBlendOp;
+    public VkColorComponentFlagBits colorWriteMask;
 }

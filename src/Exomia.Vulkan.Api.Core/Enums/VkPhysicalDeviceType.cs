@@ -10,20 +10,17 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkPhysicalDeviceType
 {
-    public enum VkPhysicalDeviceType
-    {
-        OTHER          = 0,
-        INTEGRATED_GPU = 1,
-        DISCRETE_GPU   = 2,
-        VIRTUAL_GPU    = 3,
-        CPU            = 4,
-        MAX_ENUM       = 0x7FFFFFFF
-    }
+    OTHER          = 0,
+    INTEGRATED_GPU = 1,
+    DISCRETE_GPU   = 2,
+    VIRTUAL_GPU    = 3,
+    CPU            = 4,
+    MAX_ENUM       = 0x7FFFFFFF
 }

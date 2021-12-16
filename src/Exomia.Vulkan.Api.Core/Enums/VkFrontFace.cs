@@ -10,17 +10,14 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkFrontFace
 {
-    public enum VkFrontFace
-    {
-        COUNTER_CLOCKWISE = 0,
-        CLOCKWISE         = 1,
-        MAX_ENUM          = 0x7FFFFFFF
-    }
+    COUNTER_CLOCKWISE = 0,
+    CLOCKWISE         = 1,
+    MAX_ENUM          = 0x7FFFFFFF
 }

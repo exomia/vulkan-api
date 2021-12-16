@@ -10,18 +10,15 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkImageType
 {
-    public enum VkImageType
-    {
-        _1D      = 0,
-        _2D      = 1,
-        _3D      = 2,
-        MAX_ENUM = 0x7FFFFFFF
-    }
+    _1D      = 0,
+    _2D      = 1,
+    _3D      = 2,
+    MAX_ENUM = 0x7FFFFFFF
 }

@@ -8,25 +8,24 @@
 
 #endregion
 
-using System;
 using System.Linq;
 using Exomia.Vulkan.Api.SourceGenerator.Models;
 using Microsoft.CodeAnalysis;
 
-namespace Exomia.Vulkan.Api.SourceGenerator
+namespace Exomia.Vulkan.Api.SourceGenerator;
+
+/// <summary> A generator. </summary>
+[Generator]
+public class Generator : ISourceGenerator
 {
-    /// <summary> A generator. </summary>
-    [Generator]
-    public class Generator : ISourceGenerator
+    /// <inheritdoc />
+    public void Execute(GeneratorExecutionContext context)
     {
-        /// <inheritdoc />
-        public void Execute(GeneratorExecutionContext context)
+        if (context.SyntaxContextReceiver is SyntaxReceiver syntaxReceiver)
         {
-            if (context.SyntaxContextReceiver is SyntaxReceiver syntaxReceiver)
+            foreach (VkExtensionClass vkExtensionClass in syntaxReceiver.VkExtensions)
             {
-                foreach (VkExtensionClass vkExtensionClass in syntaxReceiver.VkExtensions)
-                {
-                    string sourceCode = $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+                string sourceCode = $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using System.Runtime.CompilerServices;
 using System;
@@ -38,12 +37,12 @@ namespace {vkExtensionClass.NamespaceName}
 {{
 {SourceCodeGenerator.GetExtensionClass(vkExtensionClass)}
 }}".FormatCode(false);
-                    context.AddSource($"{vkExtensionClass.NamespaceName}.{vkExtensionClass.ClassName}.g.cs", sourceCode);
-                }
+                context.AddSource($"{vkExtensionClass.NamespaceName}.{vkExtensionClass.ClassName}.g.cs", sourceCode);
+            }
 
-                foreach (VkFunctionClass vkFunctionClass in syntaxReceiver.VkFunctions)
-                {
-                    string sourceCode = $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+            foreach (VkFunctionClass vkFunctionClass in syntaxReceiver.VkFunctions)
+            {
+                string sourceCode = $@"#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using System;
 using System.Runtime.InteropServices;
@@ -66,16 +65,15 @@ namespace {vkFunctionClass.NamespaceName}
         {string.Concat(syntaxReceiver.VkExtensions.SelectMany(e => e.Functions).Select(SourceCodeGenerator.GetVkFunctions))}
     }}
 }}".FormatCode(false);
-                    context.AddSource($"{vkFunctionClass.NamespaceName}.{vkFunctionClass.ClassName}.g.cs", sourceCode);
-                }
+                context.AddSource($"{vkFunctionClass.NamespaceName}.{vkFunctionClass.ClassName}.g.cs", sourceCode);
             }
         }
+    }
 
-        /// <inheritdoc />
-        public void Initialize(GeneratorInitializationContext context)
-        {
-            context.RegisterForPostInitialization(CodeGenerationLibraryLoader.AddLibraryFilesToContext);
-            context.RegisterForSyntaxNotifications(() => new SyntaxReceiver());
-        }
+    /// <inheritdoc />
+    public void Initialize(GeneratorInitializationContext context)
+    {
+        context.RegisterForPostInitialization(CodeGenerationLibraryLoader.AddLibraryFilesToContext);
+        context.RegisterForSyntaxNotifications(() => new SyntaxReceiver());
     }
 }

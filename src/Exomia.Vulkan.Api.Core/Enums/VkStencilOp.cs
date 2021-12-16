@@ -10,23 +10,20 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkStencilOp
 {
-    public enum VkStencilOp
-    {
-        KEEP                = 0,
-        ZERO                = 1,
-        REPLACE             = 2,
-        INCREMENT_AND_CLAMP = 3,
-        DECREMENT_AND_CLAMP = 4,
-        INVERT              = 5,
-        INCREMENT_AND_WRAP  = 6,
-        DECREMENT_AND_WRAP  = 7,
-        MAX_ENUM            = 0x7FFFFFFF
-    }
+    KEEP                = 0,
+    ZERO                = 1,
+    REPLACE             = 2,
+    INCREMENT_AND_CLAMP = 3,
+    DECREMENT_AND_CLAMP = 4,
+    INVERT              = 5,
+    INCREMENT_AND_WRAP  = 6,
+    DECREMENT_AND_WRAP  = 7,
+    MAX_ENUM            = 0x7FFFFFFF
 }

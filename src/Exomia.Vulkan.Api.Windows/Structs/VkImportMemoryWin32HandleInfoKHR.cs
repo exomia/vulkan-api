@@ -12,20 +12,18 @@
 
 using System;
 using Exomia.Vulkan.Api.Core;
-using Exomia.Vulkan.Api.Windows.Native;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Windows
+namespace Exomia.Vulkan.Api.Windows;
+
+public unsafe struct VkImportMemoryWin32HandleInfoKHR
 {
-    public unsafe struct VkImportMemoryWin32HandleInfoKHR
-    {
-        public const VkStructureType                    STYPE = VkStructureType.IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
-        public       VkStructureType                    sType;
-        public       void*                              pNext;
-        public       VkExternalMemoryHandleTypeFlagBits handleType;
-        public       IntPtr                             handle;
-        public       char*                              pName;
-    }
+    public const VkStructureType                    STYPE = VkStructureType.IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
+    public       VkStructureType                    sType;
+    public       void*                              pNext;
+    public       VkExternalMemoryHandleTypeFlagBits handleType;
+    public       IntPtr                             handle;
+    public       char*                              pName;
 }

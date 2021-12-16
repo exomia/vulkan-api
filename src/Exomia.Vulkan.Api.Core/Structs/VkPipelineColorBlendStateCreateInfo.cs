@@ -10,23 +10,20 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPipelineColorBlendStateCreateInfo
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPipelineColorBlendStateCreateInfo
-    {
-        public const VkStructureType                         STYPE = VkStructureType.PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
-        public       VkStructureType                         sType;
-        public       void*                                   pNext;
-        public       VkPipelineColorBlendStateCreateFlagBits flags;
-        public       VkBool32                                logicOpEnable;
-        public       VkLogicOp                               logicOp;
-        public       uint                                    attachmentCount;
-        public       VkPipelineColorBlendAttachmentState*    pAttachments;
-        public fixed float                                   blendConstants[4];
-    }
+    public const VkStructureType                         STYPE = VkStructureType.PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
+    public       VkStructureType                         sType;
+    public       void*                                   pNext;
+    public       VkPipelineColorBlendStateCreateFlagBits flags;
+    public       VkBool32                                logicOpEnable;
+    public       VkLogicOp                               logicOp;
+    public       uint                                    attachmentCount;
+    public       VkPipelineColorBlendAttachmentState*    pAttachments;
+    public fixed float                                   blendConstants[4];
 }

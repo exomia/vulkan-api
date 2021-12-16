@@ -10,21 +10,18 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkPhysicalDeviceDepthStencilResolveProperties
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkPhysicalDeviceDepthStencilResolveProperties
-    {
-        public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES;
-        public       VkStructureType       sType;
-        public       void*                 pNext;
-        public       VkResolveModeFlagBits supportedDepthResolveModes;
-        public       VkResolveModeFlagBits supportedStencilResolveModes;
-        public       VkBool32              independentResolveNone;
-        public       VkBool32              independentResolve;
-    }
+    public const VkStructureType       STYPE = VkStructureType.PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES;
+    public       VkStructureType       sType;
+    public       void*                 pNext;
+    public       VkResolveModeFlagBits supportedDepthResolveModes;
+    public       VkResolveModeFlagBits supportedStencilResolveModes;
+    public       VkBool32              independentResolveNone;
+    public       VkBool32              independentResolve;
 }

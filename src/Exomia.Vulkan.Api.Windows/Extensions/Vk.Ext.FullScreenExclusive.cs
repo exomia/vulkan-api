@@ -17,73 +17,70 @@ using Exomia.Vulkan.Api.SourceGenerator;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
-namespace Exomia.Vulkan.Api.Windows.Extensions
+namespace Exomia.Vulkan.Api.Windows.Extensions;
+
+[VkExtGenerator]
+public static unsafe partial class VkExtFullScreenExclusive
 {
-    [VkExtGenerator]
-    public static unsafe partial class VkExtFullScreenExclusive
-    {
-        public const int VK_EXT_FULL_SCREEN_EXCLUSIVE = 1;
-        public const int VK_EXT_FULL_SCREEN_EXCLUSIVE_SPEC_VERSION = 4;
-        public const string VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME = "VK_EXT_full_screen_exclusive";
+    public const int    VK_EXT_FULL_SCREEN_EXCLUSIVE                = 1;
+    public const int    VK_EXT_FULL_SCREEN_EXCLUSIVE_SPEC_VERSION   = 4;
+    public const string VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME = "VK_EXT_full_screen_exclusive";
 
-        public static readonly delegate*<
-            VkPhysicalDevice,                 /* physicalDevice */
-            VkPhysicalDeviceSurfaceInfo2KHR*, /* pSurfaceInfo */
-            uint*,                            /* pPresentModeCount */
-            VkPresentModeKHR*,                /* pPresentModes */
-            VkResult> vkGetPhysicalDeviceSurfacePresentModes2EXT = null;
+    public static readonly delegate*<
+        VkPhysicalDevice,                 /* physicalDevice */
+        VkPhysicalDeviceSurfaceInfo2KHR*, /* pSurfaceInfo */
+        uint*,                            /* pPresentModeCount */
+        VkPresentModeKHR*,                /* pPresentModes */
+        VkResult> vkGetPhysicalDeviceSurfacePresentModes2EXT = null;
 
-        public static readonly delegate*<
-            VkDevice,          /* device */
-            VkSwapchainKHR,   /* swapchain */
-            VkResult> vkAcquireFullScreenExclusiveModeEXT = null;
+    public static readonly delegate*<
+        VkDevice,       /* device */
+        VkSwapchainKHR, /* swapchain */
+        VkResult> vkAcquireFullScreenExclusiveModeEXT = null;
 
+    public static readonly delegate*<
+        VkDevice,       /* device */
+        VkSwapchainKHR, /* swapchain */
+        VkResult> vkReleaseFullScreenExclusiveModeEXT = null;
 
-        public static readonly delegate*<
-            VkDevice,       /* device */
-            VkSwapchainKHR, /* swapchain */
-            VkResult> vkReleaseFullScreenExclusiveModeEXT = null;
+    public static readonly delegate*<
+        VkDevice,                          /* device */
+        VkPhysicalDeviceSurfaceInfo2KHR*,  /* pSurfaceInfo */
+        VkDeviceGroupPresentModeFlagsKHR*, /* pModes */
+        VkResult> vkGetDeviceGroupSurfacePresentModes2EXT = null;
 
+    public static partial void Load(VkDevice vkDevice);
+}
 
-        public static readonly delegate*<
-            VkDevice,                          /* device */
-            VkPhysicalDeviceSurfaceInfo2KHR*,  /* pSurfaceInfo */
-            VkDeviceGroupPresentModeFlagsKHR*, /* pModes */
-            VkResult> vkGetDeviceGroupSurfacePresentModes2EXT = null;
+public enum VkFullScreenExclusiveEXT
+{
+    DEFAULT_EXT                = 0,
+    ALLOWED_EXT                = 1,
+    DISALLOWED_EXT             = 2,
+    APPLICATION_CONTROLLED_EXT = 3,
+    MAX_ENUM_EXT               = 0x7FFFFFFF
+}
 
-        public static partial void Load(VkDevice vkDevice);
-    }
+public unsafe struct VkSurfaceFullScreenExclusiveInfoEXT
+{
+    public const VkStructureType          STYPE = VkStructureType.SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT;
+    public       VkStructureType          sType;
+    public       void*                    pNext;
+    public       VkFullScreenExclusiveEXT fullScreenExclusive;
+}
 
-    public enum VkFullScreenExclusiveEXT
-    {
-        DEFAULT_EXT = 0,
-        ALLOWED_EXT = 1,
-        DISALLOWED_EXT = 2,
-        APPLICATION_CONTROLLED_EXT = 3,
-        MAX_ENUM_EXT = 0x7FFFFFFF
-    }
+public unsafe struct VkSurfaceCapabilitiesFullScreenExclusiveEXT
+{
+    public const VkStructureType STYPE = VkStructureType.SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       VkBool32        fullScreenExclusiveSupported;
+}
 
-    public unsafe struct VkSurfaceFullScreenExclusiveInfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT;
-        public VkStructureType sType;
-        public void* pNext;
-        public VkFullScreenExclusiveEXT fullScreenExclusive;
-    }
-
-    public unsafe struct VkSurfaceCapabilitiesFullScreenExclusiveEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT;
-        public VkStructureType sType;
-        public void* pNext;
-        public VkBool32 fullScreenExclusiveSupported;
-    }
-
-    public unsafe struct VkSurfaceFullScreenExclusiveWin32InfoEXT
-    {
-        public const VkStructureType STYPE = VkStructureType.SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT;
-        public VkStructureType sType;
-        public void* pNext;
-        public IntPtr hMonitor;
-    }
+public unsafe struct VkSurfaceFullScreenExclusiveWin32InfoEXT
+{
+    public const VkStructureType STYPE = VkStructureType.SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       IntPtr          hMonitor;
 }

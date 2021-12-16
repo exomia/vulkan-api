@@ -16,15 +16,14 @@ using Exomia.Vulkan.Api.Core;
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Windows
+namespace Exomia.Vulkan.Api.Windows;
+
+public unsafe struct VkWin32SurfaceCreateInfoKHR
 {
-    public unsafe struct VkWin32SurfaceCreateInfoKHR
-    {
-        public const VkStructureType              STYPE = VkStructureType.WIN32_SURFACE_CREATE_INFO_KHR;
-        public       VkStructureType              sType;
-        public       void*                        pNext;
-        public       VkWin32SurfaceCreateFlagsKHR flags;
-        public       IntPtr                       hInstance;
-        public       IntPtr                       hWnd;
-    }
+    public const VkStructureType              STYPE = VkStructureType.WIN32_SURFACE_CREATE_INFO_KHR;
+    public       VkStructureType              sType;
+    public       void*                        pNext;
+    public       VkWin32SurfaceCreateFlagsKHR flags;
+    public       IntPtr                       hInstance;
+    public       IntPtr                       hWnd;
 }

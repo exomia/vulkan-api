@@ -10,22 +10,20 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System;
 using Exomia.Vulkan.Api.Core;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Windows
+namespace Exomia.Vulkan.Api.Windows;
+
+public unsafe struct VkD3D12FenceSubmitInfoKHR
 {
-    public unsafe struct VkD3D12FenceSubmitInfoKHR
-    {
-        public const VkStructureType STYPE = VkStructureType.D3D12_FENCE_SUBMIT_INFO_KHR;
-        public       VkStructureType sType;
-        public       void*           pNext;
-        public       uint            waitSemaphoreValuesCount;
-        public       ulong*          pWaitSemaphoreValues;
-        public       uint            signalSemaphoreValuesCount;
-        public       ulong*          pSignalSemaphoreValues;
-    }
+    public const VkStructureType STYPE = VkStructureType.D3D12_FENCE_SUBMIT_INFO_KHR;
+    public       VkStructureType sType;
+    public       void*           pNext;
+    public       uint            waitSemaphoreValuesCount;
+    public       ulong*          pWaitSemaphoreValues;
+    public       uint            signalSemaphoreValuesCount;
+    public       ulong*          pSignalSemaphoreValues;
 }

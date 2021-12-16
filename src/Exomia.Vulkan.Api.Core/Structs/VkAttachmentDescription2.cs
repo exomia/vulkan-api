@@ -10,26 +10,23 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkAttachmentDescription2
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkAttachmentDescription2
-    {
-        public const VkStructureType                 STYPE = VkStructureType.ATTACHMENT_DESCRIPTION_2;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkAttachmentDescriptionFlagBits flags;
-        public       VkFormat                        format;
-        public       VkSampleCountFlagBits           samples;
-        public       VkAttachmentLoadOp              loadOp;
-        public       VkAttachmentStoreOp             storeOp;
-        public       VkAttachmentLoadOp              stencilLoadOp;
-        public       VkAttachmentStoreOp             stencilStoreOp;
-        public       VkImageLayout                   initialLayout;
-        public       VkImageLayout                   finalLayout;
-    }
+    public const VkStructureType                 STYPE = VkStructureType.ATTACHMENT_DESCRIPTION_2;
+    public       VkStructureType                 sType;
+    public       void*                           pNext;
+    public       VkAttachmentDescriptionFlagBits flags;
+    public       VkFormat                        format;
+    public       VkSampleCountFlagBits           samples;
+    public       VkAttachmentLoadOp              loadOp;
+    public       VkAttachmentStoreOp             storeOp;
+    public       VkAttachmentLoadOp              stencilLoadOp;
+    public       VkAttachmentStoreOp             stencilStoreOp;
+    public       VkImageLayout                   initialLayout;
+    public       VkImageLayout                   finalLayout;
 }

@@ -10,20 +10,17 @@
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+public enum VkAccelerationStructureTypeKHR
 {
-    public enum VkAccelerationStructureTypeKHR
-    {
-        TOP_LEVEL_KHR    = 0,
-        BOTTOM_LEVEL_KHR = 1,
-        GENERIC_KHR      = 2,
-        TOP_LEVEL_NV     = TOP_LEVEL_KHR,
-        BOTTOM_LEVEL_NV  = BOTTOM_LEVEL_KHR,
-        MAX_ENUM_KHR     = 0x7FFFFFFF
-    }
+    TOP_LEVEL_KHR    = 0,
+    BOTTOM_LEVEL_KHR = 1,
+    GENERIC_KHR      = 2,
+    TOP_LEVEL_NV     = TOP_LEVEL_KHR,
+    BOTTOM_LEVEL_NV  = BOTTOM_LEVEL_KHR,
+    MAX_ENUM_KHR     = 0x7FFFFFFF
 }
