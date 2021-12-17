@@ -10,6 +10,7 @@
     <Nullable>enable</Nullable>
     <NullableReferenceTypes>true</NullableReferenceTypes>
     <DefineConstants>TRACE;$(Platform)</DefineConstants>
+    <CheckForDuplicateItems>false</CheckForDuplicateItems>
     <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
