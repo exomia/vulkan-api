@@ -84,11 +84,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Exomia.Vulkan.Api.SourceGenerator\Exomia.Vulkan.Api.SourceGenerator.csproj">
-      <OutputItemType>Analyzer</OutputItemType>
-      <PrivateAssets>all</PrivateAssets>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
+    <ProjectReference Include="..\Exomia.Vulkan.Api.SourceGenerator\Exomia.Vulkan.Api.SourceGenerator.csproj"
+                      OutputItemType="Analyzer"
+                      PrivateAssets="all"
+                      ReferenceOutputAssembly="false"
+                      SetTargetFramework="TargetFramework=netstandard2.0" />
   </ItemGroup>
 
   <ItemGroup>
