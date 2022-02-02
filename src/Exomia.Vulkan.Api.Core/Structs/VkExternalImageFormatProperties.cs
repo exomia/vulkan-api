@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,20 +8,44 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkExternalImageFormatProperties - Structure specifying supported external handle properties -
+///     <a
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalImageFormatProperties.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalImageFormatProperties.html
+///     </a>
+/// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>structextends</term><description>VkImageFormatProperties2</description>
+///         </item>
+///         <item>
+///             <term>returnedonly</term><description>true</description>
+///         </item>
+///     </list>
+/// </remarks>
+[VkStructExtends("VkImageFormatProperties2")]
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkExternalImageFormatProperties
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkExternalImageFormatProperties
-    {
-        public const VkStructureType            STYPE = VkStructureType.EXTERNAL_IMAGE_FORMAT_PROPERTIES;
-        public       VkStructureType            sType;
-        public       void*                      pNext;
-        public       VkExternalMemoryProperties externalMemoryProperties;
-    }
+    /// <summary> The stype of this structure. </summary>
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_EXTERNAL_IMAGE_FORMAT_PROPERTIES;
+
+    /// <summary>sType is the type of this structure.</summary>
+    public VkStructureType sType;
+
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    public void* pNext;
+
+    /// <summary>
+    ///     externalMemoryProperties is a VkExternalMemoryPropertiesstructure specifying various capabilities of the
+    ///     external handle type when used with the specified image creation parameters.
+    /// </summary>
+    public VkExternalMemoryProperties externalMemoryProperties;
 }

@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,41 +8,239 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkPipelineCreateFlagBits - Bitmask controlling how a pipeline is created -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCreateFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCreateFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkPipelineCreateFlagBits
 {
-    [Flags]
-    public enum VkPipelineCreateFlagBits
-    {
-        DISABLE_OPTIMIZATION_BIT                               = 0x00000001,
-        ALLOW_DERIVATIVES_BIT                                  = 0x00000002,
-        DERIVATIVE_BIT                                         = 0x00000004,
-        VIEW_INDEX_FROM_DEVICE_INDEX_BIT                       = 0x00000008,
-        DISPATCH_BASE_BIT                                      = 0x00000010,
-        RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_BIT_KHR            = 0x00004000,
-        RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_BIT_KHR        = 0x00008000,
-        RAY_TRACING_NO_NULL_MISS_SHADERS_BIT_KHR               = 0x00010000,
-        RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_BIT_KHR       = 0x00020000,
-        RAY_TRACING_SKIP_TRIANGLES_BIT_KHR                     = 0x00001000,
-        RAY_TRACING_SKIP_AABBS_BIT_KHR                         = 0x00002000,
-        RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_BIT_KHR = 0x00080000,
-        DEFER_COMPILE_BIT_NV                                   = 0x00000020,
-        CAPTURE_STATISTICS_BIT_KHR                             = 0x00000040,
-        CAPTURE_INTERNAL_REPRESENTATIONS_BIT_KHR               = 0x00000080,
-        INDIRECT_BINDABLE_BIT_NV                               = 0x00040000,
-        LIBRARY_BIT_KHR                                        = 0x00000800,
-        FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT_EXT              = 0x00000100,
-        EARLY_RETURN_ON_FAILURE_BIT_EXT                        = 0x00000200,
-        RAY_TRACING_ALLOW_MOTION_BIT_NV                        = 0x00100000,
-        DISPATCH_BASE                                          = DISPATCH_BASE_BIT,
-        VIEW_INDEX_FROM_DEVICE_INDEX_BIT_KHR                   = VIEW_INDEX_FROM_DEVICE_INDEX_BIT,
-        DISPATCH_BASE_KHR                                      = DISPATCH_BASE,
-        FLAG_BITS_MAX_ENUM                                     = 0x7FFFFFFF
-    }
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_DISABLE_OPTIMIZATION_BIT specifies that the created pipeline will not be optimized. Using
+    ///     this flag may reduce the time taken to create the pipeline.
+    /// </summary>
+    VK_PIPELINE_CREATE_DISABLE_OPTIMIZATION_BIT = 0,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_ALLOW_DERIVATIVES_BIT specifies that the pipeline to be created is allowed to be the parent
+    ///     of a pipeline that will be created in a subsequent pipeline creation call.
+    /// </summary>
+    VK_PIPELINE_CREATE_ALLOW_DERIVATIVES_BIT = 1,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_DERIVATIVE_BIT specifies that the pipeline to be created will be a child of a previously
+    ///     created parent pipeline.
+    /// </summary>
+    VK_PIPELINE_CREATE_DERIVATIVE_BIT = 2,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_VIEW_INDEX_FROM_DEVICE_INDEX_BIT specifies that any shader input variables decorated as
+    ///     ViewIndex will be assigned values as if they were decorated as DeviceIndex.
+    /// </summary>
+    VK_PIPELINE_CREATE_VIEW_INDEX_FROM_DEVICE_INDEX_BIT = 3,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_DISPATCH_BASE_BIT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_DISPATCH_BASE_BIT = 4,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT specifies that pipeline creation will fail if a
+    ///     compile is required for creation of a valid
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a>
+    ///     object; VK_PIPELINE_COMPILE_REQUIREDwill be returned by pipeline creation, and the
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a> will
+    ///     be set to
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NULL_HANDLE.html">VK_NULL_HANDLE</a>
+    ///     .
+    /// </summary>
+    VK_PIPELINE_CREATE_FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT = 8,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_EARLY_RETURN_ON_FAILURE_BIT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_EARLY_RETURN_ON_FAILURE_BIT = 9,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that the pipeline will be used
+    ///     with a fragment shading rate attachment.
+    /// </summary>
+    VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 21,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXTspecifies that the pipeline will be used
+    ///     with a fragment density map attachment.
+    /// </summary>
+    VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 22,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_BIT_KHRspecifies that an any-hit shader will always be
+    ///     present when an any-hit shader would be executed. A NULL any-hit shader is an any-hit shader which is effectively
+    ///     VK_SHADER_UNUSED_KHR, such as from a shader group consisting entirely of zeros.
+    /// </summary>
+    VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_BIT_KHR = 14,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_BIT_KHRspecifies that a closest hit shader will
+    ///     always be present when a closest hit shader would be executed. A NULL closest hit shader is a closest hit shader
+    ///     which is effectively VK_SHADER_UNUSED_KHR, such as from a shader group consisting entirely of zeros.
+    /// </summary>
+    VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_BIT_KHR = 15,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_MISS_SHADERS_BIT_KHRspecifies that a miss shader will always be present
+    ///     when a miss shader would be executed. A NULL miss shader is a miss shader which is effectively
+    ///     VK_SHADER_UNUSED_KHR, such as from a shader group consisting entirely of zeros.
+    /// </summary>
+    VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_MISS_SHADERS_BIT_KHR = 16,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_BIT_KHRspecifies that an intersection shader will
+    ///     always be present when an intersection shader would be executed. A NULL intersection shader is an intersection
+    ///     shader which is effectively VK_SHADER_UNUSED_KHR, such as from a shader group consisting entirely of zeros.
+    /// </summary>
+    VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_BIT_KHR = 17,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RAY_TRACING_SKIP_TRIANGLES_BIT_KHR specifies that triangle primitives will be skipped
+    ///     during traversal using OpTraceRayKHR.
+    /// </summary>
+    VK_PIPELINE_CREATE_RAY_TRACING_SKIP_TRIANGLES_BIT_KHR = 12,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RAY_TRACING_SKIP_AABBS_BIT_KHR specifies that AABB primitives will be skipped during
+    ///     traversal using OpTraceRayKHR.
+    /// </summary>
+    VK_PIPELINE_CREATE_RAY_TRACING_SKIP_AABBS_BIT_KHR = 13,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_BIT_KHRspecifies that the shader group
+    ///     handles can be saved and reused on a subsequent run (e.g. for trace capture and replay).
+    /// </summary>
+    VK_PIPELINE_CREATE_RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_BIT_KHR = 19,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_DEFER_COMPILE_BIT_NV specifies that a pipeline is created with all shaders in the deferred
+    ///     state. Before using the pipeline the application must call
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCompileDeferredNV.html">vkCompileDeferredNV</a>
+    ///     exactly once on each shader in the pipeline before using the pipeline.
+    /// </summary>
+    VK_PIPELINE_CREATE_DEFER_COMPILE_BIT_NV = 5,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_CAPTURE_STATISTICS_BIT_KHR specifies that the shader compiler should capture statistics for the
+    ///     pipeline executables produced by the compile process which can later be retrieved by calling
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineExecutableStatisticsKHR.html">
+    ///         vkGetPipelineExecutableStatisticsKHR
+    ///     </a>
+    ///     . Enabling this flag must not affect the final compiled pipeline but maydisable pipeline caching or otherwise
+    ///     affect pipeline creation time.
+    /// </summary>
+    VK_PIPELINE_CREATE_CAPTURE_STATISTICS_BIT_KHR = 6,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_CAPTURE_INTERNAL_REPRESENTATIONS_BIT_KHRspecifies that the shader compiler should capture the
+    ///     internal representations of pipeline executables produced by the compile process which can later be retrieved by
+    ///     calling
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html">
+    ///         vkGetPipelineExecutableInternalRepresentationsKHR
+    ///     </a>
+    ///     . Enabling this flag must not affect the final compiled pipeline but maydisable pipeline caching or otherwise
+    ///     affect pipeline creation time.
+    /// </summary>
+    VK_PIPELINE_CREATE_CAPTURE_INTERNAL_REPRESENTATIONS_BIT_KHR = 7,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_INDIRECT_BINDABLE_BIT_NV specifies that the pipeline can be used in combination with
+    ///     <a class="bare"
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_PIPELINE_CREATE_INDIRECT_BINDABLE_BIT_NV = 18,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_LIBRARY_BIT_KHR specifies that the pipeline cannot be used directly, and instead defines a
+    ///     pipeline library that can be combined with other pipelines using the
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html">VkPipelineLibraryCreateInfoKHR</a>
+    ///     structure. This is available in ray tracing pipelines.
+    /// </summary>
+    VK_PIPELINE_CREATE_LIBRARY_BIT_KHR = 11,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RESERVED_23_BIT_AMD<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_RESERVED_23_BIT_AMD = 23,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RESERVED_10_BIT_AMD<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_RESERVED_10_BIT_AMD = 10,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RAY_TRACING_ALLOW_MOTION_BIT_NV specifies that the pipeline is allowed to use
+    ///     OpTraceRayMotionNV.
+    /// </summary>
+    VK_PIPELINE_CREATE_RAY_TRACING_ALLOW_MOTION_BIT_NV = 20,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_DISPATCH_BASE<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_DISPATCH_BASE = VK_PIPELINE_CREATE_DISPATCH_BASE_BIT,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that the pipeline will be used
+    ///     with a fragment shading rate attachment.
+    /// </summary>
+    VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXTspecifies that the pipeline will be used
+    ///     with a fragment density map attachment.
+    /// </summary>
+    VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_VIEW_INDEX_FROM_DEVICE_INDEX_BIT specifies that any shader input variables decorated as
+    ///     ViewIndex will be assigned values as if they were decorated as DeviceIndex.
+    /// </summary>
+    VK_PIPELINE_CREATE_VIEW_INDEX_FROM_DEVICE_INDEX_BIT_KHR = VK_PIPELINE_CREATE_VIEW_INDEX_FROM_DEVICE_INDEX_BIT,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_DISPATCH_BASE specifies that a compute pipeline can be used with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDispatchBase.html">vkCmdDispatchBase</a>
+    ///     with a non-zero base workgroup.
+    /// </summary>
+    VK_PIPELINE_CREATE_DISPATCH_BASE_KHR = VK_PIPELINE_CREATE_DISPATCH_BASE,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT specifies that pipeline creation will fail if a
+    ///     compile is required for creation of a valid
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a>
+    ///     object; VK_PIPELINE_COMPILE_REQUIREDwill be returned by pipeline creation, and the
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a> will
+    ///     be set to
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NULL_HANDLE.html">VK_NULL_HANDLE</a>
+    ///     .
+    /// </summary>
+    VK_PIPELINE_CREATE_FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT_EXT = VK_PIPELINE_CREATE_FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_EARLY_RETURN_ON_FAILURE_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_EARLY_RETURN_ON_FAILURE_BIT_EXT = VK_PIPELINE_CREATE_EARLY_RETURN_ON_FAILURE_BIT
 }

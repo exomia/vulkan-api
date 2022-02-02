@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,24 +8,42 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkComputePipelineCreateInfo - Structure specifying parameters of a newly created compute pipeline -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkComputePipelineCreateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkComputePipelineCreateInfo.html</a>
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkComputePipelineCreateInfo
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkComputePipelineCreateInfo
-    {
-        public const VkStructureType                 STYPE = VkStructureType.COMPUTE_PIPELINE_CREATE_INFO;
-        public       VkStructureType                 sType;
-        public       void*                           pNext;
-        public       VkPipelineCreateFlagBits        flags;
-        public       VkPipelineShaderStageCreateInfo stage;
-        public       VkPipelineLayout                layout;
-        public       VkPipeline                      basePipelineHandle;
-        public       int                             basePipelineIndex;
-    }
+    /// <summary> The stype of this structure. </summary>
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO;
+
+    /// <summary>sType is the type of this structure.</summary>
+    public VkStructureType sType;
+
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    public void* pNext;
+
+    /// <summary>flags is a bitmask of VkPipelineCreateFlagBits specifying how the pipeline will be generated.</summary>
+    public VkPipelineCreateFlags flags;
+
+    /// <summary>stage is a VkPipelineShaderStageCreateInfo structure describing the compute shader.</summary>
+    public VkPipelineShaderStageCreateInfo stage;
+
+    /// <summary>
+    ///     layout is the description of binding locations used by both the pipeline and descriptor sets used with the
+    ///     pipeline.
+    /// </summary>
+    public VkPipelineLayout layout;
+
+    /// <summary>basePipelineHandle is a pipeline to derive from</summary>
+    public VkPipeline basePipelineHandle;
+
+    /// <summary>basePipelineIndex is an index into the pCreateInfosparameter to use as a pipeline to derive from</summary>
+    public int basePipelineIndex;
 }

@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,56 +8,78 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkSamplerYcbcrConversion - Opaque handle to a device-specific sampler Y′CBCR conversion description -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversion.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversion.html</a>
+/// </summary>
+public readonly unsafe struct VkSamplerYcbcrConversion
 {
-    public readonly unsafe struct VkSamplerYcbcrConversion
-    {
-        public static readonly VkSamplerYcbcrConversion Null = (VkSamplerYcbcrConversion)null;
+    /// <summary> The null value. </summary>
+    public static readonly VkSamplerYcbcrConversion Null = (VkSamplerYcbcrConversion)null;
 #pragma warning disable 649
-        private readonly void* _ptr;
+    private readonly void* _ptr;
 #pragma warning restore 649
 
-        public static explicit operator VkSamplerYcbcrConversion(void* ptr)
-        {
-            VkSamplerYcbcrConversion value;
-            *(void**)&value = ptr;
-            return value;
-        }
+    /// <summary> Returns a hash code for this object. </summary>
+    /// <returns> A hash code for this object. </returns>
+    public override int GetHashCode()
+    {
+        return ((IntPtr)_ptr).GetHashCode();
+    }
 
-        public static bool operator ==(VkSamplerYcbcrConversion left, VkSamplerYcbcrConversion right)
-        {
-            return left._ptr == right._ptr;
-        }
+    /// <summary> Tests if this in VkSamplerYcbcrConversion is considered equal to this instance. </summary>
+    /// <param name="obj"> The in VkSamplerYcbcrConversion to compare to this instance. </param>
+    /// <returns> True if the objects are considered equal, false if they are not. </returns>
+    public bool Equals(in VkSamplerYcbcrConversion obj)
+    {
+        return obj._ptr == _ptr;
+    }
 
-        public static bool operator !=(VkSamplerYcbcrConversion left, VkSamplerYcbcrConversion right)
-        {
-            return left._ptr != right._ptr;
-        }
+    /// <summary> Tests if the object is considered equal to this instance. </summary>
+    /// <param name="obj"> The object to compare to this instance. </param>
+    /// <returns> True if the objects are considered equal, false if they are not. </returns>
+    public override bool Equals(object? obj)
+    {
+        return obj is VkSamplerYcbcrConversion vkSamplerYcbcrConversion && Equals(in vkSamplerYcbcrConversion);
+    }
 
-        public bool Equals(in VkSamplerYcbcrConversion obj)
-        {
-            return obj._ptr == _ptr;
-        }
+    /// <summary> Explicit cast that converts the given void* to a VkSamplerYcbcrConversion. </summary>
+    /// <param name="ptr"> [in,out] If non-null, the pointer. </param>
+    /// <returns> The result of the operation. </returns>
+    public static explicit operator VkSamplerYcbcrConversion(void* ptr)
+    {
+        VkSamplerYcbcrConversion value;
+        *(void**)&value = ptr;
+        return value;
+    }
 
-        public override bool Equals(object? obj)
-        {
-            return obj is VkSamplerYcbcrConversion vkSamplerYcbcrConversion && Equals(in vkSamplerYcbcrConversion);
-        }
+    /// <summary> Equality operator. </summary>
+    /// <param name="left">  The left. </param>
+    /// <param name="right"> The right. </param>
+    /// <returns> The result of the operation. </returns>
+    public static bool operator ==(VkSamplerYcbcrConversion left, VkSamplerYcbcrConversion right)
+    {
+        return left._ptr == right._ptr;
+    }
 
-        public override int GetHashCode()
-        {
-            return ((IntPtr)_ptr).GetHashCode();
-        }
+    /// <summary> Inequality operator. </summary>
+    /// <param name="left">  The left. </param>
+    /// <param name="right"> The right. </param>
+    /// <returns> The result of the operation. </returns>
+    public static bool operator !=(VkSamplerYcbcrConversion left, VkSamplerYcbcrConversion right)
+    {
+        return left._ptr != right._ptr;
+    }
 
-        public static explicit operator void*(VkSamplerYcbcrConversion value)
-        {
-            return value._ptr;
-        }
+    /// <summary> Explicit cast that converts the given VkSamplerYcbcrConversion to a void*. </summary>
+    /// <param name="value"> The value. </param>
+    /// <returns> The result of the operation. </returns>
+    public static explicit operator void*(VkSamplerYcbcrConversion value)
+    {
+        return value._ptr;
     }
 }

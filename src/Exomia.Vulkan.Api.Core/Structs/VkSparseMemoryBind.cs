@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,21 +8,36 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkSparseMemoryBind - Structure specifying a sparse memory bind operation -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseMemoryBind.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseMemoryBind.html</a>
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct VkSparseMemoryBind
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkSparseMemoryBind
-    {
-        public VkDeviceSize               resourceOffset;
-        public VkDeviceSize               size;
-        public VkDeviceMemory             memory;
-        public VkDeviceSize               memoryOffset;
-        public VkSparseMemoryBindFlagBits flags;
-    }
+    /// <summary>resourceOffset is the offset into the resource.</summary>
+    public VkDeviceSize resourceOffset;
+
+    /// <summary>size is the size of the memory region to be bound.</summary>
+    public VkDeviceSize size;
+
+    /// <summary>
+    ///     memory is the VkDeviceMemory object that the range of the resource is bound to. If memory is VK_NULL_HANDLE,
+    ///     the range is unbound.
+    /// </summary>
+    public VkDeviceMemory memory;
+
+    /// <summary>
+    ///     memoryOffset is the offset into the VkDeviceMemory object to bind the resource range to. If memory is
+    ///     VK_NULL_HANDLE, this value is ignored.
+    /// </summary>
+    public VkDeviceSize memoryOffset;
+
+    /// <summary>flags is a bitmask of VkSparseMemoryBindFlagBits specifying usage of the binding operation.</summary>
+    public VkSparseMemoryBindFlags flags;
 }

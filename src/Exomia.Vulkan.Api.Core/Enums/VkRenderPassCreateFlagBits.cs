@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,19 +8,32 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkRenderPassCreateFlagBits - Bitmask specifying additional properties of a render pass -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreateFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreateFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkRenderPassCreateFlagBits
 {
-    [Flags]
-    public enum VkRenderPassCreateFlagBits
-    {
-        TRANSFORM_BIT_QCOM = 0x00000002,
-        FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
-    }
+    /// <summary>
+    ///     VK_RENDER_PASS_CREATE_RESERVED_0_BIT_KHR<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderPassCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderPassCreateFlagBits</a>
+    /// </summary>
+    VK_RENDER_PASS_CREATE_RESERVED_0_BIT_KHR = 0,
+
+    /// <summary>
+    ///     VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM specifies that the created render pass is compatible with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#vertexpostproc-renderpass-transform">
+    ///         render
+    ///         pass transform
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM = 1
 }

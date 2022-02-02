@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,20 +8,68 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkPipelineShaderStageCreateFlagBits - Bitmask controlling how a pipeline shader stage is created -
+///     <a
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineShaderStageCreateFlagBits.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineShaderStageCreateFlagBits.html
+///     </a>
+/// </summary>
+[Flags]
+public enum VkPipelineShaderStageCreateFlagBits
 {
-    [Flags]
-    public enum VkPipelineShaderStageCreateFlagBits
-    {
-        ALLOW_VARYING_SUBGROUP_SIZE_BIT_EXT = 0x00000001,
-        REQUIRE_FULL_SUBGROUPS_BIT_EXT      = 0x00000002,
-        FLAG_BITS_MAX_ENUM                  = 0x7FFFFFFF
-    }
+    /// <summary>
+    ///     VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BITspecifies that the
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-builtin-variables-sgs">
+    ///         <code>SubgroupSize</code>
+    ///     </a>
+    ///     may vary in the shader stage.
+    /// </summary>
+    VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT = 0,
+
+    /// <summary>
+    ///     VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BITspecifies that the subgroup sizes must be launched
+    ///     with all invocations active in the compute stage.
+    /// </summary>
+    VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT = 1,
+
+    /// <summary>
+    ///     VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_2_BIT_NV<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineShaderStageCreateFlagBits">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineShaderStageCreateFlagBits
+    ///     </a>
+    /// </summary>
+    VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_2_BIT_NV = 2,
+
+    /// <summary>
+    ///     VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_3_BIT_KHR<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineShaderStageCreateFlagBits">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineShaderStageCreateFlagBits
+    ///     </a>
+    /// </summary>
+    VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_3_BIT_KHR = 3,
+
+    /// <summary>
+    ///     VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BITspecifies that the
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-builtin-variables-sgs">
+    ///         <code>SubgroupSize</code>
+    ///     </a>
+    ///     may vary in the shader stage.
+    /// </summary>
+    VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT_EXT = VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT,
+
+    /// <summary>
+    ///     VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BITspecifies that the subgroup sizes must be launched
+    ///     with all invocations active in the compute stage.
+    /// </summary>
+    VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT_EXT = VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT
 }

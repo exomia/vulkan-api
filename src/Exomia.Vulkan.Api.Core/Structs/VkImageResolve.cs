@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,21 +8,44 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkImageResolve - Structure specifying an image resolve operation -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageResolve.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageResolve.html</a>
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct VkImageResolve
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkImageResolve
-    {
-        public VkImageSubresourceLayers srcSubresource;
-        public VkOffset3D               srcOffset;
-        public VkImageSubresourceLayers dstSubresource;
-        public VkOffset3D               dstOffset;
-        public VkExtent3D               extent;
-    }
+    /// <summary>
+    ///     srcSubresource and dstSubresource are VkImageSubresourceLayers structures specifying the image subresources of
+    ///     the images used for the source and destination image data, respectively. Resolve of depth/stencil images is not
+    ///     supported.
+    /// </summary>
+    public VkImageSubresourceLayers srcSubresource;
+
+    /// <summary>
+    ///     srcOffset and dstOffset select the initial x, y, and z offsets in texels of the sub-regions of the source and
+    ///     destination image data.
+    /// </summary>
+    public VkOffset3D srcOffset;
+
+    /// <summary>
+    ///     srcSubresource and dstSubresource are VkImageSubresourceLayers structures specifying the image subresources of
+    ///     the images used for the source and destination image data, respectively. Resolve of depth/stencil images is not
+    ///     supported.
+    /// </summary>
+    public VkImageSubresourceLayers dstSubresource;
+
+    /// <summary>
+    ///     srcOffset and dstOffset select the initial x, y, and z offsets in texels of the sub-regions of the source and
+    ///     destination image data.
+    /// </summary>
+    public VkOffset3D dstOffset;
+
+    /// <summary>extent is the size in texels of the source image to resolve in width, height and depth.</summary>
+    public VkExtent3D extent;
 }

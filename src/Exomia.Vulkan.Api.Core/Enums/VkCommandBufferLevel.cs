@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,19 +8,20 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkCommandBufferLevel - Enumerant specifying a command buffer level -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferLevel.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferLevel.html</a>
+/// </summary>
+public enum VkCommandBufferLevel
 {
-    public enum VkCommandBufferLevel
-    {
-        PRIMARY   = 0,
-        SECONDARY = 1,
-        MAX_ENUM  = 0x7FFFFFFF
-    }
+    /// <summary>VK_COMMAND_BUFFER_LEVEL_PRIMARY specifies a primary command buffer.</summary>
+    VK_COMMAND_BUFFER_LEVEL_PRIMARY = 0,
+
+    /// <summary>VK_COMMAND_BUFFER_LEVEL_SECONDARY specifies a secondary command buffer.</summary>
+    VK_COMMAND_BUFFER_LEVEL_SECONDARY = 1
 }

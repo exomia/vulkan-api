@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,19 +8,20 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkSamplerMipmapMode - Specify mipmap mode used for texture lookups -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerMipmapMode.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerMipmapMode.html</a>
+/// </summary>
+public enum VkSamplerMipmapMode
 {
-    public enum VkSamplerMipmapMode
-    {
-        NEAREST  = 0,
-        LINEAR   = 1,
-        MAX_ENUM = 0x7FFFFFFF
-    }
+    /// <summary>VK_SAMPLER_MIPMAP_MODE_NEAREST specifies nearest filtering.</summary>
+    VK_SAMPLER_MIPMAP_MODE_NEAREST = 0,
+
+    /// <summary>VK_SAMPLER_MIPMAP_MODE_LINEAR specifies linear filtering.</summary>
+    VK_SAMPLER_MIPMAP_MODE_LINEAR = 1
 }

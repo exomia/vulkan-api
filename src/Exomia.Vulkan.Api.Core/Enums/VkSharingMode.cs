@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,19 +8,26 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkSharingMode - Buffer and image sharing modes -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSharingMode.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSharingMode.html</a>
+/// </summary>
+public enum VkSharingMode
 {
-    public enum VkSharingMode
-    {
-        EXCLUSIVE  = 0,
-        CONCURRENT = 1,
-        MAX_ENUM   = 0x7FFFFFFF
-    }
+    /// <summary>
+    ///     VK_SHARING_MODE_EXCLUSIVE specifies that access to any range or image subresource of the object will be
+    ///     exclusive to a single queue family at a time.
+    /// </summary>
+    VK_SHARING_MODE_EXCLUSIVE = 0,
+
+    /// <summary>
+    ///     VK_SHARING_MODE_CONCURRENT specifies that concurrent access to any range or image subresource of the object
+    ///     from multiple queue families is supported.
+    /// </summary>
+    VK_SHARING_MODE_CONCURRENT = 1
 }

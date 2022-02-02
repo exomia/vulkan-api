@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,20 +8,37 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkFenceImportFlagBits - Bitmask specifying additional parameters of fence payload import -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceImportFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceImportFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkFenceImportFlagBits
 {
-    [Flags]
-    public enum VkFenceImportFlagBits
-    {
-        TEMPORARY_BIT      = 0x00000001,
-        TEMPORARY_BIT_KHR  = TEMPORARY_BIT,
-        FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
-    }
+    /// <summary>
+    ///     VK_FENCE_IMPORT_TEMPORARY_BIT specifies that the fence payload will be imported only temporarily, as described in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-fences-importing">
+    ///         Importing
+    ///         Fence Payloads
+    ///     </a>
+    ///     , regardless of the permanence of handleType.
+    /// </summary>
+    VK_FENCE_IMPORT_TEMPORARY_BIT = 0,
+
+    /// <summary>
+    ///     VK_FENCE_IMPORT_TEMPORARY_BIT specifies that the fence payload will be imported only temporarily, as described in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-fences-importing">
+    ///         Importing
+    ///         Fence Payloads
+    ///     </a>
+    ///     , regardless of the permanence of handleType.
+    /// </summary>
+    VK_FENCE_IMPORT_TEMPORARY_BIT_KHR = VK_FENCE_IMPORT_TEMPORARY_BIT
 }

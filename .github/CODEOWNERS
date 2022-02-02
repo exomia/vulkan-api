@@ -2,5 +2,6 @@
 @baetz-daniel
 
 # code owners
+analyzer/* @baetz-daniel @DanielBaumert
 src/* @baetz-daniel @DanielBaumert
 tests/* @baetz-daniel @DanielBaumert

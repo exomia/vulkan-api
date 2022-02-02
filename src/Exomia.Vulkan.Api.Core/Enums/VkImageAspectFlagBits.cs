@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,32 +8,67 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkImageAspectFlagBits - Bitmask specifying which aspects of an image are included in a view -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageAspectFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageAspectFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkImageAspectFlagBits
 {
-    [Flags]
-    public enum VkImageAspectFlagBits
-    {
-        COLOR_BIT              = 0x00000001,
-        DEPTH_BIT              = 0x00000002,
-        STENCIL_BIT            = 0x00000004,
-        METADATA_BIT           = 0x00000008,
-        PLANE_0_BIT            = 0x00000010,
-        PLANE_1_BIT            = 0x00000020,
-        PLANE_2_BIT            = 0x00000040,
-        MEMORY_PLANE_0_BIT_EXT = 0x00000080,
-        MEMORY_PLANE_1_BIT_EXT = 0x00000100,
-        MEMORY_PLANE_2_BIT_EXT = 0x00000200,
-        MEMORY_PLANE_3_BIT_EXT = 0x00000400,
-        PLANE_0_BIT_KHR        = PLANE_0_BIT,
-        PLANE_1_BIT_KHR        = PLANE_1_BIT,
-        PLANE_2_BIT_KHR        = PLANE_2_BIT,
-        FLAG_BITS_MAX_ENUM     = 0x7FFFFFFF
-    }
+    /// <summary>VK_IMAGE_ASPECT_COLOR_BIT specifies the color aspect.</summary>
+    VK_IMAGE_ASPECT_COLOR_BIT = 0,
+
+    /// <summary>VK_IMAGE_ASPECT_DEPTH_BIT specifies the depth aspect.</summary>
+    VK_IMAGE_ASPECT_DEPTH_BIT = 1,
+
+    /// <summary>VK_IMAGE_ASPECT_STENCIL_BIT specifies the stencil aspect.</summary>
+    VK_IMAGE_ASPECT_STENCIL_BIT = 2,
+
+    /// <summary>
+    ///     VK_IMAGE_ASPECT_METADATA_BIT specifies the metadata aspect, used for
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#sparsememory">
+    ///         sparse
+    ///         resource
+    ///     </a>
+    ///     operations.
+    /// </summary>
+    VK_IMAGE_ASPECT_METADATA_BIT = 3,
+
+    /// <summary>VK_IMAGE_ASPECT_PLANE_0_BIT specifies plane 0 of a multi-planarimage format.</summary>
+    VK_IMAGE_ASPECT_PLANE_0_BIT = 4,
+
+    /// <summary>VK_IMAGE_ASPECT_PLANE_1_BIT specifies plane 1 of a multi-planarimage format.</summary>
+    VK_IMAGE_ASPECT_PLANE_1_BIT = 5,
+
+    /// <summary>VK_IMAGE_ASPECT_PLANE_2_BIT specifies plane 2 of a multi-planarimage format.</summary>
+    VK_IMAGE_ASPECT_PLANE_2_BIT = 6,
+
+    /// <summary>VK_IMAGE_ASPECT_MEMORY_PLANE_0_BIT_EXT specifies memory plane 0.</summary>
+    VK_IMAGE_ASPECT_MEMORY_PLANE_0_BIT_EXT = 7,
+
+    /// <summary>VK_IMAGE_ASPECT_MEMORY_PLANE_1_BIT_EXT specifies memory plane 1.</summary>
+    VK_IMAGE_ASPECT_MEMORY_PLANE_1_BIT_EXT = 8,
+
+    /// <summary>VK_IMAGE_ASPECT_MEMORY_PLANE_2_BIT_EXT specifies memory plane 2.</summary>
+    VK_IMAGE_ASPECT_MEMORY_PLANE_2_BIT_EXT = 9,
+
+    /// <summary>VK_IMAGE_ASPECT_MEMORY_PLANE_3_BIT_EXT specifies memory plane 3.</summary>
+    VK_IMAGE_ASPECT_MEMORY_PLANE_3_BIT_EXT = 10,
+
+    /// <summary>VK_IMAGE_ASPECT_NONE_KHR specifies no image aspect, or the image aspect is not applicable.</summary>
+    VK_IMAGE_ASPECT_NONE_KHR = 0,
+
+    /// <summary>VK_IMAGE_ASPECT_PLANE_0_BIT specifies plane 0 of a multi-planarimage format.</summary>
+    VK_IMAGE_ASPECT_PLANE_0_BIT_KHR = VK_IMAGE_ASPECT_PLANE_0_BIT,
+
+    /// <summary>VK_IMAGE_ASPECT_PLANE_1_BIT specifies plane 1 of a multi-planarimage format.</summary>
+    VK_IMAGE_ASPECT_PLANE_1_BIT_KHR = VK_IMAGE_ASPECT_PLANE_1_BIT,
+
+    /// <summary>VK_IMAGE_ASPECT_PLANE_2_BIT specifies plane 2 of a multi-planarimage format.</summary>
+    VK_IMAGE_ASPECT_PLANE_2_BIT_KHR = VK_IMAGE_ASPECT_PLANE_2_BIT
 }

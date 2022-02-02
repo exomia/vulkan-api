@@ -1,0 +1,104 @@
+﻿<!--EXTERNAL_PROPERTIES: Version;GITHUB_ACTIONS;-->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <Platforms>AnyCPU;x64</Platforms>
+    <LangVersion>10.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+    <NullableReferenceTypes>true</NullableReferenceTypes>
+    <DefineConstants>TRACE;$(Platform)</DefineConstants>
+    <CheckForDuplicateItems>false</CheckForDuplicateItems>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Company>exomia</Company>
+    <Authors>exomia; Daniel Bätz; Daniel Baumert</Authors>
+    <Description>Low-level library for C#/.Net 6 to access the Vulkan API.</Description>
+    <Copyright>Copyright © $([System.DateTime]::Now.Year) exomia</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageProjectUrl>https://github.com/exomia/vulkan-api</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageTags>exomia vulkan net6.0 android csharp game engine 2d 3d</PackageTags>
+    <RepositoryUrl>https://github.com/exomia/vulkan-api</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageOutputPath>.</PackageOutputPath>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIconUrl>https://avatars0.githubusercontent.com/u/37782223</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <IncludeBuildOutput>true</IncludeBuildOutput>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\Exomia.Vulkan.Api.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)\GeneratedFiles</CompilerGeneratedFilesOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)'=='AnyCPU'">
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <PackageId>$(MSBuildProjectName)</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)'!='AnyCPU'">
+    <AssemblyName>$(MSBuildProjectName).$(Platform)</AssemblyName>
+    <PackageId>$(MSBuildProjectName).$(Platform)</PackageId>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <NoWarn>1701;1702;IDE0063;IDE0079;CA1401;CS1572;CS0618</NoWarn>
+    <WarningsAsErrors>NU1605</WarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Platform)'=='AnyCPU'">
+    <PackageReference Include="Exomia.Vulkan.Api.Core" Version="$(Version)" IncludeAssets="all" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(Platform)'!='AnyCPU'">
+    <PackageReference Include="Exomia.Vulkan.Api.Core.$(Platform)" Version="$(Version)" IncludeAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\.editorconfig" Link=".editorconfig" />
+    <None Include="..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
+    <None Include="..\..\icon.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+  
+  <!-- Source Link Support -->
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <IncludeSymbols>true</IncludeSymbols>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Deterministic>True</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)'=='true'">True</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)'=='Debug'">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

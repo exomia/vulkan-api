@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,18 +8,28 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkMemoryHeap - Structure specifying a memory heap -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryHeap.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryHeap.html</a>
+/// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>returnedonly</term><description>true</description>
+///         </item>
+///     </list>
+/// </remarks>
+[StructLayout(LayoutKind.Sequential)]
+public struct VkMemoryHeap
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkMemoryHeap
-    {
-        public VkDeviceSize         size;
-        public VkMemoryHeapFlagBits flags;
-    }
+    /// <summary>size is the total memory size in bytes in the heap.</summary>
+    public VkDeviceSize size;
+
+    /// <summary>flags is a bitmask of VkMemoryHeapFlagBits specifying attribute flags for the heap.</summary>
+    public VkMemoryHeapFlags flags;
 }

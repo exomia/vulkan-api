@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,19 +8,21 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkEventCreateFlagBits - Event creation flag bits -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEventCreateFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEventCreateFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkEventCreateFlagBits
 {
-    [Flags]
-    public enum VkEventCreateFlagBits
-    {
-        DEVICE_ONLY_BIT_KHR = 0x00000001,
-        FLAG_BITS_MAX_ENUM  = 0x7FFFFFFF
-    }
+    /// <summary>VK_EVENT_CREATE_DEVICE_ONLY_BIT specifies that host event commands will not be used with this event.</summary>
+    VK_EVENT_CREATE_DEVICE_ONLY_BIT = 0,
+
+    /// <summary>VK_EVENT_CREATE_DEVICE_ONLY_BIT specifies that host event commands will not be used with this event.</summary>
+    VK_EVENT_CREATE_DEVICE_ONLY_BIT_KHR = VK_EVENT_CREATE_DEVICE_ONLY_BIT
 }

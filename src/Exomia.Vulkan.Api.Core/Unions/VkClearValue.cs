@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,21 +8,26 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
-{
-    [StructLayout(LayoutKind.Explicit)]
-    public struct VkClearValue
-    {
-        [FieldOffset(0)]
-        public VkClearColorValue color;
+namespace Exomia.Vulkan.Api.Core;
 
-        [FieldOffset(0)]
-        public VkClearDepthStencilValue depthStencil;
-    }
+/// <summary>
+///     VkClearValue - Structure specifying a clear value -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkClearValue.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkClearValue.html</a>
+/// </summary>
+[StructLayout(LayoutKind.Explicit)]
+public struct VkClearValue
+{
+    /// <summary>color specifies the color image clear values to use when clearing a color image or attachment.</summary>
+    [FieldOffset(0)]
+    public VkClearColorValue color;
+
+    /// <summary>
+    ///     depthStencil specifies the depth and stencil clear values to use when clearing a depth/stencil image or
+    ///     attachment.
+    /// </summary>
+    [FieldOffset(0)]
+    public VkClearDepthStencilValue depthStencil;
 }

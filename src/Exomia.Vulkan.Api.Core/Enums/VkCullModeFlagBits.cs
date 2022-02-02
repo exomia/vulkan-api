@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,22 +8,27 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkCullModeFlagBits - Bitmask controlling triangle culling -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCullModeFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCullModeFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkCullModeFlagBits
 {
-    [Flags]
-    public enum VkCullModeFlagBits
-    {
-        NONE               = 0,
-        FRONT_BIT          = 0x00000001,
-        BACK_BIT           = 0x00000002,
-        FRONT_AND_BACK     = 0x00000003,
-        FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
-    }
+    /// <summary>VK_CULL_MODE_NONE specifies that no triangles are discarded</summary>
+    VK_CULL_MODE_NONE = 0,
+
+    /// <summary>VK_CULL_MODE_FRONT_BIT specifies that front-facing triangles are discarded</summary>
+    VK_CULL_MODE_FRONT_BIT = 0,
+
+    /// <summary>VK_CULL_MODE_BACK_BIT specifies that back-facing triangles are discarded</summary>
+    VK_CULL_MODE_BACK_BIT = 1,
+
+    /// <summary>VK_CULL_MODE_FRONT_AND_BACK specifies that all triangles are discarded.</summary>
+    VK_CULL_MODE_FRONT_AND_BACK = 0x00000003
 }

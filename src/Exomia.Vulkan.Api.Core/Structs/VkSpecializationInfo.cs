@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,20 +8,30 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkSpecializationInfo - Structure specifying specialization information -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSpecializationInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSpecializationInfo.html</a>
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkSpecializationInfo
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkSpecializationInfo
-    {
-        public uint                      mapEntryCount;
-        public VkSpecializationMapEntry* pMapEntries;
-        public nuint                     dataSize;
-        public void*                     pData;
-    }
+    /// <summary>mapEntryCount is the number of entries in the pMapEntriesarray.</summary>
+    public uint mapEntryCount;
+
+    /// <summary>
+    ///     pMapEntries is a pointer to an array of VkSpecializationMapEntry structures which map constant IDs to offsets
+    ///     in pData.
+    /// </summary>
+    public VkSpecializationMapEntry* pMapEntries;
+
+    /// <summary>dataSize is the byte size of the pData buffer.</summary>
+    public nuint dataSize;
+
+    /// <summary>pData contains the actual constant values to specialize with.</summary>
+    public void* pData;
 }

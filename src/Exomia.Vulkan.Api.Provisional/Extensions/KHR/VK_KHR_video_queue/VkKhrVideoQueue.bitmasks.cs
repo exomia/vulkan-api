@@ -1,0 +1,9 @@
+﻿global using VkVideoCodecOperationFlagsKHR = Exomia.Vulkan.Api.Provisional.VkVideoCodecOperationFlagBitsKHR;
+global using VkVideoChromaSubsamplingFlagsKHR = Exomia.Vulkan.Api.Provisional.VkVideoChromaSubsamplingFlagBitsKHR;
+global using VkVideoComponentBitDepthFlagsKHR = Exomia.Vulkan.Api.Provisional.VkVideoComponentBitDepthFlagBitsKHR;
+global using VkVideoCapabilityFlagsKHR = Exomia.Vulkan.Api.Provisional.VkVideoCapabilityFlagBitsKHR;
+global using VkVideoSessionCreateFlagsKHR = Exomia.Vulkan.Api.Provisional.VkVideoSessionCreateFlagBitsKHR;
+global using VkVideoBeginCodingFlagsKHR = Exomia.Vulkan.Api.Core.FutureUse32;
+global using VkVideoEndCodingFlagsKHR = Exomia.Vulkan.Api.Core.FutureUse32;
+global using VkVideoCodingControlFlagsKHR = Exomia.Vulkan.Api.Provisional.VkVideoCodingControlFlagBitsKHR;
+global using VkVideoCodingQualityPresetFlagsKHR = Exomia.Vulkan.Api.Provisional.VkVideoCodingQualityPresetFlagBitsKHR;

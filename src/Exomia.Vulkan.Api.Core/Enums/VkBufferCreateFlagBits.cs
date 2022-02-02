@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,25 +8,73 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkBufferCreateFlagBits - Bitmask specifying additional parameters of a buffer -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCreateFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCreateFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkBufferCreateFlagBits
 {
-    [Flags]
-    public enum VkBufferCreateFlagBits
-    {
-        SPARSE_BINDING_BIT                    = 0x00000001,
-        SPARSE_RESIDENCY_BIT                  = 0x00000002,
-        SPARSE_ALIASED_BIT                    = 0x00000004,
-        PROTECTED_BIT                         = 0x00000008,
-        DEVICE_ADDRESS_CAPTURE_REPLAY_BIT     = 0x00000010,
-        DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_EXT = DEVICE_ADDRESS_CAPTURE_REPLAY_BIT,
-        DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHR = DEVICE_ADDRESS_CAPTURE_REPLAY_BIT,
-        FLAG_BITS_MAX_ENUM                    = 0x7FFFFFFF
-    }
+    /// <summary>VK_BUFFER_CREATE_SPARSE_BINDING_BIT specifies that the buffer will be backed using sparse memory binding.</summary>
+    VK_BUFFER_CREATE_SPARSE_BINDING_BIT = 0,
+
+    /// <summary>
+    ///     VK_BUFFER_CREATE_SPARSE_RESIDENCY_BIT specifies that the buffer can be partially backed using sparse memory
+    ///     binding. Buffers created with this flag must also be created with the VK_BUFFER_CREATE_SPARSE_BINDING_BIT flag.
+    /// </summary>
+    VK_BUFFER_CREATE_SPARSE_RESIDENCY_BIT = 1,
+
+    /// <summary>
+    ///     VK_BUFFER_CREATE_SPARSE_ALIASED_BIT specifies that the buffer will be backed using sparse memory binding with
+    ///     memory ranges that might also simultaneously be backing another buffer (or another portion of the same buffer).
+    ///     Buffers created with this flag must also be created with the VK_BUFFER_CREATE_SPARSE_BINDING_BIT flag.
+    /// </summary>
+    VK_BUFFER_CREATE_SPARSE_ALIASED_BIT = 2,
+
+    /// <summary>VK_BUFFER_CREATE_PROTECTED_BIT specifies that the buffer is a protected buffer.</summary>
+    VK_BUFFER_CREATE_PROTECTED_BIT = 3,
+
+    /// <summary>
+    ///     VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the buffer&#8217;s address can be saved and
+    ///     reused on a subsequent run (e.g. for trace capture and replay), see
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfo.html">
+    ///         VkBufferOpaqueCaptureAddressCreateInfo
+    ///     </a>
+    ///     for more detail.
+    /// </summary>
+    VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT = 4,
+
+    /// <summary>
+    ///     VK_BUFFER_CREATE_RESERVED_5_BIT_AMD<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferCreateFlagBits</a>
+    /// </summary>
+    VK_BUFFER_CREATE_RESERVED_5_BIT_AMD = 5,
+
+    /// <summary>
+    ///     VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the buffer&#8217;s address can be saved and
+    ///     reused on a subsequent run (e.g. for trace capture and replay), see
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfo.html">
+    ///         VkBufferOpaqueCaptureAddressCreateInfo
+    ///     </a>
+    ///     for more detail.
+    /// </summary>
+    VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_EXT = VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT,
+
+    /// <summary>
+    ///     VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the buffer&#8217;s address can be saved and
+    ///     reused on a subsequent run (e.g. for trace capture and replay), see
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfo.html">
+    ///         VkBufferOpaqueCaptureAddressCreateInfo
+    ///     </a>
+    ///     for more detail.
+    /// </summary>
+    VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHR = VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT
 }

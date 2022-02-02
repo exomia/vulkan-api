@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,20 +8,37 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkFramebufferCreateFlagBits - Bitmask specifying framebuffer properties -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferCreateFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferCreateFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkFramebufferCreateFlagBits
 {
-    [Flags]
-    public enum VkFramebufferCreateFlagBits
-    {
-        IMAGELESS_BIT      = 0x00000001,
-        IMAGELESS_BIT_KHR  = IMAGELESS_BIT,
-        FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
-    }
+    /// <summary>
+    ///     VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT specifies that image views are not specified, and only attachment
+    ///     compatibility information will be provided via a
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferAttachmentImageInfo.html">
+    ///         VkFramebufferAttachmentImageInfo
+    ///     </a>
+    ///     structure.
+    /// </summary>
+    VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT = 0,
+
+    /// <summary>
+    ///     VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT specifies that image views are not specified, and only attachment
+    ///     compatibility information will be provided via a
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferAttachmentImageInfo.html">
+    ///         VkFramebufferAttachmentImageInfo
+    ///     </a>
+    ///     structure.
+    /// </summary>
+    VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT_KHR = VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT
 }

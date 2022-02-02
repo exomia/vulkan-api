@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,25 +8,56 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkInstanceCreateInfo - Structure specifying parameters of a newly created instance -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstanceCreateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstanceCreateInfo.html</a>
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkInstanceCreateInfo
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct VkInstanceCreateInfo
-    {
-        public const VkStructureType          STYPE = VkStructureType.INSTANCE_CREATE_INFO;
-        public       VkStructureType          sType;
-        public       void*                    pNext;
-        public       VkInstanceCreateFlagBits flags;
-        public       VkApplicationInfo*       pApplicationInfo;
-        public       uint                     enabledLayerCount;
-        public       sbyte**                  ppEnabledLayerNames;
-        public       uint                     enabledExtensionCount;
-        public       sbyte**                  ppEnabledExtensionNames;
-    }
+    /// <summary> The stype of this structure. </summary>
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+
+    /// <summary>sType is the type of this structure.</summary>
+    public VkStructureType sType;
+
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    public void* pNext;
+
+    /// <summary>flags is reserved for future use.</summary>
+    public VkInstanceCreateFlags flags;
+
+    /// <summary>
+    ///     pApplicationInfo is NULL or a pointer to a VkApplicationInfo structure. If not NULL, this information helps
+    ///     implementations recognize behavior inherent to classes of applications. VkApplicationInfo is defined in detail
+    ///     below.
+    /// </summary>
+    public VkApplicationInfo* pApplicationInfo;
+
+    /// <summary>enabledLayerCount is the number of global layers to enable.</summary>
+    public uint enabledLayerCount;
+
+    /// <summary>
+    ///     ppEnabledLayerNames is a pointer to an array of enabledLayerCount null-terminated UTF-8 strings containing the
+    ///     names of layers to enable for the created instance. The layers are loaded in the order they are listed in this
+    ///     array, with the first array element being the closest to the application, and the last array element being the
+    ///     closest to the driver. See the
+    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-layers section for
+    ///     further details.
+    /// </summary>
+    public byte** ppEnabledLayerNames;
+
+    /// <summary>enabledExtensionCount is the number of global extensions to enable.</summary>
+    public uint enabledExtensionCount;
+
+    /// <summary>
+    ///     ppEnabledExtensionNames is a pointer to an array of enabledExtensionCount null-terminated UTF-8 strings
+    ///     containing the names of extensions to enable.
+    /// </summary>
+    public byte** ppEnabledExtensionNames;
 }

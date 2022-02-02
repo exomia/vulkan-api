@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,22 +8,39 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkExternalFenceFeatureFlagBits - Bitfield describing features of an external fence handle type -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceFeatureFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceFeatureFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkExternalFenceFeatureFlagBits
 {
-    [Flags]
-    public enum VkExternalFenceFeatureFlagBits
-    {
-        EXPORTABLE_BIT     = 0x00000001,
-        IMPORTABLE_BIT     = 0x00000002,
-        EXPORTABLE_BIT_KHR = EXPORTABLE_BIT,
-        IMPORTABLE_BIT_KHR = IMPORTABLE_BIT,
-        FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
-    }
+    /// <summary>
+    ///     VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT specifies handles of this type can be exported from Vulkan fence
+    ///     objects.
+    /// </summary>
+    VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT = 0,
+
+    /// <summary>
+    ///     VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT specifies handles of this type can be imported to Vulkan fence
+    ///     objects.
+    /// </summary>
+    VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT = 1,
+
+    /// <summary>
+    ///     VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT specifies handles of this type can be exported from Vulkan fence
+    ///     objects.
+    /// </summary>
+    VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT_KHR = VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT,
+
+    /// <summary>
+    ///     VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT specifies handles of this type can be imported to Vulkan fence
+    ///     objects.
+    /// </summary>
+    VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT_KHR = VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT
 }

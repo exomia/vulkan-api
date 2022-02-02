@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,28 +8,57 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System;
-
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkResolveModeFlagBits - Bitmask indicating supported depth and stencil resolve modes -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkResolveModeFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkResolveModeFlagBits.html</a>
+/// </summary>
+[Flags]
+public enum VkResolveModeFlagBits
 {
-    [Flags]
-    public enum VkResolveModeFlagBits
-    {
-        NONE                = 0,
-        SAMPLE_ZERO_BIT     = 0x00000001,
-        AVERAGE_BIT         = 0x00000002,
-        MIN_BIT             = 0x00000004,
-        MAX_BIT             = 0x00000008,
-        NONE_KHR            = NONE,
-        SAMPLE_ZERO_BIT_KHR = SAMPLE_ZERO_BIT,
-        AVERAGE_BIT_KHR     = AVERAGE_BIT,
-        MIN_BIT_KHR         = MIN_BIT,
-        MAX_BIT_KHR         = MAX_BIT,
-        FLAG_BITS_MAX_ENUM  = 0x7FFFFFFF
-    }
+    /// <summary>VK_RESOLVE_MODE_NONE indicates that no resolve operation is done.</summary>
+    VK_RESOLVE_MODE_NONE = 0,
+
+    /// <summary>
+    ///     VK_RESOLVE_MODE_SAMPLE_ZERO_BIT indicates that result of the resolve operation is equal to the value of sample
+    ///     0.
+    /// </summary>
+    VK_RESOLVE_MODE_SAMPLE_ZERO_BIT = 0,
+
+    /// <summary>
+    ///     VK_RESOLVE_MODE_AVERAGE_BIT indicates that result of the resolve operation is the average of the sample
+    ///     values.
+    /// </summary>
+    VK_RESOLVE_MODE_AVERAGE_BIT = 1,
+
+    /// <summary>VK_RESOLVE_MODE_MIN_BIT indicates that result of the resolve operation is the minimum of the sample values.</summary>
+    VK_RESOLVE_MODE_MIN_BIT = 2,
+
+    /// <summary>VK_RESOLVE_MODE_MAX_BIT indicates that result of the resolve operation is the maximum of the sample values.</summary>
+    VK_RESOLVE_MODE_MAX_BIT = 3,
+
+    /// <summary>VK_RESOLVE_MODE_NONE indicates that no resolve operation is done.</summary>
+    VK_RESOLVE_MODE_NONE_KHR = VK_RESOLVE_MODE_NONE,
+
+    /// <summary>
+    ///     VK_RESOLVE_MODE_SAMPLE_ZERO_BIT indicates that result of the resolve operation is equal to the value of sample
+    ///     0.
+    /// </summary>
+    VK_RESOLVE_MODE_SAMPLE_ZERO_BIT_KHR = VK_RESOLVE_MODE_SAMPLE_ZERO_BIT,
+
+    /// <summary>
+    ///     VK_RESOLVE_MODE_AVERAGE_BIT indicates that result of the resolve operation is the average of the sample
+    ///     values.
+    /// </summary>
+    VK_RESOLVE_MODE_AVERAGE_BIT_KHR = VK_RESOLVE_MODE_AVERAGE_BIT,
+
+    /// <summary>VK_RESOLVE_MODE_MIN_BIT indicates that result of the resolve operation is the minimum of the sample values.</summary>
+    VK_RESOLVE_MODE_MIN_BIT_KHR = VK_RESOLVE_MODE_MIN_BIT,
+
+    /// <summary>VK_RESOLVE_MODE_MAX_BIT indicates that result of the resolve operation is the maximum of the sample values.</summary>
+    VK_RESOLVE_MODE_MAX_BIT_KHR = VK_RESOLVE_MODE_MAX_BIT
 }

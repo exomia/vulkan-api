@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (c) 2018-2021, exomia
+// Copyright (c) 2018-2022, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -8,23 +8,21 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-using System.Runtime.InteropServices;
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
+namespace Exomia.Vulkan.Api.Core;
 
-// ReSharper disable UnusedMember.Global
-// ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core
+/// <summary>
+///     VkExtent2D - Structure specifying a two-dimensional extent -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExtent2D.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExtent2D.html</a>
+/// </summary>
+[StructLayout(LayoutKind.Sequential)]
+public struct VkExtent2D
 {
-    [StructLayout(LayoutKind.Sequential)]
-    public struct VkExtent2D
-    {
-        public uint width;
-        public uint height;
-    }
+    /// <summary>width is the width of the extent.</summary>
+    public uint width;
+
+    /// <summary>height is the height of the extent.</summary>
+    public uint height;
 }

@@ -12,50 +12,47 @@ env:
     DOTNET_NOLOGO: 1
     DOTNET_CLI_TELEMETRY_OPTOUT: 1
 jobs:
-  build:
+  build-core:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
-        plattforms: [AnyCPU, x64]
-        projects: [Core, Windows, Beta]
-    name: '[${{ matrix.projects }}] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.plattforms }}]'
+        platforms: [AnyCPU, x64]
+    name: '[CORE] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
     runs-on: ${{ matrix.os }}
     steps: 
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
-        dotnet-version: '5.0.x'
+        dotnet-version: '6.0.x'
     - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
       run: |
-        dotnet build src/Exomia.Vulkan.Api.${{ matrix.projects }} --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.plattforms }}
-  test:
+        dotnet build Exomia.Vulkan.Api.Core.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.platforms }}
+  build-platforms:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
-        plattforms: [AnyCPU, x64]
-        projects: [Core, Windows, Beta]   
-    name: '[${{ matrix.projects }}] test ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.plattforms }}]'
-    needs: [build]
+        platforms: [AnyCPU, x64]
+    name: '[PLATFORMS] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
     runs-on: ${{ matrix.os }}
-    steps:    
+    steps: 
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
       with:
-        dotnet-version: '5.0.x'
-    - name: '[${{ matrix.projects }}] test ${{ matrix.configurations }}'
+        dotnet-version: '6.0.x'
+    - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
       run: |
-        dotnet test tests/L0/Exomia.Vulkan.Api.${{ matrix.projects }}.Tests --configuration ${{ matrix.configurations }} --nologo -p:Platform=${{ matrix.plattforms }}
+        dotnet build Exomia.Vulkan.Api.Platforms.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.platforms }}
   check:
     if: ${{ always() }}  
     name: '[CHECK] BUILD & TEST SUCCESS'
-    needs: [build, test]
+    needs: [build-core, build-platforms]
     runs-on: ubuntu-latest
-    steps:    
-    - name: '[CHECK] build matrix status'
-      if: ${{ needs.build.result != 'success' }}
+    steps:
+    - name: '[CHECK] build-core matrix status'
+      if: ${{ needs.build-core.result != 'success' }}
       run: exit 1
-    - name: '[CHECK] test matrix status'
-      if: ${{ needs.test.result != 'success' }}
+    - name: '[CHECK] build-platforms matrix status'
+      if: ${{ needs.build-platforms.result != 'success' }}
       run: exit 1
