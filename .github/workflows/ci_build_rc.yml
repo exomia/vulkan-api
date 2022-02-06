@@ -13,7 +13,7 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
-        platforms: [AnyCPU, x64]
+        platforms: [Any CPU, x64]
     name: '[CORE] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
     runs-on: ${{ matrix.os }}
     steps: 
@@ -23,13 +23,13 @@ jobs:
         dotnet-version: '6.0.x'
     - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
       run: |
-        dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.platforms }}
+        dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   build-platforms:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug]
-        platforms: [AnyCPU, x64]
+        platforms: [Any CPU, x64]
     name: '[PLATFORMS] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
     runs-on: ${{ matrix.os }}
     steps: 
@@ -39,7 +39,7 @@ jobs:
         dotnet-version: '6.0.x'
     - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
       run: |
-        dotnet build Exomia.Vulkan.Api.Platforms.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.platforms }}
+        dotnet build Exomia.Vulkan.Api.Platforms.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check:
     if: ${{ always() }}  
     name: '[CHECK] BUILD SUCCESS'
