@@ -1,4 +1,4 @@
-name: '[CI] build rc candidates'
+name: '[CD] build rc candidates'
 on:
     push:
         branches:

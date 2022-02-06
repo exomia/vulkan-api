@@ -1,4 +1,4 @@
-name: '[CI] build & test'
+name: '[CD] build & test'
 on:
     push:
         branches:
