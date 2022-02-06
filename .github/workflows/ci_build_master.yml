@@ -1,0 +1,57 @@
+name: '[CI] build & test'
+on:
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            - master
+env:
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+    DOTNET_NOLOGO: 1
+    DOTNET_CLI_TELEMETRY_OPTOUT: 1
+jobs:
+  build-core:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+        platforms: [AnyCPU, x64]
+    name: '[CORE] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
+    runs-on: ${{ matrix.os }}
+    steps: 
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
+      run: |
+        dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.platforms }}
+  build-platforms:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+        platforms: [AnyCPU, x64]
+    name: '[PLATFORMS] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
+    runs-on: ${{ matrix.os }}
+    steps: 
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
+      run: |
+        dotnet build Exomia.Vulkan.Api.Platforms.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform=${{ matrix.platforms }}
+  check:
+    if: ${{ always() }}  
+    name: '[CHECK] BUILD SUCCESS'
+    needs: [build-core, build-platforms]
+    runs-on: ubuntu-latest
+    steps:
+    - name: '[CHECK] build-core matrix status'
+      if: ${{ needs.build-core.result != 'success' }}
+      run: exit 1
+    - name: '[CHECK] build-platforms matrix status'
+      if: ${{ needs.build-platforms.result != 'success' }}
+      run: exit 1

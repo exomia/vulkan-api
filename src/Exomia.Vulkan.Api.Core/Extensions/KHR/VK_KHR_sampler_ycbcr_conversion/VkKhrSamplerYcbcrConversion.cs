@@ -88,12 +88,12 @@ public static unsafe class VkKhrSamplerYcbcrConversion
         fixed (delegate*<VkDevice, VkSamplerYcbcrConversionCreateInfo*, VkAllocationCallbacks*, VkSamplerYcbcrConversion*, VkResult>* pvkCreateSamplerYcbcrConversionKHR =
                    &vkCreateSamplerYcbcrConversionKHR)
         {
-            *pvkCreateSamplerYcbcrConversionKHR = (delegate*<VkDevice, VkSamplerYcbcrConversionCreateInfo*, VkAllocationCallbacks*, VkSamplerYcbcrConversion*, VkResult>)GetVkFunction(
+            *pvkCreateSamplerYcbcrConversionKHR = (delegate*<VkDevice, VkSamplerYcbcrConversionCreateInfo*, VkAllocationCallbacks*, VkSamplerYcbcrConversion*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u7243\u6165\u6574\u6153\u706d\u656c\u5972\u6263\u7263\u6f43\u766e\u7265\u6973\u6e6f\u484b\u0052");
         }
         fixed (delegate*<VkDevice, VkSamplerYcbcrConversion, VkAllocationCallbacks*, void>* pvkDestroySamplerYcbcrConversionKHR = &vkDestroySamplerYcbcrConversionKHR)
         {
-            *pvkDestroySamplerYcbcrConversionKHR = (delegate*<VkDevice, VkSamplerYcbcrConversion, VkAllocationCallbacks*, void>)GetVkFunction(
+            *pvkDestroySamplerYcbcrConversionKHR = (delegate*<VkDevice, VkSamplerYcbcrConversion, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6544\u7473\u6f72\u5379\u6d61\u6c70\u7265\u6359\u6362\u4372\u6e6f\u6576\u7372\u6f69\u4b6e\u5248\u0000");
         }
     }

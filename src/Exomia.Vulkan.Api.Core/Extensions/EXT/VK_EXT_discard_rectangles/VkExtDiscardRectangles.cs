@@ -78,7 +78,7 @@ public static unsafe class VkExtDiscardRectangles
     {
         fixed (delegate*<VkCommandBuffer, uint, uint, VkRect2D*, void>* pvkCmdSetDiscardRectangleEXT = &vkCmdSetDiscardRectangleEXT)
         {
-            *pvkCmdSetDiscardRectangleEXT = (delegate*<VkCommandBuffer, uint, uint, VkRect2D*, void>)GetVkFunction(
+            *pvkCmdSetDiscardRectangleEXT = (delegate*<VkCommandBuffer, uint, uint, VkRect2D*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6944\u6373\u7261\u5264\u6365\u6174\u676e\u656c\u5845\u0054");
         }
     }

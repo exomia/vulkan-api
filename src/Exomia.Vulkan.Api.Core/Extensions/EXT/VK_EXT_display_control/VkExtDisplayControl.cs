@@ -163,22 +163,22 @@ public static unsafe class VkExtDisplayControl
     {
         fixed (delegate*<VkDevice, VkDisplayKHR, VkDisplayPowerInfoEXT*, VkResult>* pvkDisplayPowerControlEXT = &vkDisplayPowerControlEXT)
         {
-            *pvkDisplayPowerControlEXT = (delegate*<VkDevice, VkDisplayKHR, VkDisplayPowerInfoEXT*, VkResult>)GetVkFunction(
+            *pvkDisplayPowerControlEXT = (delegate*<VkDevice, VkDisplayKHR, VkDisplayPowerInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6944\u7073\u616c\u5079\u776f\u7265\u6f43\u746e\u6f72\u456c\u5458\u0000");
         }
         fixed (delegate*<VkDevice, VkDeviceEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>* pvkRegisterDeviceEventEXT = &vkRegisterDeviceEventEXT)
         {
-            *pvkRegisterDeviceEventEXT = (delegate*<VkDevice, VkDeviceEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>)GetVkFunction(
+            *pvkRegisterDeviceEventEXT = (delegate*<VkDevice, VkDeviceEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6552\u6967\u7473\u7265\u6544\u6976\u6563\u7645\u6e65\u4574\u5458\u0000");
         }
         fixed (delegate*<VkDevice, VkDisplayKHR, VkDisplayEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>* pvkRegisterDisplayEventEXT = &vkRegisterDisplayEventEXT)
         {
-            *pvkRegisterDisplayEventEXT = (delegate*<VkDevice, VkDisplayKHR, VkDisplayEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>)GetVkFunction(
+            *pvkRegisterDisplayEventEXT = (delegate*<VkDevice, VkDisplayKHR, VkDisplayEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6552\u6967\u7473\u7265\u6944\u7073\u616c\u4579\u6576\u746e\u5845\u0054");
         }
         fixed (delegate*<VkDevice, VkSwapchainKHR, VkSurfaceCounterFlagBitsEXT, ulong*, VkResult>* pvkGetSwapchainCounterEXT = &vkGetSwapchainCounterEXT)
         {
-            *pvkGetSwapchainCounterEXT = (delegate*<VkDevice, VkSwapchainKHR, VkSurfaceCounterFlagBitsEXT, ulong*, VkResult>)GetVkFunction(
+            *pvkGetSwapchainCounterEXT = (delegate*<VkDevice, VkSwapchainKHR, VkSurfaceCounterFlagBitsEXT, ulong*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u5374\u6177\u6370\u6168\u6e69\u6f43\u6e75\u6574\u4572\u5458\u0000");
         }
     }

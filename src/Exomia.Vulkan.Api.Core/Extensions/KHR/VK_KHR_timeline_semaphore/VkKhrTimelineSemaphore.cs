@@ -87,16 +87,16 @@ public static unsafe class VkKhrTimelineSemaphore
     {
         fixed (delegate*<VkDevice, VkSemaphore, ulong*, VkResult>* pvkGetSemaphoreCounterValueKHR = &vkGetSemaphoreCounterValueKHR)
         {
-            *pvkGetSemaphoreCounterValueKHR = (delegate*<VkDevice, VkSemaphore, ulong*, VkResult>)GetVkFunction(
+            *pvkGetSemaphoreCounterValueKHR = (delegate*<VkDevice, VkSemaphore, ulong*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u5374\u6d65\u7061\u6f68\u6572\u6f43\u6e75\u6574\u5672\u6c61\u6575\u484b\u0052");
         }
         fixed (delegate*<VkDevice, VkSemaphoreWaitInfo*, ulong, VkResult>* pvkWaitSemaphoresKHR = &vkWaitSemaphoresKHR)
         {
-            *pvkWaitSemaphoresKHR = (delegate*<VkDevice, VkSemaphoreWaitInfo*, ulong, VkResult>)GetVkFunction(device, "\u6b76\u6157\u7469\u6553\u616d\u6870\u726f\u7365\u484b\u0052");
+            *pvkWaitSemaphoresKHR = (delegate*<VkDevice, VkSemaphoreWaitInfo*, ulong, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6157\u7469\u6553\u616d\u6870\u726f\u7365\u484b\u0052");
         }
         fixed (delegate*<VkDevice, VkSemaphoreSignalInfo*, VkResult>* pvkSignalSemaphoreKHR = &vkSignalSemaphoreKHR)
         {
-            *pvkSignalSemaphoreKHR = (delegate*<VkDevice, VkSemaphoreSignalInfo*, VkResult>)GetVkFunction(device, "\u6b76\u6953\u6e67\u6c61\u6553\u616d\u6870\u726f\u4b65\u5248\u0000");
+            *pvkSignalSemaphoreKHR = (delegate*<VkDevice, VkSemaphoreSignalInfo*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6953\u6e67\u6c61\u6553\u616d\u6870\u726f\u4b65\u5248\u0000");
         }
     }
 }

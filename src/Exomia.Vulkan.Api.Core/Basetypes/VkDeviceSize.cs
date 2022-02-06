@@ -8,7 +8,7 @@
 
 #endregion
 
-
+using System.Runtime.CompilerServices;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable once CheckNamespace

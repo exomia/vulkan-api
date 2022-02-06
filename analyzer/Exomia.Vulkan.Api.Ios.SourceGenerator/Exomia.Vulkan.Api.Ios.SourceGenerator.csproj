@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Platforms>AnyCPU;x64</Platforms>
+        <LangVersion>10.0</LangVersion>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DocumentationFile></DocumentationFile>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <Nullable>enable</Nullable>
+        <NullableReferenceTypes>true</NullableReferenceTypes>
+        <DefineConstants>TRACE;$(Platform)</DefineConstants>
+        <CheckForDuplicateItems>false</CheckForDuplicateItems>
+        <Configurations>Debug;Release</Configurations>
+        <IsRoslynComponent>true</IsRoslynComponent>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>1.3.204</Version>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Company>exomia</Company>
+        <Authors>exomia; Daniel Bätz; Daniel Baumert</Authors>
+        <Description>Source generator including bitmasks and global-aliases for Exomia.Vulkan.Api.Ios.</Description>
+        <Copyright>Copyright © $([System.DateTime]::Now.Year) exomia</Copyright>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageProjectUrl>https://github.com/exomia/vulkan-api</PackageProjectUrl>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <PackageTags>exomia vulkan net6.0 ios csharp game engine 2d 3d sourcegen</PackageTags>
+        <RepositoryUrl>https://github.com/exomia/vulkan-api</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageOutputPath>.</PackageOutputPath>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageIconUrl>https://avatars0.githubusercontent.com/u/37782223</PackageIconUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <IncludeBuildOutput>true</IncludeBuildOutput>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <SignAssembly>true</SignAssembly>
+        <DelaySign>false</DelaySign>
+        <AssemblyOriginatorKeyFile>..\..\Exomia.Vulkan.Api.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Platform)'=='AnyCPU'">
+        <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+        <PackageId>$(MSBuildProjectName)</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Platform)'!='AnyCPU'">
+        <AssemblyName>$(MSBuildProjectName).$(Platform)</AssemblyName>
+        <PackageId>$(MSBuildProjectName).$(Platform)</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <NoWarn>1701;1702;IDE0063;IDE0079;CA1401;CA1069</NoWarn>
+        <WarningsAsErrors>NU1605</WarningsAsErrors>
+        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\.editorconfig" Link=".editorconfig" />
+        <None Include="..\..\LICENSE" Pack="true" Visible="false" PackagePath="" />
+        <None Include="..\..\icon.png" Pack="true" Visible="false" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="**\*.global-alias.cs" />
+        <EmbeddedResource Include="**\*.global-alias.cs" />
+        <Compile Remove="**\*.bitmasks.cs" />
+        <EmbeddedResource Include="**\*.bitmasks.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.1" PrivateAssets="all" />
+    </ItemGroup>
+</Project>

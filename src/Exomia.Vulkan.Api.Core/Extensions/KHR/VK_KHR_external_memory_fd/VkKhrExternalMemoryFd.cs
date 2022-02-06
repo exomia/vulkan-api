@@ -109,11 +109,11 @@ public static unsafe class VkKhrExternalMemoryFd
     {
         fixed (delegate*<VkDevice, VkMemoryGetFdInfoKHR*, int*, VkResult>* pvkGetMemoryFdKHR = &vkGetMemoryFdKHR)
         {
-            *pvkGetMemoryFdKHR = (delegate*<VkDevice, VkMemoryGetFdInfoKHR*, int*, VkResult>)GetVkFunction(device, "\u6b76\u6547\u4d74\u6d65\u726f\u4679\u4b64\u5248\u0000");
+            *pvkGetMemoryFdKHR = (delegate*<VkDevice, VkMemoryGetFdInfoKHR*, int*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6547\u4d74\u6d65\u726f\u4679\u4b64\u5248\u0000");
         }
         fixed (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, int, VkMemoryFdPropertiesKHR*, VkResult>* pvkGetMemoryFdPropertiesKHR = &vkGetMemoryFdPropertiesKHR)
         {
-            *pvkGetMemoryFdPropertiesKHR = (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, int, VkMemoryFdPropertiesKHR*, VkResult>)GetVkFunction(
+            *pvkGetMemoryFdPropertiesKHR = (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, int, VkMemoryFdPropertiesKHR*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4d74\u6d65\u726f\u4679\u5064\u6f72\u6570\u7472\u6569\u4b73\u5248\u0000");
         }
     }

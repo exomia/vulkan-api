@@ -46,7 +46,7 @@ public unsafe struct VkPipelineMultisampleStateCreateInfo
     public float minSampleShading;
 
     /// <summary>pSampleMask is a pointer to an array of VkSampleMaskvalues used in the sample mask test.</summary>
-    public uint* pSampleMask;
+    public VkSampleMask* pSampleMask;
 
     /// <summary>
     ///     alphaToCoverageEnable controls whether a temporary coverage value is generated based on the alpha component of

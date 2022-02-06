@@ -73,11 +73,11 @@ public static unsafe class VkKhrDynamicRendering
     {
         fixed (delegate*<VkCommandBuffer, VkRenderingInfo*, void>* pvkCmdBeginRenderingKHR = &vkCmdBeginRenderingKHR)
         {
-            *pvkCmdBeginRenderingKHR = (delegate*<VkCommandBuffer, VkRenderingInfo*, void>)GetVkFunction(device, "\u6b76\u6d43\u4264\u6765\u6e69\u6552\u646e\u7265\u6e69\u4b67\u5248\u0000");
+            *pvkCmdBeginRenderingKHR = (delegate*<VkCommandBuffer, VkRenderingInfo*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4264\u6765\u6e69\u6552\u646e\u7265\u6e69\u4b67\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdEndRenderingKHR = &vkCmdEndRenderingKHR)
         {
-            *pvkCmdEndRenderingKHR = (delegate*<VkCommandBuffer, void>)GetVkFunction(device, "\u6b76\u6d43\u4564\u646e\u6552\u646e\u7265\u6e69\u4b67\u5248\u0000");
+            *pvkCmdEndRenderingKHR = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4564\u646e\u6552\u646e\u7265\u6e69\u4b67\u5248\u0000");
         }
     }
 }

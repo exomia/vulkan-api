@@ -499,91 +499,93 @@ public static unsafe class VkKhrAccelerationStructure
         fixed (delegate*<VkDevice, VkAccelerationStructureCreateInfoKHR*, VkAllocationCallbacks*, VkAccelerationStructureKHR*, VkResult>* pvkCreateAccelerationStructureKHR =
                    &vkCreateAccelerationStructureKHR)
         {
-            *pvkCreateAccelerationStructureKHR = (delegate*<VkDevice, VkAccelerationStructureCreateInfoKHR*, VkAllocationCallbacks*, VkAccelerationStructureKHR*, VkResult>)GetVkFunction(
+            *pvkCreateAccelerationStructureKHR = (delegate*<VkDevice, VkAccelerationStructureCreateInfoKHR*, VkAllocationCallbacks*, VkAccelerationStructureKHR*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u7243\u6165\u6574\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u4b65\u5248\u0000");
         }
         fixed (delegate*<VkDevice, VkAccelerationStructureKHR, VkAllocationCallbacks*, void>* pvkDestroyAccelerationStructureKHR = &vkDestroyAccelerationStructureKHR)
         {
-            *pvkDestroyAccelerationStructureKHR = (delegate*<VkDevice, VkAccelerationStructureKHR, VkAllocationCallbacks*, void>)GetVkFunction(
+            *pvkDestroyAccelerationStructureKHR = (delegate*<VkDevice, VkAccelerationStructureKHR, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6544\u7473\u6f72\u4179\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u484b\u0052");
         }
         fixed (delegate*<VkCommandBuffer, uint, VkAccelerationStructureBuildGeometryInfoKHR*, VkAccelerationStructureBuildRangeInfoKHR**, void>* pvkCmdBuildAccelerationStructuresKHR =
                    &vkCmdBuildAccelerationStructuresKHR)
         {
-            *pvkCmdBuildAccelerationStructuresKHR = (delegate*<VkCommandBuffer, uint, VkAccelerationStructureBuildGeometryInfoKHR*, VkAccelerationStructureBuildRangeInfoKHR**, void>)GetVkFunction(
-                device, "\u6b76\u6d43\u4264\u6975\u646c\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u7365\u484b\u0052");
+            *pvkCmdBuildAccelerationStructuresKHR =
+                (delegate*<VkCommandBuffer, uint, VkAccelerationStructureBuildGeometryInfoKHR*, VkAccelerationStructureBuildRangeInfoKHR**, void>)Core.Vk.GetVkFunction(
+                    device, "\u6b76\u6d43\u4264\u6975\u646c\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u7365\u484b\u0052");
         }
         fixed (delegate*<VkCommandBuffer, uint, VkAccelerationStructureBuildGeometryInfoKHR*, VkDeviceAddress*, uint*, uint**, void>* pvkCmdBuildAccelerationStructuresIndirectKHR =
                    &vkCmdBuildAccelerationStructuresIndirectKHR)
         {
-            *pvkCmdBuildAccelerationStructuresIndirectKHR = (delegate*<VkCommandBuffer, uint, VkAccelerationStructureBuildGeometryInfoKHR*, VkDeviceAddress*, uint*, uint**, void>)GetVkFunction(
-                device, "\u6b76\u6d43\u4264\u6975\u646c\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u7365\u6e49\u6964\u6572\u7463\u484b\u0052");
+            *pvkCmdBuildAccelerationStructuresIndirectKHR =
+                (delegate*<VkCommandBuffer, uint, VkAccelerationStructureBuildGeometryInfoKHR*, VkDeviceAddress*, uint*, uint**, void>)Core.Vk.GetVkFunction(
+                    device, "\u6b76\u6d43\u4264\u6975\u646c\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u7365\u6e49\u6964\u6572\u7463\u484b\u0052");
         }
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, uint, VkAccelerationStructureBuildGeometryInfoKHR*, VkAccelerationStructureBuildRangeInfoKHR**, VkResult>*
                pvkBuildAccelerationStructuresKHR = &vkBuildAccelerationStructuresKHR)
         {
             *pvkBuildAccelerationStructuresKHR =
-                (delegate*<VkDevice, VkDeferredOperationKHR, uint, VkAccelerationStructureBuildGeometryInfoKHR*, VkAccelerationStructureBuildRangeInfoKHR**, VkResult>)GetVkFunction(
+                (delegate*<VkDevice, VkDeferredOperationKHR, uint, VkAccelerationStructureBuildGeometryInfoKHR*, VkAccelerationStructureBuildRangeInfoKHR**, VkResult>)Core.Vk.GetVkFunction(
                     device, "\u6b76\u7542\u6c69\u4164\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u4b73\u5248\u0000");
         }
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkCopyAccelerationStructureInfoKHR*, VkResult>* pvkCopyAccelerationStructureKHR = &vkCopyAccelerationStructureKHR)
         {
-            *pvkCopyAccelerationStructureKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkCopyAccelerationStructureInfoKHR*, VkResult>)GetVkFunction(
+            *pvkCopyAccelerationStructureKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkCopyAccelerationStructureInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6f43\u7970\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u4b65\u5248\u0000");
         }
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkCopyAccelerationStructureToMemoryInfoKHR*, VkResult>* pvkCopyAccelerationStructureToMemoryKHR = &vkCopyAccelerationStructureToMemoryKHR)
         {
-            *pvkCopyAccelerationStructureToMemoryKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkCopyAccelerationStructureToMemoryInfoKHR*, VkResult>)GetVkFunction(
+            *pvkCopyAccelerationStructureToMemoryKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkCopyAccelerationStructureToMemoryInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6f43\u7970\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u5465\u4d6f\u6d65\u726f\u4b79\u5248\u0000");
         }
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkCopyMemoryToAccelerationStructureInfoKHR*, VkResult>* pvkCopyMemoryToAccelerationStructureKHR = &vkCopyMemoryToAccelerationStructureKHR)
         {
-            *pvkCopyMemoryToAccelerationStructureKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkCopyMemoryToAccelerationStructureInfoKHR*, VkResult>)GetVkFunction(
+            *pvkCopyMemoryToAccelerationStructureKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkCopyMemoryToAccelerationStructureInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6f43\u7970\u654d\u6f6d\u7972\u6f54\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u4b65\u5248\u0000");
         }
         fixed (delegate*<VkDevice, uint, VkAccelerationStructureKHR*, VkQueryType, nuint, void*, nuint, VkResult>* pvkWriteAccelerationStructuresPropertiesKHR =
                    &vkWriteAccelerationStructuresPropertiesKHR)
         {
-            *pvkWriteAccelerationStructuresPropertiesKHR = (delegate*<VkDevice, uint, VkAccelerationStructureKHR*, VkQueryType, nuint, void*, nuint, VkResult>)GetVkFunction(
+            *pvkWriteAccelerationStructuresPropertiesKHR = (delegate*<VkDevice, uint, VkAccelerationStructureKHR*, VkQueryType, nuint, void*, nuint, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u7257\u7469\u4165\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u5073\u6f72\u6570\u7472\u6569\u4b73\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkCopyAccelerationStructureInfoKHR*, void>* pvkCmdCopyAccelerationStructureKHR = &vkCmdCopyAccelerationStructureKHR)
         {
-            *pvkCmdCopyAccelerationStructureKHR = (delegate*<VkCommandBuffer, VkCopyAccelerationStructureInfoKHR*, void>)GetVkFunction(
+            *pvkCmdCopyAccelerationStructureKHR = (delegate*<VkCommandBuffer, VkCopyAccelerationStructureInfoKHR*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4364\u706f\u4179\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u484b\u0052");
         }
         fixed (delegate*<VkCommandBuffer, VkCopyAccelerationStructureToMemoryInfoKHR*, void>* pvkCmdCopyAccelerationStructureToMemoryKHR = &vkCmdCopyAccelerationStructureToMemoryKHR)
         {
-            *pvkCmdCopyAccelerationStructureToMemoryKHR = (delegate*<VkCommandBuffer, VkCopyAccelerationStructureToMemoryInfoKHR*, void>)GetVkFunction(
+            *pvkCmdCopyAccelerationStructureToMemoryKHR = (delegate*<VkCommandBuffer, VkCopyAccelerationStructureToMemoryInfoKHR*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4364\u706f\u4179\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u6f54\u654d\u6f6d\u7972\u484b\u0052");
         }
         fixed (delegate*<VkCommandBuffer, VkCopyMemoryToAccelerationStructureInfoKHR*, void>* pvkCmdCopyMemoryToAccelerationStructureKHR = &vkCmdCopyMemoryToAccelerationStructureKHR)
         {
-            *pvkCmdCopyMemoryToAccelerationStructureKHR = (delegate*<VkCommandBuffer, VkCopyMemoryToAccelerationStructureInfoKHR*, void>)GetVkFunction(
+            *pvkCmdCopyMemoryToAccelerationStructureKHR = (delegate*<VkCommandBuffer, VkCopyMemoryToAccelerationStructureInfoKHR*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4364\u706f\u4d79\u6d65\u726f\u5479\u416f\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u484b\u0052");
         }
         fixed (delegate*<VkDevice, VkAccelerationStructureDeviceAddressInfoKHR*, VkDeviceAddress>* pvkGetAccelerationStructureDeviceAddressKHR = &vkGetAccelerationStructureDeviceAddressKHR)
         {
-            *pvkGetAccelerationStructureDeviceAddressKHR = (delegate*<VkDevice, VkAccelerationStructureDeviceAddressInfoKHR*, VkDeviceAddress>)GetVkFunction(
+            *pvkGetAccelerationStructureDeviceAddressKHR = (delegate*<VkDevice, VkAccelerationStructureDeviceAddressInfoKHR*, VkDeviceAddress>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4174\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u6544\u6976\u6563\u6441\u7264\u7365\u4b73\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, uint, VkAccelerationStructureKHR*, VkQueryType, VkQueryPool, uint, void>* pvkCmdWriteAccelerationStructuresPropertiesKHR =
                    &vkCmdWriteAccelerationStructuresPropertiesKHR)
         {
-            *pvkCmdWriteAccelerationStructuresPropertiesKHR = (delegate*<VkCommandBuffer, uint, VkAccelerationStructureKHR*, VkQueryType, VkQueryPool, uint, void>)GetVkFunction(
+            *pvkCmdWriteAccelerationStructuresPropertiesKHR = (delegate*<VkCommandBuffer, uint, VkAccelerationStructureKHR*, VkQueryType, VkQueryPool, uint, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5764\u6972\u6574\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u7365\u7250\u706f\u7265\u6974\u7365\u484b\u0052");
         }
         fixed (delegate*<VkDevice, VkAccelerationStructureVersionInfoKHR*, VkAccelerationStructureCompatibilityKHR*, void>* pvkGetDeviceAccelerationStructureCompatibilityKHR =
                    &vkGetDeviceAccelerationStructureCompatibilityKHR)
         {
-            *pvkGetDeviceAccelerationStructureCompatibilityKHR = (delegate*<VkDevice, VkAccelerationStructureVersionInfoKHR*, VkAccelerationStructureCompatibilityKHR*, void>)GetVkFunction(
+            *pvkGetDeviceAccelerationStructureCompatibilityKHR = (delegate*<VkDevice, VkAccelerationStructureVersionInfoKHR*, VkAccelerationStructureCompatibilityKHR*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7665\u6369\u4165\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u6f43\u706d\u7461\u6269\u6c69\u7469\u4b79\u5248\u0000");
         }
         fixed (delegate*<VkDevice, VkAccelerationStructureBuildTypeKHR, VkAccelerationStructureBuildGeometryInfoKHR*, uint*, VkAccelerationStructureBuildSizesInfoKHR*, void>*
                pvkGetAccelerationStructureBuildSizesKHR = &vkGetAccelerationStructureBuildSizesKHR)
         {
             *pvkGetAccelerationStructureBuildSizesKHR =
-                (delegate*<VkDevice, VkAccelerationStructureBuildTypeKHR, VkAccelerationStructureBuildGeometryInfoKHR*, uint*, VkAccelerationStructureBuildSizesInfoKHR*, void>)GetVkFunction(
+                (delegate*<VkDevice, VkAccelerationStructureBuildTypeKHR, VkAccelerationStructureBuildGeometryInfoKHR*, uint*, VkAccelerationStructureBuildSizesInfoKHR*, void>)Core.Vk.GetVkFunction(
                     device, "\u6b76\u6547\u4174\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u7542\u6c69\u5364\u7a69\u7365\u484b\u0052");
         }
     }

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "analyzer", "analyzer", "{317D5E4B-4BB2-4D2B-99F6-3F726BDE7A79}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exomia.Vulkan.Api.Core", "src\Exomia.Vulkan.Api.Core\Exomia.Vulkan.Api.Core.csproj", "{424B96AE-8306-40B8-87C8-CA8676D31213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exomia.Vulkan.Api.Core.SourceGenerator", "analyzer\Exomia.Vulkan.Api.Core.SourceGenerator\Exomia.Vulkan.Api.Core.SourceGenerator.csproj", "{F425B50B-790E-4D5A-A889-ECB83D523485}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +25,19 @@ Global
 		{424B96AE-8306-40B8-87C8-CA8676D31213}.Release|Any CPU.Build.0 = Release|Any CPU
 		{424B96AE-8306-40B8-87C8-CA8676D31213}.Release|x64.ActiveCfg = Release|x64
 		{424B96AE-8306-40B8-87C8-CA8676D31213}.Release|x64.Build.0 = Release|x64
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|x64.ActiveCfg = Debug|x64
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|x64.Build.0 = Debug|x64
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|x64.ActiveCfg = Release|x64
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F425B50B-790E-4D5A-A889-ECB83D523485} = {317D5E4B-4BB2-4D2B-99F6-3F726BDE7A79}
 	EndGlobalSection
 EndGlobal

@@ -172,25 +172,28 @@ public static unsafe class VkNvxBinaryImport
         fixed (delegate*<VkDevice, VkCuModuleCreateInfoNVX*, VkAllocationCallbacks*, VkCuModuleNVX*, VkResult>* pvkCreateCuModuleNVX = &vkCreateCuModuleNVX)
         {
             *pvkCreateCuModuleNVX =
-                (delegate*<VkDevice, VkCuModuleCreateInfoNVX*, VkAllocationCallbacks*, VkCuModuleNVX*, VkResult>)GetVkFunction(device, "\u6b76\u7243\u6165\u6574\u7543\u6f4d\u7564\u656c\u564e\u0058");
+                (delegate*<VkDevice, VkCuModuleCreateInfoNVX*, VkAllocationCallbacks*, VkCuModuleNVX*, VkResult>)Core.Vk.GetVkFunction(
+                    device, "\u6b76\u7243\u6165\u6574\u7543\u6f4d\u7564\u656c\u564e\u0058");
         }
         fixed (delegate*<VkDevice, VkCuFunctionCreateInfoNVX*, VkAllocationCallbacks*, VkCuFunctionNVX*, VkResult>* pvkCreateCuFunctionNVX = &vkCreateCuFunctionNVX)
         {
-            *pvkCreateCuFunctionNVX = (delegate*<VkDevice, VkCuFunctionCreateInfoNVX*, VkAllocationCallbacks*, VkCuFunctionNVX*, VkResult>)GetVkFunction(
-                device, "\u6b76\u7243\u6165\u6574\u7543\u7546\u636e\u6974\u6e6f\u564e\u0058");
+            *pvkCreateCuFunctionNVX =
+                (delegate*<VkDevice, VkCuFunctionCreateInfoNVX*, VkAllocationCallbacks*, VkCuFunctionNVX*, VkResult>)Core.Vk.GetVkFunction(
+                    device, "\u6b76\u7243\u6165\u6574\u7543\u7546\u636e\u6974\u6e6f\u564e\u0058");
         }
         fixed (delegate*<VkDevice, VkCuModuleNVX, VkAllocationCallbacks*, void>* pvkDestroyCuModuleNVX = &vkDestroyCuModuleNVX)
         {
-            *pvkDestroyCuModuleNVX = (delegate*<VkDevice, VkCuModuleNVX, VkAllocationCallbacks*, void>)GetVkFunction(device, "\u6b76\u6544\u7473\u6f72\u4379\u4d75\u646f\u6c75\u4e65\u5856\u0000");
+            *pvkDestroyCuModuleNVX =
+                (delegate*<VkDevice, VkCuModuleNVX, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6544\u7473\u6f72\u4379\u4d75\u646f\u6c75\u4e65\u5856\u0000");
         }
         fixed (delegate*<VkDevice, VkCuFunctionNVX, VkAllocationCallbacks*, void>* pvkDestroyCuFunctionNVX = &vkDestroyCuFunctionNVX)
         {
-            *pvkDestroyCuFunctionNVX = (delegate*<VkDevice, VkCuFunctionNVX, VkAllocationCallbacks*, void>)GetVkFunction(
+            *pvkDestroyCuFunctionNVX = (delegate*<VkDevice, VkCuFunctionNVX, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6544\u7473\u6f72\u4379\u4675\u6e75\u7463\u6f69\u4e6e\u5856\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkCuLaunchInfoNVX*, void>* pvkCmdCuLaunchKernelNVX = &vkCmdCuLaunchKernelNVX)
         {
-            *pvkCmdCuLaunchKernelNVX = (delegate*<VkCommandBuffer, VkCuLaunchInfoNVX*, void>)GetVkFunction(device, "\u6b76\u6d43\u4364\u4c75\u7561\u636e\u4b68\u7265\u656e\u4e6c\u5856\u0000");
+            *pvkCmdCuLaunchKernelNVX = (delegate*<VkCommandBuffer, VkCuLaunchInfoNVX*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4364\u4c75\u7561\u636e\u4b68\u7265\u656e\u4e6c\u5856\u0000");
         }
     }
 }

@@ -86,11 +86,11 @@ public static unsafe class VkNvxImageViewHandle
     {
         fixed (delegate*<VkDevice, VkImageViewHandleInfoNVX*, uint>* pvkGetImageViewHandleNVX = &vkGetImageViewHandleNVX)
         {
-            *pvkGetImageViewHandleNVX = (delegate*<VkDevice, VkImageViewHandleInfoNVX*, uint>)GetVkFunction(device, "\u6b76\u6547\u4974\u616d\u6567\u6956\u7765\u6148\u646e\u656c\u564e\u0058");
+            *pvkGetImageViewHandleNVX = (delegate*<VkDevice, VkImageViewHandleInfoNVX*, uint>)Core.Vk.GetVkFunction(device, "\u6b76\u6547\u4974\u616d\u6567\u6956\u7765\u6148\u646e\u656c\u564e\u0058");
         }
         fixed (delegate*<VkDevice, VkImageView, VkImageViewAddressPropertiesNVX*, VkResult>* pvkGetImageViewAddressNVX = &vkGetImageViewAddressNVX)
         {
-            *pvkGetImageViewAddressNVX = (delegate*<VkDevice, VkImageView, VkImageViewAddressPropertiesNVX*, VkResult>)GetVkFunction(
+            *pvkGetImageViewAddressNVX = (delegate*<VkDevice, VkImageView, VkImageViewAddressPropertiesNVX*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4974\u616d\u6567\u6956\u7765\u6441\u7264\u7365\u4e73\u5856\u0000");
         }
     }

@@ -66,7 +66,7 @@ public static unsafe class VkExtBufferDeviceAddress
     {
         fixed (delegate*<VkDevice, VkBufferDeviceAddressInfo*, VkDeviceAddress>* pvkGetBufferDeviceAddressEXT = &vkGetBufferDeviceAddressEXT)
         {
-            *pvkGetBufferDeviceAddressEXT = (delegate*<VkDevice, VkBufferDeviceAddressInfo*, VkDeviceAddress>)GetVkFunction(
+            *pvkGetBufferDeviceAddressEXT = (delegate*<VkDevice, VkBufferDeviceAddressInfo*, VkDeviceAddress>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4274\u6675\u6566\u4472\u7665\u6369\u4165\u6464\u6572\u7373\u5845\u0054");
         }
     }

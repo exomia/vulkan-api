@@ -88,7 +88,7 @@ public static unsafe class VkKhrMaintenance3
     {
         fixed (delegate*<VkDevice, VkDescriptorSetLayoutCreateInfo*, VkDescriptorSetLayoutSupport*, void>* pvkGetDescriptorSetLayoutSupportKHR = &vkGetDescriptorSetLayoutSupportKHR)
         {
-            *pvkGetDescriptorSetLayoutSupportKHR = (delegate*<VkDevice, VkDescriptorSetLayoutCreateInfo*, VkDescriptorSetLayoutSupport*, void>)GetVkFunction(
+            *pvkGetDescriptorSetLayoutSupportKHR = (delegate*<VkDevice, VkDescriptorSetLayoutCreateInfo*, VkDescriptorSetLayoutSupport*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7365\u7263\u7069\u6f74\u5372\u7465\u614c\u6f79\u7475\u7553\u7070\u726f\u4b74\u5248\u0000");
         }
     }

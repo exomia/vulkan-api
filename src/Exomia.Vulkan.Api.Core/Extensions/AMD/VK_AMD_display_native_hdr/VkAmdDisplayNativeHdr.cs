@@ -67,7 +67,7 @@ public static unsafe class VkAmdDisplayNativeHdr
     {
         fixed (delegate*<VkDevice, VkSwapchainKHR, VkBool32, void>* pvkSetLocalDimmingAMD = &vkSetLocalDimmingAMD)
         {
-            *pvkSetLocalDimmingAMD = (delegate*<VkDevice, VkSwapchainKHR, VkBool32, void>)GetVkFunction(device, "\u6b76\u6553\u4c74\u636f\u6c61\u6944\u6d6d\u6e69\u4167\u444d\u0000");
+            *pvkSetLocalDimmingAMD = (delegate*<VkDevice, VkSwapchainKHR, VkBool32, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6553\u4c74\u636f\u6c61\u6944\u6d6d\u6e69\u4167\u444d\u0000");
         }
     }
 }

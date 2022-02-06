@@ -86,7 +86,7 @@ public static unsafe class VkExtVertexInputDynamicState
     {
         fixed (delegate*<VkCommandBuffer, uint, VkVertexInputBindingDescription2EXT*, uint, VkVertexInputAttributeDescription2EXT*, void>* pvkCmdSetVertexInputEXT = &vkCmdSetVertexInputEXT)
         {
-            *pvkCmdSetVertexInputEXT = (delegate*<VkCommandBuffer, uint, VkVertexInputBindingDescription2EXT*, uint, VkVertexInputAttributeDescription2EXT*, void>)GetVkFunction(
+            *pvkCmdSetVertexInputEXT = (delegate*<VkCommandBuffer, uint, VkVertexInputBindingDescription2EXT*, uint, VkVertexInputAttributeDescription2EXT*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6556\u7472\u7865\u6e49\u7570\u4574\u5458\u0000");
         }
     }

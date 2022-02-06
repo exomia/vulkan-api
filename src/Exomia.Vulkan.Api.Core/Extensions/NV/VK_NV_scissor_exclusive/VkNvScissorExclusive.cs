@@ -77,7 +77,7 @@ public static unsafe class VkNvScissorExclusive
     {
         fixed (delegate*<VkCommandBuffer, uint, uint, VkRect2D*, void>* pvkCmdSetExclusiveScissorNV = &vkCmdSetExclusiveScissorNV)
         {
-            *pvkCmdSetExclusiveScissorNV = (delegate*<VkCommandBuffer, uint, uint, VkRect2D*, void>)GetVkFunction(
+            *pvkCmdSetExclusiveScissorNV = (delegate*<VkCommandBuffer, uint, uint, VkRect2D*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u7845\u6c63\u7375\u7669\u5365\u6963\u7373\u726f\u564e\u0000");
         }
     }
