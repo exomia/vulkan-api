@@ -24,7 +24,7 @@ jobs:
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: '6.0.x'
-    - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
+    - name: '[CORE] dotnet build ${{ matrix.configurations }}'
       run: |
         dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   build-platforms:
@@ -40,7 +40,7 @@ jobs:
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: '6.0.x'
-    - name: '[${{ matrix.projects }}] build ${{ matrix.configurations }}'
+    - name: '[PLATFORMS] dotnet build ${{ matrix.configurations }}'
       run: |
         dotnet build Exomia.Vulkan.Api.Platforms.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check:
