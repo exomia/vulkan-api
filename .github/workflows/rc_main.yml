@@ -72,8 +72,7 @@ jobs:
       working-directory: src/Exomia.Vulkan.Api.Core
     - name: 'publish ${{ github.repository }} to github'
       run: |  
-      for f in ./*.nupkg
-        do
+        for f in ./*.nupkg do
           STATUSCODE=$(curl -sSX PUT --retry 3 -o /dev/null -w "%{http_code}" -u "${{ github.repository_owner }}:${{ github.token }}" -F package=@$f https://nuget.pkg.github.com/${{ github.repository_owner }}/)
           echo "[$STATUSCODE:https://nuget.pkg.github.com/${{ github.repository_owner }}/] $f"
           if [ "${STATUSCODE}" != 200 ] && [ "${STATUSCODE}" != 409 ]; then exit 1; fi
