@@ -10,7 +10,8 @@ jobs:
       rc-version: ${{ steps.rc-version.outputs.rc-version }}
       rc-suffix: ${{ steps.rc-suffix.outputs.rc-suffix }}
     steps:
-    - id: rc-version
+    - name: 'set rc-version'
+      id: rc-version
       run: |
         echo "::set-output name=rc-version::${GITHUB_REF#refs/heads/rc/v}"
     - uses: octokit/request-action@v2.x
@@ -19,42 +20,48 @@ jobs:
         route: GET /orgs/exomia/packages/nuget/Exomia.Vulkan.Api.Core/versions
       env:
         GITHUB_TOKEN: ${{ github.token }}
-    - id: rc-suffix
+    - name: 'set rc-suffix'
+      id: rc-suffix
       run: |
         echo "::set-output name=rc-suffix::-rc.$(echo '${{ steps.package-versions.outputs.data }}' | jq '[.[] | select(.name | startswith("${{ steps.rc-version.outputs.rc-version }}-rc."))] | length')"
-  test:
+  print-information:
     needs: [get-rc-info]
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "${{ needs.get-rc-info.outputs.rc-version }}"
-        echo "${{ needs.get-rc-info.outputs.rc-suffix }}"
+    - name: 'print information'
+      run: |
+        echo "rc-version: ${{ needs.get-rc-info.outputs.rc-version }}"
+        echo "rc-suffix: ${{ needs.get-rc-info.outputs.rc-suffix }}"
+  build-core:
+    needs: [get-rc-info]
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+        platforms: [Any CPU, x64]
+    name: 'build core in ${{ matrix.configurations }} on ${{ matrix.os }} for ${{ matrix.platforms }}'
+    runs-on: ${{ matrix.os }}
+    steps: 
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - name: '[CORE] dotnet build ${{ matrix.configurations }}'
+      run: |
+        dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+      env:
+        DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+        DOTNET_NOLOGO: 1
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
   check:
     if: ${{ always() }}  
     name: '[CHECK] RC SUCCESS'
-    needs: [test]
+    needs: [build-core]
     runs-on: ubuntu-latest
     steps:
-    - name: '[CHECK] test status'
-      if: ${{ needs.test.result != 'success' }}
+    - name: '[CHECK] build-core status'
+      if: ${{ needs.build-core.result != 'success' }}
       run: exit 1
-#  build-core:
-#    needs: [get-rc-info]
-#    strategy:
-#      matrix:
-#        os: [windows-latest, ubuntu-latest]
-#        configurations: [Debug, Release]
-#        platforms: [Any CPU, x64]
-#    name: '[CORE] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
-#    runs-on: ${{ matrix.os }}
-#    steps: 
-#    - uses: actions/checkout@v2
-#    - uses: actions/setup-dotnet@v1   
-#      with:
-#        dotnet-version: '6.0.x'
-#    - name: '[CORE] dotnet build ${{ matrix.configurations }}'
-#      run: |
-#        dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
 #  publish-core-on-github:
 #    needs: [get-rc-info, build-core]
 #    strategy:
