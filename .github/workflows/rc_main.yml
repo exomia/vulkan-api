@@ -64,7 +64,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output /.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output $HOME/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         for f in ./*.nupkg do
@@ -73,7 +73,7 @@ jobs:
           if [ "${STATUSCODE}" != 200 ] && [ "${STATUSCODE}" != 409 ]; then exit 1; fi
         done
       shell: bash
-      working-directory: /.packages
+      working-directory: $HOME/.packages
   check:
     if: ${{ always() }}  
     name: '[CHECK] RC SUCCESS'
