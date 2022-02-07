@@ -1,4 +1,4 @@
-name: 'rc main'
+name: '[RC] main'
 on:
   push:
     branches:

@@ -1,4 +1,4 @@
-name: '[CD] build & test'
+name: '[CD] build & test master'
 on:
     push:
         branches:
