@@ -21,8 +21,8 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
     - id: rc-suffix
       run: |
-        echo ${{ fromJson(steps.package-versions.outputs.data) }}
-        echo "::set-output name=rc-suffix::-rc.$(echo '${{ fromJson(steps.package-versions.outputs.data) }}' | jq '[.[] | select(.name | startswith("${{ steps.rc-version.outputs.rc-version }}-rc."))] | length')"
+        echo ${{ steps.package-versions.outputs.data }}
+        echo "::set-output name=rc-suffix::-rc.$(echo '${{ steps.package-versions.outputs.data }}' | jq '[.[] | select(.name | startswith("${{ steps.rc-version.outputs.rc-version }}-rc."))] | length')"
   test:
     needs: [get-rc-info]
     runs-on: ubuntu-latest
