@@ -64,7 +64,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output /.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform=${{ matrix.platforms }}
+        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output /.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         for f in ./*.nupkg do
