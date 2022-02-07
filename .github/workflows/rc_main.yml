@@ -46,49 +46,49 @@ jobs:
     - uses: actions/setup-dotnet@v1   
       with:
         dotnet-version: '6.0.x'
-    - name: '[CORE] dotnet build ${{ matrix.configurations }}'
-      run: |
+    - run: |
         dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
       env:
         DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
         DOTNET_NOLOGO: 1
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  publish-core-on-github:
+    needs: [get-rc-info, build-core]
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        configurations: [Debug, Release]
+        platforms: [Any CPU, x64]
+    name: 'publish core in ${{ matrix.configurations }} on ${{ matrix.os }} for ${{ matrix.platforms }}'
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - run: |  
+        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output /.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform=${{ matrix.platform }}
+      shell: bash
+      working-directory: src/Exomia.Vulkan.Api.Core
+    - name: 'publish ${{ github.repository }} to github'
+      run: |  
+      for f in ./*.nupkg
+        do
+          STATUSCODE=$(curl -sSX PUT --retry 3 -o /dev/null -w "%{http_code}" -u "${{ github.repository_owner }}:${{ github.token }}" -F package=@$f https://nuget.pkg.github.com/${{ github.repository_owner }}/)
+          echo "[$STATUSCODE:https://nuget.pkg.github.com/${{ github.repository_owner }}/] $f"
+          if [ "${STATUSCODE}" != 200 ] && [ "${STATUSCODE}" != 409 ]; then exit 1; fi
+        done
+    shell: bash
+    working-directory: /.packages
   check:
     if: ${{ always() }}  
     name: '[CHECK] RC SUCCESS'
-    needs: [build-core]
+    needs: [build-core, publish-core-on-github]
     runs-on: ubuntu-latest
     steps:
     - name: '[CHECK] build-core status'
       if: ${{ needs.build-core.result != 'success' }}
       run: exit 1
-#  publish-core-on-github:
-#    needs: [get-rc-info, build-core]
-#    strategy:
-#      matrix:
-#        os: [ubuntu-latest]
-#        configurations: [Debug, Release]
-#        platforms: [Any CPU, x64]
-#    name: '[CORE] publish ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
-#    runs-on: ${{ matrix.os }}
-#    steps:
-#    - uses: actions/checkout@v2
-#    - uses: actions/setup-dotnet@v1   
-#      with:
-#        dotnet-version: '6.0.x'
-#    - run: |  
-#        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output .pack --version-suffix "${{ needs.get-rc-suffix.outputs.rc-suffix }}" -p:Platform=${{ matrix.platform }}
-#      shell: bash
-#      working-directory: src/Exomia.Vulkan.Api.Core
-#    - name: 'publish ${{ github.repository }} to github'
-#      run: |  
-#      for f in ./*.nupkg
-#        do
-#          STATUSCODE=$(curl -sSX PUT --retry 3 -o /dev/null -w "%{http_code}" -u "${{ github.repository_owner }}:${{ github.token }}" -F package=@$f https://nuget.pkg.github.com/${{ github.repository_owner }}/)
-#          echo "[$STATUSCODE:https://nuget.pkg.github.com/${{ github.repository_owner }}/] $f"
-#          if [ "${STATUSCODE}" != 200 ] && [ "${STATUSCODE}" != 409 ]; then exit 1; fi
-#        done
-#    shell: bash
-#    working-directory: .pack
-
-#  https://api.nuget.org/v3/registration5-semver1/exomia.vulkan.api.core/0.2.184.json
+    - name: '[CHECK] publish-core-on-github status'
+      if: ${{ needs.publish-core-on-github.result != 'success' }}
+      run: exit 1
