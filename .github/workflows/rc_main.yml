@@ -20,21 +20,21 @@ jobs:
     - uses: octokit/request-action@v2.x
       id: package-versions
       with:
-          route: GET /orgs/{org}/packages/nuget/{package}/versions
-          org: exomia
-          package: Exomia.Vulkan.Api.Core
+        route: GET /orgs/{org}/packages/nuget/{package}/versions
+        org: exomia
+        package: Exomia.Vulkan.Api.Core
       env:
-          GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ github.token }}
     - id: rc-suffix
       run: |
         echo "::set-output name=rc-suffix::-rc.$(echo '${{ fromJson(steps.package-versions.outputs.data) }}' | jq '[.[] | select(.name | startswith("${{ steps.rc-version.outputs.rc-version }}-rc."))] | length')"
-   test:
+  test:
     needs: [get-rc-info]
     runs-on: ubuntu-latest
     steps:
-      run: |
-        echo "${{ needs.get-rc-info.outputs.rc-version }}"
-        echo "${{ needs.get-rc-info.outputs.rc-suffix }}"
+    - run: |
+      echo "${{ needs.get-rc-info.outputs.rc-version }}"
+      echo "${{ needs.get-rc-info.outputs.rc-suffix }}"
   check:
     if: ${{ always() }}  
     name: '[CHECK] RC SUCCESS'
