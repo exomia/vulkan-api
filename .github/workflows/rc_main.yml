@@ -77,8 +77,8 @@ jobs:
           echo "[$STATUSCODE:https://nuget.pkg.github.com/${{ github.repository_owner }}/] $f"
           if [ "${STATUSCODE}" != 200 ] && [ "${STATUSCODE}" != 409 ]; then exit 1; fi
         done
-    shell: bash
-    working-directory: /.packages
+      shell: bash
+      working-directory: /.packages
   check:
     if: ${{ always() }}  
     name: '[CHECK] RC SUCCESS'
