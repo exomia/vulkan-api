@@ -56,14 +56,7 @@ public unsafe struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV
     /// </summary>
     public uint maxIndirectSequenceCount;
 
-    /// <summary>
-    ///     maxIndirectCommandsLayoutTokenCount is the maximum number of tokens in
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutCreateInfoNV.html">
-    ///         VkIndirectCommandsLayoutCreateInfoNV
-    ///     </a>
-    ///     .
-    /// </summary>
+    /// <summary>maxIndirectCommandsTokenCount is the maximum number of tokens in VkIndirectCommandsLayoutCreateInfoNV.</summary>
     public uint maxIndirectCommandsTokenCount;
 
     /// <summary>maxIndirectCommandsStreamCount is the maximum number of streams in VkIndirectCommandsLayoutCreateInfoNV.</summary>

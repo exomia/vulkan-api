@@ -60,7 +60,10 @@ public enum VkImageAspectFlagBits
     /// <summary>VK_IMAGE_ASPECT_MEMORY_PLANE_3_BIT_EXT specifies memory plane 3.</summary>
     VK_IMAGE_ASPECT_MEMORY_PLANE_3_BIT_EXT = 10,
 
-    /// <summary>VK_IMAGE_ASPECT_NONE_KHR specifies no image aspect, or the image aspect is not applicable.</summary>
+    /// <summary>
+    ///     VK_IMAGE_ASPECT_NONE_KHR<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageAspectFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageAspectFlagBits</a>
+    /// </summary>
     VK_IMAGE_ASPECT_NONE_KHR = 0,
 
     /// <summary>VK_IMAGE_ASPECT_PLANE_0_BIT specifies plane 0 of a multi-planarimage format.</summary>

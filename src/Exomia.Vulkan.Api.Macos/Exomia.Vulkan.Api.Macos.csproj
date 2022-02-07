@@ -1,4 +1,4 @@
-﻿<!--EXTERNAL_PROPERTIES: Version;GITHUB_ACTIONS;-->
+﻿<!--EXTERNAL_PROPERTIES: VersionSuffix;GITHUB_ACTIONS;GITHUB_ACTION-->
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>net6.0</TargetFrameworks>
@@ -15,7 +15,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>1.3.204</Version>
+        <Version>1.3.204$(VersionSuffix)</Version>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -75,30 +75,26 @@
     </PropertyGroup>
 
     <ItemGroup Condition="'$(Platform)'=='AnyCPU'">
-        <ProjectReference Condition="'$(Configuration)'=='Debug'"
-                          Include="..\Exomia.Vulkan.Api.Core\Exomia.Vulkan.Api.Core.csproj" PrivateAssets="all" />
-        <PackageReference Condition="'$(Configuration)'=='Release'" Include="Exomia.Vulkan.Api.Core" Version="1.3.204"
-                          PrivateAssets="all" />
+        <PackageReference Include="Exomia.Vulkan.Api.Core" Version="1.3.204$(VersionSuffix)" PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(Platform)'!='AnyCPU'">
-        <ProjectReference Condition="'$(Configuration)'=='Debug'"
-                          Include="..\Exomia.Vulkan.Api.Core\Exomia.Vulkan.Api.Core.csproj" PrivateAssets="all" />
-        <PackageReference Condition="'$(Configuration)'=='Release'" Include="Exomia.Vulkan.Api.Core.$(Platform)"
-                          Version="1.3.204" PrivateAssets="all" />
+        <PackageReference Include="Exomia.Vulkan.Api.Core.$(Platform)" Version="1.3.204$(VersionSuffix)"
+                          PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference
-            Include="..\..\analyzer\Exomia.Vulkan.Api.Core.SourceGenerator\Exomia.Vulkan.Api.Core.SourceGenerator.csproj"
-            OutputItemType="Analyzer"
-            PrivateAssets="all"
-            ReferenceOutputAssembly="false" />
         <ProjectReference
             Include="..\..\analyzer\Exomia.Vulkan.Api.Macos.SourceGenerator\Exomia.Vulkan.Api.Macos.SourceGenerator.csproj"
             OutputItemType="Analyzer"
             PrivateAssets="all"
             ReferenceOutputAssembly="false" />
+        <None
+            Include="..\..\analyzer\Exomia.Vulkan.Api.Macos.SourceGenerator\bin\$(Configuration)\netstandard2.0\Exomia.Vulkan.Api.Macos.SourceGenerator.dll"
+            Pack="true"
+            Visible="false"
+            PackagePath="analyzers\dotnet\cs" />
+
     </ItemGroup>
 
     <ItemGroup>

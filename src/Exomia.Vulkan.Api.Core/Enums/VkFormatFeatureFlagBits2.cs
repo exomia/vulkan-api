@@ -89,24 +89,31 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_DEPTH_STENCIL_ATTACHMENT_BIT = 9,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT specifies that an image can be used as srcImage for the vkCmdBlitImage2KHR
-    ///     and vkCmdBlitImage commands.
+    ///     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT specifies that an image can be     used as the srcImage for
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html">vkCmdBlitImage2</a>
+    ///     and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage.html">vkCmdBlitImage</a>
+    ///     .
     /// </summary>
     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT = 10,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_BLIT_DST_BIT specifies that an image can be used as dstImage for the vkCmdBlitImage2KHR
-    ///     and vkCmdBlitImage commands.
+    ///     VK_FORMAT_FEATURE_2_BLIT_DST_BIT specifies that an image can be     used as the dstImage for
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html">vkCmdBlitImage2</a>
+    ///     and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage.html">vkCmdBlitImage</a>
+    ///     .
     /// </summary>
     VK_FORMAT_FEATURE_2_BLIT_DST_BIT = 11,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT specifies that if VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT is
-    ///     also set, an image view can be used with a sampler that has either of magFilter or minFilter set to
-    ///     VK_FILTER_LINEAR, or mipmapMode set to VK_SAMPLER_MIPMAP_MODE_LINEAR. If VK_FORMAT_FEATURE_2_BLIT_SRC_BIT is also
-    ///     set, an image can be used as the srcImage to vkCmdBlitImage2KHR and vkCmdBlitImagewith a filter of
-    ///     VK_FILTER_LINEAR. This bit must only be exposed for formats that also support the
-    ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT or VK_FORMAT_FEATURE_2_BLIT_SRC_BIT.
+    ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT specifies that     if
+    ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT is also set, an image     view can be used with a sampler that has either of
+    ///     magFilter or     minFilter set to VK_FILTER_LINEAR, or mipmapMode set     to VK_SAMPLER_MIPMAP_MODE_LINEAR.     If
+    ///     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT is also set, an image can be     used as the srcImage for
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html">vkCmdBlitImage2</a>
+    ///     and     vkCmdBlitImage with a filter of VK_FILTER_LINEAR.     This bit must only be exposed for formats that also
+    ///     support the     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT or     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT.
     /// </summary>
     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT = 12,
 
@@ -440,24 +447,31 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_DEPTH_STENCIL_ATTACHMENT_BIT_KHR = VK_FORMAT_FEATURE_2_DEPTH_STENCIL_ATTACHMENT_BIT,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT specifies that an image can be used as srcImage for the vkCmdBlitImage2KHR
-    ///     and vkCmdBlitImage commands.
+    ///     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT specifies that an image can be     used as the srcImage for
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html">vkCmdBlitImage2</a>
+    ///     and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage.html">vkCmdBlitImage</a>
+    ///     .
     /// </summary>
     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT_KHR = VK_FORMAT_FEATURE_2_BLIT_SRC_BIT,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_BLIT_DST_BIT specifies that an image can be used as dstImage for the vkCmdBlitImage2KHR
-    ///     and vkCmdBlitImage commands.
+    ///     VK_FORMAT_FEATURE_2_BLIT_DST_BIT specifies that an image can be     used as the dstImage for
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html">vkCmdBlitImage2</a>
+    ///     and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage.html">vkCmdBlitImage</a>
+    ///     .
     /// </summary>
     VK_FORMAT_FEATURE_2_BLIT_DST_BIT_KHR = VK_FORMAT_FEATURE_2_BLIT_DST_BIT,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT specifies that if VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT is
-    ///     also set, an image view can be used with a sampler that has either of magFilter or minFilter set to
-    ///     VK_FILTER_LINEAR, or mipmapMode set to VK_SAMPLER_MIPMAP_MODE_LINEAR. If VK_FORMAT_FEATURE_2_BLIT_SRC_BIT is also
-    ///     set, an image can be used as the srcImage to vkCmdBlitImage2KHR and vkCmdBlitImagewith a filter of
-    ///     VK_FILTER_LINEAR. This bit must only be exposed for formats that also support the
-    ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT or VK_FORMAT_FEATURE_2_BLIT_SRC_BIT.
+    ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT specifies that     if
+    ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT is also set, an image     view can be used with a sampler that has either of
+    ///     magFilter or     minFilter set to VK_FILTER_LINEAR, or mipmapMode set     to VK_SAMPLER_MIPMAP_MODE_LINEAR.     If
+    ///     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT is also set, an image can be     used as the srcImage for
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html">vkCmdBlitImage2</a>
+    ///     and     vkCmdBlitImage with a filter of VK_FILTER_LINEAR.     This bit must only be exposed for formats that also
+    ///     support the     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT or     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT.
     /// </summary>
     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT_KHR = VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT,
 

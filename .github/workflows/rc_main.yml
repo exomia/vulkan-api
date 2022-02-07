@@ -1,0 +1,93 @@
+name: '[CD] build rc candidates'
+on:
+    push:
+        branches:
+            - 'rc/v*'
+env:
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+    DOTNET_NOLOGO: 1
+    DOTNET_CLI_TELEMETRY_OPTOUT: 1
+jobs:
+  get-rc-info:
+    runs-on: ubuntu-latest
+    outputs:
+      rc-version: ${{ steps.rc-version.outputs.rc-version }}
+      rc-suffix: ${{ steps.rc-suffix.outputs.rc-suffix }}
+    steps:
+    - id: rc-version
+      run: |
+        echo "::set-output name=rc-version::${GITHUB_REF#refs/heads/rc/v}"
+    - uses: octokit/request-action@v2.x
+      id: package-versions
+      with:
+          route: GET /orgs/{org}/packages/nuget/{package}/versions
+          org: exomia
+          package: Exomia.Vulkan.Api.Core
+      env:
+          GITHUB_TOKEN: ${{ github.token }}
+    - id: rc-suffix
+      run: |
+        echo "::set-output name=rc-suffix::-rc.$(echo '${{ fromJson(steps.package-versions.outputs.data) }}' | jq '[.[] | select(.name | startswith("${{ steps.rc-version.outputs.rc-version }}-rc."))] | length')"
+   test:
+    needs: [get-rc-info]
+    runs-on: ubuntu-latest
+    steps:
+      run: |
+        echo "${{ needs.get-rc-info.outputs.rc-version }}"
+        echo "${{ needs.get-rc-info.outputs.rc-suffix }}"
+  check:
+    if: ${{ always() }}  
+    name: '[CHECK] RC SUCCESS'
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+    - name: '[CHECK] test status'
+      if: ${{ needs.test.result != 'success' }}
+      run: exit 1
+#  build-core:
+#    needs: [get-rc-info]
+#    strategy:
+#      matrix:
+#        os: [windows-latest, ubuntu-latest]
+#        configurations: [Debug, Release]
+#        platforms: [Any CPU, x64]
+#    name: '[CORE] build ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
+#    runs-on: ${{ matrix.os }}
+#    steps: 
+#    - uses: actions/checkout@v2
+#    - uses: actions/setup-dotnet@v1   
+#      with:
+#        dotnet-version: '6.0.x'
+#    - name: '[CORE] dotnet build ${{ matrix.configurations }}'
+#      run: |
+#        dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+#  publish-core-on-github:
+#    needs: [get-rc-info, build-core]
+#    strategy:
+#      matrix:
+#        os: [ubuntu-latest]
+#        configurations: [Debug, Release]
+#        platforms: [Any CPU, x64]
+#    name: '[CORE] publish ${{ matrix.configurations }} on ${{ matrix.os }}[${{ matrix.platforms }}]'
+#    runs-on: ${{ matrix.os }}
+#    steps:
+#    - uses: actions/checkout@v2
+#    - uses: actions/setup-dotnet@v1   
+#      with:
+#        dotnet-version: '6.0.x'
+#    - run: |  
+#        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output .pack --version-suffix "${{ needs.get-rc-suffix.outputs.rc-suffix }}" -p:Platform=${{ matrix.platform }}
+#      shell: bash
+#      working-directory: src/Exomia.Vulkan.Api.Core
+#    - name: 'publish ${{ github.repository }} to github'
+#      run: |  
+#      for f in ./*.nupkg
+#        do
+#          STATUSCODE=$(curl -sSX PUT --retry 3 -o /dev/null -w "%{http_code}" -u "${{ github.repository_owner }}:${{ github.token }}" -F package=@$f https://nuget.pkg.github.com/${{ github.repository_owner }}/)
+#          echo "[$STATUSCODE:https://nuget.pkg.github.com/${{ github.repository_owner }}/] $f"
+#          if [ "${STATUSCODE}" != 200 ] && [ "${STATUSCODE}" != 409 ]; then exit 1; fi
+#        done
+#    shell: bash
+#    working-directory: .pack
+
+#  https://api.nuget.org/v3/registration5-semver1/exomia.vulkan.api.core/0.2.184.json
