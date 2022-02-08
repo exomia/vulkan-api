@@ -123,12 +123,13 @@ jobs:
       if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-core-on-nuget.result != 'success' }}
       run: exit 1
   nuget-wait-for-core-package-to-be-available:
-    name: '[NUGET] wait for core-package to be indexed'
+    name: '[NUGET] wait for core-package to be available'
     needs: [get-rc-info, build-core, publish-core-on-nuget]
     runs-on: ubuntu-latest
     steps:
     - run: |
-        curl --retry 480 -f --retry-all-errors --retry-delay 180 -sS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/exomia.vulkan.api.core/${{ needs.get-rc-info.outputs.rc-version }}${{ needs.get-rc-info.outputs.rc-suffix }}.json'
+        until $(curl -fsS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/exomia.vulkan.api.core/${{ needs.get-rc-info.outputs.rc-version }}${{ needs.get-rc-info.outputs.rc-suffix }}.json'); do sleep 60;done
+        until $(curl -fsS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/exomia.vulkan.api.core.x64/${{ needs.get-rc-info.outputs.rc-version }}${{ needs.get-rc-info.outputs.rc-suffix }}.json'); do sleep 60;done
   build-platforms:
     needs: [get-rc-info, nuget-wait-for-core-package-to-be-available]
     strategy:
