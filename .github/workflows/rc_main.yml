@@ -57,6 +57,15 @@ jobs:
         dotnet-version: '6.0.x'
     - run: |
         dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+  check-build:
+    if: ${{ always() }}  
+    name: '[CHECK] RC BUILD SUCCESS'
+    needs: [build-core]
+    runs-on: ubuntu-latest
+    steps:
+    - name: '[CHECK] build-core status'
+      if: ${{ needs.build-core.result != 'success' }}
+      run: exit 1
   publish-core-on-github:
     needs: [get-rc-info, build-core]
     if: "!contains(github.event.head_commit.message, '!!skip-publish')"
@@ -98,21 +107,25 @@ jobs:
         dotnet-version: '6.0.x'
     - run: |  
         dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
-#    - name: 'publish ${{ github.repository }} to github'
-#      run: |  
-#        dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
-  check:
+    - name: 'publish ${{ github.repository }} to github'
+      run: |  
+        dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
+  check-publish:
     if: ${{ always() }}  
-    name: '[CHECK] RC SUCCESS'
-    needs: [build-core, publish-core-on-github, publish-core-on-nuget]
+    name: '[CHECK] RC PUBLISH SUCCESS'
+    needs: [publish-core-on-github, publish-core-on-nuget]
     runs-on: ubuntu-latest
     steps:
-    - name: '[CHECK] build-core status'
-      if: ${{ needs.build-core.result != 'success' }}
-      run: exit 1
     - name: '[CHECK] publish-core-on-github status'
       if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-core-on-github.result != 'success' }}
       run: exit 1
     - name: '[CHECK] publish-core-on-nuget status'
       if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-core-on-nuget.result != 'success' }}
       run: exit 1
+  nuget-wait-for-core-package-to-be-indexed:
+    name: '[NUGET] wait for core-package to be indexed'
+    needs: [get-rc-info, build-core, publish-core-on-nuget]
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo ""

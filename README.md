@@ -1,4 +1,4 @@
-## Information
+﻿## Information
 
 The exomia/vulkan-api is a low-level library for C#/.Net 6 to access the Vulkan API.
 
@@ -20,26 +20,32 @@ The exomia/vulkan-api is a low-level library for C#/.Net 6 to access the Vulkan 
 PM> Install-Package Exomia.Vulkan.Api.Core
 ```
 
-### Windows
+### Platform
 
 ```shell
 [Package Manager]
-PM> Install-Package Exomia.Vulkan.Api.Windows
+PM> Install-Package Exomia.Vulkan.Api.{Platform}
 ```
 
-### Linux (comming soon)
+> replace {Platform} with a platform name of the following table
 
-```shell
-[Package Manager]
-PM> Install-Package Exomia.Vulkan.Api.Linux
-```
+| platform name | comment |
+| :------------ | :------ |
+| Xlib | X Window System, Xlib client library |
+| Xlib_xrandr | X Window System, Xlib client library, XRandR extension |
+| Xcb | X Window System, Xcb client library |
+| Wayland | Wayland display server protocol |
+| Directfb | DirectFB library |
+| Android | Android OS |
+| Win32 | Microsoft Win32 API (also refers to Win64 apps) |
+| Vi | Nintendo Vi |
+| Ios | Apple IOS |
+| Macos | Apple MacOS |
+| Metal | Metal on CoreAnimation on Apple platforms |
+| Fuchsia | Fuchsia |
+| Ggp | Google Games Platform |
+| Screen | QNX Screen Graphics Subsystem |
 
-### Beta
-
-```shell
-[Package Manager]
-PM> Install-Package Exomia.Vulkan.Api.Beta
-```
 
 ---
 ## Social
