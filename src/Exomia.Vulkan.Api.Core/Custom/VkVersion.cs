@@ -32,6 +32,12 @@ public readonly struct VkVersion
     /// </summary>
     public static readonly VkVersion VulkanApiVersion12 = new VkVersion(0, 1, 2, 0);
 
+    /// <summary>
+    ///     The version 1.3
+    /// </summary>
+    public static readonly VkVersion VulkanApiVersion13 = new VkVersion(0, 1, 3, 0);
+
+
     private readonly uint _version;
 
     /// <summary>
