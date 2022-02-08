@@ -57,23 +57,9 @@ jobs:
         dotnet-version: '6.0.x'
     - run: |
         dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
-  skip:
-    runs-on: ubuntu-latest
-    outputs:
-      skip: ${{ steps.check-commit.outputs.state }}
-    steps:
-    - name: 'check commit for skip-publish tag'
-      id: check-commit
-      run: |
-        MSG=$(cat <<-END ${{ github.event.head_commit.message }} END)
-        if [[ $MSG == *"!!skip-publish"*]]; then
-          echo "::set-output name=state::true"
-        else
-          echo "::set-output name=state::false"
-        fi
   publish-core-on-github:
-    needs: [skip, get-rc-info, build-core]
-    if: ${{ !needs.skip.outputs.skip }}
+    needs: [get-rc-info, build-core]
+    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -95,8 +81,8 @@ jobs:
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
   publish-core-on-nuget:
-    needs: [skip, get-rc-info, build-core, publish-core-on-github]
-    if: ${{ !needs.skip.outputs.skip }}
+    needs: [get-rc-info, build-core, publish-core-on-github]
+    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
     runs-on: ubuntu-latest
     strategy:
       matrix:
