@@ -128,7 +128,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        curl --retry 999 -f --retry-all-errors --retry-delay 180 -sS 'https://api.nuget.org/v3/registration5-gz-semver2/exomia.vulkan.api.core/${{ needs.get-rc-info.outputs.rc-version }}${{ needs.get-rc-info.outputs.rc-suffix }}.json'
+        curl --retry 480 -f --retry-all-errors --retry-delay 180 -sS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/exomia.vulkan.api.core/${{ needs.get-rc-info.outputs.rc-version }}${{ needs.get-rc-info.outputs.rc-suffix }}.json'
   build-platforms:
     needs: [get-rc-info, nuget-wait-for-core-package-to-be-available]
     strategy:
