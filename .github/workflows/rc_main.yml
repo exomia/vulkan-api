@@ -104,15 +104,15 @@ jobs:
   check:
     if: ${{ always() }}  
     name: '[CHECK] RC SUCCESS'
-    needs: [skip, build-core, publish-core-on-github, publish-core-on-nuget]
+    needs: [build-core, publish-core-on-github, publish-core-on-nuget]
     runs-on: ubuntu-latest
     steps:
     - name: '[CHECK] build-core status'
       if: ${{ needs.build-core.result != 'success' }}
       run: exit 1
     - name: '[CHECK] publish-core-on-github status'
-      if: ${{ !needs.skip.outputs.skip && needs.publish-core-on-github.result != 'success' }}
+      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-core-on-github.result != 'success' }}
       run: exit 1
     - name: '[CHECK] publish-core-on-nuget status'
-      if: ${{ !needs.skip.outputs.skip && needs.publish-core-on-nuget.result != 'success' }}
+      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-core-on-nuget.result != 'success' }}
       run: exit 1
