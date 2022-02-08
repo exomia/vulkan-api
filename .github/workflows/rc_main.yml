@@ -64,10 +64,16 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output ./.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
-        dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/exomia/index.json --api-key ${{ github.token }} --skip-duplicate
+        for f in ./*.nupkg do
+          STATUSCODE=$(curl -sSX PUT --retry 3 -o /dev/null -w "%{http_code}" -u "${{ github.repository_owner }}:${{ github.token }}" -F package=@$f https://nuget.pkg.github.com/${{ github.repository_owner }}/)
+          echo "[$STATUSCODE:https://nuget.pkg.github.com/${{ github.repository_owner }}/] $f"
+          if [ "${STATUSCODE}" != 200 ] && [ "${STATUSCODE}" != 409 ]; then exit 1; fi
+        done
+      shell: bash
+      working-directory: .packages
   check:
     if: ${{ always() }}  
     name: '[CHECK] RC SUCCESS'
