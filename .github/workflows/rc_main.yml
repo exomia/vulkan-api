@@ -14,16 +14,21 @@ jobs:
       id: rc-version
       run: |
         echo "::set-output name=rc-version::${GITHUB_REF#refs/heads/rc/v}"
-    - uses: octokit/request-action@v2.x
-      id: package-versions
+    - id: package-versions
+      continue-on-error: true
+      uses: octokit/request-action@v2.x
       with:
         route: GET /orgs/exomia/packages/nuget/Exomia.Vulkan.Api.Core/versions
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ github.token }}    
     - name: 'set rc-suffix'
       id: rc-suffix
       run: |
-        echo "::set-output name=rc-suffix::-rc.$(echo '${{ steps.package-versions.outputs.data }}' | jq '[.[] | select(.name | startswith("${{ steps.rc-version.outputs.rc-version }}-rc."))] | length')"
+        if [[ "${{ steps.package-versions.outputs.status }}" == "200" ]]; then
+          echo "::set-output name=rc-suffix::-rc.$(echo '${{ steps.package-versions.outputs.data }}' | jq '[.[] | select(.name | startswith("${{ steps.rc-version.outputs.rc-version }}-rc."))] | length')"
+        else
+          echo "::set-output name=rc-suffix::-rc.0"
+        fi  
   print-information:
     needs: [get-rc-info]
     runs-on: ubuntu-latest
@@ -60,7 +65,8 @@ jobs:
     - name: 'check commit for skip-publish tag'
       id: check-commit
       run: |
-        if [[${{ github.event.head_commit.message }} == *"!!skip-publish"*]]; then
+        MSG=$(cat <<-END ${{ github.event.head_commit.message }} END)
+        if [[ $MSG == *"!!skip-publish"*]]; then
           echo "::set-output name=state::true"
         else
           echo "::set-output name=state::false"
