@@ -41,6 +41,10 @@ jobs:
         platforms: [Any CPU, x64]
     name: 'build core in ${{ matrix.configurations }} on ${{ matrix.os }} for ${{ matrix.platforms }}'
     runs-on: ${{ matrix.os }}
+    env:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps: 
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
@@ -48,16 +52,18 @@ jobs:
         dotnet-version: '6.0.x'
     - run: |
         dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
-      env:
-        DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
-        DOTNET_NOLOGO: 1
-        DOTNET_CLI_TELEMETRY_OPTOUT: 1
   publish-core-on-github:
     needs: [get-rc-info, build-core]
     runs-on: ubuntu-latest
     strategy:
       matrix:
         platforms: [Any CPU, x64]
+    permissions:
+      packages: write 
+    env:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1   
@@ -67,8 +73,7 @@ jobs:
         dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
-        dotnet nuget add source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --name github --username ${{ github.repository_owner }} --password ${{ github.token }} --store-password-in-clear-text
-        dotnet nuget push ~/.packages/*.nupkg --source github --skip-duplicate
+        dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
   check:
     if: ${{ always() }}  
     name: '[CHECK] RC SUCCESS'
