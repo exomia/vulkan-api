@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <Platforms>AnyCPU;x64</Platforms>
+        <Platforms>AnyCPU</Platforms>
         <LangVersion>10.0</LangVersion>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <DocumentationFile></DocumentationFile>
@@ -33,12 +33,9 @@
         <AssemblyOriginatorKeyFile>..\..\Exomia.Vulkan.Api.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(Platform)'=='AnyCPU'">
+    <PropertyGroup>
         <AssemblyName>$(MSBuildProjectName)</AssemblyName>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Platform)'!='AnyCPU'">
-        <AssemblyName>$(MSBuildProjectName).$(Platform)</AssemblyName>
+        <OutputPath>$(MSBuildProjectDirectory)/bin/</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup>

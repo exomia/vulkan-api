@@ -1,4 +1,4 @@
-﻿<!--EXTERNAL_PROPERTIES: VersionSuffix;GITHUB_ACTIONS;GITHUB_ACTION-->
+﻿<!--EXTERNAL_PROPERTIES: VersionSuffix;GITHUB_ACTIONS-->
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>net6.0</TargetFrameworks>
@@ -85,8 +85,10 @@
             PrivateAssets="all"
             ReferenceOutputAssembly="false" />
         <None
-            Include="..\..\analyzer\Exomia.Vulkan.Api.Core.SourceGenerator\bin\$(Configuration)\netstandard2.0\Exomia.Vulkan.Api.Core.SourceGenerator.dll"
-            Pack="true" Visible="false" PackagePath="analyzers\dotnet\cs" />
+            Include="..\..\analyzer\Exomia.Vulkan.Api.Core.SourceGenerator\bin\netstandard2.0\Exomia.Vulkan.Api.Core.SourceGenerator.dll"
+            Pack="true"
+            Visible="false"
+            PackagePath="analyzers\dotnet\cs" />
     </ItemGroup>
 
     <ItemGroup>
