@@ -205,3 +205,15 @@ jobs:
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
+  check-platforms-publish:
+    if: ${{ always() }}  
+    name: '[CHECK] RC PLATFORMS PUBLISH SUCCESS'
+    needs: [publish-platforms-on-github, publish-platforms-on-nuget]
+    runs-on: ubuntu-latest
+    steps:
+    - name: '[CHECK] publish-platforms-on-github status'
+      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-platforms-on-github.result != 'success' }}
+      run: exit 1
+    - name: '[CHECK] publish-platforms-on-nuget status'
+      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-platforms-on-nuget.result != 'success' }}
+      run: exit 1
