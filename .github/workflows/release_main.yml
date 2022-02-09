@@ -1,46 +1,36 @@
-name: '[RC] main'
+name: '[RELEASE] main'
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
-      - 'rc/v*'
+      - 'master'
 concurrency: 
-  group: 'rc-main'
+  group: 'release-main'
 jobs:
-  get-rc-info:
+  merged-check:
+    if: ${{ github.event.pull_request.merged && startsWith(github.head_ref, 'rc/v') }}
+    runs-on: ubuntu-latest
+    steps:
+    - run: exit 0
+  get-release-info:
+    needs: [merged-check]
     runs-on: ubuntu-latest
     outputs:
-      rc-version: ${{ steps.rc-version.outputs.rc-version }}
-      rc-suffix: ${{ steps.rc-suffix.outputs.rc-suffix }}
+      release-version: ${{ steps.release-version.outputs.release-version }}
     steps:
-    - name: 'set rc-version'
-      id: rc-version
+    - name: 'set release-version'
+      id: release-version
       run: |
-        echo "::set-output name=rc-version::${GITHUB_REF#refs/heads/rc/v}"
-    - id: package-versions
-      continue-on-error: true
-      uses: octokit/request-action@v2.x
-      with:
-        route: GET /orgs/exomia/packages/nuget/Exomia.Vulkan.Api.Core/versions
-      env:
-        GITHUB_TOKEN: ${{ github.token }}    
-    - name: 'set rc-suffix'
-      id: rc-suffix
-      run: |
-        if [[ "${{ steps.package-versions.outputs.status }}" == "200" ]]; then
-          echo "::set-output name=rc-suffix::-rc.$(echo '${{ steps.package-versions.outputs.data }}' | jq '[.[] | select(.name | startswith("${{ steps.rc-version.outputs.rc-version }}-rc."))] | length')"
-        else
-          echo "::set-output name=rc-suffix::-rc.0"
-        fi  
+        echo "::set-output name=release-version::${GITHUB_HEAD_REF#rc/v}" 
   print-information:
-    needs: [get-rc-info]
+    needs: [get-release-info]
     runs-on: ubuntu-latest
     steps:
     - name: 'print information'
       run: |
-        echo "rc-version: ${{ needs.get-rc-info.outputs.rc-version }}"
-        echo "rc-suffix: ${{ needs.get-rc-info.outputs.rc-suffix }}"
+        echo "release-version: ${{ needs.get-release-info.outputs.release-version }}"
   build-core:
-    needs: [get-rc-info]
+    needs: [get-release-info]
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
@@ -58,10 +48,10 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |
-        dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-core-build:
-    if: ${{ always() }}  
-    name: '[CHECK] RC CORE BUILD SUCCESS'
+    if: ${{ github.event.pull_request.merged && always() }}  
+    name: '[CHECK] RELEASE CORE BUILD SUCCESS'
     needs: [build-core]
     runs-on: ubuntu-latest
     steps:
@@ -69,8 +59,7 @@ jobs:
       if: ${{ needs.build-core.result != 'success' }}
       run: exit 1
   publish-core-on-github:
-    needs: [get-rc-info, build-core]
-    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
+    needs: [get-release-info, build-core]
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -87,13 +76,12 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
   publish-core-on-nuget:
-    needs: [get-rc-info, build-core, publish-core-on-github]
-    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
+    needs: [get-release-info, build-core, publish-core-on-github]
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -108,34 +96,34 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Release --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
   check-core-publish:
-    if: ${{ always() }}  
-    name: '[CHECK] RC CORE PUBLISH SUCCESS'
+    if: ${{ github.event.pull_request.merged && always() }}  
+    name: '[CHECK] RELEASE CORE PUBLISH SUCCESS'
     needs: [publish-core-on-github, publish-core-on-nuget]
     runs-on: ubuntu-latest
     steps:
     - name: '[CHECK] publish-core-on-github status'
-      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-core-on-github.result != 'success' }}
+      if: ${{ needs.publish-core-on-github.result != 'success' }}
       run: exit 1
     - name: '[CHECK] publish-core-on-nuget status'
-      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-core-on-nuget.result != 'success' }}
+      if: ${{ needs.publish-core-on-nuget.result != 'success' }}
       run: exit 1
   nuget-wait-for-core-package-to-be-available:
     name: '[NUGET] wait for core-package to be available'
-    needs: [get-rc-info, build-core, publish-core-on-nuget]
+    needs: [get-release-info, build-core, publish-core-on-nuget]
     strategy:
       matrix:
         packages: ['exomia.vulkan.api.core', 'exomia.vulkan.api.core.x64']
     runs-on: ubuntu-latest
     steps:
     - run: |
-        until $(curl -fsS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/${{ matrix.packages }}/${{ needs.get-rc-info.outputs.rc-version }}${{ needs.get-rc-info.outputs.rc-suffix }}.json'); do sleep 60;done
+        until $(curl -fsS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/${{ matrix.packages }}/${{ needs.get-release-info.outputs.release-version }}.json'); do sleep 60;done
   build-platforms:
-    needs: [get-rc-info, nuget-wait-for-core-package-to-be-available]
+    needs: [get-release-info, nuget-wait-for-core-package-to-be-available]
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
@@ -153,10 +141,10 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |
-        dotnet build Exomia.Vulkan.Api.Platforms.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet build Exomia.Vulkan.Api.Platforms.sln --restore --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-platforms-build:
-    if: ${{ always() }}  
-    name: '[CHECK] RC PLATFORMS BUILD SUCCESS'
+    if: ${{ github.event.pull_request.merged && always() }}  
+    name: '[CHECK] RELEASE PLATFORMS BUILD SUCCESS'
     needs: [build-platforms]
     runs-on: ubuntu-latest
     steps:
@@ -164,8 +152,7 @@ jobs:
       if: ${{ needs.build-platforms.result != 'success' }}
       run: exit 1
   publish-platforms-on-github:
-    needs: [get-rc-info, build-platforms]
-    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
+    needs: [get-release-info, build-platforms]
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -182,13 +169,12 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Platforms.sln --restore --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Platforms.sln --restore --configuration Debug --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
   publish-platforms-on-nuget:
-    needs: [get-rc-info, build-platforms, publish-platforms-on-github]
-    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
+    needs: [get-release-info, build-platforms, publish-platforms-on-github]
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -203,19 +189,54 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Platforms.sln --restore --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Platforms.sln --restore --configuration Release --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
   check-platforms-publish:
-    if: ${{ always() }}  
-    name: '[CHECK] RC PLATFORMS PUBLISH SUCCESS'
+    if: ${{ github.event.pull_request.merged && always() }}  
+    name: '[CHECK] RELEASE PLATFORMS PUBLISH SUCCESS'
     needs: [publish-platforms-on-github, publish-platforms-on-nuget]
     runs-on: ubuntu-latest
     steps:
     - name: '[CHECK] publish-platforms-on-github status'
-      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-platforms-on-github.result != 'success' }}
+      if: ${{ needs.publish-platforms-on-github.result != 'success' }}
       run: exit 1
     - name: '[CHECK] publish-platforms-on-nuget status'
-      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-platforms-on-nuget.result != 'success' }}
+      if: ${{ needs.publish-platforms-on-nuget.result != 'success' }}
       run: exit 1
+  create-release:
+    needs: [get-release-info, check-platforms-publish]
+    runs-on: ubuntu-latest
+    outputs:
+      response: ${{ steps.create-release.outputs.result }}
+    steps:
+    - uses: actions/github-script@v5
+      id: create-release
+      with:
+        script: |
+          return await github.rest.repos.createRelease({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            tag_name: 'v${{ needs.get-release-info.outputs.release-version }}',
+            generate_release_notes: true,
+            target_commitish: '${{ github.head_ref }}'
+          });
+  discord-announcement:
+    needs: [get-release-info, create-release]
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        curl -fsS -H "Accept: application/json" -H "Content-Type:application/json" -X POST ${{ secrets.EXOMIA_DISCORD_VULKAN_WEBHOOK_URL }} \
+          --data-binary @- << EOF 
+          {
+            "username": "vulkan-api", 
+            "content": "A new release was published [${{ fromJson(needs.create-release.outputs.response).data.tag_name }}](${{ fromJson(needs.create-release.outputs.response).data.html_url }})!", 
+            "embeds": [
+              {
+                "description": ${{ toJson(fromJson(needs.create-release.outputs.response).data.body) }},
+                "color": 5814783
+              }
+            ]
+          }
+        EOF
