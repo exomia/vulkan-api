@@ -6,7 +6,13 @@ on:
 concurrency: 
   group: 'rc-main'
 jobs:
+  run-ci:  
+    if: "!contains(github.event.head_commit.message, '!!skip-ci')"
+    runs-on: ubuntu-latest
+    steps:
+    - run: exit 0
   get-rc-info:
+    needs: [run-ci]
     runs-on: ubuntu-latest
     outputs:
       rc-version: ${{ steps.rc-version.outputs.rc-version }}
@@ -60,7 +66,7 @@ jobs:
     - run: |
         dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
   check-core-build:
-    if: ${{ always() }}  
+    if: ${{ !contains(github.event.head_commit.message, '!!skip-ci') && always() }}  
     name: '[CHECK] RC CORE BUILD SUCCESS'
     needs: [build-core]
     runs-on: ubuntu-latest
@@ -70,7 +76,6 @@ jobs:
       run: exit 1
   publish-core-on-github:
     needs: [get-rc-info, build-core]
-    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -93,7 +98,6 @@ jobs:
         dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
   publish-core-on-nuget:
     needs: [get-rc-info, build-core, publish-core-on-github]
-    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -113,16 +117,16 @@ jobs:
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
   check-core-publish:
-    if: ${{ always() }}  
+    if: ${{ !contains(github.event.head_commit.message, '!!skip-ci') && always() }}  
     name: '[CHECK] RC CORE PUBLISH SUCCESS'
     needs: [publish-core-on-github, publish-core-on-nuget]
     runs-on: ubuntu-latest
     steps:
     - name: '[CHECK] publish-core-on-github status'
-      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-core-on-github.result != 'success' }}
+      if: ${{ needs.publish-core-on-github.result != 'success' }}
       run: exit 1
     - name: '[CHECK] publish-core-on-nuget status'
-      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-core-on-nuget.result != 'success' }}
+      if: ${{ needs.publish-core-on-nuget.result != 'success' }}
       run: exit 1
   nuget-wait-for-core-package-to-be-available:
     name: '[NUGET] wait for core-package to be available'
@@ -155,7 +159,7 @@ jobs:
     - run: |
         dotnet build Exomia.Vulkan.Api.Platforms.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
   check-platforms-build:
-    if: ${{ always() }}  
+    if: ${{ !contains(github.event.head_commit.message, '!!skip-ci') && always() }}  
     name: '[CHECK] RC PLATFORMS BUILD SUCCESS'
     needs: [build-platforms]
     runs-on: ubuntu-latest
@@ -165,7 +169,6 @@ jobs:
       run: exit 1
   publish-platforms-on-github:
     needs: [get-rc-info, build-platforms]
-    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -188,7 +191,6 @@ jobs:
         dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
   publish-platforms-on-nuget:
     needs: [get-rc-info, build-platforms, publish-platforms-on-github]
-    if: "!contains(github.event.head_commit.message, '!!skip-publish')"
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -208,14 +210,14 @@ jobs:
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
   check-platforms-publish:
-    if: ${{ always() }}  
+    if: ${{ !contains(github.event.head_commit.message, '!!skip-ci') && always() }}  
     name: '[CHECK] RC PLATFORMS PUBLISH SUCCESS'
     needs: [publish-platforms-on-github, publish-platforms-on-nuget]
     runs-on: ubuntu-latest
     steps:
     - name: '[CHECK] publish-platforms-on-github status'
-      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-platforms-on-github.result != 'success' }}
+      if: ${{ needs.publish-platforms-on-github.result != 'success' }}
       run: exit 1
     - name: '[CHECK] publish-platforms-on-nuget status'
-      if: ${{ !contains(github.event.head_commit.message, '!!skip-publish') && needs.publish-platforms-on-nuget.result != 'success' }}
+      if: ${{ needs.publish-platforms-on-nuget.result != 'success' }}
       run: exit 1
