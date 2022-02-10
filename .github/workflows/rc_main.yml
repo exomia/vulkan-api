@@ -225,10 +225,10 @@ jobs:
     needs: [get-rc-info, check-platforms-publish]
     runs-on: ubuntu-latest
     outputs:
-      response: ${{ steps.create-release.outputs.result }}
+      response: ${{ steps.create-prerelease.outputs.result }}
     steps:
     - uses: actions/github-script@v5
-      id: create-release
+      id: create-prerelease
       with:
         script: |
           return await github.rest.repos.createRelease({
@@ -240,7 +240,7 @@ jobs:
             prerelease: true
           });
   discord-announcement:
-    needs: [get-release-info, create-prerelease]
+    needs: [get-rc-info, create-prerelease]
     runs-on: ubuntu-latest
     steps:
     - run: |
@@ -248,10 +248,10 @@ jobs:
           --data-binary @- << EOF 
           {
             "username": "vulkan-api", 
-            "content": "A new pre-release was published [${{ fromJson(needs.create-release.outputs.response).data.tag_name }}](${{ fromJson(needs.create-release.outputs.response).data.html_url }})!", 
+            "content": "A new pre-release was published [${{ fromJson(needs.create-prerelease.outputs.response).data.tag_name }}](${{ fromJson(needs.create-prerelease.outputs.response).data.html_url }})!", 
             "embeds": [
               {
-                "description": ${{ toJson(fromJson(needs.create-release.outputs.response).data.body) }},
+                "description": ${{ toJson(fromJson(needs.create-prerelease.outputs.response).data.body) }},
                 "color": 5414713
               }
             ]
