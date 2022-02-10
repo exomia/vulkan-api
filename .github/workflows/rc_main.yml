@@ -221,3 +221,39 @@ jobs:
     - name: '[CHECK] publish-platforms-on-nuget status'
       if: ${{ needs.publish-platforms-on-nuget.result != 'success' }}
       run: exit 1
+  create-prerelease:
+    needs: [get-rc-info, check-platforms-publish]
+    runs-on: ubuntu-latest
+    outputs:
+      response: ${{ steps.create-release.outputs.result }}
+    steps:
+    - uses: actions/github-script@v5
+      id: create-release
+      with:
+        script: |
+          return await github.rest.repos.createRelease({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            tag_name: 'v${{ needs.get-rc-info.outputs.rc-version }}{{ needs.get-rc-info.outputs.rc-suffix }}',
+            generate_release_notes: true,
+            target_commitish: '${{ github.ref_name }}',
+            prerelease: true
+          });
+  discord-announcement:
+    needs: [get-release-info, create-prerelease]
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        curl -fsS -H "Accept: application/json" -H "Content-Type:application/json" -X POST ${{ secrets.EXOMIA_DISCORD_VULKAN_WEBHOOK_URL }} \
+          --data-binary @- << EOF 
+          {
+            "username": "vulkan-api", 
+            "content": "A new pre-release was published [${{ fromJson(needs.create-release.outputs.response).data.tag_name }}](${{ fromJson(needs.create-release.outputs.response).data.html_url }})!", 
+            "embeds": [
+              {
+                "description": ${{ toJson(fromJson(needs.create-release.outputs.response).data.body) }},
+                "color": 5414713
+              }
+            ]
+          }
+        EOF
