@@ -226,6 +226,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       response: ${{ steps.create-prerelease.outputs.result }}
+    permissions:
+      contents: write 
     steps:
     - uses: actions/github-script@v5
       id: create-prerelease
