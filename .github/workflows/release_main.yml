@@ -206,10 +206,12 @@ jobs:
       if: ${{ needs.publish-platforms-on-nuget.result != 'success' }}
       run: exit 1
   create-release:
-    needs: [get-release-info, check-platforms-publish]
+    needs: [get-release-info, publish-platforms-on-nuget]
     runs-on: ubuntu-latest
     outputs:
       response: ${{ steps.create-release.outputs.result }}
+    permissions:
+      contents: write 
     steps:
     - uses: actions/github-script@v5
       id: create-release

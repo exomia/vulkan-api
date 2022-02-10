@@ -222,7 +222,7 @@ jobs:
       if: ${{ needs.publish-platforms-on-nuget.result != 'success' }}
       run: exit 1
   create-prerelease:
-    needs: [get-rc-info, check-platforms-publish]
+    needs: [get-rc-info, publish-platforms-on-nuget]
     runs-on: ubuntu-latest
     outputs:
       response: ${{ steps.create-prerelease.outputs.result }}
@@ -236,7 +236,7 @@ jobs:
           return await github.rest.repos.createRelease({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            tag_name: 'v${{ needs.get-rc-info.outputs.rc-version }}{{ needs.get-rc-info.outputs.rc-suffix }}',
+            tag_name: 'v${{ needs.get-rc-info.outputs.rc-version }}${{ needs.get-rc-info.outputs.rc-suffix }}',
             generate_release_notes: true,
             target_commitish: '${{ github.ref_name }}',
             prerelease: true
