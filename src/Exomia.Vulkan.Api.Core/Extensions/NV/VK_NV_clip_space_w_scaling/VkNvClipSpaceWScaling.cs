@@ -74,7 +74,7 @@ public static unsafe class VkNvClipSpaceWScaling
     {
         fixed (delegate*<VkCommandBuffer, uint, uint, VkViewportWScalingNV*, void>* pvkCmdSetViewportWScalingNV = &vkCmdSetViewportWScalingNV)
         {
-            *pvkCmdSetViewportWScalingNV = (delegate*<VkCommandBuffer, uint, uint, VkViewportWScalingNV*, void>)GetVkFunction(
+            *pvkCmdSetViewportWScalingNV = (delegate*<VkCommandBuffer, uint, uint, VkViewportWScalingNV*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6956\u7765\u6f70\u7472\u5357\u6163\u696c\u676e\u564e\u0000");
         }
     }

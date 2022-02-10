@@ -92,7 +92,7 @@ public static unsafe class VkAmdShaderInfo
         fixed (delegate*<VkDevice, VkPipeline, VkShaderStageFlagBits, VkShaderInfoTypeAMD, nuint*, void*, VkResult>* pvkGetShaderInfoAMD = &vkGetShaderInfoAMD)
         {
             *pvkGetShaderInfoAMD =
-                (delegate*<VkDevice, VkPipeline, VkShaderStageFlagBits, VkShaderInfoTypeAMD, nuint*, void*, VkResult>)GetVkFunction(
+                (delegate*<VkDevice, VkPipeline, VkShaderStageFlagBits, VkShaderInfoTypeAMD, nuint*, void*, VkResult>)Core.Vk.GetVkFunction(
                     device, "\u6b76\u6547\u5374\u6168\u6564\u4972\u666e\u416f\u444d\u0000");
         }
     }

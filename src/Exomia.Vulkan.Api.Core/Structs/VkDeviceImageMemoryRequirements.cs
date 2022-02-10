@@ -40,8 +40,8 @@ public unsafe struct VkDeviceImageMemoryRequirements
 
     /// <summary>
     ///     planeAspect is a VkImageAspectFlagBits value specifying the aspect corresponding to the image plane to query.
-    ///     This parameter is ignored unless pCreateInfo::flags has VK_IMAGE_CREATE_DISJOINT_BITor
-    ///     VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXTset.
+    ///     This parameter is ignored unless pCreateInfo::tiling is VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT, or
+    ///     pCreateInfo::flags has VK_IMAGE_CREATE_DISJOINT_BITset.
     /// </summary>
     public VkImageAspectFlagBits planeAspect;
 }

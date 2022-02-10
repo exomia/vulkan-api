@@ -105,11 +105,12 @@ public static unsafe class VkKhrExternalSemaphoreFd
     {
         fixed (delegate*<VkDevice, VkImportSemaphoreFdInfoKHR*, VkResult>* pvkImportSemaphoreFdKHR = &vkImportSemaphoreFdKHR)
         {
-            *pvkImportSemaphoreFdKHR = (delegate*<VkDevice, VkImportSemaphoreFdInfoKHR*, VkResult>)GetVkFunction(device, "\u6b76\u6d49\u6f70\u7472\u6553\u616d\u6870\u726f\u4665\u4b64\u5248\u0000");
+            *pvkImportSemaphoreFdKHR = (delegate*<VkDevice, VkImportSemaphoreFdInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
+                device, "\u6b76\u6d49\u6f70\u7472\u6553\u616d\u6870\u726f\u4665\u4b64\u5248\u0000");
         }
         fixed (delegate*<VkDevice, VkSemaphoreGetFdInfoKHR*, int*, VkResult>* pvkGetSemaphoreFdKHR = &vkGetSemaphoreFdKHR)
         {
-            *pvkGetSemaphoreFdKHR = (delegate*<VkDevice, VkSemaphoreGetFdInfoKHR*, int*, VkResult>)GetVkFunction(device, "\u6b76\u6547\u5374\u6d65\u7061\u6f68\u6572\u6446\u484b\u0052");
+            *pvkGetSemaphoreFdKHR = (delegate*<VkDevice, VkSemaphoreGetFdInfoKHR*, int*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6547\u5374\u6d65\u7061\u6f68\u6572\u6446\u484b\u0052");
         }
     }
 }

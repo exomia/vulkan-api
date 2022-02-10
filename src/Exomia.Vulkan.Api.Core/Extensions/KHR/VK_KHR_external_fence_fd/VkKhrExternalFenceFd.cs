@@ -104,11 +104,11 @@ public static unsafe class VkKhrExternalFenceFd
     {
         fixed (delegate*<VkDevice, VkImportFenceFdInfoKHR*, VkResult>* pvkImportFenceFdKHR = &vkImportFenceFdKHR)
         {
-            *pvkImportFenceFdKHR = (delegate*<VkDevice, VkImportFenceFdInfoKHR*, VkResult>)GetVkFunction(device, "\u6b76\u6d49\u6f70\u7472\u6546\u636e\u4665\u4b64\u5248\u0000");
+            *pvkImportFenceFdKHR = (delegate*<VkDevice, VkImportFenceFdInfoKHR*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6d49\u6f70\u7472\u6546\u636e\u4665\u4b64\u5248\u0000");
         }
         fixed (delegate*<VkDevice, VkFenceGetFdInfoKHR*, int*, VkResult>* pvkGetFenceFdKHR = &vkGetFenceFdKHR)
         {
-            *pvkGetFenceFdKHR = (delegate*<VkDevice, VkFenceGetFdInfoKHR*, int*, VkResult>)GetVkFunction(device, "\u6b76\u6547\u4674\u6e65\u6563\u6446\u484b\u0052");
+            *pvkGetFenceFdKHR = (delegate*<VkDevice, VkFenceGetFdInfoKHR*, int*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6547\u4674\u6e65\u6563\u6446\u484b\u0052");
         }
     }
 }

@@ -71,7 +71,7 @@ public static unsafe class VkExtColorWriteEnable
     {
         fixed (delegate*<VkCommandBuffer, uint, VkBool32*, void>* pvkCmdSetColorWriteEnableEXT = &vkCmdSetColorWriteEnableEXT)
         {
-            *pvkCmdSetColorWriteEnableEXT = (delegate*<VkCommandBuffer, uint, VkBool32*, void>)GetVkFunction(
+            *pvkCmdSetColorWriteEnableEXT = (delegate*<VkCommandBuffer, uint, VkBool32*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6f43\u6f6c\u5772\u6972\u6574\u6e45\u6261\u656c\u5845\u0054");
         }
     }

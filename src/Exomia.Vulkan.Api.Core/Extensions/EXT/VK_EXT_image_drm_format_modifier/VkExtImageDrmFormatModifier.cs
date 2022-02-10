@@ -86,7 +86,7 @@ public static unsafe class VkExtImageDrmFormatModifier
     {
         fixed (delegate*<VkDevice, VkImage, VkImageDrmFormatModifierPropertiesEXT*, VkResult>* pvkGetImageDrmFormatModifierPropertiesEXT = &vkGetImageDrmFormatModifierPropertiesEXT)
         {
-            *pvkGetImageDrmFormatModifierPropertiesEXT = (delegate*<VkDevice, VkImage, VkImageDrmFormatModifierPropertiesEXT*, VkResult>)GetVkFunction(
+            *pvkGetImageDrmFormatModifierPropertiesEXT = (delegate*<VkDevice, VkImage, VkImageDrmFormatModifierPropertiesEXT*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4974\u616d\u6567\u7244\u466d\u726f\u616d\u4d74\u646f\u6669\u6569\u5072\u6f72\u6570\u7472\u6569\u4573\u5458\u0000");
         }
     }

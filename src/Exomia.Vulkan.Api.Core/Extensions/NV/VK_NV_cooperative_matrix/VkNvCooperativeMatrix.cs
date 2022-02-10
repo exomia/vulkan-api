@@ -86,7 +86,7 @@ public static unsafe class VkNvCooperativeMatrix
     {
         fixed (delegate*<VkPhysicalDevice, uint*, VkCooperativeMatrixPropertiesNV*, VkResult>* pvkGetPhysicalDeviceCooperativeMatrixPropertiesNV = &vkGetPhysicalDeviceCooperativeMatrixPropertiesNV)
         {
-            *pvkGetPhysicalDeviceCooperativeMatrixPropertiesNV = (delegate*<VkPhysicalDevice, uint*, VkCooperativeMatrixPropertiesNV*, VkResult>)GetVkFunction(
+            *pvkGetPhysicalDeviceCooperativeMatrixPropertiesNV = (delegate*<VkPhysicalDevice, uint*, VkCooperativeMatrixPropertiesNV*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4365\u6f6f\u6570\u6172\u6974\u6576\u614d\u7274\u7869\u7250\u706f\u7265\u6974\u7365\u564e\u0000");
         }
     }

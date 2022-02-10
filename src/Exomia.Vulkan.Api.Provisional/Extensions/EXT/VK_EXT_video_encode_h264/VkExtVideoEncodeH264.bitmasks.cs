@@ -1,5 +1,0 @@
-﻿global using VkVideoEncodeH264CapabilityFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH264CapabilityFlagBitsEXT;
-global using VkVideoEncodeH264InputModeFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH264InputModeFlagBitsEXT;
-global using VkVideoEncodeH264OutputModeFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH264OutputModeFlagBitsEXT;
-global using VkVideoEncodeH264CreateFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH264CreateFlagBitsEXT;
-global using VkVideoEncodeH264RateControlStructureFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH264RateControlStructureFlagBitsEXT;

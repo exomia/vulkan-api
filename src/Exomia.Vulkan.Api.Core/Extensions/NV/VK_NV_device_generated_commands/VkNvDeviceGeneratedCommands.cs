@@ -187,33 +187,33 @@ public static unsafe class VkNvDeviceGeneratedCommands
         fixed (delegate*<VkDevice, VkGeneratedCommandsMemoryRequirementsInfoNV*, VkMemoryRequirements2*, void>* pvkGetGeneratedCommandsMemoryRequirementsNV =
                    &vkGetGeneratedCommandsMemoryRequirementsNV)
         {
-            *pvkGetGeneratedCommandsMemoryRequirementsNV = (delegate*<VkDevice, VkGeneratedCommandsMemoryRequirementsInfoNV*, VkMemoryRequirements2*, void>)GetVkFunction(
+            *pvkGetGeneratedCommandsMemoryRequirementsNV = (delegate*<VkDevice, VkGeneratedCommandsMemoryRequirementsInfoNV*, VkMemoryRequirements2*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4774\u6e65\u7265\u7461\u6465\u6f43\u6d6d\u6e61\u7364\u654d\u6f6d\u7972\u6552\u7571\u7269\u6d65\u6e65\u7374\u564e\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkGeneratedCommandsInfoNV*, void>* pvkCmdPreprocessGeneratedCommandsNV = &vkCmdPreprocessGeneratedCommandsNV)
         {
-            *pvkCmdPreprocessGeneratedCommandsNV = (delegate*<VkCommandBuffer, VkGeneratedCommandsInfoNV*, void>)GetVkFunction(
+            *pvkCmdPreprocessGeneratedCommandsNV = (delegate*<VkCommandBuffer, VkGeneratedCommandsInfoNV*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5064\u6572\u7270\u636f\u7365\u4773\u6e65\u7265\u7461\u6465\u6f43\u6d6d\u6e61\u7364\u564e\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkBool32, VkGeneratedCommandsInfoNV*, void>* pvkCmdExecuteGeneratedCommandsNV = &vkCmdExecuteGeneratedCommandsNV)
         {
-            *pvkCmdExecuteGeneratedCommandsNV = (delegate*<VkCommandBuffer, VkBool32, VkGeneratedCommandsInfoNV*, void>)GetVkFunction(
+            *pvkCmdExecuteGeneratedCommandsNV = (delegate*<VkCommandBuffer, VkBool32, VkGeneratedCommandsInfoNV*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4564\u6578\u7563\u6574\u6547\u656e\u6172\u6574\u4364\u6d6f\u616d\u646e\u4e73\u0056");
         }
         fixed (delegate*<VkCommandBuffer, VkPipelineBindPoint, VkPipeline, uint, void>* pvkCmdBindPipelineShaderGroupNV = &vkCmdBindPipelineShaderGroupNV)
         {
-            *pvkCmdBindPipelineShaderGroupNV = (delegate*<VkCommandBuffer, VkPipelineBindPoint, VkPipeline, uint, void>)GetVkFunction(
+            *pvkCmdBindPipelineShaderGroupNV = (delegate*<VkCommandBuffer, VkPipelineBindPoint, VkPipeline, uint, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6e69\u5064\u7069\u6c65\u6e69\u5365\u6168\u6564\u4772\u6f72\u7075\u564e\u0000");
         }
         fixed (delegate*<VkDevice, VkIndirectCommandsLayoutCreateInfoNV*, VkAllocationCallbacks*, VkIndirectCommandsLayoutNV*, VkResult>* pvkCreateIndirectCommandsLayoutNV =
                    &vkCreateIndirectCommandsLayoutNV)
         {
-            *pvkCreateIndirectCommandsLayoutNV = (delegate*<VkDevice, VkIndirectCommandsLayoutCreateInfoNV*, VkAllocationCallbacks*, VkIndirectCommandsLayoutNV*, VkResult>)GetVkFunction(
+            *pvkCreateIndirectCommandsLayoutNV = (delegate*<VkDevice, VkIndirectCommandsLayoutCreateInfoNV*, VkAllocationCallbacks*, VkIndirectCommandsLayoutNV*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u7243\u6165\u6574\u6e49\u6964\u6572\u7463\u6f43\u6d6d\u6e61\u7364\u614c\u6f79\u7475\u564e\u0000");
         }
         fixed (delegate*<VkDevice, VkIndirectCommandsLayoutNV, VkAllocationCallbacks*, void>* pvkDestroyIndirectCommandsLayoutNV = &vkDestroyIndirectCommandsLayoutNV)
         {
-            *pvkDestroyIndirectCommandsLayoutNV = (delegate*<VkDevice, VkIndirectCommandsLayoutNV, VkAllocationCallbacks*, void>)GetVkFunction(
+            *pvkDestroyIndirectCommandsLayoutNV = (delegate*<VkDevice, VkIndirectCommandsLayoutNV, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6544\u7473\u6f72\u4979\u646e\u7269\u6365\u4374\u6d6f\u616d\u646e\u4c73\u7961\u756f\u4e74\u0056");
         }
     }

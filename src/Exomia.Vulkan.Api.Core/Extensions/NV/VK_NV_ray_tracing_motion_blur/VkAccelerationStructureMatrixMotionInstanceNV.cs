@@ -53,8 +53,8 @@ public struct VkAccelerationStructureMatrixMotionInstanceNV
     /// </summary>
     public uint instanceCustomIndex
     {
-        get { return (_bitfield1 >> 0) & 0x00FFFFFF; }
-        set { _bitfield1 = (_bitfield1 & 0xFF000000) | ((value & 0x00FFFFFF) << 0); }
+        get { return (uint)((_bitfield1 >> 0) & 0x00FFFFFF); }
+        set { _bitfield1 = (_bitfield1 & 0xFF000000) | (((uint)value & 0x00FFFFFF) << 0); }
     }
 
     /// <summary>
@@ -63,8 +63,8 @@ public struct VkAccelerationStructureMatrixMotionInstanceNV
     /// </summary>
     public uint mask
     {
-        get { return (_bitfield1 >> 24) & 0x000000FF; }
-        set { _bitfield1 = (_bitfield1 & 0x00FFFFFF) | ((value & 0x000000FF) << 24); }
+        get { return (uint)((_bitfield1 >> 24) & 0x000000FF); }
+        set { _bitfield1 = (_bitfield1 & 0x00FFFFFF) | (((uint)value & 0x000000FF) << 24); }
     }
 
     /// <summary>
@@ -73,8 +73,8 @@ public struct VkAccelerationStructureMatrixMotionInstanceNV
     /// </summary>
     public uint instanceShaderBindingTableRecordOffset
     {
-        get { return (_bitfield2 >> 0) & 0x00FFFFFF; }
-        set { _bitfield2 = (_bitfield2 & 0xFF000000) | ((value & 0x00FFFFFF) << 0); }
+        get { return (uint)((_bitfield2 >> 0) & 0x00FFFFFF); }
+        set { _bitfield2 = (_bitfield2 & 0xFF000000) | (((uint)value & 0x00FFFFFF) << 0); }
     }
 
     /// <summary>flags is an 8-bit mask of VkGeometryInstanceFlagBitsKHRvalues to apply to this instance.</summary>

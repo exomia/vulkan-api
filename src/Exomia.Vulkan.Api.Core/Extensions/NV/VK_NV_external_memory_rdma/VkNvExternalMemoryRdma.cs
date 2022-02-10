@@ -80,7 +80,7 @@ public static unsafe class VkNvExternalMemoryRdma
     {
         fixed (delegate*<VkDevice, VkMemoryGetRemoteAddressInfoNV*, VkRemoteAddressNV*, VkResult>* pvkGetMemoryRemoteAddressNV = &vkGetMemoryRemoteAddressNV)
         {
-            *pvkGetMemoryRemoteAddressNV = (delegate*<VkDevice, VkMemoryGetRemoteAddressInfoNV*, VkRemoteAddressNV*, VkResult>)GetVkFunction(
+            *pvkGetMemoryRemoteAddressNV = (delegate*<VkDevice, VkMemoryGetRemoteAddressInfoNV*, VkRemoteAddressNV*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4d74\u6d65\u726f\u5279\u6d65\u746f\u4165\u6464\u6572\u7373\u564e\u0000");
         }
     }

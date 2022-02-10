@@ -87,7 +87,7 @@ public static unsafe class VkExtDisplaySurfaceCounter
     {
         fixed (delegate*<VkPhysicalDevice, VkSurfaceKHR, VkSurfaceCapabilities2EXT*, VkResult>* pvkGetPhysicalDeviceSurfaceCapabilities2EXT = &vkGetPhysicalDeviceSurfaceCapabilities2EXT)
         {
-            *pvkGetPhysicalDeviceSurfaceCapabilities2EXT = (delegate*<VkPhysicalDevice, VkSurfaceKHR, VkSurfaceCapabilities2EXT*, VkResult>)GetVkFunction(
+            *pvkGetPhysicalDeviceSurfaceCapabilities2EXT = (delegate*<VkPhysicalDevice, VkSurfaceKHR, VkSurfaceCapabilities2EXT*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u6143\u6170\u6962\u696c\u6974\u7365\u4532\u5458\u0000");
         }
     }

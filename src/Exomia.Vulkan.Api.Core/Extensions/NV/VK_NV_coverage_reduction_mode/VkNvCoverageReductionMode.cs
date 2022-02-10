@@ -88,7 +88,7 @@ public static unsafe class VkNvCoverageReductionMode
         fixed (delegate*<VkPhysicalDevice, uint*, VkFramebufferMixedSamplesCombinationNV*, VkResult>* pvkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV =
                    &vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV)
         {
-            *pvkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = (delegate*<VkPhysicalDevice, uint*, VkFramebufferMixedSamplesCombinationNV*, VkResult>)GetVkFunction(
+            *pvkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = (delegate*<VkPhysicalDevice, uint*, VkFramebufferMixedSamplesCombinationNV*, VkResult>)Core.Vk.GetVkFunction(
                 device,
                 "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7075\u6f70\u7472\u6465\u7246\u6d61\u6265\u6675\u6566\u4d72\u7869\u6465\u6153\u706d\u656c\u4373\u6d6f\u6962\u616e\u6974\u6e6f\u4e73\u0056");
         }

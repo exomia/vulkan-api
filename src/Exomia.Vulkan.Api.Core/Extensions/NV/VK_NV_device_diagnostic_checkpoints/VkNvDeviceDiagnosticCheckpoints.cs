@@ -87,11 +87,11 @@ public static unsafe class VkNvDeviceDiagnosticCheckpoints
     {
         fixed (delegate*<VkCommandBuffer, void*, void>* pvkCmdSetCheckpointNV = &vkCmdSetCheckpointNV)
         {
-            *pvkCmdSetCheckpointNV = (delegate*<VkCommandBuffer, void*, void>)GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u6843\u6365\u706b\u696f\u746e\u564e\u0000");
+            *pvkCmdSetCheckpointNV = (delegate*<VkCommandBuffer, void*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u6843\u6365\u706b\u696f\u746e\u564e\u0000");
         }
         fixed (delegate*<VkQueue, uint*, VkCheckpointDataNV*, void>* pvkGetQueueCheckpointDataNV = &vkGetQueueCheckpointDataNV)
         {
-            *pvkGetQueueCheckpointDataNV = (delegate*<VkQueue, uint*, VkCheckpointDataNV*, void>)GetVkFunction(
+            *pvkGetQueueCheckpointDataNV = (delegate*<VkQueue, uint*, VkCheckpointDataNV*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u5174\u6575\u6575\u6843\u6365\u706b\u696f\u746e\u6144\u6174\u564e\u0000");
         }
     }

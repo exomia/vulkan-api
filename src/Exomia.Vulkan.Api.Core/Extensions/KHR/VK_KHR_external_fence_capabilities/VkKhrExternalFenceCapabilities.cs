@@ -80,7 +80,7 @@ public static unsafe class VkKhrExternalFenceCapabilities
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceExternalFenceInfo*, VkExternalFenceProperties*, void>* pvkGetPhysicalDeviceExternalFencePropertiesKHR =
                    &vkGetPhysicalDeviceExternalFencePropertiesKHR)
         {
-            *pvkGetPhysicalDeviceExternalFencePropertiesKHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceExternalFenceInfo*, VkExternalFenceProperties*, void>)GetVkFunction(
+            *pvkGetPhysicalDeviceExternalFencePropertiesKHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceExternalFenceInfo*, VkExternalFenceProperties*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4565\u7478\u7265\u616e\u466c\u6e65\u6563\u7250\u706f\u7265\u6974\u7365\u484b\u0052");
         }
     }

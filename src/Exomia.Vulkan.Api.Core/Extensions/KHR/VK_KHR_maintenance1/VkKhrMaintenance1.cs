@@ -84,7 +84,8 @@ public static unsafe class VkKhrMaintenance1
     {
         fixed (delegate*<VkDevice, VkCommandPool, VkCommandPoolTrimFlags, void>* pvkTrimCommandPoolKHR = &vkTrimCommandPoolKHR)
         {
-            *pvkTrimCommandPoolKHR = (delegate*<VkDevice, VkCommandPool, VkCommandPoolTrimFlags, void>)GetVkFunction(device, "\u6b76\u7254\u6d69\u6f43\u6d6d\u6e61\u5064\u6f6f\u4b6c\u5248\u0000");
+            *pvkTrimCommandPoolKHR =
+                (delegate*<VkDevice, VkCommandPool, VkCommandPoolTrimFlags, void>)Core.Vk.GetVkFunction(device, "\u6b76\u7254\u6d69\u6f43\u6d6d\u6e61\u5064\u6f6f\u4b6c\u5248\u0000");
         }
     }
 }

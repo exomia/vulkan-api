@@ -84,7 +84,7 @@ public static unsafe class VkExtHeadlessSurface
     {
         fixed (delegate*<VkInstance, VkHeadlessSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateHeadlessSurfaceEXT = &vkCreateHeadlessSurfaceEXT)
         {
-            *pvkCreateHeadlessSurfaceEXT = (delegate*<VkInstance, VkHeadlessSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
+            *pvkCreateHeadlessSurfaceEXT = (delegate*<VkInstance, VkHeadlessSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6548\u6461\u656c\u7373\u7553\u6672\u6361\u4565\u5458\u0000");
         }
     }

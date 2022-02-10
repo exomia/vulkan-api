@@ -256,58 +256,59 @@ public static unsafe class VkExtDebugUtils
     {
         fixed (delegate*<VkDevice, VkDebugUtilsObjectNameInfoEXT*, VkResult>* pvkSetDebugUtilsObjectNameEXT = &vkSetDebugUtilsObjectNameEXT)
         {
-            *pvkSetDebugUtilsObjectNameEXT = (delegate*<VkDevice, VkDebugUtilsObjectNameInfoEXT*, VkResult>)GetVkFunction(
+            *pvkSetDebugUtilsObjectNameEXT = (delegate*<VkDevice, VkDebugUtilsObjectNameInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6553\u4474\u6265\u6775\u7455\u6c69\u4f73\u6a62\u6365\u4e74\u6d61\u4565\u5458\u0000");
         }
         fixed (delegate*<VkDevice, VkDebugUtilsObjectTagInfoEXT*, VkResult>* pvkSetDebugUtilsObjectTagEXT = &vkSetDebugUtilsObjectTagEXT)
         {
-            *pvkSetDebugUtilsObjectTagEXT = (delegate*<VkDevice, VkDebugUtilsObjectTagInfoEXT*, VkResult>)GetVkFunction(
+            *pvkSetDebugUtilsObjectTagEXT = (delegate*<VkDevice, VkDebugUtilsObjectTagInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6553\u4474\u6265\u6775\u7455\u6c69\u4f73\u6a62\u6365\u5474\u6761\u5845\u0054");
         }
         fixed (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>* pvkQueueBeginDebugUtilsLabelEXT = &vkQueueBeginDebugUtilsLabelEXT)
         {
-            *pvkQueueBeginDebugUtilsLabelEXT = (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>)GetVkFunction(
+            *pvkQueueBeginDebugUtilsLabelEXT = (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7551\u7565\u4265\u6765\u6e69\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
         }
         fixed (delegate*<VkQueue, void>* pvkQueueEndDebugUtilsLabelEXT = &vkQueueEndDebugUtilsLabelEXT)
         {
-            *pvkQueueEndDebugUtilsLabelEXT = (delegate*<VkQueue, void>)GetVkFunction(instance, "\u6b76\u7551\u7565\u4565\u646e\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
+            *pvkQueueEndDebugUtilsLabelEXT = (delegate*<VkQueue, void>)Core.Vk.GetVkFunction(instance, "\u6b76\u7551\u7565\u4565\u646e\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
         }
         fixed (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>* pvkQueueInsertDebugUtilsLabelEXT = &vkQueueInsertDebugUtilsLabelEXT)
         {
-            *pvkQueueInsertDebugUtilsLabelEXT = (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>)GetVkFunction(
+            *pvkQueueInsertDebugUtilsLabelEXT = (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7551\u7565\u4965\u736e\u7265\u4474\u6265\u6775\u7455\u6c69\u4c73\u6261\u6c65\u5845\u0054");
         }
         fixed (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>* pvkCmdBeginDebugUtilsLabelEXT = &vkCmdBeginDebugUtilsLabelEXT)
         {
-            *pvkCmdBeginDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>)GetVkFunction(
+            *pvkCmdBeginDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6d43\u4264\u6765\u6e69\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdEndDebugUtilsLabelEXT = &vkCmdEndDebugUtilsLabelEXT)
         {
-            *pvkCmdEndDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, void>)GetVkFunction(instance, "\u6b76\u6d43\u4564\u646e\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
+            *pvkCmdEndDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(instance, "\u6b76\u6d43\u4564\u646e\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>* pvkCmdInsertDebugUtilsLabelEXT = &vkCmdInsertDebugUtilsLabelEXT)
         {
-            *pvkCmdInsertDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>)GetVkFunction(
+            *pvkCmdInsertDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6d43\u4964\u736e\u7265\u4474\u6265\u6775\u7455\u6c69\u4c73\u6261\u6c65\u5845\u0054");
         }
         fixed (delegate*<VkInstance, VkDebugUtilsMessengerCreateInfoEXT*, VkAllocationCallbacks*, VkDebugUtilsMessengerEXT*, VkResult>* pvkCreateDebugUtilsMessengerEXT =
                    &vkCreateDebugUtilsMessengerEXT)
         {
-            *pvkCreateDebugUtilsMessengerEXT = (delegate*<VkInstance, VkDebugUtilsMessengerCreateInfoEXT*, VkAllocationCallbacks*, VkDebugUtilsMessengerEXT*, VkResult>)GetVkFunction(
+            *pvkCreateDebugUtilsMessengerEXT = (delegate*<VkInstance, VkDebugUtilsMessengerCreateInfoEXT*, VkAllocationCallbacks*, VkDebugUtilsMessengerEXT*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6544\u7562\u5567\u6974\u736c\u654d\u7373\u6e65\u6567\u4572\u5458\u0000");
         }
         fixed (delegate*<VkInstance, VkDebugUtilsMessengerEXT, VkAllocationCallbacks*, void>* pvkDestroyDebugUtilsMessengerEXT = &vkDestroyDebugUtilsMessengerEXT)
         {
-            *pvkDestroyDebugUtilsMessengerEXT = (delegate*<VkInstance, VkDebugUtilsMessengerEXT, VkAllocationCallbacks*, void>)GetVkFunction(
+            *pvkDestroyDebugUtilsMessengerEXT = (delegate*<VkInstance, VkDebugUtilsMessengerEXT, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6544\u7473\u6f72\u4479\u6265\u6775\u7455\u6c69\u4d73\u7365\u6573\u676e\u7265\u5845\u0054");
         }
         fixed (delegate*<VkInstance, VkDebugUtilsMessageSeverityFlagBitsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void>* pvkSubmitDebugUtilsMessageEXT =
                    &vkSubmitDebugUtilsMessageEXT)
         {
-            *pvkSubmitDebugUtilsMessageEXT = (delegate*<VkInstance, VkDebugUtilsMessageSeverityFlagBitsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void>)GetVkFunction(
-                instance, "\u6b76\u7553\u6d62\u7469\u6544\u7562\u5567\u6974\u736c\u654d\u7373\u6761\u4565\u5458\u0000");
+            *pvkSubmitDebugUtilsMessageEXT =
+                (delegate*<VkInstance, VkDebugUtilsMessageSeverityFlagBitsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void>)Core.Vk.GetVkFunction(
+                    instance, "\u6b76\u7553\u6d62\u7469\u6544\u7562\u5567\u6974\u736c\u654d\u7373\u6761\u4565\u5458\u0000");
         }
     }
 }

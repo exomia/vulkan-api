@@ -68,7 +68,7 @@ public static unsafe class VkExtHdrMetadata
     {
         fixed (delegate*<VkDevice, uint, VkSwapchainKHR*, VkHdrMetadataEXT*, void>* pvkSetHdrMetadataEXT = &vkSetHdrMetadataEXT)
         {
-            *pvkSetHdrMetadataEXT = (delegate*<VkDevice, uint, VkSwapchainKHR*, VkHdrMetadataEXT*, void>)GetVkFunction(device, "\u6b76\u6553\u4874\u7264\u654d\u6174\u6164\u6174\u5845\u0054");
+            *pvkSetHdrMetadataEXT = (delegate*<VkDevice, uint, VkSwapchainKHR*, VkHdrMetadataEXT*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6553\u4874\u7264\u654d\u6174\u6164\u6174\u5845\u0054");
         }
     }
 }

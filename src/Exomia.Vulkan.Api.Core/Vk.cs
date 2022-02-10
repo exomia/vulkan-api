@@ -80,7 +80,7 @@ public static partial class Vk
     {
         fixed (char* pVkFunctionName = vkFunctionNameUTF8NT)
         {
-            void* addr = vkGetInstanceProcAddr(vkInstance, (byte*)pVkFunctionName);
+            void* addr = (void*)vkGetInstanceProcAddr(vkInstance, (byte*)pVkFunctionName);
             if (addr != null) { return addr; }
             throw new EntryPointNotFoundException(new string((sbyte*)pVkFunctionName));
         }
@@ -96,7 +96,7 @@ public static partial class Vk
     {
         fixed (char* pVkFunctionName = vkFunctionNameUTF8NT)
         {
-            void* addr = vkGetDeviceProcAddr(vkDevice, (byte*)pVkFunctionName);
+            void* addr = (void*)vkGetDeviceProcAddr(vkDevice, (byte*)pVkFunctionName);
             if (addr != null) { return addr; }
             throw new EntryPointNotFoundException(new string((sbyte*)pVkFunctionName));
         }

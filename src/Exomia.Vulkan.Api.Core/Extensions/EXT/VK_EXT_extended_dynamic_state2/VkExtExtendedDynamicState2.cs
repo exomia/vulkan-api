@@ -116,25 +116,26 @@ public static unsafe class VkExtExtendedDynamicState2
     {
         fixed (delegate*<VkCommandBuffer, uint, void>* pvkCmdSetPatchControlPointsEXT = &vkCmdSetPatchControlPointsEXT)
         {
-            *pvkCmdSetPatchControlPointsEXT = (delegate*<VkCommandBuffer, uint, void>)GetVkFunction(
+            *pvkCmdSetPatchControlPointsEXT = (delegate*<VkCommandBuffer, uint, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6150\u6374\u4368\u6e6f\u7274\u6c6f\u6f50\u6e69\u7374\u5845\u0054");
         }
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetRasterizerDiscardEnableEXT = &vkCmdSetRasterizerDiscardEnableEXT)
         {
-            *pvkCmdSetRasterizerDiscardEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)GetVkFunction(
+            *pvkCmdSetRasterizerDiscardEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6152\u7473\u7265\u7a69\u7265\u6944\u6373\u7261\u4564\u616e\u6c62\u4565\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetDepthBiasEnableEXT = &vkCmdSetDepthBiasEnableEXT)
         {
-            *pvkCmdSetDepthBiasEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4268\u6169\u4573\u616e\u6c62\u4565\u5458\u0000");
+            *pvkCmdSetDepthBiasEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
+                device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4268\u6169\u4573\u616e\u6c62\u4565\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkLogicOp, void>* pvkCmdSetLogicOpEXT = &vkCmdSetLogicOpEXT)
         {
-            *pvkCmdSetLogicOpEXT = (delegate*<VkCommandBuffer, VkLogicOp, void>)GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u6f4c\u6967\u4f63\u4570\u5458\u0000");
+            *pvkCmdSetLogicOpEXT = (delegate*<VkCommandBuffer, VkLogicOp, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u6f4c\u6967\u4f63\u4570\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetPrimitiveRestartEnableEXT = &vkCmdSetPrimitiveRestartEnableEXT)
         {
-            *pvkCmdSetPrimitiveRestartEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)GetVkFunction(
+            *pvkCmdSetPrimitiveRestartEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u7250\u6d69\u7469\u7669\u5265\u7365\u6174\u7472\u6e45\u6261\u656c\u5845\u0054");
         }
     }

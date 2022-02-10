@@ -82,12 +82,12 @@ public static unsafe class VkExtConditionalRendering
     {
         fixed (delegate*<VkCommandBuffer, VkConditionalRenderingBeginInfoEXT*, void>* pvkCmdBeginConditionalRenderingEXT = &vkCmdBeginConditionalRenderingEXT)
         {
-            *pvkCmdBeginConditionalRenderingEXT = (delegate*<VkCommandBuffer, VkConditionalRenderingBeginInfoEXT*, void>)GetVkFunction(
+            *pvkCmdBeginConditionalRenderingEXT = (delegate*<VkCommandBuffer, VkConditionalRenderingBeginInfoEXT*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6765\u6e69\u6f43\u646e\u7469\u6f69\u616e\u526c\u6e65\u6564\u6972\u676e\u5845\u0054");
         }
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdEndConditionalRenderingEXT = &vkCmdEndConditionalRenderingEXT)
         {
-            *pvkCmdEndConditionalRenderingEXT = (delegate*<VkCommandBuffer, void>)GetVkFunction(
+            *pvkCmdEndConditionalRenderingEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4564\u646e\u6f43\u646e\u7469\u6f69\u616e\u526c\u6e65\u6564\u6972\u676e\u5845\u0054");
         }
     }
