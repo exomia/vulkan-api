@@ -24,14 +24,14 @@ public enum VkGeometryFlagBitsKHR
     ///     VK_GEOMETRY_OPAQUE_BIT_KHR indicates that this geometry does not invoke the any-hit shaders even if present in
     ///     a hit group.
     /// </summary>
-    VK_GEOMETRY_OPAQUE_BIT_KHR = 0,
+    VK_GEOMETRY_OPAQUE_BIT_KHR = 1 << 0,
 
     /// <summary>
     ///     VK_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR indicates that the implementation must only call the
     ///     any-hit shader a single time for each primitive in this geometry. If this bit is absent an implementation may
     ///     invoke the any-hit shader more than once for this geometry.
     /// </summary>
-    VK_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR = 1,
+    VK_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR = 1 << 1,
 
     /// <summary>
     ///     VK_GEOMETRY_OPAQUE_BIT_KHR indicates that this geometry does not invoke the any-hit shaders even if present in

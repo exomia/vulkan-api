@@ -24,10 +24,10 @@ public enum VkCullModeFlagBits
     VK_CULL_MODE_NONE = 0,
 
     /// <summary>VK_CULL_MODE_FRONT_BIT specifies that front-facing triangles are discarded</summary>
-    VK_CULL_MODE_FRONT_BIT = 0,
+    VK_CULL_MODE_FRONT_BIT = 1 << 0,
 
     /// <summary>VK_CULL_MODE_BACK_BIT specifies that back-facing triangles are discarded</summary>
-    VK_CULL_MODE_BACK_BIT = 1,
+    VK_CULL_MODE_BACK_BIT = 1 << 1,
 
     /// <summary>VK_CULL_MODE_FRONT_AND_BACK specifies that all triangles are discarded.</summary>
     VK_CULL_MODE_FRONT_AND_BACK = 0x00000003

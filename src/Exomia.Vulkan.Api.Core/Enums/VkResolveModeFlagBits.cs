@@ -27,19 +27,19 @@ public enum VkResolveModeFlagBits
     ///     VK_RESOLVE_MODE_SAMPLE_ZERO_BIT indicates that result of the resolve operation is equal to the value of sample
     ///     0.
     /// </summary>
-    VK_RESOLVE_MODE_SAMPLE_ZERO_BIT = 0,
+    VK_RESOLVE_MODE_SAMPLE_ZERO_BIT = 1 << 0,
 
     /// <summary>
     ///     VK_RESOLVE_MODE_AVERAGE_BIT indicates that result of the resolve operation is the average of the sample
     ///     values.
     /// </summary>
-    VK_RESOLVE_MODE_AVERAGE_BIT = 1,
+    VK_RESOLVE_MODE_AVERAGE_BIT = 1 << 1,
 
     /// <summary>VK_RESOLVE_MODE_MIN_BIT indicates that result of the resolve operation is the minimum of the sample values.</summary>
-    VK_RESOLVE_MODE_MIN_BIT = 2,
+    VK_RESOLVE_MODE_MIN_BIT = 1 << 2,
 
     /// <summary>VK_RESOLVE_MODE_MAX_BIT indicates that result of the resolve operation is the maximum of the sample values.</summary>
-    VK_RESOLVE_MODE_MAX_BIT = 3,
+    VK_RESOLVE_MODE_MAX_BIT = 1 << 3,
 
     /// <summary>VK_RESOLVE_MODE_NONE indicates that no resolve operation is done.</summary>
     VK_RESOLVE_MODE_NONE_KHR = VK_RESOLVE_MODE_NONE,

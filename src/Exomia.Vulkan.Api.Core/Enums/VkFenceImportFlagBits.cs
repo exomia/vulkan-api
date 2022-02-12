@@ -29,7 +29,7 @@ public enum VkFenceImportFlagBits
     ///     </a>
     ///     , regardless of the permanence of handleType.
     /// </summary>
-    VK_FENCE_IMPORT_TEMPORARY_BIT = 0,
+    VK_FENCE_IMPORT_TEMPORARY_BIT = 1 << 0,
 
     /// <summary>
     ///     VK_FENCE_IMPORT_TEMPORARY_BIT specifies that the fence payload will be imported only temporarily, as described in

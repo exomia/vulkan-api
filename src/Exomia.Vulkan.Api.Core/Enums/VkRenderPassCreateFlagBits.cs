@@ -24,7 +24,7 @@ public enum VkRenderPassCreateFlagBits
     ///     VK_RENDER_PASS_CREATE_RESERVED_0_BIT_KHR<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderPassCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderPassCreateFlagBits</a>
     /// </summary>
-    VK_RENDER_PASS_CREATE_RESERVED_0_BIT_KHR = 0,
+    VK_RENDER_PASS_CREATE_RESERVED_0_BIT_KHR = 1 << 0,
 
     /// <summary>
     ///     VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM specifies that the created render pass is compatible with
@@ -35,5 +35,5 @@ public enum VkRenderPassCreateFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM = 1
+    VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM = 1 << 1
 }

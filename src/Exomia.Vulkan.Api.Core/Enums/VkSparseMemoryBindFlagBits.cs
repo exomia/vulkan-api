@@ -21,5 +21,5 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkSparseMemoryBindFlagBits
 {
     /// <summary>VK_SPARSE_MEMORY_BIND_METADATA_BIT specifies that the memory being bound is only for the metadata aspect.</summary>
-    VK_SPARSE_MEMORY_BIND_METADATA_BIT = 0
+    VK_SPARSE_MEMORY_BIND_METADATA_BIT = 1 << 0
 }

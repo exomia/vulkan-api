@@ -25,7 +25,7 @@ public enum VkCommandPoolCreateFlagBits
     ///     short-lived, meaning that they will be reset or freed in a relatively short timeframe. This flag may be used by the
     ///     implementation to control memory allocation behavior within the pool.
     /// </summary>
-    VK_COMMAND_POOL_CREATE_TRANSIENT_BIT = 0,
+    VK_COMMAND_POOL_CREATE_TRANSIENT_BIT = 1 << 0,
 
     /// <summary>
     ///     VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT allows any command buffer allocated from a pool to be individually
@@ -41,11 +41,11 @@ public enum VkCommandPoolCreateFlagBits
     ///     . If this flag is not set on a pool, then vkResetCommandBuffer mustnot be called for any command buffer allocated
     ///     from that pool.
     /// </summary>
-    VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT = 1,
+    VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT = 1 << 1,
 
     /// <summary>
     ///     VK_COMMAND_POOL_CREATE_PROTECTED_BIT specifies that command buffers allocated from the pool are protected
     ///     command buffers.
     /// </summary>
-    VK_COMMAND_POOL_CREATE_PROTECTED_BIT = 2
+    VK_COMMAND_POOL_CREATE_PROTECTED_BIT = 1 << 2
 }

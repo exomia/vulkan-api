@@ -21,35 +21,35 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkImageUsageFlagBits
 {
     /// <summary>VK_IMAGE_USAGE_TRANSFER_SRC_BIT specifies that the image can be used as the source of a transfer command.</summary>
-    VK_IMAGE_USAGE_TRANSFER_SRC_BIT = 0,
+    VK_IMAGE_USAGE_TRANSFER_SRC_BIT = 1 << 0,
 
     /// <summary>VK_IMAGE_USAGE_TRANSFER_DST_BIT specifies that the image can be used as the destination of a transfer command.</summary>
-    VK_IMAGE_USAGE_TRANSFER_DST_BIT = 1,
+    VK_IMAGE_USAGE_TRANSFER_DST_BIT = 1 << 1,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_SAMPLED_BIT specifies that the image can be used to create a VkImageView suitable for occupying
     ///     a VkDescriptorSet slot either of type VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE or
     ///     VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, and be sampled by a shader.
     /// </summary>
-    VK_IMAGE_USAGE_SAMPLED_BIT = 2,
+    VK_IMAGE_USAGE_SAMPLED_BIT = 1 << 2,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_STORAGE_BIT specifies that the image can be used to create a VkImageView suitable for occupying
     ///     a VkDescriptorSet slot of type VK_DESCRIPTOR_TYPE_STORAGE_IMAGE.
     /// </summary>
-    VK_IMAGE_USAGE_STORAGE_BIT = 3,
+    VK_IMAGE_USAGE_STORAGE_BIT = 1 << 3,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT specifies that the image canbe used to create a VkImageView suitable for
     ///     use as a color or resolve attachment in a VkFramebuffer.
     /// </summary>
-    VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT = 4,
+    VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT = 1 << 4,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT specifies that the image can be used to create a VkImageView
     ///     suitable for use as a depth/stencil or depth/stencil resolve attachment in a VkFramebuffer.
     /// </summary>
-    VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT = 5,
+    VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT = 1 << 5,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_TRANSIENT_ATTACHMENT_BIT specifies that implementations may support using
@@ -58,14 +58,14 @@ public enum VkImageUsageFlagBits
     ///     image that can be used to create a VkImageView suitable for use as a color, resolve, depth/stencil, or input
     ///     attachment.
     /// </summary>
-    VK_IMAGE_USAGE_TRANSIENT_ATTACHMENT_BIT = 6,
+    VK_IMAGE_USAGE_TRANSIENT_ATTACHMENT_BIT = 1 << 6,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT specifies that the image canbe used to create a VkImageView suitable for
     ///     occupying VkDescriptorSet slot of type VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT; be read from a shader as an input
     ///     attachment; and be used as an input attachment in a framebuffer.
     /// </summary>
-    VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT = 7,
+    VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT = 1 << 7,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR specifies that
@@ -75,10 +75,10 @@ public enum VkImageUsageFlagBits
     ///     </a>
     ///     can use the image as an output picture for video decode operations.
     /// </summary>
-    VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR = 10,
+    VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR = 1 << 10,
 
     /// <summary>VK_IMAGE_USAGE_VIDEO_DECODE_SRC_BIT_KHR is reserved for future use.</summary>
-    VK_IMAGE_USAGE_VIDEO_DECODE_SRC_BIT_KHR = 11,
+    VK_IMAGE_USAGE_VIDEO_DECODE_SRC_BIT_KHR = 1 << 11,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR specifies that
@@ -117,19 +117,19 @@ public enum VkImageUsageFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeInfoKHR.html">VkVideoDecodeInfoKHR</a>
     ///     ::dstPictureResource.imageViewBinding.
     /// </summary>
-    VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR = 12,
+    VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR = 1 << 12,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_RESERVED_16_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
     /// </summary>
-    VK_IMAGE_USAGE_RESERVED_16_BIT_QCOM = 16,
+    VK_IMAGE_USAGE_RESERVED_16_BIT_QCOM = 1 << 16,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_RESERVED_17_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
     /// </summary>
-    VK_IMAGE_USAGE_RESERVED_17_BIT_QCOM = 17,
+    VK_IMAGE_USAGE_RESERVED_17_BIT_QCOM = 1 << 17,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_FRAGMENT_DENSITY_MAP_BIT_EXT specifies that the image can be used to create a VkImageView suitable
@@ -140,7 +140,7 @@ public enum VkImageUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_IMAGE_USAGE_FRAGMENT_DENSITY_MAP_BIT_EXT = 9,
+    VK_IMAGE_USAGE_FRAGMENT_DENSITY_MAP_BIT_EXT = 1 << 9,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR specifies     that the image can be used to create a
@@ -157,10 +157,10 @@ public enum VkImageUsageFlagBits
     ///         rate image
     ///     </a>
     /// </summary>
-    VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 8,
+    VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 1 << 8,
 
     /// <summary>VK_IMAGE_USAGE_VIDEO_ENCODE_DST_BIT_KHR is reserved for future use.</summary>
-    VK_IMAGE_USAGE_VIDEO_ENCODE_DST_BIT_KHR = 13,
+    VK_IMAGE_USAGE_VIDEO_ENCODE_DST_BIT_KHR = 1 << 13,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_ENCODE_SRC_BIT_KHR specifies that the image can be used as an
@@ -175,7 +175,7 @@ public enum VkImageUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_IMAGE_USAGE_VIDEO_ENCODE_SRC_BIT_KHR = 14,
+    VK_IMAGE_USAGE_VIDEO_ENCODE_SRC_BIT_KHR = 1 << 14,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_ENCODE_DPB_BIT_KHR specifies that
@@ -195,31 +195,31 @@ public enum VkImageUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_IMAGE_USAGE_VIDEO_ENCODE_DPB_BIT_KHR = 15,
+    VK_IMAGE_USAGE_VIDEO_ENCODE_DPB_BIT_KHR = 1 << 15,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_RESERVED_19_BIT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
     /// </summary>
-    VK_IMAGE_USAGE_RESERVED_19_BIT_EXT = 19,
+    VK_IMAGE_USAGE_RESERVED_19_BIT_EXT = 1 << 19,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_INVOCATION_MASK_BIT_HUAWEI<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
     /// </summary>
-    VK_IMAGE_USAGE_INVOCATION_MASK_BIT_HUAWEI = 18,
+    VK_IMAGE_USAGE_INVOCATION_MASK_BIT_HUAWEI = 1 << 18,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_RESERVED_20_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
     /// </summary>
-    VK_IMAGE_USAGE_RESERVED_20_BIT_QCOM = 20,
+    VK_IMAGE_USAGE_RESERVED_20_BIT_QCOM = 1 << 20,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_RESERVED_21_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
     /// </summary>
-    VK_IMAGE_USAGE_RESERVED_21_BIT_QCOM = 21,
+    VK_IMAGE_USAGE_RESERVED_21_BIT_QCOM = 1 << 21,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR specifies     that the image can be used to create a

@@ -26,7 +26,7 @@ public enum VkPipelineStageFlagBits
     ///     set to 0 when specified in the second synchronization scope, but specifies no stage of execution when specified in
     ///     the first scope.
     /// </summary>
-    VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT = 0,
+    VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT = 1 << 0,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_DRAW_INDIRECT_BIT specifies the stage of the pipeline where VkDrawIndirect* /
@@ -38,28 +38,28 @@ public enum VkPipelineStageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_DRAW_INDIRECT_BIT = 1,
+    VK_PIPELINE_STAGE_DRAW_INDIRECT_BIT = 1 << 1,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_VERTEX_INPUT_BIT specifies the stage of the pipeline where vertex and index buffers are
     ///     consumed.
     /// </summary>
-    VK_PIPELINE_STAGE_VERTEX_INPUT_BIT = 2,
+    VK_PIPELINE_STAGE_VERTEX_INPUT_BIT = 1 << 2,
 
     /// <summary>VK_PIPELINE_STAGE_VERTEX_SHADER_BIT specifies the vertex shader stage.</summary>
-    VK_PIPELINE_STAGE_VERTEX_SHADER_BIT = 3,
+    VK_PIPELINE_STAGE_VERTEX_SHADER_BIT = 1 << 3,
 
     /// <summary>VK_PIPELINE_STAGE_TESSELLATION_CONTROL_SHADER_BIT specifies the tessellation control shader stage.</summary>
-    VK_PIPELINE_STAGE_TESSELLATION_CONTROL_SHADER_BIT = 4,
+    VK_PIPELINE_STAGE_TESSELLATION_CONTROL_SHADER_BIT = 1 << 4,
 
     /// <summary>VK_PIPELINE_STAGE_TESSELLATION_EVALUATION_SHADER_BIT specifies the tessellation evaluation shader stage.</summary>
-    VK_PIPELINE_STAGE_TESSELLATION_EVALUATION_SHADER_BIT = 5,
+    VK_PIPELINE_STAGE_TESSELLATION_EVALUATION_SHADER_BIT = 1 << 5,
 
     /// <summary>VK_PIPELINE_STAGE_GEOMETRY_SHADER_BIT specifies the geometry shader stage.</summary>
-    VK_PIPELINE_STAGE_GEOMETRY_SHADER_BIT = 6,
+    VK_PIPELINE_STAGE_GEOMETRY_SHADER_BIT = 1 << 6,
 
     /// <summary>VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT specifies the fragment shader stage.</summary>
-    VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT = 7,
+    VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT = 1 << 7,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where early fragment tests (depth
@@ -70,7 +70,7 @@ public enum VkPipelineStageFlagBits
     ///     </a>
     ///     for framebuffer attachments with a depth/stencil format.
     /// </summary>
-    VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT = 8,
+    VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT = 1 << 8,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_LATE_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where late fragment tests (depth and
@@ -81,7 +81,7 @@ public enum VkPipelineStageFlagBits
     ///     </a>
     ///     for framebuffer attachments with a depth/stencil format.
     /// </summary>
-    VK_PIPELINE_STAGE_LATE_FRAGMENT_TESTS_BIT = 9,
+    VK_PIPELINE_STAGE_LATE_FRAGMENT_TESTS_BIT = 1 << 9,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT specifies the stage of the pipeline after blending where the final
@@ -93,16 +93,16 @@ public enum VkPipelineStageFlagBits
     ///     and multisample resolve operations for framebuffer attachments with a color or
     ///     depth/stencil format.
     /// </summary>
-    VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT = 10,
+    VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT = 1 << 10,
 
     /// <summary>VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT specifies the execution of a compute shader.</summary>
-    VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT = 11,
+    VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT = 1 << 11,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_TRANSFER_BIT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits</a>
     /// </summary>
-    VK_PIPELINE_STAGE_TRANSFER_BIT = 12,
+    VK_PIPELINE_STAGE_TRANSFER_BIT = 1 << 12,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT is equivalent to VK_PIPELINE_STAGE_ALL_COMMANDS_BIT with
@@ -110,25 +110,25 @@ public enum VkPipelineStageFlagBits
     ///     set to 0 when specified in the first synchronization scope, but specifies no stage of execution when specified in
     ///     the second scope.
     /// </summary>
-    VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT = 13,
+    VK_PIPELINE_STAGE_BOTTOM_OF_PIPE_BIT = 1 << 13,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_HOST_BIT specifies a pseudo-stage indicating execution on the host of reads/writes of device
     ///     memory. This stage is not invoked by any commands recorded in a command buffer.
     /// </summary>
-    VK_PIPELINE_STAGE_HOST_BIT = 14,
+    VK_PIPELINE_STAGE_HOST_BIT = 1 << 14,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is equivalent
     ///     to the logical OR of:
     /// </summary>
-    VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT = 15,
+    VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT = 1 << 15,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_ALL_COMMANDS_BIT specifies all operations performed by all commands supported on the queue
     ///     it is used with.
     /// </summary>
-    VK_PIPELINE_STAGE_ALL_COMMANDS_BIT = 16,
+    VK_PIPELINE_STAGE_ALL_COMMANDS_BIT = 1 << 16,
 
     /// <summary>VK_PIPELINE_STAGE_NONE specifies no stages of execution.</summary>
     VK_PIPELINE_STAGE_NONE = 0,
@@ -137,13 +137,13 @@ public enum VkPipelineStageFlagBits
     ///     VK_PIPELINE_STAGE_TRANSFORM_FEEDBACK_BIT_EXT specifies the stage of the pipeline where vertex attribute output
     ///     values are written to the transform feedback buffers.
     /// </summary>
-    VK_PIPELINE_STAGE_TRANSFORM_FEEDBACK_BIT_EXT = 24,
+    VK_PIPELINE_STAGE_TRANSFORM_FEEDBACK_BIT_EXT = 1 << 24,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_CONDITIONAL_RENDERING_BIT_EXT specifies the stage of the pipeline where the predicate of
     ///     conditional rendering is consumed.
     /// </summary>
-    VK_PIPELINE_STAGE_CONDITIONAL_RENDERING_BIT_EXT = 18,
+    VK_PIPELINE_STAGE_CONDITIONAL_RENDERING_BIT_EXT = 1 << 18,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_ACCELERATION_STRUCTURE_BUILD_BIT_KHR specifies     the execution of
@@ -193,7 +193,7 @@ public enum VkPipelineStageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_ACCELERATION_STRUCTURE_BUILD_BIT_KHR = 25,
+    VK_PIPELINE_STAGE_ACCELERATION_STRUCTURE_BUILD_BIT_KHR = 1 << 25,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_RAY_TRACING_SHADER_BIT_KHR specifies the     execution of the ray tracing shader stages, via
@@ -203,13 +203,13 @@ public enum VkPipelineStageFlagBits
     ///     , or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdTraceRaysIndirectKHR.html">vkCmdTraceRaysIndirectKHR</a>
     /// </summary>
-    VK_PIPELINE_STAGE_RAY_TRACING_SHADER_BIT_KHR = 21,
+    VK_PIPELINE_STAGE_RAY_TRACING_SHADER_BIT_KHR = 1 << 21,
 
     /// <summary>VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV specifies the task shader stage.</summary>
-    VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV = 19,
+    VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV = 1 << 19,
 
     /// <summary>VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV specifies the mesh shader stage.</summary>
-    VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV = 20,
+    VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV = 1 << 20,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_FRAGMENT_DENSITY_PROCESS_BIT_EXT specifies the stage of the pipeline where the fragment density
@@ -220,7 +220,7 @@ public enum VkPipelineStageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_FRAGMENT_DENSITY_PROCESS_BIT_EXT = 23,
+    VK_PIPELINE_STAGE_FRAGMENT_DENSITY_PROCESS_BIT_EXT = 1 << 23,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR    specifies the stage of the pipeline where the
@@ -237,7 +237,7 @@ public enum VkPipelineStageFlagBits
     ///     </a>
     ///     is read to determine the fragment shading rate for portions of a     rasterized primitive.
     /// </summary>
-    VK_PIPELINE_STAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 22,
+    VK_PIPELINE_STAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 1 << 22,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_COMMAND_PREPROCESS_BIT_NV specifies the stage of the pipeline where device-side
@@ -248,7 +248,7 @@ public enum VkPipelineStageFlagBits
     ///     </a>
     ///     is handled.
     /// </summary>
-    VK_PIPELINE_STAGE_COMMAND_PREPROCESS_BIT_NV = 17,
+    VK_PIPELINE_STAGE_COMMAND_PREPROCESS_BIT_NV = 1 << 17,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR    specifies the stage of the pipeline where the

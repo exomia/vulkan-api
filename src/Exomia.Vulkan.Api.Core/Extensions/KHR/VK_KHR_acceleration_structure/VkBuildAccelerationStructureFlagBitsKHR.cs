@@ -38,33 +38,33 @@ public enum VkBuildAccelerationStructureFlagBitsKHR
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR = 0,
+    VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR = 1 << 0,
 
     /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_KHR indicates that the specified acceleration structure
     ///     can act as the source for a copy acceleration structure command with mode of
     ///     VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR to produce a compacted acceleration structure.
     /// </summary>
-    VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_KHR = 1,
+    VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_KHR = 1 << 1,
 
     /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_KHRindicates that the given acceleration structure build
     ///     should prioritize trace performance over build time.
     /// </summary>
-    VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_KHR = 2,
+    VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_KHR = 1 << 2,
 
     /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_KHRindicates that the given acceleration structure build
     ///     should prioritize build time over trace performance.
     /// </summary>
-    VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_KHR = 3,
+    VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_KHR = 1 << 3,
 
     /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_KHR indicates that this acceleration structure should minimize
     ///     the size of the scratch memory and the final result acceleration structure, potentially at the expense of build
     ///     time or trace performance.
     /// </summary>
-    VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_KHR = 4,
+    VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_KHR = 1 << 4,
 
     /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_MOTION_BIT_NV<br />
@@ -73,7 +73,7 @@ public enum VkBuildAccelerationStructureFlagBitsKHR
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBuildAccelerationStructureFlagBitsKHR
     ///     </a>
     /// </summary>
-    VK_BUILD_ACCELERATION_STRUCTURE_MOTION_BIT_NV = 5,
+    VK_BUILD_ACCELERATION_STRUCTURE_MOTION_BIT_NV = 1 << 5,
 
     /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR indicates     that the specified acceleration structure can be

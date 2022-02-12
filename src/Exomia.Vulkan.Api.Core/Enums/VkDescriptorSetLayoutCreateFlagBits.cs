@@ -31,7 +31,7 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     ///     this flag. The UpdateAfterBind limits count all descriptors, but the limits may be higher than the
     ///     non-UpdateAfterBind limits.
     /// </summary>
-    VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT = 1,
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT = 1 << 1,
 
     /// <summary>
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR specifies that descriptor sets must not be allocated
@@ -39,7 +39,7 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPushDescriptorSetKHR.html">vkCmdPushDescriptorSetKHR</a>
     ///     .
     /// </summary>
-    VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR = 0,
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR = 1 << 0,
 
     /// <summary>
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_4_BIT_AMD<br />
@@ -48,7 +48,7 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetLayoutCreateFlagBits
     ///     </a>
     /// </summary>
-    VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_4_BIT_AMD = 4,
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_4_BIT_AMD = 1 << 4,
 
     /// <summary>
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_3_BIT_AMD<br />
@@ -57,7 +57,7 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetLayoutCreateFlagBits
     ///     </a>
     /// </summary>
-    VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_3_BIT_AMD = 3,
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_3_BIT_AMD = 1 << 3,
 
     /// <summary>
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_VALVE specifies that descriptor sets using this layout must
@@ -67,7 +67,7 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     ///     reasons. Implementations may limit the number of supported descriptors to UpdateAfterBind limits or
     ///     non-UpdateAfterBind limits, whichever is larger.
     /// </summary>
-    VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_VALVE = 2,
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_VALVE = 1 << 2,
 
     /// <summary>
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BITspecifies that descriptor sets using this layout

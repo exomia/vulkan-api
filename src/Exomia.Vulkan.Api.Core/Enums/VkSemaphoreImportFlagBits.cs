@@ -30,7 +30,7 @@ public enum VkSemaphoreImportFlagBits
     ///     </a>
     ///     , regardless of the permanence of handleType.
     /// </summary>
-    VK_SEMAPHORE_IMPORT_TEMPORARY_BIT = 0,
+    VK_SEMAPHORE_IMPORT_TEMPORARY_BIT = 1 << 0,
 
     /// <summary>
     ///     VK_SEMAPHORE_IMPORT_TEMPORARY_BIT specifies that the semaphore payload will be imported only temporarily, as

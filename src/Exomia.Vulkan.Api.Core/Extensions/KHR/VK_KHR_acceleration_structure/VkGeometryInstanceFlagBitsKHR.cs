@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkGeometryInstanceFlagBitsKHR
 {
     /// <summary>VK_GEOMETRY_INSTANCE_TRIANGLE_FACING_CULL_DISABLE_BIT_KHR disables face culling for this instance.</summary>
-    VK_GEOMETRY_INSTANCE_TRIANGLE_FACING_CULL_DISABLE_BIT_KHR = 0,
+    VK_GEOMETRY_INSTANCE_TRIANGLE_FACING_CULL_DISABLE_BIT_KHR = 1 << 0,
 
     /// <summary>
     ///     VK_GEOMETRY_INSTANCE_TRIANGLE_FLIP_FACING_BIT_KHR indicates that the
@@ -32,21 +32,21 @@ public enum VkGeometryInstanceFlagBitsKHR
     ///     for geometry in this instance is inverted. Because the facing is determined in object space,
     ///     an instance transform does not change the winding, but a geometry transform does.
     /// </summary>
-    VK_GEOMETRY_INSTANCE_TRIANGLE_FLIP_FACING_BIT_KHR = 1,
+    VK_GEOMETRY_INSTANCE_TRIANGLE_FLIP_FACING_BIT_KHR = 1 << 1,
 
     /// <summary>
     ///     VK_GEOMETRY_INSTANCE_FORCE_OPAQUE_BIT_KHR causes this instance to act as though VK_GEOMETRY_OPAQUE_BIT_KHR
     ///     were specified on all geometries referenced by this instance. This behavior can be overridden by the SPIR-V
     ///     NoOpaqueKHR ray flag.
     /// </summary>
-    VK_GEOMETRY_INSTANCE_FORCE_OPAQUE_BIT_KHR = 2,
+    VK_GEOMETRY_INSTANCE_FORCE_OPAQUE_BIT_KHR = 1 << 2,
 
     /// <summary>
     ///     VK_GEOMETRY_INSTANCE_FORCE_NO_OPAQUE_BIT_KHR causes this instance to act as though VK_GEOMETRY_OPAQUE_BIT_KHR
     ///     were not specified on all geometries referenced by this instance. This behavior can be overridden by the SPIR-V
     ///     OpaqueKHR ray flag.
     /// </summary>
-    VK_GEOMETRY_INSTANCE_FORCE_NO_OPAQUE_BIT_KHR = 3,
+    VK_GEOMETRY_INSTANCE_FORCE_NO_OPAQUE_BIT_KHR = 1 << 3,
 
     /// <summary>
     ///     VK_GEOMETRY_INSTANCE_TRIANGLE_FLIP_FACING_BIT_KHR indicates that the

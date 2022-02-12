@@ -24,11 +24,11 @@ public enum VkCommandPoolResetFlagBits
     ///     VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT specifies that resetting a command pool recycles all of the
     ///     resources from the command pool back to the system.
     /// </summary>
-    VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT = 0,
+    VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT = 1 << 0,
 
     /// <summary>
     ///     VK_COMMAND_POOL_RESET_RESERVED_1_BIT_COREAVI<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCommandPoolResetFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCommandPoolResetFlagBits</a>
     /// </summary>
-    VK_COMMAND_POOL_RESET_RESERVED_1_BIT_COREAVI = 1
+    VK_COMMAND_POOL_RESET_RESERVED_1_BIT_COREAVI = 1 << 1
 }

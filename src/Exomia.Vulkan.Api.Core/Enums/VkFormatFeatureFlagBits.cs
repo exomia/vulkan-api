@@ -28,7 +28,7 @@ public enum VkFormatFeatureFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT = 0,
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT = 1 << 0,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_STORAGE_IMAGE_BIT specifies that an image view can be used as a
@@ -38,67 +38,67 @@ public enum VkFormatFeatureFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_FORMAT_FEATURE_STORAGE_IMAGE_BIT = 1,
+    VK_FORMAT_FEATURE_STORAGE_IMAGE_BIT = 1 << 1,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_STORAGE_IMAGE_ATOMIC_BIT specifies that an image view can be used as storage image that
     ///     supports atomic operations.
     /// </summary>
-    VK_FORMAT_FEATURE_STORAGE_IMAGE_ATOMIC_BIT = 2,
+    VK_FORMAT_FEATURE_STORAGE_IMAGE_ATOMIC_BIT = 1 << 2,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT specifies that the format can be used to create a buffer view that
     ///     can be bound to a VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER descriptor.
     /// </summary>
-    VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT = 3,
+    VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT = 1 << 3,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_BIT specifies that the format can be used to create a buffer view that
     ///     can be bound to a VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER descriptor.
     /// </summary>
-    VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_BIT = 4,
+    VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_BIT = 1 << 4,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_ATOMIC_BIT specifies that atomic operations are supported on
     ///     VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER with this format.
     /// </summary>
-    VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_ATOMIC_BIT = 5,
+    VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_ATOMIC_BIT = 1 << 5,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_VERTEX_BUFFER_BIT specifies that the format canbe used as a vertex attribute format
     ///     (VkVertexInputAttributeDescription::format).
     /// </summary>
-    VK_FORMAT_FEATURE_VERTEX_BUFFER_BIT = 6,
+    VK_FORMAT_FEATURE_VERTEX_BUFFER_BIT = 1 << 6,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT specifies that an image view can be used as a framebuffer color
     ///     attachment and as an input attachment.
     /// </summary>
-    VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT = 7,
+    VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT = 1 << 7,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT specifies that an image view can be used as a framebuffer color
     ///     attachment that supports blending and as an input attachment.
     /// </summary>
-    VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT = 8,
+    VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT = 1 << 8,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_DEPTH_STENCIL_ATTACHMENT_BIT specifies that an image view can be used as a framebuffer
     ///     depth/stencil attachment and as an input attachment.
     /// </summary>
-    VK_FORMAT_FEATURE_DEPTH_STENCIL_ATTACHMENT_BIT = 9,
+    VK_FORMAT_FEATURE_DEPTH_STENCIL_ATTACHMENT_BIT = 1 << 9,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_BLIT_SRC_BIT specifies that an image can be used as srcImage for the vkCmdBlitImage2 and
     ///     vkCmdBlitImage commands.
     /// </summary>
-    VK_FORMAT_FEATURE_BLIT_SRC_BIT = 10,
+    VK_FORMAT_FEATURE_BLIT_SRC_BIT = 1 << 10,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_BLIT_DST_BIT specifies that an image can be used as dstImage for the vkCmdBlitImage2 and
     ///     vkCmdBlitImage commands.
     /// </summary>
-    VK_FORMAT_FEATURE_BLIT_DST_BIT = 11,
+    VK_FORMAT_FEATURE_BLIT_DST_BIT = 1 << 11,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT specifies that if VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT is
@@ -108,13 +108,13 @@ public enum VkFormatFeatureFlagBits
     ///     This bit must only be exposed for formats that also support the VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT or
     ///     VK_FORMAT_FEATURE_BLIT_SRC_BIT.
     /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT = 12,
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT = 1 << 12,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_TRANSFER_SRC_BIT specifies that an image can be used as a source image for
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>.
     /// </summary>
-    VK_FORMAT_FEATURE_TRANSFER_SRC_BIT = 14,
+    VK_FORMAT_FEATURE_TRANSFER_SRC_BIT = 1 << 14,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_TRANSFER_DST_BIT specifies that an image can be used as a destination image for
@@ -122,7 +122,7 @@ public enum VkFormatFeatureFlagBits
     ///     and
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>.
     /// </summary>
-    VK_FORMAT_FEATURE_TRANSFER_DST_BIT = 15,
+    VK_FORMAT_FEATURE_TRANSFER_DST_BIT = 1 << 15,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_MIDPOINT_CHROMA_SAMPLES_BIT specifies that an application can define a
@@ -141,7 +141,7 @@ public enum VkFormatFeatureFlagBits
     ///     422&#8221; or &#8220;420&#8221; format) but the implementation supports sampler Y′CBCR conversion for this format,
     ///     the implementation must set VK_FORMAT_FEATURE_MIDPOINT_CHROMA_SAMPLES_BIT.
     /// </summary>
-    VK_FORMAT_FEATURE_MIDPOINT_CHROMA_SAMPLES_BIT = 17,
+    VK_FORMAT_FEATURE_MIDPOINT_CHROMA_SAMPLES_BIT = 1 << 17,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BITspecifies that an application can define a
@@ -152,13 +152,13 @@ public enum VkFormatFeatureFlagBits
     ///     using this format as a source with chromaFilter set to
     ///     VK_FILTER_LINEAR.
     /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BIT = 18,
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BIT = 1 << 18,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_BITspecifies that the format
     ///     can have different chroma, min, and mag filters.
     /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_BIT = 19,
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_BIT = 1 << 19,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BITspecifies that reconstruction is
@@ -169,7 +169,7 @@ public enum VkFormatFeatureFlagBits
     ///     </a>
     ///     . If this bit is not present, reconstruction is implicit by default.
     /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BIT = 20,
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BIT = 1 << 20,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BITspecifies that
@@ -182,13 +182,13 @@ public enum VkFormatFeatureFlagBits
     ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BITit must also support
     ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BIT.
     /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BIT = 21,
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BIT = 1 << 21,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_DISJOINT_BIT specifies that a multi-planar image can have the VK_IMAGE_CREATE_DISJOINT_BIT
     ///     set during image creation. An implementation must not set VK_FORMAT_FEATURE_DISJOINT_BIT for single-plane formats.
     /// </summary>
-    VK_FORMAT_FEATURE_DISJOINT_BIT = 22,
+    VK_FORMAT_FEATURE_DISJOINT_BIT = 1 << 22,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT specifies that an application can define a
@@ -211,7 +211,7 @@ public enum VkFormatFeatureFlagBits
     ///     </a>
     ///     using this format as a source.
     /// </summary>
-    VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT = 23,
+    VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT = 1 << 23,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT specifies VkImage can be used as a sampled image with a min
@@ -219,13 +219,13 @@ public enum VkFormatFeatureFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerReductionMode.html">VkSamplerReductionMode</a>
     ///     . This bit must only be exposed for formats that also support the VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT.
     /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT = 16,
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT = 1 << 16,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_IMG<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits</a>
     /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_IMG = 13,
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_IMG = 1 << 13,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_VIDEO_DECODE_OUTPUT_BIT_KHR specifies that an image view with this format can be used as an
@@ -235,7 +235,7 @@ public enum VkFormatFeatureFlagBits
     ///         decode operations
     ///     </a>
     /// </summary>
-    VK_FORMAT_FEATURE_VIDEO_DECODE_OUTPUT_BIT_KHR = 25,
+    VK_FORMAT_FEATURE_VIDEO_DECODE_OUTPUT_BIT_KHR = 1 << 25,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_VIDEO_DECODE_DPB_BIT_KHR specifies that an image view with this format can be used as a DPB for
@@ -244,7 +244,7 @@ public enum VkFormatFeatureFlagBits
     ///         decode operations
     ///     </a>
     /// </summary>
-    VK_FORMAT_FEATURE_VIDEO_DECODE_DPB_BIT_KHR = 26,
+    VK_FORMAT_FEATURE_VIDEO_DECODE_DPB_BIT_KHR = 1 << 26,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHRspecifies that the format can be used as the vertex
@@ -261,7 +261,7 @@ public enum VkFormatFeatureFlagBits
     ///     </a>
     ///     builds.
     /// </summary>
-    VK_FORMAT_FEATURE_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHR = 29,
+    VK_FORMAT_FEATURE_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHR = 1 << 29,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_FRAGMENT_DENSITY_MAP_BIT_EXT specifies that an image view can be used as a
@@ -272,7 +272,7 @@ public enum VkFormatFeatureFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_FORMAT_FEATURE_FRAGMENT_DENSITY_MAP_BIT_EXT = 24,
+    VK_FORMAT_FEATURE_FRAGMENT_DENSITY_MAP_BIT_EXT = 1 << 24,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that an image view can be used as a
@@ -284,7 +284,7 @@ public enum VkFormatFeatureFlagBits
     ///     . An implementation must not set this feature for formats with numeric type other
     ///     than *UINT, or set it as a buffer feature.
     /// </summary>
-    VK_FORMAT_FEATURE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 30,
+    VK_FORMAT_FEATURE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 1 << 30,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_VIDEO_ENCODE_INPUT_BIT_KHR specifies that an image view with this format can be used as an input
@@ -294,7 +294,7 @@ public enum VkFormatFeatureFlagBits
     ///         encode operations
     ///     </a>
     /// </summary>
-    VK_FORMAT_FEATURE_VIDEO_ENCODE_INPUT_BIT_KHR = 27,
+    VK_FORMAT_FEATURE_VIDEO_ENCODE_INPUT_BIT_KHR = 1 << 27,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_VIDEO_ENCODE_DPB_BIT_KHR specifies that an image view with this format can be used as a DPB for
@@ -303,7 +303,7 @@ public enum VkFormatFeatureFlagBits
     ///         encode operations
     ///     </a>
     /// </summary>
-    VK_FORMAT_FEATURE_VIDEO_ENCODE_DPB_BIT_KHR = 28,
+    VK_FORMAT_FEATURE_VIDEO_ENCODE_DPB_BIT_KHR = 1 << 28,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_TRANSFER_SRC_BIT specifies that an image can be used as a source image for

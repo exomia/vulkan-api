@@ -28,24 +28,24 @@ public enum VkExternalMemoryHandleTypeFlagBitsNV
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html">vkGetMemoryWin32HandleNV</a>
     ///     , or one duplicated from such a handle using DuplicateHandle().
     /// </summary>
-    VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_BIT_NV = 0,
+    VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_BIT_NV = 1 << 0,
 
     /// <summary>
     ///     VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_NV specifies a handle to memory returned by
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html">vkGetMemoryWin32HandleNV</a>
     ///     .
     /// </summary>
-    VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_NV = 1,
+    VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_NV = 1 << 1,
 
     /// <summary>
     ///     VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D11_IMAGE_BIT_NV specifies a valid NT handle to memory returned by
     ///     IDXGIResource1::CreateSharedHandle, or a handle duplicated from such a handle using DuplicateHandle().
     /// </summary>
-    VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D11_IMAGE_BIT_NV = 2,
+    VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D11_IMAGE_BIT_NV = 1 << 2,
 
     /// <summary>
     ///     VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D11_IMAGE_KMT_BIT_NV specifies a handle to memory returned by
     ///     IDXGIResource::GetSharedHandle().
     /// </summary>
-    VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D11_IMAGE_KMT_BIT_NV = 3
+    VK_EXTERNAL_MEMORY_HANDLE_TYPE_D3D11_IMAGE_KMT_BIT_NV = 1 << 3
 }

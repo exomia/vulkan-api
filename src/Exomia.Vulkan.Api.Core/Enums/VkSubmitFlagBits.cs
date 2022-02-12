@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkSubmitFlagBits
 {
     /// <summary>VK_SUBMIT_PROTECTED_BIT specifies that this batch is a protected submission.</summary>
-    VK_SUBMIT_PROTECTED_BIT = 0,
+    VK_SUBMIT_PROTECTED_BIT = 1 << 0,
 
     /// <summary>VK_SUBMIT_PROTECTED_BIT specifies that this batch is a protected submission.</summary>
     VK_SUBMIT_PROTECTED_BIT_KHR = VK_SUBMIT_PROTECTED_BIT

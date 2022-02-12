@@ -28,5 +28,5 @@ public enum VkQueryControlFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_QUERY_CONTROL_PRECISE_BIT = 0
+    VK_QUERY_CONTROL_PRECISE_BIT = 1 << 0
 }

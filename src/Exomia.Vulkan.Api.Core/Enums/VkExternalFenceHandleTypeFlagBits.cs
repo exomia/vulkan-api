@@ -30,7 +30,7 @@ public enum VkExternalFenceHandleTypeFlagBits
     ///     SCM_RIGHTS control message. It owns a reference to the underlying synchronization primitive represented by its
     ///     Vulkan fence object.
     /// </summary>
-    VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT = 0,
+    VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT = 1 << 0,
 
     /// <summary>
     ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT specifies an NT handle that has only limited valid usage
@@ -38,7 +38,7 @@ public enum VkExternalFenceHandleTypeFlagBits
     ///     CompareObjectHandles, GetHandleInformation, and SetHandleInformation. It owns a reference to the underlying
     ///     synchronization primitive represented by its Vulkan fence object.
     /// </summary>
-    VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT = 1,
+    VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT = 1 << 1,
 
     /// <summary>
     ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT specifies a global share handle that has only limited valid
@@ -46,7 +46,7 @@ public enum VkExternalFenceHandleTypeFlagBits
     ///     reference to the underlying synchronization primitive represented by its Vulkan fence object, and will therefore
     ///     become invalid when all Vulkan fence objects associated with it are destroyed.
     /// </summary>
-    VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT = 2,
+    VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT = 1 << 2,
 
     /// <summary>
     ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT specifies a POSIX file descriptor handle to a Linux Sync File or
@@ -55,7 +55,7 @@ public enum VkExternalFenceHandleTypeFlagBits
     ///     support importing this handle type must accept any type of sync or fence FD supported by the native system they are
     ///     running on.
     /// </summary>
-    VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT = 3,
+    VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT = 1 << 3,
 
     /// <summary>
     ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_4_BIT_NV<br />
@@ -64,7 +64,7 @@ public enum VkExternalFenceHandleTypeFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceHandleTypeFlagBits
     ///     </a>
     /// </summary>
-    VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_4_BIT_NV = 4,
+    VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_4_BIT_NV = 1 << 4,
 
     /// <summary>
     ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_5_BIT_NV<br />
@@ -73,7 +73,7 @@ public enum VkExternalFenceHandleTypeFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceHandleTypeFlagBits
     ///     </a>
     /// </summary>
-    VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_5_BIT_NV = 5,
+    VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_5_BIT_NV = 1 << 5,
 
     /// <summary>
     ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT specifies a POSIX file descriptor handle that has only limited

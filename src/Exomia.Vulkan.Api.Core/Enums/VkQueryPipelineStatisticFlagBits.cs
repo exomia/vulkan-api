@@ -29,7 +29,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing">input assembly</a>
     ///     stage. Vertices corresponding to incomplete primitives may contribute to the count.
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_INPUT_ASSEMBLY_VERTICES_BIT = 0,
+    VK_QUERY_PIPELINE_STATISTIC_INPUT_ASSEMBLY_VERTICES_BIT = 1 << 0,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_INPUT_ASSEMBLY_PRIMITIVES_BITspecifies that queries managed by the pool will count
@@ -38,7 +38,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     stage. If primitive restart is enabled, restarting the primitive topology has no effect on the count. Incomplete
     ///     primitives may be counted.
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_INPUT_ASSEMBLY_PRIMITIVES_BIT = 1,
+    VK_QUERY_PIPELINE_STATISTIC_INPUT_ASSEMBLY_PRIMITIVES_BIT = 1 << 1,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_VERTEX_SHADER_INVOCATIONS_BITspecifies that queries managed by the pool will count
@@ -46,7 +46,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#shaders-vertex-execution">invoked</a>
     ///     .
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_VERTEX_SHADER_INVOCATIONS_BIT = 2,
+    VK_QUERY_PIPELINE_STATISTIC_VERTEX_SHADER_INVOCATIONS_BIT = 1 << 2,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_GEOMETRY_SHADER_INVOCATIONS_BITspecifies that queries managed by the pool will count
@@ -60,7 +60,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     , the geometry shader invocations count is incremented for each separate instanced
     ///     invocation.
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_GEOMETRY_SHADER_INVOCATIONS_BIT = 3,
+    VK_QUERY_PIPELINE_STATISTIC_GEOMETRY_SHADER_INVOCATIONS_BIT = 1 << 3,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_GEOMETRY_SHADER_PRIMITIVES_BITspecifies that queries managed by the pool will
@@ -68,7 +68,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     each time the geometry shader emits a primitive. Restarting primitive topology using the SPIR-V instructions
     ///     OpEndPrimitive or OpEndStreamPrimitive has no effect on the geometry shader output primitives count.
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_GEOMETRY_SHADER_PRIMITIVES_BIT = 4,
+    VK_QUERY_PIPELINE_STATISTIC_GEOMETRY_SHADER_PRIMITIVES_BIT = 1 << 4,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_CLIPPING_INVOCATIONS_BIT specifies that queries managed by the pool will count the
@@ -80,7 +80,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     stage of the pipeline. The counter&#8217;s value is incremented each time a primitive reaches the
     ///     primitive clipping stage.
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_CLIPPING_INVOCATIONS_BIT = 5,
+    VK_QUERY_PIPELINE_STATISTIC_CLIPPING_INVOCATIONS_BIT = 1 << 5,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_CLIPPING_PRIMITIVES_BIT specifies that queries managed by the pool will count the
@@ -93,7 +93,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     primitive clipping stage. The actual number of primitives output by the primitive clipping stage for a particular
     ///     input primitive is implementation-dependent but mustsatisfy the following conditions:
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_CLIPPING_PRIMITIVES_BIT = 6,
+    VK_QUERY_PIPELINE_STATISTIC_CLIPPING_PRIMITIVES_BIT = 1 << 6,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_FRAGMENT_SHADER_INVOCATIONS_BITspecifies that queries managed by the pool will
@@ -101,7 +101,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     shader is
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader">invoked</a>.
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_FRAGMENT_SHADER_INVOCATIONS_BIT = 7,
+    VK_QUERY_PIPELINE_STATISTIC_FRAGMENT_SHADER_INVOCATIONS_BIT = 1 << 7,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_TESSELLATION_CONTROL_SHADER_PATCHES_BITspecifies that queries managed by the pool will
@@ -113,7 +113,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_TESSELLATION_CONTROL_SHADER_PATCHES_BIT = 8,
+    VK_QUERY_PIPELINE_STATISTIC_TESSELLATION_CONTROL_SHADER_PATCHES_BIT = 1 << 8,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_TESSELLATION_EVALUATION_SHADER_INVOCATIONS_BITspecifies that queries managed by the
@@ -125,7 +125,7 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_TESSELLATION_EVALUATION_SHADER_INVOCATIONS_BIT = 9,
+    VK_QUERY_PIPELINE_STATISTIC_TESSELLATION_EVALUATION_SHADER_INVOCATIONS_BIT = 1 << 9,
 
     /// <summary>
     ///     VK_QUERY_PIPELINE_STATISTIC_COMPUTE_SHADER_INVOCATIONS_BITspecifies that queries managed by the pool will
@@ -134,5 +134,5 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     additional compute shader invocations for implementation-dependent reasons as long as the results of rendering
     ///     otherwise remain unchanged.
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_COMPUTE_SHADER_INVOCATIONS_BIT = 10
+    VK_QUERY_PIPELINE_STATISTIC_COMPUTE_SHADER_INVOCATIONS_BIT = 1 << 10
 }
