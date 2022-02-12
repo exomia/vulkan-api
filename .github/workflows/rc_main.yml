@@ -64,7 +64,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |
-        dotnet build Exomia.Vulkan.Api.Core.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet build Exomia.Vulkan.Api.Core.sln --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
   check-core-build:
     if: ${{ !contains(github.event.head_commit.message, '!!skip-ci') && always() }}  
     name: '[CHECK] RC CORE BUILD SUCCESS'
@@ -92,7 +92,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
@@ -112,7 +112,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Core.sln --restore --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
@@ -157,7 +157,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |
-        dotnet build Exomia.Vulkan.Api.Platforms.sln --restore --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet build Exomia.Vulkan.Api.Platforms.sln --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
   check-platforms-build:
     if: ${{ !contains(github.event.head_commit.message, '!!skip-ci') && always() }}  
     name: '[CHECK] RC PLATFORMS BUILD SUCCESS'
@@ -185,7 +185,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Platforms.sln --restore --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
@@ -205,7 +205,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Platforms.sln --restore --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ needs.get-rc-info.outputs.rc-suffix }}" -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
