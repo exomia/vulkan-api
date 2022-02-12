@@ -29,7 +29,7 @@ public enum VkFramebufferCreateFlagBits
     ///     </a>
     ///     structure.
     /// </summary>
-    VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT = 1 << 0,
+    VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT = 0x1,
 
     /// <summary>
     ///     VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT specifies that image views are not specified, and only attachment

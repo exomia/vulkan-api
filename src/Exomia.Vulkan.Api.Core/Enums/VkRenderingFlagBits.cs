@@ -24,16 +24,16 @@ public enum VkRenderingFlagBits
     ///     VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT specifies that draw calls for the render pass instance
     ///     will be recorded in secondary command buffers.
     /// </summary>
-    VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT = 1 << 0,
+    VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT = 0x1,
 
     /// <summary>VK_RENDERING_SUSPENDING_BIT specifies that the render pass instance will be suspended.</summary>
-    VK_RENDERING_SUSPENDING_BIT = 1 << 1,
+    VK_RENDERING_SUSPENDING_BIT = 0x2,
 
     /// <summary>
     ///     VK_RENDERING_RESUMING_BIT specifies that the render pass instance is resuming an earlier suspended render pass
     ///     instance.
     /// </summary>
-    VK_RENDERING_RESUMING_BIT = 1 << 2,
+    VK_RENDERING_RESUMING_BIT = 0x4,
 
     /// <summary>
     ///     VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT specifies that draw calls for the render pass instance

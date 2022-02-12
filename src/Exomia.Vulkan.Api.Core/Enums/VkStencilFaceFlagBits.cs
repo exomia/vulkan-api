@@ -21,10 +21,10 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkStencilFaceFlagBits
 {
     /// <summary>VK_STENCIL_FACE_FRONT_BIT specifies that only the front set of stencil state is updated.</summary>
-    VK_STENCIL_FACE_FRONT_BIT = 1 << 0,
+    VK_STENCIL_FACE_FRONT_BIT = 0x1,
 
     /// <summary>VK_STENCIL_FACE_BACK_BIT specifies that only the back set of stencil state is updated.</summary>
-    VK_STENCIL_FACE_BACK_BIT = 1 << 1,
+    VK_STENCIL_FACE_BACK_BIT = 0x2,
 
     /// <summary>
     ///     VK_STENCIL_FACE_FRONT_AND_BACK is the combination of VK_STENCIL_FACE_FRONT_BIT and VK_STENCIL_FACE_BACK_BIT,

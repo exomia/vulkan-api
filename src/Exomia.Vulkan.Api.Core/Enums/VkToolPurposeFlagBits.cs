@@ -21,28 +21,28 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkToolPurposeFlagBits
 {
     /// <summary>VK_TOOL_PURPOSE_VALIDATION_BIT specifies that the tool provides validation of API usage.</summary>
-    VK_TOOL_PURPOSE_VALIDATION_BIT = 1 << 0,
+    VK_TOOL_PURPOSE_VALIDATION_BIT = 0x1,
 
     /// <summary>VK_TOOL_PURPOSE_PROFILING_BIT specifies that the tool provides profiling of API usage.</summary>
-    VK_TOOL_PURPOSE_PROFILING_BIT = 1 << 1,
+    VK_TOOL_PURPOSE_PROFILING_BIT = 0x2,
 
     /// <summary>
     ///     VK_TOOL_PURPOSE_TRACING_BIT specifies that the tool is capturing data about the application&#8217;s API usage,
     ///     including anything from simple logging to capturing data for later replay.
     /// </summary>
-    VK_TOOL_PURPOSE_TRACING_BIT = 1 << 2,
+    VK_TOOL_PURPOSE_TRACING_BIT = 0x4,
 
     /// <summary>
     ///     VK_TOOL_PURPOSE_ADDITIONAL_FEATURES_BIT specifies that the tool provides additional API features/extensions on
     ///     top of the underlying implementation.
     /// </summary>
-    VK_TOOL_PURPOSE_ADDITIONAL_FEATURES_BIT = 1 << 3,
+    VK_TOOL_PURPOSE_ADDITIONAL_FEATURES_BIT = 0x8,
 
     /// <summary>
     ///     VK_TOOL_PURPOSE_MODIFYING_FEATURES_BIT specifies that the tool modifies the API features/limits/extensions
     ///     presented to the application.
     /// </summary>
-    VK_TOOL_PURPOSE_MODIFYING_FEATURES_BIT = 1 << 4,
+    VK_TOOL_PURPOSE_MODIFYING_FEATURES_BIT = 0x10,
 
     /// <summary>
     ///     VK_TOOL_PURPOSE_DEBUG_REPORTING_BIT_EXT specifies that the tool reports additional information to the
@@ -51,7 +51,7 @@ public enum VkToolPurposeFlagBits
     ///     or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html">vkCreateDebugUtilsMessengerEXT</a>
     /// </summary>
-    VK_TOOL_PURPOSE_DEBUG_REPORTING_BIT_EXT = 1 << 5,
+    VK_TOOL_PURPOSE_DEBUG_REPORTING_BIT_EXT = 0x20,
 
     /// <summary>
     ///     VK_TOOL_PURPOSE_DEBUG_MARKERS_BIT_EXT specifies that the tool consumes
@@ -77,7 +77,7 @@ public enum VkToolPurposeFlagBits
     ///         buffer labels
     ///     </a>
     /// </summary>
-    VK_TOOL_PURPOSE_DEBUG_MARKERS_BIT_EXT = 1 << 6,
+    VK_TOOL_PURPOSE_DEBUG_MARKERS_BIT_EXT = 0x40,
 
     /// <summary>VK_TOOL_PURPOSE_VALIDATION_BIT specifies that the tool provides validation of API usage.</summary>
     VK_TOOL_PURPOSE_VALIDATION_BIT_EXT = VK_TOOL_PURPOSE_VALIDATION_BIT,

@@ -35,7 +35,7 @@ public enum VkDescriptorPoolCreateFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkResetDescriptorPool.html">vkResetDescriptorPool</a>
     ///     are allowed.
     /// </summary>
-    VK_DESCRIPTOR_POOL_CREATE_FREE_DESCRIPTOR_SET_BIT = 1 << 0,
+    VK_DESCRIPTOR_POOL_CREATE_FREE_DESCRIPTOR_SET_BIT = 0x1,
 
     /// <summary>
     ///     VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT specifies that descriptor sets allocated from this pool can
@@ -43,7 +43,7 @@ public enum VkDescriptorPoolCreateFlagBits
     ///     sets that have bindings that do not set the VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT bit from a pool that has
     ///     VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT set.
     /// </summary>
-    VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT = 1 << 1,
+    VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT = 0x2,
 
     /// <summary>
     ///     VK_DESCRIPTOR_POOL_CREATE_HOST_ONLY_BIT_VALVE specifies that this descriptor pool and the descriptor sets allocated
@@ -58,7 +58,7 @@ public enum VkDescriptorPoolCreateFlagBits
     ///     . Descriptor sets and their descriptors can be updated concurrently in different threads, though the same
     ///     descriptor must not be updated concurrently by two threads.
     /// </summary>
-    VK_DESCRIPTOR_POOL_CREATE_HOST_ONLY_BIT_VALVE = 1 << 2,
+    VK_DESCRIPTOR_POOL_CREATE_HOST_ONLY_BIT_VALVE = 0x4,
 
     /// <summary>
     ///     VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT specifies that descriptor sets allocated from this pool can

@@ -37,17 +37,17 @@ public enum VkIndirectCommandsLayoutUsageFlagBitsNV
     ///     </a>
     ///     with isPreprocessedset to VK_TRUE.
     /// </summary>
-    VK_INDIRECT_COMMANDS_LAYOUT_USAGE_EXPLICIT_PREPROCESS_BIT_NV = 1 << 0,
+    VK_INDIRECT_COMMANDS_LAYOUT_USAGE_EXPLICIT_PREPROCESS_BIT_NV = 0x1,
 
     /// <summary>
     ///     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_INDEXED_SEQUENCES_BIT_NVspecifies that the input data for the sequences is
     ///     not implicitly indexed from 0..sequencesUsed but a user provided VkBufferencoding the index is provided.
     /// </summary>
-    VK_INDIRECT_COMMANDS_LAYOUT_USAGE_INDEXED_SEQUENCES_BIT_NV = 1 << 1,
+    VK_INDIRECT_COMMANDS_LAYOUT_USAGE_INDEXED_SEQUENCES_BIT_NV = 0x2,
 
     /// <summary>
     ///     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_UNORDERED_SEQUENCES_BIT_NVspecifies that the processing of sequences can
     ///     happen at an implementation-dependent order, which is not: guaranteed to be coherent using the same input data.
     /// </summary>
-    VK_INDIRECT_COMMANDS_LAYOUT_USAGE_UNORDERED_SEQUENCES_BIT_NV = 1 << 2
+    VK_INDIRECT_COMMANDS_LAYOUT_USAGE_UNORDERED_SEQUENCES_BIT_NV = 0x4
 }

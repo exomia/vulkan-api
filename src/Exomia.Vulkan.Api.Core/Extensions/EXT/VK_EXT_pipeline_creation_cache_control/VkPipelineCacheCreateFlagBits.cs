@@ -32,7 +32,7 @@ public enum VkPipelineCacheCreateFlagBits
     ///     . When set, the implementation may skip any unnecessary processing needed to support
     ///     simultaneous modification from multiple threads where allowed.
     /// </summary>
-    VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT = 1 << 0,
+    VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT = 0x1,
 
     /// <summary>
     ///     VK_PIPELINE_CACHE_CREATE_RESERVED_1_BIT_EXT<br />
@@ -41,7 +41,7 @@ public enum VkPipelineCacheCreateFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCacheCreateFlagBits
     ///     </a>
     /// </summary>
-    VK_PIPELINE_CACHE_CREATE_RESERVED_1_BIT_EXT = 1 << 1,
+    VK_PIPELINE_CACHE_CREATE_RESERVED_1_BIT_EXT = 0x2,
 
     /// <summary>
     ///     VK_PIPELINE_CACHE_CREATE_RESERVED_2_BIT_KHR<br />
@@ -50,7 +50,7 @@ public enum VkPipelineCacheCreateFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCacheCreateFlagBits
     ///     </a>
     /// </summary>
-    VK_PIPELINE_CACHE_CREATE_RESERVED_2_BIT_KHR = 1 << 2,
+    VK_PIPELINE_CACHE_CREATE_RESERVED_2_BIT_KHR = 0x4,
 
     /// <summary>
     ///     VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT specifies that all commands that modify the created

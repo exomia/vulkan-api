@@ -27,13 +27,13 @@ public enum VkExternalSemaphoreFeatureFlagBits
     ///     VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT specifies that handles of this type can be exported from Vulkan
     ///     semaphore objects.
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT = 1 << 0,
+    VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT = 0x1,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT specifies that handles of this type can be imported as Vulkan
     ///     semaphore objects.
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT = 1 << 1,
+    VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT = 0x2,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT specifies that handles of this type can be exported from Vulkan

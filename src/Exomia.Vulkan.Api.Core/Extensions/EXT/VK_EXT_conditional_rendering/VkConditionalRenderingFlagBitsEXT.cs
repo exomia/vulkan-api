@@ -28,5 +28,5 @@ public enum VkConditionalRenderingFlagBitsEXT
     ///     rendering commands or not. That is, if the 32-bit predicate read from buffer memory at offset is zero, the
     ///     rendering commands are not discarded, and if non zero, then they are discarded.
     /// </summary>
-    VK_CONDITIONAL_RENDERING_INVERTED_BIT_EXT = 1 << 0
+    VK_CONDITIONAL_RENDERING_INVERTED_BIT_EXT = 0x1
 }

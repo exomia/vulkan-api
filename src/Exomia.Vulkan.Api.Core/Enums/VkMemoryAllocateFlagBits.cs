@@ -25,7 +25,7 @@ public enum VkMemoryAllocateFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html">VkMemoryAllocateFlagsInfo</a>
     ///     ::deviceMask.
     /// </summary>
-    VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT = 1 << 0,
+    VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT = 0x1,
 
     /// <summary>
     ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT specifies that the memory can be attached to a buffer object created with the
@@ -37,7 +37,7 @@ public enum VkMemoryAllocateFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT = 1 << 1,
+    VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT = 0x2,
 
     /// <summary>
     ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the memory&#8217;s address can be saved and
@@ -48,7 +48,7 @@ public enum VkMemoryAllocateFlagBits
     ///     </a>
     ///     for more detail.
     /// </summary>
-    VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT = 1 << 2,
+    VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT = 0x4,
 
     /// <summary>
     ///     VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT specifies that memory will be allocated for the devices in

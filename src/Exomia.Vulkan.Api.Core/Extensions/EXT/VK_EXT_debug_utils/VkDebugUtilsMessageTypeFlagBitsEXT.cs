@@ -28,13 +28,13 @@ public enum VkDebugUtilsMessageTypeFlagBitsEXT
     ///     VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT specifies that some general event has occurred. This is typically
     ///     a non-specification, non-performance event.
     /// </summary>
-    VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT = 1 << 0,
+    VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT = 0x1,
 
     /// <summary>
     ///     VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT specifies that something has occurred during validation against
     ///     the Vulkan specification that may indicate invalid behavior.
     /// </summary>
-    VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT = 1 << 1,
+    VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT = 0x2,
 
     /// <summary>
     ///     VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT specifies a potentially non-optimal use of Vulkan, e.g. using
@@ -43,5 +43,5 @@ public enum VkDebugUtilsMessageTypeFlagBitsEXT
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentDescription.html">VkAttachmentDescription</a>
     ///     ::loadOp to VK_ATTACHMENT_LOAD_OP_CLEAR would have worked.
     /// </summary>
-    VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT = 1 << 2
+    VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT = 0x4
 }

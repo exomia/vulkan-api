@@ -37,7 +37,7 @@ public enum VkDescriptorBindingFlagBits
     ///     concurrently with the set being bound to a command buffer in another thread, but not concurrently with the set
     ///     being reset or freed.
     /// </summary>
-    VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT = 1 << 0,
+    VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT = 0x1,
 
     /// <summary>
     ///     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT indicates that descriptors in this binding can be
@@ -47,14 +47,14 @@ public enum VkDescriptorBindingFlagBits
     ///     dynamically used by any shader invocations. If VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT is not set, then
     ///     descriptors can be updated as long as they are not statically used by any shader invocations.
     /// </summary>
-    VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT = 1 << 1,
+    VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT = 0x2,
 
     /// <summary>
     ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT indicates that descriptors in this binding that are not dynamically
     ///     used need not contain valid descriptors at the time the descriptors are consumed. A descriptor is dynamically used
     ///     if any shader invocation executes an instruction that performs any memory access using the descriptor.
     /// </summary>
-    VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT = 1 << 2,
+    VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT = 0x4,
 
     /// <summary>
     ///     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT indicates that     this descriptor binding has a variable size
@@ -76,13 +76,13 @@ public enum VkDescriptorBindingFlagBits
     ///     </a>
     ///     limits instead.
     /// </summary>
-    VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT = 1 << 3,
+    VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT = 0x8,
 
     /// <summary>
     ///     VK_DESCRIPTOR_BINDING_RESERVED_4_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBindingFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBindingFlagBits</a>
     /// </summary>
-    VK_DESCRIPTOR_BINDING_RESERVED_4_BIT_QCOM = 1 << 4,
+    VK_DESCRIPTOR_BINDING_RESERVED_4_BIT_QCOM = 0x10,
 
     /// <summary>
     ///     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT indicates that if descriptors in this binding are updated between when

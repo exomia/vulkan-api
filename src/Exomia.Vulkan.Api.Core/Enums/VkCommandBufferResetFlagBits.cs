@@ -30,5 +30,5 @@ public enum VkCommandBufferResetFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_COMMAND_BUFFER_RESET_RELEASE_RESOURCES_BIT = 1 << 0
+    VK_COMMAND_BUFFER_RESET_RELEASE_RESOURCES_BIT = 0x1
 }
