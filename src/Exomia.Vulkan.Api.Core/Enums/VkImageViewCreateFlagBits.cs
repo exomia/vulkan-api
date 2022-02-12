@@ -27,6 +27,12 @@ public enum VkImageViewCreateFlagBits
     VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DYNAMIC_BIT_EXT = 0,
 
     /// <summary>
+    ///     VK_IMAGE_VIEW_CREATE_RESERVED_2_BIT_AMD<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageViewCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageViewCreateFlagBits</a>
+    /// </summary>
+    VK_IMAGE_VIEW_CREATE_RESERVED_2_BIT_AMD = 2,
+
+    /// <summary>
     ///     VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DEFERRED_BIT_EXTspecifies that the fragment density map will be read
     ///     by the host during
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEndCommandBuffer.html">vkEndCommandBuffer</a>

@@ -20,11 +20,11 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkImageMemoryBarrier,VkImageMemoryBarrier2KHR</description>
+///             <term>structextends</term><description>VkImageMemoryBarrier,VkImageMemoryBarrier2</description>
 ///         </item>
 ///     </list>
 /// </remarks>
-[VkStructExtends("VkImageMemoryBarrier,VkImageMemoryBarrier2KHR")]
+[VkStructExtends("VkImageMemoryBarrier,VkImageMemoryBarrier2")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkSampleLocationsInfoEXT
 {

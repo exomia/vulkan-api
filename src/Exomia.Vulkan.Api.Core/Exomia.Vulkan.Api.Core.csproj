@@ -15,7 +15,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>1.3.204$(VersionSuffix)</Version>
+        <Version>1.3.205$(VersionSuffix)</Version>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -73,10 +73,6 @@
         <WarningsAsErrors>NU1605;CS8034</WarningsAsErrors>
         <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
-    </ItemGroup>
 
     <ItemGroup>
         <ProjectReference

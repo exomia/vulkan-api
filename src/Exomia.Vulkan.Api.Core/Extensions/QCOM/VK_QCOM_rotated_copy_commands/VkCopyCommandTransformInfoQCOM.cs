@@ -20,11 +20,11 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkBufferImageCopy2KHR,VkImageBlit2KHR</description>
+///             <term>structextends</term><description>VkBufferImageCopy2,VkImageBlit2</description>
 ///         </item>
 ///     </list>
 /// </remarks>
-[VkStructExtends("VkBufferImageCopy2KHR,VkImageBlit2KHR")]
+[VkStructExtends("VkBufferImageCopy2,VkImageBlit2")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkCopyCommandTransformInfoQCOM
 {
