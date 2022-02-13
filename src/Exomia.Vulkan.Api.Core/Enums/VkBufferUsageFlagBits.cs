@@ -29,46 +29,46 @@ public enum VkBufferUsageFlagBits
     ///     </a>
     ///     ).
     /// </summary>
-    VK_BUFFER_USAGE_TRANSFER_SRC_BIT = 0,
+    VK_BUFFER_USAGE_TRANSFER_SRC_BIT = 0x1,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_TRANSFER_DST_BIT specifies that the buffer can be used as the destination of a transfer
     ///     command.
     /// </summary>
-    VK_BUFFER_USAGE_TRANSFER_DST_BIT = 1,
+    VK_BUFFER_USAGE_TRANSFER_DST_BIT = 0x2,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_UNIFORM_TEXEL_BUFFER_BIT specifies that the buffer can be used to create a VkBufferView
     ///     suitable for occupying a VkDescriptorSet slot of type VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER.
     /// </summary>
-    VK_BUFFER_USAGE_UNIFORM_TEXEL_BUFFER_BIT = 2,
+    VK_BUFFER_USAGE_UNIFORM_TEXEL_BUFFER_BIT = 0x4,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_STORAGE_TEXEL_BUFFER_BIT specifies that the buffer can be used to create a VkBufferView
     ///     suitable for occupying a VkDescriptorSet slot of type VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER.
     /// </summary>
-    VK_BUFFER_USAGE_STORAGE_TEXEL_BUFFER_BIT = 3,
+    VK_BUFFER_USAGE_STORAGE_TEXEL_BUFFER_BIT = 0x8,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT specifies that the buffer canbe used in a VkDescriptorBufferInfo suitable
     ///     for occupying a VkDescriptorSet slot either of type VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER or
     ///     VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC.
     /// </summary>
-    VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT = 4,
+    VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT = 0x10,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_STORAGE_BUFFER_BIT specifies that the buffer canbe used in a VkDescriptorBufferInfo suitable
     ///     for occupying a VkDescriptorSet slot either of type VK_DESCRIPTOR_TYPE_STORAGE_BUFFER or
     ///     VK_DESCRIPTOR_TYPE_STORAGE_BUFFER_DYNAMIC.
     /// </summary>
-    VK_BUFFER_USAGE_STORAGE_BUFFER_BIT = 5,
+    VK_BUFFER_USAGE_STORAGE_BUFFER_BIT = 0x20,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_INDEX_BUFFER_BIT specifies that the buffer is suitable for passing as the buffer parameter to
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindIndexBuffer.html">vkCmdBindIndexBuffer</a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_INDEX_BUFFER_BIT = 6,
+    VK_BUFFER_USAGE_INDEX_BUFFER_BIT = 0x40,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_VERTEX_BUFFER_BIT specifies that the buffer is suitable for passing as an element of the
@@ -76,7 +76,7 @@ public enum VkBufferUsageFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers.html">vkCmdBindVertexBuffers</a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_VERTEX_BUFFER_BIT = 7,
+    VK_BUFFER_USAGE_VERTEX_BUFFER_BIT = 0x80,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_INDIRECT_BUFFER_BIT specifies that the buffer is suitable for passing as the buffer parameter
@@ -96,7 +96,7 @@ public enum VkBufferUsageFlagBits
     ///     . It is also suitable for passing as the buffer member of VkIndirectCommandsStreamNV, or sequencesCountBuffer or
     ///     sequencesIndexBuffer or preprocessedBuffer member of VkGeneratedCommandsInfoNV
     /// </summary>
-    VK_BUFFER_USAGE_INDIRECT_BUFFER_BIT = 8,
+    VK_BUFFER_USAGE_INDIRECT_BUFFER_BIT = 0x100,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT specifies that the buffer can be used to retrieve a buffer device
@@ -104,7 +104,7 @@ public enum VkBufferUsageFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferDeviceAddress.html">vkGetBufferDeviceAddress</a>
     ///     and use that address to access the buffer&#8217;s memory from a shader.
     /// </summary>
-    VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT = 17,
+    VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT = 0x20000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_VIDEO_DECODE_SRC_BIT_KHR specifies that the buffer can be used as the source bitstream buffer in a
@@ -114,7 +114,7 @@ public enum VkBufferUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_VIDEO_DECODE_SRC_BIT_KHR = 13,
+    VK_BUFFER_USAGE_VIDEO_DECODE_SRC_BIT_KHR = 0x2000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_VIDEO_DECODE_DST_BIT_KHR specifies that the buffer can be used as the destination status buffer in
@@ -125,7 +125,7 @@ public enum VkBufferUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_VIDEO_DECODE_DST_BIT_KHR = 14,
+    VK_BUFFER_USAGE_VIDEO_DECODE_DST_BIT_KHR = 0x4000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_TRANSFORM_FEEDBACK_BUFFER_BIT_EXT specifies that the buffer is suitable for using for binding as a
@@ -136,7 +136,7 @@ public enum VkBufferUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_TRANSFORM_FEEDBACK_BUFFER_BIT_EXT = 11,
+    VK_BUFFER_USAGE_TRANSFORM_FEEDBACK_BUFFER_BIT_EXT = 0x800,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_TRANSFORM_FEEDBACK_COUNTER_BUFFER_BIT_EXTspecifies that the buffer is suitable for using as a
@@ -146,7 +146,7 @@ public enum VkBufferUsageFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndTransformFeedbackEXT.html">vkCmdEndTransformFeedbackEXT</a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_TRANSFORM_FEEDBACK_COUNTER_BUFFER_BIT_EXT = 12,
+    VK_BUFFER_USAGE_TRANSFORM_FEEDBACK_COUNTER_BUFFER_BIT_EXT = 0x1000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_CONDITIONAL_RENDERING_BIT_EXT specifies that the buffer is suitable for passing as the buffer
@@ -157,7 +157,7 @@ public enum VkBufferUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_CONDITIONAL_RENDERING_BIT_EXT = 9,
+    VK_BUFFER_USAGE_CONDITIONAL_RENDERING_BIT_EXT = 0x200,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHRspecifies that the buffer is suitable for use
@@ -169,7 +169,7 @@ public enum VkBufferUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHR = 19,
+    VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHR = 0x80000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_STORAGE_BIT_KHR specifies that the buffer is suitable for storage space
@@ -177,7 +177,7 @@ public enum VkBufferUsageFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureKHR.html">VkAccelerationStructureKHR</a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_STORAGE_BIT_KHR = 20,
+    VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_STORAGE_BIT_KHR = 0x100000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_SHADER_BINDING_TABLE_BIT_KHR specifies that the buffer is suitable for use as a
@@ -187,13 +187,13 @@ public enum VkBufferUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_SHADER_BINDING_TABLE_BIT_KHR = 10,
+    VK_BUFFER_USAGE_SHADER_BINDING_TABLE_BIT_KHR = 0x400,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_RESERVED_18_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
     /// </summary>
-    VK_BUFFER_USAGE_RESERVED_18_BIT_QCOM = 18,
+    VK_BUFFER_USAGE_RESERVED_18_BIT_QCOM = 0x40000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_VIDEO_ENCODE_DST_BIT_KHR specifies that the buffer can be used as the destination bitstream buffer
@@ -204,25 +204,25 @@ public enum VkBufferUsageFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_VIDEO_ENCODE_DST_BIT_KHR = 15,
+    VK_BUFFER_USAGE_VIDEO_ENCODE_DST_BIT_KHR = 0x8000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_VIDEO_ENCODE_SRC_BIT_KHR<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
     /// </summary>
-    VK_BUFFER_USAGE_VIDEO_ENCODE_SRC_BIT_KHR = 16,
+    VK_BUFFER_USAGE_VIDEO_ENCODE_SRC_BIT_KHR = 0x10000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_RESERVED_21_BIT_AMD<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
     /// </summary>
-    VK_BUFFER_USAGE_RESERVED_21_BIT_AMD = 21,
+    VK_BUFFER_USAGE_RESERVED_21_BIT_AMD = 0x200000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_RESERVED_22_BIT_AMD<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
     /// </summary>
-    VK_BUFFER_USAGE_RESERVED_22_BIT_AMD = 22,
+    VK_BUFFER_USAGE_RESERVED_22_BIT_AMD = 0x400000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_SHADER_BINDING_TABLE_BIT_KHR specifies that the buffer is suitable for use as a

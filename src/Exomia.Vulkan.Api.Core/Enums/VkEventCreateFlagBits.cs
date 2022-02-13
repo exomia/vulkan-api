@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkEventCreateFlagBits
 {
     /// <summary>VK_EVENT_CREATE_DEVICE_ONLY_BIT specifies that host event commands will not be used with this event.</summary>
-    VK_EVENT_CREATE_DEVICE_ONLY_BIT = 0,
+    VK_EVENT_CREATE_DEVICE_ONLY_BIT = 0x1,
 
     /// <summary>VK_EVENT_CREATE_DEVICE_ONLY_BIT specifies that host event commands will not be used with this event.</summary>
     VK_EVENT_CREATE_DEVICE_ONLY_BIT_KHR = VK_EVENT_CREATE_DEVICE_ONLY_BIT

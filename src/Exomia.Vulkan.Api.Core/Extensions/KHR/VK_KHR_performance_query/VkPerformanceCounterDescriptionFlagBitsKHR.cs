@@ -27,13 +27,13 @@ public enum VkPerformanceCounterDescriptionFlagBitsKHR
     ///     VK_PERFORMANCE_COUNTER_DESCRIPTION_PERFORMANCE_IMPACTING_BIT_KHRspecifies that recording the counter may have
     ///     a noticeable performance impact.
     /// </summary>
-    VK_PERFORMANCE_COUNTER_DESCRIPTION_PERFORMANCE_IMPACTING_BIT_KHR = 0,
+    VK_PERFORMANCE_COUNTER_DESCRIPTION_PERFORMANCE_IMPACTING_BIT_KHR = 0x1,
 
     /// <summary>
     ///     VK_PERFORMANCE_COUNTER_DESCRIPTION_CONCURRENTLY_IMPACTED_BIT_KHRspecifies that concurrently recording the
     ///     counter while other submitted command buffers are running may impact the accuracy of the recording.
     /// </summary>
-    VK_PERFORMANCE_COUNTER_DESCRIPTION_CONCURRENTLY_IMPACTED_BIT_KHR = 1,
+    VK_PERFORMANCE_COUNTER_DESCRIPTION_CONCURRENTLY_IMPACTED_BIT_KHR = 0x2,
 
     /// <summary>
     ///     VK_PERFORMANCE_COUNTER_DESCRIPTION_PERFORMANCE_IMPACTING_BIT_KHRspecifies that recording the counter may have

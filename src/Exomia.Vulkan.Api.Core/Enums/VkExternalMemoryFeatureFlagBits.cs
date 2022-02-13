@@ -31,19 +31,19 @@ public enum VkExternalMemoryFeatureFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryDedicatedAllocateInfo.html">VkMemoryDedicatedAllocateInfo</a>
     ///     to create (or import) a dedicated allocation for the image or buffer.
     /// </summary>
-    VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT = 0,
+    VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT = 0x1,
 
     /// <summary>
     ///     VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT specifies that handles of this type can be exported from Vulkan
     ///     memory objects.
     /// </summary>
-    VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT = 1,
+    VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT = 0x2,
 
     /// <summary>
     ///     VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT specifies that handles of this type can be imported as Vulkan memory
     ///     objects.
     /// </summary>
-    VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT = 2,
+    VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT = 0x4,
 
     /// <summary>
     ///     VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT specifies that images or buffers created with the specified

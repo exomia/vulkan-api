@@ -28,7 +28,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT = 0,
+    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT = 0x1,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_STORAGE_IMAGE_BIT specifies that an image view can be used as a
@@ -38,55 +38,55 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_FORMAT_FEATURE_2_STORAGE_IMAGE_BIT = 1,
+    VK_FORMAT_FEATURE_2_STORAGE_IMAGE_BIT = 0x2,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_STORAGE_IMAGE_ATOMIC_BIT specifies that an image view can be used as storage image that
     ///     supports atomic operations.
     /// </summary>
-    VK_FORMAT_FEATURE_2_STORAGE_IMAGE_ATOMIC_BIT = 2,
+    VK_FORMAT_FEATURE_2_STORAGE_IMAGE_ATOMIC_BIT = 0x4,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_UNIFORM_TEXEL_BUFFER_BIT specifies that the format can be used to create a buffer view
     ///     that can be bound to a VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER descriptor.
     /// </summary>
-    VK_FORMAT_FEATURE_2_UNIFORM_TEXEL_BUFFER_BIT = 3,
+    VK_FORMAT_FEATURE_2_UNIFORM_TEXEL_BUFFER_BIT = 0x8,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_BIT specifies that the format can be used to create a buffer view
     ///     that can be bound to a VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER descriptor.
     /// </summary>
-    VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_BIT = 4,
+    VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_BIT = 0x10,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_ATOMIC_BIT specifies that atomic operations are supported on
     ///     VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER with this format.
     /// </summary>
-    VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_ATOMIC_BIT = 5,
+    VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_ATOMIC_BIT = 0x20,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VERTEX_BUFFER_BIT specifies that the format can be used as a vertex attribute format
     ///     (VkVertexInputAttributeDescription::format).
     /// </summary>
-    VK_FORMAT_FEATURE_2_VERTEX_BUFFER_BIT = 6,
+    VK_FORMAT_FEATURE_2_VERTEX_BUFFER_BIT = 0x40,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BIT specifies that an image view can be used as a framebuffer color
     ///     attachment and as an input attachment.
     /// </summary>
-    VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BIT = 7,
+    VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BIT = 0x80,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT specifies that an image view can be used as a framebuffer color
     ///     attachment that supports blending and as an input attachment.
     /// </summary>
-    VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT = 8,
+    VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT = 0x100,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_DEPTH_STENCIL_ATTACHMENT_BIT specifies that an image view can be used as a framebuffer
     ///     depth/stencil attachment and as an input attachment.
     /// </summary>
-    VK_FORMAT_FEATURE_2_DEPTH_STENCIL_ATTACHMENT_BIT = 9,
+    VK_FORMAT_FEATURE_2_DEPTH_STENCIL_ATTACHMENT_BIT = 0x200,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT specifies that an image can be     used as the srcImage for
@@ -95,7 +95,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage.html">vkCmdBlitImage</a>
     ///     .
     /// </summary>
-    VK_FORMAT_FEATURE_2_BLIT_SRC_BIT = 10,
+    VK_FORMAT_FEATURE_2_BLIT_SRC_BIT = 0x400,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_BLIT_DST_BIT specifies that an image can be     used as the dstImage for
@@ -104,7 +104,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage.html">vkCmdBlitImage</a>
     ///     .
     /// </summary>
-    VK_FORMAT_FEATURE_2_BLIT_DST_BIT = 11,
+    VK_FORMAT_FEATURE_2_BLIT_DST_BIT = 0x800,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT specifies that     if
@@ -115,7 +115,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     and     vkCmdBlitImage with a filter of VK_FILTER_LINEAR.     This bit must only be exposed for formats that also
     ///     support the     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT or     VK_FORMAT_FEATURE_2_BLIT_SRC_BIT.
     /// </summary>
-    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT = 12,
+    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_LINEAR_BIT = 0x1000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_CUBIC_BIT specifies that VkImage can be used with a sampler that has
@@ -124,13 +124,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT. If the format being queried is a depth/stencil format, this only specifies
     ///     that the depth aspect is cubic filterable.
     /// </summary>
-    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_CUBIC_BIT = 13,
+    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_CUBIC_BIT = 0x2000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT specifies that an image canbe used as a source image for
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>.
     /// </summary>
-    VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT = 14,
+    VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT = 0x4000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT specifies that an image canbe used as a destination image for
@@ -138,7 +138,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     and
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>.
     /// </summary>
-    VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT = 15,
+    VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT = 0x8000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_MINMAX_BIT specifies VkImage can be used as a sampled image with a
@@ -146,7 +146,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerReductionMode.html">VkSamplerReductionMode</a>
     ///     . This bit must only be exposed for formats that also support the VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT.
     /// </summary>
-    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_MINMAX_BIT = 16,
+    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_FILTER_MINMAX_BIT = 0x10000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT specifies that an application can define a
@@ -165,7 +165,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     422&#8221; or &#8220;420&#8221; format) but the implementation supports sampler Y′CBCR conversion for this format,
     ///     the implementation must set VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT.
     /// </summary>
-    VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT = 17,
+    VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT = 0x20000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BITspecifies that an application can define a
@@ -176,13 +176,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     using this format as a source with chromaFilter set to
     ///     VK_FILTER_LINEAR.
     /// </summary>
-    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BIT = 18,
+    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BIT = 0x40000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_BITspecifies that the format
     ///     can have different chroma, min, and mag filters.
     /// </summary>
-    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_BIT = 19,
+    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_BIT = 0x80000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BITspecifies that reconstruction
@@ -193,7 +193,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     </a>
     ///     . If this bit is not present, reconstruction is implicit by default.
     /// </summary>
-    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BIT = 20,
+    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BIT = 0x100000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BITspecifies that
@@ -206,13 +206,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BITit must also support
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BIT.
     /// </summary>
-    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BIT = 21,
+    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_BIT = 0x200000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_DISJOINT_BIT specifies that a multi-planar image can have the VK_IMAGE_CREATE_DISJOINT_BIT
     ///     set during image creation. An implementation must not set VK_FORMAT_FEATURE_2_DISJOINT_BITfor single-plane formats.
     /// </summary>
-    VK_FORMAT_FEATURE_2_DISJOINT_BIT = 22,
+    VK_FORMAT_FEATURE_2_DISJOINT_BIT = 0x400000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT specifies that an application can define a
@@ -235,7 +235,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     </a>
     ///     using this format as a source.
     /// </summary>
-    VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT = 23,
+    VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT = 0x800000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT specifies that image views created with this format can be used
@@ -246,7 +246,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     </a>
     ///     for read operations without specifying a format.
     /// </summary>
-    VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT = 31,
+    VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT = 0x80000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT specifies that image views created with this format can be
@@ -257,13 +257,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     </a>
     ///     for write operations without specifying a format.
     /// </summary>
-    VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT = 32,
+    VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT = 0x100000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT specifies that image views created with this format can
     ///     be used for depth comparison performed by OpImage*Dref instructions.
     /// </summary>
-    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT = 33,
+    VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT = 0x200000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_DECODE_OUTPUT_BIT_KHR specifies that an image view with this format can be used as an
@@ -273,7 +273,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///         decode operations
     ///     </a>
     /// </summary>
-    VK_FORMAT_FEATURE_2_VIDEO_DECODE_OUTPUT_BIT_KHR = 25,
+    VK_FORMAT_FEATURE_2_VIDEO_DECODE_OUTPUT_BIT_KHR = 0x2000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_DECODE_DPB_BIT_KHR specifies that an image view with this format can be used as a DPB for
@@ -282,7 +282,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///         decode operations
     ///     </a>
     /// </summary>
-    VK_FORMAT_FEATURE_2_VIDEO_DECODE_DPB_BIT_KHR = 26,
+    VK_FORMAT_FEATURE_2_VIDEO_DECODE_DPB_BIT_KHR = 0x4000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHRspecifies that the format can be used as the vertex
@@ -299,7 +299,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     </a>
     ///     builds.
     /// </summary>
-    VK_FORMAT_FEATURE_2_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHR = 29,
+    VK_FORMAT_FEATURE_2_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHR = 0x20000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_FRAGMENT_DENSITY_MAP_BIT_EXT specifies that an image view can be used as a
@@ -310,7 +310,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_FORMAT_FEATURE_2_FRAGMENT_DENSITY_MAP_BIT_EXT = 24,
+    VK_FORMAT_FEATURE_2_FRAGMENT_DENSITY_MAP_BIT_EXT = 0x1000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that an image view can be used as a
@@ -322,7 +322,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     . An implementation must not set this feature for formats with numeric type other
     ///     than *UINT, or set it as a buffer feature.
     /// </summary>
-    VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 30,
+    VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x40000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_INPUT_BIT_KHR specifies that an image view with this format can be used as an
@@ -332,7 +332,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///         encode operations
     ///     </a>
     /// </summary>
-    VK_FORMAT_FEATURE_2_VIDEO_ENCODE_INPUT_BIT_KHR = 27,
+    VK_FORMAT_FEATURE_2_VIDEO_ENCODE_INPUT_BIT_KHR = 0x8000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_DPB_BIT_KHR specifies that an image view with this format can be used as a DPB for
@@ -341,7 +341,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///         encode operations
     ///     </a>
     /// </summary>
-    VK_FORMAT_FEATURE_2_VIDEO_ENCODE_DPB_BIT_KHR = 28,
+    VK_FORMAT_FEATURE_2_VIDEO_ENCODE_DPB_BIT_KHR = 0x10000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_LINEAR_COLOR_ATTACHMENT_BIT_NV specifies that    the format is supported as a renderable
@@ -352,31 +352,31 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     .    This bit will be set for renderable color formats in the    linearTilingFeatures. This must
     ///     not be set in the optimalTilingFeatures or bufferFeatures members.
     /// </summary>
-    VK_FORMAT_FEATURE_2_LINEAR_COLOR_ATTACHMENT_BIT_NV = 38,
+    VK_FORMAT_FEATURE_2_LINEAR_COLOR_ATTACHMENT_BIT_NV = 0x4000000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_RESERVED_34_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
     /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_34_BIT_QCOM = 34,
+    VK_FORMAT_FEATURE_2_RESERVED_34_BIT_QCOM = 0x400000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_RESERVED_35_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
     /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_35_BIT_QCOM = 35,
+    VK_FORMAT_FEATURE_2_RESERVED_35_BIT_QCOM = 0x800000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_RESERVED_36_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
     /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_36_BIT_QCOM = 36,
+    VK_FORMAT_FEATURE_2_RESERVED_36_BIT_QCOM = 0x1000000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_RESERVED_37_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
     /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_37_BIT_QCOM = 37,
+    VK_FORMAT_FEATURE_2_RESERVED_37_BIT_QCOM = 0x2000000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT specifies that an image view can be

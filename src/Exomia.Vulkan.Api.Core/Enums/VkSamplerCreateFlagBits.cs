@@ -24,29 +24,29 @@ public enum VkSamplerCreateFlagBits
     ///     VK_SAMPLER_CREATE_SUBSAMPLED_BIT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits</a>
     /// </summary>
-    VK_SAMPLER_CREATE_SUBSAMPLED_BIT_EXT = 0,
+    VK_SAMPLER_CREATE_SUBSAMPLED_BIT_EXT = 0x1,
 
     /// <summary>
     ///     VK_SAMPLER_CREATE_SUBSAMPLED_COARSE_RECONSTRUCTION_BIT_EXTspecifies that the implementation may use
     ///     approximations when reconstructing a full color value for texture access from a subsampled image.
     /// </summary>
-    VK_SAMPLER_CREATE_SUBSAMPLED_COARSE_RECONSTRUCTION_BIT_EXT = 1,
+    VK_SAMPLER_CREATE_SUBSAMPLED_COARSE_RECONSTRUCTION_BIT_EXT = 0x2,
 
     /// <summary>
     ///     VK_SAMPLER_CREATE_RESERVED_3_BIT_AMD<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits</a>
     /// </summary>
-    VK_SAMPLER_CREATE_RESERVED_3_BIT_AMD = 3,
+    VK_SAMPLER_CREATE_RESERVED_3_BIT_AMD = 0x8,
 
     /// <summary>
     ///     VK_SAMPLER_CREATE_RESERVED_2_BIT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits</a>
     /// </summary>
-    VK_SAMPLER_CREATE_RESERVED_2_BIT_EXT = 2,
+    VK_SAMPLER_CREATE_RESERVED_2_BIT_EXT = 0x4,
 
     /// <summary>
     ///     VK_SAMPLER_CREATE_IMAGE_PROCESSING_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits</a>
     /// </summary>
-    VK_SAMPLER_CREATE_IMAGE_PROCESSING_BIT_QCOM = 4
+    VK_SAMPLER_CREATE_IMAGE_PROCESSING_BIT_QCOM = 0x10
 }

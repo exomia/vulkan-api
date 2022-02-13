@@ -27,7 +27,7 @@ public enum VkSemaphoreWaitFlagBits
     ///     the semaphores in VkSemaphoreWaitInfo::pSemaphores have reached the value specified by the corresponding element of
     ///     VkSemaphoreWaitInfo::pValues.
     /// </summary>
-    VK_SEMAPHORE_WAIT_ANY_BIT = 0,
+    VK_SEMAPHORE_WAIT_ANY_BIT = 0x1,
 
     /// <summary>
     ///     VK_SEMAPHORE_WAIT_ANY_BIT specifies that the semaphore wait condition is that at least one of the semaphores

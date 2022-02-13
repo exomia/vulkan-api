@@ -28,7 +28,7 @@ public enum VkAccelerationStructureCreateFlagBitsKHR
     ///     VK_ACCELERATION_STRUCTURE_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHRspecifies that the acceleration
     ///     structure&#8217;s address can be saved and reused on a subsequent run.
     /// </summary>
-    VK_ACCELERATION_STRUCTURE_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHR = 0,
+    VK_ACCELERATION_STRUCTURE_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHR = 0x1,
 
     /// <summary>
     ///     VK_ACCELERATION_STRUCTURE_CREATE_MOTION_BIT_NV<br />
@@ -37,5 +37,5 @@ public enum VkAccelerationStructureCreateFlagBitsKHR
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccelerationStructureCreateFlagBitsKHR
     ///     </a>
     /// </summary>
-    VK_ACCELERATION_STRUCTURE_CREATE_MOTION_BIT_NV = 2
+    VK_ACCELERATION_STRUCTURE_CREATE_MOTION_BIT_NV = 0x4
 }

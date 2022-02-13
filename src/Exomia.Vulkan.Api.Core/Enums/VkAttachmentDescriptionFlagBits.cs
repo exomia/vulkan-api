@@ -27,5 +27,5 @@ public enum VkAttachmentDescriptionFlagBits
     ///     VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT specifies that the attachment aliases the same device memory as other
     ///     attachments.
     /// </summary>
-    VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT = 0
+    VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT = 0x1
 }

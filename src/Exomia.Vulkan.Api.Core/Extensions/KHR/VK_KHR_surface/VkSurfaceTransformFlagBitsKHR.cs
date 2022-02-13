@@ -21,41 +21,41 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkSurfaceTransformFlagBitsKHR
 {
     /// <summary>VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR specifies that image content is presented without being transformed.</summary>
-    VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR = 0,
+    VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR = 0x1,
 
     /// <summary>VK_SURFACE_TRANSFORM_ROTATE_90_BIT_KHR specifies that image content is rotated 90 degrees clockwise.</summary>
-    VK_SURFACE_TRANSFORM_ROTATE_90_BIT_KHR = 1,
+    VK_SURFACE_TRANSFORM_ROTATE_90_BIT_KHR = 0x2,
 
     /// <summary>VK_SURFACE_TRANSFORM_ROTATE_180_BIT_KHR specifies that image content is rotated 180 degrees clockwise.</summary>
-    VK_SURFACE_TRANSFORM_ROTATE_180_BIT_KHR = 2,
+    VK_SURFACE_TRANSFORM_ROTATE_180_BIT_KHR = 0x4,
 
     /// <summary>VK_SURFACE_TRANSFORM_ROTATE_270_BIT_KHR specifies that image content is rotated 270 degrees clockwise.</summary>
-    VK_SURFACE_TRANSFORM_ROTATE_270_BIT_KHR = 3,
+    VK_SURFACE_TRANSFORM_ROTATE_270_BIT_KHR = 0x8,
 
     /// <summary>VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_BIT_KHR specifies that image content is mirrored horizontally.</summary>
-    VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_BIT_KHR = 4,
+    VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_BIT_KHR = 0x10,
 
     /// <summary>
     ///     VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_90_BIT_KHR specifies that image content is mirrored
     ///     horizontally, then rotated 90 degrees clockwise.
     /// </summary>
-    VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_90_BIT_KHR = 5,
+    VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_90_BIT_KHR = 0x20,
 
     /// <summary>
     ///     VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_180_BIT_KHRspecifies that image content is mirrored
     ///     horizontally, then rotated 180 degrees clockwise.
     /// </summary>
-    VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_180_BIT_KHR = 6,
+    VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_180_BIT_KHR = 0x40,
 
     /// <summary>
     ///     VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_270_BIT_KHRspecifies that image content is mirrored
     ///     horizontally, then rotated 270 degrees clockwise.
     /// </summary>
-    VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_270_BIT_KHR = 7,
+    VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_270_BIT_KHR = 0x80,
 
     /// <summary>
     ///     VK_SURFACE_TRANSFORM_INHERIT_BIT_KHR specifies that the presentation transform is not specified, and is
     ///     instead determined by platform-specific considerations and mechanisms outside Vulkan.
     /// </summary>
-    VK_SURFACE_TRANSFORM_INHERIT_BIT_KHR = 8
+    VK_SURFACE_TRANSFORM_INHERIT_BIT_KHR = 0x100
 }

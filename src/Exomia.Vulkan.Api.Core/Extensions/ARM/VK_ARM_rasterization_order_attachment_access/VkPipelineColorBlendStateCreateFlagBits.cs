@@ -33,5 +33,5 @@ public enum VkPipelineColorBlendStateCreateFlagBits
     ///     </a>
     ///     for more information.
     /// </summary>
-    VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_ARM = 0
+    VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_ARM = 0x1
 }

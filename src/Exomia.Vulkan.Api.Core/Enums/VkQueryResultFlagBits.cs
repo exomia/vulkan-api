@@ -24,19 +24,19 @@ public enum VkQueryResultFlagBits
     ///     VK_QUERY_RESULT_64_BIT specifies the results will be written as an array of 64-bit unsigned integer values. If
     ///     this bit is not set, the results will be written as an array of 32-bit unsigned integer values.
     /// </summary>
-    VK_QUERY_RESULT_64_BIT = 0,
+    VK_QUERY_RESULT_64_BIT = 0x1,
 
     /// <summary>
     ///     VK_QUERY_RESULT_WAIT_BIT specifies that Vulkan will wait for each query&#8217;s status to become available
     ///     before retrieving its results.
     /// </summary>
-    VK_QUERY_RESULT_WAIT_BIT = 1,
+    VK_QUERY_RESULT_WAIT_BIT = 0x2,
 
     /// <summary>VK_QUERY_RESULT_WITH_AVAILABILITY_BIT specifies that the availability status accompanies the results.</summary>
-    VK_QUERY_RESULT_WITH_AVAILABILITY_BIT = 2,
+    VK_QUERY_RESULT_WITH_AVAILABILITY_BIT = 0x4,
 
     /// <summary>VK_QUERY_RESULT_PARTIAL_BIT specifies that returning partial results is acceptable.</summary>
-    VK_QUERY_RESULT_PARTIAL_BIT = 3,
+    VK_QUERY_RESULT_PARTIAL_BIT = 0x8,
 
     /// <summary>
     ///     VK_QUERY_RESULT_WITH_STATUS_BIT_KHR specifies that the last value returned in the query is a
@@ -49,5 +49,5 @@ public enum VkQueryResultFlagBits
     ///     for information on how an application can determine whether the use of this flag bit is
     ///     supported.
     /// </summary>
-    VK_QUERY_RESULT_WITH_STATUS_BIT_KHR = 4
+    VK_QUERY_RESULT_WITH_STATUS_BIT_KHR = 0x10
 }

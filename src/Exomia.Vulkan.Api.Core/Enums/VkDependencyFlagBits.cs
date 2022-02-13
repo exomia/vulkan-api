@@ -28,7 +28,7 @@ public enum VkDependencyFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_DEPENDENCY_BY_REGION_BIT = 0,
+    VK_DEPENDENCY_BY_REGION_BIT = 0x1,
 
     /// <summary>
     ///     VK_DEPENDENCY_DEVICE_GROUP_BIT specifies that dependencies are
@@ -38,7 +38,7 @@ public enum VkDependencyFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_DEPENDENCY_DEVICE_GROUP_BIT = 2,
+    VK_DEPENDENCY_DEVICE_GROUP_BIT = 0x4,
 
     /// <summary>
     ///     VK_DEPENDENCY_VIEW_LOCAL_BIT specifies that a
@@ -49,7 +49,7 @@ public enum VkDependencyFlagBits
     ///     </a>
     ///     .
     /// </summary>
-    VK_DEPENDENCY_VIEW_LOCAL_BIT = 1,
+    VK_DEPENDENCY_VIEW_LOCAL_BIT = 0x2,
 
     /// <summary>
     ///     VK_DEPENDENCY_VIEW_LOCAL_BIT specifies that a

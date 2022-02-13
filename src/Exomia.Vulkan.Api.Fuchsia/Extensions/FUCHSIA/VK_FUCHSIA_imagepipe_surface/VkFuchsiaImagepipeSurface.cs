@@ -8,8 +8,6 @@
 
 #endregion
 
-global using static Exomia.Vulkan.Api.Fuchsia.VkFuchsiaImagepipeSurface;
-
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -88,7 +86,7 @@ public static unsafe class VkFuchsiaImagepipeSurface
     {
         fixed (delegate*<VkInstance, VkImagePipeSurfaceCreateInfoFUCHSIA*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateImagePipeSurfaceFUCHSIA = &vkCreateImagePipeSurfaceFUCHSIA)
         {
-            *pvkCreateImagePipeSurfaceFUCHSIA = (delegate*<VkInstance, VkImagePipeSurfaceCreateInfoFUCHSIA*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateImagePipeSurfaceFUCHSIA = (delegate*<VkInstance, VkImagePipeSurfaceCreateInfoFUCHSIA*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Api.Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6d49\u6761\u5065\u7069\u5365\u7275\u6166\u6563\u5546\u4843\u4953\u0041");
         }
     }

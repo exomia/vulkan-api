@@ -30,7 +30,7 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     ///     SCM_RIGHTS control message. It owns a reference to the underlying synchronization primitive represented by its
     ///     Vulkan semaphore object.
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_FD_BIT = 0,
+    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_FD_BIT = 0x1,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_WIN32_BIT specifies an NT handle that has only limited valid usage
@@ -38,7 +38,7 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     ///     CompareObjectHandles, GetHandleInformation, and SetHandleInformation. It owns a reference to the underlying
     ///     synchronization primitive represented by its Vulkan semaphore object.
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_WIN32_BIT = 1,
+    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_WIN32_BIT = 0x2,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT specifies a global share handle that has only limited
@@ -46,7 +46,7 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     ///     a reference to the underlying synchronization primitive represented by its Vulkan semaphore object, and will
     ///     therefore become invalid when all Vulkan semaphore objects associated with it are destroyed.
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT = 2,
+    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT = 0x4,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_D3D12_FENCE_BIT specifies an NT handle returned by
@@ -54,7 +54,7 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     ///     Direct3D 11 fence. It owns a reference to the underlying synchronization primitive associated with the Direct3D
     ///     fence.
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_D3D12_FENCE_BIT = 3,
+    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_D3D12_FENCE_BIT = 0x8,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SYNC_FD_BIT specifies a POSIX file descriptor handle to a Linux Sync File or
@@ -63,7 +63,7 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     ///     support importing this handle type must accept any type of sync or fence FD supported by the native system they are
     ///     running on.
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SYNC_FD_BIT = 4,
+    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SYNC_FD_BIT = 0x10,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_ZIRCON_EVENT_BIT_FUCHSIAspecifies a handle to a Zircon event object. It can
@@ -71,7 +71,7 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     ///     ZX_RIGHTS_BASIC and ZX_RIGHTS_SIGNAL rights. Vulkan on Fuchsia uses only the ZX_EVENT_SIGNALED bit when signaling
     ///     or waiting.
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_ZIRCON_EVENT_BIT_FUCHSIA = 7,
+    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_ZIRCON_EVENT_BIT_FUCHSIA = 0x80,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_5_BIT_NV<br />
@@ -80,7 +80,7 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalSemaphoreHandleTypeFlagBits
     ///     </a>
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_5_BIT_NV = 5,
+    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_5_BIT_NV = 0x20,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_6_BIT_NV<br />
@@ -89,7 +89,7 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalSemaphoreHandleTypeFlagBits
     ///     </a>
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_6_BIT_NV = 6,
+    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_6_BIT_NV = 0x40,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_D3D12_FENCE_BIT specifies an NT handle returned by

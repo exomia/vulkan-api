@@ -24,7 +24,7 @@ public enum VkSurfaceCounterFlagBitsEXT
     ///     VK_SURFACE_COUNTER_VBLANK_BIT_EXT specifies a counter incrementing once every time a vertical blanking period
     ///     occurs on the display associated with the surface.
     /// </summary>
-    VK_SURFACE_COUNTER_VBLANK_BIT_EXT = 0,
+    VK_SURFACE_COUNTER_VBLANK_BIT_EXT = 0x1,
 
     /// <summary>
     ///     VK_SURFACE_COUNTER_VBLANK_BIT_EXT specifies a counter incrementing once every time a vertical blanking period

@@ -24,13 +24,13 @@ public enum VkExternalFenceFeatureFlagBits
     ///     VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT specifies handles of this type can be exported from Vulkan fence
     ///     objects.
     /// </summary>
-    VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT = 0,
+    VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT = 0x1,
 
     /// <summary>
     ///     VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT specifies handles of this type can be imported to Vulkan fence
     ///     objects.
     /// </summary>
-    VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT = 1,
+    VK_EXTERNAL_FENCE_FEATURE_IMPORTABLE_BIT = 0x2,
 
     /// <summary>
     ///     VK_EXTERNAL_FENCE_FEATURE_EXPORTABLE_BIT specifies handles of this type can be exported from Vulkan fence

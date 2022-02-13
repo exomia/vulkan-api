@@ -18,10 +18,10 @@ using Microsoft.CodeAnalysis;
 namespace Exomia.Vulkan.Api.Xcb.SourceGenerator;
 
 /// <summary> A generator. </summary>
-[Generator]
-public class Generator : ISourceGenerator
+[Generator(LanguageNames.CSharp)]
+public class Generator : IIncrementalGenerator
 {
-    private static void AddLibraryFilesToContext(GeneratorPostInitializationContext context)
+    private static void AddLibraryFilesToContext(IncrementalGeneratorPostInitializationContext context)
     {
         Assembly            assembly                 = typeof(Generator).Assembly;
         IEnumerable<string> embeddedLibraryCodeFiles = assembly.GetManifestResourceNames().Where(x => x.EndsWith(".cs"));
@@ -43,11 +43,8 @@ public class Generator : ISourceGenerator
     }
 
     /// <inheritdoc />
-    public void Execute(GeneratorExecutionContext _) { }
-
-    /// <inheritdoc />
-    public void Initialize(GeneratorInitializationContext context)
+    public void Initialize(IncrementalGeneratorInitializationContext context)
     {
-        context.RegisterForPostInitialization(AddLibraryFilesToContext);
+        context.RegisterPostInitializationOutput(AddLibraryFilesToContext);
     }
 }

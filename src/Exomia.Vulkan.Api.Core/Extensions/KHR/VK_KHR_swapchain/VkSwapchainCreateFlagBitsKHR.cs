@@ -26,10 +26,10 @@ public enum VkSwapchainCreateFlagBitsKHR
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSwapchainCreateInfoKHR.html">VkImageSwapchainCreateInfoKHR</a>
     ///     set to this swapchain&#8217;s handle) must use VK_IMAGE_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT.
     /// </summary>
-    VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR = 0,
+    VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR = 0x1,
 
     /// <summary>VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR specifies that images created from the swapchain are protected images.</summary>
-    VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR = 1,
+    VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR = 0x2,
 
     /// <summary>
     ///     VK_SWAPCHAIN_CREATE_MUTABLE_FORMAT_BIT_KHR specifies that the images of the swapchain can be used to create a
@@ -41,5 +41,5 @@ public enum VkSwapchainCreateFlagBitsKHR
     ///     . In addition, this flag also specifies that the swapchain can be created with usage flags that are not supported
     ///     for the format the swapchain is created with but are supported for at least one of the allowed image view formats.
     /// </summary>
-    VK_SWAPCHAIN_CREATE_MUTABLE_FORMAT_BIT_KHR = 2
+    VK_SWAPCHAIN_CREATE_MUTABLE_FORMAT_BIT_KHR = 0x4
 }

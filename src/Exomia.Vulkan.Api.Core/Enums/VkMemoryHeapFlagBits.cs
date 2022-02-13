@@ -25,20 +25,20 @@ public enum VkMemoryHeapFlagBits
     ///     memory may have different performance characteristics than host-local memory, and may support different memory
     ///     property flags.
     /// </summary>
-    VK_MEMORY_HEAP_DEVICE_LOCAL_BIT = 0,
+    VK_MEMORY_HEAP_DEVICE_LOCAL_BIT = 0x1,
 
     /// <summary>
     ///     VK_MEMORY_HEAP_MULTI_INSTANCE_BIT specifies that in a logical device representing more than one physical
     ///     device, there is a per-physical device instance of the heap memory. By default, an allocation from such a heap will
     ///     be replicated to each physical device&#8217;s instance of the heap.
     /// </summary>
-    VK_MEMORY_HEAP_MULTI_INSTANCE_BIT = 1,
+    VK_MEMORY_HEAP_MULTI_INSTANCE_BIT = 0x2,
 
     /// <summary>
     ///     VK_MEMORY_HEAP_RESERVED_2_BIT_KHR<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkMemoryHeapFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkMemoryHeapFlagBits</a>
     /// </summary>
-    VK_MEMORY_HEAP_RESERVED_2_BIT_KHR = 2,
+    VK_MEMORY_HEAP_RESERVED_2_BIT_KHR = 0x4,
 
     /// <summary>
     ///     VK_MEMORY_HEAP_MULTI_INSTANCE_BIT specifies that in a logical device representing more than one physical

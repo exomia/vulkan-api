@@ -29,7 +29,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     set to 0 when specified in the second synchronization scope, but equivalent to VK_PIPELINE_STAGE_2_NONE in the
     ///     first scope.
     /// </summary>
-    VK_PIPELINE_STAGE_2_TOP_OF_PIPE_BIT = 0,
+    VK_PIPELINE_STAGE_2_TOP_OF_PIPE_BIT = 0x1,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT specifies the stage of the pipeline where indirect command parameters
@@ -40,25 +40,25 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT = 1,
+    VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT = 0x2,
 
     /// <summary>VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT is equivalent to the logical OR of:</summary>
-    VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT = 2,
+    VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT = 0x4,
 
     /// <summary>VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT specifies the vertex shader stage.</summary>
-    VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT = 3,
+    VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT = 0x8,
 
     /// <summary>VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT specifies the tessellation control shader stage.</summary>
-    VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT = 4,
+    VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT = 0x10,
 
     /// <summary>VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT specifies the tessellation evaluation shader stage.</summary>
-    VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT = 5,
+    VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT = 0x20,
 
     /// <summary>VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT specifies the geometry shader stage.</summary>
-    VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT = 6,
+    VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT = 0x40,
 
     /// <summary>VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT specifies the fragment shader stage.</summary>
-    VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT = 7,
+    VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT = 0x80,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where early fragment tests (depth
@@ -69,7 +69,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     for framebuffer attachments with a depth/stencil format.
     /// </summary>
-    VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT = 8,
+    VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT = 0x100,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where late fragment tests (depth
@@ -80,7 +80,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     for framebuffer attachments with a depth/stencil format.
     /// </summary>
-    VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT = 9,
+    VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT = 0x200,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT specifies the stage of the pipeline after blending where the final
@@ -92,13 +92,13 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     and multisample resolve operations for framebuffer attachments with a color or
     ///     depth/stencil format.
     /// </summary>
-    VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT = 10,
+    VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT = 0x400,
 
     /// <summary>VK_PIPELINE_STAGE_2_COMPUTE_SHADER_BIT specifies the compute shader stage.</summary>
-    VK_PIPELINE_STAGE_2_COMPUTE_SHADER_BIT = 11,
+    VK_PIPELINE_STAGE_2_COMPUTE_SHADER_BIT = 0x800,
 
     /// <summary>VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT is equivalent to specifying all of:</summary>
-    VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT = 12,
+    VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT = 0x1000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_BOTTOM_OF_PIPE_BIT is equivalent to VK_PIPELINE_STAGE_2_ALL_COMMANDS_BIT with
@@ -106,25 +106,25 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     set to 0 when specified in the first synchronization scope, but equivalent to VK_PIPELINE_STAGE_2_NONE in the
     ///     second scope.
     /// </summary>
-    VK_PIPELINE_STAGE_2_BOTTOM_OF_PIPE_BIT = 13,
+    VK_PIPELINE_STAGE_2_BOTTOM_OF_PIPE_BIT = 0x2000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_HOST_BIT specifies a pseudo-stage indicating execution on the host of reads/writes of
     ///     device memory. This stage is not invoked by any commands recorded in a command buffer.
     /// </summary>
-    VK_PIPELINE_STAGE_2_HOST_BIT = 14,
+    VK_PIPELINE_STAGE_2_HOST_BIT = 0x4000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is
     ///     equivalent to the logical OR of:
     /// </summary>
-    VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT = 15,
+    VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT = 0x8000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_ALL_COMMANDS_BIT specifies all operations performed by all commands supported on the queue
     ///     it is used with.
     /// </summary>
-    VK_PIPELINE_STAGE_2_ALL_COMMANDS_BIT = 16,
+    VK_PIPELINE_STAGE_2_ALL_COMMANDS_BIT = 0x10000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_COPY_BIT specifies the execution of all
@@ -133,21 +133,21 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyQueryPoolResults.html">vkCmdCopyQueryPoolResults</a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_2_COPY_BIT = 32,
+    VK_PIPELINE_STAGE_2_COPY_BIT = 0x100000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_RESOLVE_BIT specifies the execution of
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResolveImage.html">vkCmdResolveImage</a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_2_RESOLVE_BIT = 33,
+    VK_PIPELINE_STAGE_2_RESOLVE_BIT = 0x200000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_BLIT_BIT specifies the execution of
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage.html">vkCmdBlitImage</a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_2_BLIT_BIT = 34,
+    VK_PIPELINE_STAGE_2_BLIT_BIT = 0x400000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_CLEAR_BIT specifies the execution of
@@ -156,16 +156,16 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdClearAttachments.html">vkCmdClearAttachments</a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_2_CLEAR_BIT = 35,
+    VK_PIPELINE_STAGE_2_CLEAR_BIT = 0x800000000,
 
     /// <summary>VK_PIPELINE_STAGE_2_INDEX_INPUT_BIT specifies the stage of the pipeline where index buffers are consumed.</summary>
-    VK_PIPELINE_STAGE_2_INDEX_INPUT_BIT = 36,
+    VK_PIPELINE_STAGE_2_INDEX_INPUT_BIT = 0x1000000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_VERTEX_ATTRIBUTE_INPUT_BIT specifies the stage of the pipeline where vertex buffers are
     ///     consumed.
     /// </summary>
-    VK_PIPELINE_STAGE_2_VERTEX_ATTRIBUTE_INPUT_BIT = 37,
+    VK_PIPELINE_STAGE_2_VERTEX_ATTRIBUTE_INPUT_BIT = 0x2000000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT is equivalent to specifying all supported
@@ -176,7 +176,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     :
     /// </summary>
-    VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT = 38,
+    VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT = 0x4000000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_VIDEO_DECODE_BIT_KHR specifies the stage of the pipeline where
@@ -186,7 +186,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     are performed.
     /// </summary>
-    VK_PIPELINE_STAGE_2_VIDEO_DECODE_BIT_KHR = 26,
+    VK_PIPELINE_STAGE_2_VIDEO_DECODE_BIT_KHR = 0x4000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_VIDEO_ENCODE_BIT_KHR specifies the stage of the pipeline where
@@ -196,19 +196,19 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     are performed.
     /// </summary>
-    VK_PIPELINE_STAGE_2_VIDEO_ENCODE_BIT_KHR = 27,
+    VK_PIPELINE_STAGE_2_VIDEO_ENCODE_BIT_KHR = 0x8000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_BIT_EXT specifies the stage of the pipeline where vertex attribute
     ///     output values are written to the transform feedback buffers.
     /// </summary>
-    VK_PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_BIT_EXT = 24,
+    VK_PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_BIT_EXT = 0x1000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_CONDITIONAL_RENDERING_BIT_EXT specifies the stage of the pipeline where the predicate of
     ///     conditional rendering is consumed.
     /// </summary>
-    VK_PIPELINE_STAGE_2_CONDITIONAL_RENDERING_BIT_EXT = 18,
+    VK_PIPELINE_STAGE_2_CONDITIONAL_RENDERING_BIT_EXT = 0x40000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_COMMAND_PREPROCESS_BIT_NV specifies the stage of the pipeline where device-side generation
@@ -219,7 +219,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     is handled.
     /// </summary>
-    VK_PIPELINE_STAGE_2_COMMAND_PREPROCESS_BIT_NV = 17,
+    VK_PIPELINE_STAGE_2_COMMAND_PREPROCESS_BIT_NV = 0x20000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR    specifies the stage of the pipeline where the
@@ -236,7 +236,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     is read to determine the fragment shading rate for portions of a     rasterized primitive.
     /// </summary>
-    VK_PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 22,
+    VK_PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x400000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR specifies the execution of
@@ -246,10 +246,10 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR = 25,
+    VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR = 0x2000000,
 
     /// <summary>VK_PIPELINE_STAGE_2_RAY_TRACING_SHADER_BIT_KHR specifies the execution of the ray tracing shader stages.</summary>
-    VK_PIPELINE_STAGE_2_RAY_TRACING_SHADER_BIT_KHR = 21,
+    VK_PIPELINE_STAGE_2_RAY_TRACING_SHADER_BIT_KHR = 0x200000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT specifies the stage of the pipeline where the fragment density
@@ -260,28 +260,28 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT = 23,
+    VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT = 0x800000,
 
     /// <summary>VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV specifies the task shader stage.</summary>
-    VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV = 19,
+    VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV = 0x80000,
 
     /// <summary>VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV specifies the mesh shader stage.</summary>
-    VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV = 20,
+    VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV = 0x100000,
 
     /// <summary>VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI specifies the subpass shading shader stage.</summary>
-    VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI = 39,
+    VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI = 0x8000000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI specifies the stage of the pipeline where the invocation mask
     ///     image is read by the implementation to optimize the ray dispatch.
     /// </summary>
-    VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI = 40,
+    VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI = 0x10000000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_RESERVED_387_BIT_KHR<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
     /// </summary>
-    VK_PIPELINE_STAGE_2_RESERVED_387_BIT_KHR = 28,
+    VK_PIPELINE_STAGE_2_RESERVED_387_BIT_KHR = 0x10000000,
 
     /// <summary>VK_PIPELINE_STAGE_2_NONE specifies no stages of execution.</summary>
     VK_PIPELINE_STAGE_2_NONE_KHR = VK_PIPELINE_STAGE_2_NONE,

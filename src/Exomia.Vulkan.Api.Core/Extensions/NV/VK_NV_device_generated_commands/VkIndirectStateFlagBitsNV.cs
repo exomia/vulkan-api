@@ -25,5 +25,5 @@ public enum VkIndirectStateFlagBitsNV
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFrontFace.html">VkFrontFace</a>
     ///     rasterization state for subsequent draw operations.
     /// </summary>
-    VK_INDIRECT_STATE_FLAG_FRONTFACE_BIT_NV = 0
+    VK_INDIRECT_STATE_FLAG_FRONTFACE_BIT_NV = 0x1
 }

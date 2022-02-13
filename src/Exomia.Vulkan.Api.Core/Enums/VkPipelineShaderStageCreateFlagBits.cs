@@ -31,13 +31,13 @@ public enum VkPipelineShaderStageCreateFlagBits
     ///     </a>
     ///     may vary in the shader stage.
     /// </summary>
-    VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT = 0,
+    VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT = 0x1,
 
     /// <summary>
     ///     VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BITspecifies that the subgroup sizes must be launched
     ///     with all invocations active in the compute stage.
     /// </summary>
-    VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT = 1,
+    VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT = 0x2,
 
     /// <summary>
     ///     VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_2_BIT_NV<br />
@@ -46,7 +46,7 @@ public enum VkPipelineShaderStageCreateFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineShaderStageCreateFlagBits
     ///     </a>
     /// </summary>
-    VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_2_BIT_NV = 2,
+    VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_2_BIT_NV = 0x4,
 
     /// <summary>
     ///     VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_3_BIT_KHR<br />
@@ -55,7 +55,7 @@ public enum VkPipelineShaderStageCreateFlagBits
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineShaderStageCreateFlagBits
     ///     </a>
     /// </summary>
-    VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_3_BIT_KHR = 3,
+    VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_3_BIT_KHR = 0x8,
 
     /// <summary>
     ///     VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BITspecifies that the
