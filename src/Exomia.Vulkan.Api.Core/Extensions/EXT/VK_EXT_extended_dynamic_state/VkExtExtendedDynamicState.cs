@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtExtendedDynamicState;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -182,68 +184,68 @@ public static unsafe class VkExtExtendedDynamicState
         void> vkCmdSetStencilOpEXT = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkCullModeFlags, void>* pvkCmdSetCullModeEXT = &vkCmdSetCullModeEXT)
         {
-            *pvkCmdSetCullModeEXT = (delegate*<VkCommandBuffer, VkCullModeFlags, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u7543\u6c6c\u6f4d\u6564\u5845\u0054");
+            *pvkCmdSetCullModeEXT = (delegate*<VkCommandBuffer, VkCullModeFlags, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u5364\u7465\u7543\u6c6c\u6f4d\u6564\u5845\u0054");
         }
         fixed (delegate*<VkCommandBuffer, VkFrontFace, void>* pvkCmdSetFrontFaceEXT = &vkCmdSetFrontFaceEXT)
         {
-            *pvkCmdSetFrontFaceEXT = (delegate*<VkCommandBuffer, VkFrontFace, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u7246\u6e6f\u4674\u6361\u4565\u5458\u0000");
+            *pvkCmdSetFrontFaceEXT = (delegate*<VkCommandBuffer, VkFrontFace, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u5364\u7465\u7246\u6e6f\u4674\u6361\u4565\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkPrimitiveTopology, void>* pvkCmdSetPrimitiveTopologyEXT = &vkCmdSetPrimitiveTopologyEXT)
         {
             *pvkCmdSetPrimitiveTopologyEXT = (delegate*<VkCommandBuffer, VkPrimitiveTopology, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u7250\u6d69\u7469\u7669\u5465\u706f\u6c6f\u676f\u4579\u5458\u0000");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u7250\u6d69\u7469\u7669\u5465\u706f\u6c6f\u676f\u4579\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, uint, VkViewport*, void>* pvkCmdSetViewportWithCountEXT = &vkCmdSetViewportWithCountEXT)
         {
             *pvkCmdSetViewportWithCountEXT = (delegate*<VkCommandBuffer, uint, VkViewport*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6956\u7765\u6f70\u7472\u6957\u6874\u6f43\u6e75\u4574\u5458\u0000");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u6956\u7765\u6f70\u7472\u6957\u6874\u6f43\u6e75\u4574\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, uint, VkRect2D*, void>* pvkCmdSetScissorWithCountEXT = &vkCmdSetScissorWithCountEXT)
         {
             *pvkCmdSetScissorWithCountEXT = (delegate*<VkCommandBuffer, uint, VkRect2D*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6353\u7369\u6f73\u5772\u7469\u4368\u756f\u746e\u5845\u0054");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u6353\u7369\u6f73\u5772\u7469\u4368\u756f\u746e\u5845\u0054");
         }
         fixed (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, VkDeviceSize*, VkDeviceSize*, void>* pvkCmdBindVertexBuffers2EXT = &vkCmdBindVertexBuffers2EXT)
         {
             *pvkCmdBindVertexBuffers2EXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, VkDeviceSize*, VkDeviceSize*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4264\u6e69\u5664\u7265\u6574\u4278\u6675\u6566\u7372\u4532\u5458\u0000");
+                instance, device, "\u6b76\u6d43\u4264\u6e69\u5664\u7265\u6574\u4278\u6675\u6566\u7372\u4532\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetDepthTestEnableEXT = &vkCmdSetDepthTestEnableEXT)
         {
             *pvkCmdSetDepthTestEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u5468\u7365\u4574\u616e\u6c62\u4565\u5458\u0000");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u5468\u7365\u4574\u616e\u6c62\u4565\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetDepthWriteEnableEXT = &vkCmdSetDepthWriteEnableEXT)
         {
             *pvkCmdSetDepthWriteEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u5768\u6972\u6574\u6e45\u6261\u656c\u5845\u0054");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u5768\u6972\u6574\u6e45\u6261\u656c\u5845\u0054");
         }
         fixed (delegate*<VkCommandBuffer, VkCompareOp, void>* pvkCmdSetDepthCompareOpEXT = &vkCmdSetDepthCompareOpEXT)
         {
             *pvkCmdSetDepthCompareOpEXT = (delegate*<VkCommandBuffer, VkCompareOp, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4368\u6d6f\u6170\u6572\u704f\u5845\u0054");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4368\u6d6f\u6170\u6572\u704f\u5845\u0054");
         }
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetDepthBoundsTestEnableEXT = &vkCmdSetDepthBoundsTestEnableEXT)
         {
             *pvkCmdSetDepthBoundsTestEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4268\u756f\u646e\u5473\u7365\u4574\u616e\u6c62\u4565\u5458\u0000");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4268\u756f\u646e\u5473\u7365\u4574\u616e\u6c62\u4565\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetStencilTestEnableEXT = &vkCmdSetStencilTestEnableEXT)
         {
             *pvkCmdSetStencilTestEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u7453\u6e65\u6963\u546c\u7365\u4574\u616e\u6c62\u4565\u5458\u0000");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u7453\u6e65\u6963\u546c\u7365\u4574\u616e\u6c62\u4565\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkStencilFaceFlags, VkStencilOp, VkStencilOp, VkStencilOp, VkCompareOp, void>* pvkCmdSetStencilOpEXT = &vkCmdSetStencilOpEXT)
         {
-            *pvkCmdSetStencilOpEXT =
-                (delegate*<VkCommandBuffer, VkStencilFaceFlags, VkStencilOp, VkStencilOp, VkStencilOp, VkCompareOp, void>)Core.Vk.GetVkFunction(
-                    device, "\u6b76\u6d43\u5364\u7465\u7453\u6e65\u6963\u4f6c\u4570\u5458\u0000");
+            *pvkCmdSetStencilOpEXT = (delegate*<VkCommandBuffer, VkStencilFaceFlags, VkStencilOp, VkStencilOp, VkStencilOp, VkCompareOp, void>)Core.Vk.GetVkFunction(
+                instance, device, "\u6b76\u6d43\u5364\u7465\u7453\u6e65\u6963\u4f6c\u4570\u5458\u0000");
         }
     }
 }

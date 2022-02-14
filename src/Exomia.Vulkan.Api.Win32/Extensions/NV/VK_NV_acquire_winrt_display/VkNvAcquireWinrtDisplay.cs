@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Win32.VkNvAcquireWinrtDisplay;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -96,17 +98,19 @@ public static unsafe class VkNvAcquireWinrtDisplay
         VkResult> vkGetWinrtDisplayNV = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkPhysicalDevice, VkDisplayKHR, VkResult>* pvkAcquireWinrtDisplayNV = &vkAcquireWinrtDisplayNV)
         {
-            *pvkAcquireWinrtDisplayNV = (delegate*<VkPhysicalDevice, VkDisplayKHR, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6341\u7571\u7269\u5765\u6e69\u7472\u6944\u7073\u616c\u4e79\u0056");
+            *pvkAcquireWinrtDisplayNV = (delegate*<VkPhysicalDevice, VkDisplayKHR, VkResult>)Core.Vk.GetVkFunction(
+                instance, device, "\u6b76\u6341\u7571\u7269\u5765\u6e69\u7472\u6944\u7073\u616c\u4e79\u0056");
         }
         fixed (delegate*<VkPhysicalDevice, uint, VkDisplayKHR*, VkResult>* pvkGetWinrtDisplayNV = &vkGetWinrtDisplayNV)
         {
-            *pvkGetWinrtDisplayNV = (delegate*<VkPhysicalDevice, uint, VkDisplayKHR*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6547\u5774\u6e69\u7472\u6944\u7073\u616c\u4e79\u0056");
+            *pvkGetWinrtDisplayNV = (delegate*<VkPhysicalDevice, uint, VkDisplayKHR*, VkResult>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6547\u5774\u6e69\u7472\u6944\u7073\u616c\u4e79\u0056");
         }
     }
 }

@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrSamplerYcbcrConversion;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -79,20 +81,21 @@ public static unsafe class VkKhrSamplerYcbcrConversion
         void> vkDestroySamplerYcbcrConversionKHR = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkSamplerYcbcrConversionCreateInfo*, VkAllocationCallbacks*, VkSamplerYcbcrConversion*, VkResult>* pvkCreateSamplerYcbcrConversionKHR =
                    &vkCreateSamplerYcbcrConversionKHR)
         {
             *pvkCreateSamplerYcbcrConversionKHR = (delegate*<VkDevice, VkSamplerYcbcrConversionCreateInfo*, VkAllocationCallbacks*, VkSamplerYcbcrConversion*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u7243\u6165\u6574\u6153\u706d\u656c\u5972\u6263\u7263\u6f43\u766e\u7265\u6973\u6e6f\u484b\u0052");
+                instance, device, "\u6b76\u7243\u6165\u6574\u6153\u706d\u656c\u5972\u6263\u7263\u6f43\u766e\u7265\u6973\u6e6f\u484b\u0052");
         }
         fixed (delegate*<VkDevice, VkSamplerYcbcrConversion, VkAllocationCallbacks*, void>* pvkDestroySamplerYcbcrConversionKHR = &vkDestroySamplerYcbcrConversionKHR)
         {
             *pvkDestroySamplerYcbcrConversionKHR = (delegate*<VkDevice, VkSamplerYcbcrConversion, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6544\u7473\u6f72\u5379\u6d61\u6c70\u7265\u6359\u6362\u4372\u6e6f\u6576\u7372\u6f69\u4b6e\u5248\u0000");
+                instance, device, "\u6b76\u6544\u7473\u6f72\u5379\u6d61\u6c70\u7265\u6359\u6362\u4372\u6e6f\u6576\u7372\u6f69\u4b6e\u5248\u0000");
         }
     }
 }

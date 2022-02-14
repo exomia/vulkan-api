@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkIntelPerformanceQuery;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -278,55 +280,56 @@ public static unsafe class VkIntelPerformanceQuery
         VkResult> vkGetPerformanceParameterINTEL = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkInitializePerformanceApiInfoINTEL*, VkResult>* pvkInitializePerformanceApiINTEL = &vkInitializePerformanceApiINTEL)
         {
             *pvkInitializePerformanceApiINTEL = (delegate*<VkDevice, VkInitializePerformanceApiInfoINTEL*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6e49\u7469\u6169\u696c\u657a\u6550\u6672\u726f\u616d\u636e\u4165\u6970\u4e49\u4554\u004c");
+                instance, device, "\u6b76\u6e49\u7469\u6169\u696c\u657a\u6550\u6672\u726f\u616d\u636e\u4165\u6970\u4e49\u4554\u004c");
         }
         fixed (delegate*<VkDevice, void>* pvkUninitializePerformanceApiINTEL = &vkUninitializePerformanceApiINTEL)
         {
             *pvkUninitializePerformanceApiINTEL = (delegate*<VkDevice, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6e55\u6e69\u7469\u6169\u696c\u657a\u6550\u6672\u726f\u616d\u636e\u4165\u6970\u4e49\u4554\u004c");
+                instance, device, "\u6b76\u6e55\u6e69\u7469\u6169\u696c\u657a\u6550\u6672\u726f\u616d\u636e\u4165\u6970\u4e49\u4554\u004c");
         }
         fixed (delegate*<VkCommandBuffer, VkPerformanceMarkerInfoINTEL*, VkResult>* pvkCmdSetPerformanceMarkerINTEL = &vkCmdSetPerformanceMarkerINTEL)
         {
             *pvkCmdSetPerformanceMarkerINTEL = (delegate*<VkCommandBuffer, VkPerformanceMarkerInfoINTEL*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6550\u6672\u726f\u616d\u636e\u4d65\u7261\u656b\u4972\u544e\u4c45\u0000");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u6550\u6672\u726f\u616d\u636e\u4d65\u7261\u656b\u4972\u544e\u4c45\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkPerformanceStreamMarkerInfoINTEL*, VkResult>* pvkCmdSetPerformanceStreamMarkerINTEL = &vkCmdSetPerformanceStreamMarkerINTEL)
         {
             *pvkCmdSetPerformanceStreamMarkerINTEL = (delegate*<VkCommandBuffer, VkPerformanceStreamMarkerInfoINTEL*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6550\u6672\u726f\u616d\u636e\u5365\u7274\u6165\u4d6d\u7261\u656b\u4972\u544e\u4c45\u0000");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u6550\u6672\u726f\u616d\u636e\u5365\u7274\u6165\u4d6d\u7261\u656b\u4972\u544e\u4c45\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkPerformanceOverrideInfoINTEL*, VkResult>* pvkCmdSetPerformanceOverrideINTEL = &vkCmdSetPerformanceOverrideINTEL)
         {
             *pvkCmdSetPerformanceOverrideINTEL = (delegate*<VkCommandBuffer, VkPerformanceOverrideInfoINTEL*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6550\u6672\u726f\u616d\u636e\u4f65\u6576\u7272\u6469\u4965\u544e\u4c45\u0000");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u6550\u6672\u726f\u616d\u636e\u4f65\u6576\u7272\u6469\u4965\u544e\u4c45\u0000");
         }
         fixed (delegate*<VkDevice, VkPerformanceConfigurationAcquireInfoINTEL*, VkPerformanceConfigurationINTEL*, VkResult>* pvkAcquirePerformanceConfigurationINTEL =
                    &vkAcquirePerformanceConfigurationINTEL)
         {
             *pvkAcquirePerformanceConfigurationINTEL = (delegate*<VkDevice, VkPerformanceConfigurationAcquireInfoINTEL*, VkPerformanceConfigurationINTEL*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6341\u7571\u7269\u5065\u7265\u6f66\u6d72\u6e61\u6563\u6f43\u666e\u6769\u7275\u7461\u6f69\u496e\u544e\u4c45\u0000");
+                instance, device, "\u6b76\u6341\u7571\u7269\u5065\u7265\u6f66\u6d72\u6e61\u6563\u6f43\u666e\u6769\u7275\u7461\u6f69\u496e\u544e\u4c45\u0000");
         }
         fixed (delegate*<VkDevice, VkPerformanceConfigurationINTEL, VkResult>* pvkReleasePerformanceConfigurationINTEL = &vkReleasePerformanceConfigurationINTEL)
         {
             *pvkReleasePerformanceConfigurationINTEL = (delegate*<VkDevice, VkPerformanceConfigurationINTEL, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6552\u656c\u7361\u5065\u7265\u6f66\u6d72\u6e61\u6563\u6f43\u666e\u6769\u7275\u7461\u6f69\u496e\u544e\u4c45\u0000");
+                instance, device, "\u6b76\u6552\u656c\u7361\u5065\u7265\u6f66\u6d72\u6e61\u6563\u6f43\u666e\u6769\u7275\u7461\u6f69\u496e\u544e\u4c45\u0000");
         }
         fixed (delegate*<VkQueue, VkPerformanceConfigurationINTEL, VkResult>* pvkQueueSetPerformanceConfigurationINTEL = &vkQueueSetPerformanceConfigurationINTEL)
         {
             *pvkQueueSetPerformanceConfigurationINTEL = (delegate*<VkQueue, VkPerformanceConfigurationINTEL, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u7551\u7565\u5365\u7465\u6550\u6672\u726f\u616d\u636e\u4365\u6e6f\u6966\u7567\u6172\u6974\u6e6f\u4e49\u4554\u004c");
+                instance, device, "\u6b76\u7551\u7565\u5365\u7465\u6550\u6672\u726f\u616d\u636e\u4365\u6e6f\u6966\u7567\u6172\u6974\u6e6f\u4e49\u4554\u004c");
         }
         fixed (delegate*<VkDevice, VkPerformanceParameterTypeINTEL, VkPerformanceValueINTEL*, VkResult>* pvkGetPerformanceParameterINTEL = &vkGetPerformanceParameterINTEL)
         {
             *pvkGetPerformanceParameterINTEL = (delegate*<VkDevice, VkPerformanceParameterTypeINTEL, VkPerformanceValueINTEL*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u5074\u7265\u6f66\u6d72\u6e61\u6563\u6150\u6172\u656d\u6574\u4972\u544e\u4c45\u0000");
+                instance, device, "\u6b76\u6547\u5074\u7265\u6f66\u6d72\u6e61\u6563\u6150\u6172\u656d\u6574\u4972\u544e\u4c45\u0000");
         }
     }
 }

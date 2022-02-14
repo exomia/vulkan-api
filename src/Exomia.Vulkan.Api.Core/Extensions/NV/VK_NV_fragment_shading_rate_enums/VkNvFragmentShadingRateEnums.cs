@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkNvFragmentShadingRateEnums;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -72,14 +74,15 @@ public static unsafe class VkNvFragmentShadingRateEnums
         void> vkCmdSetFragmentShadingRateEnumNV = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkFragmentShadingRateNV, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>* pvkCmdSetFragmentShadingRateEnumNV = &vkCmdSetFragmentShadingRateEnumNV)
         {
             *pvkCmdSetFragmentShadingRateEnumNV = (delegate*<VkCommandBuffer, VkFragmentShadingRateNV, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u7246\u6761\u656d\u746e\u6853\u6461\u6e69\u5267\u7461\u4565\u756e\u4e6d\u0056");
+                instance, device, "\u6b76\u6d43\u5364\u7465\u7246\u6761\u656d\u746e\u6853\u6461\u6e69\u5267\u7461\u4565\u756e\u4e6d\u0056");
         }
     }
 }

@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrCopyCommands2;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -105,35 +107,37 @@ public static unsafe class VkKhrCopyCommands2
         void> vkCmdResolveImage2KHR = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkCopyBufferInfo2*, void>* pvkCmdCopyBuffer2KHR = &vkCmdCopyBuffer2KHR)
         {
-            *pvkCmdCopyBuffer2KHR = (delegate*<VkCommandBuffer, VkCopyBufferInfo2*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4364\u706f\u4279\u6675\u6566\u3272\u484b\u0052");
+            *pvkCmdCopyBuffer2KHR = (delegate*<VkCommandBuffer, VkCopyBufferInfo2*, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u4364\u706f\u4279\u6675\u6566\u3272\u484b\u0052");
         }
         fixed (delegate*<VkCommandBuffer, VkCopyImageInfo2*, void>* pvkCmdCopyImage2KHR = &vkCmdCopyImage2KHR)
         {
-            *pvkCmdCopyImage2KHR = (delegate*<VkCommandBuffer, VkCopyImageInfo2*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4364\u706f\u4979\u616d\u6567\u4b32\u5248\u0000");
+            *pvkCmdCopyImage2KHR = (delegate*<VkCommandBuffer, VkCopyImageInfo2*, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u4364\u706f\u4979\u616d\u6567\u4b32\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkCopyBufferToImageInfo2*, void>* pvkCmdCopyBufferToImage2KHR = &vkCmdCopyBufferToImage2KHR)
         {
             *pvkCmdCopyBufferToImage2KHR = (delegate*<VkCommandBuffer, VkCopyBufferToImageInfo2*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4364\u706f\u4279\u6675\u6566\u5472\u496f\u616d\u6567\u4b32\u5248\u0000");
+                instance, device, "\u6b76\u6d43\u4364\u706f\u4279\u6675\u6566\u5472\u496f\u616d\u6567\u4b32\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkCopyImageToBufferInfo2*, void>* pvkCmdCopyImageToBuffer2KHR = &vkCmdCopyImageToBuffer2KHR)
         {
             *pvkCmdCopyImageToBuffer2KHR = (delegate*<VkCommandBuffer, VkCopyImageToBufferInfo2*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4364\u706f\u4979\u616d\u6567\u6f54\u7542\u6666\u7265\u4b32\u5248\u0000");
+                instance, device, "\u6b76\u6d43\u4364\u706f\u4979\u616d\u6567\u6f54\u7542\u6666\u7265\u4b32\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkBlitImageInfo2*, void>* pvkCmdBlitImage2KHR = &vkCmdBlitImage2KHR)
         {
-            *pvkCmdBlitImage2KHR = (delegate*<VkCommandBuffer, VkBlitImageInfo2*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4264\u696c\u4974\u616d\u6567\u4b32\u5248\u0000");
+            *pvkCmdBlitImage2KHR = (delegate*<VkCommandBuffer, VkBlitImageInfo2*, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u4264\u696c\u4974\u616d\u6567\u4b32\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkResolveImageInfo2*, void>* pvkCmdResolveImage2KHR = &vkCmdResolveImage2KHR)
         {
-            *pvkCmdResolveImage2KHR = (delegate*<VkCommandBuffer, VkResolveImageInfo2*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5264\u7365\u6c6f\u6576\u6d49\u6761\u3265\u484b\u0052");
+            *pvkCmdResolveImage2KHR = (delegate*<VkCommandBuffer, VkResolveImageInfo2*, void>)Core.Vk.GetVkFunction(
+                instance, device, "\u6b76\u6d43\u5264\u7365\u6c6f\u6576\u6d49\u6761\u3265\u484b\u0052");
         }
     }
 }

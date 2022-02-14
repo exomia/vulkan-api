@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Macos.VkMvkMacosSurface;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -84,7 +86,7 @@ public static unsafe class VkMvkMacosSurface
     {
         fixed (delegate*<VkInstance, VkMacOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateMacOSSurfaceMVK = &vkCreateMacOSSurfaceMVK)
         {
-            *pvkCreateMacOSSurfaceMVK = (delegate*<VkInstance, VkMacOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateMacOSSurfaceMVK = (delegate*<VkInstance, VkMacOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Api.Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u614d\u4f63\u5353\u7275\u6166\u6563\u564d\u004b");
         }
     }

@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtPrivateData;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -94,29 +96,30 @@ public static unsafe class VkExtPrivateData
         void> vkGetPrivateDataEXT = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkPrivateDataSlotCreateInfo*, VkAllocationCallbacks*, VkPrivateDataSlot*, VkResult>* pvkCreatePrivateDataSlotEXT = &vkCreatePrivateDataSlotEXT)
         {
             *pvkCreatePrivateDataSlotEXT = (delegate*<VkDevice, VkPrivateDataSlotCreateInfo*, VkAllocationCallbacks*, VkPrivateDataSlot*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u7243\u6165\u6574\u7250\u7669\u7461\u4465\u7461\u5361\u6f6c\u4574\u5458\u0000");
+                instance, device, "\u6b76\u7243\u6165\u6574\u7250\u7669\u7461\u4465\u7461\u5361\u6f6c\u4574\u5458\u0000");
         }
         fixed (delegate*<VkDevice, VkPrivateDataSlot, VkAllocationCallbacks*, void>* pvkDestroyPrivateDataSlotEXT = &vkDestroyPrivateDataSlotEXT)
         {
             *pvkDestroyPrivateDataSlotEXT = (delegate*<VkDevice, VkPrivateDataSlot, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6544\u7473\u6f72\u5079\u6972\u6176\u6574\u6144\u6174\u6c53\u746f\u5845\u0054");
+                instance, device, "\u6b76\u6544\u7473\u6f72\u5079\u6972\u6176\u6574\u6144\u6174\u6c53\u746f\u5845\u0054");
         }
         fixed (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong, VkResult>* pvkSetPrivateDataEXT = &vkSetPrivateDataEXT)
         {
-            *pvkSetPrivateDataEXT =
-                (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6553\u5074\u6972\u6176\u6574\u6144\u6174\u5845\u0054");
+            *pvkSetPrivateDataEXT = (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong, VkResult>)Core.Vk.GetVkFunction(
+                instance, device, "\u6b76\u6553\u5074\u6972\u6176\u6574\u6144\u6174\u5845\u0054");
         }
         fixed (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void>* pvkGetPrivateDataEXT = &vkGetPrivateDataEXT)
         {
-            *pvkGetPrivateDataEXT =
-                (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6547\u5074\u6972\u6176\u6574\u6144\u6174\u5845\u0054");
+            *pvkGetPrivateDataEXT = (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void>)Core.Vk.GetVkFunction(
+                instance, device, "\u6b76\u6547\u5074\u6972\u6176\u6574\u6144\u6174\u5845\u0054");
         }
     }
 }

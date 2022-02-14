@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrCreateRenderpass2;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -91,28 +93,30 @@ public static unsafe class VkKhrCreateRenderpass2
         void> vkCmdEndRenderPass2KHR = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkRenderPassCreateInfo2*, VkAllocationCallbacks*, VkRenderPass*, VkResult>* pvkCreateRenderPass2KHR = &vkCreateRenderPass2KHR)
         {
             *pvkCreateRenderPass2KHR = (delegate*<VkDevice, VkRenderPassCreateInfo2*, VkAllocationCallbacks*, VkRenderPass*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u7243\u6165\u6574\u6552\u646e\u7265\u6150\u7373\u4b32\u5248\u0000");
+                instance, device, "\u6b76\u7243\u6165\u6574\u6552\u646e\u7265\u6150\u7373\u4b32\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkRenderPassBeginInfo*, VkSubpassBeginInfo*, void>* pvkCmdBeginRenderPass2KHR = &vkCmdBeginRenderPass2KHR)
         {
             *pvkCmdBeginRenderPass2KHR = (delegate*<VkCommandBuffer, VkRenderPassBeginInfo*, VkSubpassBeginInfo*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4264\u6765\u6e69\u6552\u646e\u7265\u6150\u7373\u4b32\u5248\u0000");
+                instance, device, "\u6b76\u6d43\u4264\u6765\u6e69\u6552\u646e\u7265\u6150\u7373\u4b32\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkSubpassBeginInfo*, VkSubpassEndInfo*, void>* pvkCmdNextSubpass2KHR = &vkCmdNextSubpass2KHR)
         {
             *pvkCmdNextSubpass2KHR = (delegate*<VkCommandBuffer, VkSubpassBeginInfo*, VkSubpassEndInfo*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4e64\u7865\u5374\u6275\u6170\u7373\u4b32\u5248\u0000");
+                instance, device, "\u6b76\u6d43\u4e64\u7865\u5374\u6275\u6170\u7373\u4b32\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkSubpassEndInfo*, void>* pvkCmdEndRenderPass2KHR = &vkCmdEndRenderPass2KHR)
         {
-            *pvkCmdEndRenderPass2KHR = (delegate*<VkCommandBuffer, VkSubpassEndInfo*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4564\u646e\u6552\u646e\u7265\u6150\u7373\u4b32\u5248\u0000");
+            *pvkCmdEndRenderPass2KHR = (delegate*<VkCommandBuffer, VkSubpassEndInfo*, void>)Core.Vk.GetVkFunction(
+                instance, device, "\u6b76\u6d43\u4564\u646e\u6552\u646e\u7265\u6150\u7373\u4b32\u5248\u0000");
         }
     }
 }

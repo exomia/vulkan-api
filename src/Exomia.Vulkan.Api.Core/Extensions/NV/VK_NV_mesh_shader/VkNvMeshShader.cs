@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkNvMeshShader;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -106,23 +108,24 @@ public static unsafe class VkNvMeshShader
         void> vkCmdDrawMeshTasksIndirectCountNV = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, uint, uint, void>* pvkCmdDrawMeshTasksNV = &vkCmdDrawMeshTasksNV)
         {
-            *pvkCmdDrawMeshTasksNV = (delegate*<VkCommandBuffer, uint, uint, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4464\u6172\u4d77\u7365\u5468\u7361\u736b\u564e\u0000");
+            *pvkCmdDrawMeshTasksNV = (delegate*<VkCommandBuffer, uint, uint, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u4464\u6172\u4d77\u7365\u5468\u7361\u736b\u564e\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, uint, uint, void>* pvkCmdDrawMeshTasksIndirectNV = &vkCmdDrawMeshTasksIndirectNV)
         {
             *pvkCmdDrawMeshTasksIndirectNV = (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, uint, uint, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4464\u6172\u4d77\u7365\u5468\u7361\u736b\u6e49\u6964\u6572\u7463\u564e\u0000");
+                instance, device, "\u6b76\u6d43\u4464\u6172\u4d77\u7365\u5468\u7361\u736b\u6e49\u6964\u6572\u7463\u564e\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, VkBuffer, VkDeviceSize, uint, uint, void>* pvkCmdDrawMeshTasksIndirectCountNV = &vkCmdDrawMeshTasksIndirectCountNV)
         {
             *pvkCmdDrawMeshTasksIndirectCountNV = (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, VkBuffer, VkDeviceSize, uint, uint, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4464\u6172\u4d77\u7365\u5468\u7361\u736b\u6e49\u6964\u6572\u7463\u6f43\u6e75\u4e74\u0056");
+                instance, device, "\u6b76\u6d43\u4464\u6172\u4d77\u7365\u5468\u7361\u736b\u6e49\u6964\u6572\u7463\u6f43\u6e75\u4e74\u0056");
         }
     }
 }

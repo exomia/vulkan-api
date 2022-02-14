@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Ios.VkMvkIosSurface;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -84,7 +86,7 @@ public static unsafe class VkMvkIosSurface
     {
         fixed (delegate*<VkInstance, VkIOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateIOSSurfaceMVK = &vkCreateIOSSurfaceMVK)
         {
-            *pvkCreateIOSSurfaceMVK = (delegate*<VkInstance, VkIOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateIOSSurfaceMVK = (delegate*<VkInstance, VkIOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Api.Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u4f49\u5353\u7275\u6166\u6563\u564d\u004b");
         }
     }

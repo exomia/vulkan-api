@@ -205,4 +205,98 @@ public readonly struct VkVersion
     {
         return a._version >= b._version;
     }
+
+    /// <summary>
+    ///     Equality operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator ==(VkVersion a, uint b)
+    {
+        return a._version == b;
+    }
+
+    /// <summary>
+    ///     Inequality operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator !=(VkVersion a, uint b)
+    {
+        return a._version != b;
+    }
+
+    /// <summary>
+    ///     Less-than comparison operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator <(VkVersion a, uint b)
+    {
+        return a._version < b;
+    }
+
+    /// <summary>
+    ///     Greater-than comparison operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator >(VkVersion a, uint b)
+    {
+        return a._version > b;
+    }
+
+    /// <summary>
+    ///     Less-than-or-equal comparison operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator <=(VkVersion a, uint b)
+    {
+        return a._version <= b;
+    }
+
+    /// <summary>
+    ///     Greater-than-or-equal comparison operator.
+    /// </summary>
+    /// <param name="a"> The first instance to compare. </param>
+    /// <param name="b"> The second instance to compare. </param>
+    /// <returns>
+    ///     The result of the operation.
+    /// </returns>
+    public static bool operator >=(VkVersion a, uint b)
+    {
+        return a._version >= b;
+    }
+
+    /// <summary> Implicit cast that converts the given uint to a VkVersion. </summary>
+    /// <param name="version"> The version. </param>
+    /// <returns> The result of the operation. </returns>
+    public static implicit operator VkVersion(uint version)
+    {
+        return new VkVersion(version);
+    }
+
+    /// <summary> Implicit cast that converts the given VkVersion to a uint. </summary>
+    /// <param name="version"> The version. </param>
+    /// <returns> The result of the operation. </returns>
+    public static implicit operator uint(VkVersion version)
+    {
+        return version._version;
+    }
 }

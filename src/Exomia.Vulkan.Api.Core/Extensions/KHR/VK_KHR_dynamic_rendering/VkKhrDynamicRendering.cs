@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrDynamicRendering;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -65,17 +67,19 @@ public static unsafe class VkKhrDynamicRendering
         void> vkCmdEndRenderingKHR = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkRenderingInfo*, void>* pvkCmdBeginRenderingKHR = &vkCmdBeginRenderingKHR)
         {
-            *pvkCmdBeginRenderingKHR = (delegate*<VkCommandBuffer, VkRenderingInfo*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4264\u6765\u6e69\u6552\u646e\u7265\u6e69\u4b67\u5248\u0000");
+            *pvkCmdBeginRenderingKHR = (delegate*<VkCommandBuffer, VkRenderingInfo*, void>)Core.Vk.GetVkFunction(
+                instance, device, "\u6b76\u6d43\u4264\u6765\u6e69\u6552\u646e\u7265\u6e69\u4b67\u5248\u0000");
         }
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdEndRenderingKHR = &vkCmdEndRenderingKHR)
         {
-            *pvkCmdEndRenderingKHR = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4564\u646e\u6552\u646e\u7265\u6e69\u4b67\u5248\u0000");
+            *pvkCmdEndRenderingKHR = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u4564\u646e\u6552\u646e\u7265\u6e69\u4b67\u5248\u0000");
         }
     }
 }

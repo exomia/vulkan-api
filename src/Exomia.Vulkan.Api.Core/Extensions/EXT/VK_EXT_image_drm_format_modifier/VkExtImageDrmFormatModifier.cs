@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtImageDrmFormatModifier;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -78,14 +80,15 @@ public static unsafe class VkExtImageDrmFormatModifier
         VkResult> vkGetImageDrmFormatModifierPropertiesEXT = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkImage, VkImageDrmFormatModifierPropertiesEXT*, VkResult>* pvkGetImageDrmFormatModifierPropertiesEXT = &vkGetImageDrmFormatModifierPropertiesEXT)
         {
             *pvkGetImageDrmFormatModifierPropertiesEXT = (delegate*<VkDevice, VkImage, VkImageDrmFormatModifierPropertiesEXT*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u4974\u616d\u6567\u7244\u466d\u726f\u616d\u4d74\u646f\u6669\u6569\u5072\u6f72\u6570\u7472\u6569\u4573\u5458\u0000");
+                instance, device, "\u6b76\u6547\u4974\u616d\u6567\u7244\u466d\u726f\u616d\u4d74\u646f\u6669\u6569\u5072\u6f72\u6570\u7472\u6569\u4573\u5458\u0000");
         }
     }
 }

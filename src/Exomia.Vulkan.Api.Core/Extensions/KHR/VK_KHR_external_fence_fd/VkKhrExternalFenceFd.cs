@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrExternalFenceFd;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -96,17 +98,18 @@ public static unsafe class VkKhrExternalFenceFd
         VkResult> vkGetFenceFdKHR = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkImportFenceFdInfoKHR*, VkResult>* pvkImportFenceFdKHR = &vkImportFenceFdKHR)
         {
-            *pvkImportFenceFdKHR = (delegate*<VkDevice, VkImportFenceFdInfoKHR*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6d49\u6f70\u7472\u6546\u636e\u4665\u4b64\u5248\u0000");
+            *pvkImportFenceFdKHR = (delegate*<VkDevice, VkImportFenceFdInfoKHR*, VkResult>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d49\u6f70\u7472\u6546\u636e\u4665\u4b64\u5248\u0000");
         }
         fixed (delegate*<VkDevice, VkFenceGetFdInfoKHR*, int*, VkResult>* pvkGetFenceFdKHR = &vkGetFenceFdKHR)
         {
-            *pvkGetFenceFdKHR = (delegate*<VkDevice, VkFenceGetFdInfoKHR*, int*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6547\u4674\u6e65\u6563\u6446\u484b\u0052");
+            *pvkGetFenceFdKHR = (delegate*<VkDevice, VkFenceGetFdInfoKHR*, int*, VkResult>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6547\u4674\u6e65\u6563\u6446\u484b\u0052");
         }
     }
 }

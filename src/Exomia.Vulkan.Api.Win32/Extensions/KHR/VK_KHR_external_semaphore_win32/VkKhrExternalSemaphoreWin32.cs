@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Win32.VkKhrExternalSemaphoreWin32;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -103,19 +105,20 @@ public static unsafe class VkKhrExternalSemaphoreWin32
         VkResult> vkGetSemaphoreWin32HandleKHR = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult>* pvkImportSemaphoreWin32HandleKHR = &vkImportSemaphoreWin32HandleKHR)
         {
             *pvkImportSemaphoreWin32HandleKHR = (delegate*<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d49\u6f70\u7472\u6553\u616d\u6870\u726f\u5765\u6e69\u3233\u6148\u646e\u656c\u484b\u0052");
+                instance, device, "\u6b76\u6d49\u6f70\u7472\u6553\u616d\u6870\u726f\u5765\u6e69\u3233\u6148\u646e\u656c\u484b\u0052");
         }
         fixed (delegate*<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, HANDLE*, VkResult>* pvkGetSemaphoreWin32HandleKHR = &vkGetSemaphoreWin32HandleKHR)
         {
             *pvkGetSemaphoreWin32HandleKHR = (delegate*<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, HANDLE*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u5374\u6d65\u7061\u6f68\u6572\u6957\u336e\u4832\u6e61\u6c64\u4b65\u5248\u0000");
+                instance, device, "\u6b76\u6547\u5374\u6d65\u7061\u6f68\u6572\u6957\u336e\u4832\u6e61\u6c64\u4b65\u5248\u0000");
         }
     }
 }

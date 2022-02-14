@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Fuchsia.VkFuchsiaExternalMemory;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -100,21 +102,22 @@ public static unsafe class VkFuchsiaExternalMemory
         VkResult> vkGetMemoryZirconHandlePropertiesFUCHSIA = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkMemoryGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>* pvkGetMemoryZirconHandleFUCHSIA = &vkGetMemoryZirconHandleFUCHSIA)
         {
             *pvkGetMemoryZirconHandleFUCHSIA = (delegate*<VkDevice, VkMemoryGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>)Api.Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u4d74\u6d65\u726f\u5a79\u7269\u6f63\u486e\u6e61\u6c64\u4665\u4355\u5348\u4149\u0000");
+                instance, device, "\u6b76\u6547\u4d74\u6d65\u726f\u5a79\u7269\u6f63\u486e\u6e61\u6c64\u4665\u4355\u5348\u4149\u0000");
         }
         fixed (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, zx_handle_t, VkMemoryZirconHandlePropertiesFUCHSIA*, VkResult>* pvkGetMemoryZirconHandlePropertiesFUCHSIA =
                    &vkGetMemoryZirconHandlePropertiesFUCHSIA)
         {
             *pvkGetMemoryZirconHandlePropertiesFUCHSIA =
                 (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, zx_handle_t, VkMemoryZirconHandlePropertiesFUCHSIA*, VkResult>)Api.Core.Vk.GetVkFunction(
-                    device, "\u6b76\u6547\u4d74\u6d65\u726f\u5a79\u7269\u6f63\u486e\u6e61\u6c64\u5065\u6f72\u6570\u7472\u6569\u4673\u4355\u5348\u4149\u0000");
+                    instance, device, "\u6b76\u6547\u4d74\u6d65\u726f\u5a79\u7269\u6f63\u486e\u6e61\u6c64\u5065\u6f72\u6570\u7472\u6569\u4673\u4355\u5348\u4149\u0000");
         }
     }
 }

@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtConditionalRendering;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -74,19 +76,20 @@ public static unsafe class VkExtConditionalRendering
         void> vkCmdEndConditionalRenderingEXT = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkConditionalRenderingBeginInfoEXT*, void>* pvkCmdBeginConditionalRenderingEXT = &vkCmdBeginConditionalRenderingEXT)
         {
             *pvkCmdBeginConditionalRenderingEXT = (delegate*<VkCommandBuffer, VkConditionalRenderingBeginInfoEXT*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4264\u6765\u6e69\u6f43\u646e\u7469\u6f69\u616e\u526c\u6e65\u6564\u6972\u676e\u5845\u0054");
+                instance, device, "\u6b76\u6d43\u4264\u6765\u6e69\u6f43\u646e\u7469\u6f69\u616e\u526c\u6e65\u6564\u6972\u676e\u5845\u0054");
         }
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdEndConditionalRenderingEXT = &vkCmdEndConditionalRenderingEXT)
         {
             *pvkCmdEndConditionalRenderingEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4564\u646e\u6f43\u646e\u7469\u6f69\u616e\u526c\u6e65\u6564\u6972\u676e\u5845\u0054");
+                instance, device, "\u6b76\u6d43\u4564\u646e\u6f43\u646e\u7469\u6f69\u616e\u526c\u6e65\u6564\u6972\u676e\u5845\u0054");
         }
     }
 }

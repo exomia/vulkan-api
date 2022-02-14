@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtBufferDeviceAddress;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -58,14 +60,15 @@ public static unsafe class VkExtBufferDeviceAddress
         VkDeviceAddress> vkGetBufferDeviceAddressEXT = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkBufferDeviceAddressInfo*, VkDeviceAddress>* pvkGetBufferDeviceAddressEXT = &vkGetBufferDeviceAddressEXT)
         {
             *pvkGetBufferDeviceAddressEXT = (delegate*<VkDevice, VkBufferDeviceAddressInfo*, VkDeviceAddress>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u4274\u6675\u6566\u4472\u7665\u6369\u4165\u6464\u6572\u7373\u5845\u0054");
+                instance, device, "\u6b76\u6547\u4274\u6675\u6566\u4472\u7665\u6369\u4165\u6464\u6572\u7373\u5845\u0054");
         }
     }
 }

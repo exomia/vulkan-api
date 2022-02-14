@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtDebugMarker;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -135,33 +137,34 @@ public static unsafe class VkExtDebugMarker
         void> vkCmdDebugMarkerInsertEXT = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkDebugMarkerObjectTagInfoEXT*, VkResult>* pvkDebugMarkerSetObjectTagEXT = &vkDebugMarkerSetObjectTagEXT)
         {
             *pvkDebugMarkerSetObjectTagEXT = (delegate*<VkDevice, VkDebugMarkerObjectTagInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u6154\u4567\u5458\u0000");
+                instance, device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u6154\u4567\u5458\u0000");
         }
         fixed (delegate*<VkDevice, VkDebugMarkerObjectNameInfoEXT*, VkResult>* pvkDebugMarkerSetObjectNameEXT = &vkDebugMarkerSetObjectNameEXT)
         {
             *pvkDebugMarkerSetObjectNameEXT = (delegate*<VkDevice, VkDebugMarkerObjectNameInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u614e\u656d\u5845\u0054");
+                instance, device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u614e\u656d\u5845\u0054");
         }
         fixed (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>* pvkCmdDebugMarkerBeginEXT = &vkCmdDebugMarkerBeginEXT)
         {
             *pvkCmdDebugMarkerBeginEXT = (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6542\u6967\u456e\u5458\u0000");
+                instance, device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6542\u6967\u456e\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdDebugMarkerEndEXT = &vkCmdDebugMarkerEndEXT)
         {
-            *pvkCmdDebugMarkerEndEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e45\u4564\u5458\u0000");
+            *pvkCmdDebugMarkerEndEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e45\u4564\u5458\u0000");
         }
         fixed (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>* pvkCmdDebugMarkerInsertEXT = &vkCmdDebugMarkerInsertEXT)
         {
             *pvkCmdDebugMarkerInsertEXT = (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e49\u6573\u7472\u5845\u0054");
+                instance, device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e49\u6573\u7472\u5845\u0054");
         }
     }
 }

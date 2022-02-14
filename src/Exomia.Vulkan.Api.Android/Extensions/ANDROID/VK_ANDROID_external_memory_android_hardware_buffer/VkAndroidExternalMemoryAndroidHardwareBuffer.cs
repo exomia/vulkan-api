@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Android.VkAndroidExternalMemoryAndroidHardwareBuffer;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -111,19 +113,20 @@ public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
         VkResult> vkGetMemoryAndroidHardwareBufferANDROID = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, AHardwareBuffer*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult>* pvkGetAndroidHardwareBufferPropertiesANDROID = &vkGetAndroidHardwareBufferPropertiesANDROID)
         {
             *pvkGetAndroidHardwareBufferPropertiesANDROID = (delegate*<VkDevice, AHardwareBuffer*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u4174\u646e\u6f72\u6469\u6148\u6472\u6177\u6572\u7542\u6666\u7265\u7250\u706f\u7265\u6974\u7365\u4e41\u5244\u494f\u0044");
+                instance, device, "\u6b76\u6547\u4174\u646e\u6f72\u6469\u6148\u6472\u6177\u6572\u7542\u6666\u7265\u7250\u706f\u7265\u6974\u7365\u4e41\u5244\u494f\u0044");
         }
         fixed (delegate*<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, AHardwareBuffer**, VkResult>* pvkGetMemoryAndroidHardwareBufferANDROID = &vkGetMemoryAndroidHardwareBufferANDROID)
         {
             *pvkGetMemoryAndroidHardwareBufferANDROID = (delegate*<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, AHardwareBuffer**, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u4d74\u6d65\u726f\u4179\u646e\u6f72\u6469\u6148\u6472\u6177\u6572\u7542\u6666\u7265\u4e41\u5244\u494f\u0044");
+                instance, device, "\u6b76\u6547\u4d74\u6d65\u726f\u4179\u646e\u6f72\u6469\u6148\u6472\u6177\u6572\u7542\u6666\u7265\u4e41\u5244\u494f\u0044");
         }
     }
 }

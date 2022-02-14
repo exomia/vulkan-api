@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Win32.VkKhrExternalFenceWin32;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -97,19 +99,20 @@ public static unsafe class VkKhrExternalFenceWin32
         VkResult> vkGetFenceWin32HandleKHR = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, VkImportFenceWin32HandleInfoKHR*, VkResult>* pvkImportFenceWin32HandleKHR = &vkImportFenceWin32HandleKHR)
         {
             *pvkImportFenceWin32HandleKHR = (delegate*<VkDevice, VkImportFenceWin32HandleInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d49\u6f70\u7472\u6546\u636e\u5765\u6e69\u3233\u6148\u646e\u656c\u484b\u0052");
+                instance, device, "\u6b76\u6d49\u6f70\u7472\u6546\u636e\u5765\u6e69\u3233\u6148\u646e\u656c\u484b\u0052");
         }
         fixed (delegate*<VkDevice, VkFenceGetWin32HandleInfoKHR*, HANDLE*, VkResult>* pvkGetFenceWin32HandleKHR = &vkGetFenceWin32HandleKHR)
         {
             *pvkGetFenceWin32HandleKHR = (delegate*<VkDevice, VkFenceGetWin32HandleInfoKHR*, HANDLE*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u4674\u6e65\u6563\u6957\u336e\u4832\u6e61\u6c64\u4b65\u5248\u0000");
+                instance, device, "\u6b76\u6547\u4674\u6e65\u6563\u6957\u336e\u4832\u6e61\u6c64\u4b65\u5248\u0000");
         }
     }
 }

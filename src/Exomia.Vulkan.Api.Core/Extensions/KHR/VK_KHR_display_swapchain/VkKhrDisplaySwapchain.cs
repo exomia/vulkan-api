@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrDisplaySwapchain;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -82,14 +84,15 @@ public static unsafe class VkKhrDisplaySwapchain
         VkResult> vkCreateSharedSwapchainsKHR = null;
 
     /// <summary> Loads all function pointer for this extension. </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    public static void Load(VkInstance instance, VkDevice device)
     {
         fixed (delegate*<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>* pvkCreateSharedSwapchainsKHR = &vkCreateSharedSwapchainsKHR)
         {
             *pvkCreateSharedSwapchainsKHR = (delegate*<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u7243\u6165\u6574\u6853\u7261\u6465\u7753\u7061\u6863\u6961\u736e\u484b\u0052");
+                instance, device, "\u6b76\u7243\u6165\u6574\u6853\u7261\u6465\u7753\u7061\u6863\u6961\u736e\u484b\u0052");
         }
     }
 }
