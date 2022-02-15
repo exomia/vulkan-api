@@ -6,6 +6,11 @@ on:
         description: 'version suffix'     
         required: true
         default: '.x'
+      prerelease:
+        description: 'prerelease'     
+        type: boolean
+        required: true
+        default: true
 concurrency: 
   group: 'release-main'
 jobs:
@@ -218,7 +223,8 @@ jobs:
             repo: context.repo.repo,
             tag_name: 'v${{ needs.get-release-info.outputs.release-version }}${{ github.event.inputs.release-suffix }}',
             generate_release_notes: true,
-            target_commitish: '${{ github.ref_name }}'
+            target_commitish: '${{ github.ref_name }}',
+            prerelease: ${{ github.event.inputs.prerelease }}
           });
   discord-announcement:
     needs: [create-release]
