@@ -1,7 +1,2 @@
 # These owners will be the default owners for everything in the repo.
-@baetz-daniel
-
-# code owners
-analyzer/* @baetz-daniel @DanielBaumert
-src/* @baetz-daniel @DanielBaumert
-tests/* @baetz-daniel @DanielBaumert
+@exomia/vulkan-api
