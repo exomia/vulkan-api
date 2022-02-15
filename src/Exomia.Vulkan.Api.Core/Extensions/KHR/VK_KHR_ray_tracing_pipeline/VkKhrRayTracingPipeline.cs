@@ -268,52 +268,82 @@ public static unsafe class VkKhrRayTracingPipeline
         uint /*pipelineStackSize*/,
         void> vkCmdSetRayTracingPipelineStackSizeKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdTraceRaysKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCreateRayTracingPipelinesKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetRayTracingShaderGroupHandlesKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetRayTracingCaptureReplayShaderGroupHandlesKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdTraceRaysIndirectKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetRayTracingShaderGroupStackSizeKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetRayTracingPipelineStackSizeKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, uint, uint, uint, void
                >* pvkCmdTraceRaysKHR = &vkCmdTraceRaysKHR)
         {
             *pvkCmdTraceRaysKHR =
                 (delegate*<VkCommandBuffer, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, uint, uint, uint,
-                    void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u5464\u6172\u6563\u6152\u7379\u484b\u0052");
+                    void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5464\u6172\u6563\u6152\u7379\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkPipelineCache, uint, VkRayTracingPipelineCreateInfoKHR*, VkAllocationCallbacks*, VkPipeline*, VkResult>* pvkCreateRayTracingPipelinesKHR =
                    &vkCreateRayTracingPipelinesKHR)
         {
             *pvkCreateRayTracingPipelinesKHR =
                 (delegate*<VkDevice, VkDeferredOperationKHR, VkPipelineCache, uint, VkRayTracingPipelineCreateInfoKHR*, VkAllocationCallbacks*, VkPipeline*, VkResult>)Core.Vk.GetVkFunction(
-                    instance, device, "\u6b76\u7243\u6165\u6574\u6152\u5479\u6172\u6963\u676e\u6950\u6570\u696c\u656e\u4b73\u5248\u0000");
+                    device, "\u6b76\u7243\u6165\u6574\u6152\u5479\u6172\u6963\u676e\u6950\u6570\u696c\u656e\u4b73\u5248\u0000");
         }
+
         fixed (delegate*<VkDevice, VkPipeline, uint, uint, nuint, void*, VkResult>* pvkGetRayTracingShaderGroupHandlesKHR = &vkGetRayTracingShaderGroupHandlesKHR)
         {
             *pvkGetRayTracingShaderGroupHandlesKHR = (delegate*<VkDevice, VkPipeline, uint, uint, nuint, void*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u5274\u7961\u7254\u6361\u6e69\u5367\u6168\u6564\u4772\u6f72\u7075\u6148\u646e\u656c\u4b73\u5248\u0000");
+                device, "\u6b76\u6547\u5274\u7961\u7254\u6361\u6e69\u5367\u6168\u6564\u4772\u6f72\u7075\u6148\u646e\u656c\u4b73\u5248\u0000");
         }
+
         fixed (delegate*<VkDevice, VkPipeline, uint, uint, nuint, void*, VkResult>* pvkGetRayTracingCaptureReplayShaderGroupHandlesKHR = &vkGetRayTracingCaptureReplayShaderGroupHandlesKHR)
         {
             *pvkGetRayTracingCaptureReplayShaderGroupHandlesKHR = (delegate*<VkDevice, VkPipeline, uint, uint, nuint, void*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u5274\u7961\u7254\u6361\u6e69\u4367\u7061\u7574\u6572\u6552\u6c70\u7961\u6853\u6461\u7265\u7247\u756f\u4870\u6e61\u6c64\u7365\u484b\u0052");
+                device, "\u6b76\u6547\u5274\u7961\u7254\u6361\u6e69\u4367\u7061\u7574\u6572\u6552\u6c70\u7961\u6853\u6461\u7265\u7247\u756f\u4870\u6e61\u6c64\u7365\u484b\u0052");
         }
+
         fixed (delegate*<VkCommandBuffer, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkDeviceAddress, void>
                * pvkCmdTraceRaysIndirectKHR = &vkCmdTraceRaysIndirectKHR)
         {
             *pvkCmdTraceRaysIndirectKHR =
                 (delegate*<VkCommandBuffer, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkStridedDeviceAddressRegionKHR*, VkDeviceAddress,
-                    void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u5464\u6172\u6563\u6152\u7379\u6e49\u6964\u6572\u7463\u484b\u0052");
+                    void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5464\u6172\u6563\u6152\u7379\u6e49\u6964\u6572\u7463\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, VkPipeline, uint, VkShaderGroupShaderKHR, VkDeviceSize>* pvkGetRayTracingShaderGroupStackSizeKHR = &vkGetRayTracingShaderGroupStackSizeKHR)
         {
             *pvkGetRayTracingShaderGroupStackSizeKHR = (delegate*<VkDevice, VkPipeline, uint, VkShaderGroupShaderKHR, VkDeviceSize>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u5274\u7961\u7254\u6361\u6e69\u5367\u6168\u6564\u4772\u6f72\u7075\u7453\u6361\u536b\u7a69\u4b65\u5248\u0000");
+                device, "\u6b76\u6547\u5274\u7961\u7254\u6361\u6e69\u5367\u6168\u6564\u4772\u6f72\u7075\u7453\u6361\u536b\u7a69\u4b65\u5248\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, void>* pvkCmdSetRayTracingPipelineStackSizeKHR = &vkCmdSetRayTracingPipelineStackSizeKHR)
         {
             *pvkCmdSetRayTracingPipelineStackSizeKHR = (delegate*<VkCommandBuffer, uint, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u6152\u5479\u6172\u6963\u676e\u6950\u6570\u696c\u656e\u7453\u6361\u536b\u7a69\u4b65\u5248\u0000");
+                device, "\u6b76\u6d43\u5364\u7465\u6152\u5479\u6172\u6963\u676e\u6950\u6570\u696c\u656e\u7453\u6361\u536b\u7a69\u4b65\u5248\u0000");
         }
     }
 }

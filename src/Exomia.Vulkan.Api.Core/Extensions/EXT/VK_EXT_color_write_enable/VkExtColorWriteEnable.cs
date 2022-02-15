@@ -64,16 +64,22 @@ public static unsafe class VkExtColorWriteEnable
         VkBool32* /*pColorWriteEnables*/,
         void> vkCmdSetColorWriteEnableEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdSetColorWriteEnableEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, uint, VkBool32*, void>* pvkCmdSetColorWriteEnableEXT = &vkCmdSetColorWriteEnableEXT)
         {
             *pvkCmdSetColorWriteEnableEXT = (delegate*<VkCommandBuffer, uint, VkBool32*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u6f43\u6f6c\u5772\u6972\u6574\u6e45\u6261\u656c\u5845\u0054");
+                device, "\u6b76\u6d43\u5364\u7465\u6f43\u6f6c\u5772\u6972\u6574\u6e45\u6261\u656c\u5845\u0054");
         }
     }
 }

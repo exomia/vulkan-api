@@ -64,16 +64,21 @@ public static unsafe class VkExtLineRasterization
         ushort /*lineStipplePattern*/,
         void> vkCmdSetLineStippleEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdSetLineStippleEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, uint, ushort, void>* pvkCmdSetLineStippleEXT = &vkCmdSetLineStippleEXT)
         {
-            *pvkCmdSetLineStippleEXT = (delegate*<VkCommandBuffer, uint, ushort, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u694c\u656e\u7453\u7069\u6c70\u4565\u5458\u0000");
+            *pvkCmdSetLineStippleEXT = (delegate*<VkCommandBuffer, uint, ushort, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u694c\u656e\u7453\u7069\u6c70\u4565\u5458\u0000");
         }
     }
 }

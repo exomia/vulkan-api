@@ -145,31 +145,49 @@ public static unsafe class VkExtValidationCache
         void* /*pData*/,
         VkResult> vkGetValidationCacheDataEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateValidationCacheEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkDestroyValidationCacheEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkMergeValidationCachesEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetValidationCacheDataEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkValidationCacheCreateInfoEXT*, VkAllocationCallbacks*, VkValidationCacheEXT*, VkResult>* pvkCreateValidationCacheEXT = &vkCreateValidationCacheEXT)
         {
             *pvkCreateValidationCacheEXT = (delegate*<VkDevice, VkValidationCacheCreateInfoEXT*, VkAllocationCallbacks*, VkValidationCacheEXT*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u7243\u6165\u6574\u6156\u696c\u6164\u6974\u6e6f\u6143\u6863\u4565\u5458\u0000");
+                device, "\u6b76\u7243\u6165\u6574\u6156\u696c\u6164\u6974\u6e6f\u6143\u6863\u4565\u5458\u0000");
         }
+
         fixed (delegate*<VkDevice, VkValidationCacheEXT, VkAllocationCallbacks*, void>* pvkDestroyValidationCacheEXT = &vkDestroyValidationCacheEXT)
         {
             *pvkDestroyValidationCacheEXT = (delegate*<VkDevice, VkValidationCacheEXT, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6544\u7473\u6f72\u5679\u6c61\u6469\u7461\u6f69\u436e\u6361\u6568\u5845\u0054");
+                device, "\u6b76\u6544\u7473\u6f72\u5679\u6c61\u6469\u7461\u6f69\u436e\u6361\u6568\u5845\u0054");
         }
+
         fixed (delegate*<VkDevice, VkValidationCacheEXT, uint, VkValidationCacheEXT*, VkResult>* pvkMergeValidationCachesEXT = &vkMergeValidationCachesEXT)
         {
             *pvkMergeValidationCachesEXT = (delegate*<VkDevice, VkValidationCacheEXT, uint, VkValidationCacheEXT*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u654d\u6772\u5665\u6c61\u6469\u7461\u6f69\u436e\u6361\u6568\u4573\u5458\u0000");
+                device, "\u6b76\u654d\u6772\u5665\u6c61\u6469\u7461\u6f69\u436e\u6361\u6568\u4573\u5458\u0000");
         }
+
         fixed (delegate*<VkDevice, VkValidationCacheEXT, nuint*, void*, VkResult>* pvkGetValidationCacheDataEXT = &vkGetValidationCacheDataEXT)
         {
             *pvkGetValidationCacheDataEXT = (delegate*<VkDevice, VkValidationCacheEXT, nuint*, void*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u5674\u6c61\u6469\u7461\u6f69\u436e\u6361\u6568\u6144\u6174\u5845\u0054");
+                device, "\u6b76\u6547\u5674\u6c61\u6469\u7461\u6f69\u436e\u6361\u6568\u6144\u6174\u5845\u0054");
         }
     }
 }

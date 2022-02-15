@@ -109,35 +109,57 @@ public static unsafe class VkExtExtendedDynamicState2
         VkBool32 /*primitiveRestartEnable*/,
         void> vkCmdSetPrimitiveRestartEnableEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdSetPatchControlPointsEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetRasterizerDiscardEnableEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetDepthBiasEnableEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetLogicOpEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetPrimitiveRestartEnableEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, uint, void>* pvkCmdSetPatchControlPointsEXT = &vkCmdSetPatchControlPointsEXT)
         {
             *pvkCmdSetPatchControlPointsEXT = (delegate*<VkCommandBuffer, uint, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u6150\u6374\u4368\u6e6f\u7274\u6c6f\u6f50\u6e69\u7374\u5845\u0054");
+                device, "\u6b76\u6d43\u5364\u7465\u6150\u6374\u4368\u6e6f\u7274\u6c6f\u6f50\u6e69\u7374\u5845\u0054");
         }
+
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetRasterizerDiscardEnableEXT = &vkCmdSetRasterizerDiscardEnableEXT)
         {
             *pvkCmdSetRasterizerDiscardEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u6152\u7473\u7265\u7a69\u7265\u6944\u6373\u7261\u4564\u616e\u6c62\u4565\u5458\u0000");
+                device, "\u6b76\u6d43\u5364\u7465\u6152\u7473\u7265\u7a69\u7265\u6944\u6373\u7261\u4564\u616e\u6c62\u4565\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetDepthBiasEnableEXT = &vkCmdSetDepthBiasEnableEXT)
         {
             *pvkCmdSetDepthBiasEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4268\u6169\u4573\u616e\u6c62\u4565\u5458\u0000");
+                device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4268\u6169\u4573\u616e\u6c62\u4565\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, VkLogicOp, void>* pvkCmdSetLogicOpEXT = &vkCmdSetLogicOpEXT)
         {
-            *pvkCmdSetLogicOpEXT = (delegate*<VkCommandBuffer, VkLogicOp, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u5364\u7465\u6f4c\u6967\u4f63\u4570\u5458\u0000");
+            *pvkCmdSetLogicOpEXT = (delegate*<VkCommandBuffer, VkLogicOp, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u6f4c\u6967\u4f63\u4570\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetPrimitiveRestartEnableEXT = &vkCmdSetPrimitiveRestartEnableEXT)
         {
             *pvkCmdSetPrimitiveRestartEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u7250\u6d69\u7469\u7669\u5265\u7365\u6174\u7472\u6e45\u6261\u656c\u5845\u0054");
+                device, "\u6b76\u6d43\u5364\u7465\u7250\u6d69\u7469\u7669\u5265\u7365\u6174\u7472\u6e45\u6261\u656c\u5845\u0054");
         }
     }
 }

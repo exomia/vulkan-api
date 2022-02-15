@@ -78,9 +78,16 @@ public static unsafe class VkExtMetalSurface
         VkSurfaceKHR* /*pSurface*/,
         VkResult> vkCreateMetalSurfaceEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateMetalSurfaceEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkInstance, VkMetalSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateMetalSurfaceEXT = &vkCreateMetalSurfaceEXT)

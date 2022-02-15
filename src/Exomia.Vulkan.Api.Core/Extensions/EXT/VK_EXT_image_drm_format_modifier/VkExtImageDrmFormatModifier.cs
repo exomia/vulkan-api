@@ -79,16 +79,22 @@ public static unsafe class VkExtImageDrmFormatModifier
         VkImageDrmFormatModifierPropertiesEXT* /*pProperties*/,
         VkResult> vkGetImageDrmFormatModifierPropertiesEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetImageDrmFormatModifierPropertiesEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkImage, VkImageDrmFormatModifierPropertiesEXT*, VkResult>* pvkGetImageDrmFormatModifierPropertiesEXT = &vkGetImageDrmFormatModifierPropertiesEXT)
         {
             *pvkGetImageDrmFormatModifierPropertiesEXT = (delegate*<VkDevice, VkImage, VkImageDrmFormatModifierPropertiesEXT*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u4974\u616d\u6567\u7244\u466d\u726f\u616d\u4d74\u646f\u6669\u6569\u5072\u6f72\u6570\u7472\u6569\u4573\u5458\u0000");
+                device, "\u6b76\u6547\u4974\u616d\u6567\u7244\u466d\u726f\u616d\u4d74\u646f\u6669\u6569\u5072\u6f72\u6570\u7472\u6569\u4573\u5458\u0000");
         }
     }
 }

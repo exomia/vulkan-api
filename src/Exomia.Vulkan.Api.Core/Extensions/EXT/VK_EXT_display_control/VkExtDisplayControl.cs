@@ -156,31 +156,49 @@ public static unsafe class VkExtDisplayControl
         ulong* /*pCounterValue*/,
         VkResult> vkGetSwapchainCounterEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkDisplayPowerControlEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkRegisterDeviceEventEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkRegisterDisplayEventEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetSwapchainCounterEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkDisplayKHR, VkDisplayPowerInfoEXT*, VkResult>* pvkDisplayPowerControlEXT = &vkDisplayPowerControlEXT)
         {
             *pvkDisplayPowerControlEXT = (delegate*<VkDevice, VkDisplayKHR, VkDisplayPowerInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6944\u7073\u616c\u5079\u776f\u7265\u6f43\u746e\u6f72\u456c\u5458\u0000");
+                device, "\u6b76\u6944\u7073\u616c\u5079\u776f\u7265\u6f43\u746e\u6f72\u456c\u5458\u0000");
         }
+
         fixed (delegate*<VkDevice, VkDeviceEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>* pvkRegisterDeviceEventEXT = &vkRegisterDeviceEventEXT)
         {
             *pvkRegisterDeviceEventEXT = (delegate*<VkDevice, VkDeviceEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6552\u6967\u7473\u7265\u6544\u6976\u6563\u7645\u6e65\u4574\u5458\u0000");
+                device, "\u6b76\u6552\u6967\u7473\u7265\u6544\u6976\u6563\u7645\u6e65\u4574\u5458\u0000");
         }
+
         fixed (delegate*<VkDevice, VkDisplayKHR, VkDisplayEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>* pvkRegisterDisplayEventEXT = &vkRegisterDisplayEventEXT)
         {
             *pvkRegisterDisplayEventEXT = (delegate*<VkDevice, VkDisplayKHR, VkDisplayEventInfoEXT*, VkAllocationCallbacks*, VkFence*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6552\u6967\u7473\u7265\u6944\u7073\u616c\u4579\u6576\u746e\u5845\u0054");
+                device, "\u6b76\u6552\u6967\u7473\u7265\u6944\u7073\u616c\u4579\u6576\u746e\u5845\u0054");
         }
+
         fixed (delegate*<VkDevice, VkSwapchainKHR, VkSurfaceCounterFlagBitsEXT, ulong*, VkResult>* pvkGetSwapchainCounterEXT = &vkGetSwapchainCounterEXT)
         {
             *pvkGetSwapchainCounterEXT = (delegate*<VkDevice, VkSwapchainKHR, VkSurfaceCounterFlagBitsEXT, ulong*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u5374\u6177\u6370\u6168\u6e69\u6f43\u6e75\u6574\u4572\u5458\u0000");
+                device, "\u6b76\u6547\u5374\u6177\u6370\u6168\u6e69\u6f43\u6e75\u6574\u4572\u5458\u0000");
         }
     }
 }

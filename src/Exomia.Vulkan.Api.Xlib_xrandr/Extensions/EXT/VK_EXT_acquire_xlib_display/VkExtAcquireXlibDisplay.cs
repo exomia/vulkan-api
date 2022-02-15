@@ -96,9 +96,19 @@ public static unsafe class VkExtAcquireXlibDisplay
         VkDisplayKHR* /*pDisplay*/,
         VkResult> vkGetRandROutputDisplayEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkAcquireXlibDisplayEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetRandROutputDisplayEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, Display*, VkDisplayKHR, VkResult>* pvkAcquireXlibDisplayEXT = &vkAcquireXlibDisplayEXT)
@@ -106,6 +116,7 @@ public static unsafe class VkExtAcquireXlibDisplay
             *pvkAcquireXlibDisplayEXT = (delegate*<VkPhysicalDevice, Display*, VkDisplayKHR, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6341\u7571\u7269\u5865\u696c\u4462\u7369\u6c70\u7961\u5845\u0054");
         }
+
         fixed (delegate*<VkPhysicalDevice, Display*, RROutput, VkDisplayKHR*, VkResult>* pvkGetRandROutputDisplayEXT = &vkGetRandROutputDisplayEXT)
         {
             *pvkGetRandROutputDisplayEXT = (delegate*<VkPhysicalDevice, Display*, RROutput, VkDisplayKHR*, VkResult>)Core.Vk.GetVkFunction(

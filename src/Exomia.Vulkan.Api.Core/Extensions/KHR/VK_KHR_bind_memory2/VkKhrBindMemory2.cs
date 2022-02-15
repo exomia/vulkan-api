@@ -68,21 +68,30 @@ public static unsafe class VkKhrBindMemory2
         VkBindImageMemoryInfo* /*pBindInfos*/,
         VkResult> vkBindImageMemory2KHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkBindBufferMemory2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkBindImageMemory2KHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, uint, VkBindBufferMemoryInfo*, VkResult>* pvkBindBufferMemory2KHR = &vkBindBufferMemory2KHR)
         {
             *pvkBindBufferMemory2KHR = (delegate*<VkDevice, uint, VkBindBufferMemoryInfo*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6942\u646e\u7542\u6666\u7265\u654d\u6f6d\u7972\u4b32\u5248\u0000");
+                device, "\u6b76\u6942\u646e\u7542\u6666\u7265\u654d\u6f6d\u7972\u4b32\u5248\u0000");
         }
+
         fixed (delegate*<VkDevice, uint, VkBindImageMemoryInfo*, VkResult>* pvkBindImageMemory2KHR = &vkBindImageMemory2KHR)
         {
-            *pvkBindImageMemory2KHR = (delegate*<VkDevice, uint, VkBindImageMemoryInfo*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6942\u646e\u6d49\u6761\u4d65\u6d65\u726f\u3279\u484b\u0052");
+            *pvkBindImageMemory2KHR = (delegate*<VkDevice, uint, VkBindImageMemoryInfo*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6942\u646e\u6d49\u6761\u4d65\u6d65\u726f\u3279\u484b\u0052");
         }
     }
 }

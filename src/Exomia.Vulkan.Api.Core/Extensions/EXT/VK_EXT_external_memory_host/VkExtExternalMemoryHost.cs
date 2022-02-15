@@ -82,16 +82,22 @@ public static unsafe class VkExtExternalMemoryHost
         VkMemoryHostPointerPropertiesEXT* /*pMemoryHostPointerProperties*/,
         VkResult> vkGetMemoryHostPointerPropertiesEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetMemoryHostPointerPropertiesEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, void*, VkMemoryHostPointerPropertiesEXT*, VkResult>* pvkGetMemoryHostPointerPropertiesEXT = &vkGetMemoryHostPointerPropertiesEXT)
         {
             *pvkGetMemoryHostPointerPropertiesEXT = (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, void*, VkMemoryHostPointerPropertiesEXT*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u4d74\u6d65\u726f\u4879\u736f\u5074\u696f\u746e\u7265\u7250\u706f\u7265\u6974\u7365\u5845\u0054");
+                device, "\u6b76\u6547\u4d74\u6d65\u726f\u4879\u736f\u5074\u696f\u746e\u7265\u7250\u706f\u7265\u6974\u7365\u5845\u0054");
         }
     }
 }

@@ -67,16 +67,22 @@ public static unsafe class VkNvClipSpaceWScaling
         VkViewportWScalingNV* /*pViewportWScalings*/,
         void> vkCmdSetViewportWScalingNV = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdSetViewportWScalingNV</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, uint, uint, VkViewportWScalingNV*, void>* pvkCmdSetViewportWScalingNV = &vkCmdSetViewportWScalingNV)
         {
             *pvkCmdSetViewportWScalingNV = (delegate*<VkCommandBuffer, uint, uint, VkViewportWScalingNV*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u6956\u7765\u6f70\u7472\u5357\u6163\u696c\u676e\u564e\u0000");
+                device, "\u6b76\u6d43\u5364\u7465\u6956\u7765\u6f70\u7472\u5357\u6163\u696c\u676e\u564e\u0000");
         }
     }
 }

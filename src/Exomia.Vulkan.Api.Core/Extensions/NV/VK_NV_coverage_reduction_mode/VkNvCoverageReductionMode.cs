@@ -80,17 +80,23 @@ public static unsafe class VkNvCoverageReductionMode
         VkFramebufferMixedSamplesCombinationNV* /*pCombinations*/,
         VkResult> vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
-    /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, uint*, VkFramebufferMixedSamplesCombinationNV*, VkResult>* pvkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV =
                    &vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV)
         {
             *pvkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV = (delegate*<VkPhysicalDevice, uint*, VkFramebufferMixedSamplesCombinationNV*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device,
+                instance,
                 "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7075\u6f70\u7472\u6465\u7246\u6d61\u6265\u6675\u6566\u4d72\u7869\u6465\u6153\u706d\u656c\u4373\u6d6f\u6962\u616e\u6974\u6e6f\u4e73\u0056");
         }
     }

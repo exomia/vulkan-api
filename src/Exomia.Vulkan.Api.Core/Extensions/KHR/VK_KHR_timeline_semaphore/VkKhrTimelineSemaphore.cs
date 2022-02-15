@@ -80,25 +80,38 @@ public static unsafe class VkKhrTimelineSemaphore
         VkSemaphoreSignalInfo* /*pSignalInfo*/,
         VkResult> vkSignalSemaphoreKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetSemaphoreCounterValueKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkWaitSemaphoresKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkSignalSemaphoreKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkSemaphore, ulong*, VkResult>* pvkGetSemaphoreCounterValueKHR = &vkGetSemaphoreCounterValueKHR)
         {
             *pvkGetSemaphoreCounterValueKHR = (delegate*<VkDevice, VkSemaphore, ulong*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u5374\u6d65\u7061\u6f68\u6572\u6f43\u6e75\u6574\u5672\u6c61\u6575\u484b\u0052");
+                device, "\u6b76\u6547\u5374\u6d65\u7061\u6f68\u6572\u6f43\u6e75\u6574\u5672\u6c61\u6575\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, VkSemaphoreWaitInfo*, ulong, VkResult>* pvkWaitSemaphoresKHR = &vkWaitSemaphoresKHR)
         {
-            *pvkWaitSemaphoresKHR = (delegate*<VkDevice, VkSemaphoreWaitInfo*, ulong, VkResult>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6157\u7469\u6553\u616d\u6870\u726f\u7365\u484b\u0052");
+            *pvkWaitSemaphoresKHR = (delegate*<VkDevice, VkSemaphoreWaitInfo*, ulong, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6157\u7469\u6553\u616d\u6870\u726f\u7365\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, VkSemaphoreSignalInfo*, VkResult>* pvkSignalSemaphoreKHR = &vkSignalSemaphoreKHR)
         {
-            *pvkSignalSemaphoreKHR = (delegate*<VkDevice, VkSemaphoreSignalInfo*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6953\u6e67\u6c61\u6553\u616d\u6870\u726f\u4b65\u5248\u0000");
+            *pvkSignalSemaphoreKHR = (delegate*<VkDevice, VkSemaphoreSignalInfo*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6953\u6e67\u6c61\u6553\u616d\u6870\u726f\u4b65\u5248\u0000");
         }
     }
 }

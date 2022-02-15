@@ -130,9 +130,22 @@ public static unsafe class VkExtDebugReport
         byte* /*pMessage*/,
         void> vkDebugReportMessageEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateDebugReportCallbackEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkDestroyDebugReportCallbackEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkDebugReportMessageEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkInstance, VkDebugReportCallbackCreateInfoEXT*, VkAllocationCallbacks*, VkDebugReportCallbackEXT*, VkResult>* pvkCreateDebugReportCallbackEXT =
@@ -141,11 +154,13 @@ public static unsafe class VkExtDebugReport
             *pvkCreateDebugReportCallbackEXT = (delegate*<VkInstance, VkDebugReportCallbackCreateInfoEXT*, VkAllocationCallbacks*, VkDebugReportCallbackEXT*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6544\u7562\u5267\u7065\u726f\u4374\u6c61\u626c\u6361\u456b\u5458\u0000");
         }
+
         fixed (delegate*<VkInstance, VkDebugReportCallbackEXT, VkAllocationCallbacks*, void>* pvkDestroyDebugReportCallbackEXT = &vkDestroyDebugReportCallbackEXT)
         {
             *pvkDestroyDebugReportCallbackEXT = (delegate*<VkInstance, VkDebugReportCallbackEXT, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6544\u7473\u6f72\u4479\u6265\u6775\u6552\u6f70\u7472\u6143\u6c6c\u6162\u6b63\u5845\u0054");
         }
+
         fixed (delegate*<VkInstance, VkDebugReportFlagsEXT, VkDebugReportObjectTypeEXT, ulong, nuint, int, byte*, byte*, void>* pvkDebugReportMessageEXT = &vkDebugReportMessageEXT)
         {
             *pvkDebugReportMessageEXT = (delegate*<VkInstance, VkDebugReportFlagsEXT, VkDebugReportObjectTypeEXT, ulong, nuint, int, byte*, byte*, void>)Core.Vk.GetVkFunction(

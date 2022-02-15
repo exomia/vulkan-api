@@ -87,21 +87,16 @@ public static partial class Vk
     }
 
     /// <summary> Gets a vk function. </summary>
-    /// <param name="vkInstance">           The vk instance used as fallback. </param>
     /// <param name="vkDevice">             The vk device. </param>
     /// <param name="vkFunctionNameUTF8NT"> Name of the vk function in an UTF8-NT style. </param>
     /// <returns> The vk function; otherwise throws exception. </returns>
     /// <exception cref="EntryPointNotFoundException"> Thrown when an Entry Point Not Found error condition occurs. </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static unsafe void* GetVkFunction(VkInstance vkInstance, VkDevice vkDevice, string vkFunctionNameUTF8NT)
+    public static unsafe void* GetVkFunction(VkDevice vkDevice, string vkFunctionNameUTF8NT)
     {
         fixed (char* pVkFunctionName = vkFunctionNameUTF8NT)
         {
             void* addr = (void*)vkGetDeviceProcAddr(vkDevice, (byte*)pVkFunctionName);
-            if (addr != null) { return addr; }
-
-            // NOTE: fallback to instance if needed!
-            addr = (void*)vkGetInstanceProcAddr(vkInstance, (byte*)pVkFunctionName);
             if (addr != null) { return addr; }
             throw new EntryPointNotFoundException(new string((sbyte*)pVkFunctionName));
         }

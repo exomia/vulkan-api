@@ -79,16 +79,22 @@ public static unsafe class VkExtVertexInputDynamicState
         VkVertexInputAttributeDescription2EXT* /*pVertexAttributeDescriptions*/,
         void> vkCmdSetVertexInputEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdSetVertexInputEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, uint, VkVertexInputBindingDescription2EXT*, uint, VkVertexInputAttributeDescription2EXT*, void>* pvkCmdSetVertexInputEXT = &vkCmdSetVertexInputEXT)
         {
             *pvkCmdSetVertexInputEXT = (delegate*<VkCommandBuffer, uint, VkVertexInputBindingDescription2EXT*, uint, VkVertexInputAttributeDescription2EXT*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u6556\u7472\u7865\u6e49\u7570\u4574\u5458\u0000");
+                device, "\u6b76\u6d43\u5364\u7465\u6556\u7472\u7865\u6e49\u7570\u4574\u5458\u0000");
         }
     }
 }

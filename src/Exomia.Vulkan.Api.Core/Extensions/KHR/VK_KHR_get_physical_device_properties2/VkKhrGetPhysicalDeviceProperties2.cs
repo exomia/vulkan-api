@@ -146,9 +146,34 @@ public static unsafe class VkKhrGetPhysicalDeviceProperties2
         VkSparseImageFormatProperties2* /*pProperties*/,
         void> vkGetPhysicalDeviceSparseImageFormatProperties2KHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceFeatures2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceProperties2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceFormatProperties2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceImageFormatProperties2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceQueueFamilyProperties2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceMemoryProperties2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceSparseImageFormatProperties2KHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceFeatures2*, void>* pvkGetPhysicalDeviceFeatures2KHR = &vkGetPhysicalDeviceFeatures2KHR)
@@ -156,32 +181,38 @@ public static unsafe class VkKhrGetPhysicalDeviceProperties2
             *pvkGetPhysicalDeviceFeatures2KHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceFeatures2*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4665\u6165\u7574\u6572\u3273\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceProperties2*, void>* pvkGetPhysicalDeviceProperties2KHR = &vkGetPhysicalDeviceProperties2KHR)
         {
             *pvkGetPhysicalDeviceProperties2KHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceProperties2*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5065\u6f72\u6570\u7472\u6569\u3273\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkFormat, VkFormatProperties2*, void>* pvkGetPhysicalDeviceFormatProperties2KHR = &vkGetPhysicalDeviceFormatProperties2KHR)
         {
             *pvkGetPhysicalDeviceFormatProperties2KHR = (delegate*<VkPhysicalDevice, VkFormat, VkFormatProperties2*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4665\u726f\u616d\u5074\u6f72\u6570\u7472\u6569\u3273\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceImageFormatInfo2*, VkImageFormatProperties2*, VkResult>* pvkGetPhysicalDeviceImageFormatProperties2KHR =
                    &vkGetPhysicalDeviceImageFormatProperties2KHR)
         {
             *pvkGetPhysicalDeviceImageFormatProperties2KHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceImageFormatInfo2*, VkImageFormatProperties2*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4965\u616d\u6567\u6f46\u6d72\u7461\u7250\u706f\u7265\u6974\u7365\u4b32\u5248\u0000");
         }
+
         fixed (delegate*<VkPhysicalDevice, uint*, VkQueueFamilyProperties2*, void>* pvkGetPhysicalDeviceQueueFamilyProperties2KHR = &vkGetPhysicalDeviceQueueFamilyProperties2KHR)
         {
             *pvkGetPhysicalDeviceQueueFamilyProperties2KHR = (delegate*<VkPhysicalDevice, uint*, VkQueueFamilyProperties2*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5165\u6575\u6575\u6146\u696d\u796c\u7250\u706f\u7265\u6974\u7365\u4b32\u5248\u0000");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceMemoryProperties2*, void>* pvkGetPhysicalDeviceMemoryProperties2KHR = &vkGetPhysicalDeviceMemoryProperties2KHR)
         {
             *pvkGetPhysicalDeviceMemoryProperties2KHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceMemoryProperties2*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4d65\u6d65\u726f\u5079\u6f72\u6570\u7472\u6569\u3273\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceSparseImageFormatInfo2*, uint*, VkSparseImageFormatProperties2*, void>* pvkGetPhysicalDeviceSparseImageFormatProperties2KHR =
                    &vkGetPhysicalDeviceSparseImageFormatProperties2KHR)
         {

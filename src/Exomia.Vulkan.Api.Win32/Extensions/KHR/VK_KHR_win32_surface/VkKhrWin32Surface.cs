@@ -91,9 +91,19 @@ public static unsafe class VkKhrWin32Surface
         uint /*queueFamilyIndex*/,
         VkBool32> vkGetPhysicalDeviceWin32PresentationSupportKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateWin32SurfaceKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceWin32PresentationSupportKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkInstance, VkWin32SurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateWin32SurfaceKHR = &vkCreateWin32SurfaceKHR)
@@ -101,6 +111,7 @@ public static unsafe class VkKhrWin32Surface
             *pvkCreateWin32SurfaceKHR = (delegate*<VkInstance, VkWin32SurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6957\u336e\u5332\u7275\u6166\u6563\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, uint, VkBool32>* pvkGetPhysicalDeviceWin32PresentationSupportKHR = &vkGetPhysicalDeviceWin32PresentationSupportKHR)
         {
             *pvkGetPhysicalDeviceWin32PresentationSupportKHR = (delegate*<VkPhysicalDevice, uint, VkBool32>)Core.Vk.GetVkFunction(

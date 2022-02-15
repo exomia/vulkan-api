@@ -73,16 +73,22 @@ public static unsafe class VkNvFragmentShadingRateEnums
         VkArray2<VkFragmentShadingRateCombinerOpKHR> /*combinerOps*/,
         void> vkCmdSetFragmentShadingRateEnumNV = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdSetFragmentShadingRateEnumNV</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkFragmentShadingRateNV, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>* pvkCmdSetFragmentShadingRateEnumNV = &vkCmdSetFragmentShadingRateEnumNV)
         {
             *pvkCmdSetFragmentShadingRateEnumNV = (delegate*<VkCommandBuffer, VkFragmentShadingRateNV, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5364\u7465\u7246\u6761\u656d\u746e\u6853\u6461\u6e69\u5267\u7461\u4565\u756e\u4e6d\u0056");
+                device, "\u6b76\u6d43\u5364\u7465\u7246\u6761\u656d\u746e\u6853\u6461\u6e69\u5267\u7461\u4565\u756e\u4e6d\u0056");
         }
     }
 }

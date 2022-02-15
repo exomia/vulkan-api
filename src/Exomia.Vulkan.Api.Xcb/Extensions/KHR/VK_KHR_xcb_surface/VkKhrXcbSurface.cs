@@ -96,9 +96,19 @@ public static unsafe class VkKhrXcbSurface
         xcb_visualid_t /*visual_id*/,
         VkBool32> vkGetPhysicalDeviceXcbPresentationSupportKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateXcbSurfaceKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceXcbPresentationSupportKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkInstance, VkXcbSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateXcbSurfaceKHR = &vkCreateXcbSurfaceKHR)
@@ -106,6 +116,7 @@ public static unsafe class VkKhrXcbSurface
             *pvkCreateXcbSurfaceKHR = (delegate*<VkInstance, VkXcbSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6358\u5362\u7275\u6166\u6563\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, uint, xcb_connection_t*, xcb_visualid_t /*visual_id*/, VkBool32>* pvkGetPhysicalDeviceXcbPresentationSupportKHR =
                    &vkGetPhysicalDeviceXcbPresentationSupportKHR)
         {

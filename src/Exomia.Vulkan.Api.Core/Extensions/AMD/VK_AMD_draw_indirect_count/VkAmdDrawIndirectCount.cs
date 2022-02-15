@@ -80,21 +80,31 @@ public static unsafe class VkAmdDrawIndirectCount
         uint /*stride*/,
         void> vkCmdDrawIndexedIndirectCountAMD = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdDrawIndirectCountAMD</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdDrawIndexedIndirectCountAMD</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, VkBuffer, VkDeviceSize, uint, uint, void>* pvkCmdDrawIndirectCountAMD = &vkCmdDrawIndirectCountAMD)
         {
             *pvkCmdDrawIndirectCountAMD = (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, VkBuffer, VkDeviceSize, uint, uint, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u4464\u6172\u4977\u646e\u7269\u6365\u4374\u756f\u746e\u4d41\u0044");
+                device, "\u6b76\u6d43\u4464\u6172\u4977\u646e\u7269\u6365\u4374\u756f\u746e\u4d41\u0044");
         }
+
         fixed (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, VkBuffer, VkDeviceSize, uint, uint, void>* pvkCmdDrawIndexedIndirectCountAMD = &vkCmdDrawIndexedIndirectCountAMD)
         {
             *pvkCmdDrawIndexedIndirectCountAMD = (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, VkBuffer, VkDeviceSize, uint, uint, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u4464\u6172\u4977\u646e\u7865\u6465\u6e49\u6964\u6572\u7463\u6f43\u6e75\u4174\u444d\u0000");
+                device, "\u6b76\u6d43\u4464\u6172\u4977\u646e\u7865\u6465\u6e49\u6964\u6572\u7463\u6f43\u6e75\u4174\u444d\u0000");
         }
     }
 }

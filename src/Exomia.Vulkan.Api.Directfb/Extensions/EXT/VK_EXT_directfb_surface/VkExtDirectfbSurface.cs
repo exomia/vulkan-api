@@ -93,9 +93,19 @@ public static unsafe class VkExtDirectfbSurface
         IDirectFB* /*dfb*/,
         VkBool32> vkGetPhysicalDeviceDirectFBPresentationSupportEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateDirectFBSurfaceEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceDirectFBPresentationSupportEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkInstance, VkDirectFBSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateDirectFBSurfaceEXT = &vkCreateDirectFBSurfaceEXT)
@@ -103,6 +113,7 @@ public static unsafe class VkExtDirectfbSurface
             *pvkCreateDirectFBSurfaceEXT = (delegate*<VkInstance, VkDirectFBSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6944\u6572\u7463\u4246\u7553\u6672\u6361\u4565\u5458\u0000");
         }
+
         fixed (delegate*<VkPhysicalDevice, uint, IDirectFB*, VkBool32>* pvkGetPhysicalDeviceDirectFBPresentationSupportEXT = &vkGetPhysicalDeviceDirectFBPresentationSupportEXT)
         {
             *pvkGetPhysicalDeviceDirectFBPresentationSupportEXT = (delegate*<VkPhysicalDevice, uint, IDirectFB*, VkBool32>)Core.Vk.GetVkFunction(

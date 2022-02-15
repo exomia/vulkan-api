@@ -144,36 +144,58 @@ public static unsafe class VkKhrDeferredHostOperations
         VkDeferredOperationKHR /*operation*/,
         VkResult> vkDeferredOperationJoinKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateDeferredOperationKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkDestroyDeferredOperationKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDeferredOperationMaxConcurrencyKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDeferredOperationResultKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkDeferredOperationJoinKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkAllocationCallbacks*, VkDeferredOperationKHR*, VkResult>* pvkCreateDeferredOperationKHR = &vkCreateDeferredOperationKHR)
         {
             *pvkCreateDeferredOperationKHR = (delegate*<VkDevice, VkAllocationCallbacks*, VkDeferredOperationKHR*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u7243\u6165\u6574\u6544\u6566\u7272\u6465\u704f\u7265\u7461\u6f69\u4b6e\u5248\u0000");
+                device, "\u6b76\u7243\u6165\u6574\u6544\u6566\u7272\u6465\u704f\u7265\u7461\u6f69\u4b6e\u5248\u0000");
         }
+
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkAllocationCallbacks*, void>* pvkDestroyDeferredOperationKHR = &vkDestroyDeferredOperationKHR)
         {
             *pvkDestroyDeferredOperationKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6544\u7473\u6f72\u4479\u6665\u7265\u6572\u4f64\u6570\u6172\u6974\u6e6f\u484b\u0052");
+                device, "\u6b76\u6544\u7473\u6f72\u4479\u6665\u7265\u6572\u4f64\u6570\u6172\u6974\u6e6f\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, uint>* pvkGetDeferredOperationMaxConcurrencyKHR = &vkGetDeferredOperationMaxConcurrencyKHR)
         {
             *pvkGetDeferredOperationMaxConcurrencyKHR = (delegate*<VkDevice, VkDeferredOperationKHR, uint>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u4474\u6665\u7265\u6572\u4f64\u6570\u6172\u6974\u6e6f\u614d\u4378\u6e6f\u7563\u7272\u6e65\u7963\u484b\u0052");
+                device, "\u6b76\u6547\u4474\u6665\u7265\u6572\u4f64\u6570\u6172\u6974\u6e6f\u614d\u4378\u6e6f\u7563\u7272\u6e65\u7963\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>* pvkGetDeferredOperationResultKHR = &vkGetDeferredOperationResultKHR)
         {
             *pvkGetDeferredOperationResultKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u4474\u6665\u7265\u6572\u4f64\u6570\u6172\u6974\u6e6f\u6552\u7573\u746c\u484b\u0052");
+                device, "\u6b76\u6547\u4474\u6665\u7265\u6572\u4f64\u6570\u6172\u6974\u6e6f\u6552\u7573\u746c\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>* pvkDeferredOperationJoinKHR = &vkDeferredOperationJoinKHR)
         {
             *pvkDeferredOperationJoinKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6544\u6566\u7272\u6465\u704f\u7265\u7461\u6f69\u4a6e\u696f\u4b6e\u5248\u0000");
+                device, "\u6b76\u6544\u6566\u7272\u6465\u704f\u7265\u7461\u6f69\u4a6e\u696f\u4b6e\u5248\u0000");
         }
     }
 }

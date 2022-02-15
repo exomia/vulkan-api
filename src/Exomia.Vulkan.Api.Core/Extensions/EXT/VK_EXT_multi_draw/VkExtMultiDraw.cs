@@ -94,21 +94,31 @@ public static unsafe class VkExtMultiDraw
         int* /*pVertexOffset*/,
         void> vkCmdDrawMultiIndexedEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdDrawMultiEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdDrawMultiIndexedEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, uint, VkMultiDrawInfoEXT*, uint, uint, uint, void>* pvkCmdDrawMultiEXT = &vkCmdDrawMultiEXT)
         {
-            *pvkCmdDrawMultiEXT = (delegate*<VkCommandBuffer, uint, VkMultiDrawInfoEXT*, uint, uint, uint, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u4464\u6172\u4d77\u6c75\u6974\u5845\u0054");
+            *pvkCmdDrawMultiEXT =
+                (delegate*<VkCommandBuffer, uint, VkMultiDrawInfoEXT*, uint, uint, uint, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4464\u6172\u4d77\u6c75\u6974\u5845\u0054");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, VkMultiDrawIndexedInfoEXT*, uint, uint, uint, int*, void>* pvkCmdDrawMultiIndexedEXT = &vkCmdDrawMultiIndexedEXT)
         {
             *pvkCmdDrawMultiIndexedEXT = (delegate*<VkCommandBuffer, uint, VkMultiDrawIndexedInfoEXT*, uint, uint, uint, int*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u4464\u6172\u4d77\u6c75\u6974\u6e49\u6564\u6578\u4564\u5458\u0000");
+                device, "\u6b76\u6d43\u4464\u6172\u4d77\u6c75\u6974\u6e49\u6564\u6578\u4564\u5458\u0000");
         }
     }
 }

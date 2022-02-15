@@ -421,79 +421,129 @@ public static unsafe class VkNvRayTracing
         uint /*shader*/,
         VkResult> vkCompileDeferredNV = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateAccelerationStructureNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkDestroyAccelerationStructureNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetAccelerationStructureMemoryRequirementsNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkBindAccelerationStructureMemoryNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdBuildAccelerationStructureNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdCopyAccelerationStructureNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdTraceRaysNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCreateRayTracingPipelinesNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetRayTracingShaderGroupHandlesNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetAccelerationStructureHandleNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdWriteAccelerationStructuresPropertiesNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCompileDeferredNV</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkAccelerationStructureCreateInfoNV*, VkAllocationCallbacks*, VkAccelerationStructureNV*, VkResult>* pvkCreateAccelerationStructureNV =
                    &vkCreateAccelerationStructureNV)
         {
             *pvkCreateAccelerationStructureNV = (delegate*<VkDevice, VkAccelerationStructureCreateInfoNV*, VkAllocationCallbacks*, VkAccelerationStructureNV*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u7243\u6165\u6574\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u4e65\u0056");
+                device, "\u6b76\u7243\u6165\u6574\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u4e65\u0056");
         }
+
         fixed (delegate*<VkDevice, VkAccelerationStructureNV, VkAllocationCallbacks*, void>* pvkDestroyAccelerationStructureNV = &vkDestroyAccelerationStructureNV)
         {
             *pvkDestroyAccelerationStructureNV = (delegate*<VkDevice, VkAccelerationStructureNV, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6544\u7473\u6f72\u4179\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u564e\u0000");
+                device, "\u6b76\u6544\u7473\u6f72\u4179\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u564e\u0000");
         }
+
         fixed (delegate*<VkDevice, VkAccelerationStructureMemoryRequirementsInfoNV*, VkMemoryRequirements2KHR*, void>* pvkGetAccelerationStructureMemoryRequirementsNV =
                    &vkGetAccelerationStructureMemoryRequirementsNV)
         {
             *pvkGetAccelerationStructureMemoryRequirementsNV = (delegate*<VkDevice, VkAccelerationStructureMemoryRequirementsInfoNV*, VkMemoryRequirements2KHR*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u4174\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u654d\u6f6d\u7972\u6552\u7571\u7269\u6d65\u6e65\u7374\u564e\u0000");
+                device, "\u6b76\u6547\u4174\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u654d\u6f6d\u7972\u6552\u7571\u7269\u6d65\u6e65\u7374\u564e\u0000");
         }
+
         fixed (delegate*<VkDevice, uint, VkBindAccelerationStructureMemoryInfoNV*, VkResult>* pvkBindAccelerationStructureMemoryNV = &vkBindAccelerationStructureMemoryNV)
         {
             *pvkBindAccelerationStructureMemoryNV = (delegate*<VkDevice, uint, VkBindAccelerationStructureMemoryInfoNV*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6942\u646e\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u4d65\u6d65\u726f\u4e79\u0056");
+                device, "\u6b76\u6942\u646e\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u4d65\u6d65\u726f\u4e79\u0056");
         }
+
         fixed (delegate*<VkCommandBuffer, VkAccelerationStructureInfoNV*, VkBuffer, VkDeviceSize, VkBool32, VkAccelerationStructureNV, VkAccelerationStructureNV, VkBuffer, VkDeviceSize, void>*
                pvkCmdBuildAccelerationStructureNV = &vkCmdBuildAccelerationStructureNV)
         {
             *pvkCmdBuildAccelerationStructureNV =
                 (delegate*<VkCommandBuffer, VkAccelerationStructureInfoNV*, VkBuffer, VkDeviceSize, VkBool32, VkAccelerationStructureNV, VkAccelerationStructureNV, VkBuffer, VkDeviceSize, void>)
-                Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u4264\u6975\u646c\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u4e65\u0056");
+                Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4264\u6975\u646c\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u4e65\u0056");
         }
+
         fixed (delegate*<VkCommandBuffer, VkAccelerationStructureNV, VkAccelerationStructureNV, VkCopyAccelerationStructureModeKHR, void>* pvkCmdCopyAccelerationStructureNV =
                    &vkCmdCopyAccelerationStructureNV)
         {
             *pvkCmdCopyAccelerationStructureNV = (delegate*<VkCommandBuffer, VkAccelerationStructureNV, VkAccelerationStructureNV, VkCopyAccelerationStructureModeKHR, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u4364\u706f\u4179\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u564e\u0000");
+                device, "\u6b76\u6d43\u4364\u706f\u4179\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u564e\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, VkBuffer, VkDeviceSize, VkDeviceSize, VkBuffer, VkDeviceSize, VkDeviceSize, VkBuffer, VkDeviceSize, VkDeviceSize, uint, uint, uint,
                void>* pvkCmdTraceRaysNV = &vkCmdTraceRaysNV)
         {
             *pvkCmdTraceRaysNV =
                 (delegate*<VkCommandBuffer, VkBuffer, VkDeviceSize, VkBuffer, VkDeviceSize, VkDeviceSize, VkBuffer, VkDeviceSize, VkDeviceSize, VkBuffer, VkDeviceSize, VkDeviceSize, uint, uint, uint,
-                    void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u5464\u6172\u6563\u6152\u7379\u564e\u0000");
+                    void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5464\u6172\u6563\u6152\u7379\u564e\u0000");
         }
+
         fixed (delegate*<VkDevice, VkPipelineCache, uint, VkRayTracingPipelineCreateInfoNV*, VkAllocationCallbacks*, VkPipeline*, VkResult>* pvkCreateRayTracingPipelinesNV =
                    &vkCreateRayTracingPipelinesNV)
         {
             *pvkCreateRayTracingPipelinesNV = (delegate*<VkDevice, VkPipelineCache, uint, VkRayTracingPipelineCreateInfoNV*, VkAllocationCallbacks*, VkPipeline*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u7243\u6165\u6574\u6152\u5479\u6172\u6963\u676e\u6950\u6570\u696c\u656e\u4e73\u0056");
+                device, "\u6b76\u7243\u6165\u6574\u6152\u5479\u6172\u6963\u676e\u6950\u6570\u696c\u656e\u4e73\u0056");
         }
+
         fixed (delegate*<VkDevice, VkPipeline, uint, uint, nuint, void*, VkResult>* pvkGetRayTracingShaderGroupHandlesNV = &vkGetRayTracingShaderGroupHandlesNV)
         {
             *pvkGetRayTracingShaderGroupHandlesNV = (delegate*<VkDevice, VkPipeline, uint, uint, nuint, void*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u5274\u7961\u7254\u6361\u6e69\u5367\u6168\u6564\u4772\u6f72\u7075\u6148\u646e\u656c\u4e73\u0056");
+                device, "\u6b76\u6547\u5274\u7961\u7254\u6361\u6e69\u5367\u6168\u6564\u4772\u6f72\u7075\u6148\u646e\u656c\u4e73\u0056");
         }
+
         fixed (delegate*<VkDevice, VkAccelerationStructureNV, nuint, void*, VkResult>* pvkGetAccelerationStructureHandleNV = &vkGetAccelerationStructureHandleNV)
         {
             *pvkGetAccelerationStructureHandleNV = (delegate*<VkDevice, VkAccelerationStructureNV, nuint, void*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u4174\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u6148\u646e\u656c\u564e\u0000");
+                device, "\u6b76\u6547\u4174\u6363\u6c65\u7265\u7461\u6f69\u536e\u7274\u6375\u7574\u6572\u6148\u646e\u656c\u564e\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, VkAccelerationStructureNV*, VkQueryType, VkQueryPool, uint, void>* pvkCmdWriteAccelerationStructuresPropertiesNV =
                    &vkCmdWriteAccelerationStructuresPropertiesNV)
         {
             *pvkCmdWriteAccelerationStructuresPropertiesNV = (delegate*<VkCommandBuffer, uint, VkAccelerationStructureNV*, VkQueryType, VkQueryPool, uint, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u5764\u6972\u6574\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u7365\u7250\u706f\u7265\u6974\u7365\u564e\u0000");
+                device, "\u6b76\u6d43\u5764\u6972\u6574\u6341\u6563\u656c\u6172\u6974\u6e6f\u7453\u7572\u7463\u7275\u7365\u7250\u706f\u7265\u6974\u7365\u564e\u0000");
         }
+
         fixed (delegate*<VkDevice, VkPipeline, uint, VkResult>* pvkCompileDeferredNV = &vkCompileDeferredNV)
         {
-            *pvkCompileDeferredNV = (delegate*<VkDevice, VkPipeline, uint, VkResult>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6f43\u706d\u6c69\u4465\u6665\u7265\u6572\u4e64\u0056");
+            *pvkCompileDeferredNV = (delegate*<VkDevice, VkPipeline, uint, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6f43\u706d\u6c69\u4465\u6665\u7265\u6572\u4e64\u0056");
         }
     }
 }

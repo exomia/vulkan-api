@@ -136,35 +136,57 @@ public static unsafe class VkExtDebugMarker
         VkDebugMarkerMarkerInfoEXT* /*pMarkerInfo*/,
         void> vkCmdDebugMarkerInsertEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkDebugMarkerSetObjectTagEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkDebugMarkerSetObjectNameEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdDebugMarkerBeginEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdDebugMarkerEndEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdDebugMarkerInsertEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkDebugMarkerObjectTagInfoEXT*, VkResult>* pvkDebugMarkerSetObjectTagEXT = &vkDebugMarkerSetObjectTagEXT)
         {
             *pvkDebugMarkerSetObjectTagEXT = (delegate*<VkDevice, VkDebugMarkerObjectTagInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u6154\u4567\u5458\u0000");
+                device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u6154\u4567\u5458\u0000");
         }
+
         fixed (delegate*<VkDevice, VkDebugMarkerObjectNameInfoEXT*, VkResult>* pvkDebugMarkerSetObjectNameEXT = &vkDebugMarkerSetObjectNameEXT)
         {
             *pvkDebugMarkerSetObjectNameEXT = (delegate*<VkDevice, VkDebugMarkerObjectNameInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u614e\u656d\u5845\u0054");
+                device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u614e\u656d\u5845\u0054");
         }
+
         fixed (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>* pvkCmdDebugMarkerBeginEXT = &vkCmdDebugMarkerBeginEXT)
         {
             *pvkCmdDebugMarkerBeginEXT = (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6542\u6967\u456e\u5458\u0000");
+                device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6542\u6967\u456e\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdDebugMarkerEndEXT = &vkCmdDebugMarkerEndEXT)
         {
-            *pvkCmdDebugMarkerEndEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(instance, device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e45\u4564\u5458\u0000");
+            *pvkCmdDebugMarkerEndEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e45\u4564\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>* pvkCmdDebugMarkerInsertEXT = &vkCmdDebugMarkerInsertEXT)
         {
             *pvkCmdDebugMarkerInsertEXT = (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e49\u6573\u7472\u5845\u0054");
+                device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e49\u6573\u7472\u5845\u0054");
         }
     }
 }

@@ -156,28 +156,42 @@ public static unsafe class VkKhrPipelineExecutableProperties
         VkPipelineExecutableInternalRepresentationKHR* /*pInternalRepresentations*/,
         VkResult> vkGetPipelineExecutableInternalRepresentationsKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with in fallback case. </param>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance, VkDevice device)
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetPipelineExecutablePropertiesKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPipelineExecutableStatisticsKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPipelineExecutableInternalRepresentationsKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkPipelineInfoKHR*, uint*, VkPipelineExecutablePropertiesKHR*, VkResult>* pvkGetPipelineExecutablePropertiesKHR = &vkGetPipelineExecutablePropertiesKHR)
         {
             *pvkGetPipelineExecutablePropertiesKHR = (delegate*<VkDevice, VkPipelineInfoKHR*, uint*, VkPipelineExecutablePropertiesKHR*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u5074\u7069\u6c65\u6e69\u4565\u6578\u7563\u6174\u6c62\u5065\u6f72\u6570\u7472\u6569\u4b73\u5248\u0000");
+                device, "\u6b76\u6547\u5074\u7069\u6c65\u6e69\u4565\u6578\u7563\u6174\u6c62\u5065\u6f72\u6570\u7472\u6569\u4b73\u5248\u0000");
         }
+
         fixed (delegate*<VkDevice, VkPipelineExecutableInfoKHR*, uint*, VkPipelineExecutableStatisticKHR*, VkResult>* pvkGetPipelineExecutableStatisticsKHR = &vkGetPipelineExecutableStatisticsKHR)
         {
             *pvkGetPipelineExecutableStatisticsKHR = (delegate*<VkDevice, VkPipelineExecutableInfoKHR*, uint*, VkPipelineExecutableStatisticKHR*, VkResult>)Core.Vk.GetVkFunction(
-                instance, device, "\u6b76\u6547\u5074\u7069\u6c65\u6e69\u4565\u6578\u7563\u6174\u6c62\u5365\u6174\u6974\u7473\u6369\u4b73\u5248\u0000");
+                device, "\u6b76\u6547\u5074\u7069\u6c65\u6e69\u4565\u6578\u7563\u6174\u6c62\u5365\u6174\u6974\u7473\u6369\u4b73\u5248\u0000");
         }
+
         fixed (delegate*<VkDevice, VkPipelineExecutableInfoKHR*, uint*, VkPipelineExecutableInternalRepresentationKHR*, VkResult>* pvkGetPipelineExecutableInternalRepresentationsKHR =
                    &vkGetPipelineExecutableInternalRepresentationsKHR)
         {
             *pvkGetPipelineExecutableInternalRepresentationsKHR =
                 (delegate*<VkDevice, VkPipelineExecutableInfoKHR*, uint*, VkPipelineExecutableInternalRepresentationKHR*, VkResult>)Core.Vk.GetVkFunction(
-                    instance, device, "\u6b76\u6547\u5074\u7069\u6c65\u6e69\u4565\u6578\u7563\u6174\u6c62\u4965\u746e\u7265\u616e\u526c\u7065\u6572\u6573\u746e\u7461\u6f69\u736e\u484b\u0052");
+                    device, "\u6b76\u6547\u5074\u7069\u6c65\u6e69\u4565\u6578\u7563\u6174\u6c62\u4965\u746e\u7265\u616e\u526c\u7065\u6572\u6573\u746e\u7461\u6f69\u736e\u484b\u0052");
         }
     }
 }

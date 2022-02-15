@@ -93,9 +93,19 @@ public static unsafe class VkKhrWaylandSurface
         wl_display* /*display*/,
         VkBool32> vkGetPhysicalDeviceWaylandPresentationSupportKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateWaylandSurfaceKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceWaylandPresentationSupportKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkInstance, VkWaylandSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateWaylandSurfaceKHR = &vkCreateWaylandSurfaceKHR)
@@ -103,6 +113,7 @@ public static unsafe class VkKhrWaylandSurface
             *pvkCreateWaylandSurfaceKHR = (delegate*<VkInstance, VkWaylandSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6157\u6c79\u6e61\u5364\u7275\u6166\u6563\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, uint, wl_display*, VkBool32>* pvkGetPhysicalDeviceWaylandPresentationSupportKHR = &vkGetPhysicalDeviceWaylandPresentationSupportKHR)
         {
             *pvkGetPhysicalDeviceWaylandPresentationSupportKHR = (delegate*<VkPhysicalDevice, uint, wl_display*, VkBool32>)Core.Vk.GetVkFunction(
