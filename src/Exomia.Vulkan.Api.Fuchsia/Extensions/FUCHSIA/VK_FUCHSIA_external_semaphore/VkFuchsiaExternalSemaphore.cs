@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Fuchsia.VkFuchsiaExternalSemaphore;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -102,9 +104,19 @@ public static unsafe class VkFuchsiaExternalSemaphore
         zx_handle_t* /*pZirconHandle*/,
         VkResult> vkGetSemaphoreZirconHandleFUCHSIA = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkImportSemaphoreZirconHandleFUCHSIA</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetSemaphoreZirconHandleFUCHSIA</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkImportSemaphoreZirconHandleInfoFUCHSIA*, VkResult>* pvkImportSemaphoreZirconHandleFUCHSIA = &vkImportSemaphoreZirconHandleFUCHSIA)
@@ -112,6 +124,7 @@ public static unsafe class VkFuchsiaExternalSemaphore
             *pvkImportSemaphoreZirconHandleFUCHSIA = (delegate*<VkDevice, VkImportSemaphoreZirconHandleInfoFUCHSIA*, VkResult>)Api.Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d49\u6f70\u7472\u6553\u616d\u6870\u726f\u5a65\u7269\u6f63\u486e\u6e61\u6c64\u4665\u4355\u5348\u4149\u0000");
         }
+
         fixed (delegate*<VkDevice, VkSemaphoreGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>* pvkGetSemaphoreZirconHandleFUCHSIA = &vkGetSemaphoreZirconHandleFUCHSIA)
         {
             *pvkGetSemaphoreZirconHandleFUCHSIA = (delegate*<VkDevice, VkSemaphoreGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>)Api.Core.Vk.GetVkFunction(

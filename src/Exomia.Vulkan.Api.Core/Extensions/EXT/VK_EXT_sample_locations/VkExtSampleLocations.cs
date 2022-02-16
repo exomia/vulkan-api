@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtSampleLocations;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -78,9 +80,16 @@ public static unsafe class VkExtSampleLocations
         VkMultisamplePropertiesEXT* /*pMultisampleProperties*/,
         void> vkGetPhysicalDeviceMultisamplePropertiesEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdSetSampleLocationsEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkSampleLocationsInfoEXT*, void>* pvkCmdSetSampleLocationsEXT = &vkCmdSetSampleLocationsEXT)
@@ -88,10 +97,24 @@ public static unsafe class VkExtSampleLocations
             *pvkCmdSetSampleLocationsEXT = (delegate*<VkCommandBuffer, VkSampleLocationsInfoEXT*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6153\u706d\u656c\u6f4c\u6163\u6974\u6e6f\u4573\u5458\u0000");
         }
+    }
+
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceMultisamplePropertiesEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkInstance instance)
+    {
         fixed (delegate*<VkPhysicalDevice, VkSampleCountFlagBits, VkMultisamplePropertiesEXT*, void>* pvkGetPhysicalDeviceMultisamplePropertiesEXT = &vkGetPhysicalDeviceMultisamplePropertiesEXT)
         {
             *pvkGetPhysicalDeviceMultisamplePropertiesEXT = (delegate*<VkPhysicalDevice, VkSampleCountFlagBits, VkMultisamplePropertiesEXT*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4d65\u6c75\u6974\u6173\u706d\u656c\u7250\u706f\u7265\u6974\u7365\u5845\u0054");
+                instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4d65\u6c75\u6974\u6173\u706d\u656c\u7250\u706f\u7265\u6974\u7365\u5845\u0054");
         }
     }
 }

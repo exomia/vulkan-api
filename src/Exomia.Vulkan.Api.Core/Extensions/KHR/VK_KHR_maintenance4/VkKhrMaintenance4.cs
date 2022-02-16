@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrMaintenance4;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -87,9 +89,22 @@ public static unsafe class VkKhrMaintenance4
         VkSparseImageMemoryRequirements2* /*pSparseMemoryRequirements*/,
         void> vkGetDeviceImageSparseMemoryRequirementsKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetDeviceBufferMemoryRequirementsKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDeviceImageMemoryRequirementsKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDeviceImageSparseMemoryRequirementsKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkDeviceBufferMemoryRequirements*, VkMemoryRequirements2*, void>* pvkGetDeviceBufferMemoryRequirementsKHR = &vkGetDeviceBufferMemoryRequirementsKHR)
@@ -97,11 +112,13 @@ public static unsafe class VkKhrMaintenance4
             *pvkGetDeviceBufferMemoryRequirementsKHR = (delegate*<VkDevice, VkDeviceBufferMemoryRequirements*, VkMemoryRequirements2*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7665\u6369\u4265\u6675\u6566\u4d72\u6d65\u726f\u5279\u7165\u6975\u6572\u656d\u746e\u4b73\u5248\u0000");
         }
+
         fixed (delegate*<VkDevice, VkDeviceImageMemoryRequirements*, VkMemoryRequirements2*, void>* pvkGetDeviceImageMemoryRequirementsKHR = &vkGetDeviceImageMemoryRequirementsKHR)
         {
             *pvkGetDeviceImageMemoryRequirementsKHR = (delegate*<VkDevice, VkDeviceImageMemoryRequirements*, VkMemoryRequirements2*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7665\u6369\u4965\u616d\u6567\u654d\u6f6d\u7972\u6552\u7571\u7269\u6d65\u6e65\u7374\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, VkDeviceImageMemoryRequirements*, uint*, VkSparseImageMemoryRequirements2*, void>* pvkGetDeviceImageSparseMemoryRequirementsKHR =
                    &vkGetDeviceImageSparseMemoryRequirementsKHR)
         {

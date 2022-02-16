@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtTransformFeedback;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -225,9 +227,31 @@ public static unsafe class VkExtTransformFeedback
         uint /*vertexStride*/,
         void> vkCmdDrawIndirectByteCountEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdBindTransformFeedbackBuffersEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdBeginTransformFeedbackEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdEndTransformFeedbackEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdBeginQueryIndexedEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdEndQueryIndexedEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdDrawIndirectByteCountEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, VkDeviceSize*, void>* pvkCmdBindTransformFeedbackBuffersEXT = &vkCmdBindTransformFeedbackBuffersEXT)
@@ -235,26 +259,31 @@ public static unsafe class VkExtTransformFeedback
             *pvkCmdBindTransformFeedbackBuffersEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, VkDeviceSize*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6e69\u5464\u6172\u736e\u6f66\u6d72\u6546\u6465\u6162\u6b63\u7542\u6666\u7265\u4573\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>* pvkCmdBeginTransformFeedbackEXT = &vkCmdBeginTransformFeedbackEXT)
         {
             *pvkCmdBeginTransformFeedbackEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6765\u6e69\u7254\u6e61\u6673\u726f\u466d\u6565\u6264\u6361\u456b\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>* pvkCmdEndTransformFeedbackEXT = &vkCmdEndTransformFeedbackEXT)
         {
             *pvkCmdEndTransformFeedbackEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4564\u646e\u7254\u6e61\u6673\u726f\u466d\u6565\u6264\u6361\u456b\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, VkQueryPool, uint, VkQueryControlFlags, uint, void>* pvkCmdBeginQueryIndexedEXT = &vkCmdBeginQueryIndexedEXT)
         {
             *pvkCmdBeginQueryIndexedEXT = (delegate*<VkCommandBuffer, VkQueryPool, uint, VkQueryControlFlags, uint, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6765\u6e69\u7551\u7265\u4979\u646e\u7865\u6465\u5845\u0054");
         }
+
         fixed (delegate*<VkCommandBuffer, VkQueryPool, uint, uint, void>* pvkCmdEndQueryIndexedEXT = &vkCmdEndQueryIndexedEXT)
         {
             *pvkCmdEndQueryIndexedEXT = (delegate*<VkCommandBuffer, VkQueryPool, uint, uint, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4564\u646e\u7551\u7265\u4979\u646e\u7865\u6465\u5845\u0054");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, uint, VkBuffer, VkDeviceSize, uint, uint, void>* pvkCmdDrawIndirectByteCountEXT = &vkCmdDrawIndirectByteCountEXT)
         {
             *pvkCmdDrawIndirectByteCountEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer, VkDeviceSize, uint, uint, void>)Core.Vk.GetVkFunction(

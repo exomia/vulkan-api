@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtExternalMemoryHost;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -80,9 +82,16 @@ public static unsafe class VkExtExternalMemoryHost
         VkMemoryHostPointerPropertiesEXT* /*pMemoryHostPointerProperties*/,
         VkResult> vkGetMemoryHostPointerPropertiesEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetMemoryHostPointerPropertiesEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, void*, VkMemoryHostPointerPropertiesEXT*, VkResult>* pvkGetMemoryHostPointerPropertiesEXT = &vkGetMemoryHostPointerPropertiesEXT)

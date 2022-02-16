@@ -39,7 +39,7 @@ public static partial class Vk
     [VkVersion("1.1")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkEnumerateInstanceVersion")]
-    public static extern unsafe VkResult vkEnumerateInstanceVersion(uint* pApiVersion);
+    public static extern unsafe VkResult vkEnumerateInstanceVersion(VkVersion* pApiVersion);
 
     /// <summary>
     ///     vkBindBufferMemory2 - Bind device memory to buffer objects -

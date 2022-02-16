@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrDeviceGroup;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -201,9 +203,31 @@ public static unsafe class VkKhrDeviceGroup
         uint* /*pImageIndex*/,
         VkResult> vkAcquireNextImage2KHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetDeviceGroupPeerMemoryFeaturesKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetDeviceMaskKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdDispatchBaseKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDeviceGroupPresentCapabilitiesKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDeviceGroupSurfacePresentModesKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkAcquireNextImage2KHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, uint, uint, uint, VkPeerMemoryFeatureFlags*, void>* pvkGetDeviceGroupPeerMemoryFeaturesKHR = &vkGetDeviceGroupPeerMemoryFeaturesKHR)
@@ -211,34 +235,53 @@ public static unsafe class VkKhrDeviceGroup
             *pvkGetDeviceGroupPeerMemoryFeaturesKHR = (delegate*<VkDevice, uint, uint, uint, VkPeerMemoryFeatureFlags*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7665\u6369\u4765\u6f72\u7075\u6550\u7265\u654d\u6f6d\u7972\u6546\u7461\u7275\u7365\u484b\u0052");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, void>* pvkCmdSetDeviceMaskKHR = &vkCmdSetDeviceMaskKHR)
         {
             *pvkCmdSetDeviceMaskKHR = (delegate*<VkCommandBuffer, uint, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u6544\u6976\u6563\u614d\u6b73\u484b\u0052");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, uint, uint, uint, uint, uint, void>* pvkCmdDispatchBaseKHR = &vkCmdDispatchBaseKHR)
         {
             *pvkCmdDispatchBaseKHR =
                 (delegate*<VkCommandBuffer, uint, uint, uint, uint, uint, uint, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4464\u7369\u6170\u6374\u4268\u7361\u4b65\u5248\u0000");
         }
+
         fixed (delegate*<VkDevice, VkDeviceGroupPresentCapabilitiesKHR*, VkResult>* pvkGetDeviceGroupPresentCapabilitiesKHR = &vkGetDeviceGroupPresentCapabilitiesKHR)
         {
             *pvkGetDeviceGroupPresentCapabilitiesKHR = (delegate*<VkDevice, VkDeviceGroupPresentCapabilitiesKHR*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7665\u6369\u4765\u6f72\u7075\u7250\u7365\u6e65\u4374\u7061\u6261\u6c69\u7469\u6569\u4b73\u5248\u0000");
         }
+
         fixed (delegate*<VkDevice, VkSurfaceKHR, VkDeviceGroupPresentModeFlagsKHR*, VkResult>* pvkGetDeviceGroupSurfacePresentModesKHR = &vkGetDeviceGroupSurfacePresentModesKHR)
         {
             *pvkGetDeviceGroupSurfacePresentModesKHR = (delegate*<VkDevice, VkSurfaceKHR, VkDeviceGroupPresentModeFlagsKHR*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7665\u6369\u4765\u6f72\u7075\u7553\u6672\u6361\u5065\u6572\u6573\u746e\u6f4d\u6564\u4b73\u5248\u0000");
         }
-        fixed (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkRect2D*, VkResult>* pvkGetPhysicalDevicePresentRectanglesKHR = &vkGetPhysicalDevicePresentRectanglesKHR)
-        {
-            *pvkGetPhysicalDevicePresentRectanglesKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkRect2D*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5065\u6572\u6573\u746e\u6552\u7463\u6e61\u6c67\u7365\u484b\u0052");
-        }
+
         fixed (delegate*<VkDevice, VkAcquireNextImageInfoKHR*, uint*, VkResult>* pvkAcquireNextImage2KHR = &vkAcquireNextImage2KHR)
         {
             *pvkAcquireNextImage2KHR = (delegate*<VkDevice, VkAcquireNextImageInfoKHR*, uint*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6341\u7571\u7269\u4e65\u7865\u4974\u616d\u6567\u4b32\u5248\u0000");
+        }
+    }
+
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetPhysicalDevicePresentRectanglesKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkInstance instance)
+    {
+        fixed (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkRect2D*, VkResult>* pvkGetPhysicalDevicePresentRectanglesKHR = &vkGetPhysicalDevicePresentRectanglesKHR)
+        {
+            *pvkGetPhysicalDevicePresentRectanglesKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkRect2D*, VkResult>)Core.Vk.GetVkFunction(
+                instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5065\u6572\u6573\u746e\u6552\u7463\u6e61\u6c67\u7365\u484b\u0052");
         }
     }
 }

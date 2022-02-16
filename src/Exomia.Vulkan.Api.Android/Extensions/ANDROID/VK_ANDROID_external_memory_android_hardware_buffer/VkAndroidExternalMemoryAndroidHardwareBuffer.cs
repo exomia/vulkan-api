@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Android.VkAndroidExternalMemoryAndroidHardwareBuffer;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -110,9 +112,19 @@ public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
         AHardwareBuffer** /*pBuffer*/,
         VkResult> vkGetMemoryAndroidHardwareBufferANDROID = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetAndroidHardwareBufferPropertiesANDROID</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetMemoryAndroidHardwareBufferANDROID</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, AHardwareBuffer*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult>* pvkGetAndroidHardwareBufferPropertiesANDROID = &vkGetAndroidHardwareBufferPropertiesANDROID)
@@ -120,6 +132,7 @@ public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
             *pvkGetAndroidHardwareBufferPropertiesANDROID = (delegate*<VkDevice, AHardwareBuffer*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4174\u646e\u6f72\u6469\u6148\u6472\u6177\u6572\u7542\u6666\u7265\u7250\u706f\u7265\u6974\u7365\u4e41\u5244\u494f\u0044");
         }
+
         fixed (delegate*<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, AHardwareBuffer**, VkResult>* pvkGetMemoryAndroidHardwareBufferANDROID = &vkGetMemoryAndroidHardwareBufferANDROID)
         {
             *pvkGetMemoryAndroidHardwareBufferANDROID = (delegate*<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, AHardwareBuffer**, VkResult>)Core.Vk.GetVkFunction(

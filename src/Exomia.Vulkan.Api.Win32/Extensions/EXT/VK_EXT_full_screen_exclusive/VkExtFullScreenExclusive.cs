@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Win32.VkExtFullScreenExclusive;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -169,27 +171,56 @@ public static unsafe class VkExtFullScreenExclusive
         VkDeviceGroupPresentModeFlagsKHR* /*pModes*/,
         VkResult> vkGetDeviceGroupSurfacePresentModes2EXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceSurfacePresentModes2EXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, uint*, VkPresentModeKHR*, VkResult>* pvkGetPhysicalDeviceSurfacePresentModes2EXT =
                    &vkGetPhysicalDeviceSurfacePresentModes2EXT)
         {
             *pvkGetPhysicalDeviceSurfacePresentModes2EXT = (delegate*<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, uint*, VkPresentModeKHR*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u7250\u7365\u6e65\u4d74\u646f\u7365\u4532\u5458\u0000");
+                instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u7250\u7365\u6e65\u4d74\u646f\u7365\u4532\u5458\u0000");
         }
+    }
+
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
+    /// <param name="device"> The device that the function pointers will be compatible with. </param>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkAcquireFullScreenExclusiveModeEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkReleaseFullScreenExclusiveModeEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDeviceGroupSurfacePresentModes2EXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
+    {
         fixed (delegate*<VkDevice, VkSwapchainKHR, VkResult>* pvkAcquireFullScreenExclusiveModeEXT = &vkAcquireFullScreenExclusiveModeEXT)
         {
             *pvkAcquireFullScreenExclusiveModeEXT = (delegate*<VkDevice, VkSwapchainKHR, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6341\u7571\u7269\u4665\u6c75\u536c\u7263\u6565\u456e\u6378\u756c\u6973\u6576\u6f4d\u6564\u5845\u0054");
         }
+
         fixed (delegate*<VkDevice, VkSwapchainKHR, VkResult>* pvkReleaseFullScreenExclusiveModeEXT = &vkReleaseFullScreenExclusiveModeEXT)
         {
             *pvkReleaseFullScreenExclusiveModeEXT = (delegate*<VkDevice, VkSwapchainKHR, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6552\u656c\u7361\u4665\u6c75\u536c\u7263\u6565\u456e\u6378\u756c\u6973\u6576\u6f4d\u6564\u5845\u0054");
         }
+
         fixed (delegate*<VkDevice, VkPhysicalDeviceSurfaceInfo2KHR*, VkDeviceGroupPresentModeFlagsKHR*, VkResult>* pvkGetDeviceGroupSurfacePresentModes2EXT = &vkGetDeviceGroupSurfacePresentModes2EXT)
         {
             *pvkGetDeviceGroupSurfacePresentModes2EXT = (delegate*<VkDevice, VkPhysicalDeviceSurfaceInfo2KHR*, VkDeviceGroupPresentModeFlagsKHR*, VkResult>)Core.Vk.GetVkFunction(

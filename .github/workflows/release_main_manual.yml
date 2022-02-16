@@ -1,0 +1,246 @@
+name: '[RELEASE] main manual'
+on:
+  workflow_dispatch:
+    inputs:
+      release-suffix:
+        description: 'version suffix'     
+        required: true
+        default: '.x'
+      prerelease:
+        description: 'prerelease'     
+        type: boolean
+        required: true
+        default: true
+concurrency: 
+  group: 'release-main'
+jobs:
+  get-release-info:
+    runs-on: ubuntu-latest
+    outputs:
+      rc-version: ${{ steps.release-version.outputs.release-version }}
+    steps:
+    - name: 'set release-version'
+      id: release-version
+      run: |
+        echo "::set-output name=release-version::${cat ~/.version}"
+  print-information:
+    needs: [get-release-info]
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'print information'
+      run: |
+        echo "release-version: ${{ needs.get-release-info.outputs.release-version }}" 
+        echo "release-suffix: ${{ github.event.inputs.release-suffix }}"
+  build-core:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+        platforms: [Any CPU, x64]
+    name: 'build core in ${{ matrix.configurations }} on ${{ matrix.os }} for ${{ matrix.platforms }}'
+    runs-on: ${{ matrix.os }}
+    env:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    steps: 
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - run: |
+        dotnet build Exomia.Vulkan.Api.Core.sln --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+  check-core-build:
+    if: ${{ always() }}  
+    name: '[CHECK] RELEASE CORE BUILD SUCCESS'
+    needs: [build-core]
+    runs-on: ubuntu-latest
+    steps:
+    - name: '[CHECK] build-core status'
+      if: ${{ needs.build-core.result != 'success' }}
+      run: exit 1
+  publish-core-on-github:
+    needs: [build-core]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platforms: [Any CPU, x64]
+    permissions:
+      packages: write 
+    env:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - run: |  
+        dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+    - name: 'publish ${{ github.repository }} to github'
+      run: |  
+        dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
+  publish-core-on-nuget:
+    needs: [build-core, publish-core-on-github]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platforms: [Any CPU, x64]
+    env:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - run: |  
+        dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+    - name: 'publish ${{ github.repository }} to github'
+      run: |  
+        dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
+  check-core-publish:
+    if: ${{ always() }}  
+    name: '[CHECK] RELEASE CORE PUBLISH SUCCESS'
+    needs: [publish-core-on-github, publish-core-on-nuget]
+    runs-on: ubuntu-latest
+    steps:
+    - name: '[CHECK] publish-core-on-github status'
+      if: ${{ needs.publish-core-on-github.result != 'success' }}
+      run: exit 1
+    - name: '[CHECK] publish-core-on-nuget status'
+      if: ${{ needs.publish-core-on-nuget.result != 'success' }}
+      run: exit 1
+  nuget-wait-for-core-package-to-be-available:
+    name: '[NUGET] wait for core-package to be available'
+    needs: [get-release-info, build-core, publish-core-on-nuget]
+    strategy:
+      matrix:
+        packages: ['exomia.vulkan.api.core', 'exomia.vulkan.api.core.x64']
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        until $(curl -fsS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/${{ matrix.packages }}/${{ needs.get-release-info.outputs.release-version }}.json'); do sleep 60;done
+  build-platforms:
+    needs: [nuget-wait-for-core-package-to-be-available]
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        configurations: [Debug, Release]
+        platforms: [Any CPU, x64]
+    name: 'build platform in ${{ matrix.configurations }} on ${{ matrix.os }} for ${{ matrix.platforms }}'
+    runs-on: ${{ matrix.os }}
+    env:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    steps: 
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - run: |
+        dotnet build Exomia.Vulkan.Api.Platforms.sln --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+  check-platforms-build:
+    if: ${{ always() }}  
+    name: '[CHECK] RELEASE PLATFORMS BUILD SUCCESS'
+    needs: [build-platforms]
+    runs-on: ubuntu-latest
+    steps:
+    - name: '[CHECK] build-platforms status'
+      if: ${{ needs.build-platforms.result != 'success' }}
+      run: exit 1
+  publish-platforms-on-github:
+    needs: [build-platforms]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platforms: [Any CPU, x64]
+    permissions:
+      packages: write 
+    env:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - run: |  
+        dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+    - name: 'publish ${{ github.repository }} to github'
+      run: |  
+        dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
+  publish-platforms-on-nuget:
+    needs: [build-platforms, publish-platforms-on-github]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platforms: [Any CPU, x64]
+    env:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1   
+      with:
+        dotnet-version: '6.0.x'
+    - run: |  
+        dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+    - name: 'publish ${{ github.repository }} to github'
+      run: |  
+        dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
+  check-platforms-publish:
+    if: ${{ always() }}  
+    name: '[CHECK] RELEASE PLATFORMS PUBLISH SUCCESS'
+    needs: [publish-platforms-on-github, publish-platforms-on-nuget]
+    runs-on: ubuntu-latest
+    steps:
+    - name: '[CHECK] publish-platforms-on-github status'
+      if: ${{ needs.publish-platforms-on-github.result != 'success' }}
+      run: exit 1
+    - name: '[CHECK] publish-platforms-on-nuget status'
+      if: ${{ needs.publish-platforms-on-nuget.result != 'success' }}
+      run: exit 1
+  create-release:
+    needs: [get-release-info, publish-platforms-on-nuget]
+    runs-on: ubuntu-latest
+    outputs:
+      response: ${{ steps.create-release.outputs.result }}
+    permissions:
+      contents: write 
+    steps:
+    - uses: actions/github-script@v5
+      id: create-release
+      with:
+        script: |
+          return await github.rest.repos.createRelease({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            tag_name: 'v${{ needs.get-release-info.outputs.release-version }}${{ github.event.inputs.release-suffix }}',
+            generate_release_notes: true,
+            target_commitish: '${{ github.ref_name }}',
+            prerelease: ${{ github.event.inputs.prerelease }}
+          });
+  discord-announcement:
+    needs: [create-release]
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        curl -fsS -H "Accept: application/json" -H "Content-Type:application/json" -X POST ${{ secrets.EXOMIA_DISCORD_VULKAN_WEBHOOK_URL }} \
+          --data-binary @- << EOF 
+          {
+            "username": "vulkan-api", 
+            "content": "A new release was published [${{ fromJson(needs.create-release.outputs.response).data.tag_name }}](${{ fromJson(needs.create-release.outputs.response).data.html_url }})!", 
+            "embeds": [
+              {
+                "description": ${{ toJson(fromJson(needs.create-release.outputs.response).data.body) }},
+                "color": 5814783
+              }
+            ]
+          }
+        EOF

@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkHuaweiSubpassShading;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -86,9 +88,19 @@ public static unsafe class VkHuaweiSubpassShading
         VkCommandBuffer /*commandBuffer*/,
         void> vkCmdSubpassShadingHUAWEI = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSubpassShadingHUAWEI</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkRenderPass, VkExtent2D*, VkResult>* pvkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI = &vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI)
@@ -96,6 +108,7 @@ public static unsafe class VkHuaweiSubpassShading
             *pvkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI = (delegate*<VkDevice, VkRenderPass, VkExtent2D*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7665\u6369\u5365\u6275\u6170\u7373\u6853\u6461\u6e69\u4d67\u7861\u6f57\u6b72\u7267\u756f\u5370\u7a69\u4865\u4155\u4557\u0049");
         }
+
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdSubpassShadingHUAWEI = &vkCmdSubpassShadingHUAWEI)
         {
             *pvkCmdSubpassShadingHUAWEI = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u6275\u6170\u7373\u6853\u6461\u6e69\u4867\u4155\u4557\u0049");

@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrPerformanceQuery;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -151,30 +153,59 @@ public static unsafe class VkKhrPerformanceQuery
         VkDevice /*device*/,
         void> vkReleaseProfilingLockKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkDevice device)
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, uint, uint*, VkPerformanceCounterKHR*, VkPerformanceCounterDescriptionKHR*, VkResult>* pvkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR =
                    &vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR)
         {
             *pvkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR =
                 (delegate*<VkPhysicalDevice, uint, uint*, VkPerformanceCounterKHR*, VkPerformanceCounterDescriptionKHR*, VkResult>)Core.Vk.GetVkFunction(
-                    device,
+                    instance,
                     "\u6b76\u6e45\u6d75\u7265\u7461\u5065\u7968\u6973\u6163\u446c\u7665\u6369\u5165\u6575\u6575\u6146\u696d\u796c\u6550\u6672\u726f\u616d\u636e\u5165\u6575\u7972\u6f43\u6e75\u6574\u7372\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkQueryPoolPerformanceCreateInfoKHR*, uint*, void>* pvkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR =
                    &vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR)
         {
             *pvkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR = (delegate*<VkPhysicalDevice, VkQueryPoolPerformanceCreateInfoKHR*, uint*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5165\u6575\u6575\u6146\u696d\u796c\u6550\u6672\u726f\u616d\u636e\u5165\u6575\u7972\u6150\u7373\u7365\u484b\u0052");
+                instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5165\u6575\u6575\u6146\u696d\u796c\u6550\u6672\u726f\u616d\u636e\u5165\u6575\u7972\u6150\u7373\u7365\u484b\u0052");
         }
+    }
+
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
+    /// <param name="device"> The device that the function pointers will be compatible with. </param>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkAcquireProfilingLockKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkReleaseProfilingLockKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
+    {
         fixed (delegate*<VkDevice, VkAcquireProfilingLockInfoKHR*, VkResult>* pvkAcquireProfilingLockKHR = &vkAcquireProfilingLockKHR)
         {
             *pvkAcquireProfilingLockKHR = (delegate*<VkDevice, VkAcquireProfilingLockInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6341\u7571\u7269\u5065\u6f72\u6966\u696c\u676e\u6f4c\u6b63\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, void>* pvkReleaseProfilingLockKHR = &vkReleaseProfilingLockKHR)
         {
             *pvkReleaseProfilingLockKHR = (delegate*<VkDevice, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6552\u656c\u7361\u5065\u6f72\u6966\u696c\u676e\u6f4c\u6b63\u484b\u0052");

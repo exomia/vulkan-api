@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtAcquireDrmDisplay;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -94,9 +96,19 @@ public static unsafe class VkExtAcquireDrmDisplay
         VkDisplayKHR* /*display*/,
         VkResult> vkGetDrmDisplayEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkAcquireDrmDisplayEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDrmDisplayEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, int, VkDisplayKHR, VkResult>* pvkAcquireDrmDisplayEXT = &vkAcquireDrmDisplayEXT)
@@ -104,6 +116,7 @@ public static unsafe class VkExtAcquireDrmDisplay
             *pvkAcquireDrmDisplayEXT = (delegate*<VkPhysicalDevice, int, VkDisplayKHR, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6341\u7571\u7269\u4465\u6d72\u6944\u7073\u616c\u4579\u5458\u0000");
         }
+
         fixed (delegate*<VkPhysicalDevice, int, uint, VkDisplayKHR*, VkResult>* pvkGetDrmDisplayEXT = &vkGetDrmDisplayEXT)
         {
             *pvkGetDrmDisplayEXT = (delegate*<VkPhysicalDevice, int, uint, VkDisplayKHR*, VkResult>)Core.Vk.GetVkFunction(instance, "\u6b76\u6547\u4474\u6d72\u6944\u7073\u616c\u4579\u5458\u0000");

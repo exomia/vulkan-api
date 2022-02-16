@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrPushDescriptor;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -100,9 +102,19 @@ public static unsafe class VkKhrPushDescriptor
         void* /*pData*/,
         void> vkCmdPushDescriptorSetWithTemplateKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdPushDescriptorSetKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdPushDescriptorSetWithTemplateKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkPipelineBindPoint, VkPipelineLayout, uint, uint, VkWriteDescriptorSet*, void>* pvkCmdPushDescriptorSetKHR = &vkCmdPushDescriptorSetKHR)
@@ -110,6 +122,7 @@ public static unsafe class VkKhrPushDescriptor
             *pvkCmdPushDescriptorSetKHR = (delegate*<VkCommandBuffer, VkPipelineBindPoint, VkPipelineLayout, uint, uint, VkWriteDescriptorSet*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5064\u7375\u4468\u7365\u7263\u7069\u6f74\u5372\u7465\u484b\u0052");
         }
+
         fixed (delegate*<VkCommandBuffer, VkDescriptorUpdateTemplate, VkPipelineLayout, uint, void*, void>* pvkCmdPushDescriptorSetWithTemplateKHR = &vkCmdPushDescriptorSetWithTemplateKHR)
         {
             *pvkCmdPushDescriptorSetWithTemplateKHR = (delegate*<VkCommandBuffer, VkDescriptorUpdateTemplate, VkPipelineLayout, uint, void*, void>)Core.Vk.GetVkFunction(

@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrGetSurfaceCapabilities2;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -125,9 +127,19 @@ public static unsafe class VkKhrGetSurfaceCapabilities2
         VkSurfaceFormat2KHR* /*pSurfaceFormats*/,
         VkResult> vkGetPhysicalDeviceSurfaceFormats2KHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceSurfaceCapabilities2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceSurfaceFormats2KHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, VkSurfaceCapabilities2KHR*, VkResult>* pvkGetPhysicalDeviceSurfaceCapabilities2KHR =
@@ -136,6 +148,7 @@ public static unsafe class VkKhrGetSurfaceCapabilities2
             *pvkGetPhysicalDeviceSurfaceCapabilities2KHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, VkSurfaceCapabilities2KHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u6143\u6170\u6962\u696c\u6974\u7365\u4b32\u5248\u0000");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, uint*, VkSurfaceFormat2KHR*, VkResult>* pvkGetPhysicalDeviceSurfaceFormats2KHR = &vkGetPhysicalDeviceSurfaceFormats2KHR)
         {
             *pvkGetPhysicalDeviceSurfaceFormats2KHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, uint*, VkSurfaceFormat2KHR*, VkResult>)Core.Vk.GetVkFunction(

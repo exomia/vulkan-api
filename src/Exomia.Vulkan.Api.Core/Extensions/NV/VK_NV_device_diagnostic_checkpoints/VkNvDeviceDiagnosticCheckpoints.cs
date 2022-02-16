@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkNvDeviceDiagnosticCheckpoints;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -78,15 +80,26 @@ public static unsafe class VkNvDeviceDiagnosticCheckpoints
         VkCheckpointDataNV* /*pCheckpointData*/,
         void> vkGetQueueCheckpointDataNV = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdSetCheckpointNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetQueueCheckpointDataNV</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, void*, void>* pvkCmdSetCheckpointNV = &vkCmdSetCheckpointNV)
         {
             *pvkCmdSetCheckpointNV = (delegate*<VkCommandBuffer, void*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u6843\u6365\u706b\u696f\u746e\u564e\u0000");
         }
+
         fixed (delegate*<VkQueue, uint*, VkCheckpointDataNV*, void>* pvkGetQueueCheckpointDataNV = &vkGetQueueCheckpointDataNV)
         {
             *pvkGetQueueCheckpointDataNV = (delegate*<VkQueue, uint*, VkCheckpointDataNV*, void>)Core.Vk.GetVkFunction(

@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkNvShadingRateImage;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -116,9 +118,22 @@ public static unsafe class VkNvShadingRateImage
         VkCoarseSampleOrderCustomNV* /*pCustomSampleOrders*/,
         void> vkCmdSetCoarseSampleOrderNV = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdBindShadingRateImageNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetViewportShadingRatePaletteNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetCoarseSampleOrderNV</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, VkImageView, VkImageLayout, void>* pvkCmdBindShadingRateImageNV = &vkCmdBindShadingRateImageNV)
@@ -126,11 +141,13 @@ public static unsafe class VkNvShadingRateImage
             *pvkCmdBindShadingRateImageNV = (delegate*<VkCommandBuffer, VkImageView, VkImageLayout, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6e69\u5364\u6168\u6964\u676e\u6152\u6574\u6d49\u6761\u4e65\u0056");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, uint, VkShadingRatePaletteNV*, void>* pvkCmdSetViewportShadingRatePaletteNV = &vkCmdSetViewportShadingRatePaletteNV)
         {
             *pvkCmdSetViewportShadingRatePaletteNV = (delegate*<VkCommandBuffer, uint, uint, VkShadingRatePaletteNV*, void>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6956\u7765\u6f70\u7472\u6853\u6461\u6e69\u5267\u7461\u5065\u6c61\u7465\u6574\u564e\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, VkCoarseSampleOrderTypeNV, uint, VkCoarseSampleOrderCustomNV*, void>* pvkCmdSetCoarseSampleOrderNV = &vkCmdSetCoarseSampleOrderNV)
         {
             *pvkCmdSetCoarseSampleOrderNV = (delegate*<VkCommandBuffer, VkCoarseSampleOrderTypeNV, uint, VkCoarseSampleOrderCustomNV*, void>)Core.Vk.GetVkFunction(

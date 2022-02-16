@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtMultiDraw;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -92,9 +94,19 @@ public static unsafe class VkExtMultiDraw
         int* /*pVertexOffset*/,
         void> vkCmdDrawMultiIndexedEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCmdDrawMultiEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdDrawMultiIndexedEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkCommandBuffer, uint, VkMultiDrawInfoEXT*, uint, uint, uint, void>* pvkCmdDrawMultiEXT = &vkCmdDrawMultiEXT)
@@ -102,6 +114,7 @@ public static unsafe class VkExtMultiDraw
             *pvkCmdDrawMultiEXT =
                 (delegate*<VkCommandBuffer, uint, VkMultiDrawInfoEXT*, uint, uint, uint, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4464\u6172\u4d77\u6c75\u6974\u5845\u0054");
         }
+
         fixed (delegate*<VkCommandBuffer, uint, VkMultiDrawIndexedInfoEXT*, uint, uint, uint, int*, void>* pvkCmdDrawMultiIndexedEXT = &vkCmdDrawMultiIndexedEXT)
         {
             *pvkCmdDrawMultiIndexedEXT = (delegate*<VkCommandBuffer, uint, VkMultiDrawIndexedInfoEXT*, uint, uint, uint, int*, void>)Core.Vk.GetVkFunction(

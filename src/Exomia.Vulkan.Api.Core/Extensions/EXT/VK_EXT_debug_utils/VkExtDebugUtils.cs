@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkExtDebugUtils;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -247,60 +249,117 @@ public static unsafe class VkExtDebugUtils
         VkDebugUtilsMessengerCallbackDataEXT* /*pCallbackData*/,
         void> vkSubmitDebugUtilsMessageEXT = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
-    /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
-    public static void Load(VkInstance instance)
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
+    /// <param name="device"> The device that the function pointers will be compatible with. </param>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkSetDebugUtilsObjectNameEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkSetDebugUtilsObjectTagEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkQueueBeginDebugUtilsLabelEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkQueueEndDebugUtilsLabelEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkQueueInsertDebugUtilsLabelEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdBeginDebugUtilsLabelEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdEndDebugUtilsLabelEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdInsertDebugUtilsLabelEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkDebugUtilsObjectNameInfoEXT*, VkResult>* pvkSetDebugUtilsObjectNameEXT = &vkSetDebugUtilsObjectNameEXT)
         {
             *pvkSetDebugUtilsObjectNameEXT = (delegate*<VkDevice, VkDebugUtilsObjectNameInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
-                instance, "\u6b76\u6553\u4474\u6265\u6775\u7455\u6c69\u4f73\u6a62\u6365\u4e74\u6d61\u4565\u5458\u0000");
+                device, "\u6b76\u6553\u4474\u6265\u6775\u7455\u6c69\u4f73\u6a62\u6365\u4e74\u6d61\u4565\u5458\u0000");
         }
+
         fixed (delegate*<VkDevice, VkDebugUtilsObjectTagInfoEXT*, VkResult>* pvkSetDebugUtilsObjectTagEXT = &vkSetDebugUtilsObjectTagEXT)
         {
             *pvkSetDebugUtilsObjectTagEXT = (delegate*<VkDevice, VkDebugUtilsObjectTagInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
-                instance, "\u6b76\u6553\u4474\u6265\u6775\u7455\u6c69\u4f73\u6a62\u6365\u5474\u6761\u5845\u0054");
+                device, "\u6b76\u6553\u4474\u6265\u6775\u7455\u6c69\u4f73\u6a62\u6365\u5474\u6761\u5845\u0054");
         }
+
         fixed (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>* pvkQueueBeginDebugUtilsLabelEXT = &vkQueueBeginDebugUtilsLabelEXT)
         {
             *pvkQueueBeginDebugUtilsLabelEXT = (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>)Core.Vk.GetVkFunction(
-                instance, "\u6b76\u7551\u7565\u4265\u6765\u6e69\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
+                device, "\u6b76\u7551\u7565\u4265\u6765\u6e69\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
         }
+
         fixed (delegate*<VkQueue, void>* pvkQueueEndDebugUtilsLabelEXT = &vkQueueEndDebugUtilsLabelEXT)
         {
-            *pvkQueueEndDebugUtilsLabelEXT = (delegate*<VkQueue, void>)Core.Vk.GetVkFunction(instance, "\u6b76\u7551\u7565\u4565\u646e\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
+            *pvkQueueEndDebugUtilsLabelEXT = (delegate*<VkQueue, void>)Core.Vk.GetVkFunction(device, "\u6b76\u7551\u7565\u4565\u646e\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
         }
+
         fixed (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>* pvkQueueInsertDebugUtilsLabelEXT = &vkQueueInsertDebugUtilsLabelEXT)
         {
             *pvkQueueInsertDebugUtilsLabelEXT = (delegate*<VkQueue, VkDebugUtilsLabelEXT*, void>)Core.Vk.GetVkFunction(
-                instance, "\u6b76\u7551\u7565\u4965\u736e\u7265\u4474\u6265\u6775\u7455\u6c69\u4c73\u6261\u6c65\u5845\u0054");
+                device, "\u6b76\u7551\u7565\u4965\u736e\u7265\u4474\u6265\u6775\u7455\u6c69\u4c73\u6261\u6c65\u5845\u0054");
         }
+
         fixed (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>* pvkCmdBeginDebugUtilsLabelEXT = &vkCmdBeginDebugUtilsLabelEXT)
         {
             *pvkCmdBeginDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>)Core.Vk.GetVkFunction(
-                instance, "\u6b76\u6d43\u4264\u6765\u6e69\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
+                device, "\u6b76\u6d43\u4264\u6765\u6e69\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdEndDebugUtilsLabelEXT = &vkCmdEndDebugUtilsLabelEXT)
         {
-            *pvkCmdEndDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(instance, "\u6b76\u6d43\u4564\u646e\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
+            *pvkCmdEndDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4564\u646e\u6544\u7562\u5567\u6974\u736c\u614c\u6562\u456c\u5458\u0000");
         }
+
         fixed (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>* pvkCmdInsertDebugUtilsLabelEXT = &vkCmdInsertDebugUtilsLabelEXT)
         {
             *pvkCmdInsertDebugUtilsLabelEXT = (delegate*<VkCommandBuffer, VkDebugUtilsLabelEXT*, void>)Core.Vk.GetVkFunction(
-                instance, "\u6b76\u6d43\u4964\u736e\u7265\u4474\u6265\u6775\u7455\u6c69\u4c73\u6261\u6c65\u5845\u0054");
+                device, "\u6b76\u6d43\u4964\u736e\u7265\u4474\u6265\u6775\u7455\u6c69\u4c73\u6261\u6c65\u5845\u0054");
         }
+    }
+
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
+    /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkCreateDebugUtilsMessengerEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkDestroyDebugUtilsMessengerEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkSubmitDebugUtilsMessageEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
+    public static void Load(VkInstance instance)
+    {
         fixed (delegate*<VkInstance, VkDebugUtilsMessengerCreateInfoEXT*, VkAllocationCallbacks*, VkDebugUtilsMessengerEXT*, VkResult>* pvkCreateDebugUtilsMessengerEXT =
                    &vkCreateDebugUtilsMessengerEXT)
         {
             *pvkCreateDebugUtilsMessengerEXT = (delegate*<VkInstance, VkDebugUtilsMessengerCreateInfoEXT*, VkAllocationCallbacks*, VkDebugUtilsMessengerEXT*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6544\u7562\u5567\u6974\u736c\u654d\u7373\u6e65\u6567\u4572\u5458\u0000");
         }
+
         fixed (delegate*<VkInstance, VkDebugUtilsMessengerEXT, VkAllocationCallbacks*, void>* pvkDestroyDebugUtilsMessengerEXT = &vkDestroyDebugUtilsMessengerEXT)
         {
             *pvkDestroyDebugUtilsMessengerEXT = (delegate*<VkInstance, VkDebugUtilsMessengerEXT, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6544\u7473\u6f72\u4479\u6265\u6775\u7455\u6c69\u4d73\u7365\u6573\u676e\u7265\u5845\u0054");
         }
+
         fixed (delegate*<VkInstance, VkDebugUtilsMessageSeverityFlagBitsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void>* pvkSubmitDebugUtilsMessageEXT =
                    &vkSubmitDebugUtilsMessageEXT)
         {

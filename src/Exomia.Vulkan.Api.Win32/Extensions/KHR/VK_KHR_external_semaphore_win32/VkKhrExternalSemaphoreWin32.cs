@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Win32.VkKhrExternalSemaphoreWin32;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -102,9 +104,19 @@ public static unsafe class VkKhrExternalSemaphoreWin32
         HANDLE* /*pHandle*/,
         VkResult> vkGetSemaphoreWin32HandleKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkImportSemaphoreWin32HandleKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetSemaphoreWin32HandleKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult>* pvkImportSemaphoreWin32HandleKHR = &vkImportSemaphoreWin32HandleKHR)
@@ -112,6 +124,7 @@ public static unsafe class VkKhrExternalSemaphoreWin32
             *pvkImportSemaphoreWin32HandleKHR = (delegate*<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d49\u6f70\u7472\u6553\u616d\u6870\u726f\u5765\u6e69\u3233\u6148\u646e\u656c\u484b\u0052");
         }
+
         fixed (delegate*<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, HANDLE*, VkResult>* pvkGetSemaphoreWin32HandleKHR = &vkGetSemaphoreWin32HandleKHR)
         {
             *pvkGetSemaphoreWin32HandleKHR = (delegate*<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, HANDLE*, VkResult>)Core.Vk.GetVkFunction(

@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrSurface;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -197,30 +199,53 @@ public static unsafe class VkKhrSurface
         VkPresentModeKHR* /*pPresentModes*/,
         VkResult> vkGetPhysicalDeviceSurfacePresentModesKHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkDestroySurfaceKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceSurfaceSupportKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceSurfaceCapabilitiesKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceSurfaceFormatsKHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceSurfacePresentModesKHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkInstance, VkSurfaceKHR, VkAllocationCallbacks*, void>* pvkDestroySurfaceKHR = &vkDestroySurfaceKHR)
         {
             *pvkDestroySurfaceKHR = (delegate*<VkInstance, VkSurfaceKHR, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(instance, "\u6b76\u6544\u7473\u6f72\u5379\u7275\u6166\u6563\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, uint, VkSurfaceKHR, VkBool32*, VkResult>* pvkGetPhysicalDeviceSurfaceSupportKHR = &vkGetPhysicalDeviceSurfaceSupportKHR)
         {
             *pvkGetPhysicalDeviceSurfaceSupportKHR = (delegate*<VkPhysicalDevice, uint, VkSurfaceKHR, VkBool32*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u7553\u7070\u726f\u4b74\u5248\u0000");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkSurfaceKHR, VkSurfaceCapabilitiesKHR*, VkResult>* pvkGetPhysicalDeviceSurfaceCapabilitiesKHR = &vkGetPhysicalDeviceSurfaceCapabilitiesKHR)
         {
             *pvkGetPhysicalDeviceSurfaceCapabilitiesKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, VkSurfaceCapabilitiesKHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u6143\u6170\u6962\u696c\u6974\u7365\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkSurfaceFormatKHR*, VkResult>* pvkGetPhysicalDeviceSurfaceFormatsKHR = &vkGetPhysicalDeviceSurfaceFormatsKHR)
         {
             *pvkGetPhysicalDeviceSurfaceFormatsKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkSurfaceFormatKHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u6f46\u6d72\u7461\u4b73\u5248\u0000");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkPresentModeKHR*, VkResult>* pvkGetPhysicalDeviceSurfacePresentModesKHR = &vkGetPhysicalDeviceSurfacePresentModesKHR)
         {
             *pvkGetPhysicalDeviceSurfacePresentModesKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkPresentModeKHR*, VkResult>)Core.Vk.GetVkFunction(

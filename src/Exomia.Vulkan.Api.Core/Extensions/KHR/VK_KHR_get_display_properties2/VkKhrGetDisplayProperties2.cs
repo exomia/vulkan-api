@@ -8,6 +8,8 @@
 
 #endregion
 
+global using static Exomia.Vulkan.Api.Core.VkKhrGetDisplayProperties2;
+
 #pragma warning disable CA2211 // Non-constant fields should not be visible
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -169,9 +171,25 @@ public static unsafe class VkKhrGetDisplayProperties2
         VkDisplayPlaneCapabilities2KHR* /*pCapabilities*/,
         VkResult> vkGetDisplayPlaneCapabilities2KHR = null;
 
-    /// <summary> Loads all function pointer for this extension. </summary>
+    /// <summary> Loads all function pointer based on the instance for this extension. (see remarks!) </summary>
     /// <param name="instance"> The instance that the function pointers will be compatible with. </param>
-    /// <remarks> The load method must always be executed first before a command of this extension can be used. </remarks>
+    /// <remarks>
+    ///     This load method makes the following function pointers available:<br />
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceDisplayProperties2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetPhysicalDeviceDisplayPlaneProperties2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDisplayModeProperties2KHR</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetDisplayPlaneCapabilities2KHR</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, uint*, VkDisplayProperties2KHR*, VkResult>* pvkGetPhysicalDeviceDisplayProperties2KHR = &vkGetPhysicalDeviceDisplayProperties2KHR)
@@ -179,16 +197,19 @@ public static unsafe class VkKhrGetDisplayProperties2
             *pvkGetPhysicalDeviceDisplayProperties2KHR = (delegate*<VkPhysicalDevice, uint*, VkDisplayProperties2KHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4465\u7369\u6c70\u7961\u7250\u706f\u7265\u6974\u7365\u4b32\u5248\u0000");
         }
+
         fixed (delegate*<VkPhysicalDevice, uint*, VkDisplayPlaneProperties2KHR*, VkResult>* pvkGetPhysicalDeviceDisplayPlaneProperties2KHR = &vkGetPhysicalDeviceDisplayPlaneProperties2KHR)
         {
             *pvkGetPhysicalDeviceDisplayPlaneProperties2KHR = (delegate*<VkPhysicalDevice, uint*, VkDisplayPlaneProperties2KHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4465\u7369\u6c70\u7961\u6c50\u6e61\u5065\u6f72\u6570\u7472\u6569\u3273\u484b\u0052");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkDisplayKHR, uint*, VkDisplayModeProperties2KHR*, VkResult>* pvkGetDisplayModeProperties2KHR = &vkGetDisplayModeProperties2KHR)
         {
             *pvkGetDisplayModeProperties2KHR = (delegate*<VkPhysicalDevice, VkDisplayKHR, uint*, VkDisplayModeProperties2KHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u4474\u7369\u6c70\u7961\u6f4d\u6564\u7250\u706f\u7265\u6974\u7365\u4b32\u5248\u0000");
         }
+
         fixed (delegate*<VkPhysicalDevice, VkDisplayPlaneInfo2KHR*, VkDisplayPlaneCapabilities2KHR*, VkResult>* pvkGetDisplayPlaneCapabilities2KHR = &vkGetDisplayPlaneCapabilities2KHR)
         {
             *pvkGetDisplayPlaneCapabilities2KHR = (delegate*<VkPhysicalDevice, VkDisplayPlaneInfo2KHR*, VkDisplayPlaneCapabilities2KHR*, VkResult>)Core.Vk.GetVkFunction(
