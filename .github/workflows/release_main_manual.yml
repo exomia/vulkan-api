@@ -1,16 +1,5 @@
 name: '[RELEASE] main manual'
-on:
-  workflow_dispatch:
-    inputs:
-      release-suffix:
-        description: 'version suffix'     
-        required: true
-        default: '.x'
-      prerelease:
-        description: 'prerelease'     
-        type: boolean
-        required: true
-        default: true
+on: workflow_dispatch
 concurrency: 
   group: 'release-main'
 jobs:
@@ -51,7 +40,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |
-        dotnet build Exomia.Vulkan.Api.Core.sln --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet build Exomia.Vulkan.Api.Core.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-core-build:
     if: ${{ always() }}  
     name: '[CHECK] RELEASE CORE BUILD SUCCESS'
@@ -79,7 +68,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Debug --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
@@ -99,7 +88,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Release --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
@@ -124,7 +113,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        until $(curl -fsS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/${{ matrix.packages }}/${{ needs.get-release-info.outputs.release-version }}${{ github.event.inputs.release-suffix }}.json'); do sleep 60;done
+        until $(curl -fsS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/${{ matrix.packages }}/${{ needs.get-release-info.outputs.release-version }}.json'); do sleep 60;done
   build-platforms:
     needs: [nuget-wait-for-core-package-to-be-available]
     strategy:
@@ -144,7 +133,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |
-        dotnet build Exomia.Vulkan.Api.Platforms.sln --configuration ${{ matrix.configurations }} --force --nologo --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet build Exomia.Vulkan.Api.Platforms.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-platforms-build:
     if: ${{ always() }}  
     name: '[CHECK] RELEASE PLATFORMS BUILD SUCCESS'
@@ -172,7 +161,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Debug --force --nologo --output ~/.packages --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Debug --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --skip-duplicate
@@ -192,7 +181,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - run: |  
-        dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Release --force --nologo --output ~/.packages --version-suffix "${{ github.event.inputs.release-suffix }}" -p:Platform="${{ matrix.platforms }}"
+        dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Release --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
@@ -223,10 +212,9 @@ jobs:
           return await github.rest.repos.createRelease({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            tag_name: 'v${{ needs.get-release-info.outputs.release-version }}${{ github.event.inputs.release-suffix }}',
+            tag_name: 'v${{ needs.get-release-info.outputs.release-version }}',
             generate_release_notes: true,
-            target_commitish: '${{ github.ref_name }}',
-            prerelease: ${{ github.event.inputs.prerelease }}
+            target_commitish: '${{ github.ref_name }}'
           });
   discord-announcement:
     needs: [create-release]

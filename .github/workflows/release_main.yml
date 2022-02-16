@@ -3,8 +3,8 @@ on:
   pull_request:
     types: [closed]
     branches:
-      - 'master'
-concurrency: 
+      - 'release/v*'
+concurrency:
   group: 'release-main'
 jobs:
   merged-check:
@@ -17,11 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release-version: ${{ steps.release-version.outputs.release-version }}
-    steps:
+    steps:  
+    - uses: actions/checkout@v2
     - name: 'set release-version'
       id: release-version
       run: |
-        echo "::set-output name=release-version::${GITHUB_HEAD_REF#rc/v}" 
+        echo "::set-output name=release-version::$(<${{ github.workspace }}/.version)" 
   print-information:
     needs: [get-release-info]
     runs-on: ubuntu-latest
