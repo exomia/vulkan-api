@@ -1,4 +1,4 @@
-﻿<!--EXTERNAL_PROPERTIES: VersionSuffix;GITHUB_ACTIONS-->
+<!--EXTERNAL_PROPERTIES: VersionSuffix;GITHUB_ACTIONS-->
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>net6.0</TargetFrameworks>

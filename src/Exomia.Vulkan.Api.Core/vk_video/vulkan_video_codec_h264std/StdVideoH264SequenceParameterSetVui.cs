@@ -1,4 +1,4 @@
-﻿#region License
+#region License
 
 // Copyright (c) 2018-2022, exomia
 // All rights reserved.
