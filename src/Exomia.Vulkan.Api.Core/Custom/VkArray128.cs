@@ -13,16 +13,16 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     Used instead of public fixed T[64].
+///     Used instead of public fixed T[128].
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkArray64<T>
+public unsafe struct VkArray128<T>
     where T : unmanaged
 {
     /// <summary>
-    ///     The length of <see cref="VkArray64{T}" />.
+    ///     The length of <see cref="VkArray128{T}" />.
     /// </summary>
-    public const uint LENGTH = 64;
+    public const uint LENGTH = 128;
 
     /// <summary>
     ///     Indexer to get items within this collection using array index syntax.
@@ -75,69 +75,133 @@ public unsafe struct VkArray64<T>
     }
 
 #pragma warning disable 1591 //Missing XML comment for publicly visible type or member
-    public T M01;
-    public T M02;
-    public T M03;
-    public T M04;
-    public T M05;
-    public T M06;
-    public T M07;
-    public T M08;
-    public T M09;
-    public T M10;
-    public T M11;
-    public T M12;
-    public T M13;
-    public T M14;
-    public T M15;
-    public T M16;
-    public T M17;
-    public T M18;
-    public T M19;
-    public T M20;
-    public T M21;
-    public T M22;
-    public T M23;
-    public T M24;
-    public T M25;
-    public T M26;
-    public T M27;
-    public T M28;
-    public T M29;
-    public T M30;
-    public T M31;
-    public T M32;
-    public T M33;
-    public T M34;
-    public T M35;
-    public T M36;
-    public T M37;
-    public T M38;
-    public T M39;
-    public T M40;
-    public T M41;
-    public T M42;
-    public T M43;
-    public T M44;
-    public T M45;
-    public T M46;
-    public T M47;
-    public T M48;
-    public T M49;
-    public T M50;
-    public T M51;
-    public T M52;
-    public T M53;
-    public T M54;
-    public T M55;
-    public T M56;
-    public T M57;
-    public T M58;
-    public T M59;
-    public T M60;
-    public T M61;
-    public T M62;
-    public T M63;
-    public T M64;
+    public T M001;
+    public T M002;
+    public T M003;
+    public T M004;
+    public T M005;
+    public T M006;
+    public T M007;
+    public T M008;
+    public T M009;
+    public T M010;
+    public T M011;
+    public T M012;
+    public T M013;
+    public T M014;
+    public T M015;
+    public T M016;
+    public T M017;
+    public T M018;
+    public T M019;
+    public T M020;
+    public T M021;
+    public T M022;
+    public T M023;
+    public T M024;
+    public T M025;
+    public T M026;
+    public T M027;
+    public T M028;
+    public T M029;
+    public T M030;
+    public T M031;
+    public T M032;
+    public T M033;
+    public T M034;
+    public T M035;
+    public T M036;
+    public T M037;
+    public T M038;
+    public T M039;
+    public T M040;
+    public T M041;
+    public T M042;
+    public T M043;
+    public T M044;
+    public T M045;
+    public T M046;
+    public T M047;
+    public T M048;
+    public T M049;
+    public T M050;
+    public T M051;
+    public T M052;
+    public T M053;
+    public T M054;
+    public T M055;
+    public T M056;
+    public T M057;
+    public T M058;
+    public T M059;
+    public T M060;
+    public T M061;
+    public T M062;
+    public T M063;
+    public T M064;
+    public T M065;
+    public T M066;
+    public T M067;
+    public T M068;
+    public T M069;
+    public T M070;
+    public T M071;
+    public T M072;
+    public T M073;
+    public T M074;
+    public T M075;
+    public T M076;
+    public T M077;
+    public T M078;
+    public T M079;
+    public T M080;
+    public T M081;
+    public T M082;
+    public T M083;
+    public T M084;
+    public T M085;
+    public T M086;
+    public T M087;
+    public T M088;
+    public T M089;
+    public T M090;
+    public T M091;
+    public T M092;
+    public T M093;
+    public T M094;
+    public T M095;
+    public T M096;
+    public T M097;
+    public T M098;
+    public T M099;
+    public T M100;
+    public T M101;
+    public T M102;
+    public T M103;
+    public T M104;
+    public T M105;
+    public T M106;
+    public T M107;
+    public T M108;
+    public T M109;
+    public T M110;
+    public T M111;
+    public T M112;
+    public T M113;
+    public T M114;
+    public T M115;
+    public T M116;
+    public T M117;
+    public T M118;
+    public T M119;
+    public T M120;
+    public T M121;
+    public T M122;
+    public T M123;
+    public T M124;
+    public T M125;
+    public T M126;
+    public T M127;
+    public T M128;
 #pragma warning restore 1591 //Missing XML comment for publicly visible type or member
 }

@@ -13,17 +13,17 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     Used instead of public fixed T[6].
+///     Used instead of public fixed T[7].
 /// </summary>
 /// <typeparam name="T"> Generic type parameter. </typeparam>
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkArray6<T>
+public unsafe struct VkArray7<T>
     where T : unmanaged
 {
     /// <summary>
-    ///     The length of <see cref="VkArray6{T}" />.
+    ///     The length of <see cref="VkArray7{T}" />.
     /// </summary>
-    public const uint LENGTH = 6;
+    public const uint LENGTH = 7;
 
     /// <summary>
     ///     Indexer to get or set items within this collection using array index syntax.
@@ -82,5 +82,6 @@ public unsafe struct VkArray6<T>
     public T M04;
     public T M05;
     public T M06;
+    public T M07;
 #pragma warning restore 1591 //Missing XML comment for publicly visible type or member
 }
