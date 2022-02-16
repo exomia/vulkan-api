@@ -17,12 +17,13 @@ jobs:
   get-release-info:
     runs-on: ubuntu-latest
     outputs:
-      rc-version: ${{ steps.release-version.outputs.release-version }}
+      release-version: ${{ steps.release-version.outputs.release-version }}
     steps:
+    - uses: actions/checkout@v2
     - name: 'set release-version'
       id: release-version
       run: |
-        echo "::set-output name=release-version::${cat ~/.version}"
+        echo "::set-output name=release-version::$(<${{ github.workspace }}/.version)"
   print-information:
     needs: [get-release-info]
     runs-on: ubuntu-latest
@@ -32,6 +33,7 @@ jobs:
         echo "release-version: ${{ needs.get-release-info.outputs.release-version }}" 
         echo "release-suffix: ${{ github.event.inputs.release-suffix }}"
   build-core:
+    needs: [get-release-info]
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
