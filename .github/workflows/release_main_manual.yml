@@ -124,7 +124,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        until $(curl -fsS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/${{ matrix.packages }}/${{ needs.get-release-info.outputs.release-version }}.json'); do sleep 60;done
+        until $(curl -fsS -o /dev/null 'https://api.nuget.org/v3/registration5-gz-semver2/${{ matrix.packages }}/${{ needs.get-release-info.outputs.release-version }}${{ github.event.inputs.release-suffix }}.json'); do sleep 60;done
   build-platforms:
     needs: [nuget-wait-for-core-package-to-be-available]
     strategy:
