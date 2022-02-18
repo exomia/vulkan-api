@@ -223,7 +223,7 @@ jobs:
             repo: context.repo.repo,
             tag_name: 'v${{ needs.get-release-info.outputs.release-version }}',
             generate_release_notes: true,
-            target_commitish: '${{ github.head_ref }}'
+            target_commitish: '${{ github.base_ref }}'
           });
   discord-announcement:
     needs: [get-release-info, create-release]
