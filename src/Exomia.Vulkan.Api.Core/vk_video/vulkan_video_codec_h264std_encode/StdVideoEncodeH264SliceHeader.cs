@@ -17,9 +17,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct StdVideoEncodeH264SliceHeader
+public struct StdVideoEncodeH264SliceHeader
 {
     public StdVideoEncodeH264SliceHeaderFlags flags;
+
+    public uint first_mb_in_slice;
 
     public StdVideoH264SliceType slice_type;
 
@@ -40,6 +42,4 @@ public unsafe struct StdVideoEncodeH264SliceHeader
     public sbyte slice_alpha_c0_offset_div2;
 
     public sbyte slice_beta_offset_div2;
-
-    public StdVideoEncodeH264RefMemMgmtCtrlOperations* pMemMgmtCtrlOperations;
 }
