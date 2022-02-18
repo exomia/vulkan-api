@@ -61,8 +61,6 @@ public unsafe struct StdVideoEncodeH265SliceSegmentHeader
 
     public byte MaxNumMergeCand;
 
-    public sbyte slice_qp_delta;
-
     public sbyte slice_cb_qp_offset;
 
     public sbyte slice_cr_qp_offset;

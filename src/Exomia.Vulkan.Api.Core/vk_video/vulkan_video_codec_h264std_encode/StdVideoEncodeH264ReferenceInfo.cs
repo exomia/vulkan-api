@@ -17,13 +17,15 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public struct StdVideoEncodeH264PictureInfo
+public struct StdVideoEncodeH264ReferenceInfo
 {
-    public StdVideoEncodeH264PictureInfoFlags flags;
+    public StdVideoEncodeH264ReferenceInfoFlags flags;
 
-    public StdVideoH264PictureType pictureType;
-
-    public uint frame_num;
+    public uint FrameNum;
 
     public int PicOrderCnt;
+
+    public ushort long_term_pic_num;
+
+    public ushort long_term_frame_idx;
 }
