@@ -46,6 +46,7 @@ PM> Install-Package Exomia.Vulkan.Api.{Platform}
 | Ggp | Google Games Platform |
 | Screen | QNX Screen Graphics Subsystem |
 
+
 > see Exomia.Vulkan.Api packages on [nuget](https://www.nuget.org/packages?q=Exomia.Vulkan.Api)
 
 ---

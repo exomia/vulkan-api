@@ -29,9 +29,6 @@ public unsafe struct VkPrivateDataSlotCreateInfo
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     flags is a bitmask of VkPrivateDataSlotCreateFlagsspecifying additional parameters of the new private data
-    ///     slot
-    /// </summary>
+    /// <summary>flags is reserved for future use.</summary>
     public VkPrivateDataSlotCreateFlags flags;
 }

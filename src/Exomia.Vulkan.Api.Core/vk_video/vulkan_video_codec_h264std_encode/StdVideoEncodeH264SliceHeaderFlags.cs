@@ -21,45 +21,33 @@ public struct StdVideoEncodeH264SliceHeaderFlags
 {
     private uint _bitfield1;
 
-    public uint idr_flag
+    public uint direct_spatial_mv_pred_flag
     {
         get { return (uint)((_bitfield1 >> 0) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFE) | (((uint)value & 0x00000001) << 0); }
     }
 
-    public uint is_reference_flag
+    public uint num_ref_idx_active_override_flag
     {
         get { return (uint)((_bitfield1 >> 1) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFD) | (((uint)value & 0x00000001) << 1); }
     }
 
-    public uint num_ref_idx_active_override_flag
+    public uint no_output_of_prior_pics_flag
     {
         get { return (uint)((_bitfield1 >> 2) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFB) | (((uint)value & 0x00000001) << 2); }
     }
 
-    public uint no_output_of_prior_pics_flag
+    public uint adaptive_ref_pic_marking_mode_flag
     {
         get { return (uint)((_bitfield1 >> 3) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFF7) | (((uint)value & 0x00000001) << 3); }
     }
 
-    public uint long_term_reference_flag
+    public uint no_prior_references_available_flag
     {
         get { return (uint)((_bitfield1 >> 4) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFEF) | (((uint)value & 0x00000001) << 4); }
-    }
-
-    public uint adaptive_ref_pic_marking_mode_flag
-    {
-        get { return (uint)((_bitfield1 >> 5) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFFFDF) | (((uint)value & 0x00000001) << 5); }
-    }
-
-    public uint no_prior_references_available_flag
-    {
-        get { return (uint)((_bitfield1 >> 6) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFFFBF) | (((uint)value & 0x00000001) << 6); }
     }
 }
