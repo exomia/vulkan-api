@@ -57,14 +57,14 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT = 0x4,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT indicates that     this descriptor binding has a variable size
-    ///     that will be specified when     a descriptor set is allocated using this layout.     The value of descriptorCount
-    ///     is treated as an upper bound on the     size of the binding.     This must only be used for the last binding in the
-    ///     descriptor set     layout (i.e. the binding with the largest value of binding).     For the purposes of counting
-    ///     against limits such as     maxDescriptorSet* and maxPerStageDescriptor*, the full value     of descriptorCount is
-    ///     counted, except for descriptor bindings with a descriptor type of     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.
-    ///     In this case, descriptorCount specifies the upper bound on the     byte size of the binding; thus it counts against
-    ///     the
+    ///     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT indicates that     this is a variable-sized descriptor binding
+    ///     whose size will be     specified when a descriptor set is allocated using this layout.     The value of
+    ///     descriptorCount is treated as an upper bound on the     size of the binding.     This must only be used for the
+    ///     last binding in the descriptor set     layout (i.e. the binding with the largest value of binding).     For the
+    ///     purposes of counting against limits such as     maxDescriptorSet* and maxPerStageDescriptor*, the full value     of
+    ///     descriptorCount is     counted, except for descriptor bindings with a descriptor type of
+    ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.     In this case, descriptorCount specifies the upper bound on the
+    ///     byte size of the binding; thus it counts against the
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformBlockSize">
     ///         <code>maxInlineUniformBlockSize</code>
@@ -121,14 +121,14 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT_EXT = VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT indicates that     this descriptor binding has a variable size
-    ///     that will be specified when     a descriptor set is allocated using this layout.     The value of descriptorCount
-    ///     is treated as an upper bound on the     size of the binding.     This must only be used for the last binding in the
-    ///     descriptor set     layout (i.e. the binding with the largest value of binding).     For the purposes of counting
-    ///     against limits such as     maxDescriptorSet* and maxPerStageDescriptor*, the full value     of descriptorCount is
-    ///     counted, except for descriptor bindings with a descriptor type of     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.
-    ///     In this case, descriptorCount specifies the upper bound on the     byte size of the binding; thus it counts against
-    ///     the
+    ///     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT indicates that     this is a variable-sized descriptor binding
+    ///     whose size will be     specified when a descriptor set is allocated using this layout.     The value of
+    ///     descriptorCount is treated as an upper bound on the     size of the binding.     This must only be used for the
+    ///     last binding in the descriptor set     layout (i.e. the binding with the largest value of binding).     For the
+    ///     purposes of counting against limits such as     maxDescriptorSet* and maxPerStageDescriptor*, the full value     of
+    ///     descriptorCount is     counted, except for descriptor bindings with a descriptor type of
+    ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.     In this case, descriptorCount specifies the upper bound on the
+    ///     byte size of the binding; thus it counts against the
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformBlockSize">
     ///         <code>maxInlineUniformBlockSize</code>

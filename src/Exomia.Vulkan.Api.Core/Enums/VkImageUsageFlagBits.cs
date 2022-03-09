@@ -159,6 +159,12 @@ public enum VkImageUsageFlagBits
     /// </summary>
     VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x100,
 
+    /// <summary>
+    ///     VK_IMAGE_USAGE_RESERVED_22_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
+    /// </summary>
+    VK_IMAGE_USAGE_RESERVED_22_BIT_EXT = 0x400000,
+
     /// <summary>VK_IMAGE_USAGE_VIDEO_ENCODE_DST_BIT_KHR is reserved for future use.</summary>
     VK_IMAGE_USAGE_VIDEO_ENCODE_DST_BIT_KHR = 0x2000,
 

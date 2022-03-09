@@ -40,7 +40,7 @@ public struct VkImageFormatProperties
     ///     VK_IMAGE_TILING_LINEARVkPhysicalDeviceImageFormatInfo2::tiling was VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXTthe
     ///     VkPhysicalDeviceImageFormatInfo2::pNext chain included a VkPhysicalDeviceExternalImageFormatInfo structure with a
     ///     handle type included in the handleTypes member for which mipmap image support is not requiredimage format is one of
-    ///     the formats that require a sampler Y&#8217;CBCR conversionflags contains VK_IMAGE_CREATE_SUBSAMPLED_BIT_EXT
+    ///     the formats that require a sampler Y′CBCR conversionflags contains VK_IMAGE_CREATE_SUBSAMPLED_BIT_EXT
     /// </summary>
     public uint maxMipLevels;
 
@@ -48,7 +48,7 @@ public struct VkImageFormatProperties
     ///     maxArrayLayers is the maximum number of array layers. maxArrayLayers must be no less than
     ///     VkPhysicalDeviceLimits::maxImageArrayLayers, except when one of the following conditions is true, in which case it
     ///     may instead be 1:tiling is VK_IMAGE_TILING_LINEARtiling is VK_IMAGE_TILING_OPTIMAL and type is
-    ///     VK_IMAGE_TYPE_3Dformat is one of the formats that require a sampler Y&#8217;CBCR conversion
+    ///     VK_IMAGE_TYPE_3Dformat is one of the formats that require a sampler Y′CBCR conversion
     /// </summary>
     public uint maxArrayLayers;
 

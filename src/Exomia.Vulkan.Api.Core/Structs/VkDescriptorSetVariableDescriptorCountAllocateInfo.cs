@@ -46,7 +46,7 @@ public unsafe struct VkDescriptorSetVariableDescriptorCountAllocateInfo
 
     /// <summary>
     ///     pDescriptorCounts is a pointer to an array of descriptor counts, with each member specifying the number of
-    ///     descriptors in a variable descriptor count binding in the corresponding descriptor set being allocated.
+    ///     descriptors in a variable-sized descriptor binding in the corresponding descriptor set being allocated.
     /// </summary>
     public uint* pDescriptorCounts;
 }
