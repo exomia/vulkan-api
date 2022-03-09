@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - 'master'
+  pull_request:
+    types: [opened]
+    branches:
+      - 'master'
 jobs:
   build-core:
     strategy:
