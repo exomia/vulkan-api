@@ -118,16 +118,15 @@ public static unsafe class VkFuchsiaExternalMemory
     {
         fixed (delegate*<VkDevice, VkMemoryGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>* pvkGetMemoryZirconHandleFUCHSIA = &vkGetMemoryZirconHandleFUCHSIA)
         {
-            *pvkGetMemoryZirconHandleFUCHSIA = (delegate*<VkDevice, VkMemoryGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>)Api.Core.Vk.GetVkFunction(
+            *pvkGetMemoryZirconHandleFUCHSIA = (delegate*<VkDevice, VkMemoryGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u4d74\u6d65\u726f\u5a79\u7269\u6f63\u486e\u6e61\u6c64\u4665\u4355\u5348\u4149\u0000");
         }
 
         fixed (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, zx_handle_t, VkMemoryZirconHandlePropertiesFUCHSIA*, VkResult>* pvkGetMemoryZirconHandlePropertiesFUCHSIA =
                    &vkGetMemoryZirconHandlePropertiesFUCHSIA)
         {
-            *pvkGetMemoryZirconHandlePropertiesFUCHSIA =
-                (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, zx_handle_t, VkMemoryZirconHandlePropertiesFUCHSIA*, VkResult>)Api.Core.Vk.GetVkFunction(
-                    device, "\u6b76\u6547\u4d74\u6d65\u726f\u5a79\u7269\u6f63\u486e\u6e61\u6c64\u5065\u6f72\u6570\u7472\u6569\u4673\u4355\u5348\u4149\u0000");
+            *pvkGetMemoryZirconHandlePropertiesFUCHSIA = (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, zx_handle_t, VkMemoryZirconHandlePropertiesFUCHSIA*, VkResult>)Core.Vk.GetVkFunction(
+                device, "\u6b76\u6547\u4d74\u6d65\u726f\u5a79\u7269\u6f63\u486e\u6e61\u6c64\u5065\u6f72\u6570\u7472\u6569\u4673\u4355\u5348\u4149\u0000");
         }
     }
 }

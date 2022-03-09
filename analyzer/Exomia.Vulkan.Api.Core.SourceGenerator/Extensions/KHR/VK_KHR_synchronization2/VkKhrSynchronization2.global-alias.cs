@@ -1,13 +1,3 @@
-#region License
-
-// Copyright (c) 2018-2022, exomia
-// All rights reserved.
-// 
-// This source code is licensed under the BSD-style license found in the
-// LICENSE file in the root directory of this source tree.
-
-#endregion
-
 global using VkPipelineStageFlags2KHR = Exomia.Vulkan.Api.Core.VkPipelineStageFlagBits2;
 global using VkPipelineStageFlagBits2KHR = Exomia.Vulkan.Api.Core.VkPipelineStageFlagBits2;
 global using VkAccessFlags2KHR = Exomia.Vulkan.Api.Core.VkAccessFlagBits2;
