@@ -42,55 +42,57 @@ public unsafe struct VkGraphicsPipelineCreateInfo
     public VkPipelineShaderStageCreateInfo* pStages;
 
     /// <summary>
-    ///     pVertexInputState is a pointer to a VkPipelineVertexInputStateCreateInfo structure. It is ignored if the
-    ///     pipeline includes a mesh shader stage. It is ignored if the pipeline is created with the
-    ///     VK_DYNAMIC_STATE_VERTEX_INPUT_EXT dynamic state set.
+    ///     pVertexInputState is a pointer to a VkPipelineVertexInputStateCreateInfo structure defining vertex input state
+    ///     for use with vertex shading.
     /// </summary>
     public VkPipelineVertexInputStateCreateInfo* pVertexInputState;
 
     /// <summary>
     ///     pInputAssemblyState is a pointer to a VkPipelineInputAssemblyStateCreateInfo structure which determines input
-    ///     assembly behavior, as described in Drawing Commands. It is ignored if the pipeline includes a mesh shader stage.
+    ///     assembly behavior for vertex shading, as described in Drawing Commands.
     /// </summary>
     public VkPipelineInputAssemblyStateCreateInfo* pInputAssemblyState;
 
     /// <summary>
-    ///     pTessellationState is a pointer to a VkPipelineTessellationStateCreateInfo structure, and is ignored if the
-    ///     pipeline does not include a tessellation control shader stage and tessellation evaluation shader stage.
+    ///     pTessellationState is a pointer to a VkPipelineTessellationStateCreateInfo structure defining tessellation
+    ///     state used by tessellation shaders.
     /// </summary>
     public VkPipelineTessellationStateCreateInfo* pTessellationState;
 
     /// <summary>
-    ///     pViewportState is a pointer to a VkPipelineViewportStateCreateInfo structure, and is ignored if the pipeline
-    ///     has rasterization disabled.
+    ///     pViewportState is a pointer to a VkPipelineViewportStateCreateInfo structure defining viewport state used when
+    ///     rasterization is enabled.
     /// </summary>
     public VkPipelineViewportStateCreateInfo* pViewportState;
 
-    /// <summary>pRasterizationState is a pointer to a VkPipelineRasterizationStateCreateInfo structure.</summary>
+    /// <summary>
+    ///     pRasterizationState is a pointer to a VkPipelineRasterizationStateCreateInfo structure defining rasterization
+    ///     state.
+    /// </summary>
     public VkPipelineRasterizationStateCreateInfo* pRasterizationState;
 
     /// <summary>
-    ///     pMultisampleState is a pointer to a VkPipelineMultisampleStateCreateInfo structure, and is ignored if the
-    ///     pipeline has rasterization disabled.
+    ///     pMultisampleState is a pointer to a VkPipelineMultisampleStateCreateInfo structure defining multisample state
+    ///     used when rasterization is enabled.
     /// </summary>
     public VkPipelineMultisampleStateCreateInfo* pMultisampleState;
 
     /// <summary>
-    ///     pDepthStencilState is a pointer to a VkPipelineDepthStencilStateCreateInfo structure, and is ignored if the
-    ///     pipeline has rasterization disabled or if no depth/stencil attachment is used.
+    ///     pDepthStencilState is a pointer to a VkPipelineDepthStencilStateCreateInfo structure defining depth/stencil
+    ///     state used when rasterization is enabled for depth or stencil attachments accessed during rendering.
     /// </summary>
     public VkPipelineDepthStencilStateCreateInfo* pDepthStencilState;
 
     /// <summary>
-    ///     pColorBlendState is a pointer to a VkPipelineColorBlendStateCreateInfo structure, and is ignored if the
-    ///     pipeline has rasterization disabled or if no color attachments are used.
+    ///     pColorBlendState is a pointer to a VkPipelineColorBlendStateCreateInfo structure defining color blend state
+    ///     used when rasterization is enabled for any color attachments accessed during rendering.
     /// </summary>
     public VkPipelineColorBlendStateCreateInfo* pColorBlendState;
 
     /// <summary>
-    ///     pDynamicState is a pointer to a VkPipelineDynamicStateCreateInfo structure, and is used to indicate which
-    ///     properties of the pipeline state object are dynamic and can be changed independently of the pipeline state. This
-    ///     can be NULL, which means no state in the pipeline is considered dynamic.
+    ///     pDynamicState is a pointer to a VkPipelineDynamicStateCreateInfo structure defining which properties of the
+    ///     pipeline state object are dynamic and can be changed independently of the pipeline state. This can be NULL, which
+    ///     means no state in the pipeline is considered dynamic.
     /// </summary>
     public VkPipelineDynamicStateCreateInfo* pDynamicState;
 

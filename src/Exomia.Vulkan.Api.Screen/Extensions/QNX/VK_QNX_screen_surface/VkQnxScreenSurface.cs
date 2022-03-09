@@ -110,13 +110,13 @@ public static unsafe class VkQnxScreenSurface
     {
         fixed (delegate*<VkInstance, VkScreenSurfaceCreateInfoQNX*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateScreenSurfaceQNX = &vkCreateScreenSurfaceQNX)
         {
-            *pvkCreateScreenSurfaceQNX = (delegate*<VkInstance, VkScreenSurfaceCreateInfoQNX*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Api.Core.Vk.GetVkFunction(
+            *pvkCreateScreenSurfaceQNX = (delegate*<VkInstance, VkScreenSurfaceCreateInfoQNX*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6353\u6572\u6e65\u7553\u6672\u6361\u5165\u584e\u0000");
         }
 
         fixed (delegate*<VkPhysicalDevice, uint, _screen_window*, VkBool32>* pvkGetPhysicalDeviceScreenPresentationSupportQNX = &vkGetPhysicalDeviceScreenPresentationSupportQNX)
         {
-            *pvkGetPhysicalDeviceScreenPresentationSupportQNX = (delegate*<VkPhysicalDevice, uint, _screen_window*, VkBool32>)Api.Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceScreenPresentationSupportQNX = (delegate*<VkPhysicalDevice, uint, _screen_window*, VkBool32>)Core.Vk.GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7263\u6565\u506e\u6572\u6573\u746e\u7461\u6f69\u536e\u7075\u6f70\u7472\u4e51\u0058");
         }
     }

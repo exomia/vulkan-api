@@ -121,13 +121,13 @@ public static unsafe class VkFuchsiaExternalSemaphore
     {
         fixed (delegate*<VkDevice, VkImportSemaphoreZirconHandleInfoFUCHSIA*, VkResult>* pvkImportSemaphoreZirconHandleFUCHSIA = &vkImportSemaphoreZirconHandleFUCHSIA)
         {
-            *pvkImportSemaphoreZirconHandleFUCHSIA = (delegate*<VkDevice, VkImportSemaphoreZirconHandleInfoFUCHSIA*, VkResult>)Api.Core.Vk.GetVkFunction(
+            *pvkImportSemaphoreZirconHandleFUCHSIA = (delegate*<VkDevice, VkImportSemaphoreZirconHandleInfoFUCHSIA*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6d49\u6f70\u7472\u6553\u616d\u6870\u726f\u5a65\u7269\u6f63\u486e\u6e61\u6c64\u4665\u4355\u5348\u4149\u0000");
         }
 
         fixed (delegate*<VkDevice, VkSemaphoreGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>* pvkGetSemaphoreZirconHandleFUCHSIA = &vkGetSemaphoreZirconHandleFUCHSIA)
         {
-            *pvkGetSemaphoreZirconHandleFUCHSIA = (delegate*<VkDevice, VkSemaphoreGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>)Api.Core.Vk.GetVkFunction(
+            *pvkGetSemaphoreZirconHandleFUCHSIA = (delegate*<VkDevice, VkSemaphoreGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>)Core.Vk.GetVkFunction(
                 device, "\u6b76\u6547\u5374\u6d65\u7061\u6f68\u6572\u695a\u6372\u6e6f\u6148\u646e\u656c\u5546\u4843\u4953\u0041");
         }
     }

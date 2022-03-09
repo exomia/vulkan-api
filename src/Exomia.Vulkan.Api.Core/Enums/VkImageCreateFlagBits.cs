@@ -162,6 +162,12 @@ public enum VkImageCreateFlagBits
     VK_IMAGE_CREATE_RESERVED_16_BIT_AMD = 0x10000,
 
     /// <summary>
+    ///     VK_IMAGE_CREATE_RESERVED_18_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits</a>
+    /// </summary>
+    VK_IMAGE_CREATE_RESERVED_18_BIT_EXT = 0x40000,
+
+    /// <summary>
     ///     VK_IMAGE_CREATE_RESERVED_394_BIT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits</a>
     /// </summary>

@@ -11,6 +11,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Linq;
 using System.Reflection;
 using Microsoft.CodeAnalysis;
@@ -23,16 +24,26 @@ public class Generator : IIncrementalGenerator
 {
     private static void AddLibraryFilesToContext(IncrementalGeneratorPostInitializationContext context)
     {
-        Assembly            assembly                 = typeof(Generator).Assembly;
-        IEnumerable<string> embeddedLibraryCodeFiles = assembly.GetManifestResourceNames().Where(x => x.EndsWith(".cs"));
+        Assembly assembly                 = typeof(Generator).Assembly;
+        string[] embeddedLibraryCodeFiles = assembly.GetManifestResourceNames();
 
+        StringBuilder sbg = new(4096);
+        StringBuilder sbb = new(4096);
         foreach (string codeFile in embeddedLibraryCodeFiles)
         {
             string codeFileContent = GetContentOfEmbeddedResource(assembly, codeFile);
-            string fileNameHint    = codeFile.Replace(".cs", ".g.cs");
 
-            context.AddSource(fileNameHint, codeFileContent);
+            if (codeFile.EndsWith(".global-alias.cs"))
+            {
+                sbg.AppendLine(codeFileContent);
+            }
+            else if (codeFile.EndsWith(".bitmasks.cs"))
+            {
+                sbb.AppendLine(codeFileContent);
+            }
         }
+        context.AddSource("vk.global-alias.g.cs", sbg.ToString());
+        context.AddSource("vk.bitmasks.g.cs",     sbb.ToString());
     }
 
     private static string GetContentOfEmbeddedResource(Assembly assembly, string resourceName)

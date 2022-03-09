@@ -15,7 +15,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>1.3.206$(VersionSuffix)</Version>
+        <Version>1.3.207$(VersionSuffix)</Version>
     </PropertyGroup>
 
     <PropertyGroup>
