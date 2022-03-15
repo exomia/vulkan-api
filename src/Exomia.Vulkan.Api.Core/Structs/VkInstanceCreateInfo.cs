@@ -29,7 +29,7 @@ public unsafe struct VkInstanceCreateInfo
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary>flags is a bitmask of VkInstanceCreateFlagBits indicating the behavior of the instance.</summary>
     public VkInstanceCreateFlags flags;
 
     /// <summary>
