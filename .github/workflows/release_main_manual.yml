@@ -234,3 +234,17 @@ jobs:
             ]
           }
         EOF
+    - run: |
+        curl -fsS -H "Accept: application/json" -H "Content-Type:application/json" -X POST ${{ secrets.EXOMIA_DISCORD_ANNOUNCEMENTS_WEBHOOK_URL }} \
+          --data-binary @- << EOF 
+          {
+            "username": "vulkan-api", 
+            "content": "A new release was published [${{ fromJson(needs.create-release.outputs.response).data.tag_name }}](${{ fromJson(needs.create-release.outputs.response).data.html_url }})!", 
+            "embeds": [
+              {
+                "description": ${{ toJson(fromJson(needs.create-release.outputs.response).data.body) }},
+                "color": 5814783
+              }
+            ]
+          }
+        EOF

@@ -1,7 +1,7 @@
 global using VkFormatFeatureFlags = Exomia.Vulkan.Api.Core.VkFormatFeatureFlagBits;
 global using VkImageCreateFlags = Exomia.Vulkan.Api.Core.VkImageCreateFlagBits;
 global using VkImageUsageFlags = Exomia.Vulkan.Api.Core.VkImageUsageFlagBits;
-global using VkInstanceCreateFlags = Exomia.Vulkan.Api.Core.FutureUse32;
+global using VkInstanceCreateFlags = Exomia.Vulkan.Api.Core.VkInstanceCreateFlagBits;
 global using VkMemoryHeapFlags = Exomia.Vulkan.Api.Core.VkMemoryHeapFlagBits;
 global using VkMemoryPropertyFlags = Exomia.Vulkan.Api.Core.VkMemoryPropertyFlagBits;
 global using VkQueueFlags = Exomia.Vulkan.Api.Core.VkQueueFlagBits;
