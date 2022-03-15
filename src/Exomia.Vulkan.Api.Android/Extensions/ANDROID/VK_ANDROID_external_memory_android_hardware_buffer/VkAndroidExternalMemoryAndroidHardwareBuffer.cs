@@ -30,7 +30,7 @@ namespace Exomia.Vulkan.Api.Android;
 public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_SPEC_VERSION = 4;
+    public const uint VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_SPEC_VERSION = 5;
 
     /// <summary> The extension name. </summary>
     public const string VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME = "VK_ANDROID_external_memory_android_hardware_buffer";
