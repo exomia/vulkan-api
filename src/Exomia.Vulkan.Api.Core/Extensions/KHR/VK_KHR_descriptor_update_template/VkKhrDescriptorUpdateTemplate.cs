@@ -146,27 +146,27 @@ public static unsafe class VkKhrDescriptorUpdateTemplate
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkDescriptorUpdateTemplateCreateInfo*, VkAllocationCallbacks*, VkDescriptorUpdateTemplate*, VkResult>* pvkCreateDescriptorUpdateTemplateKHR =
-                   &vkCreateDescriptorUpdateTemplateKHR)
+            &vkCreateDescriptorUpdateTemplateKHR)
         {
-            *pvkCreateDescriptorUpdateTemplateKHR = (delegate*<VkDevice, VkDescriptorUpdateTemplateCreateInfo*, VkAllocationCallbacks*, VkDescriptorUpdateTemplate*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateDescriptorUpdateTemplateKHR = (delegate*<VkDevice, VkDescriptorUpdateTemplateCreateInfo*, VkAllocationCallbacks*, VkDescriptorUpdateTemplate*, VkResult>)GetVkFunction(
                 device, "\u6b76\u7243\u6165\u6574\u6544\u6373\u6972\u7470\u726f\u7055\u6164\u6574\u6554\u706d\u616c\u6574\u484b\u0052");
         }
 
         fixed (delegate*<VkDevice, VkDescriptorUpdateTemplate, VkAllocationCallbacks*, void>* pvkDestroyDescriptorUpdateTemplateKHR = &vkDestroyDescriptorUpdateTemplateKHR)
         {
-            *pvkDestroyDescriptorUpdateTemplateKHR = (delegate*<VkDevice, VkDescriptorUpdateTemplate, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
+            *pvkDestroyDescriptorUpdateTemplateKHR = (delegate*<VkDevice, VkDescriptorUpdateTemplate, VkAllocationCallbacks*, void>)GetVkFunction(
                 device, "\u6b76\u6544\u7473\u6f72\u4479\u7365\u7263\u7069\u6f74\u5572\u6470\u7461\u5465\u6d65\u6c70\u7461\u4b65\u5248\u0000");
         }
 
         fixed (delegate*<VkDevice, VkDescriptorSet, VkDescriptorUpdateTemplate, void*, void>* pvkUpdateDescriptorSetWithTemplateKHR = &vkUpdateDescriptorSetWithTemplateKHR)
         {
-            *pvkUpdateDescriptorSetWithTemplateKHR = (delegate*<VkDevice, VkDescriptorSet, VkDescriptorUpdateTemplate, void*, void>)Core.Vk.GetVkFunction(
+            *pvkUpdateDescriptorSetWithTemplateKHR = (delegate*<VkDevice, VkDescriptorSet, VkDescriptorUpdateTemplate, void*, void>)GetVkFunction(
                 device, "\u6b76\u7055\u6164\u6574\u6544\u6373\u6972\u7470\u726f\u6553\u5774\u7469\u5468\u6d65\u6c70\u7461\u4b65\u5248\u0000");
         }
 
         fixed (delegate*<VkCommandBuffer, VkDescriptorUpdateTemplate, VkPipelineLayout, uint, void*, void>* pvkCmdPushDescriptorSetWithTemplateKHR = &vkCmdPushDescriptorSetWithTemplateKHR)
         {
-            *pvkCmdPushDescriptorSetWithTemplateKHR = (delegate*<VkCommandBuffer, VkDescriptorUpdateTemplate, VkPipelineLayout, uint, void*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdPushDescriptorSetWithTemplateKHR = (delegate*<VkCommandBuffer, VkDescriptorUpdateTemplate, VkPipelineLayout, uint, void*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5064\u7375\u4468\u7365\u7263\u7069\u6f74\u5372\u7465\u6957\u6874\u6554\u706d\u616c\u6574\u484b\u0052");
         }
     }

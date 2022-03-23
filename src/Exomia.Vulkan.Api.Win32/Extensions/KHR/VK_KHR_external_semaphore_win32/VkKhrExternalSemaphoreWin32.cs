@@ -121,13 +121,13 @@ public static unsafe class VkKhrExternalSemaphoreWin32
     {
         fixed (delegate*<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult>* pvkImportSemaphoreWin32HandleKHR = &vkImportSemaphoreWin32HandleKHR)
         {
-            *pvkImportSemaphoreWin32HandleKHR = (delegate*<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkImportSemaphoreWin32HandleKHR = (delegate*<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6d49\u6f70\u7472\u6553\u616d\u6870\u726f\u5765\u6e69\u3233\u6148\u646e\u656c\u484b\u0052");
         }
 
         fixed (delegate*<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, HANDLE*, VkResult>* pvkGetSemaphoreWin32HandleKHR = &vkGetSemaphoreWin32HandleKHR)
         {
-            *pvkGetSemaphoreWin32HandleKHR = (delegate*<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, HANDLE*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetSemaphoreWin32HandleKHR = (delegate*<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, HANDLE*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u5374\u6d65\u7061\u6f68\u6572\u6957\u336e\u4832\u6e61\u6c64\u4b65\u5248\u0000");
         }
     }

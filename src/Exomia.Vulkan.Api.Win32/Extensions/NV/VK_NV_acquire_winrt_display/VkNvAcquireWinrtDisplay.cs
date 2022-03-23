@@ -114,13 +114,12 @@ public static unsafe class VkNvAcquireWinrtDisplay
     {
         fixed (delegate*<VkPhysicalDevice, VkDisplayKHR, VkResult>* pvkAcquireWinrtDisplayNV = &vkAcquireWinrtDisplayNV)
         {
-            *pvkAcquireWinrtDisplayNV = (delegate*<VkPhysicalDevice, VkDisplayKHR, VkResult>)Core.Vk.GetVkFunction(
-                instance, "\u6b76\u6341\u7571\u7269\u5765\u6e69\u7472\u6944\u7073\u616c\u4e79\u0056");
+            *pvkAcquireWinrtDisplayNV = (delegate*<VkPhysicalDevice, VkDisplayKHR, VkResult>)GetVkFunction(instance, "\u6b76\u6341\u7571\u7269\u5765\u6e69\u7472\u6944\u7073\u616c\u4e79\u0056");
         }
 
         fixed (delegate*<VkPhysicalDevice, uint, VkDisplayKHR*, VkResult>* pvkGetWinrtDisplayNV = &vkGetWinrtDisplayNV)
         {
-            *pvkGetWinrtDisplayNV = (delegate*<VkPhysicalDevice, uint, VkDisplayKHR*, VkResult>)Core.Vk.GetVkFunction(instance, "\u6b76\u6547\u5774\u6e69\u7472\u6944\u7073\u616c\u4e79\u0056");
+            *pvkGetWinrtDisplayNV = (delegate*<VkPhysicalDevice, uint, VkDisplayKHR*, VkResult>)GetVkFunction(instance, "\u6b76\u6547\u5774\u6e69\u7472\u6944\u7073\u616c\u4e79\u0056");
         }
     }
 }

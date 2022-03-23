@@ -80,7 +80,7 @@ public static unsafe class VkHuaweiInvocationMask
     {
         fixed (delegate*<VkCommandBuffer, VkImageView, VkImageLayout, void>* pvkCmdBindInvocationMaskHUAWEI = &vkCmdBindInvocationMaskHUAWEI)
         {
-            *pvkCmdBindInvocationMaskHUAWEI = (delegate*<VkCommandBuffer, VkImageView, VkImageLayout, void>)Core.Vk.GetVkFunction(
+            *pvkCmdBindInvocationMaskHUAWEI = (delegate*<VkCommandBuffer, VkImageView, VkImageLayout, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6e69\u4964\u766e\u636f\u7461\u6f69\u4d6e\u7361\u486b\u4155\u4557\u0049");
         }
     }

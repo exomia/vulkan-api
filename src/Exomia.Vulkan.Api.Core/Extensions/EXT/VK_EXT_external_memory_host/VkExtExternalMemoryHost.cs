@@ -96,7 +96,7 @@ public static unsafe class VkExtExternalMemoryHost
     {
         fixed (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, void*, VkMemoryHostPointerPropertiesEXT*, VkResult>* pvkGetMemoryHostPointerPropertiesEXT = &vkGetMemoryHostPointerPropertiesEXT)
         {
-            *pvkGetMemoryHostPointerPropertiesEXT = (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, void*, VkMemoryHostPointerPropertiesEXT*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetMemoryHostPointerPropertiesEXT = (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, void*, VkMemoryHostPointerPropertiesEXT*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4d74\u6d65\u726f\u4879\u736f\u5074\u696f\u746e\u7265\u7250\u706f\u7265\u6974\u7365\u5845\u0054");
         }
     }

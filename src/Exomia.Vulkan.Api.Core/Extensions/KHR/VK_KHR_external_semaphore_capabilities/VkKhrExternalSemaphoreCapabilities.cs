@@ -85,9 +85,9 @@ public static unsafe class VkKhrExternalSemaphoreCapabilities
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceExternalSemaphoreInfo*, VkExternalSemaphoreProperties*, void>* pvkGetPhysicalDeviceExternalSemaphorePropertiesKHR =
-                   &vkGetPhysicalDeviceExternalSemaphorePropertiesKHR)
+            &vkGetPhysicalDeviceExternalSemaphorePropertiesKHR)
         {
-            *pvkGetPhysicalDeviceExternalSemaphorePropertiesKHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceExternalSemaphoreInfo*, VkExternalSemaphoreProperties*, void>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceExternalSemaphorePropertiesKHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceExternalSemaphoreInfo*, VkExternalSemaphoreProperties*, void>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4565\u7478\u7265\u616e\u536c\u6d65\u7061\u6f68\u6572\u7250\u706f\u7265\u6974\u7365\u484b\u0052");
         }
     }

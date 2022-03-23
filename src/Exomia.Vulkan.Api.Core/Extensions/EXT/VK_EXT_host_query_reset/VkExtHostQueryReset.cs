@@ -73,7 +73,7 @@ public static unsafe class VkExtHostQueryReset
     {
         fixed (delegate*<VkDevice, VkQueryPool, uint, uint, void>* pvkResetQueryPoolEXT = &vkResetQueryPoolEXT)
         {
-            *pvkResetQueryPoolEXT = (delegate*<VkDevice, VkQueryPool, uint, uint, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6552\u6573\u5174\u6575\u7972\u6f50\u6c6f\u5845\u0054");
+            *pvkResetQueryPoolEXT = (delegate*<VkDevice, VkQueryPool, uint, uint, void>)GetVkFunction(device, "\u6b76\u6552\u6573\u5174\u6575\u7972\u6f50\u6c6f\u5845\u0054");
         }
     }
 }

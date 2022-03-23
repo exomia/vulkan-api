@@ -78,7 +78,7 @@ public static unsafe class VkExtLineRasterization
     {
         fixed (delegate*<VkCommandBuffer, uint, ushort, void>* pvkCmdSetLineStippleEXT = &vkCmdSetLineStippleEXT)
         {
-            *pvkCmdSetLineStippleEXT = (delegate*<VkCommandBuffer, uint, ushort, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u694c\u656e\u7453\u7069\u6c70\u4565\u5458\u0000");
+            *pvkCmdSetLineStippleEXT = (delegate*<VkCommandBuffer, uint, ushort, void>)GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u694c\u656e\u7453\u7069\u6c70\u4565\u5458\u0000");
         }
     }
 }

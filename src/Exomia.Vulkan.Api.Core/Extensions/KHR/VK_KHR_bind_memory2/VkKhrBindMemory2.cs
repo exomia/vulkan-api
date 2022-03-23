@@ -85,13 +85,12 @@ public static unsafe class VkKhrBindMemory2
     {
         fixed (delegate*<VkDevice, uint, VkBindBufferMemoryInfo*, VkResult>* pvkBindBufferMemory2KHR = &vkBindBufferMemory2KHR)
         {
-            *pvkBindBufferMemory2KHR = (delegate*<VkDevice, uint, VkBindBufferMemoryInfo*, VkResult>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6942\u646e\u7542\u6666\u7265\u654d\u6f6d\u7972\u4b32\u5248\u0000");
+            *pvkBindBufferMemory2KHR = (delegate*<VkDevice, uint, VkBindBufferMemoryInfo*, VkResult>)GetVkFunction(device, "\u6b76\u6942\u646e\u7542\u6666\u7265\u654d\u6f6d\u7972\u4b32\u5248\u0000");
         }
 
         fixed (delegate*<VkDevice, uint, VkBindImageMemoryInfo*, VkResult>* pvkBindImageMemory2KHR = &vkBindImageMemory2KHR)
         {
-            *pvkBindImageMemory2KHR = (delegate*<VkDevice, uint, VkBindImageMemoryInfo*, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6942\u646e\u6d49\u6761\u4d65\u6d65\u726f\u3279\u484b\u0052");
+            *pvkBindImageMemory2KHR = (delegate*<VkDevice, uint, VkBindImageMemoryInfo*, VkResult>)GetVkFunction(device, "\u6b76\u6942\u646e\u6d49\u6761\u4d65\u6d65\u726f\u3279\u484b\u0052");
         }
     }
 }

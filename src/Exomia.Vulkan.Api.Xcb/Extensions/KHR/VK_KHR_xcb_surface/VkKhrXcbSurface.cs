@@ -113,14 +113,14 @@ public static unsafe class VkKhrXcbSurface
     {
         fixed (delegate*<VkInstance, VkXcbSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateXcbSurfaceKHR = &vkCreateXcbSurfaceKHR)
         {
-            *pvkCreateXcbSurfaceKHR = (delegate*<VkInstance, VkXcbSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateXcbSurfaceKHR = (delegate*<VkInstance, VkXcbSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6358\u5362\u7275\u6166\u6563\u484b\u0052");
         }
 
         fixed (delegate*<VkPhysicalDevice, uint, xcb_connection_t*, xcb_visualid_t /*visual_id*/, VkBool32>* pvkGetPhysicalDeviceXcbPresentationSupportKHR =
-                   &vkGetPhysicalDeviceXcbPresentationSupportKHR)
+            &vkGetPhysicalDeviceXcbPresentationSupportKHR)
         {
-            *pvkGetPhysicalDeviceXcbPresentationSupportKHR = (delegate*<VkPhysicalDevice, uint, xcb_connection_t*, xcb_visualid_t /*visual_id*/, VkBool32>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceXcbPresentationSupportKHR = (delegate*<VkPhysicalDevice, uint, xcb_connection_t*, xcb_visualid_t /*visual_id*/, VkBool32>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5865\u6263\u7250\u7365\u6e65\u6174\u6974\u6e6f\u7553\u7070\u726f\u4b74\u5248\u0000");
         }
     }

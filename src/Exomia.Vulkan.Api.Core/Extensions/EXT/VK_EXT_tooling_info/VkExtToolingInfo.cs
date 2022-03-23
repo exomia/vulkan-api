@@ -74,7 +74,7 @@ public static unsafe class VkExtToolingInfo
     {
         fixed (delegate*<VkPhysicalDevice, uint*, VkPhysicalDeviceToolProperties*, VkResult>* pvkGetPhysicalDeviceToolPropertiesEXT = &vkGetPhysicalDeviceToolPropertiesEXT)
         {
-            *pvkGetPhysicalDeviceToolPropertiesEXT = (delegate*<VkPhysicalDevice, uint*, VkPhysicalDeviceToolProperties*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceToolPropertiesEXT = (delegate*<VkPhysicalDevice, uint*, VkPhysicalDeviceToolProperties*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5465\u6f6f\u506c\u6f72\u6570\u7472\u6569\u4573\u5458\u0000");
         }
     }

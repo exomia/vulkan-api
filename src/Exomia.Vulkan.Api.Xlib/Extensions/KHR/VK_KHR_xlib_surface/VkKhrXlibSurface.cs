@@ -113,13 +113,13 @@ public static unsafe class VkKhrXlibSurface
     {
         fixed (delegate*<VkInstance, VkXlibSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateXlibSurfaceKHR = &vkCreateXlibSurfaceKHR)
         {
-            *pvkCreateXlibSurfaceKHR = (delegate*<VkInstance, VkXlibSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateXlibSurfaceKHR = (delegate*<VkInstance, VkXlibSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6c58\u6269\u7553\u6672\u6361\u4b65\u5248\u0000");
         }
 
         fixed (delegate*<VkPhysicalDevice, uint, Display*, VisualID, VkBool32>* pvkGetPhysicalDeviceXlibPresentationSupportKHR = &vkGetPhysicalDeviceXlibPresentationSupportKHR)
         {
-            *pvkGetPhysicalDeviceXlibPresentationSupportKHR = (delegate*<VkPhysicalDevice, uint, Display*, VisualID, VkBool32>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceXlibPresentationSupportKHR = (delegate*<VkPhysicalDevice, uint, Display*, VisualID, VkBool32>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5865\u696c\u5062\u6572\u6573\u746e\u7461\u6f69\u536e\u7075\u6f70\u7472\u484b\u0052");
         }
     }

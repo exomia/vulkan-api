@@ -110,13 +110,13 @@ public static unsafe class VkExtDirectfbSurface
     {
         fixed (delegate*<VkInstance, VkDirectFBSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateDirectFBSurfaceEXT = &vkCreateDirectFBSurfaceEXT)
         {
-            *pvkCreateDirectFBSurfaceEXT = (delegate*<VkInstance, VkDirectFBSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateDirectFBSurfaceEXT = (delegate*<VkInstance, VkDirectFBSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6944\u6572\u7463\u4246\u7553\u6672\u6361\u4565\u5458\u0000");
         }
 
         fixed (delegate*<VkPhysicalDevice, uint, IDirectFB*, VkBool32>* pvkGetPhysicalDeviceDirectFBPresentationSupportEXT = &vkGetPhysicalDeviceDirectFBPresentationSupportEXT)
         {
-            *pvkGetPhysicalDeviceDirectFBPresentationSupportEXT = (delegate*<VkPhysicalDevice, uint, IDirectFB*, VkBool32>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceDirectFBPresentationSupportEXT = (delegate*<VkPhysicalDevice, uint, IDirectFB*, VkBool32>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4465\u7269\u6365\u4674\u5042\u6572\u6573\u746e\u7461\u6f69\u536e\u7075\u6f70\u7472\u5845\u0054");
         }
     }

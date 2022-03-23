@@ -86,7 +86,7 @@ public static unsafe class VkKhrSharedPresentableImage
     {
         fixed (delegate*<VkDevice, VkSwapchainKHR, VkResult>* pvkGetSwapchainStatusKHR = &vkGetSwapchainStatusKHR)
         {
-            *pvkGetSwapchainStatusKHR = (delegate*<VkDevice, VkSwapchainKHR, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6547\u5374\u6177\u6370\u6168\u6e69\u7453\u7461\u7375\u484b\u0052");
+            *pvkGetSwapchainStatusKHR = (delegate*<VkDevice, VkSwapchainKHR, VkResult>)GetVkFunction(device, "\u6b76\u6547\u5374\u6177\u6370\u6168\u6e69\u7453\u7461\u7375\u484b\u0052");
         }
     }
 }

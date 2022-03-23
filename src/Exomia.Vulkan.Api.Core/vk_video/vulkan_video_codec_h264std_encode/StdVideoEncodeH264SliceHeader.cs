@@ -17,17 +17,13 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public struct StdVideoEncodeH264SliceHeader
+public unsafe struct StdVideoEncodeH264SliceHeader
 {
     public StdVideoEncodeH264SliceHeaderFlags flags;
 
     public uint first_mb_in_slice;
 
     public StdVideoH264SliceType slice_type;
-
-    public byte seq_parameter_set_id;
-
-    public byte pic_parameter_set_id;
 
     public ushort idr_pic_id;
 
@@ -42,4 +38,6 @@ public struct StdVideoEncodeH264SliceHeader
     public sbyte slice_alpha_c0_offset_div2;
 
     public sbyte slice_beta_offset_div2;
+
+    public StdVideoEncodeH264WeightTable* pWeightTable;
 }

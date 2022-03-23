@@ -19,6 +19,8 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct StdVideoH265SequenceParameterSet
 {
+    public StdVideoH265SpsFlags flags;
+
     public StdVideoH265ProfileIdc profile_idc;
 
     public StdVideoH265Level level_idc;
@@ -41,7 +43,7 @@ public unsafe struct StdVideoH265SequenceParameterSet
 
     public byte log2_max_pic_order_cnt_lsb_minus4;
 
-    public byte sps_max_dec_pic_buffering_minus1;
+    public fixed byte sps_max_dec_pic_buffering_minus1[(int)STD_VIDEO_H265_SPS_MAX_SUB_LAYERS];
 
     public byte log2_min_luma_coding_block_size_minus3;
 
@@ -76,8 +78,6 @@ public unsafe struct StdVideoH265SequenceParameterSet
     public uint conf_win_bottom_offset;
 
     public StdVideoH265DecPicBufMgr* pDecPicBufMgr;
-
-    public StdVideoH265SpsFlags flags;
 
     public StdVideoH265ScalingLists* pScalingLists;
 

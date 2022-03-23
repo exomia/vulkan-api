@@ -132,7 +132,7 @@ public static unsafe class VkExtCalibratedTimestamps
     {
         fixed (delegate*<VkPhysicalDevice, uint*, VkTimeDomainEXT*, VkResult>* pvkGetPhysicalDeviceCalibrateableTimeDomainsEXT = &vkGetPhysicalDeviceCalibrateableTimeDomainsEXT)
         {
-            *pvkGetPhysicalDeviceCalibrateableTimeDomainsEXT = (delegate*<VkPhysicalDevice, uint*, VkTimeDomainEXT*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceCalibrateableTimeDomainsEXT = (delegate*<VkPhysicalDevice, uint*, VkTimeDomainEXT*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4365\u6c61\u6269\u6172\u6574\u6261\u656c\u6954\u656d\u6f44\u616d\u6e69\u4573\u5458\u0000");
         }
     }
@@ -151,7 +151,7 @@ public static unsafe class VkExtCalibratedTimestamps
     {
         fixed (delegate*<VkDevice, uint, VkCalibratedTimestampInfoEXT*, ulong*, ulong*, VkResult>* pvkGetCalibratedTimestampsEXT = &vkGetCalibratedTimestampsEXT)
         {
-            *pvkGetCalibratedTimestampsEXT = (delegate*<VkDevice, uint, VkCalibratedTimestampInfoEXT*, ulong*, ulong*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetCalibratedTimestampsEXT = (delegate*<VkDevice, uint, VkCalibratedTimestampInfoEXT*, ulong*, ulong*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4374\u6c61\u6269\u6172\u6574\u5464\u6d69\u7365\u6174\u706d\u4573\u5458\u0000");
         }
     }

@@ -19,6 +19,8 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct StdVideoH264SequenceParameterSetVui
 {
+    public StdVideoH264SpsVuiFlags flags;
+
     public StdVideoH264AspectRatioIdc aspect_ratio_idc;
 
     public ushort sar_width;
@@ -42,6 +44,4 @@ public unsafe struct StdVideoH264SequenceParameterSetVui
     public byte max_num_reorder_frames;
 
     public byte max_dec_frame_buffering;
-
-    public StdVideoH264SpsVuiFlags flags;
 }

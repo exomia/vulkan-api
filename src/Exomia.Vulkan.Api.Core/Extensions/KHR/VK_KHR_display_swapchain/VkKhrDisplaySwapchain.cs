@@ -97,7 +97,7 @@ public static unsafe class VkKhrDisplaySwapchain
     {
         fixed (delegate*<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>* pvkCreateSharedSwapchainsKHR = &vkCreateSharedSwapchainsKHR)
         {
-            *pvkCreateSharedSwapchainsKHR = (delegate*<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateSharedSwapchainsKHR = (delegate*<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>)GetVkFunction(
                 device, "\u6b76\u7243\u6165\u6574\u6853\u7261\u6465\u7753\u7061\u6863\u6961\u736e\u484b\u0052");
         }
     }

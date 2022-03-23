@@ -19,6 +19,8 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct StdVideoH265HrdParameters
 {
+    public StdVideoH265HrdFlags flags;
+
     public byte tick_divisor_minus2;
 
     public byte du_cpb_removal_delay_increment_length_minus1;
@@ -44,6 +46,4 @@ public unsafe struct StdVideoH265HrdParameters
     public VkArray7<StdVideoH265SubLayerHrdParameters>* pSubLayerHrdParametersNal;
 
     public VkArray7<StdVideoH265SubLayerHrdParameters>* pSubLayerHrdParametersVcl;
-
-    public StdVideoH265HrdFlags flags;
 }

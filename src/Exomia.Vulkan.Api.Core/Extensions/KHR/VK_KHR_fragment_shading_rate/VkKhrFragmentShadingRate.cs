@@ -110,7 +110,7 @@ public static unsafe class VkKhrFragmentShadingRate
     {
         fixed (delegate*<VkPhysicalDevice, uint*, VkPhysicalDeviceFragmentShadingRateKHR*, VkResult>* pvkGetPhysicalDeviceFragmentShadingRatesKHR = &vkGetPhysicalDeviceFragmentShadingRatesKHR)
         {
-            *pvkGetPhysicalDeviceFragmentShadingRatesKHR = (delegate*<VkPhysicalDevice, uint*, VkPhysicalDeviceFragmentShadingRateKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceFragmentShadingRatesKHR = (delegate*<VkPhysicalDevice, uint*, VkPhysicalDeviceFragmentShadingRateKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4665\u6172\u6d67\u6e65\u5374\u6168\u6964\u676e\u6152\u6574\u4b73\u5248\u0000");
         }
     }
@@ -129,7 +129,7 @@ public static unsafe class VkKhrFragmentShadingRate
     {
         fixed (delegate*<VkCommandBuffer, VkExtent2D*, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>* pvkCmdSetFragmentShadingRateKHR = &vkCmdSetFragmentShadingRateKHR)
         {
-            *pvkCmdSetFragmentShadingRateKHR = (delegate*<VkCommandBuffer, VkExtent2D*, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>)Core.Vk.GetVkFunction(
+            *pvkCmdSetFragmentShadingRateKHR = (delegate*<VkCommandBuffer, VkExtent2D*, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u7246\u6761\u656d\u746e\u6853\u6461\u6e69\u5267\u7461\u4b65\u5248\u0000");
         }
     }

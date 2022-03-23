@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <content> vk.cs </content>
 public static partial class Vk
 {
-    private const string VK_IMPORT = "vulkan-1";
+    private const string VK_IMPORT = "vulkan";
 
     /// <summary>
     ///     VK_MAX_PHYSICAL_DEVICE_NAME_SIZE - Length of a physical device name string -
@@ -72,15 +72,15 @@ public static partial class Vk
 
     /// <summary> Gets a vk function. </summary>
     /// <param name="vkInstance">           The vk instance. </param>
-    /// <param name="vkFunctionNameUTF8NT"> Name of the vk function in an UTF8-NT style. </param>
+    /// <param name="vkFunctionNameUtf8Nt"> Name of the vk function in an UTF8-NT style. </param>
     /// <returns> The vk function; otherwise throws exception. </returns>
     /// <exception cref="EntryPointNotFoundException"> Thrown when an Entry Point Not Found error condition occurs. </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static unsafe void* GetVkFunction(VkInstance vkInstance, string vkFunctionNameUTF8NT)
+    public static unsafe delegate*<void> GetVkFunction(VkInstance vkInstance, string vkFunctionNameUtf8Nt)
     {
-        fixed (char* pVkFunctionName = vkFunctionNameUTF8NT)
+        fixed (char* pVkFunctionName = vkFunctionNameUtf8Nt)
         {
-            void* addr = (void*)vkGetInstanceProcAddr(vkInstance, (byte*)pVkFunctionName);
+            delegate*<void> addr = vkGetInstanceProcAddr(vkInstance, (byte*)pVkFunctionName);
             if (addr != null) { return addr; }
             throw new EntryPointNotFoundException(new string((sbyte*)pVkFunctionName));
         }
@@ -88,17 +88,65 @@ public static partial class Vk
 
     /// <summary> Gets a vk function. </summary>
     /// <param name="vkDevice">             The vk device. </param>
-    /// <param name="vkFunctionNameUTF8NT"> Name of the vk function in an UTF8-NT style. </param>
+    /// <param name="vkFunctionNameUtf8Nt"> Name of the vk function in an UTF8-NT style. </param>
     /// <returns> The vk function; otherwise throws exception. </returns>
     /// <exception cref="EntryPointNotFoundException"> Thrown when an Entry Point Not Found error condition occurs. </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static unsafe void* GetVkFunction(VkDevice vkDevice, string vkFunctionNameUTF8NT)
+    public static unsafe delegate*<void> GetVkFunction(VkDevice vkDevice, string vkFunctionNameUtf8Nt)
     {
-        fixed (char* pVkFunctionName = vkFunctionNameUTF8NT)
+        fixed (char* pVkFunctionName = vkFunctionNameUtf8Nt)
         {
-            void* addr = (void*)vkGetDeviceProcAddr(vkDevice, (byte*)pVkFunctionName);
+            delegate*<void> addr = vkGetDeviceProcAddr(vkDevice, (byte*)pVkFunctionName);
             if (addr != null) { return addr; }
             throw new EntryPointNotFoundException(new string((sbyte*)pVkFunctionName));
         }
+    }
+
+#pragma warning disable CA2255
+    [ModuleInitializer]
+#pragma warning restore CA2255
+
+    // ReSharper disable once CognitiveComplexity
+    internal static void Initialize()
+    {
+        NativeLibrary.SetDllImportResolver(
+            typeof(Vk).Assembly, (name, assembly, searchPath) =>
+            {
+                if (!name.Equals(VK_IMPORT, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return IntPtr.Zero;
+                }
+
+                if (OperatingSystem.IsWindows())
+                {
+                    return NativeLibrary.Load("vulkan-1.dll", assembly, searchPath);
+                }
+
+                if (OperatingSystem.IsLinux())
+                {
+                    if (NativeLibrary.TryLoad("libvulkan.so.1", assembly, searchPath, out IntPtr handle))
+                    {
+                        return handle;
+                    }
+                    return NativeLibrary.Load("libvulkan.so", assembly, searchPath);
+                }
+
+                if (OperatingSystem.IsAndroid() || OperatingSystem.IsFreeBSD())
+                {
+                    return NativeLibrary.Load("libvulkan.so", assembly, searchPath);
+                }
+
+                if (OperatingSystem.IsIOS())
+                {
+                    if (NativeLibrary.TryLoad("libvulkan.dylib.1", assembly, searchPath, out IntPtr handle))
+                    {
+                        return handle;
+                    }
+                    return NativeLibrary.Load("libvulkan.dylib", assembly, searchPath);
+                }
+
+                throw new NotSupportedException(
+                    $"The operating system isn't supported! {RuntimeInformation.RuntimeIdentifier}|{RuntimeInformation.FrameworkDescription}|{RuntimeInformation.OSArchitecture}{RuntimeInformation.OSDescription}|{RuntimeInformation.ProcessArchitecture}");
+            });
     }
 }
