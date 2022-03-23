@@ -138,19 +138,19 @@ public static unsafe class VkNvShadingRateImage
     {
         fixed (delegate*<VkCommandBuffer, VkImageView, VkImageLayout, void>* pvkCmdBindShadingRateImageNV = &vkCmdBindShadingRateImageNV)
         {
-            *pvkCmdBindShadingRateImageNV = (delegate*<VkCommandBuffer, VkImageView, VkImageLayout, void>)Core.Vk.GetVkFunction(
+            *pvkCmdBindShadingRateImageNV = (delegate*<VkCommandBuffer, VkImageView, VkImageLayout, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6e69\u5364\u6168\u6964\u676e\u6152\u6574\u6d49\u6761\u4e65\u0056");
         }
 
         fixed (delegate*<VkCommandBuffer, uint, uint, VkShadingRatePaletteNV*, void>* pvkCmdSetViewportShadingRatePaletteNV = &vkCmdSetViewportShadingRatePaletteNV)
         {
-            *pvkCmdSetViewportShadingRatePaletteNV = (delegate*<VkCommandBuffer, uint, uint, VkShadingRatePaletteNV*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdSetViewportShadingRatePaletteNV = (delegate*<VkCommandBuffer, uint, uint, VkShadingRatePaletteNV*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6956\u7765\u6f70\u7472\u6853\u6461\u6e69\u5267\u7461\u5065\u6c61\u7465\u6574\u564e\u0000");
         }
 
         fixed (delegate*<VkCommandBuffer, VkCoarseSampleOrderTypeNV, uint, VkCoarseSampleOrderCustomNV*, void>* pvkCmdSetCoarseSampleOrderNV = &vkCmdSetCoarseSampleOrderNV)
         {
-            *pvkCmdSetCoarseSampleOrderNV = (delegate*<VkCommandBuffer, VkCoarseSampleOrderTypeNV, uint, VkCoarseSampleOrderCustomNV*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdSetCoarseSampleOrderNV = (delegate*<VkCommandBuffer, VkCoarseSampleOrderTypeNV, uint, VkCoarseSampleOrderCustomNV*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6f43\u7261\u6573\u6153\u706d\u656c\u724f\u6564\u4e72\u0056");
         }
     }

@@ -119,13 +119,13 @@ public static unsafe class VkKhrPushDescriptor
     {
         fixed (delegate*<VkCommandBuffer, VkPipelineBindPoint, VkPipelineLayout, uint, uint, VkWriteDescriptorSet*, void>* pvkCmdPushDescriptorSetKHR = &vkCmdPushDescriptorSetKHR)
         {
-            *pvkCmdPushDescriptorSetKHR = (delegate*<VkCommandBuffer, VkPipelineBindPoint, VkPipelineLayout, uint, uint, VkWriteDescriptorSet*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdPushDescriptorSetKHR = (delegate*<VkCommandBuffer, VkPipelineBindPoint, VkPipelineLayout, uint, uint, VkWriteDescriptorSet*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5064\u7375\u4468\u7365\u7263\u7069\u6f74\u5372\u7465\u484b\u0052");
         }
 
         fixed (delegate*<VkCommandBuffer, VkDescriptorUpdateTemplate, VkPipelineLayout, uint, void*, void>* pvkCmdPushDescriptorSetWithTemplateKHR = &vkCmdPushDescriptorSetWithTemplateKHR)
         {
-            *pvkCmdPushDescriptorSetWithTemplateKHR = (delegate*<VkCommandBuffer, VkDescriptorUpdateTemplate, VkPipelineLayout, uint, void*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdPushDescriptorSetWithTemplateKHR = (delegate*<VkCommandBuffer, VkDescriptorUpdateTemplate, VkPipelineLayout, uint, void*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5064\u7375\u4468\u7365\u7263\u7069\u6f74\u5372\u7465\u6957\u6874\u6554\u706d\u616c\u6574\u484b\u0052");
         }
     }

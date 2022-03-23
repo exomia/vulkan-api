@@ -162,30 +162,30 @@ public static unsafe class VkExtDebugMarker
     {
         fixed (delegate*<VkDevice, VkDebugMarkerObjectTagInfoEXT*, VkResult>* pvkDebugMarkerSetObjectTagEXT = &vkDebugMarkerSetObjectTagEXT)
         {
-            *pvkDebugMarkerSetObjectTagEXT = (delegate*<VkDevice, VkDebugMarkerObjectTagInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkDebugMarkerSetObjectTagEXT = (delegate*<VkDevice, VkDebugMarkerObjectTagInfoEXT*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u6154\u4567\u5458\u0000");
         }
 
         fixed (delegate*<VkDevice, VkDebugMarkerObjectNameInfoEXT*, VkResult>* pvkDebugMarkerSetObjectNameEXT = &vkDebugMarkerSetObjectNameEXT)
         {
-            *pvkDebugMarkerSetObjectNameEXT = (delegate*<VkDevice, VkDebugMarkerObjectNameInfoEXT*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkDebugMarkerSetObjectNameEXT = (delegate*<VkDevice, VkDebugMarkerObjectNameInfoEXT*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6544\u7562\u4d67\u7261\u656b\u5372\u7465\u624f\u656a\u7463\u614e\u656d\u5845\u0054");
         }
 
         fixed (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>* pvkCmdDebugMarkerBeginEXT = &vkCmdDebugMarkerBeginEXT)
         {
-            *pvkCmdDebugMarkerBeginEXT = (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdDebugMarkerBeginEXT = (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6542\u6967\u456e\u5458\u0000");
         }
 
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdDebugMarkerEndEXT = &vkCmdDebugMarkerEndEXT)
         {
-            *pvkCmdDebugMarkerEndEXT = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e45\u4564\u5458\u0000");
+            *pvkCmdDebugMarkerEndEXT = (delegate*<VkCommandBuffer, void>)GetVkFunction(device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e45\u4564\u5458\u0000");
         }
 
         fixed (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>* pvkCmdDebugMarkerInsertEXT = &vkCmdDebugMarkerInsertEXT)
         {
-            *pvkCmdDebugMarkerInsertEXT = (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdDebugMarkerInsertEXT = (delegate*<VkCommandBuffer, VkDebugMarkerMarkerInfoEXT*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4464\u6265\u6775\u614d\u6b72\u7265\u6e49\u6573\u7472\u5845\u0054");
         }
     }

@@ -111,13 +111,12 @@ public static unsafe class VkExtMultiDraw
     {
         fixed (delegate*<VkCommandBuffer, uint, VkMultiDrawInfoEXT*, uint, uint, uint, void>* pvkCmdDrawMultiEXT = &vkCmdDrawMultiEXT)
         {
-            *pvkCmdDrawMultiEXT =
-                (delegate*<VkCommandBuffer, uint, VkMultiDrawInfoEXT*, uint, uint, uint, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u4464\u6172\u4d77\u6c75\u6974\u5845\u0054");
+            *pvkCmdDrawMultiEXT = (delegate*<VkCommandBuffer, uint, VkMultiDrawInfoEXT*, uint, uint, uint, void>)GetVkFunction(device, "\u6b76\u6d43\u4464\u6172\u4d77\u6c75\u6974\u5845\u0054");
         }
 
         fixed (delegate*<VkCommandBuffer, uint, VkMultiDrawIndexedInfoEXT*, uint, uint, uint, int*, void>* pvkCmdDrawMultiIndexedEXT = &vkCmdDrawMultiIndexedEXT)
         {
-            *pvkCmdDrawMultiIndexedEXT = (delegate*<VkCommandBuffer, uint, VkMultiDrawIndexedInfoEXT*, uint, uint, uint, int*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdDrawMultiIndexedEXT = (delegate*<VkCommandBuffer, uint, VkMultiDrawIndexedInfoEXT*, uint, uint, uint, int*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4464\u6172\u4d77\u6c75\u6974\u6e49\u6564\u6578\u4564\u5458\u0000");
         }
     }

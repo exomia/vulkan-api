@@ -19,15 +19,17 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct StdVideoEncodeH265PictureInfo
 {
+    public StdVideoEncodeH265PictureInfoFlags flags;
+
     public StdVideoH265PictureType PictureType;
 
     public byte sps_video_parameter_set_id;
 
     public byte pps_seq_parameter_set_id;
 
+    public byte pps_pic_parameter_set_id;
+
     public int PicOrderCntVal;
 
     public byte TemporalId;
-
-    public StdVideoEncodeH265PictureInfoFlags flags;
 }

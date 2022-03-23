@@ -108,13 +108,13 @@ public static unsafe class VkKhrWin32Surface
     {
         fixed (delegate*<VkInstance, VkWin32SurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateWin32SurfaceKHR = &vkCreateWin32SurfaceKHR)
         {
-            *pvkCreateWin32SurfaceKHR = (delegate*<VkInstance, VkWin32SurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateWin32SurfaceKHR = (delegate*<VkInstance, VkWin32SurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6957\u336e\u5332\u7275\u6166\u6563\u484b\u0052");
         }
 
         fixed (delegate*<VkPhysicalDevice, uint, VkBool32>* pvkGetPhysicalDeviceWin32PresentationSupportKHR = &vkGetPhysicalDeviceWin32PresentationSupportKHR)
         {
-            *pvkGetPhysicalDeviceWin32PresentationSupportKHR = (delegate*<VkPhysicalDevice, uint, VkBool32>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceWin32PresentationSupportKHR = (delegate*<VkPhysicalDevice, uint, VkBool32>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5765\u6e69\u3233\u7250\u7365\u6e65\u6174\u6974\u6e6f\u7553\u7070\u726f\u4b74\u5248\u0000");
         }
     }

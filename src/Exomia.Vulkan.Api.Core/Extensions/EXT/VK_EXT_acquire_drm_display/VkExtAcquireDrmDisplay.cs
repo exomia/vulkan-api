@@ -113,13 +113,12 @@ public static unsafe class VkExtAcquireDrmDisplay
     {
         fixed (delegate*<VkPhysicalDevice, int, VkDisplayKHR, VkResult>* pvkAcquireDrmDisplayEXT = &vkAcquireDrmDisplayEXT)
         {
-            *pvkAcquireDrmDisplayEXT = (delegate*<VkPhysicalDevice, int, VkDisplayKHR, VkResult>)Core.Vk.GetVkFunction(
-                instance, "\u6b76\u6341\u7571\u7269\u4465\u6d72\u6944\u7073\u616c\u4579\u5458\u0000");
+            *pvkAcquireDrmDisplayEXT = (delegate*<VkPhysicalDevice, int, VkDisplayKHR, VkResult>)GetVkFunction(instance, "\u6b76\u6341\u7571\u7269\u4465\u6d72\u6944\u7073\u616c\u4579\u5458\u0000");
         }
 
         fixed (delegate*<VkPhysicalDevice, int, uint, VkDisplayKHR*, VkResult>* pvkGetDrmDisplayEXT = &vkGetDrmDisplayEXT)
         {
-            *pvkGetDrmDisplayEXT = (delegate*<VkPhysicalDevice, int, uint, VkDisplayKHR*, VkResult>)Core.Vk.GetVkFunction(instance, "\u6b76\u6547\u4474\u6d72\u6944\u7073\u616c\u4579\u5458\u0000");
+            *pvkGetDrmDisplayEXT = (delegate*<VkPhysicalDevice, int, uint, VkDisplayKHR*, VkResult>)GetVkFunction(instance, "\u6b76\u6547\u4474\u6d72\u6944\u7073\u616c\u4579\u5458\u0000");
         }
     }
 }

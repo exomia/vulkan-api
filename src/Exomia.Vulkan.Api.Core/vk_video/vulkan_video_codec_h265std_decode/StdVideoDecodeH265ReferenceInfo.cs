@@ -19,7 +19,7 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct StdVideoDecodeH265ReferenceInfo
 {
-    public int PicOrderCntVal;
-
     public StdVideoDecodeH265ReferenceInfoFlags flags;
+
+    public int PicOrderCntVal;
 }

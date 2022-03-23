@@ -98,9 +98,9 @@ public static unsafe class VkGgpStreamDescriptorSurface
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkInstance, VkStreamDescriptorSurfaceCreateInfoGGP*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateStreamDescriptorSurfaceGGP =
-                   &vkCreateStreamDescriptorSurfaceGGP)
+            &vkCreateStreamDescriptorSurfaceGGP)
         {
-            *pvkCreateStreamDescriptorSurfaceGGP = (delegate*<VkInstance, VkStreamDescriptorSurfaceCreateInfoGGP*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateStreamDescriptorSurfaceGGP = (delegate*<VkInstance, VkStreamDescriptorSurfaceCreateInfoGGP*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u7453\u6572\u6d61\u6544\u6373\u6972\u7470\u726f\u7553\u6672\u6361\u4765\u5047\u0000");
         }
     }

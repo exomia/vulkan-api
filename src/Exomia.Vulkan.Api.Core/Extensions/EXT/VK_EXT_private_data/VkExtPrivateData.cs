@@ -118,26 +118,24 @@ public static unsafe class VkExtPrivateData
     {
         fixed (delegate*<VkDevice, VkPrivateDataSlotCreateInfo*, VkAllocationCallbacks*, VkPrivateDataSlot*, VkResult>* pvkCreatePrivateDataSlotEXT = &vkCreatePrivateDataSlotEXT)
         {
-            *pvkCreatePrivateDataSlotEXT = (delegate*<VkDevice, VkPrivateDataSlotCreateInfo*, VkAllocationCallbacks*, VkPrivateDataSlot*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreatePrivateDataSlotEXT = (delegate*<VkDevice, VkPrivateDataSlotCreateInfo*, VkAllocationCallbacks*, VkPrivateDataSlot*, VkResult>)GetVkFunction(
                 device, "\u6b76\u7243\u6165\u6574\u7250\u7669\u7461\u4465\u7461\u5361\u6f6c\u4574\u5458\u0000");
         }
 
         fixed (delegate*<VkDevice, VkPrivateDataSlot, VkAllocationCallbacks*, void>* pvkDestroyPrivateDataSlotEXT = &vkDestroyPrivateDataSlotEXT)
         {
-            *pvkDestroyPrivateDataSlotEXT = (delegate*<VkDevice, VkPrivateDataSlot, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
+            *pvkDestroyPrivateDataSlotEXT = (delegate*<VkDevice, VkPrivateDataSlot, VkAllocationCallbacks*, void>)GetVkFunction(
                 device, "\u6b76\u6544\u7473\u6f72\u5079\u6972\u6176\u6574\u6144\u6174\u6c53\u746f\u5845\u0054");
         }
 
         fixed (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong, VkResult>* pvkSetPrivateDataEXT = &vkSetPrivateDataEXT)
         {
-            *pvkSetPrivateDataEXT =
-                (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6553\u5074\u6972\u6176\u6574\u6144\u6174\u5845\u0054");
+            *pvkSetPrivateDataEXT = (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong, VkResult>)GetVkFunction(device, "\u6b76\u6553\u5074\u6972\u6176\u6574\u6144\u6174\u5845\u0054");
         }
 
         fixed (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void>* pvkGetPrivateDataEXT = &vkGetPrivateDataEXT)
         {
-            *pvkGetPrivateDataEXT =
-                (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6547\u5074\u6972\u6176\u6574\u6144\u6174\u5845\u0054");
+            *pvkGetPrivateDataEXT = (delegate*<VkDevice, VkObjectType, ulong, VkPrivateDataSlot, ulong*, void>)GetVkFunction(device, "\u6b76\u6547\u5074\u6972\u6176\u6574\u6144\u6174\u5845\u0054");
         }
     }
 }

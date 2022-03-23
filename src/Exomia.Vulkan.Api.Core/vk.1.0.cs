@@ -1705,7 +1705,9 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     /// <param name="pPipelines">
     ///     pPipelines is a pointer to an array of VkPipeline handles in which the resulting compute
-    ///     pipeline objects are returned.
+    ///     pipeline objects are returned.editing-noteTODO (Jon) - Should we say something like &#8220;the i&#8217;th element
+    ///     of the pPipelines array is created based on the corresponding element of the pCreateInfos array&#8221;? Also for
+    ///     vkCreateGraphicsPipelines below.
     /// </param>
     /// <remarks>
     ///     <list type="table">

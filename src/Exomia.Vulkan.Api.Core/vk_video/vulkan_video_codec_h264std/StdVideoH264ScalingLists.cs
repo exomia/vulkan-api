@@ -25,5 +25,5 @@ public struct StdVideoH264ScalingLists
 
     public VkArray6<VkArray16<byte>> ScalingList4x4;
 
-    public VkArray6<VkArray64<byte>> ScalingList8x8;
+    public VkArray2<VkArray64<byte>> ScalingList8x8;
 }

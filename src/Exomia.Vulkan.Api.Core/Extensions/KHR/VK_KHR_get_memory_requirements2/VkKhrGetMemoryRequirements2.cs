@@ -113,20 +113,20 @@ public static unsafe class VkKhrGetMemoryRequirements2
     {
         fixed (delegate*<VkDevice, VkImageMemoryRequirementsInfo2*, VkMemoryRequirements2*, void>* pvkGetImageMemoryRequirements2KHR = &vkGetImageMemoryRequirements2KHR)
         {
-            *pvkGetImageMemoryRequirements2KHR = (delegate*<VkDevice, VkImageMemoryRequirementsInfo2*, VkMemoryRequirements2*, void>)Core.Vk.GetVkFunction(
+            *pvkGetImageMemoryRequirements2KHR = (delegate*<VkDevice, VkImageMemoryRequirementsInfo2*, VkMemoryRequirements2*, void>)GetVkFunction(
                 device, "\u6b76\u6547\u4974\u616d\u6567\u654d\u6f6d\u7972\u6552\u7571\u7269\u6d65\u6e65\u7374\u4b32\u5248\u0000");
         }
 
         fixed (delegate*<VkDevice, VkBufferMemoryRequirementsInfo2*, VkMemoryRequirements2*, void>* pvkGetBufferMemoryRequirements2KHR = &vkGetBufferMemoryRequirements2KHR)
         {
-            *pvkGetBufferMemoryRequirements2KHR = (delegate*<VkDevice, VkBufferMemoryRequirementsInfo2*, VkMemoryRequirements2*, void>)Core.Vk.GetVkFunction(
+            *pvkGetBufferMemoryRequirements2KHR = (delegate*<VkDevice, VkBufferMemoryRequirementsInfo2*, VkMemoryRequirements2*, void>)GetVkFunction(
                 device, "\u6b76\u6547\u4274\u6675\u6566\u4d72\u6d65\u726f\u5279\u7165\u6975\u6572\u656d\u746e\u3273\u484b\u0052");
         }
 
         fixed (delegate*<VkDevice, VkImageSparseMemoryRequirementsInfo2*, uint*, VkSparseImageMemoryRequirements2*, void>* pvkGetImageSparseMemoryRequirements2KHR =
-                   &vkGetImageSparseMemoryRequirements2KHR)
+            &vkGetImageSparseMemoryRequirements2KHR)
         {
-            *pvkGetImageSparseMemoryRequirements2KHR = (delegate*<VkDevice, VkImageSparseMemoryRequirementsInfo2*, uint*, VkSparseImageMemoryRequirements2*, void>)Core.Vk.GetVkFunction(
+            *pvkGetImageSparseMemoryRequirements2KHR = (delegate*<VkDevice, VkImageSparseMemoryRequirementsInfo2*, uint*, VkSparseImageMemoryRequirements2*, void>)GetVkFunction(
                 device, "\u6b76\u6547\u4974\u616d\u6567\u7053\u7261\u6573\u654d\u6f6d\u7972\u6552\u7571\u7269\u6d65\u6e65\u7374\u4b32\u5248\u0000");
         }
     }

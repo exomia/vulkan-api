@@ -159,27 +159,33 @@ public struct StdVideoH265SpsFlags
         set { _bitfield1 = (_bitfield1 & 0xFFBFFFFF) | (((uint)value & 0x00000001) << 22); }
     }
 
-    public uint sps_curr_pic_ref_enabled_flag
+    public uint sps_scc_extension_flag
     {
         get { return (uint)((_bitfield1 >> 23) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFF7FFFFF) | (((uint)value & 0x00000001) << 23); }
     }
 
-    public uint palette_mode_enabled_flag
+    public uint sps_curr_pic_ref_enabled_flag
     {
         get { return (uint)((_bitfield1 >> 24) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFEFFFFFF) | (((uint)value & 0x00000001) << 24); }
     }
 
-    public uint sps_palette_predictor_initializer_present_flag
+    public uint palette_mode_enabled_flag
     {
         get { return (uint)((_bitfield1 >> 25) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFDFFFFFF) | (((uint)value & 0x00000001) << 25); }
     }
 
-    public uint intra_boundary_filtering_disabled_flag
+    public uint sps_palette_predictor_initializer_present_flag
     {
         get { return (uint)((_bitfield1 >> 26) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFBFFFFFF) | (((uint)value & 0x00000001) << 26); }
+    }
+
+    public uint intra_boundary_filtering_disabled_flag
+    {
+        get { return (uint)((_bitfield1 >> 27) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xF7FFFFFF) | (((uint)value & 0x00000001) << 27); }
     }
 }

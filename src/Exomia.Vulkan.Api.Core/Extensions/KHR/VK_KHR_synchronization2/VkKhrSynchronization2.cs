@@ -186,45 +186,44 @@ public static unsafe class VkKhrSynchronization2
     {
         fixed (delegate*<VkCommandBuffer, VkEvent, VkDependencyInfo*, void>* pvkCmdSetEvent2KHR = &vkCmdSetEvent2KHR)
         {
-            *pvkCmdSetEvent2KHR = (delegate*<VkCommandBuffer, VkEvent, VkDependencyInfo*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u7645\u6e65\u3274\u484b\u0052");
+            *pvkCmdSetEvent2KHR = (delegate*<VkCommandBuffer, VkEvent, VkDependencyInfo*, void>)GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u7645\u6e65\u3274\u484b\u0052");
         }
 
         fixed (delegate*<VkCommandBuffer, VkEvent, VkPipelineStageFlags2, void>* pvkCmdResetEvent2KHR = &vkCmdResetEvent2KHR)
         {
-            *pvkCmdResetEvent2KHR = (delegate*<VkCommandBuffer, VkEvent, VkPipelineStageFlags2, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5264\u7365\u7465\u7645\u6e65\u3274\u484b\u0052");
+            *pvkCmdResetEvent2KHR = (delegate*<VkCommandBuffer, VkEvent, VkPipelineStageFlags2, void>)GetVkFunction(device, "\u6b76\u6d43\u5264\u7365\u7465\u7645\u6e65\u3274\u484b\u0052");
         }
 
         fixed (delegate*<VkCommandBuffer, uint, VkEvent*, VkDependencyInfo*, void>* pvkCmdWaitEvents2KHR = &vkCmdWaitEvents2KHR)
         {
-            *pvkCmdWaitEvents2KHR = (delegate*<VkCommandBuffer, uint, VkEvent*, VkDependencyInfo*, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5764\u6961\u4574\u6576\u746e\u3273\u484b\u0052");
+            *pvkCmdWaitEvents2KHR = (delegate*<VkCommandBuffer, uint, VkEvent*, VkDependencyInfo*, void>)GetVkFunction(device, "\u6b76\u6d43\u5764\u6961\u4574\u6576\u746e\u3273\u484b\u0052");
         }
 
         fixed (delegate*<VkCommandBuffer, VkDependencyInfo*, void>* pvkCmdPipelineBarrier2KHR = &vkCmdPipelineBarrier2KHR)
         {
-            *pvkCmdPipelineBarrier2KHR = (delegate*<VkCommandBuffer, VkDependencyInfo*, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u5064\u7069\u6c65\u6e69\u4265\u7261\u6972\u7265\u4b32\u5248\u0000");
+            *pvkCmdPipelineBarrier2KHR = (delegate*<VkCommandBuffer, VkDependencyInfo*, void>)GetVkFunction(device, "\u6b76\u6d43\u5064\u7069\u6c65\u6e69\u4265\u7261\u6972\u7265\u4b32\u5248\u0000");
         }
 
         fixed (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkQueryPool, uint, void>* pvkCmdWriteTimestamp2KHR = &vkCmdWriteTimestamp2KHR)
         {
-            *pvkCmdWriteTimestamp2KHR = (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkQueryPool, uint, void>)Core.Vk.GetVkFunction(
+            *pvkCmdWriteTimestamp2KHR = (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkQueryPool, uint, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5764\u6972\u6574\u6954\u656d\u7473\u6d61\u3270\u484b\u0052");
         }
 
         fixed (delegate*<VkQueue, uint, VkSubmitInfo2*, VkFence, VkResult>* pvkQueueSubmit2KHR = &vkQueueSubmit2KHR)
         {
-            *pvkQueueSubmit2KHR = (delegate*<VkQueue, uint, VkSubmitInfo2*, VkFence, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u7551\u7565\u5365\u6275\u696d\u3274\u484b\u0052");
+            *pvkQueueSubmit2KHR = (delegate*<VkQueue, uint, VkSubmitInfo2*, VkFence, VkResult>)GetVkFunction(device, "\u6b76\u7551\u7565\u5365\u6275\u696d\u3274\u484b\u0052");
         }
 
         fixed (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkBuffer, VkDeviceSize, uint, void>* pvkCmdWriteBufferMarker2AMD = &vkCmdWriteBufferMarker2AMD)
         {
-            *pvkCmdWriteBufferMarker2AMD = (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkBuffer, VkDeviceSize, uint, void>)Core.Vk.GetVkFunction(
+            *pvkCmdWriteBufferMarker2AMD = (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkBuffer, VkDeviceSize, uint, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5764\u6972\u6574\u7542\u6666\u7265\u614d\u6b72\u7265\u4132\u444d\u0000");
         }
 
         fixed (delegate*<VkQueue, uint*, VkCheckpointData2NV*, void>* pvkGetQueueCheckpointData2NV = &vkGetQueueCheckpointData2NV)
         {
-            *pvkGetQueueCheckpointData2NV = (delegate*<VkQueue, uint*, VkCheckpointData2NV*, void>)Core.Vk.GetVkFunction(
+            *pvkGetQueueCheckpointData2NV = (delegate*<VkQueue, uint*, VkCheckpointData2NV*, void>)GetVkFunction(
                 device, "\u6b76\u6547\u5174\u6575\u6575\u6843\u6365\u706b\u696f\u746e\u6144\u6174\u4e32\u0056");
         }
     }

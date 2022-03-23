@@ -21,7 +21,7 @@ public struct StdVideoEncodeH264ReferenceInfoFlags
 {
     private uint _bitfield1;
 
-    public uint is_long_term
+    public uint used_for_long_term_reference
     {
         get { return (uint)((_bitfield1 >> 0) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFE) | (((uint)value & 0x00000001) << 0); }

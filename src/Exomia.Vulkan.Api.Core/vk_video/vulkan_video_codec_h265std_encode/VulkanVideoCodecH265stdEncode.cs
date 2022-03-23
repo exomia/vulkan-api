@@ -20,9 +20,24 @@ namespace Exomia.Vulkan.Api.Core;
 
 public static class VulkanVideoCodecH265stdEncode
 {
-    public const int STD_VIDEO_ENCODE_H265_LUMA_LIST_SIZE = 15;
+    /// <summary> The spec version. </summary>
+    public const uint VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_SPEC_VERSION = VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_API_VERSION_0_9_6;
 
-    public const int STD_VIDEO_ENCODE_H265_CHROMA_LIST_SIZE = 15;
+    /// <summary> The extension name. </summary>
+    public const string VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_h265_encode";
 
-    public const int STD_VIDEO_ENCODE_H265_CHROMA_LISTS_NUM = 2;
+    /// <summary>
+    ///     An UTF8 null terminated version of <see cref="VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_EXTENSION_NAME" />
+    ///     represented by an UTF16 string.
+    /// </summary>
+    /// <remarks>
+    ///     Example usage:<br />
+    ///     <br />
+    ///     fixed(char* ptr = VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_EXTENSION_NAME_UTF8_NT) {<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
+    ///     unmanaged code.<br />
+    ///     }
+    /// </remarks>
+    public const string VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_EXTENSION_NAME_UTF8_NT =
+        "\u4b56\u535f\u4454\u565f\u4c55\u414b\u5f4e\u4956\u4544\u5f4f\u4f43\u4544\u5f43\u3248\u3536\u455f\u434e\u444f\u5f45\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 }

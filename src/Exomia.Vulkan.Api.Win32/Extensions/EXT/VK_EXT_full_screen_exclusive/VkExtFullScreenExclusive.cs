@@ -184,9 +184,9 @@ public static unsafe class VkExtFullScreenExclusive
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, uint*, VkPresentModeKHR*, VkResult>* pvkGetPhysicalDeviceSurfacePresentModes2EXT =
-                   &vkGetPhysicalDeviceSurfacePresentModes2EXT)
+            &vkGetPhysicalDeviceSurfacePresentModes2EXT)
         {
-            *pvkGetPhysicalDeviceSurfacePresentModes2EXT = (delegate*<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, uint*, VkPresentModeKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceSurfacePresentModes2EXT = (delegate*<VkPhysicalDevice, VkPhysicalDeviceSurfaceInfo2KHR*, uint*, VkPresentModeKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u7250\u7365\u6e65\u4d74\u646f\u7365\u4532\u5458\u0000");
         }
     }
@@ -211,19 +211,19 @@ public static unsafe class VkExtFullScreenExclusive
     {
         fixed (delegate*<VkDevice, VkSwapchainKHR, VkResult>* pvkAcquireFullScreenExclusiveModeEXT = &vkAcquireFullScreenExclusiveModeEXT)
         {
-            *pvkAcquireFullScreenExclusiveModeEXT = (delegate*<VkDevice, VkSwapchainKHR, VkResult>)Core.Vk.GetVkFunction(
+            *pvkAcquireFullScreenExclusiveModeEXT = (delegate*<VkDevice, VkSwapchainKHR, VkResult>)GetVkFunction(
                 device, "\u6b76\u6341\u7571\u7269\u4665\u6c75\u536c\u7263\u6565\u456e\u6378\u756c\u6973\u6576\u6f4d\u6564\u5845\u0054");
         }
 
         fixed (delegate*<VkDevice, VkSwapchainKHR, VkResult>* pvkReleaseFullScreenExclusiveModeEXT = &vkReleaseFullScreenExclusiveModeEXT)
         {
-            *pvkReleaseFullScreenExclusiveModeEXT = (delegate*<VkDevice, VkSwapchainKHR, VkResult>)Core.Vk.GetVkFunction(
+            *pvkReleaseFullScreenExclusiveModeEXT = (delegate*<VkDevice, VkSwapchainKHR, VkResult>)GetVkFunction(
                 device, "\u6b76\u6552\u656c\u7361\u4665\u6c75\u536c\u7263\u6565\u456e\u6378\u756c\u6973\u6576\u6f4d\u6564\u5845\u0054");
         }
 
         fixed (delegate*<VkDevice, VkPhysicalDeviceSurfaceInfo2KHR*, VkDeviceGroupPresentModeFlagsKHR*, VkResult>* pvkGetDeviceGroupSurfacePresentModes2EXT = &vkGetDeviceGroupSurfacePresentModes2EXT)
         {
-            *pvkGetDeviceGroupSurfacePresentModes2EXT = (delegate*<VkDevice, VkPhysicalDeviceSurfaceInfo2KHR*, VkDeviceGroupPresentModeFlagsKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetDeviceGroupSurfacePresentModes2EXT = (delegate*<VkDevice, VkPhysicalDeviceSurfaceInfo2KHR*, VkDeviceGroupPresentModeFlagsKHR*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7665\u6369\u4765\u6f72\u7075\u7553\u6672\u6361\u5065\u6572\u6573\u746e\u6f4d\u6564\u3273\u5845\u0054");
         }
     }

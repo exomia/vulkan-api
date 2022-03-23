@@ -19,6 +19,8 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct StdVideoH264SequenceParameterSet
 {
+    public StdVideoH264SpsFlags flags;
+
     public StdVideoH264ProfileIdc profile_idc;
 
     public StdVideoH264Level level_idc;
@@ -56,8 +58,6 @@ public unsafe struct StdVideoH264SequenceParameterSet
     public uint frame_crop_top_offset;
 
     public uint frame_crop_bottom_offset;
-
-    public StdVideoH264SpsFlags flags;
 
     public int* pOffsetForRefFrame;
 

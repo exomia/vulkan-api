@@ -79,7 +79,7 @@ public static unsafe class VkExtDirectModeDisplay
     {
         fixed (delegate*<VkPhysicalDevice, VkDisplayKHR, VkResult>* pvkReleaseDisplayEXT = &vkReleaseDisplayEXT)
         {
-            *pvkReleaseDisplayEXT = (delegate*<VkPhysicalDevice, VkDisplayKHR, VkResult>)Core.Vk.GetVkFunction(instance, "\u6b76\u6552\u656c\u7361\u4465\u7369\u6c70\u7961\u5845\u0054");
+            *pvkReleaseDisplayEXT = (delegate*<VkPhysicalDevice, VkDisplayKHR, VkResult>)GetVkFunction(instance, "\u6b76\u6552\u656c\u7361\u4465\u7369\u6c70\u7961\u5845\u0054");
         }
     }
 }

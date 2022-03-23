@@ -261,7 +261,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT specifies that image views created with this format can
-    ///     be used for depth comparison performed by OpImage*Dref instructions.
+    ///     be used for depth comparison performed by OpImage*Dref* instructions.
     /// </summary>
     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT = 0x200000000,
 
@@ -377,6 +377,12 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
     /// </summary>
     VK_FORMAT_FEATURE_2_RESERVED_37_BIT_QCOM = 0x2000000000,
+
+    /// <summary>
+    ///     VK_FORMAT_FEATURE_2_RESERVED_39_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
+    /// </summary>
+    VK_FORMAT_FEATURE_2_RESERVED_39_BIT_EXT = 0x8000000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT specifies that an image view can be
@@ -620,7 +626,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT specifies that image views created with this format can
-    ///     be used for depth comparison performed by OpImage*Dref instructions.
+    ///     be used for depth comparison performed by OpImage*Dref* instructions.
     /// </summary>
     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT_KHR = VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT
 }

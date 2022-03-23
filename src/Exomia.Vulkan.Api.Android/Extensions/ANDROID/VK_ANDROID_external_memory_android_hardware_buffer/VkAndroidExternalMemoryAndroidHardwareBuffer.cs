@@ -129,13 +129,13 @@ public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
     {
         fixed (delegate*<VkDevice, AHardwareBuffer*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult>* pvkGetAndroidHardwareBufferPropertiesANDROID = &vkGetAndroidHardwareBufferPropertiesANDROID)
         {
-            *pvkGetAndroidHardwareBufferPropertiesANDROID = (delegate*<VkDevice, AHardwareBuffer*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetAndroidHardwareBufferPropertiesANDROID = (delegate*<VkDevice, AHardwareBuffer*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4174\u646e\u6f72\u6469\u6148\u6472\u6177\u6572\u7542\u6666\u7265\u7250\u706f\u7265\u6974\u7365\u4e41\u5244\u494f\u0044");
         }
 
         fixed (delegate*<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, AHardwareBuffer**, VkResult>* pvkGetMemoryAndroidHardwareBufferANDROID = &vkGetMemoryAndroidHardwareBufferANDROID)
         {
-            *pvkGetMemoryAndroidHardwareBufferANDROID = (delegate*<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, AHardwareBuffer**, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetMemoryAndroidHardwareBufferANDROID = (delegate*<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, AHardwareBuffer**, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4d74\u6d65\u726f\u4179\u646e\u6f72\u6469\u6148\u6472\u6177\u6572\u7542\u6666\u7265\u4e41\u5244\u494f\u0044");
         }
     }
