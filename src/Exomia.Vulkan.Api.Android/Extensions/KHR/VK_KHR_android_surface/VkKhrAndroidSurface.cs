@@ -92,7 +92,7 @@ public static unsafe class VkKhrAndroidSurface
     {
         fixed (delegate*<VkInstance, VkAndroidSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateAndroidSurfaceKHR = &vkCreateAndroidSurfaceKHR)
         {
-            *pvkCreateAndroidSurfaceKHR = (delegate*<VkInstance, VkAndroidSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateAndroidSurfaceKHR = (delegate*<VkInstance, VkAndroidSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u6e41\u7264\u696f\u5364\u7275\u6166\u6563\u484b\u0052");
         }
     }

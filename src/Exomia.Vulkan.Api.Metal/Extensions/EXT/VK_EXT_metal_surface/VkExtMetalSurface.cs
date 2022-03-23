@@ -92,7 +92,7 @@ public static unsafe class VkExtMetalSurface
     {
         fixed (delegate*<VkInstance, VkMetalSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateMetalSurfaceEXT = &vkCreateMetalSurfaceEXT)
         {
-            *pvkCreateMetalSurfaceEXT = (delegate*<VkInstance, VkMetalSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateMetalSurfaceEXT = (delegate*<VkInstance, VkMetalSurfaceCreateInfoEXT*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u654d\u6174\u536c\u7275\u6166\u6563\u5845\u0054");
         }
     }

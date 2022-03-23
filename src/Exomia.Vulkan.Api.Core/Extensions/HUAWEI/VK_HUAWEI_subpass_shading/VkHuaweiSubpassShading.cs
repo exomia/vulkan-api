@@ -105,13 +105,13 @@ public static unsafe class VkHuaweiSubpassShading
     {
         fixed (delegate*<VkDevice, VkRenderPass, VkExtent2D*, VkResult>* pvkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI = &vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI)
         {
-            *pvkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI = (delegate*<VkDevice, VkRenderPass, VkExtent2D*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI = (delegate*<VkDevice, VkRenderPass, VkExtent2D*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7665\u6369\u5365\u6275\u6170\u7373\u6853\u6461\u6e69\u4d67\u7861\u6f57\u6b72\u7267\u756f\u5370\u7a69\u4865\u4155\u4557\u0049");
         }
 
         fixed (delegate*<VkCommandBuffer, void>* pvkCmdSubpassShadingHUAWEI = &vkCmdSubpassShadingHUAWEI)
         {
-            *pvkCmdSubpassShadingHUAWEI = (delegate*<VkCommandBuffer, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6d43\u5364\u6275\u6170\u7373\u6853\u6461\u6e69\u4867\u4155\u4557\u0049");
+            *pvkCmdSubpassShadingHUAWEI = (delegate*<VkCommandBuffer, void>)GetVkFunction(device, "\u6b76\u6d43\u5364\u6275\u6170\u7373\u6853\u6461\u6e69\u4867\u4155\u4557\u0049");
         }
     }
 }

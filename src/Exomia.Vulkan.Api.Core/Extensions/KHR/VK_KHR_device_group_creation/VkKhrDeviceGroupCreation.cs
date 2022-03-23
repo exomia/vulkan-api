@@ -83,7 +83,7 @@ public static unsafe class VkKhrDeviceGroupCreation
     {
         fixed (delegate*<VkInstance, uint*, VkPhysicalDeviceGroupProperties*, VkResult>* pvkEnumeratePhysicalDeviceGroupsKHR = &vkEnumeratePhysicalDeviceGroupsKHR)
         {
-            *pvkEnumeratePhysicalDeviceGroupsKHR = (delegate*<VkInstance, uint*, VkPhysicalDeviceGroupProperties*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkEnumeratePhysicalDeviceGroupsKHR = (delegate*<VkInstance, uint*, VkPhysicalDeviceGroupProperties*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6e45\u6d75\u7265\u7461\u5065\u7968\u6973\u6163\u446c\u7665\u6369\u4765\u6f72\u7075\u4b73\u5248\u0000");
         }
     }

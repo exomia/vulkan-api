@@ -38,4 +38,16 @@ public struct StdVideoEncodeH265PictureInfoFlags
         get { return (uint)((_bitfield1 >> 2) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFB) | (((uint)value & 0x00000001) << 2); }
     }
+
+    public uint discardable_flag
+    {
+        get { return (uint)((_bitfield1 >> 3) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFFFFF7) | (((uint)value & 0x00000001) << 3); }
+    }
+
+    public uint cross_layer_bla_flag
+    {
+        get { return (uint)((_bitfield1 >> 4) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFFFFEF) | (((uint)value & 0x00000001) << 4); }
+    }
 }

@@ -94,7 +94,7 @@ public static unsafe class VkExtSampleLocations
     {
         fixed (delegate*<VkCommandBuffer, VkSampleLocationsInfoEXT*, void>* pvkCmdSetSampleLocationsEXT = &vkCmdSetSampleLocationsEXT)
         {
-            *pvkCmdSetSampleLocationsEXT = (delegate*<VkCommandBuffer, VkSampleLocationsInfoEXT*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdSetSampleLocationsEXT = (delegate*<VkCommandBuffer, VkSampleLocationsInfoEXT*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6153\u706d\u656c\u6f4c\u6163\u6974\u6e6f\u4573\u5458\u0000");
         }
     }
@@ -113,7 +113,7 @@ public static unsafe class VkExtSampleLocations
     {
         fixed (delegate*<VkPhysicalDevice, VkSampleCountFlagBits, VkMultisamplePropertiesEXT*, void>* pvkGetPhysicalDeviceMultisamplePropertiesEXT = &vkGetPhysicalDeviceMultisamplePropertiesEXT)
         {
-            *pvkGetPhysicalDeviceMultisamplePropertiesEXT = (delegate*<VkPhysicalDevice, VkSampleCountFlagBits, VkMultisamplePropertiesEXT*, void>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceMultisamplePropertiesEXT = (delegate*<VkPhysicalDevice, VkSampleCountFlagBits, VkMultisamplePropertiesEXT*, void>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4d65\u6c75\u6974\u6173\u706d\u656c\u7250\u706f\u7265\u6974\u7365\u5845\u0054");
         }
     }

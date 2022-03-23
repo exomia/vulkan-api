@@ -115,13 +115,13 @@ public static unsafe class VkKhrExternalFenceWin32
     {
         fixed (delegate*<VkDevice, VkImportFenceWin32HandleInfoKHR*, VkResult>* pvkImportFenceWin32HandleKHR = &vkImportFenceWin32HandleKHR)
         {
-            *pvkImportFenceWin32HandleKHR = (delegate*<VkDevice, VkImportFenceWin32HandleInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkImportFenceWin32HandleKHR = (delegate*<VkDevice, VkImportFenceWin32HandleInfoKHR*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6d49\u6f70\u7472\u6546\u636e\u5765\u6e69\u3233\u6148\u646e\u656c\u484b\u0052");
         }
 
         fixed (delegate*<VkDevice, VkFenceGetWin32HandleInfoKHR*, HANDLE*, VkResult>* pvkGetFenceWin32HandleKHR = &vkGetFenceWin32HandleKHR)
         {
-            *pvkGetFenceWin32HandleKHR = (delegate*<VkDevice, VkFenceGetWin32HandleInfoKHR*, HANDLE*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetFenceWin32HandleKHR = (delegate*<VkDevice, VkFenceGetWin32HandleInfoKHR*, HANDLE*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4674\u6e65\u6563\u6957\u336e\u4832\u6e61\u6c64\u4b65\u5248\u0000");
         }
     }

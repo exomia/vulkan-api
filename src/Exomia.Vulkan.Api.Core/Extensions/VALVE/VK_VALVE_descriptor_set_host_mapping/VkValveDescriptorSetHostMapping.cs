@@ -116,15 +116,15 @@ public static unsafe class VkValveDescriptorSetHostMapping
     public static void Load(VkDevice device)
     {
         fixed (delegate*<VkDevice, VkDescriptorSetBindingReferenceVALVE*, VkDescriptorSetLayoutHostMappingInfoVALVE*, void>* pvkGetDescriptorSetLayoutHostMappingInfoVALVE =
-                   &vkGetDescriptorSetLayoutHostMappingInfoVALVE)
+            &vkGetDescriptorSetLayoutHostMappingInfoVALVE)
         {
-            *pvkGetDescriptorSetLayoutHostMappingInfoVALVE = (delegate*<VkDevice, VkDescriptorSetBindingReferenceVALVE*, VkDescriptorSetLayoutHostMappingInfoVALVE*, void>)Core.Vk.GetVkFunction(
+            *pvkGetDescriptorSetLayoutHostMappingInfoVALVE = (delegate*<VkDevice, VkDescriptorSetBindingReferenceVALVE*, VkDescriptorSetLayoutHostMappingInfoVALVE*, void>)GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7365\u7263\u7069\u6f74\u5372\u7465\u614c\u6f79\u7475\u6f48\u7473\u614d\u7070\u6e69\u4967\u666e\u566f\u4c41\u4556\u0000");
         }
 
         fixed (delegate*<VkDevice, VkDescriptorSet, void**, void>* pvkGetDescriptorSetHostMappingVALVE = &vkGetDescriptorSetHostMappingVALVE)
         {
-            *pvkGetDescriptorSetHostMappingVALVE = (delegate*<VkDevice, VkDescriptorSet, void**, void>)Core.Vk.GetVkFunction(
+            *pvkGetDescriptorSetHostMappingVALVE = (delegate*<VkDevice, VkDescriptorSet, void**, void>)GetVkFunction(
                 device, "\u6b76\u6547\u4474\u7365\u7263\u7069\u6f74\u5372\u7465\u6f48\u7473\u614d\u7070\u6e69\u5667\u4c41\u4556\u0000");
         }
     }

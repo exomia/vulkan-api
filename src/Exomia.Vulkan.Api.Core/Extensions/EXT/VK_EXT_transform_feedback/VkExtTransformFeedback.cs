@@ -256,37 +256,36 @@ public static unsafe class VkExtTransformFeedback
     {
         fixed (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, VkDeviceSize*, void>* pvkCmdBindTransformFeedbackBuffersEXT = &vkCmdBindTransformFeedbackBuffersEXT)
         {
-            *pvkCmdBindTransformFeedbackBuffersEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, VkDeviceSize*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdBindTransformFeedbackBuffersEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, VkDeviceSize*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6e69\u5464\u6172\u736e\u6f66\u6d72\u6546\u6465\u6162\u6b63\u7542\u6666\u7265\u4573\u5458\u0000");
         }
 
         fixed (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>* pvkCmdBeginTransformFeedbackEXT = &vkCmdBeginTransformFeedbackEXT)
         {
-            *pvkCmdBeginTransformFeedbackEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdBeginTransformFeedbackEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6765\u6e69\u7254\u6e61\u6673\u726f\u466d\u6565\u6264\u6361\u456b\u5458\u0000");
         }
 
         fixed (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>* pvkCmdEndTransformFeedbackEXT = &vkCmdEndTransformFeedbackEXT)
         {
-            *pvkCmdEndTransformFeedbackEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>)Core.Vk.GetVkFunction(
+            *pvkCmdEndTransformFeedbackEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer*, VkDeviceSize*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4564\u646e\u7254\u6e61\u6673\u726f\u466d\u6565\u6264\u6361\u456b\u5458\u0000");
         }
 
         fixed (delegate*<VkCommandBuffer, VkQueryPool, uint, VkQueryControlFlags, uint, void>* pvkCmdBeginQueryIndexedEXT = &vkCmdBeginQueryIndexedEXT)
         {
-            *pvkCmdBeginQueryIndexedEXT = (delegate*<VkCommandBuffer, VkQueryPool, uint, VkQueryControlFlags, uint, void>)Core.Vk.GetVkFunction(
+            *pvkCmdBeginQueryIndexedEXT = (delegate*<VkCommandBuffer, VkQueryPool, uint, VkQueryControlFlags, uint, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4264\u6765\u6e69\u7551\u7265\u4979\u646e\u7865\u6465\u5845\u0054");
         }
 
         fixed (delegate*<VkCommandBuffer, VkQueryPool, uint, uint, void>* pvkCmdEndQueryIndexedEXT = &vkCmdEndQueryIndexedEXT)
         {
-            *pvkCmdEndQueryIndexedEXT = (delegate*<VkCommandBuffer, VkQueryPool, uint, uint, void>)Core.Vk.GetVkFunction(
-                device, "\u6b76\u6d43\u4564\u646e\u7551\u7265\u4979\u646e\u7865\u6465\u5845\u0054");
+            *pvkCmdEndQueryIndexedEXT = (delegate*<VkCommandBuffer, VkQueryPool, uint, uint, void>)GetVkFunction(device, "\u6b76\u6d43\u4564\u646e\u7551\u7265\u4979\u646e\u7865\u6465\u5845\u0054");
         }
 
         fixed (delegate*<VkCommandBuffer, uint, uint, VkBuffer, VkDeviceSize, uint, uint, void>* pvkCmdDrawIndirectByteCountEXT = &vkCmdDrawIndirectByteCountEXT)
         {
-            *pvkCmdDrawIndirectByteCountEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer, VkDeviceSize, uint, uint, void>)Core.Vk.GetVkFunction(
+            *pvkCmdDrawIndirectByteCountEXT = (delegate*<VkCommandBuffer, uint, uint, VkBuffer, VkDeviceSize, uint, uint, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u4464\u6172\u4977\u646e\u7269\u6365\u4274\u7479\u4365\u756f\u746e\u5845\u0054");
         }
     }

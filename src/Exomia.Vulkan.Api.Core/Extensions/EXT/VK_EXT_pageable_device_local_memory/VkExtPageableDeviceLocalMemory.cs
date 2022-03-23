@@ -81,7 +81,7 @@ public static unsafe class VkExtPageableDeviceLocalMemory
     {
         fixed (delegate*<VkDevice, VkDeviceMemory, float, void>* pvkSetDeviceMemoryPriorityEXT = &vkSetDeviceMemoryPriorityEXT)
         {
-            *pvkSetDeviceMemoryPriorityEXT = (delegate*<VkDevice, VkDeviceMemory, float, void>)Core.Vk.GetVkFunction(
+            *pvkSetDeviceMemoryPriorityEXT = (delegate*<VkDevice, VkDeviceMemory, float, void>)GetVkFunction(
                 device, "\u6b76\u6553\u4474\u7665\u6369\u4d65\u6d65\u726f\u5079\u6972\u726f\u7469\u4579\u5458\u0000");
         }
     }

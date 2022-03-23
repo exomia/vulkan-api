@@ -169,18 +169,18 @@ public static unsafe class VkKhrPerformanceQuery
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, uint, uint*, VkPerformanceCounterKHR*, VkPerformanceCounterDescriptionKHR*, VkResult>* pvkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR =
-                   &vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR)
+            &vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR)
         {
             *pvkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR =
-                (delegate*<VkPhysicalDevice, uint, uint*, VkPerformanceCounterKHR*, VkPerformanceCounterDescriptionKHR*, VkResult>)Core.Vk.GetVkFunction(
+                (delegate*<VkPhysicalDevice, uint, uint*, VkPerformanceCounterKHR*, VkPerformanceCounterDescriptionKHR*, VkResult>)GetVkFunction(
                     instance,
                     "\u6b76\u6e45\u6d75\u7265\u7461\u5065\u7968\u6973\u6163\u446c\u7665\u6369\u5165\u6575\u6575\u6146\u696d\u796c\u6550\u6672\u726f\u616d\u636e\u5165\u6575\u7972\u6f43\u6e75\u6574\u7372\u484b\u0052");
         }
 
         fixed (delegate*<VkPhysicalDevice, VkQueryPoolPerformanceCreateInfoKHR*, uint*, void>* pvkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR =
-                   &vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR)
+            &vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR)
         {
-            *pvkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR = (delegate*<VkPhysicalDevice, VkQueryPoolPerformanceCreateInfoKHR*, uint*, void>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR = (delegate*<VkPhysicalDevice, VkQueryPoolPerformanceCreateInfoKHR*, uint*, void>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5165\u6575\u6575\u6146\u696d\u796c\u6550\u6672\u726f\u616d\u636e\u5165\u6575\u7972\u6150\u7373\u7365\u484b\u0052");
         }
     }
@@ -202,13 +202,13 @@ public static unsafe class VkKhrPerformanceQuery
     {
         fixed (delegate*<VkDevice, VkAcquireProfilingLockInfoKHR*, VkResult>* pvkAcquireProfilingLockKHR = &vkAcquireProfilingLockKHR)
         {
-            *pvkAcquireProfilingLockKHR = (delegate*<VkDevice, VkAcquireProfilingLockInfoKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkAcquireProfilingLockKHR = (delegate*<VkDevice, VkAcquireProfilingLockInfoKHR*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6341\u7571\u7269\u5065\u6f72\u6966\u696c\u676e\u6f4c\u6b63\u484b\u0052");
         }
 
         fixed (delegate*<VkDevice, void>* pvkReleaseProfilingLockKHR = &vkReleaseProfilingLockKHR)
         {
-            *pvkReleaseProfilingLockKHR = (delegate*<VkDevice, void>)Core.Vk.GetVkFunction(device, "\u6b76\u6552\u656c\u7361\u5065\u6f72\u6966\u696c\u676e\u6f4c\u6b63\u484b\u0052");
+            *pvkReleaseProfilingLockKHR = (delegate*<VkDevice, void>)GetVkFunction(device, "\u6b76\u6552\u656c\u7361\u5065\u6f72\u6966\u696c\u676e\u6f4c\u6b63\u484b\u0052");
         }
     }
 }

@@ -225,30 +225,30 @@ public static unsafe class VkKhrSurface
     {
         fixed (delegate*<VkInstance, VkSurfaceKHR, VkAllocationCallbacks*, void>* pvkDestroySurfaceKHR = &vkDestroySurfaceKHR)
         {
-            *pvkDestroySurfaceKHR = (delegate*<VkInstance, VkSurfaceKHR, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(instance, "\u6b76\u6544\u7473\u6f72\u5379\u7275\u6166\u6563\u484b\u0052");
+            *pvkDestroySurfaceKHR = (delegate*<VkInstance, VkSurfaceKHR, VkAllocationCallbacks*, void>)GetVkFunction(instance, "\u6b76\u6544\u7473\u6f72\u5379\u7275\u6166\u6563\u484b\u0052");
         }
 
         fixed (delegate*<VkPhysicalDevice, uint, VkSurfaceKHR, VkBool32*, VkResult>* pvkGetPhysicalDeviceSurfaceSupportKHR = &vkGetPhysicalDeviceSurfaceSupportKHR)
         {
-            *pvkGetPhysicalDeviceSurfaceSupportKHR = (delegate*<VkPhysicalDevice, uint, VkSurfaceKHR, VkBool32*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceSurfaceSupportKHR = (delegate*<VkPhysicalDevice, uint, VkSurfaceKHR, VkBool32*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u7553\u7070\u726f\u4b74\u5248\u0000");
         }
 
         fixed (delegate*<VkPhysicalDevice, VkSurfaceKHR, VkSurfaceCapabilitiesKHR*, VkResult>* pvkGetPhysicalDeviceSurfaceCapabilitiesKHR = &vkGetPhysicalDeviceSurfaceCapabilitiesKHR)
         {
-            *pvkGetPhysicalDeviceSurfaceCapabilitiesKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, VkSurfaceCapabilitiesKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceSurfaceCapabilitiesKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, VkSurfaceCapabilitiesKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u6143\u6170\u6962\u696c\u6974\u7365\u484b\u0052");
         }
 
         fixed (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkSurfaceFormatKHR*, VkResult>* pvkGetPhysicalDeviceSurfaceFormatsKHR = &vkGetPhysicalDeviceSurfaceFormatsKHR)
         {
-            *pvkGetPhysicalDeviceSurfaceFormatsKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkSurfaceFormatKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceSurfaceFormatsKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkSurfaceFormatKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u6f46\u6d72\u7461\u4b73\u5248\u0000");
         }
 
         fixed (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkPresentModeKHR*, VkResult>* pvkGetPhysicalDeviceSurfacePresentModesKHR = &vkGetPhysicalDeviceSurfacePresentModesKHR)
         {
-            *pvkGetPhysicalDeviceSurfacePresentModesKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkPresentModeKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceSurfacePresentModesKHR = (delegate*<VkPhysicalDevice, VkSurfaceKHR, uint*, VkPresentModeKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u5365\u7275\u6166\u6563\u7250\u7365\u6e65\u4d74\u646f\u7365\u484b\u0052");
         }
     }

@@ -87,7 +87,7 @@ public static unsafe class VkNvFragmentShadingRateEnums
     {
         fixed (delegate*<VkCommandBuffer, VkFragmentShadingRateNV, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>* pvkCmdSetFragmentShadingRateEnumNV = &vkCmdSetFragmentShadingRateEnumNV)
         {
-            *pvkCmdSetFragmentShadingRateEnumNV = (delegate*<VkCommandBuffer, VkFragmentShadingRateNV, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>)Core.Vk.GetVkFunction(
+            *pvkCmdSetFragmentShadingRateEnumNV = (delegate*<VkCommandBuffer, VkFragmentShadingRateNV, VkArray2<VkFragmentShadingRateCombinerOpKHR>, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u7246\u6761\u656d\u746e\u6853\u6461\u6e69\u5267\u7461\u4565\u756e\u4e6d\u0056");
         }
     }

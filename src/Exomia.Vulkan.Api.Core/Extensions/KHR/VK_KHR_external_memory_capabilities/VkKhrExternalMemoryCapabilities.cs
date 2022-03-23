@@ -85,9 +85,9 @@ public static unsafe class VkKhrExternalMemoryCapabilities
     public static void Load(VkInstance instance)
     {
         fixed (delegate*<VkPhysicalDevice, VkPhysicalDeviceExternalBufferInfo*, VkExternalBufferProperties*, void>* pvkGetPhysicalDeviceExternalBufferPropertiesKHR =
-                   &vkGetPhysicalDeviceExternalBufferPropertiesKHR)
+            &vkGetPhysicalDeviceExternalBufferPropertiesKHR)
         {
-            *pvkGetPhysicalDeviceExternalBufferPropertiesKHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceExternalBufferInfo*, VkExternalBufferProperties*, void>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceExternalBufferPropertiesKHR = (delegate*<VkPhysicalDevice, VkPhysicalDeviceExternalBufferInfo*, VkExternalBufferProperties*, void>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4565\u7478\u7265\u616e\u426c\u6675\u6566\u5072\u6f72\u6570\u7472\u6569\u4b73\u5248\u0000");
         }
     }

@@ -194,25 +194,25 @@ public static unsafe class VkKhrGetDisplayProperties2
     {
         fixed (delegate*<VkPhysicalDevice, uint*, VkDisplayProperties2KHR*, VkResult>* pvkGetPhysicalDeviceDisplayProperties2KHR = &vkGetPhysicalDeviceDisplayProperties2KHR)
         {
-            *pvkGetPhysicalDeviceDisplayProperties2KHR = (delegate*<VkPhysicalDevice, uint*, VkDisplayProperties2KHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceDisplayProperties2KHR = (delegate*<VkPhysicalDevice, uint*, VkDisplayProperties2KHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4465\u7369\u6c70\u7961\u7250\u706f\u7265\u6974\u7365\u4b32\u5248\u0000");
         }
 
         fixed (delegate*<VkPhysicalDevice, uint*, VkDisplayPlaneProperties2KHR*, VkResult>* pvkGetPhysicalDeviceDisplayPlaneProperties2KHR = &vkGetPhysicalDeviceDisplayPlaneProperties2KHR)
         {
-            *pvkGetPhysicalDeviceDisplayPlaneProperties2KHR = (delegate*<VkPhysicalDevice, uint*, VkDisplayPlaneProperties2KHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPhysicalDeviceDisplayPlaneProperties2KHR = (delegate*<VkPhysicalDevice, uint*, VkDisplayPlaneProperties2KHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5074\u7968\u6973\u6163\u446c\u7665\u6369\u4465\u7369\u6c70\u7961\u6c50\u6e61\u5065\u6f72\u6570\u7472\u6569\u3273\u484b\u0052");
         }
 
         fixed (delegate*<VkPhysicalDevice, VkDisplayKHR, uint*, VkDisplayModeProperties2KHR*, VkResult>* pvkGetDisplayModeProperties2KHR = &vkGetDisplayModeProperties2KHR)
         {
-            *pvkGetDisplayModeProperties2KHR = (delegate*<VkPhysicalDevice, VkDisplayKHR, uint*, VkDisplayModeProperties2KHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetDisplayModeProperties2KHR = (delegate*<VkPhysicalDevice, VkDisplayKHR, uint*, VkDisplayModeProperties2KHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u4474\u7369\u6c70\u7961\u6f4d\u6564\u7250\u706f\u7265\u6974\u7365\u4b32\u5248\u0000");
         }
 
         fixed (delegate*<VkPhysicalDevice, VkDisplayPlaneInfo2KHR*, VkDisplayPlaneCapabilities2KHR*, VkResult>* pvkGetDisplayPlaneCapabilities2KHR = &vkGetDisplayPlaneCapabilities2KHR)
         {
-            *pvkGetDisplayPlaneCapabilities2KHR = (delegate*<VkPhysicalDevice, VkDisplayPlaneInfo2KHR*, VkDisplayPlaneCapabilities2KHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetDisplayPlaneCapabilities2KHR = (delegate*<VkPhysicalDevice, VkDisplayPlaneInfo2KHR*, VkDisplayPlaneCapabilities2KHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u4474\u7369\u6c70\u7961\u6c50\u6e61\u4365\u7061\u6261\u6c69\u7469\u6569\u3273\u484b\u0052");
         }
     }

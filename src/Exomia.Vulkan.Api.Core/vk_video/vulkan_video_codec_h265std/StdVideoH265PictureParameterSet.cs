@@ -19,6 +19,8 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct StdVideoH265PictureParameterSet
 {
+    public StdVideoH265PpsFlags flags;
+
     public byte pps_pic_parameter_set_id;
 
     public byte pps_seq_parameter_set_id;
@@ -50,8 +52,6 @@ public unsafe struct StdVideoH265PictureParameterSet
     public sbyte pps_tc_offset_div2;
 
     public byte log2_parallel_merge_level_minus2;
-
-    public StdVideoH265PpsFlags flags;
 
     public StdVideoH265ScalingLists* pScalingLists;
 

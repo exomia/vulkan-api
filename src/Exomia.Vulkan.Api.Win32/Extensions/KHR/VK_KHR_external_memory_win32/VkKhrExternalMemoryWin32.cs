@@ -125,14 +125,14 @@ public static unsafe class VkKhrExternalMemoryWin32
     {
         fixed (delegate*<VkDevice, VkMemoryGetWin32HandleInfoKHR*, HANDLE*, VkResult>* pvkGetMemoryWin32HandleKHR = &vkGetMemoryWin32HandleKHR)
         {
-            *pvkGetMemoryWin32HandleKHR = (delegate*<VkDevice, VkMemoryGetWin32HandleInfoKHR*, HANDLE*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetMemoryWin32HandleKHR = (delegate*<VkDevice, VkMemoryGetWin32HandleInfoKHR*, HANDLE*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4d74\u6d65\u726f\u5779\u6e69\u3233\u6148\u646e\u656c\u484b\u0052");
         }
 
         fixed (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, HANDLE, VkMemoryWin32HandlePropertiesKHR*, VkResult>* pvkGetMemoryWin32HandlePropertiesKHR =
-                   &vkGetMemoryWin32HandlePropertiesKHR)
+            &vkGetMemoryWin32HandlePropertiesKHR)
         {
-            *pvkGetMemoryWin32HandlePropertiesKHR = (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, HANDLE, VkMemoryWin32HandlePropertiesKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetMemoryWin32HandlePropertiesKHR = (delegate*<VkDevice, VkExternalMemoryHandleTypeFlagBits, HANDLE, VkMemoryWin32HandlePropertiesKHR*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4d74\u6d65\u726f\u5779\u6e69\u3233\u6148\u646e\u656c\u7250\u706f\u7265\u6974\u7365\u484b\u0052");
         }
     }

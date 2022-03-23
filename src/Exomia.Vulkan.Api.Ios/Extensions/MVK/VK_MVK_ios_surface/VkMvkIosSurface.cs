@@ -93,7 +93,7 @@ public static unsafe class VkMvkIosSurface
     {
         fixed (delegate*<VkInstance, VkIOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateIOSSurfaceMVK = &vkCreateIOSSurfaceMVK)
         {
-            *pvkCreateIOSSurfaceMVK = (delegate*<VkInstance, VkIOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateIOSSurfaceMVK = (delegate*<VkInstance, VkIOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u7243\u6165\u6574\u4f49\u5353\u7275\u6166\u6563\u564d\u004b");
         }
     }

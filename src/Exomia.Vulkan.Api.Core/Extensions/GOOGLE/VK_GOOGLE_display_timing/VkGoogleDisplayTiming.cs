@@ -128,13 +128,13 @@ public static unsafe class VkGoogleDisplayTiming
     {
         fixed (delegate*<VkDevice, VkSwapchainKHR, VkRefreshCycleDurationGOOGLE*, VkResult>* pvkGetRefreshCycleDurationGOOGLE = &vkGetRefreshCycleDurationGOOGLE)
         {
-            *pvkGetRefreshCycleDurationGOOGLE = (delegate*<VkDevice, VkSwapchainKHR, VkRefreshCycleDurationGOOGLE*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetRefreshCycleDurationGOOGLE = (delegate*<VkDevice, VkSwapchainKHR, VkRefreshCycleDurationGOOGLE*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u5274\u6665\u6572\u6873\u7943\u6c63\u4465\u7275\u7461\u6f69\u476e\u4f4f\u4c47\u0045");
         }
 
         fixed (delegate*<VkDevice, VkSwapchainKHR, uint*, VkPastPresentationTimingGOOGLE*, VkResult>* pvkGetPastPresentationTimingGOOGLE = &vkGetPastPresentationTimingGOOGLE)
         {
-            *pvkGetPastPresentationTimingGOOGLE = (delegate*<VkDevice, VkSwapchainKHR, uint*, VkPastPresentationTimingGOOGLE*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetPastPresentationTimingGOOGLE = (delegate*<VkDevice, VkSwapchainKHR, uint*, VkPastPresentationTimingGOOGLE*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u5074\u7361\u5074\u6572\u6573\u746e\u7461\u6f69\u546e\u6d69\u6e69\u4767\u4f4f\u4c47\u0045");
         }
     }

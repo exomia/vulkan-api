@@ -93,7 +93,7 @@ public static unsafe class VkNnViSurface
         fixed (delegate*<VkInstance, VkViSurfaceCreateInfoNN*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>* pvkCreateViSurfaceNN = &vkCreateViSurfaceNN)
         {
             *pvkCreateViSurfaceNN =
-                (delegate*<VkInstance, VkViSurfaceCreateInfoNN*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)Core.Vk.GetVkFunction(
+                (delegate*<VkInstance, VkViSurfaceCreateInfoNN*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult>)GetVkFunction(
                     instance, "\u6b76\u7243\u6165\u6574\u6956\u7553\u6672\u6361\u4e65\u004e");
         }
     }

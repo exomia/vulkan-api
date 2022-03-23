@@ -113,13 +113,13 @@ public static unsafe class VkExtAcquireXlibDisplay
     {
         fixed (delegate*<VkPhysicalDevice, Display*, VkDisplayKHR, VkResult>* pvkAcquireXlibDisplayEXT = &vkAcquireXlibDisplayEXT)
         {
-            *pvkAcquireXlibDisplayEXT = (delegate*<VkPhysicalDevice, Display*, VkDisplayKHR, VkResult>)Core.Vk.GetVkFunction(
+            *pvkAcquireXlibDisplayEXT = (delegate*<VkPhysicalDevice, Display*, VkDisplayKHR, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6341\u7571\u7269\u5865\u696c\u4462\u7369\u6c70\u7961\u5845\u0054");
         }
 
         fixed (delegate*<VkPhysicalDevice, Display*, RROutput, VkDisplayKHR*, VkResult>* pvkGetRandROutputDisplayEXT = &vkGetRandROutputDisplayEXT)
         {
-            *pvkGetRandROutputDisplayEXT = (delegate*<VkPhysicalDevice, Display*, RROutput, VkDisplayKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetRandROutputDisplayEXT = (delegate*<VkPhysicalDevice, Display*, RROutput, VkDisplayKHR*, VkResult>)GetVkFunction(
                 instance, "\u6b76\u6547\u5274\u6e61\u5264\u754f\u7074\u7475\u6944\u7073\u616c\u4579\u5458\u0000");
         }
     }

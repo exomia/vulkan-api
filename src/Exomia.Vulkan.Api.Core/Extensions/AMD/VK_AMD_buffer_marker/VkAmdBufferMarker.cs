@@ -83,7 +83,7 @@ public static unsafe class VkAmdBufferMarker
     {
         fixed (delegate*<VkCommandBuffer, VkPipelineStageFlagBits, VkBuffer, VkDeviceSize, uint, void>* pvkCmdWriteBufferMarkerAMD = &vkCmdWriteBufferMarkerAMD)
         {
-            *pvkCmdWriteBufferMarkerAMD = (delegate*<VkCommandBuffer, VkPipelineStageFlagBits, VkBuffer, VkDeviceSize, uint, void>)Core.Vk.GetVkFunction(
+            *pvkCmdWriteBufferMarkerAMD = (delegate*<VkCommandBuffer, VkPipelineStageFlagBits, VkBuffer, VkDeviceSize, uint, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5764\u6972\u6574\u7542\u6666\u7265\u614d\u6b72\u7265\u4d41\u0044");
         }
     }

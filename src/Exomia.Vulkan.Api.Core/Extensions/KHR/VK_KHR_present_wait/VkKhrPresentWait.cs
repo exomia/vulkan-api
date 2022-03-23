@@ -90,7 +90,7 @@ public static unsafe class VkKhrPresentWait
     {
         fixed (delegate*<VkDevice, VkSwapchainKHR, ulong, ulong, VkResult>* pvkWaitForPresentKHR = &vkWaitForPresentKHR)
         {
-            *pvkWaitForPresentKHR = (delegate*<VkDevice, VkSwapchainKHR, ulong, ulong, VkResult>)Core.Vk.GetVkFunction(device, "\u6b76\u6157\u7469\u6f46\u5072\u6572\u6573\u746e\u484b\u0052");
+            *pvkWaitForPresentKHR = (delegate*<VkDevice, VkSwapchainKHR, ulong, ulong, VkResult>)GetVkFunction(device, "\u6b76\u6157\u7469\u6f46\u5072\u6572\u6573\u746e\u484b\u0052");
         }
     }
 }

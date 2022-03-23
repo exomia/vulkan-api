@@ -19,6 +19,8 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct StdVideoH264PictureParameterSet
 {
+    public StdVideoH264PpsFlags flags;
+
     public byte seq_parameter_set_id;
 
     public byte pic_parameter_set_id;
@@ -36,8 +38,6 @@ public unsafe struct StdVideoH264PictureParameterSet
     public sbyte chroma_qp_index_offset;
 
     public sbyte second_chroma_qp_index_offset;
-
-    public StdVideoH264PpsFlags flags;
 
     public StdVideoH264ScalingLists* pScalingLists;
 }

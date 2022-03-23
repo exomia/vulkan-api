@@ -170,31 +170,31 @@ public static unsafe class VkKhrDeferredHostOperations
     {
         fixed (delegate*<VkDevice, VkAllocationCallbacks*, VkDeferredOperationKHR*, VkResult>* pvkCreateDeferredOperationKHR = &vkCreateDeferredOperationKHR)
         {
-            *pvkCreateDeferredOperationKHR = (delegate*<VkDevice, VkAllocationCallbacks*, VkDeferredOperationKHR*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkCreateDeferredOperationKHR = (delegate*<VkDevice, VkAllocationCallbacks*, VkDeferredOperationKHR*, VkResult>)GetVkFunction(
                 device, "\u6b76\u7243\u6165\u6574\u6544\u6566\u7272\u6465\u704f\u7265\u7461\u6f69\u4b6e\u5248\u0000");
         }
 
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkAllocationCallbacks*, void>* pvkDestroyDeferredOperationKHR = &vkDestroyDeferredOperationKHR)
         {
-            *pvkDestroyDeferredOperationKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkAllocationCallbacks*, void>)Core.Vk.GetVkFunction(
+            *pvkDestroyDeferredOperationKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkAllocationCallbacks*, void>)GetVkFunction(
                 device, "\u6b76\u6544\u7473\u6f72\u4479\u6665\u7265\u6572\u4f64\u6570\u6172\u6974\u6e6f\u484b\u0052");
         }
 
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, uint>* pvkGetDeferredOperationMaxConcurrencyKHR = &vkGetDeferredOperationMaxConcurrencyKHR)
         {
-            *pvkGetDeferredOperationMaxConcurrencyKHR = (delegate*<VkDevice, VkDeferredOperationKHR, uint>)Core.Vk.GetVkFunction(
+            *pvkGetDeferredOperationMaxConcurrencyKHR = (delegate*<VkDevice, VkDeferredOperationKHR, uint>)GetVkFunction(
                 device, "\u6b76\u6547\u4474\u6665\u7265\u6572\u4f64\u6570\u6172\u6974\u6e6f\u614d\u4378\u6e6f\u7563\u7272\u6e65\u7963\u484b\u0052");
         }
 
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>* pvkGetDeferredOperationResultKHR = &vkGetDeferredOperationResultKHR)
         {
-            *pvkGetDeferredOperationResultKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetDeferredOperationResultKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4474\u6665\u7265\u6572\u4f64\u6570\u6172\u6974\u6e6f\u6552\u7573\u746c\u484b\u0052");
         }
 
         fixed (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>* pvkDeferredOperationJoinKHR = &vkDeferredOperationJoinKHR)
         {
-            *pvkDeferredOperationJoinKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>)Core.Vk.GetVkFunction(
+            *pvkDeferredOperationJoinKHR = (delegate*<VkDevice, VkDeferredOperationKHR, VkResult>)GetVkFunction(
                 device, "\u6b76\u6544\u6566\u7272\u6465\u704f\u7265\u7461\u6f69\u4a6e\u696f\u4b6e\u5248\u0000");
         }
     }

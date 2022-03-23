@@ -92,7 +92,7 @@ public static unsafe class VkNvExternalMemoryWin32
     {
         fixed (delegate*<VkDevice, VkDeviceMemory, VkExternalMemoryHandleTypeFlagsNV, HANDLE*, VkResult>* pvkGetMemoryWin32HandleNV = &vkGetMemoryWin32HandleNV)
         {
-            *pvkGetMemoryWin32HandleNV = (delegate*<VkDevice, VkDeviceMemory, VkExternalMemoryHandleTypeFlagsNV, HANDLE*, VkResult>)Core.Vk.GetVkFunction(
+            *pvkGetMemoryWin32HandleNV = (delegate*<VkDevice, VkDeviceMemory, VkExternalMemoryHandleTypeFlagsNV, HANDLE*, VkResult>)GetVkFunction(
                 device, "\u6b76\u6547\u4d74\u6d65\u726f\u5779\u6e69\u3233\u6148\u646e\u656c\u564e\u0000");
         }
     }
