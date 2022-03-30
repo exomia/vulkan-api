@@ -17,6 +17,14 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VkDebugUtilsObjectNameInfoEXT - Specify parameters of a name to give to an object -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html</a>
 /// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>structextends</term><description>VkPipelineShaderStageCreateInfo</description>
+///         </item>
+///     </list>
+/// </remarks>
+[VkStructExtends("VkPipelineShaderStageCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkDebugUtilsObjectNameInfoEXT
 {

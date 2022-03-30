@@ -63,5 +63,11 @@ public enum VkQueueFlagBits
     ///     VK_QUEUE_RESERVED_7_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueueFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueueFlagBits</a>
     /// </summary>
-    VK_QUEUE_RESERVED_7_BIT_QCOM = 0x80
+    VK_QUEUE_RESERVED_7_BIT_QCOM = 0x80,
+
+    /// <summary>
+    ///     VK_QUEUE_RESERVED_8_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueueFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueueFlagBits</a>
+    /// </summary>
+    VK_QUEUE_RESERVED_8_BIT_NV = 0x100
 }

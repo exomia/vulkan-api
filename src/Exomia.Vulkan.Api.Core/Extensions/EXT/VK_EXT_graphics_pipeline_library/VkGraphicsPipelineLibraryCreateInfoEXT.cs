@@ -14,8 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelineLibraryCreateInfoKHR - Structure specifying pipeline libraries to use when creating a pipeline -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html</a>
+///     VkGraphicsPipelineLibraryCreateInfoEXT - Structure specifying the subsets of the graphics pipeline being compiled -
+///     <a
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsPipelineLibraryCreateInfoEXT.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsPipelineLibraryCreateInfoEXT.html
+///     </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
@@ -26,10 +29,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkGraphicsPipelineCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPipelineLibraryCreateInfoKHR
+public unsafe struct VkGraphicsPipelineLibraryCreateInfoEXT
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_LIBRARY_CREATE_INFO_KHR;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_LIBRARY_CREATE_INFO_EXT;
 
     /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
@@ -37,12 +40,9 @@ public unsafe struct VkPipelineLibraryCreateInfoKHR
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>libraryCount is the number of pipeline libraries in pLibraries.</summary>
-    public uint libraryCount;
-
     /// <summary>
-    ///     pLibraries is a pointer to an array of VkPipeline structures specifying pipeline libraries to use when
-    ///     creating a pipeline.
+    ///     flags is a bitmask of VkGraphicsPipelineLibraryFlagBitsEXTspecifying the subsets of the graphics pipeline that
+    ///     are being compiled.
     /// </summary>
-    public VkPipeline* pLibraries;
+    public VkGraphicsPipelineLibraryFlagsEXT flags;
 }

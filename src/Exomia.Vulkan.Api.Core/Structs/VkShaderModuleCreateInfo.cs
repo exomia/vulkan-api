@@ -17,6 +17,14 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VkShaderModuleCreateInfo - Structure specifying parameters of a newly created shader module -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderModuleCreateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderModuleCreateInfo.html</a>
 /// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>structextends</term><description>VkPipelineShaderStageCreateInfo</description>
+///         </item>
+///     </list>
+/// </remarks>
+[VkStructExtends("VkPipelineShaderStageCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkShaderModuleCreateInfo
 {

@@ -155,7 +155,9 @@ public enum VkPipelineCreateFlagBits
     ///         vkGetPipelineExecutableInternalRepresentationsKHR
     ///     </a>
     ///     . Enabling this flag must not affect the final compiled pipeline but maydisable pipeline caching or otherwise
-    ///     affect pipeline creation time.
+    ///     affect pipeline creation time. When capturing IR from pipelines created with pipeline libraries, there is no
+    ///     guarantee that IR from libraries can be retrieved from the linked pipeline. Applications should retrieve IR from
+    ///     each library, and any linked pipelines, separately.
     /// </summary>
     VK_PIPELINE_CREATE_CAPTURE_INTERNAL_REPRESENTATIONS_BIT_KHR = 0x80,
 
@@ -178,16 +180,17 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_LIBRARY_BIT_KHR = 0x800,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_RESERVED_23_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    ///     VK_PIPELINE_CREATE_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_EXTspecifies that pipeline libraries should retain
+    ///     any information necessary to later perform an optimal link with VK_PIPELINE_CREATE_LINK_TIME_OPTIMIZATION_BIT_EXT.
     /// </summary>
-    VK_PIPELINE_CREATE_RESERVED_23_BIT_AMD = 0x800000,
+    VK_PIPELINE_CREATE_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_EXT = 0x800000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_RESERVED_10_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    ///     VK_PIPELINE_CREATE_LINK_TIME_OPTIMIZATION_BIT_EXT specifies that pipeline libraries being linked into this
+    ///     library should have link time optimizations applied. If this bit is omitted, implementations should instead perform
+    ///     linking as rapidly as possible.
     /// </summary>
-    VK_PIPELINE_CREATE_RESERVED_10_BIT_AMD = 0x400,
+    VK_PIPELINE_CREATE_LINK_TIME_OPTIMIZATION_BIT_EXT = 0x400,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RAY_TRACING_ALLOW_MOTION_BIT_NV specifies that the pipeline is allowed to use
