@@ -52,7 +52,9 @@ public enum VkDescriptorBindingFlagBits
     /// <summary>
     ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT indicates that descriptors in this binding that are not dynamically
     ///     used need not contain valid descriptors at the time the descriptors are consumed. A descriptor is dynamically used
-    ///     if any shader invocation executes an instruction that performs any memory access using the descriptor.
+    ///     if any shader invocation executes an instruction that performs any memory access using the descriptor. If a
+    ///     descriptor is not dynamically used, any resource referenced by the descriptor is not considered to be referenced
+    ///     during command execution.
     /// </summary>
     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT = 0x4,
 
@@ -116,7 +118,9 @@ public enum VkDescriptorBindingFlagBits
     /// <summary>
     ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT indicates that descriptors in this binding that are not dynamically
     ///     used need not contain valid descriptors at the time the descriptors are consumed. A descriptor is dynamically used
-    ///     if any shader invocation executes an instruction that performs any memory access using the descriptor.
+    ///     if any shader invocation executes an instruction that performs any memory access using the descriptor. If a
+    ///     descriptor is not dynamically used, any resource referenced by the descriptor is not considered to be referenced
+    ///     during command execution.
     /// </summary>
     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT_EXT = VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT,
 

@@ -170,7 +170,8 @@ public static unsafe class VkExtTransformFeedback
     /// </param>
     /// <param name="index">
     ///     index is the query type specific index. When the query type is
-    ///     VK_QUERY_TYPE_TRANSFORM_FEEDBACK_STREAM_EXTthe index represents the vertex stream.
+    ///     VK_QUERY_TYPE_TRANSFORM_FEEDBACK_STREAM_EXTor VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT, the index represents the
+    ///     vertex stream.
     /// </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,

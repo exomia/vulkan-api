@@ -283,6 +283,12 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// </summary>
     VK_PIPELINE_STAGE_2_RESERVED_387_BIT_KHR = 0x10000000,
 
+    /// <summary>
+    ///     VK_PIPELINE_STAGE_2_RESERVED_29_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
+    /// </summary>
+    VK_PIPELINE_STAGE_2_RESERVED_29_BIT_NV = 0x20000000,
+
     /// <summary>VK_PIPELINE_STAGE_2_NONE specifies no stages of execution.</summary>
     VK_PIPELINE_STAGE_2_NONE_KHR = VK_PIPELINE_STAGE_2_NONE,
 
