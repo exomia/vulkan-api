@@ -385,6 +385,30 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_RESERVED_39_BIT_EXT = 0x8000000000,
 
     /// <summary>
+    ///     VK_FORMAT_FEATURE_2_RESERVED_40_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
+    /// </summary>
+    VK_FORMAT_FEATURE_2_RESERVED_40_BIT_NV = 0x10000000000,
+
+    /// <summary>
+    ///     VK_FORMAT_FEATURE_2_RESERVED_41_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
+    /// </summary>
+    VK_FORMAT_FEATURE_2_RESERVED_41_BIT_NV = 0x20000000000,
+
+    /// <summary>
+    ///     VK_FORMAT_FEATURE_2_RESERVED_42_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
+    /// </summary>
+    VK_FORMAT_FEATURE_2_RESERVED_42_BIT_NV = 0x40000000000,
+
+    /// <summary>
+    ///     VK_FORMAT_FEATURE_2_RESERVED_43_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
+    /// </summary>
+    VK_FORMAT_FEATURE_2_RESERVED_43_BIT_NV = 0x80000000000,
+
+    /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT specifies that an image view can be
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage">
     ///         sampled
