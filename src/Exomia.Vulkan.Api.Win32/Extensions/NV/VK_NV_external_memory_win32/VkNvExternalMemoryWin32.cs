@@ -59,7 +59,7 @@ public static unsafe class VkNvExternalMemoryWin32
     ///     specifying the type of handle requested.
     /// </param>
     /// <param name="pHandle">
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html">requestLink</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html</a>
     /// </param>
     /// <remarks>
     ///     <list type="table">

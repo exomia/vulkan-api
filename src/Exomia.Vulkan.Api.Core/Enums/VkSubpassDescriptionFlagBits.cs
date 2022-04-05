@@ -66,5 +66,14 @@ public enum VkSubpassDescriptionFlagBits
     ///     supports pipelines created with
     ///     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_ARM.
     /// </summary>
-    VK_SUBPASS_DESCRIPTION_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_ARM = 0x40
+    VK_SUBPASS_DESCRIPTION_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_ARM = 0x40,
+
+    /// <summary>
+    ///     VK_SUBPASS_DESCRIPTION_RESERVED_7_BIT_EXT<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubpassDescriptionFlagBits">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubpassDescriptionFlagBits
+    ///     </a>
+    /// </summary>
+    VK_SUBPASS_DESCRIPTION_RESERVED_7_BIT_EXT = 0x80
 }

@@ -284,6 +284,12 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_RESERVED_387_BIT_KHR = 0x10000000,
 
     /// <summary>
+    ///     VK_PIPELINE_STAGE_2_RESERVED_30_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
+    /// </summary>
+    VK_PIPELINE_STAGE_2_RESERVED_30_BIT_NV = 0x40000000,
+
+    /// <summary>
     ///     VK_PIPELINE_STAGE_2_RESERVED_29_BIT_NV<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
     /// </summary>
@@ -375,11 +381,8 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// </summary>
     VK_PIPELINE_STAGE_2_TRANSFER_BIT = VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT_KHR,
 
-    /// <summary>
-    ///     VK_PIPELINE_STAGE_2_TRANSFER_BIT_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
-    /// </summary>
-    VK_PIPELINE_STAGE_2_TRANSFER_BIT_KHR = VK_PIPELINE_STAGE_2_TRANSFER_BIT,
+    /// <summary>VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT is equivalent to specifying all of:</summary>
+    VK_PIPELINE_STAGE_2_TRANSFER_BIT_KHR = VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_BOTTOM_OF_PIPE_BIT is equivalent to VK_PIPELINE_STAGE_2_ALL_COMMANDS_BIT with

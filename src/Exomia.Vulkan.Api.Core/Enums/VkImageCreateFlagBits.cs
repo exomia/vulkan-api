@@ -168,10 +168,10 @@ public enum VkImageCreateFlagBits
     VK_IMAGE_CREATE_RESERVED_18_BIT_EXT = 0x40000,
 
     /// <summary>
-    ///     VK_IMAGE_CREATE_RESERVED_394_BIT_EXT<br />
+    ///     VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits</a>
     /// </summary>
-    VK_IMAGE_CREATE_RESERVED_394_BIT_EXT = 0x20000,
+    VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT = 0x20000,
 
     /// <summary>
     ///     VK_IMAGE_CREATE_FRAGMENT_DENSITY_MAP_OFFSET_BIT_QCOM specifies that an image can be used in a render pass with

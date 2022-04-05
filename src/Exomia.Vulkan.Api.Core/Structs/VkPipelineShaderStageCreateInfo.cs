@@ -41,7 +41,7 @@ public unsafe struct VkPipelineShaderStageCreateInfo
     /// <summary>stage is a VkShaderStageFlagBits value specifying a single pipeline stage.</summary>
     public VkShaderStageFlagBits stage;
 
-    /// <summary>module is a VkShaderModule object containing the shader for this stage.</summary>
+    /// <summary>module is optionally a VkShaderModule object containing the shader code for this stage.</summary>
     public VkShaderModule module;
 
     /// <summary>

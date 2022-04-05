@@ -440,6 +440,18 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_RESERVED_387_BIT_KHR = 0x10000000000,
 
     /// <summary>
+    ///     VK_ACCESS_2_RESERVED_44_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
+    /// </summary>
+    VK_ACCESS_2_RESERVED_44_BIT_NV = 0x100000000000,
+
+    /// <summary>
+    ///     VK_ACCESS_2_RESERVED_45_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
+    /// </summary>
+    VK_ACCESS_2_RESERVED_45_BIT_NV = 0x200000000000,
+
+    /// <summary>
     ///     VK_ACCESS_2_RESERVED_42_BIT_NV<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
     /// </summary>

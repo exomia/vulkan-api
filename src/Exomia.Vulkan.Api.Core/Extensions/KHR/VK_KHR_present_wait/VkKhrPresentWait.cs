@@ -61,11 +61,11 @@ public static unsafe class VkKhrPresentWait
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_TIMEOUT</description>
+    ///             <term>successcodes</term><description>VK_SUCCESS,VK_TIMEOUT,VK_SUBOPTIMAL_KHR</description>
     ///         </item>
     ///         <item>
     ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST</description>
+    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT</description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -76,6 +76,24 @@ public enum VkBuildAccelerationStructureFlagBitsKHR
     VK_BUILD_ACCELERATION_STRUCTURE_MOTION_BIT_NV = 0x20,
 
     /// <summary>
+    ///     VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_6_BIT_NV<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBuildAccelerationStructureFlagBitsKHR">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBuildAccelerationStructureFlagBitsKHR
+    ///     </a>
+    /// </summary>
+    VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_6_BIT_NV = 0x40,
+
+    /// <summary>
+    ///     VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_7_BIT_NV<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBuildAccelerationStructureFlagBitsKHR">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBuildAccelerationStructureFlagBitsKHR
+    ///     </a>
+    /// </summary>
+    VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_7_BIT_NV = 0x80,
+
+    /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR indicates     that the specified acceleration structure can be
     ///     updated with     a mode of VK_BUILD_ACCELERATION_STRUCTURE_MODE_UPDATE_KHR in
     ///     <a
