@@ -42,11 +42,9 @@ public unsafe struct VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures
     public void* pNext;
 
     /// <summary>
-    ///     shaderSubgroupExtendedTypes<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures
-    ///     </a>
+    ///     shaderSubgroupExtendedTypes is a boolean specifying whether subgroup operations can use 8-bit integer, 16-bit
+    ///     integer, 64-bit integer, 16-bit floating-point, and vectors of these types in group operations with subgroup scope,
+    ///     if the implementation supports the types.
     /// </summary>
     public VkBool32 shaderSubgroupExtendedTypes;
 }

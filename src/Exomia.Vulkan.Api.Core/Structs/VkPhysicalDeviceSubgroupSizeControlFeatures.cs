@@ -42,20 +42,15 @@ public unsafe struct VkPhysicalDeviceSubgroupSizeControlFeatures
     public void* pNext;
 
     /// <summary>
-    ///     subgroupSizeControl<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSubgroupSizeControlFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSubgroupSizeControlFeatures
-    ///     </a>
+    ///     subgroupSizeControl indicates whether the implementation supports controlling shader subgroup sizes via the
+    ///     VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BITflag and the
+    ///     VkPipelineShaderStageRequiredSubgroupSizeCreateInfostructure.
     /// </summary>
     public VkBool32 subgroupSizeControl;
 
     /// <summary>
-    ///     computeFullSubgroups<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSubgroupSizeControlFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSubgroupSizeControlFeatures
-    ///     </a>
+    ///     computeFullSubgroups indicates whether the implementation supports requiring full subgroups in compute shaders
+    ///     via the VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT flag.
     /// </summary>
     public VkBool32 computeFullSubgroups;
 }

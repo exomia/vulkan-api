@@ -91,7 +91,10 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     </a>
     ///     stage of the pipeline. The counter&#8217;s value is incremented each time a primitive passes the
     ///     primitive clipping stage. The actual number of primitives output by the primitive clipping stage for a particular
-    ///     input primitive is implementation-dependent but mustsatisfy the following conditions:
+    ///     input primitive is implementation-dependent but mustsatisfy the following conditions:<br />
+    ///     If at least one vertex of the input primitive lies inside the clipping volume, the counter is incremented by one or
+    ///     more.<br />
+    ///     Otherwise, the counter is incremented by zero or more.<br />
     /// </summary>
     VK_QUERY_PIPELINE_STATISTIC_CLIPPING_PRIMITIVES_BIT = 0x40,
 

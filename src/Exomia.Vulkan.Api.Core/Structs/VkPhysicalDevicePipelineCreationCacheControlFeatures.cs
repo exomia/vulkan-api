@@ -42,11 +42,9 @@ public unsafe struct VkPhysicalDevicePipelineCreationCacheControlFeatures
     public void* pNext;
 
     /// <summary>
-    ///     pipelineCreationCacheControl<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevicePipelineCreationCacheControlFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevicePipelineCreationCacheControlFeatures
-    ///     </a>
+    ///     pipelineCreationCacheControl indicates that the implementation supports:The following can be used in
+    ///     Vk*PipelineCreateInfo::flags:VK_PIPELINE_CREATE_FAIL_ON_PIPELINE_COMPILE_REQUIRED_BITVK_PIPELINE_CREATE_EARLY_RETURN_ON_FAILURE_BITThe
+    ///     following can be used in VkPipelineCacheCreateInfo::flags:VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT
     /// </summary>
     public VkBool32 pipelineCreationCacheControl;
 }

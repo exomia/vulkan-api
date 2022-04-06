@@ -36,6 +36,12 @@ public enum VkRenderingFlagBits
     VK_RENDERING_RESUMING_BIT = 0x4,
 
     /// <summary>
+    ///     VK_RENDERING_RESERVED_3_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderingFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderingFlagBits</a>
+    /// </summary>
+    VK_RENDERING_RESERVED_3_BIT_EXT = 0x8,
+
+    /// <summary>
     ///     VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT specifies that draw calls for the render pass instance
     ///     will be recorded in secondary command buffers.
     /// </summary>

@@ -27,17 +27,29 @@ public unsafe struct VkDescriptorSetBindingReferenceVALVE
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_BINDING_REFERENCE_VALVE;
 
     /// <summary>
-    ///     VUID-VkDescriptorSetBindingReferenceVALVE-sType-sType sType must be
-    ///     VK_STRUCTURE_TYPE_DESCRIPTOR_SET_BINDING_REFERENCE_VALVE
+    ///     sType<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetBindingReferenceVALVE">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetBindingReferenceVALVE
+    ///     </a>
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary> VUID-VkDescriptorSetBindingReferenceVALVE-pNext-pNext pNext must be NULL</summary>
+    /// <summary>
+    ///     pNext<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetBindingReferenceVALVE">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetBindingReferenceVALVE
+    ///     </a>
+    /// </summary>
     public void* pNext;
 
     /// <summary>
-    ///     VUID-VkDescriptorSetBindingReferenceVALVE-descriptorSetLayout-parameter descriptorSetLayout must be a valid
-    ///     VkDescriptorSetLayout handle
+    ///     descriptorSetLayout<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetBindingReferenceVALVE">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetBindingReferenceVALVE
+    ///     </a>
     /// </summary>
     public VkDescriptorSetLayout descriptorSetLayout;
 

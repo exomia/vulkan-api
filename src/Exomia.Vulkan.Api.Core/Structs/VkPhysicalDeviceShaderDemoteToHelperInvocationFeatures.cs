@@ -42,11 +42,8 @@ public unsafe struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures
     public void* pNext;
 
     /// <summary>
-    ///     shaderDemoteToHelperInvocation<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures
-    ///     </a>
+    ///     shaderDemoteToHelperInvocation indicates whether the implementation supports the SPIR-V
+    ///     DemoteToHelperInvocationEXTcapability.
     /// </summary>
     public VkBool32 shaderDemoteToHelperInvocation;
 }

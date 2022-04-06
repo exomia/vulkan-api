@@ -41,11 +41,9 @@ public unsafe struct VkPhysicalDeviceImageRobustnessFeatures
     public void* pNext;
 
     /// <summary>
-    ///     robustImageAccess<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceImageRobustnessFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceImageRobustnessFeatures
-    ///     </a>
+    ///     robustImageAccessindicates whether image accesses are tightly bounds-checked against the dimensions of the
+    ///     image view. Invalid texels resulting from out of bounds image loads will be replaced as described in Texel
+    ///     Replacement, with either (0,0,1) or (0,0,0) values inserted for missing G, B, or A components based on the format.
     /// </summary>
     public VkBool32 robustImageAccess;
 }

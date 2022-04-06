@@ -20,38 +20,23 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Explicit)]
 public unsafe struct VkPerformanceValueDataINTEL
 {
-    /// <summary>
-    ///     value32<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL</a>
-    /// </summary>
+    /// <summary>data.value32 represents 32-bit integer data.</summary>
     [FieldOffset(0)]
     public uint value32;
 
-    /// <summary>
-    ///     value64<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL</a>
-    /// </summary>
+    /// <summary>data.value64 represents 64-bit integer data.</summary>
     [FieldOffset(0)]
     public ulong value64;
 
-    /// <summary>
-    ///     valueFloat<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL</a>
-    /// </summary>
+    /// <summary>data.valueFloat represents floating-point data.</summary>
     [FieldOffset(0)]
     public float valueFloat;
 
-    /// <summary>
-    ///     valueBool<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL</a>
-    /// </summary>
+    /// <summary>data.valueBool represents Bool32 data.</summary>
     [FieldOffset(0)]
     public VkBool32 valueBool;
 
-    /// <summary>
-    ///     valueString<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceValueDataINTEL</a>
-    /// </summary>
+    /// <summary>data.valueString represents a pointer to a null-terminated UTF-8 string.</summary>
     [FieldOffset(0)]
     public byte* valueString;
 }

@@ -225,6 +225,18 @@ public enum VkBufferUsageFlagBits
     VK_BUFFER_USAGE_RESERVED_22_BIT_AMD = 0x400000,
 
     /// <summary>
+    ///     VK_BUFFER_USAGE_RESERVED_23_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
+    /// </summary>
+    VK_BUFFER_USAGE_RESERVED_23_BIT_NV = 0x800000,
+
+    /// <summary>
+    ///     VK_BUFFER_USAGE_RESERVED_24_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
+    /// </summary>
+    VK_BUFFER_USAGE_RESERVED_24_BIT_NV = 0x1000000,
+
+    /// <summary>
     ///     VK_BUFFER_USAGE_SHADER_BINDING_TABLE_BIT_KHR specifies that the buffer is suitable for use as a
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
     ///         Shader

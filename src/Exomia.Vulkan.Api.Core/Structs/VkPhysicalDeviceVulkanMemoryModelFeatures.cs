@@ -41,29 +41,20 @@ public unsafe struct VkPhysicalDeviceVulkanMemoryModelFeatures
     public void* pNext;
 
     /// <summary>
-    ///     vulkanMemoryModel<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkanMemoryModelFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkanMemoryModelFeatures
-    ///     </a>
+    ///     vulkanMemoryModelindicates whether the Vulkan Memory Model is supported, as defined in Vulkan Memory Model.
+    ///     This also indicates whether shader modules can declare the VulkanMemoryModel capability.
     /// </summary>
     public VkBool32 vulkanMemoryModel;
 
     /// <summary>
-    ///     vulkanMemoryModelDeviceScope<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkanMemoryModelFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkanMemoryModelFeatures
-    ///     </a>
+    ///     vulkanMemoryModelDeviceScope indicates whether the Vulkan Memory Model can use Device scope synchronization.
+    ///     This also indicates whether shader modules can declare the VulkanMemoryModelDeviceScope capability.
     /// </summary>
     public VkBool32 vulkanMemoryModelDeviceScope;
 
     /// <summary>
-    ///     vulkanMemoryModelAvailabilityVisibilityChains<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkanMemoryModelFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkanMemoryModelFeatures
-    ///     </a>
+    ///     vulkanMemoryModelAvailabilityVisibilityChains indicates whether the Vulkan Memory Model can use availability
+    ///     and visibility chains with more than one element.
     /// </summary>
     public VkBool32 vulkanMemoryModelAvailabilityVisibilityChains;
 }

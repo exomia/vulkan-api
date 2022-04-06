@@ -39,8 +39,11 @@ public unsafe struct VkPhysicalDeviceCustomBorderColorPropertiesEXT
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT;
 
     /// <summary>
-    ///     VUID-VkPhysicalDeviceCustomBorderColorPropertiesEXT-sType-sType sType must be
-    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT
+    ///     sType<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceCustomBorderColorPropertiesEXT">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceCustomBorderColorPropertiesEXT
+    ///     </a>
     /// </summary>
     public VkStructureType sType;
 

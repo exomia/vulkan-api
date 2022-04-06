@@ -42,11 +42,8 @@ public unsafe struct VkPhysicalDeviceSynchronization2Features
     public void* pNext;
 
     /// <summary>
-    ///     synchronization2<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSynchronization2Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSynchronization2Features
-    ///     </a>
+    ///     synchronization2indicates whether the implementation supports the new set of synchronization commands
+    ///     introduced in VK_KHR_synchronization2.
     /// </summary>
     public VkBool32 synchronization2;
 }

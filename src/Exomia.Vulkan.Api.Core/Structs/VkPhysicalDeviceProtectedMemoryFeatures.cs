@@ -41,12 +41,6 @@ public unsafe struct VkPhysicalDeviceProtectedMemoryFeatures
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     protectedMemory<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceProtectedMemoryFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceProtectedMemoryFeatures
-    ///     </a>
-    /// </summary>
+    /// <summary> protectedMemoryspecifies whether protected memory is supported.</summary>
     public VkBool32 protectedMemory;
 }

@@ -30,10 +30,13 @@ public unsafe struct VkExternalFenceProperties
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_EXTERNAL_FENCE_PROPERTIES;
 
-    /// <summary> VUID-VkExternalFenceProperties-sType-sType sType must be VK_STRUCTURE_TYPE_EXTERNAL_FENCE_PROPERTIES</summary>
+    /// <summary>
+    ///     sType<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceProperties">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceProperties</a>
+    /// </summary>
     public VkStructureType sType;
 
-    /// <summary> VUID-VkExternalFenceProperties-pNext-pNext pNext must be NULL</summary>
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
     /// <summary>

@@ -199,6 +199,12 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_RAY_TRACING_ALLOW_MOTION_BIT_NV = 0x100000,
 
     /// <summary>
+    ///     VK_PIPELINE_CREATE_RESERVED_24_BIT_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_RESERVED_24_BIT_NV = 0x1000000,
+
+    /// <summary>
     ///     VK_PIPELINE_CREATE_DISPATCH_BASE<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
     /// </summary>

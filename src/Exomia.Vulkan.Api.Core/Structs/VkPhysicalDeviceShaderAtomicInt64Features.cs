@@ -41,20 +41,14 @@ public unsafe struct VkPhysicalDeviceShaderAtomicInt64Features
     public void* pNext;
 
     /// <summary>
-    ///     shaderBufferInt64Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicInt64Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicInt64Features
-    ///     </a>
+    ///     shaderBufferInt64Atomics indicates whether shaders can perform 64-bit unsigned and signed integer atomic
+    ///     operations on buffers.
     /// </summary>
     public VkBool32 shaderBufferInt64Atomics;
 
     /// <summary>
-    ///     shaderSharedInt64Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicInt64Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicInt64Features
-    ///     </a>
+    ///     shaderSharedInt64Atomics indicates whether shaders can perform 64-bit unsigned and signed integer atomic
+    ///     operations on shared memory.
     /// </summary>
     public VkBool32 shaderSharedInt64Atomics;
 }

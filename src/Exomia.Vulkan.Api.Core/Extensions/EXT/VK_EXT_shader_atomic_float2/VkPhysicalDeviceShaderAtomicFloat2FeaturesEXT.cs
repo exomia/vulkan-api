@@ -42,110 +42,74 @@ public unsafe struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
     public void* pNext;
 
     /// <summary>
-    ///     shaderBufferFloat16Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderBufferFloat16Atomicsindicates whether shaders can perform 16-bit floating-point load, store, and
+    ///     exchange atomic operations on storage buffers.
     /// </summary>
     public VkBool32 shaderBufferFloat16Atomics;
 
     /// <summary>
-    ///     shaderBufferFloat16AtomicAdd<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderBufferFloat16AtomicAdd indicates whether shaders canperform 16-bit floating-point add atomic operations
+    ///     on storage buffers.
     /// </summary>
     public VkBool32 shaderBufferFloat16AtomicAdd;
 
     /// <summary>
-    ///     shaderBufferFloat16AtomicMinMax<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderBufferFloat16AtomicMinMax indicates whether shaders canperform 16-bit floating-point min and max atomic
+    ///     operations on storage buffers.
     /// </summary>
     public VkBool32 shaderBufferFloat16AtomicMinMax;
 
     /// <summary>
-    ///     shaderBufferFloat32AtomicMinMax<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderBufferFloat32AtomicMinMax indicates whether shaders canperform 32-bit floating-point min and max atomic
+    ///     operations on storage buffers.
     /// </summary>
     public VkBool32 shaderBufferFloat32AtomicMinMax;
 
     /// <summary>
-    ///     shaderBufferFloat64AtomicMinMax<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderBufferFloat64AtomicMinMax indicates whether shaders canperform 64-bit floating-point min and max atomic
+    ///     operations on storage buffers.
     /// </summary>
     public VkBool32 shaderBufferFloat64AtomicMinMax;
 
     /// <summary>
-    ///     shaderSharedFloat16Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderSharedFloat16Atomicsindicates whether shaders can perform 16-bit floating-point load, store and
+    ///     exchange atomic operations on shared memory.
     /// </summary>
     public VkBool32 shaderSharedFloat16Atomics;
 
     /// <summary>
-    ///     shaderSharedFloat16AtomicAdd<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderSharedFloat16AtomicAdd indicates whether shaders canperform 16-bit floating-point add atomic operations
+    ///     on shared memory.
     /// </summary>
     public VkBool32 shaderSharedFloat16AtomicAdd;
 
     /// <summary>
-    ///     shaderSharedFloat16AtomicMinMax<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderSharedFloat16AtomicMinMax indicates whether shaders canperform 16-bit floating-point min and max atomic
+    ///     operations on shared memory.
     /// </summary>
     public VkBool32 shaderSharedFloat16AtomicMinMax;
 
     /// <summary>
-    ///     shaderSharedFloat32AtomicMinMax<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderSharedFloat32AtomicMinMax indicates whether shaders canperform 32-bit floating-point min and max atomic
+    ///     operations on shared memory.
     /// </summary>
     public VkBool32 shaderSharedFloat32AtomicMinMax;
 
     /// <summary>
-    ///     shaderSharedFloat64AtomicMinMax<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderSharedFloat64AtomicMinMax indicates whether shaders canperform 64-bit floating-point min and max atomic
+    ///     operations on shared memory.
     /// </summary>
     public VkBool32 shaderSharedFloat64AtomicMinMax;
 
     /// <summary>
-    ///     shaderImageFloat32AtomicMinMax<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     shaderImageFloat32AtomicMinMax indicates whether shaders canperform 32-bit floating-point min and max atomic
+    ///     image operations.
     /// </summary>
     public VkBool32 shaderImageFloat32AtomicMinMax;
 
     /// <summary>
-    ///     sparseImageFloat32AtomicMinMax<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
-    ///     </a>
+    ///     sparseImageFloat32AtomicMinMax indicates whether 32-bit floating-point min and max atomic operations can be
+    ///     used on sparse images.
     /// </summary>
     public VkBool32 sparseImageFloat32AtomicMinMax;
 }

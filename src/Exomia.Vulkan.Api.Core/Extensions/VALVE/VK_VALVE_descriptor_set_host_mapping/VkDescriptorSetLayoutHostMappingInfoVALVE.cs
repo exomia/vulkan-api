@@ -27,12 +27,21 @@ public unsafe struct VkDescriptorSetLayoutHostMappingInfoVALVE
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_HOST_MAPPING_INFO_VALVE;
 
     /// <summary>
-    ///     VUID-VkDescriptorSetLayoutHostMappingInfoVALVE-sType-sType sType must be
-    ///     VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_HOST_MAPPING_INFO_VALVE
+    ///     sType<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetLayoutHostMappingInfoVALVE">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetLayoutHostMappingInfoVALVE
+    ///     </a>
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary> VUID-VkDescriptorSetLayoutHostMappingInfoVALVE-pNext-pNext pNext must be NULL</summary>
+    /// <summary>
+    ///     pNext<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetLayoutHostMappingInfoVALVE">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetLayoutHostMappingInfoVALVE
+    ///     </a>
+    /// </summary>
     public void* pNext;
 
     /// <summary>

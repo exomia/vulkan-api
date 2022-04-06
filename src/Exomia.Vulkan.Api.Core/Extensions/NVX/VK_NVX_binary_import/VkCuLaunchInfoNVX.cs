@@ -23,13 +23,22 @@ public unsafe struct VkCuLaunchInfoNVX
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_CU_LAUNCH_INFO_NVX;
 
-    /// <summary> VUID-VkCuLaunchInfoNVX-sType-sType sType must be VK_STRUCTURE_TYPE_CU_LAUNCH_INFO_NVX</summary>
+    /// <summary>
+    ///     sType<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    /// </summary>
     public VkStructureType sType;
 
-    /// <summary> VUID-VkCuLaunchInfoNVX-pNext-pNext pNext must be NULL</summary>
+    /// <summary>
+    ///     pNext<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    /// </summary>
     public void* pNext;
 
-    /// <summary> VUID-VkCuLaunchInfoNVX-function-parameter function must be a valid VkCuFunctionNVX handle</summary>
+    /// <summary>
+    ///     function<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    /// </summary>
     public VkCuFunctionNVX function;
 
     /// <summary>
@@ -75,26 +84,26 @@ public unsafe struct VkCuLaunchInfoNVX
     public uint sharedMemBytes;
 
     /// <summary>
-    ///     VUID-VkCuLaunchInfoNVX-pParams-parameter If paramCount is not 0, pParams must be a valid pointer to an array
-    ///     of paramCount bytes
+    ///     paramCount<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
     /// </summary>
     public nuint paramCount;
 
     /// <summary>
-    ///     VUID-VkCuLaunchInfoNVX-pParams-parameter If paramCount is not 0, pParams must be a valid pointer to an array
-    ///     of paramCount bytes
+    ///     pParams<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
     /// </summary>
     public void** pParams;
 
     /// <summary>
-    ///     VUID-VkCuLaunchInfoNVX-pExtras-parameter If extraCount is not 0, pExtras must be a valid pointer to an array
-    ///     of extraCount bytes
+    ///     extraCount<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
     /// </summary>
     public nuint extraCount;
 
     /// <summary>
-    ///     VUID-VkCuLaunchInfoNVX-pExtras-parameter If extraCount is not 0, pExtras must be a valid pointer to an array
-    ///     of extraCount bytes
+    ///     pExtras<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
     /// </summary>
     public void** pExtras;
 }

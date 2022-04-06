@@ -42,29 +42,22 @@ public unsafe struct VkPhysicalDeviceBufferDeviceAddressFeatures
     public void* pNext;
 
     /// <summary>
-    ///     bufferDeviceAddress<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceBufferDeviceAddressFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceBufferDeviceAddressFeatures
-    ///     </a>
+    ///     bufferDeviceAddress indicates that the implementation supports accessing buffer memory in shaders as storage
+    ///     buffers via an address queried from vkGetBufferDeviceAddress.
     /// </summary>
     public VkBool32 bufferDeviceAddress;
 
     /// <summary>
-    ///     bufferDeviceAddressCaptureReplay<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceBufferDeviceAddressFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceBufferDeviceAddressFeatures
-    ///     </a>
+    ///     bufferDeviceAddressCaptureReplay indicates that the implementation supports saving and reusing buffer and
+    ///     device addresses, e.g. for trace capture and replay.
     /// </summary>
     public VkBool32 bufferDeviceAddressCaptureReplay;
 
     /// <summary>
-    ///     bufferDeviceAddressMultiDevice<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceBufferDeviceAddressFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceBufferDeviceAddressFeatures
-    ///     </a>
+    ///     bufferDeviceAddressMultiDevice indicates that the implementation supports the bufferDeviceAddress,
+    ///     rayTracingPipeline and rayQuery features for logical devices created with multiple physical devices. If this
+    ///     feature is not supported, buffer and acceleration structure addresses must not be queried on a logical device
+    ///     created with more than one physical device.
     /// </summary>
     public VkBool32 bufferDeviceAddressMultiDevice;
 }
