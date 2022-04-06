@@ -36,12 +36,21 @@ public unsafe struct VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_SET_HOST_MAPPING_FEATURES_VALVE;
 
     /// <summary>
-    ///     VUID-VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE-sType-sType sType must be
-    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_SET_HOST_MAPPING_FEATURES_VALVE
+    ///     sType<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE
+    ///     </a>
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary>
+    ///     pNext<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE
+    ///     </a>
+    /// </summary>
     public void* pNext;
 
     /// <summary>

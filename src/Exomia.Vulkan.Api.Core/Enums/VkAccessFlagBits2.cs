@@ -71,7 +71,10 @@ public enum VkAccessFlagBits2 : ulong
     ///         shader
     ///         binding table
     ///     </a>
-    ///     in any shader pipeline. In addition, it is equivalent to the logical OR of:
+    ///     in any shader pipeline. In addition, it is equivalent to the logical OR of:<br />
+    ///     VK_ACCESS_2_UNIFORM_READ_BIT<br />
+    ///     VK_ACCESS_2_SHADER_SAMPLED_READ_BIT<br />
+    ///     VK_ACCESS_2_SHADER_STORAGE_READ_BIT<br />
     /// </summary>
     VK_ACCESS_2_SHADER_READ_BIT = 0x20,
 
@@ -514,7 +517,10 @@ public enum VkAccessFlagBits2 : ulong
     ///         shader
     ///         binding table
     ///     </a>
-    ///     in any shader pipeline. In addition, it is equivalent to the logical OR of:
+    ///     in any shader pipeline. In addition, it is equivalent to the logical OR of:<br />
+    ///     VK_ACCESS_2_UNIFORM_READ_BIT<br />
+    ///     VK_ACCESS_2_SHADER_SAMPLED_READ_BIT<br />
+    ///     VK_ACCESS_2_SHADER_STORAGE_READ_BIT<br />
     /// </summary>
     VK_ACCESS_2_SHADER_READ_BIT_KHR = VK_ACCESS_2_SHADER_READ_BIT,
 

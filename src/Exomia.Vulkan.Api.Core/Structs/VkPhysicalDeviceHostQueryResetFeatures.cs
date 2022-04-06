@@ -41,11 +41,8 @@ public unsafe struct VkPhysicalDeviceHostQueryResetFeatures
     public void* pNext;
 
     /// <summary>
-    ///     hostQueryReset<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceHostQueryResetFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceHostQueryResetFeatures
-    ///     </a>
+    ///     hostQueryResetindicates that the implementation supports resetting queries from the host with
+    ///     vkResetQueryPool.
     /// </summary>
     public VkBool32 hostQueryReset;
 }

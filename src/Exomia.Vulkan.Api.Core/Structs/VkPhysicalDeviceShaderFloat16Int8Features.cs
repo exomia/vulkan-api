@@ -41,20 +41,20 @@ public unsafe struct VkPhysicalDeviceShaderFloat16Int8Features
     public void* pNext;
 
     /// <summary>
-    ///     shaderFloat16<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderFloat16Int8Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderFloat16Int8Features
-    ///     </a>
+    ///     shaderFloat16 indicates whether 16-bit floats (halfs) are supported in shader code. This also indicates
+    ///     whether shader modules can declare the Float16capability. However, this only enables a subset of the storage
+    ///     classes that SPIR-V allows for the Float16 SPIR-V capability: Declaring and using 16-bit floats in the Private,
+    ///     Workgroup (for non-Block variables), and Function storage classes is enabled, while declaring them in the interface
+    ///     storage classes (e.g., UniformConstant, Uniform, StorageBuffer, Input, Output, and PushConstant) is not enabled.
     /// </summary>
     public VkBool32 shaderFloat16;
 
     /// <summary>
-    ///     shaderInt8<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderFloat16Int8Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderFloat16Int8Features
-    ///     </a>
+    ///     shaderInt8 indicates whether 8-bit integers (signed and unsigned) are supported in shader code. This also
+    ///     indicates whether shader modules can declare the Int8capability. However, this only enables a subset of the storage
+    ///     classes that SPIR-V allows for the Int8 SPIR-V capability: Declaring and using 8-bit integers in the Private,
+    ///     Workgroup (for non-Block variables), and Function storage classes is enabled, while declaring them in the interface
+    ///     storage classes (e.g., UniformConstant, Uniform, StorageBuffer, Input, Output, and PushConstant) is not enabled.
     /// </summary>
     public VkBool32 shaderInt8;
 }

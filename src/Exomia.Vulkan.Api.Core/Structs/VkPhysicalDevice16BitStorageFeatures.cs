@@ -41,38 +41,34 @@ public unsafe struct VkPhysicalDevice16BitStorageFeatures
     public void* pNext;
 
     /// <summary>
-    ///     storageBuffer16BitAccess<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice16BitStorageFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice16BitStorageFeatures
-    ///     </a>
+    ///     storageBuffer16BitAccess specifies whether objects in the     StorageBuffer, ShaderRecordBufferKHR,     or
+    ///     PhysicalStorageBuffer    storage class with the Block decoration can have 16-bit integer     and 16-bit
+    ///     floating-point members.     If this feature is not enabled, 16-bit integer or 16-bit floating-point     members
+    ///     must not be used in such objects.     This also specifies whether shader modules can declare the
+    ///     StorageBuffer16BitAccess capability.
     /// </summary>
     public VkBool32 storageBuffer16BitAccess;
 
     /// <summary>
-    ///     uniformAndStorageBuffer16BitAccess<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice16BitStorageFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice16BitStorageFeatures
-    ///     </a>
+    ///     uniformAndStorageBuffer16BitAccess specifies whether objects in the Uniform storage class with the Block
+    ///     decoration can have 16-bit integer and 16-bit floating-point members. If this feature is not enabled, 16-bit
+    ///     integer or 16-bit floating-point members must not be used in such objects. This also specifies whether shader
+    ///     modules can declare the UniformAndStorageBuffer16BitAccess capability.
     /// </summary>
     public VkBool32 uniformAndStorageBuffer16BitAccess;
 
     /// <summary>
-    ///     storagePushConstant16<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice16BitStorageFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice16BitStorageFeatures
-    ///     </a>
+    ///     storagePushConstant16 specifies whether objects in the PushConstant storage class can have 16-bit integer and
+    ///     16-bit floating-point members. If this feature is not enabled, 16-bit integer or floating-point members must not be
+    ///     used in such objects. This also specifies whether shader modules can declare the StoragePushConstant16 capability.
     /// </summary>
     public VkBool32 storagePushConstant16;
 
     /// <summary>
-    ///     storageInputOutput16<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice16BitStorageFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice16BitStorageFeatures
-    ///     </a>
+    ///     storageInputOutput16 specifies whether objects in the Inputand Output storage classes can have 16-bit integer
+    ///     and 16-bit floating-point members. If this feature is not enabled, 16-bit integer or 16-bit floating-point members
+    ///     must not be used in such objects. This also specifies whether shader modules can declare the StorageInputOutput16
+    ///     capability.
     /// </summary>
     public VkBool32 storageInputOutput16;
 }

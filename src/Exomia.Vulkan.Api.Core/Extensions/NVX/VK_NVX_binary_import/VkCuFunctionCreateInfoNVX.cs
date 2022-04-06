@@ -23,15 +23,27 @@ public unsafe struct VkCuFunctionCreateInfoNVX
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_CU_FUNCTION_CREATE_INFO_NVX;
 
-    /// <summary> VUID-VkCuFunctionCreateInfoNVX-sType-sType sType must be VK_STRUCTURE_TYPE_CU_FUNCTION_CREATE_INFO_NVX</summary>
+    /// <summary>
+    ///     sType<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuFunctionCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuFunctionCreateInfoNVX</a>
+    /// </summary>
     public VkStructureType sType;
 
-    /// <summary> VUID-VkCuFunctionCreateInfoNVX-pNext-pNext pNext must be NULL</summary>
+    /// <summary>
+    ///     pNext<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuFunctionCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuFunctionCreateInfoNVX</a>
+    /// </summary>
     public void* pNext;
 
-    /// <summary> VUID-VkCuFunctionCreateInfoNVX-module-parameter module must be a valid VkCuModuleNVX handle</summary>
+    /// <summary>
+    ///     module<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuFunctionCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuFunctionCreateInfoNVX</a>
+    /// </summary>
     public VkCuModuleNVX module;
 
-    /// <summary> VUID-VkCuFunctionCreateInfoNVX-pName-parameter pName must be a null-terminated UTF-8 string</summary>
+    /// <summary>
+    ///     pName<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuFunctionCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuFunctionCreateInfoNVX</a>
+    /// </summary>
     public byte* pName;
 }

@@ -42,110 +42,74 @@ public unsafe struct VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
     public void* pNext;
 
     /// <summary>
-    ///     shaderBufferFloat32Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderBufferFloat32Atomicsindicates whether shaders can perform 32-bit floating-point load, store and
+    ///     exchange atomic operations on storage buffers.
     /// </summary>
     public VkBool32 shaderBufferFloat32Atomics;
 
     /// <summary>
-    ///     shaderBufferFloat32AtomicAdd<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderBufferFloat32AtomicAdd indicates whether shaders canperform 32-bit floating-point add atomic operations
+    ///     on storage buffers.
     /// </summary>
     public VkBool32 shaderBufferFloat32AtomicAdd;
 
     /// <summary>
-    ///     shaderBufferFloat64Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderBufferFloat64Atomicsindicates whether shaders can perform 64-bit floating-point load, store and
+    ///     exchange atomic operations on storage buffers.
     /// </summary>
     public VkBool32 shaderBufferFloat64Atomics;
 
     /// <summary>
-    ///     shaderBufferFloat64AtomicAdd<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderBufferFloat64AtomicAdd indicates whether shaders canperform 64-bit floating-point add atomic operations
+    ///     on storage buffers.
     /// </summary>
     public VkBool32 shaderBufferFloat64AtomicAdd;
 
     /// <summary>
-    ///     shaderSharedFloat32Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderSharedFloat32Atomicsindicates whether shaders can perform 32-bit floating-point load, store and
+    ///     exchange atomic operations on shared memory.
     /// </summary>
     public VkBool32 shaderSharedFloat32Atomics;
 
     /// <summary>
-    ///     shaderSharedFloat32AtomicAdd<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderSharedFloat32AtomicAdd indicates whether shaders canperform 32-bit floating-point add atomic operations
+    ///     on shared memory.
     /// </summary>
     public VkBool32 shaderSharedFloat32AtomicAdd;
 
     /// <summary>
-    ///     shaderSharedFloat64Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderSharedFloat64Atomicsindicates whether shaders can perform 64-bit floating-point load, store and
+    ///     exchange atomic operations on shared memory.
     /// </summary>
     public VkBool32 shaderSharedFloat64Atomics;
 
     /// <summary>
-    ///     shaderSharedFloat64AtomicAdd<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderSharedFloat64AtomicAdd indicates whether shaders canperform 64-bit floating-point add atomic operations
+    ///     on shared memory.
     /// </summary>
     public VkBool32 shaderSharedFloat64AtomicAdd;
 
     /// <summary>
-    ///     shaderImageFloat32Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderImageFloat32Atomicsindicates whether shaders can perform 32-bit floating-point load, store and exchange
+    ///     atomic image operations.
     /// </summary>
     public VkBool32 shaderImageFloat32Atomics;
 
     /// <summary>
-    ///     shaderImageFloat32AtomicAdd<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     shaderImageFloat32AtomicAdd indicates whether shaders can perform 32-bit floating-point add atomic image
+    ///     operations.
     /// </summary>
     public VkBool32 shaderImageFloat32AtomicAdd;
 
     /// <summary>
-    ///     sparseImageFloat32Atomics<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     sparseImageFloat32Atomicsindicates whether 32-bit floating-point load, store and exchange atomic operations
+    ///     can be used on sparse images.
     /// </summary>
     public VkBool32 sparseImageFloat32Atomics;
 
     /// <summary>
-    ///     sparseImageFloat32AtomicAdd<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-    ///     </a>
+    ///     sparseImageFloat32AtomicAdd indicates whether 32-bit floating-point add atomic operations can be used on
+    ///     sparse images.
     /// </summary>
     public VkBool32 sparseImageFloat32AtomicAdd;
 }

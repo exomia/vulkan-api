@@ -42,110 +42,84 @@ public unsafe struct VkPhysicalDeviceVulkan11Features
     public void* pNext;
 
     /// <summary>
-    ///     storageBuffer16BitAccess<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     storageBuffer16BitAccess specifies whether objects in the     StorageBuffer, ShaderRecordBufferKHR,     or
+    ///     PhysicalStorageBuffer    storage class with the Block decoration can have 16-bit integer     and 16-bit
+    ///     floating-point members.     If this feature is not enabled, 16-bit integer or 16-bit floating-point     members
+    ///     must not be used in such objects.     This also specifies whether shader modules can declare the
+    ///     StorageBuffer16BitAccess capability.
     /// </summary>
     public VkBool32 storageBuffer16BitAccess;
 
     /// <summary>
-    ///     uniformAndStorageBuffer16BitAccess<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     uniformAndStorageBuffer16BitAccess specifies whether objects in the Uniform storage class with the Block
+    ///     decoration can have 16-bit integer and 16-bit floating-point members. If this feature is not enabled, 16-bit
+    ///     integer or 16-bit floating-point members must not be used in such objects. This also specifies whether shader
+    ///     modules can declare the UniformAndStorageBuffer16BitAccess capability.
     /// </summary>
     public VkBool32 uniformAndStorageBuffer16BitAccess;
 
     /// <summary>
-    ///     storagePushConstant16<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     storagePushConstant16 specifies whether objects in the PushConstant storage class can have 16-bit integer and
+    ///     16-bit floating-point members. If this feature is not enabled, 16-bit integer or floating-point members must not be
+    ///     used in such objects. This also specifies whether shader modules can declare the StoragePushConstant16 capability.
     /// </summary>
     public VkBool32 storagePushConstant16;
 
     /// <summary>
-    ///     storageInputOutput16<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     storageInputOutput16 specifies whether objects in the Inputand Output storage classes can have 16-bit integer
+    ///     and 16-bit floating-point members. If this feature is not enabled, 16-bit integer or 16-bit floating-point members
+    ///     must not be used in such objects. This also specifies whether shader modules can declare the StorageInputOutput16
+    ///     capability.
     /// </summary>
     public VkBool32 storageInputOutput16;
 
     /// <summary>
-    ///     multiview<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     multiview specifies whether the implementation supports multiview rendering within a render pass. If this
+    ///     feature is not enabled, the view mask of each subpass mustalways be zero.
     /// </summary>
     public VkBool32 multiview;
 
     /// <summary>
-    ///     multiviewGeometryShader<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     multiviewGeometryShaderspecifies whether the implementation supports multiview rendering within a render
+    ///     pass, with geometry shaders. If this feature is not enabled, then a pipeline compiled against a subpass with a
+    ///     non-zero view mask must not include a geometry shader.
     /// </summary>
     public VkBool32 multiviewGeometryShader;
 
     /// <summary>
-    ///     multiviewTessellationShader<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     multiviewTessellationShader specifies whether the implementation supports multiview rendering within a render
+    ///     pass, with tessellation shaders. If this feature is not enabled, then a pipeline compiled against a subpass with a
+    ///     non-zero view mask must not include any tessellation shaders.
     /// </summary>
     public VkBool32 multiviewTessellationShader;
 
     /// <summary>
-    ///     variablePointersStorageBuffer<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     variablePointersStorageBuffer specifies whether the implementation supports the SPIR-V
+    ///     VariablePointersStorageBuffer capability. When this feature is not enabled, shader modules must not declare the
+    ///     SPV_KHR_variable_pointers extension or the VariablePointersStorageBuffer capability.
     /// </summary>
     public VkBool32 variablePointersStorageBuffer;
 
     /// <summary>
-    ///     variablePointers<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     variablePointersspecifies whether the implementation supports the SPIR-V VariablePointers capability. When
+    ///     this feature is not enabled, shader modules must not declare the VariablePointers capability.
     /// </summary>
     public VkBool32 variablePointers;
 
-    /// <summary>
-    ///     protectedMemory<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
-    /// </summary>
+    /// <summary> protectedMemoryspecifies whether protected memory is supported.</summary>
     public VkBool32 protectedMemory;
 
     /// <summary>
-    ///     samplerYcbcrConversion<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     samplerYcbcrConversion specifies whether the implementation supports sampler Y′CBCR conversion. If
+    ///     samplerYcbcrConversion is VK_FALSE, sampler Y′CBCRconversion is not supported, and samplers using sampler
+    ///     Y′CBCRconversion must not be used.
     /// </summary>
     public VkBool32 samplerYcbcrConversion;
 
     /// <summary>
-    ///     shaderDrawParameters<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVulkan11Features
-    ///     </a>
+    ///     shaderDrawParameters specifies whether the implementation supports the SPIR-V DrawParameters capability. When
+    ///     this feature is not enabled, shader modules must not declare the SPV_KHR_shader_draw_parameters extension or the
+    ///     DrawParameterscapability.
     /// </summary>
     public VkBool32 shaderDrawParameters;
 }

@@ -42,11 +42,10 @@ public unsafe struct VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures
     public void* pNext;
 
     /// <summary>
-    ///     separateDepthStencilLayouts<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures
-    ///     </a>
+    ///     separateDepthStencilLayouts indicates whether the implementation supports a VkImageMemoryBarrier for a
+    ///     depth/stencil image with only one of VK_IMAGE_ASPECT_DEPTH_BIT or VK_IMAGE_ASPECT_STENCIL_BIT set, and whether
+    ///     VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL, VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_OPTIMAL,
+    ///     VK_IMAGE_LAYOUT_STENCIL_ATTACHMENT_OPTIMAL, or VK_IMAGE_LAYOUT_STENCIL_READ_ONLY_OPTIMAL can be used.
     /// </summary>
     public VkBool32 separateDepthStencilLayouts;
 }

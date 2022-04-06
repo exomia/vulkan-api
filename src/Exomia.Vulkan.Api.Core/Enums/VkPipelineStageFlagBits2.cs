@@ -42,7 +42,11 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// </summary>
     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT = 0x2,
 
-    /// <summary>VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT is equivalent to the logical OR of:</summary>
+    /// <summary>
+    ///     VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT is equivalent to the logical OR of:<br />
+    ///     VK_PIPELINE_STAGE_2_INDEX_INPUT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_VERTEX_ATTRIBUTE_INPUT_BIT<br />
+    /// </summary>
     VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT = 0x4,
 
     /// <summary>VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT specifies the vertex shader stage.</summary>
@@ -97,7 +101,13 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>VK_PIPELINE_STAGE_2_COMPUTE_SHADER_BIT specifies the compute shader stage.</summary>
     VK_PIPELINE_STAGE_2_COMPUTE_SHADER_BIT = 0x800,
 
-    /// <summary>VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT is equivalent to specifying all of:</summary>
+    /// <summary>
+    ///     VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT is equivalent to specifying all of:<br />
+    ///     VK_PIPELINE_STAGE_2_COPY_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_BLIT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_RESOLVE_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_CLEAR_BIT<br />
+    /// </summary>
     VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT = 0x1000,
 
     /// <summary>
@@ -115,8 +125,25 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_HOST_BIT = 0x4000,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is
-    ///     equivalent to the logical OR of:
+    ///     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is equivalent to
+    ///     the logical OR of:<br />
+    ///     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_CONDITIONAL_RENDERING_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_SHADING_RATE_IMAGE_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT = 0x8000,
 
@@ -174,7 +201,13 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///         pre-rasterization
     ///         shader stages
     ///     </a>
-    ///     :
+    ///     :<br />
+    ///     VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT = 0x4000000000,
 
@@ -317,7 +350,11 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// </summary>
     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT_KHR = VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT,
 
-    /// <summary>VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT is equivalent to the logical OR of:</summary>
+    /// <summary>
+    ///     VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT is equivalent to the logical OR of:<br />
+    ///     VK_PIPELINE_STAGE_2_INDEX_INPUT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_VERTEX_ATTRIBUTE_INPUT_BIT<br />
+    /// </summary>
     VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT_KHR = VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT,
 
     /// <summary>VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT specifies the vertex shader stage.</summary>
@@ -372,7 +409,13 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>VK_PIPELINE_STAGE_2_COMPUTE_SHADER_BIT specifies the compute shader stage.</summary>
     VK_PIPELINE_STAGE_2_COMPUTE_SHADER_BIT_KHR = VK_PIPELINE_STAGE_2_COMPUTE_SHADER_BIT,
 
-    /// <summary>VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT is equivalent to specifying all of:</summary>
+    /// <summary>
+    ///     VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT is equivalent to specifying all of:<br />
+    ///     VK_PIPELINE_STAGE_2_COPY_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_BLIT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_RESOLVE_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_CLEAR_BIT<br />
+    /// </summary>
     VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT_KHR = VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT,
 
     /// <summary>
@@ -381,7 +424,13 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// </summary>
     VK_PIPELINE_STAGE_2_TRANSFER_BIT = VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT_KHR,
 
-    /// <summary>VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT is equivalent to specifying all of:</summary>
+    /// <summary>
+    ///     VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT is equivalent to specifying all of:<br />
+    ///     VK_PIPELINE_STAGE_2_COPY_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_BLIT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_RESOLVE_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_CLEAR_BIT<br />
+    /// </summary>
     VK_PIPELINE_STAGE_2_TRANSFER_BIT_KHR = VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT,
 
     /// <summary>
@@ -399,8 +448,25 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_HOST_BIT_KHR = VK_PIPELINE_STAGE_2_HOST_BIT,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is
-    ///     equivalent to the logical OR of:
+    ///     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is equivalent to
+    ///     the logical OR of:<br />
+    ///     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_CONDITIONAL_RENDERING_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_SHADING_RATE_IMAGE_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT_KHR = VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT,
 
@@ -458,7 +524,13 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///         pre-rasterization
     ///         shader stages
     ///     </a>
-    ///     :
+    ///     :<br />
+    ///     VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT_KHR = VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT,
 

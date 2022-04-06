@@ -35,8 +35,11 @@ public unsafe struct VkWin32KeyedMutexAcquireReleaseInfoNV
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV;
 
     /// <summary>
-    ///     VUID-VkWin32KeyedMutexAcquireReleaseInfoNV-sType-sType sType must be
-    ///     VK_STRUCTURE_TYPE_WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV
+    ///     sType<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkWin32KeyedMutexAcquireReleaseInfoNV">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkWin32KeyedMutexAcquireReleaseInfoNV
+    ///     </a>
     /// </summary>
     public VkStructureType sType;
 

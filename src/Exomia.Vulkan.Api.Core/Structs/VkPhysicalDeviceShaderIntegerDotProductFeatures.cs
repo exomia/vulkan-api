@@ -42,11 +42,8 @@ public unsafe struct VkPhysicalDeviceShaderIntegerDotProductFeatures
     public void* pNext;
 
     /// <summary>
-    ///     shaderIntegerDotProduct<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderIntegerDotProductFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderIntegerDotProductFeatures
-    ///     </a>
+    ///     shaderIntegerDotProduct specifies whether shader modules candeclare the DotProductInputAllKHR,
+    ///     DotProductInput4x8BitKHR, DotProductInput4x8BitPackedKHR and DotProductKHR capabilities.
     /// </summary>
     public VkBool32 shaderIntegerDotProduct;
 }

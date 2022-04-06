@@ -119,8 +119,24 @@ public enum VkPipelineStageFlagBits
     VK_PIPELINE_STAGE_HOST_BIT = 0x4000,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is equivalent
-    ///     to the logical OR of:
+    ///     VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is equivalent to
+    ///     the logical OR of:<br />
+    ///     VK_PIPELINE_STAGE_DRAW_INDIRECT_BIT<br />
+    ///     VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_VERTEX_INPUT_BIT<br />
+    ///     VK_PIPELINE_STAGE_VERTEX_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_TESSELLATION_CONTROL_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_TESSELLATION_EVALUATION_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_GEOMETRY_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT<br />
+    ///     VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT<br />
+    ///     VK_PIPELINE_STAGE_LATE_FRAGMENT_TESTS_BIT<br />
+    ///     VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT<br />
+    ///     VK_PIPELINE_STAGE_CONDITIONAL_RENDERING_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_TRANSFORM_FEEDBACK_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR<br />
+    ///     VK_PIPELINE_STAGE_FRAGMENT_DENSITY_PROCESS_BIT_EXT<br />
     /// </summary>
     VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT = 0x8000,
 
