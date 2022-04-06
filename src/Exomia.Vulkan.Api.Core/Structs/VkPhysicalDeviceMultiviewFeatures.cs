@@ -42,29 +42,22 @@ public unsafe struct VkPhysicalDeviceMultiviewFeatures
     public void* pNext;
 
     /// <summary>
-    ///     multiview<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceMultiviewFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceMultiviewFeatures
-    ///     </a>
+    ///     multiview specifies whether the implementation supports multiview rendering within a render pass. If this
+    ///     feature is not enabled, the view mask of each subpass mustalways be zero.
     /// </summary>
     public VkBool32 multiview;
 
     /// <summary>
-    ///     multiviewGeometryShader<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceMultiviewFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceMultiviewFeatures
-    ///     </a>
+    ///     multiviewGeometryShaderspecifies whether the implementation supports multiview rendering within a render
+    ///     pass, with geometry shaders. If this feature is not enabled, then a pipeline compiled against a subpass with a
+    ///     non-zero view mask must not include a geometry shader.
     /// </summary>
     public VkBool32 multiviewGeometryShader;
 
     /// <summary>
-    ///     multiviewTessellationShader<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceMultiviewFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceMultiviewFeatures
-    ///     </a>
+    ///     multiviewTessellationShader specifies whether the implementation supports multiview rendering within a render
+    ///     pass, with tessellation shaders. If this feature is not enabled, then a pipeline compiled against a subpass with a
+    ///     non-zero view mask must not include any tessellation shaders.
     /// </summary>
     public VkBool32 multiviewTessellationShader;
 }

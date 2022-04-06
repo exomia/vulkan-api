@@ -36,8 +36,11 @@ public unsafe struct VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_PROPERTIES_EXT;
 
     /// <summary>
-    ///     VUID-VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT-sType-sType sType must be
-    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_PROPERTIES_EXT
+    ///     sType<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT
+    ///     </a>
     /// </summary>
     public VkStructureType sType;
 

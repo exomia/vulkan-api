@@ -42,20 +42,15 @@ public unsafe struct VkPhysicalDeviceInlineUniformBlockFeatures
     public void* pNext;
 
     /// <summary>
-    ///     inlineUniformBlock<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceInlineUniformBlockFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceInlineUniformBlockFeatures
-    ///     </a>
+    ///     inlineUniformBlockindicates whether the implementation supports inline uniform block descriptors. If this
+    ///     feature is not enabled, VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK must not be used.
     /// </summary>
     public VkBool32 inlineUniformBlock;
 
     /// <summary>
-    ///     descriptorBindingInlineUniformBlockUpdateAfterBind<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceInlineUniformBlockFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceInlineUniformBlockFeatures
-    ///     </a>
+    ///     descriptorBindingInlineUniformBlockUpdateAfterBindindicates whether the implementation supports updating
+    ///     inline uniform block descriptors after a set is bound. If this feature is not enabled,
+    ///     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT must not be used with VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.
     /// </summary>
     public VkBool32 descriptorBindingInlineUniformBlockUpdateAfterBind;
 }

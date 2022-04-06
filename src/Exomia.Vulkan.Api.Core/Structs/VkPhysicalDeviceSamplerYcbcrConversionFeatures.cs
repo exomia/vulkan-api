@@ -42,11 +42,9 @@ public unsafe struct VkPhysicalDeviceSamplerYcbcrConversionFeatures
     public void* pNext;
 
     /// <summary>
-    ///     samplerYcbcrConversion<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSamplerYcbcrConversionFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceSamplerYcbcrConversionFeatures
-    ///     </a>
+    ///     samplerYcbcrConversion specifies whether the implementation supports sampler Y′CBCR conversion. If
+    ///     samplerYcbcrConversion is VK_FALSE, sampler Y′CBCRconversion is not supported, and samplers using sampler
+    ///     Y′CBCRconversion must not be used.
     /// </summary>
     public VkBool32 samplerYcbcrConversion;
 }

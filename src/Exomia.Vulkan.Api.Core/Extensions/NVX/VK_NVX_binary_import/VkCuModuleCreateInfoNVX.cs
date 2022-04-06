@@ -23,15 +23,27 @@ public unsafe struct VkCuModuleCreateInfoNVX
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_CU_MODULE_CREATE_INFO_NVX;
 
-    /// <summary> VUID-VkCuModuleCreateInfoNVX-sType-sType sType must be VK_STRUCTURE_TYPE_CU_MODULE_CREATE_INFO_NVX</summary>
+    /// <summary>
+    ///     sType<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX</a>
+    /// </summary>
     public VkStructureType sType;
 
-    /// <summary> VUID-VkCuModuleCreateInfoNVX-pNext-pNext pNext must be NULL</summary>
+    /// <summary>
+    ///     pNext<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX</a>
+    /// </summary>
     public void* pNext;
 
-    /// <summary> VUID-VkCuModuleCreateInfoNVX-pData-parameter pData must be a valid pointer to an array of dataSize bytes</summary>
+    /// <summary>
+    ///     dataSize<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX</a>
+    /// </summary>
     public nuint dataSize;
 
-    /// <summary> VUID-VkCuModuleCreateInfoNVX-pData-parameter pData must be a valid pointer to an array of dataSize bytes</summary>
+    /// <summary>
+    ///     pData<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX</a>
+    /// </summary>
     public void* pData;
 }

@@ -31,7 +31,10 @@ public unsafe struct VkProtectedSubmitInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PROTECTED_SUBMIT_INFO;
 
-    /// <summary> VUID-VkProtectedSubmitInfo-sType-sType sType must be VK_STRUCTURE_TYPE_PROTECTED_SUBMIT_INFO</summary>
+    /// <summary>
+    ///     sType<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkProtectedSubmitInfo">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkProtectedSubmitInfo</a>
+    /// </summary>
     public VkStructureType sType;
 
     /// <summary>

@@ -34,7 +34,10 @@ public unsafe struct VkFormatProperties3
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_FORMAT_PROPERTIES_3;
 
-    /// <summary> VUID-VkFormatProperties3-sType-sType sType must be VK_STRUCTURE_TYPE_FORMAT_PROPERTIES_3</summary>
+    /// <summary>
+    ///     sType<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatProperties3">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatProperties3</a>
+    /// </summary>
     public VkStructureType sType;
 
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>

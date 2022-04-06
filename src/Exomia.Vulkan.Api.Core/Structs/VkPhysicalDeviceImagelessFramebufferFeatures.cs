@@ -41,11 +41,8 @@ public unsafe struct VkPhysicalDeviceImagelessFramebufferFeatures
     public void* pNext;
 
     /// <summary>
-    ///     imagelessFramebuffer<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceImagelessFramebufferFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceImagelessFramebufferFeatures
-    ///     </a>
+    ///     imagelessFramebuffer indicates that the implementation supports specifying the image view for attachments at
+    ///     render pass begin time via VkRenderPassAttachmentBeginInfo.
     /// </summary>
     public VkBool32 imagelessFramebuffer;
 }

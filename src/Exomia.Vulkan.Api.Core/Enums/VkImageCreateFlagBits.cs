@@ -149,9 +149,23 @@ public enum VkImageCreateFlagBits
     VK_IMAGE_CREATE_SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_BIT_EXT = 0x1000,
 
     /// <summary>
-    ///     VK_IMAGE_CREATE_SUBSAMPLED_BIT_EXT specifies that an image can be in a subsampled format which may be more
-    ///     optimal when written as an attachment by a render pass that has a fragment density map attachment. Accessing a
-    ///     subsampled image has additional considerations:
+    ///     VK_IMAGE_CREATE_SUBSAMPLED_BIT_EXT specifies that an image can be in a subsampled format which may be more optimal
+    ///     when written as an attachment by a render pass that has a fragment density map attachment. Accessing a subsampled
+    ///     image has additional considerations:<br />
+    ///     Image data read as an image sampler will have undefined values if the sampler was not created with flags containing
+    ///     VK_SAMPLER_CREATE_SUBSAMPLED_BIT_EXT or was not sampled through the use of a combined image sampler with an
+    ///     immutable sampler in VkDescriptorSetLayoutBinding.<br />
+    ///     Image data read with an input attachment will have undefined values if the contents were not written as an
+    ///     attachment in an earlier subpass of the same render pass.<br />
+    ///     Image data read as an image sampler in the fragment shader will be additionally be read by the device during
+    ///     VK_PIPELINE_STAGE_VERTEX_SHADER_BIT if
+    ///     VkPhysicalDeviceFragmentDensityMap2PropertiesEXT::subsampledCoarseReconstructionEarlyAccessis VK_TRUE and the
+    ///     sampler was created with flagscontaining VK_SAMPLER_CREATE_SUBSAMPLED_COARSE_RECONSTRUCTION_BIT_EXT.<br />
+    ///     Image data read with load operations are resampled to the fragment density of the render pass if
+    ///     VkPhysicalDeviceFragmentDensityMap2PropertiesEXT::subsampledLoadsis VK_TRUE. Otherwise, values of image data are
+    ///     undefined.<br />
+    ///     Image contents outside of the render area take on undefined values if the image is stored as a render pass
+    ///     attachment.<br />
     /// </summary>
     VK_IMAGE_CREATE_SUBSAMPLED_BIT_EXT = 0x4000,
 
@@ -168,10 +182,10 @@ public enum VkImageCreateFlagBits
     VK_IMAGE_CREATE_RESERVED_18_BIT_EXT = 0x40000,
 
     /// <summary>
-    ///     VK_IMAGE_CREATE_RESERVED_394_BIT_EXT<br />
+    ///     VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits</a>
     /// </summary>
-    VK_IMAGE_CREATE_RESERVED_394_BIT_EXT = 0x20000,
+    VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT = 0x20000,
 
     /// <summary>
     ///     VK_IMAGE_CREATE_FRAGMENT_DENSITY_MAP_OFFSET_BIT_QCOM specifies that an image can be used in a render pass with

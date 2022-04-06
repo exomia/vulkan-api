@@ -42,11 +42,8 @@ public unsafe struct VkPhysicalDeviceShaderTerminateInvocationFeatures
     public void* pNext;
 
     /// <summary>
-    ///     shaderTerminateInvocation<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderTerminateInvocationFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderTerminateInvocationFeatures
-    ///     </a>
+    ///     shaderTerminateInvocation specifies whether the implementation supports SPIR-V modules that use the
+    ///     SPV_KHR_terminate_invocationextension.
     /// </summary>
     public VkBool32 shaderTerminateInvocation;
 }

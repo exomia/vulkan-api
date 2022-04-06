@@ -41,29 +41,25 @@ public unsafe struct VkPhysicalDevice8BitStorageFeatures
     public void* pNext;
 
     /// <summary>
-    ///     storageBuffer8BitAccess<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice8BitStorageFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice8BitStorageFeatures
-    ///     </a>
+    ///     storageBuffer8BitAccess indicates whether objects in the     StorageBuffer, ShaderRecordBufferKHR,     or
+    ///     PhysicalStorageBuffer    storage class with the Block decoration can have 8-bit integer     members.     If this
+    ///     feature is not enabled, 8-bit integer members must not be used     in such objects.     This also indicates whether
+    ///     shader modules can declare the     StorageBuffer8BitAccess capability.
     /// </summary>
     public VkBool32 storageBuffer8BitAccess;
 
     /// <summary>
-    ///     uniformAndStorageBuffer8BitAccess<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice8BitStorageFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice8BitStorageFeatures
-    ///     </a>
+    ///     uniformAndStorageBuffer8BitAccess indicates whether objects in the Uniform storage class with the Block
+    ///     decoration can have 8-bit integer members. If this feature is not enabled, 8-bit integer members must not be used
+    ///     in such objects. This also indicates whether shader modules can declare the UniformAndStorageBuffer8BitAccess
+    ///     capability.
     /// </summary>
     public VkBool32 uniformAndStorageBuffer8BitAccess;
 
     /// <summary>
-    ///     storagePushConstant8<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice8BitStorageFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDevice8BitStorageFeatures
-    ///     </a>
+    ///     storagePushConstant8 indicates whether objects in the PushConstant storage class can have 8-bit integer
+    ///     members. If this feature is not enabled, 8-bit integer members must not be used in such objects. This also
+    ///     indicates whether shader modules can declare the StoragePushConstant8 capability.
     /// </summary>
     public VkBool32 storagePushConstant8;
 }

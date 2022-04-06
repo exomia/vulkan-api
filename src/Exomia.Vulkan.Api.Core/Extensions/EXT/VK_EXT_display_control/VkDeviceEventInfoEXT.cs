@@ -29,6 +29,9 @@ public unsafe struct VkDeviceEventInfoEXT
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary> VUID-VkDeviceEventInfoEXT-deviceEvent-parameter deviceEvent must be a valid VkDeviceEventTypeEXT value</summary>
+    /// <summary>
+    ///     deviceEvent<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDeviceEventInfoEXT">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDeviceEventInfoEXT</a>
+    /// </summary>
     public VkDeviceEventTypeEXT deviceEvent;
 }

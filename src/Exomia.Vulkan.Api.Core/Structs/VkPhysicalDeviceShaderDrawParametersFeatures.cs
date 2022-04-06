@@ -42,11 +42,9 @@ public unsafe struct VkPhysicalDeviceShaderDrawParametersFeatures
     public void* pNext;
 
     /// <summary>
-    ///     shaderDrawParameters<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderDrawParametersFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceShaderDrawParametersFeatures
-    ///     </a>
+    ///     shaderDrawParameters specifies whether the implementation supports the SPIR-V DrawParameters capability. When
+    ///     this feature is not enabled, shader modules must not declare the SPV_KHR_shader_draw_parameters extension or the
+    ///     DrawParameterscapability.
     /// </summary>
     public VkBool32 shaderDrawParameters;
 }

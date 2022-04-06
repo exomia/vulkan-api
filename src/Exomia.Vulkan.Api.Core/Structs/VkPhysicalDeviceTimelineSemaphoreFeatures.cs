@@ -42,11 +42,8 @@ public unsafe struct VkPhysicalDeviceTimelineSemaphoreFeatures
     public void* pNext;
 
     /// <summary>
-    ///     timelineSemaphore<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceTimelineSemaphoreFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceTimelineSemaphoreFeatures
-    ///     </a>
+    ///     timelineSemaphoreindicates whether semaphores created with a VkSemaphoreType of VK_SEMAPHORE_TYPE_TIMELINE
+    ///     are supported.
     /// </summary>
     public VkBool32 timelineSemaphore;
 }

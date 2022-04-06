@@ -42,11 +42,8 @@ public unsafe struct VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures
     public void* pNext;
 
     /// <summary>
-    ///     shaderZeroInitializeWorkgroupMemory<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures
-    ///     </a>
+    ///     shaderZeroInitializeWorkgroupMemory specifies whether the implementation supports initializing a variable in
+    ///     Workgroup storage class.
     /// </summary>
     public VkBool32 shaderZeroInitializeWorkgroupMemory;
 }

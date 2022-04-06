@@ -42,20 +42,15 @@ public unsafe struct VkPhysicalDeviceVariablePointersFeatures
     public void* pNext;
 
     /// <summary>
-    ///     variablePointersStorageBuffer<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVariablePointersFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVariablePointersFeatures
-    ///     </a>
+    ///     variablePointersStorageBuffer specifies whether the implementation supports the SPIR-V
+    ///     VariablePointersStorageBuffer capability. When this feature is not enabled, shader modules must not declare the
+    ///     SPV_KHR_variable_pointers extension or the VariablePointersStorageBuffer capability.
     /// </summary>
     public VkBool32 variablePointersStorageBuffer;
 
     /// <summary>
-    ///     variablePointers<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVariablePointersFeatures">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceVariablePointersFeatures
-    ///     </a>
+    ///     variablePointersspecifies whether the implementation supports the SPIR-V VariablePointers capability. When
+    ///     this feature is not enabled, shader modules must not declare the VariablePointers capability.
     /// </summary>
     public VkBool32 variablePointers;
 }
