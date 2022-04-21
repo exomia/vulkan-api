@@ -1439,8 +1439,8 @@ public static partial class Vk
     /// <param name="device">device is the logical device that owns the image.</param>
     /// <param name="image">image is the image whose layout is being queried.</param>
     /// <param name="pSubresource">
-    ///     pSubresource is a pointer to a VkImageSubresource structure selecting a specific image for
-    ///     the image subresource.
+    ///     pSubresource is a pointer to a VkImageSubresource structure selecting a specific image
+    ///     subresource from the image.
     /// </param>
     /// <param name="pLayout">pLayout is a pointer to a VkSubresourceLayout structure in which the layout is returned.</param>
     [VkVersion("1.0")]

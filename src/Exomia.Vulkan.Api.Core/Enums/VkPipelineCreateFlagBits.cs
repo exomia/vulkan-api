@@ -172,10 +172,10 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_INDIRECT_BINDABLE_BIT_NV = 0x40000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_LIBRARY_BIT_KHR specifies that the pipeline cannot be used directly, and instead defines a
-    ///     pipeline library that can be combined with other pipelines using the
+    ///     VK_PIPELINE_CREATE_LIBRARY_BIT_KHR specifies that the pipeline     cannot be used directly, and instead
+    ///     defines a pipeline library that     can be combined with other pipelines using the
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html">VkPipelineLibraryCreateInfoKHR</a>
-    ///     structure. This is available in ray tracing pipelines.
+    ///     structure.     This is available in ray tracing and graphics     pipelines.
     /// </summary>
     VK_PIPELINE_CREATE_LIBRARY_BIT_KHR = 0x800,
 
@@ -197,6 +197,18 @@ public enum VkPipelineCreateFlagBits
     ///     OpTraceRayMotionNV.
     /// </summary>
     VK_PIPELINE_CREATE_RAY_TRACING_ALLOW_MOTION_BIT_NV = 0x100000,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RESERVED_25_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_RESERVED_25_BIT_EXT = 0x2000000,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RESERVED_26_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_RESERVED_26_BIT_EXT = 0x4000000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RESERVED_24_BIT_NV<br />
