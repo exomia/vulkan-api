@@ -53,6 +53,4 @@ public static class VulkanVideoCodecH265std
     public const int STD_VIDEO_H265_MAX_NUM_LIST_REF = 15;
 
     public const int STD_VIDEO_H265_MAX_CHROMA_PLANES = 2;
-
-    public const int STD_VIDEO_H265_SPS_MAX_SUB_LAYERS = 8;
 }

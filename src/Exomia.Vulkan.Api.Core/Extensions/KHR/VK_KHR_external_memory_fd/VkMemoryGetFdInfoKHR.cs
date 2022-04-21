@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkMemoryGetFdInfoKHR - Structure describing a POSIX FD semaphore export operation -
+///     VkMemoryGetFdInfoKHR - Structure describing a POSIX FD memory export operation -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetFdInfoKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetFdInfoKHR.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]

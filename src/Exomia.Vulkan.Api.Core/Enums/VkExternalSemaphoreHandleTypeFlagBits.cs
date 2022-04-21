@@ -83,15 +83,6 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_5_BIT_NV = 0x20,
 
     /// <summary>
-    ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_6_BIT_NV<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalSemaphoreHandleTypeFlagBits">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalSemaphoreHandleTypeFlagBits
-    ///     </a>
-    /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_6_BIT_NV = 0x40,
-
-    /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_D3D12_FENCE_BIT specifies an NT handle returned by
     ///     ID3D12Device::CreateSharedHandle referring to a Direct3D 12 fence, or ID3D11Device5::CreateFencereferring to a
     ///     Direct3D 11 fence. It owns a reference to the underlying synchronization primitive associated with the Direct3D

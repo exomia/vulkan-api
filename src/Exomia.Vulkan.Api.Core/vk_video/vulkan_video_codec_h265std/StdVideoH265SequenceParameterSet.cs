@@ -43,8 +43,6 @@ public unsafe struct StdVideoH265SequenceParameterSet
 
     public byte log2_max_pic_order_cnt_lsb_minus4;
 
-    public fixed byte sps_max_dec_pic_buffering_minus1[(int)STD_VIDEO_H265_SPS_MAX_SUB_LAYERS];
-
     public byte log2_min_luma_coding_block_size_minus3;
 
     public byte log2_diff_max_min_luma_coding_block_size;

@@ -47,6 +47,6 @@ public struct VkStencilOpState
     /// </summary>
     public uint writeMask;
 
-    /// <summary>reference is an integer reference value that is used in the unsigned stencil comparison.</summary>
+    /// <summary>reference is an integer stencil reference value that is used in the unsigned stencil comparison.</summary>
     public uint reference;
 }

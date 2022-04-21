@@ -48,7 +48,10 @@ public unsafe struct VkPipelineDepthStencilStateCreateInfo
     /// </summary>
     public VkBool32 depthWriteEnable;
 
-    /// <summary>depthCompareOp is the comparison operator used in the depth test.</summary>
+    /// <summary>
+    ///     depthCompareOp is a VkCompareOp value specifying the comparison operator to use in the Depth Comparison step
+    ///     of the depth test.
+    /// </summary>
     public VkCompareOp depthCompareOp;
 
     /// <summary>depthBoundsTestEnable controls whether depth bounds testing is enabled.</summary>

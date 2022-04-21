@@ -531,7 +531,10 @@ public static partial class Vk
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html</a>
     /// </summary>
     /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="depthCompareOp">depthCompareOp specifies the depth comparison operator.</param>
+    /// <param name="depthCompareOp">
+    ///     depthCompareOp is a VkCompareOp value specifying the comparison operator used for the
+    ///     Depth Comparison step of the depth test.
+    /// </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthCompareOp")]

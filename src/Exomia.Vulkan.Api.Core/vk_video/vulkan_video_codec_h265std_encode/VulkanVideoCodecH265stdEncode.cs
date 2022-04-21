@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VulkanVideoCodecH265stdEncode
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_SPEC_VERSION = VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_API_VERSION_0_9_6;
+    public const uint VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_SPEC_VERSION = VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_API_VERSION_0_9_7;
 
     /// <summary> The extension name. </summary>
     public const string VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_h265_encode";
