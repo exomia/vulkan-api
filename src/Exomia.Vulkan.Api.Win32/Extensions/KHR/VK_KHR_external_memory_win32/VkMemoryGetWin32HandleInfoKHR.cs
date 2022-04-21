@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Win32;
 
 /// <summary>
-///     VkMemoryGetWin32HandleInfoKHR - Structure describing a Win32 handle semaphore export operation -
+///     VkMemoryGetWin32HandleInfoKHR - Structure describing a Win32 handle memory export operation -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetWin32HandleInfoKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetWin32HandleInfoKHR.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]

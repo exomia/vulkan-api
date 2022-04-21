@@ -75,7 +75,7 @@ public unsafe struct VkSamplerCreateInfo
     public VkBool32 compareEnable;
 
     /// <summary>
-    ///     compareOp is a VkCompareOp value specifying the comparison function to apply to fetched data before filtering
+    ///     compareOp is a VkCompareOp value specifying the comparison operator to apply to fetched data before filtering
     ///     as described in the Depth Compare Operation section.
     /// </summary>
     public VkCompareOp compareOp;
