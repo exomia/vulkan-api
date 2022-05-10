@@ -1404,7 +1404,8 @@ public static partial class Vk
     ///             <term>successcodes</term><description>VK_SUCCESS</description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term>errorcodes</term>
+    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_COMPRESSION_EXHAUSTED_EXT</description>
     ///         </item>
     ///     </list>
     /// </remarks>

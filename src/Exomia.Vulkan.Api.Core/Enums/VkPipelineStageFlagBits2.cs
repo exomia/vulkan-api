@@ -107,6 +107,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_BLIT_BIT<br />
     ///     VK_PIPELINE_STAGE_2_RESOLVE_BIT<br />
     ///     VK_PIPELINE_STAGE_2_CLEAR_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_COPY_BIT_KHR<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT = 0x1000,
 
@@ -311,10 +312,15 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI = 0x10000000000,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_RESERVED_387_BIT_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
+    ///     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_COPY_BIT_KHR specifies the execution of
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
+    ///         acceleration
+    ///         structure copy commands
+    ///     </a>
+    ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_2_RESERVED_387_BIT_KHR = 0x10000000,
+    VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_COPY_BIT_KHR = 0x10000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_RESERVED_30_BIT_NV<br />
@@ -415,6 +421,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_BLIT_BIT<br />
     ///     VK_PIPELINE_STAGE_2_RESOLVE_BIT<br />
     ///     VK_PIPELINE_STAGE_2_CLEAR_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_COPY_BIT_KHR<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT_KHR = VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT,
 
@@ -430,6 +437,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_BLIT_BIT<br />
     ///     VK_PIPELINE_STAGE_2_RESOLVE_BIT<br />
     ///     VK_PIPELINE_STAGE_2_CLEAR_BIT<br />
+    ///     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_COPY_BIT_KHR<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_TRANSFER_BIT_KHR = VK_PIPELINE_STAGE_2_ALL_TRANSFER_BIT,
 

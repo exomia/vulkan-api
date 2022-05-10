@@ -29,13 +29,13 @@ public unsafe struct VkAllocationCallbacks
     public void* pUserData;
 
     /// <summary>pfnAllocation is a PFN_vkAllocationFunction pointer to an application-defined memory allocation function.</summary>
-    public delegate*<void* /*pUserData*/, nuint /*size*/, nuint /*alignment*/, VkSystemAllocationScope /*allocationScope*/, void> pfnAllocation;
+    public delegate*<void* /*pUserData*/, nuint /*size*/, nuint /*alignment*/, VkSystemAllocationScope /*allocationScope*/, void*> pfnAllocation;
 
     /// <summary>
     ///     pfnReallocation is a PFN_vkReallocationFunction pointer to an application-defined memory reallocation
     ///     function.
     /// </summary>
-    public delegate*<void* /*pUserData*/, void* /*pOriginal*/, nuint /*size*/, nuint /*alignment*/, VkSystemAllocationScope /*allocationScope*/, void> pfnReallocation;
+    public delegate*<void* /*pUserData*/, void* /*pOriginal*/, nuint /*size*/, nuint /*alignment*/, VkSystemAllocationScope /*allocationScope*/, void*> pfnReallocation;
 
     /// <summary>pfnFree is a PFN_vkFreeFunction pointer to an application-defined memory free function.</summary>
     public delegate*<void* /*pUserData*/, void* /*pMemory*/, void> pfnFree;

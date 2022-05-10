@@ -107,11 +107,12 @@ public enum VkQueryType
     ///         serialization
     ///         acceleration structure size query
     ///     </a>
+    ///     .
     /// </summary>
     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR = 1000150001,
 
     /// <summary>
-    ///     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV specifies a
+    ///     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV specifies an
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
     ///         acceleration
@@ -156,5 +157,36 @@ public enum VkQueryType
     ///     </a>
     ///     .
     /// </summary>
-    VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT = 1000382000
+    VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT = 1000382000,
+
+    /// <summary>
+    ///     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_BOTTOM_LEVEL_POINTERS_KHRspecifies a
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#serialized-as-header">
+    ///         serialization
+    ///         acceleration structure pointer count query
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_BOTTOM_LEVEL_POINTERS_KHR = 1000386000,
+
+    /// <summary>
+    ///     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SIZE_KHR specifies an
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
+    ///         acceleration
+    ///         structure size query
+    ///     </a>
+    ///     for use with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesKHR.html">
+    ///         vkCmdWriteAccelerationStructuresPropertiesKHR
+    ///     </a>
+    ///     or
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkWriteAccelerationStructuresPropertiesKHR.html">
+    ///         vkWriteAccelerationStructuresPropertiesKHR
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SIZE_KHR = 1000386001
 }
