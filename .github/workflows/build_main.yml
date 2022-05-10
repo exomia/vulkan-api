@@ -3,11 +3,6 @@ on:
   push:
     branches:
       - 'master'
-      - 'release/v*'
-  pull_request:
-    types: [opened]
-    branches:
-      - 'master'
 jobs:
   build-core:
     strategy:

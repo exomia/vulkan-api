@@ -1,19 +1,14 @@
 name: '[RELEASE] main'
 on:
-  pull_request:
-    types: [closed]
+  ppull_request_review:
+    types: [submitted]
     branches:
       - 'release/v*'
 concurrency:
   group: 'release-main'
 jobs:
-  merged-check:
-    if: ${{ github.event.pull_request.merged && startsWith(github.head_ref, 'rc/v') }}
-    runs-on: ubuntu-latest
-    steps:
-    - run: exit 0
   get-release-info:
-    needs: [merged-check]
+    if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
     outputs:
       release-version: ${{ steps.release-version.outputs.release-version }}
@@ -51,7 +46,7 @@ jobs:
     - run: |
         dotnet build Exomia.Vulkan.Api.Core.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-core-build:
-    if: ${{ github.event.pull_request.merged && always() }}  
+    if: ${{ github.event.review.state == 'approved' && always() }}  
     name: '[CHECK] RELEASE CORE BUILD SUCCESS'
     needs: [build-core]
     runs-on: ubuntu-latest
@@ -144,7 +139,7 @@ jobs:
     - run: |
         dotnet build Exomia.Vulkan.Api.Platforms.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-platforms-build:
-    if: ${{ github.event.pull_request.merged && always() }}  
+    if: ${{ github.event.review.state == 'approved' && always() }}  
     name: '[CHECK] RELEASE PLATFORMS BUILD SUCCESS'
     needs: [build-platforms]
     runs-on: ubuntu-latest
@@ -195,7 +190,7 @@ jobs:
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
   check-platforms-publish:
-    if: ${{ github.event.pull_request.merged && always() }}  
+    if: ${{ github.event.review.state == 'approved' && always() }}  
     name: '[CHECK] RELEASE PLATFORMS PUBLISH SUCCESS'
     needs: [publish-platforms-on-github, publish-platforms-on-nuget]
     runs-on: ubuntu-latest
