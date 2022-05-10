@@ -1,6 +1,6 @@
 name: '[RELEASE] main'
 on:
-  ppull_request_review:
+  pull_request_review:
     types: [submitted]
     branches:
       - 'release/v*'
