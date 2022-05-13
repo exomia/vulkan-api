@@ -200,6 +200,12 @@ public enum VkResult
     VK_OPERATION_NOT_DEFERRED_KHR = 1000268003,
 
     /// <summary>
+    ///     VK_ERROR_COMPRESSION_EXHAUSTED_EXT An image creation failed because internal resources required for
+    ///     compression are exhausted. This must only be returned when fixed-rate compression is requested.
+    /// </summary>
+    VK_ERROR_COMPRESSION_EXHAUSTED_EXT = -1000338000,
+
+    /// <summary>
     ///     VK_ERROR_OUT_OF_POOL_MEMORY A pool memory allocation has failed. This must only be returned if no attempt to
     ///     allocate host or device memory was made to accommodate the new allocation. If the failure was definitely due to
     ///     fragmentation of the pool, VK_ERROR_FRAGMENTED_POOL should be returned instead.

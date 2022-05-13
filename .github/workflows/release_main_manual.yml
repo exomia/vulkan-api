@@ -8,7 +8,7 @@ jobs:
     outputs:
       release-version: ${{ steps.release-version.outputs.release-version }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: 'set release-version'
       id: release-version
       run: |
@@ -35,8 +35,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps: 
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |
@@ -63,8 +63,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |  
@@ -83,8 +83,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |  
@@ -128,8 +128,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps: 
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |
@@ -156,8 +156,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |  
@@ -176,8 +176,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |  
@@ -205,7 +205,7 @@ jobs:
     permissions:
       contents: write 
     steps:
-    - uses: actions/github-script@v5
+    - uses: actions/github-script@v6
       id: create-release
       with:
         script: |

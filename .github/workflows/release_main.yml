@@ -1,24 +1,19 @@
 name: '[RELEASE] main'
 on:
-  pull_request:
-    types: [closed]
+  pull_request_review:
+    types: [submitted]
     branches:
       - 'release/v*'
 concurrency:
   group: 'release-main'
 jobs:
-  merged-check:
-    if: ${{ github.event.pull_request.merged && startsWith(github.head_ref, 'rc/v') }}
-    runs-on: ubuntu-latest
-    steps:
-    - run: exit 0
   get-release-info:
-    needs: [merged-check]
+    if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
     outputs:
       release-version: ${{ steps.release-version.outputs.release-version }}
     steps:  
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: 'set release-version'
       id: release-version
       run: |
@@ -44,14 +39,14 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps: 
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |
         dotnet build Exomia.Vulkan.Api.Core.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-core-build:
-    if: ${{ github.event.pull_request.merged && always() }}  
+    if: ${{ github.event.review.state == 'approved' && always() }}  
     name: '[CHECK] RELEASE CORE BUILD SUCCESS'
     needs: [build-core]
     runs-on: ubuntu-latest
@@ -72,8 +67,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |  
@@ -92,8 +87,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |  
@@ -102,7 +97,7 @@ jobs:
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
   check-core-publish:
-    if: ${{ github.event.pull_request.merged && always() }}  
+    if: ${{ github.event.review.state == 'approved' && always() }}  
     name: '[CHECK] RELEASE CORE PUBLISH SUCCESS'
     needs: [publish-core-on-github, publish-core-on-nuget]
     runs-on: ubuntu-latest
@@ -137,14 +132,14 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps: 
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |
         dotnet build Exomia.Vulkan.Api.Platforms.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-platforms-build:
-    if: ${{ github.event.pull_request.merged && always() }}  
+    if: ${{ github.event.review.state == 'approved' && always() }}  
     name: '[CHECK] RELEASE PLATFORMS BUILD SUCCESS'
     needs: [build-platforms]
     runs-on: ubuntu-latest
@@ -165,8 +160,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |  
@@ -185,8 +180,8 @@ jobs:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1   
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2   
       with:
         dotnet-version: '6.0.x'
     - run: |  
@@ -195,7 +190,7 @@ jobs:
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
   check-platforms-publish:
-    if: ${{ github.event.pull_request.merged && always() }}  
+    if: ${{ github.event.review.state == 'approved' && always() }}  
     name: '[CHECK] RELEASE PLATFORMS PUBLISH SUCCESS'
     needs: [publish-platforms-on-github, publish-platforms-on-nuget]
     runs-on: ubuntu-latest
@@ -214,7 +209,7 @@ jobs:
     permissions:
       contents: write 
     steps:
-    - uses: actions/github-script@v5
+    - uses: actions/github-script@v6
       id: create-release
       with:
         script: |
@@ -223,8 +218,16 @@ jobs:
             repo: context.repo.repo,
             tag_name: 'v${{ needs.get-release-info.outputs.release-version }}',
             generate_release_notes: true,
-            target_commitish: '${{ github.base_ref }}'
+            target_commitish: '${{ github.event.pull_request.head.ref }}'
           });
+  check-release-success:
+    if: ${{ github.event.review.state == 'approved' && always() }}
+    name: '[CHECK] RELEASE SUCCESS'
+    needs: [create-release] 
+    runs-on: ubuntu-latest
+    steps:
+    - if: ${{ needs.create-release.result != 'success' }}
+      run: exit 1
   discord-announcement:
     needs: [get-release-info, create-release]
     runs-on: ubuntu-latest

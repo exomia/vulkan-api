@@ -66,15 +66,11 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_INPUT_ATTACHMENT_READ_BIT = 0x10,
 
     /// <summary>
-    ///     VK_ACCESS_2_SHADER_READ_BITspecifies read access to a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
-    ///         shader
-    ///         binding table
-    ///     </a>
-    ///     in any shader pipeline. In addition, it is equivalent to the logical OR of:<br />
+    ///     VK_ACCESS_2_SHADER_READ_BITis equivalent to the logical OR of:<br />
     ///     VK_ACCESS_2_UNIFORM_READ_BIT<br />
     ///     VK_ACCESS_2_SHADER_SAMPLED_READ_BIT<br />
     ///     VK_ACCESS_2_SHADER_STORAGE_READ_BIT<br />
+    ///     VK_ACCESS_2_SHADER_BINDING_TABLE_READ_BIT_KHR<br />
     /// </summary>
     VK_ACCESS_2_SHADER_READ_BIT = 0x20,
 
@@ -437,10 +433,14 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_INVOCATION_MASK_READ_BIT_HUAWEI = 0x8000000000,
 
     /// <summary>
-    ///     VK_ACCESS_2_RESERVED_387_BIT_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
+    ///     VK_ACCESS_2_SHADER_BINDING_TABLE_READ_BIT_KHR specifies read access to a
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
+    ///         shader
+    ///         binding table
+    ///     </a>
+    ///     in any shader pipeline stage.
     /// </summary>
-    VK_ACCESS_2_RESERVED_387_BIT_KHR = 0x10000000000,
+    VK_ACCESS_2_SHADER_BINDING_TABLE_READ_BIT_KHR = 0x10000000000,
 
     /// <summary>
     ///     VK_ACCESS_2_RESERVED_44_BIT_NV<br />
@@ -512,15 +512,11 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_INPUT_ATTACHMENT_READ_BIT_KHR = VK_ACCESS_2_INPUT_ATTACHMENT_READ_BIT,
 
     /// <summary>
-    ///     VK_ACCESS_2_SHADER_READ_BITspecifies read access to a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
-    ///         shader
-    ///         binding table
-    ///     </a>
-    ///     in any shader pipeline. In addition, it is equivalent to the logical OR of:<br />
+    ///     VK_ACCESS_2_SHADER_READ_BITis equivalent to the logical OR of:<br />
     ///     VK_ACCESS_2_UNIFORM_READ_BIT<br />
     ///     VK_ACCESS_2_SHADER_SAMPLED_READ_BIT<br />
     ///     VK_ACCESS_2_SHADER_STORAGE_READ_BIT<br />
+    ///     VK_ACCESS_2_SHADER_BINDING_TABLE_READ_BIT_KHR<br />
     /// </summary>
     VK_ACCESS_2_SHADER_READ_BIT_KHR = VK_ACCESS_2_SHADER_READ_BIT,
 
