@@ -218,8 +218,16 @@ jobs:
             repo: context.repo.repo,
             tag_name: 'v${{ needs.get-release-info.outputs.release-version }}',
             generate_release_notes: true,
-            target_commitish: '${{ github.event.pull_request.head.ref_name }}'
+            target_commitish: '${{ github.event.pull_request.head.ref }}'
           });
+  check-release-success:
+    if: ${{ github.event.review.state == 'approved' && always() }}
+    name: '[CHECK] RELEASE SUCCESS'
+    needs: [create-release] 
+    runs-on: ubuntu-latest
+    steps:
+    - if: ${{ needs.create-release.result != 'success' }}
+      run: exit 1
   discord-announcement:
     needs: [get-release-info, create-release]
     runs-on: ubuntu-latest
