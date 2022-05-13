@@ -97,7 +97,7 @@ jobs:
       run: |  
         dotnet nuget push ~/.packages/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.EXOMIA_NUGET_API_KEY_PUSH }} --skip-duplicate
   check-core-publish:
-    if: ${{ github.event.pull_request.merged && always() }}  
+    if: ${{ github.event.review.state == 'approved' && always() }}  
     name: '[CHECK] RELEASE CORE PUBLISH SUCCESS'
     needs: [publish-core-on-github, publish-core-on-nuget]
     runs-on: ubuntu-latest
@@ -218,7 +218,7 @@ jobs:
             repo: context.repo.repo,
             tag_name: 'v${{ needs.get-release-info.outputs.release-version }}',
             generate_release_notes: true,
-            target_commitish: '${{ github.base_ref }}'
+            target_commitish: '${{ github.event.pull_request.head.ref_name }}'
           });
   discord-announcement:
     needs: [get-release-info, create-release]
