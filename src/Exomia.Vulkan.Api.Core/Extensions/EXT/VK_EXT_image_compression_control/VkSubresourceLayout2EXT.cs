@@ -17,6 +17,13 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VkSubresourceLayout2EXT - Structure specifying subresource layout -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout2EXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout2EXT.html</a>
 /// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>returnedonly</term><description>true</description>
+///         </item>
+///     </list>
+/// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkSubresourceLayout2EXT
 {

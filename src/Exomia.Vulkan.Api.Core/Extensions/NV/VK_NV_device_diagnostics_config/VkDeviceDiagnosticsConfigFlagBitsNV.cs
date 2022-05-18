@@ -45,5 +45,8 @@ public enum VkDeviceDiagnosticsConfigFlagBitsNV
     ///     for draw calls, dispatches, trace rays, and copies. The CPU call stack at the time of the
     ///     command will be associated as the marker data for the automatically inserted checkpoints.
     /// </summary>
-    VK_DEVICE_DIAGNOSTICS_CONFIG_ENABLE_AUTOMATIC_CHECKPOINTS_BIT_NV = 0x4
+    VK_DEVICE_DIAGNOSTICS_CONFIG_ENABLE_AUTOMATIC_CHECKPOINTS_BIT_NV = 0x4,
+
+    /// <summary>VK_DEVICE_DIAGNOSTICS_CONFIG_ENABLE_SHADER_ERROR_REPORTING_BIT_NVenables shader error reporting.</summary>
+    VK_DEVICE_DIAGNOSTICS_CONFIG_ENABLE_SHADER_ERROR_REPORTING_BIT_NV = 0x8
 }
