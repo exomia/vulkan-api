@@ -49,7 +49,8 @@ public unsafe struct VkPipelineRasterizationConservativeStateCreateInfoEXT
     /// <summary>
     ///     extraPrimitiveOverestimationSize is the extra size in pixels to increase the generating primitive during
     ///     conservative rasterization at each of its edges in X and Y equally in screen space beyond the base overestimation
-    ///     specified in VkPhysicalDeviceConservativeRasterizationPropertiesEXT::primitiveOverestimationSize.
+    ///     specified in VkPhysicalDeviceConservativeRasterizationPropertiesEXT::primitiveOverestimationSize. If
+    ///     conservativeRasterizationMode is not VK_CONSERVATIVE_RASTERIZATION_MODE_OVERESTIMATE_EXT, this value is ignored.
     /// </summary>
     public float extraPrimitiveOverestimationSize;
 }

@@ -52,6 +52,12 @@ public enum VkDependencyFlagBits
     VK_DEPENDENCY_VIEW_LOCAL_BIT = 0x2,
 
     /// <summary>
+    ///     VK_DEPENDENCY_RESERVED_3_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDependencyFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDependencyFlagBits</a>
+    /// </summary>
+    VK_DEPENDENCY_RESERVED_3_BIT_EXT = 0x8,
+
+    /// <summary>
     ///     VK_DEPENDENCY_VIEW_LOCAL_BIT specifies that a
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-barriers-subpass-self-dependencies">

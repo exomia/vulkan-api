@@ -29,7 +29,7 @@ public unsafe struct VkPipelineLayoutCreateInfo
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary>flags is a bitmask of VkPipelineLayoutCreateFlagBitsspecifying options for pipeline layout creation.</summary>
     public VkPipelineLayoutCreateFlags flags;
 
     /// <summary>setLayoutCount is the number of descriptor sets included in the pipeline layout.</summary>

@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrCreateRenderpass2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_create_renderpass2 - device extension (nr. 110) - author '' [platform '' | contact 'Tobias Hector @tobias']
-///     <br />
+///     VK_KHR_create_renderpass2 - device extension (nr. 110) - author 'KHR' [platform '' | contact 'Tobias Hector
+///     @tobias']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html</a>
 /// </summary>
 [VkRequires("VK_KHR_multiview,VK_KHR_maintenance2")]

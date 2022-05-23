@@ -38,6 +38,9 @@ public unsafe struct VkDeviceQueueInfo2
     /// <summary>queueFamilyIndex is the index of the queue family to which the queue belongs.</summary>
     public uint queueFamilyIndex;
 
-    /// <summary>queueIndex is the index within this queue family of the queue to retrieve.</summary>
+    /// <summary>
+    ///     queueIndex is the index of the queue to retrieve from within the set of queues that share both the queue
+    ///     family and flags specified.
+    /// </summary>
     public uint queueIndex;
 }

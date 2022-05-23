@@ -30,7 +30,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkNvDeviceDiagnosticsConfig
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION = 1;
+    public const uint VK_NV_DEVICE_DIAGNOSTICS_CONFIG_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME = "VK_NV_device_diagnostics_config";

@@ -29,11 +29,11 @@ public unsafe struct VkDeviceQueueCreateInfo
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>flags is a bitmask indicating behavior of the queue.</summary>
+    /// <summary>flags is a bitmask indicating behavior of the queues.</summary>
     public VkDeviceQueueCreateFlags flags;
 
     /// <summary>
-    ///     queueFamilyIndex is an unsigned integer indicating the index of the queue family in which to create the queue
+    ///     queueFamilyIndex is an unsigned integer indicating the index of the queue family in which to create the queues
     ///     on this device. This index corresponds to the index of an element of the pQueueFamilyProperties array that was
     ///     returned by vkGetPhysicalDeviceQueueFamilyProperties.
     /// </summary>
@@ -41,7 +41,7 @@ public unsafe struct VkDeviceQueueCreateInfo
 
     /// <summary>
     ///     queueCount is an unsigned integer specifying the number of queues to create in the queue family indicated by
-    ///     queueFamilyIndex.
+    ///     queueFamilyIndex, and with the behavior specified by flags.
     /// </summary>
     public uint queueCount;
 
