@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesEXT - Structure describing whether early and late fragment
+///     VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD - Structure describing whether early and late fragment
 ///     tests can be supported by an implementation -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesEXT.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesEXT.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -30,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPhysicalDeviceFeatures2,VkDeviceCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesEXT
+public unsafe struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_EARLY_AND_LATE_FRAGMENT_TESTS_FEATURES_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_EARLY_AND_LATE_FRAGMENT_TESTS_FEATURES_AMD;
 
     /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
@@ -43,7 +43,7 @@ public unsafe struct VkPhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesEXT
 
     /// <summary>
     ///     shaderEarlyAndLateFragmentTests indicates whether the implementation supports the
-    ///     EarlyAndLateFragmentTestsEXTExecution Mode.
+    ///     EarlyAndLateFragmentTestsAMDExecution Mode.
     /// </summary>
     public VkBool32 shaderEarlyAndLateFragmentTests;
 }

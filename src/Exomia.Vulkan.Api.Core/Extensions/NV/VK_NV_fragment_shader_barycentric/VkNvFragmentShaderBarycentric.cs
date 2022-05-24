@@ -27,6 +27,9 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
+[Obsolete(
+    "promoted to VK_KHR_fragment_shader_barycentric", false,
+    UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_fragment_shader_barycentric.html#_deprecation_state")]
 public static class VkNvFragmentShaderBarycentric
 {
     /// <summary> The spec version. </summary>

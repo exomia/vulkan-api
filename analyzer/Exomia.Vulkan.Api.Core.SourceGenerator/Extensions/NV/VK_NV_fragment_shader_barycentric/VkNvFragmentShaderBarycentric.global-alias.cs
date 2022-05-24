@@ -1,0 +1,1 @@
+global using VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV = Exomia.Vulkan.Api.Core.VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR;
