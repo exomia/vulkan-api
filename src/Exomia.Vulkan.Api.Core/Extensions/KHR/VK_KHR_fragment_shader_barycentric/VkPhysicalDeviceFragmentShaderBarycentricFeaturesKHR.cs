@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV - Structure describing barycentric support in fragment shaders
+///     VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR - Structure describing barycentric support in fragment shaders
 ///     that can be supported by an implementation -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -30,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPhysicalDeviceFeatures2,VkDeviceCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV
+public unsafe struct VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_KHR;
 
     /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
@@ -42,8 +42,9 @@ public unsafe struct VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV
     public void* pNext;
 
     /// <summary>
-    ///     fragmentShaderBarycentricindicates that the implementation supports the BaryCoordNV and BaryCoordNoPerspNV
-    ///     SPIR-V fragment shader built-ins and supports the PerVertexNV SPIR-V decoration on fragment shader input variables.
+    ///     fragmentShaderBarycentricindicates that the implementation supports the BaryCoordKHR and BaryCoordNoPerspKHR
+    ///     SPIR-V fragment shader built-ins and supports the PerVertexKHR SPIR-V decoration on fragment shader input
+    ///     variables.
     /// </summary>
     public VkBool32 fragmentShaderBarycentric;
 }
