@@ -93,8 +93,10 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///         subpass
     ///         load and store operations
     ///     </a>
-    ///     and multisample resolve operations for framebuffer attachments with a color or
-    ///     depth/stencil format.
+    ///     , multisample resolve operations for framebuffer attachments with a color or
+    ///     depth/stencil format, and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdClearAttachments.html">vkCmdClearAttachments</a>
+    ///     .
     /// </summary>
     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT = 0x400,
 
@@ -407,8 +409,10 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///         subpass
     ///         load and store operations
     ///     </a>
-    ///     and multisample resolve operations for framebuffer attachments with a color or
-    ///     depth/stencil format.
+    ///     , multisample resolve operations for framebuffer attachments with a color or
+    ///     depth/stencil format, and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdClearAttachments.html">vkCmdClearAttachments</a>
+    ///     .
     /// </summary>
     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT_KHR = VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT,
 

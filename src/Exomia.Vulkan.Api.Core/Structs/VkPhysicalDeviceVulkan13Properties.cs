@@ -318,7 +318,7 @@ public unsafe struct VkPhysicalDeviceVulkan13Properties
 
     /// <summary>
     ///     storageTexelBufferOffsetSingleTexelAlignment indicates whether single texel alignment is sufficient for a
-    ///     storage texel buffer of any format. The value must be a power of two.
+    ///     storage texel buffer of any format.
     /// </summary>
     public VkBool32 storageTexelBufferOffsetSingleTexelAlignment;
 
@@ -330,7 +330,7 @@ public unsafe struct VkPhysicalDeviceVulkan13Properties
 
     /// <summary>
     ///     uniformTexelBufferOffsetSingleTexelAlignment indicates whether single texel alignment is sufficient for a
-    ///     uniform texel buffer of any format. The value must be a power of two.
+    ///     uniform texel buffer of any format.
     /// </summary>
     public VkBool32 uniformTexelBufferOffsetSingleTexelAlignment;
 

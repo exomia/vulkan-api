@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkExtSubpassMergeFeedback
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_EXT_SUBPASS_MERGE_FEEDBACK_SPEC_VERSION = 1;
+    public const uint VK_EXT_SUBPASS_MERGE_FEEDBACK_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_EXT_SUBPASS_MERGE_FEEDBACK_EXTENSION_NAME = "VK_EXT_subpass_merge_feedback";
