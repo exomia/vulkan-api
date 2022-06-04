@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkRenderPassCreationFeedbackInfoEXT - Feedback about the creation of render pass -
+///     VkRenderPassCreationFeedbackInfoEXT - Feedback about the creation of a render pass -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreationFeedbackInfoEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreationFeedbackInfoEXT.html
@@ -23,23 +23,13 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkRenderPassCreateInfo2,VkRenderPassCreationControlEXT</description>
+///             <term>returnedonly</term><description>true</description>
 ///         </item>
 ///     </list>
 /// </remarks>
-[VkStructExtends("VkRenderPassCreateInfo2,VkRenderPassCreationControlEXT")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkRenderPassCreationFeedbackInfoEXT
+public struct VkRenderPassCreationFeedbackInfoEXT
 {
-    /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_RENDER_PASS_CREATION_FEEDBACK_INFO_EXT;
-
-    /// <summary>sType is the type of this structure.</summary>
-    public VkStructureType sType;
-
-    /// <summary>pNext is NULL or a pointer to an extension-specific structure.</summary>
-    public void* pNext;
-
     /// <summary>postMergeSubpassCount is the subpass count after merge.</summary>
     public uint postMergeSubpassCount;
 }
