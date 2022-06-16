@@ -11,11 +11,12 @@
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Core;
+namespace Exomia.Vulkan.Api.Metal;
 
 /// <summary>
-///     VkExportMemoryAllocateInfo - Specify exportable handle types for a device memory object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryAllocateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryAllocateInfo.html</a>
+///     VkImportMetalBufferInfoEXT - Structure that identifies a Metal MTLBuffer object to use when creating a
+///     VkDeviceMemory object. -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalBufferInfoEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalBufferInfoEXT.html</a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
@@ -26,10 +27,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkMemoryAllocateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkExportMemoryAllocateInfo
+public unsafe struct VkImportMetalBufferInfoEXT
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_EXPORT_MEMORY_ALLOCATE_INFO;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMPORT_METAL_BUFFER_INFO_EXT;
 
     /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
@@ -37,10 +38,6 @@ public unsafe struct VkExportMemoryAllocateInfo
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     handleTypes is zero or a bitmask of VkExternalMemoryHandleTypeFlagBits specifying one or more memory handle
-    ///     types the application can export from the resulting allocation. The application can request multiple handle types
-    ///     for the same allocation.
-    /// </summary>
-    public VkExternalMemoryHandleTypeFlags handleTypes;
+    /// <summary>mtlBuffer is the Metal id&lt;MTLBuffer&gt; object that is to underlie the VkDeviceMemory.</summary>
+    public MTLBuffer_id mtlBuffer;
 }
