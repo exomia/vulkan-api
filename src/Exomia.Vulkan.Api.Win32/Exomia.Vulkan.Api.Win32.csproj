@@ -15,7 +15,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>1.3.216$(VersionSuffix)</Version>
+        <Version>1.3.218$(VersionSuffix)</Version>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -88,11 +88,11 @@
     </ItemGroup>
 
     <ItemGroup Condition="'$(Platform)'=='AnyCPU'">
-        <PackageReference Include="Exomia.Vulkan.Api.Core" Version="1.3.216$(VersionSuffix)" PrivateAssets="all" />
+        <PackageReference Include="Exomia.Vulkan.Api.Core" Version="1.3.218$(VersionSuffix)" PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(Platform)'!='AnyCPU'">
-        <PackageReference Include="Exomia.Vulkan.Api.Core.$(Platform)" Version="1.3.216$(VersionSuffix)"
+        <PackageReference Include="Exomia.Vulkan.Api.Core.$(Platform)" Version="1.3.218$(VersionSuffix)"
                           PrivateAssets="all" />
     </ItemGroup>
 
