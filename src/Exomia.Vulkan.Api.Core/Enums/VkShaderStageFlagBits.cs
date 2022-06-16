@@ -80,6 +80,24 @@ public enum VkShaderStageFlagBits
     /// </summary>
     VK_SHADER_STAGE_SUBPASS_SHADING_BIT_HUAWEI = 0x4000,
 
+    /// <summary>
+    ///     VK_SHADER_STAGE_EXT_483_RESERVE_15<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits</a>
+    /// </summary>
+    VK_SHADER_STAGE_EXT_483_RESERVE_15 = 0x8000,
+
+    /// <summary>
+    ///     VK_SHADER_STAGE_EXT_483_RESERVE_16<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits</a>
+    /// </summary>
+    VK_SHADER_STAGE_EXT_483_RESERVE_16 = 0x10000,
+
+    /// <summary>
+    ///     VK_SHADER_STAGE_EXT_483_RESERVE_17<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits</a>
+    /// </summary>
+    VK_SHADER_STAGE_EXT_483_RESERVE_17 = 0x20000,
+
     /// <summary>VK_SHADER_STAGE_RAYGEN_BIT_KHR specifies the ray generation stage.</summary>
     VK_SHADER_STAGE_RAYGEN_BIT_NV = VK_SHADER_STAGE_RAYGEN_BIT_KHR,
 

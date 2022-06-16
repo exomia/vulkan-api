@@ -39,10 +39,14 @@ public enum VkSamplerCreateFlagBits
     VK_SAMPLER_CREATE_RESERVED_3_BIT_AMD = 0x8,
 
     /// <summary>
-    ///     VK_SAMPLER_CREATE_RESERVED_2_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits</a>
+    ///     VK_SAMPLER_CREATE_NON_SEAMLESS_CUBE_MAP_BIT_EXT specifies that
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-cubemapedge">
+    ///         cube
+    ///         map edge handling
+    ///     </a>
+    ///     is not performed.
     /// </summary>
-    VK_SAMPLER_CREATE_RESERVED_2_BIT_EXT = 0x4,
+    VK_SAMPLER_CREATE_NON_SEAMLESS_CUBE_MAP_BIT_EXT = 0x4,
 
     /// <summary>
     ///     VK_SAMPLER_CREATE_IMAGE_PROCESSING_BIT_QCOM<br />

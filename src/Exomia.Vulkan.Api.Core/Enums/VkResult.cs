@@ -163,6 +163,40 @@ public enum VkResult
     VK_ERROR_INVALID_SHADER_NV = -1000012000,
 
     /// <summary>
+    ///     VK_ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR The requested
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageUsageFlags.html">VkImageUsageFlags</a>
+    ///     are not supported.
+    /// </summary>
+    VK_ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR = -1000023000,
+
+    /// <summary>VK_ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR The requested video picture layout is not supported.</summary>
+    VK_ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR = -1000023001,
+
+    /// <summary>
+    ///     VK_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR A video profile operation specified via
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileKHR.html">VkVideoProfileKHR</a>
+    ///     ::videoCodecOperation is not supported.
+    /// </summary>
+    VK_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR = -1000023002,
+
+    /// <summary>
+    ///     VK_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR Format parameters in a requested
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileKHR.html">VkVideoProfileKHR</a>
+    ///     chain are not supported.
+    /// </summary>
+    VK_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR = -1000023003,
+
+    /// <summary>
+    ///     VK_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR Codec-specific parameters in a requested
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileKHR.html">VkVideoProfileKHR</a>
+    ///     chain are not supported.
+    /// </summary>
+    VK_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR = -1000023004,
+
+    /// <summary>VK_ERROR_VIDEO_STD_VERSION_NOT_SUPPORTED_KHR The specified video Std header version is not supported.</summary>
+    VK_ERROR_VIDEO_STD_VERSION_NOT_SUPPORTED_KHR = -1000023005,
+
+    /// <summary>
     ///     VK_ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkResult">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkResult</a>
     /// </summary>

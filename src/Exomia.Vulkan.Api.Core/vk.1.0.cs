@@ -425,10 +425,7 @@ public static partial class Vk
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEnumerateDeviceLayerProperties.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     VUID-vkEnumerateDeviceLayerProperties-physicalDevice-parameter physicalDevice must be a
-    ///     valid VkPhysicalDevice handle
-    /// </param>
+    /// <param name="physicalDevice">physicalDevice is the physical device that will be queried.</param>
     /// <param name="pPropertyCount">
     ///     pPropertyCount is a pointer to an integer related to the number of layer properties
     ///     available or queried.

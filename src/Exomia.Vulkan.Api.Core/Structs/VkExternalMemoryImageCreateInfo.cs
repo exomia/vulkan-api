@@ -41,7 +41,7 @@ public unsafe struct VkExternalMemoryImageCreateInfo
     public void* pNext;
 
     /// <summary>
-    ///     handleTypes is zero, or a bitmask of VkExternalMemoryHandleTypeFlagBits specifying one or more external memory
+    ///     handleTypes is zero or a bitmask of VkExternalMemoryHandleTypeFlagBits specifying one or more external memory
     ///     handle types.
     /// </summary>
     public VkExternalMemoryHandleTypeFlags handleTypes;
