@@ -52,8 +52,7 @@ public unsafe struct VkPhysicalDeviceLineRasterizationFeaturesEXT
 
     /// <summary>
     ///     stippledRectangularLinesindicates whether the implementation supports stippled line rasterization with
-    ///     VK_LINE_RASTERIZATION_MODE_RECTANGULAR_EXT lines, or with VK_LINE_RASTERIZATION_MODE_DEFAULT_EXT lines if
-    ///     VkPhysicalDeviceLimits::strictLines is VK_TRUE.
+    ///     VK_LINE_RASTERIZATION_MODE_RECTANGULAR_EXT lines.
     /// </summary>
     public VkBool32 stippledRectangularLines;
 
