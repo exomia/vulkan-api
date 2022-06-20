@@ -8,8 +8,4 @@
 
 #endregion
 
-// ReSharper disable UnusedMember.Global
-// ReSharper disable once CheckNamespace
-namespace Exomia.Vulkan.Api.Metal;
-
 global using MTLCommandQueue_id = System.IntPtr;
