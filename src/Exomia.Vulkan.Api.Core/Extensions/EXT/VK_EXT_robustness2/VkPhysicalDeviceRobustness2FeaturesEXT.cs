@@ -45,15 +45,15 @@ public unsafe struct VkPhysicalDeviceRobustness2FeaturesEXT
     ///     descriptor. Uniform buffers must be bounds-checked to the range of the descriptor, where the range is rounded up to
     ///     a multiple of robustUniformBufferAccessSizeAlignment. Storage buffers must be bounds-checked to the range of the
     ///     descriptor, where the range is rounded up to a multiple of robustStorageBufferAccessSizeAlignment. Out of bounds
-    ///     buffer loads will return zero values, and formatted loads will have (0,0,1) values inserted for missing G, B, or A
-    ///     components based on the format.
+    ///     buffer loads will return zero values, and image load, sample, and atomic operations from texel buffers will have
+    ///     (0,0,1) values inserted for missing G, B, or A components based on the format.
     /// </summary>
     public VkBool32 robustBufferAccess2;
 
     /// <summary>
     ///     robustImageAccess2 indicates whether image accesses are tightly bounds-checked against the dimensions of the
-    ///     image view. Out of bounds image loads will return zero values, with (0,0,1)values inserted for missing G, B, or A
-    ///     components based on the format.
+    ///     image view. Out of bounds image load, sample, and atomic operationsfrom images will return zero values, with
+    ///     (0,0,1) values inserted for missing G, B, or A components based on the format.
     /// </summary>
     public VkBool32 robustImageAccess2;
 

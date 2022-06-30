@@ -35,13 +35,7 @@ public unsafe struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV;
 
-    /// <summary>
-    ///     sType<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceLinearColorAttachmentFeaturesNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceLinearColorAttachmentFeaturesNV
-    ///     </a>
-    /// </summary>
+    /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
 
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>

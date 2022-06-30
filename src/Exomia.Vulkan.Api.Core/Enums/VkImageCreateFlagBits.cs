@@ -176,10 +176,14 @@ public enum VkImageCreateFlagBits
     VK_IMAGE_CREATE_RESERVED_16_BIT_AMD = 0x10000,
 
     /// <summary>
-    ///     VK_IMAGE_CREATE_RESERVED_18_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits</a>
+    ///     VK_IMAGE_CREATE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_BIT_EXTspecifies that an image can be used with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#multisampled-render-to-single-sampled">
+    ///         multisampled
+    ///         rendering as a single-sampled framebuffer attachment
+    ///     </a>
     /// </summary>
-    VK_IMAGE_CREATE_RESERVED_18_BIT_EXT = 0x40000,
+    VK_IMAGE_CREATE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_BIT_EXT = 0x40000,
 
     /// <summary>
     ///     VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT<br />
