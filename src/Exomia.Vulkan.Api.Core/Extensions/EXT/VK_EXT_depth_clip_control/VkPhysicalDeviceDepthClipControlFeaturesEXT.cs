@@ -35,13 +35,7 @@ public unsafe struct VkPhysicalDeviceDepthClipControlFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT;
 
-    /// <summary>
-    ///     sType<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceDepthClipControlFeaturesEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceDepthClipControlFeaturesEXT
-    ///     </a>
-    /// </summary>
+    /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
 
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>

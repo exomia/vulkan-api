@@ -1,6 +1,7 @@
 ## Information
 
-The exomia/vulkan-api is a low-level library for C#/.Net 6 to access the Vulkan API.
+The exomia/vulkan-api repository contains C#/.Net 6 libraries providing low-level and cross-platform bindings to access the [Vulkan](https://www.khronos.org/vulkan/) API.  
+The bindings and documentation are generated using the [KhronosGroup/Vulkan-Docs](https://github.com/KhronosGroup/Vulkan-Docs) repository.
 
 ![](https://img.shields.io/github/issues-pr/exomia/vulkan-api.svg)
 ![](https://img.shields.io/github/issues/exomia/vulkan-api.svg)
@@ -10,6 +11,14 @@ The exomia/vulkan-api is a low-level library for C#/.Net 6 to access the Vulkan 
 ![](https://img.shields.io/github/languages/top/exomia/vulkan-api.svg)
 ![](https://img.shields.io/github/languages/count/exomia/vulkan-api.svg)
 ![](https://img.shields.io/github/license/exomia/vulkan-api.svg)
+
+## Features
+
+- Vulkan 1.0, 1.1, 1.2, 1.3
+- All platforms except provisional
+- All extensions including vk_video
+- Raw low level bindings using unsafe C# code
+- cross platform
 
 ## Installing
 
@@ -24,10 +33,10 @@ PM> Install-Package Exomia.Vulkan.Api.Core
 
 ```shell
 [Package Manager]
-PM> Install-Package Exomia.Vulkan.Api.{Platform}
+PM> Install-Package Exomia.Vulkan.Api.<Platform>
 ```
 
-> replace {Platform} with a platform name of the following table
+> replace \<Platform\> with a platform name of the following table
 
 | platform name | comment |
 | :------------ | :------ |
@@ -48,6 +57,20 @@ PM> Install-Package Exomia.Vulkan.Api.{Platform}
 
 
 > see Exomia.Vulkan.Api packages on [nuget](https://www.nuget.org/packages?q=Exomia.Vulkan.Api)
+
+
+## Building
+
+### Core
+
+To build Exomia.Vulkan.Api.Core, open Exomia.Vulkan.Api.Core.sln in Visual Studio 2022 and build the solution. 
+Alternatively you can also build it on the command line, run the ```dotnet build Exomia.Vulkan.Api.Core.sln``` command. 
+
+### Platforms
+
+In order to be able to build Exomia.Vulkan.Api.Platforms, make sure that the core package is available in one of your nuget feeds.
+To build Exomia.Vulkan.Api.Platforms, open Exomia.Vulkan.Api.Platforms.sln in Visual Studio 2022 and build the solution. 
+Alternatively you can also build it on the command line, run the ```dotnet build Exomia.Vulkan.Api.Platforms.sln``` command. 
 
 ---
 ## Social

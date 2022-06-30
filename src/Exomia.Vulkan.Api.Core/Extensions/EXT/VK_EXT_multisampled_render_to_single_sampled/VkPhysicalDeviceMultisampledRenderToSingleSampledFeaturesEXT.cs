@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceImageViewMinLodFeaturesEXT - Structure describing whether clamping the min lod of a image view is
-///     supported by the implementation -
+///     VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT - Structure describing whether multisampled rendering
+///     to single-sampled attachments is supported -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageViewMinLodFeaturesEXT.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageViewMinLodFeaturesEXT.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -30,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPhysicalDeviceFeatures2,VkDeviceCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPhysicalDeviceImageViewMinLodFeaturesEXT
+public unsafe struct VkPhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_FEATURES_EXT;
 
     /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
@@ -42,9 +42,8 @@ public unsafe struct VkPhysicalDeviceImageViewMinLodFeaturesEXT
     public void* pNext;
 
     /// <summary>
-    ///     minLod indicates whether the implementation supports clamping the minimum LOD value during Image Level(s)
-    ///     Selection and Integer Texel Coordinate Operations with a given VkImageView by
-    ///     VkImageViewMinLodCreateInfoEXT::minLod.
+    ///     multisampledRenderToSingleSampled indicates that the implementation supports multisampled rendering to
+    ///     single-sampled render pass attachments.
     /// </summary>
-    public VkBool32 minLod;
+    public VkBool32 multisampledRenderToSingleSampled;
 }

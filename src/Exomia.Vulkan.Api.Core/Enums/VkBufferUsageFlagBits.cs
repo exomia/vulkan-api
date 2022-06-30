@@ -160,6 +160,12 @@ public enum VkBufferUsageFlagBits
     VK_BUFFER_USAGE_CONDITIONAL_RENDERING_BIT_EXT = 0x200,
 
     /// <summary>
+    ///     VK_BUFFER_USAGE_RESERVED_25_BIT_AMD<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
+    /// </summary>
+    VK_BUFFER_USAGE_RESERVED_25_BIT_AMD = 0x2000000,
+
+    /// <summary>
     ///     VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHRspecifies that the buffer is suitable for use
     ///     as a read-only input to an
     ///     <a
