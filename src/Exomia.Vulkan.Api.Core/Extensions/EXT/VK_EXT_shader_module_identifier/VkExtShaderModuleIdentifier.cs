@@ -73,7 +73,7 @@ public static unsafe class VkExtShaderModuleIdentifier
     ///     </a>
     /// </summary>
     /// <param name="device">device is the logical device that can create a VkShaderModule from pCreateInfo.</param>
-    /// <param name="pCreateInfo">pCreateInfo is a pointer to VkShaderModuleCreateInfo.</param>
+    /// <param name="pCreateInfo">pCreateInfo is a pointer to a VkShaderModuleCreateInfostructure.</param>
     /// <param name="pIdentifier">pIdentifier is a pointer to the returned VkShaderModuleIdentifierEXT.</param>
     public static readonly delegate*<
         VkDevice /*device*/,

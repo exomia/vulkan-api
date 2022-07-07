@@ -31,6 +31,15 @@ public enum VkAccelerationStructureCreateFlagBitsKHR
     VK_ACCELERATION_STRUCTURE_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHR = 0x1,
 
     /// <summary>
+    ///     VK_ACCELERATION_STRUCTURE_CREATE_RESERVED_3_BIT_AMD<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccelerationStructureCreateFlagBitsKHR">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccelerationStructureCreateFlagBitsKHR
+    ///     </a>
+    /// </summary>
+    VK_ACCELERATION_STRUCTURE_CREATE_RESERVED_3_BIT_AMD = 0x8,
+
+    /// <summary>
     ///     VK_ACCELERATION_STRUCTURE_CREATE_MOTION_BIT_NV<br />
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccelerationStructureCreateFlagBitsKHR">

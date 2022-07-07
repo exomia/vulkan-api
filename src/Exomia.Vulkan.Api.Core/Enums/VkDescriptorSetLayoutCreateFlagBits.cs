@@ -51,6 +51,15 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_4_BIT_AMD = 0x10,
 
     /// <summary>
+    ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_5_BIT_AMD<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetLayoutCreateFlagBits">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetLayoutCreateFlagBits
+    ///     </a>
+    /// </summary>
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_5_BIT_AMD = 0x20,
+
+    /// <summary>
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_3_BIT_AMD<br />
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorSetLayoutCreateFlagBits">
