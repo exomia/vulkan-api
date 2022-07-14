@@ -20,14 +20,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelinePropertiesIdentifierEXT.html
 ///     </a>
 /// </summary>
-/// <remarks>
-///     <list type="table">
-///         <item>
-///             <term>structextends</term><description>VkBaseOutStructure</description>
-///         </item>
-///     </list>
-/// </remarks>
-[VkStructExtends("VkBaseOutStructure")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkPipelinePropertiesIdentifierEXT
 {

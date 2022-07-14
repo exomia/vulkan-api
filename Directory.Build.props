@@ -1,0 +1,48 @@
+<!--EXTERNAL_PROPERTIES: VersionSuffix-->
+<Project>
+  <PropertyGroup>
+    <LangVersion>10.0</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+    <NullableReferenceTypes>true</NullableReferenceTypes>
+    <DefineConstants>TRACE;$(Platform)</DefineConstants>
+    <CheckForDuplicateItems>false</CheckForDuplicateItems>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Version>1.3.220$(VersionSuffix)</Version>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Company>exomia</Company>
+    <Authors>exomia; Daniel Bätz; Daniel Baumert</Authors>
+    <Copyright>Copyright © $([System.DateTime]::Now.Year) exomia</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RepositoryUrl>https://github.com/exomia/vulkan-api</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)Exomia.Vulkan.Api.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>1701;1702;IDE0063;IDE0079;CA1401;CA1069;CS1572;CS0618</NoWarn>
+    <WarningsAsErrors>NU1605;CS8034</WarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory).editorconfig" Link=".editorconfig" />
+    <None Include="$(MSBuildThisFileDirectory)LICENSE" Pack="true" Visible="false" PackagePath="" />
+    <None Include="$(MSBuildThisFileDirectory)icon.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+</Project>
