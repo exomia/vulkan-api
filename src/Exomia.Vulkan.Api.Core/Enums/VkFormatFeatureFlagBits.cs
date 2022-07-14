@@ -222,12 +222,6 @@ public enum VkFormatFeatureFlagBits
     VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT = 0x10000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_IMG<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits</a>
-    /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_IMG = 0x2000,
-
-    /// <summary>
     ///     VK_FORMAT_FEATURE_VIDEO_DECODE_OUTPUT_BIT_KHR specifies that an image view with this format can be used as an
     ///     output for
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
@@ -262,6 +256,15 @@ public enum VkFormatFeatureFlagBits
     ///     builds.
     /// </summary>
     VK_FORMAT_FEATURE_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHR = 0x20000000,
+
+    /// <summary>
+    ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT specifies that VkImage can be used with a sampler that
+    ///     has either of magFilter or minFilter set to VK_FILTER_CUBIC_EXT, or be the source image for a blit with filter set
+    ///     to VK_FILTER_CUBIC_EXT. This bit must only be exposed for formats that also support the
+    ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT. If the format being queried is a depth/stencil format, this only specifies
+    ///     that the depth aspect is cubic filterable.
+    /// </summary>
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT = 0x2000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_FRAGMENT_DENSITY_MAP_BIT_EXT specifies that an image view can be used as a
@@ -304,6 +307,15 @@ public enum VkFormatFeatureFlagBits
     ///     </a>
     /// </summary>
     VK_FORMAT_FEATURE_VIDEO_ENCODE_DPB_BIT_KHR = 0x10000000,
+
+    /// <summary>
+    ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT specifies that VkImage can be used with a sampler that
+    ///     has either of magFilter or minFilter set to VK_FILTER_CUBIC_EXT, or be the source image for a blit with filter set
+    ///     to VK_FILTER_CUBIC_EXT. This bit must only be exposed for formats that also support the
+    ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT. If the format being queried is a depth/stencil format, this only specifies
+    ///     that the depth aspect is cubic filterable.
+    /// </summary>
+    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_IMG = VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_TRANSFER_SRC_BIT specifies that an image can be used as a source image for
@@ -414,11 +426,5 @@ public enum VkFormatFeatureFlagBits
     ///     </a>
     ///     using this format as a source.
     /// </summary>
-    VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT_KHR = VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT,
-
-    /// <summary>
-    ///     VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits</a>
-    /// </summary>
-    VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_EXT = VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_CUBIC_BIT_IMG
+    VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT_KHR = VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT
 }

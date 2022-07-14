@@ -25,15 +25,9 @@ public enum VkFilter
     /// <summary>VK_FILTER_LINEAR specifies linear filtering.</summary>
     VK_FILTER_LINEAR = 1,
 
-    /// <summary>
-    ///     VK_FILTER_CUBIC_IMG<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFilter">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFilter</a>
-    /// </summary>
-    VK_FILTER_CUBIC_IMG = 1000015000,
+    /// <summary>VK_FILTER_CUBIC_EXT specifies cubic filtering.</summary>
+    VK_FILTER_CUBIC_EXT = 1000015000,
 
-    /// <summary>
-    ///     VK_FILTER_CUBIC_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFilter">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFilter</a>
-    /// </summary>
-    VK_FILTER_CUBIC_EXT = VK_FILTER_CUBIC_IMG
+    /// <summary>VK_FILTER_CUBIC_EXT specifies cubic filtering.</summary>
+    VK_FILTER_CUBIC_IMG = VK_FILTER_CUBIC_EXT
 }

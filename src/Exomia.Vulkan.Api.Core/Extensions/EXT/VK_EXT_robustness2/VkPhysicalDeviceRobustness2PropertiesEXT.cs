@@ -46,14 +46,15 @@ public unsafe struct VkPhysicalDeviceRobustness2PropertiesEXT
 
     /// <summary>
     ///     robustStorageBufferAccessSizeAlignment is the number of bytes that the range of a storage buffer descriptor is
-    ///     rounded up to when used for bounds-checking when robustBufferAccess2 is enabled. This value must be either 1 or 4.
+    ///     rounded up to when used for bounds-checking when the robustBufferAccess2 feature is enabled. This value must be
+    ///     either 1 or 4.
     /// </summary>
     public VkDeviceSize robustStorageBufferAccessSizeAlignment;
 
     /// <summary>
     ///     robustUniformBufferAccessSizeAlignment is the number of bytes that the range of a uniform buffer descriptor is
-    ///     rounded up to when used for bounds-checking when robustBufferAccess2 is enabled. This value must be a power of two
-    ///     in the range [1, 256].
+    ///     rounded up to when used for bounds-checking when the robustBufferAccess2 feature is enabled. This value must be a
+    ///     power of two in the range [1, 256].
     /// </summary>
     public VkDeviceSize robustUniformBufferAccessSizeAlignment;
 }

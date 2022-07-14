@@ -32,7 +32,7 @@ public struct VkVertexInputBindingDivisorDescriptionEXT
     ///     successive instances before moving on to the next vertex attribute. The maximum value of divisor is
     ///     implementation-dependent and can be queried using
     ///     VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT::maxVertexAttribDivisor. A value of 0 can be used for the
-    ///     divisor if the vertexAttributeInstanceRateZeroDivisorfeature is enabled. In this case, the same vertex attribute
+    ///     divisor if the vertexAttributeInstanceRateZeroDivisor feature is enabled. In this case, the same vertex attribute
     ///     will be applied to all instances.
     /// </summary>
     public uint divisor;
