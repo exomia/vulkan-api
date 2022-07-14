@@ -278,7 +278,7 @@ public unsafe struct VkPhysicalDeviceVulkan12Features
 
     /// <summary>
     ///     samplerFilterMinmax indicates whether the implementation supports a minimum set of required formats
-    ///     supporting min/max filtering as defined by the filterMinmaxSingleComponentFormatsproperty minimum requirements. If
+    ///     supporting min/max filtering as defined by the filterMinmaxSingleComponentFormats property minimum requirements. If
     ///     this feature is not enabled, then VkSamplerReductionModeCreateInfo must only use
     ///     VK_SAMPLER_REDUCTION_MODE_WEIGHTED_AVERAGE.
     /// </summary>

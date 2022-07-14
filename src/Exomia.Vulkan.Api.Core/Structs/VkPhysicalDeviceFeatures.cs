@@ -32,8 +32,8 @@ public struct VkPhysicalDeviceFeatures
     ///     range. This includes accesses performed via variable pointers where the buffer descriptor being accessed cannot be
     ///     statically determined. Uninitialized pointers and pointers equal to OpConstantNull are treated as pointing to a
     ///     zero-sized object, so all accesses through such pointers are considered to be out of bounds. Buffer accesses
-    ///     through buffer device addresses are not bounds-checked. If the cooperativeMatrixRobustBufferAccessfeature is not
-    ///     enabled, then accesses using OpCooperativeMatrixLoadNV and OpCooperativeMatrixStoreNVmay not be
+    ///     through buffer device addresses are not bounds-checked. If the cooperativeMatrixRobustBufferAccess feature is not
+    ///     enabled, then accesses using OpCooperativeMatrixLoadNV and OpCooperativeMatrixStoreNV may not be
     ///     bounds-checked.NoteIf a SPIR-V OpLoad instruction loads a structure and the tail end of the structure is out of
     ///     bounds, then all members of the structure are considered out of bounds even if the members at the end are not
     ///     statically used.If robustBufferAccess2 is not enabled and any buffer access is determined to be out of bounds, then
@@ -46,16 +46,16 @@ public struct VkPhysicalDeviceFeatures
     ///     are not considered to be out of bounds. Instead, each type of descriptor access defines a specific behavior for
     ///     accesses to a null descriptor.Out-of-bounds buffer loads will return any of the following values:If the access is
     ///     to a uniform buffer and robustBufferAccess2 is enabled, loads of offsets between the end of the descriptor range
-    ///     and the end of the descriptor range rounded up to a multiple of robustUniformBufferAccessSizeAlignmentbytes must
+    ///     and the end of the descriptor range rounded up to a multiple of robustUniformBufferAccessSizeAlignment bytes must
     ///     return either zero values or the contents of the memory at the offset being loaded. Loads of offsets past the
-    ///     descriptor range rounded up to a multiple of robustUniformBufferAccessSizeAlignmentbytes must return zero values.If
-    ///     the access is to a storage buffer and robustBufferAccess2 is enabled, loads of offsets between the end of the
-    ///     descriptor range and the end of the descriptor range rounded up to a multiple of
-    ///     robustStorageBufferAccessSizeAlignmentbytes must return either zero values or the contents of the memory at the
+    ///     descriptor range rounded up to a multiple of robustUniformBufferAccessSizeAlignment bytes must return zero
+    ///     values.If the access is to a storage buffer and robustBufferAccess2 is enabled, loads of offsets between the end of
+    ///     the descriptor range and the end of the descriptor range rounded up to a multiple of
+    ///     robustStorageBufferAccessSizeAlignment bytes must return either zero values or the contents of the memory at the
     ///     offset being loaded. Loads of offsets past the descriptor range rounded up to a multiple of
-    ///     robustStorageBufferAccessSizeAlignmentbytes must return zero values. Similarly, stores to addresses between the end
-    ///     of the descriptor range and the end of the descriptor range rounded up to a multiple of
-    ///     robustStorageBufferAccessSizeAlignmentbytes may be discarded.Non-atomic accesses to storage buffers that are a
+    ///     robustStorageBufferAccessSizeAlignment bytes must return zero values. Similarly, stores to addresses between the
+    ///     end of the descriptor range and the end of the descriptor range rounded up to a multiple of
+    ///     robustStorageBufferAccessSizeAlignment bytes may be discarded.Non-atomic accesses to storage buffers that are a
     ///     multiple of 32 bits may be decomposed into 32-bit accesses that are individually bounds-checked.If the access is to
     ///     an index buffer and robustBufferAccess2 is enabled, zero values must be returned.If the access is to a uniform
     ///     texel buffer or storage texel buffer and robustBufferAccess2 is enabled, zero values must be returned, and then
@@ -81,7 +81,8 @@ public struct VkPhysicalDeviceFeatures
     ///     if the offset of the attribute in the bound vertex buffer range plus the size of the attribute is greater than the
     ///     byte size of the memory range bound to the vertex buffer binding.If a vertex input attribute is out of bounds, the
     ///     raw data extracted are zero values, and missing G, B, or A components are filled with (0,0,1).If robustBufferAccess
-    ///     is not enabled, applications must not perform out of bounds accesses.
+    ///     is not enabled, applications must not perform out of bounds accesses except under the conditions enabled by the
+    ///     pipelineRobustness feature. .
     /// </summary>
     public VkBool32 robustBufferAccess;
 

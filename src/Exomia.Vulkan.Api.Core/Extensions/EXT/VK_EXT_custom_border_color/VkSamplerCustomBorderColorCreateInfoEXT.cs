@@ -45,7 +45,7 @@ public unsafe struct VkSamplerCustomBorderColorCreateInfoEXT
 
     /// <summary>
     ///     format is a VkFormat representing the format of the sampled image view(s). This field may be
-    ///     VK_FORMAT_UNDEFINED if the customBorderColorWithoutFormatfeature is enabled.
+    ///     VK_FORMAT_UNDEFINED if the customBorderColorWithoutFormat feature is enabled.
     /// </summary>
     public VkFormat format;
 }

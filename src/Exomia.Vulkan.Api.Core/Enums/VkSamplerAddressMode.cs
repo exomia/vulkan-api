@@ -36,7 +36,7 @@ public enum VkSamplerAddressMode
     ///     This is only valid if
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#features-samplerMirrorClampToEdge">
-    ///         samplerMirrorClampToEdge
+    ///         <code>samplerMirrorClampToEdge</code>
     ///     </a>
     ///     is enabled, or if     the VK_KHR_sampler_mirror_clamp_to_edge extension is enabled.
     /// </summary>
@@ -47,7 +47,7 @@ public enum VkSamplerAddressMode
     ///     This is only valid if
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#features-samplerMirrorClampToEdge">
-    ///         samplerMirrorClampToEdge
+    ///         <code>samplerMirrorClampToEdge</code>
     ///     </a>
     ///     is enabled, or if     the VK_KHR_sampler_mirror_clamp_to_edge extension is enabled.
     /// </summary>

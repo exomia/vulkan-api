@@ -20,13 +20,15 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkTimeDomainEXT
 {
     /// <summary>
-    ///     VK_TIME_DOMAIN_DEVICE_EXT specifies the device time domain. Timestamp values in this time domain use the same
-    ///     units and are comparable with device timestamp values captured using
+    ///     VK_TIME_DOMAIN_DEVICE_EXT specifies the device time domain. Timestamp values in this time domain use the same units
+    ///     and are comparable with device timestamp values captured using
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp.html">vkCmdWriteTimestamp</a>
     ///     or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp2.html">vkCmdWriteTimestamp2</a>
     ///     and are defined to be incrementing according to the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#limits-timestampPeriod">timestampPeriod</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#limits-timestampPeriod">
+    ///         <code>timestampPeriod</code>
+    ///     </a>
     ///     of the device.
     /// </summary>
     VK_TIME_DOMAIN_DEVICE_EXT = 0,

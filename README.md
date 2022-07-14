@@ -72,6 +72,11 @@ In order to be able to build Exomia.Vulkan.Api.Platforms, make sure that the cor
 To build Exomia.Vulkan.Api.Platforms, open Exomia.Vulkan.Api.Platforms.sln in Visual Studio 2022 and build the solution. 
 Alternatively you can also build it on the command line, run the ```dotnet build Exomia.Vulkan.Api.Platforms.sln``` command. 
 
+## Q&A, Ideas or Show & tell us
+
+You have questions, ideas or want to show or tell us something?  
+Open a new [discussion](https://github.com/exomia/vulkan-api/discussions) or join an existing one!
+
 ---
 ## Social
 

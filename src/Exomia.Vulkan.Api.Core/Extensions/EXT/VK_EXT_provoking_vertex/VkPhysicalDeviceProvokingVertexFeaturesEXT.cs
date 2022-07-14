@@ -50,7 +50,7 @@ public unsafe struct VkPhysicalDeviceProvokingVertexFeaturesEXT
     /// <summary>
     ///     transformFeedbackPreservesProvokingVertex indicates that the order of vertices within each primitive written
     ///     by transform feedback will preserve the provoking vertex. This does not apply to triangle fan primitives when
-    ///     transformFeedbackPreservesTriangleFanProvokingVertexis VK_FALSE. transformFeedbackPreservesProvokingVertex must be
+    ///     transformFeedbackPreservesTriangleFanProvokingVertex is VK_FALSE. transformFeedbackPreservesProvokingVertex must be
     ///     VK_FALSEwhen the VK_EXT_transform_feedback extension is not supported.
     /// </summary>
     public VkBool32 transformFeedbackPreservesProvokingVertex;
