@@ -19,8 +19,7 @@ jobs:
     steps:
     - name: 'print information'
       run: |
-        echo "release-version: ${{ needs.get-release-info.outputs.release-version }}" 
-        echo "release-suffix: ${{ github.event.inputs.release-suffix }}"
+        echo "release-version: ${{ needs.get-release-info.outputs.release-version }}"
   build-core:
     needs: [get-release-info]
     strategy:
