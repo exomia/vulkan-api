@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkHuaweiSubpassShading;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_HUAWEI_subpass_shading - device extension (nr. 370) - author 'HUAWEI' [platform '' | contact 'Hueilong Wang
-///     @wyvernathuawei']<br />
+///     VK_HUAWEI_subpass_shading - device extension (nr. 370) - author 'HUAWEI' [platform '' | contact 'Pan Gao
+///     @PanGao-h']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_subpass_shading.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_subpass_shading.html</a>
 /// </summary>
 [VkRequires("VK_KHR_create_renderpass2,VK_KHR_synchronization2")]

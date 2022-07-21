@@ -47,8 +47,9 @@ public enum VkPipelineRobustnessBufferBehaviorEXT
     /// <summary>
     ///     VK_PIPELINE_ROBUSTNESS_BUFFER_BEHAVIOR_ROBUST_BUFFER_ACCESS_2_EXTspecifies that out of bounds accesses by this
     ///     pipeline stage to the relevant resource types behave as if the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#features-robustBufferAccess">
-    ///         <code>robustBufferAccess</code>
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#features-robustBufferAccess2">
+    ///         <code>robustBufferAccess2</code>
     ///     </a>
     ///     feature is enabled
     /// </summary>

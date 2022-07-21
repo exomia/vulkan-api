@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkHuaweiInvocationMask;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_HUAWEI_invocation_mask - device extension (nr. 371) - author 'Huawei' [platform '' | contact 'Yunpeng Zhu
-///     @yunxingzhu']<br />
+///     VK_HUAWEI_invocation_mask - device extension (nr. 371) - author 'Huawei' [platform '' | contact 'Pan Gao
+///     @PanGao-h']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_invocation_mask.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_invocation_mask.html</a>
 /// </summary>
 [VkRequires("VK_KHR_ray_tracing_pipeline,VK_KHR_synchronization2")]

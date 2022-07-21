@@ -1,4 +1,4 @@
-<!--EXTERNAL_PROPERTIES: VersionSuffix-->
+<!--EXTERNAL_PROPERTIES: VersionSuffix;MSBuildThisFileDirectory-->
 <Project>
   <PropertyGroup>
     <LangVersion>10.0</LangVersion>
@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>1.3.221$(VersionSuffix)</Version>
+    <Version>$([System.IO.File]::ReadAllText("$(MSBuildThisFileDirectory).version"))</Version>
   </PropertyGroup>
 
   <PropertyGroup>
