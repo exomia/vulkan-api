@@ -171,6 +171,27 @@ public enum VkDescriptorType
     VK_DESCRIPTOR_TYPE_MUTABLE_VALVE = 1000351000,
 
     /// <summary>
+    ///     VK_DESCRIPTOR_TYPE_SAMPLE_WEIGHT_IMAGE_QCOM specifies a
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-weightimage">
+    ///         sampled
+    ///         weight image descriptor
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_DESCRIPTOR_TYPE_SAMPLE_WEIGHT_IMAGE_QCOM = 1000440000,
+
+    /// <summary>
+    ///     VK_DESCRIPTOR_TYPE_BLOCK_MATCH_IMAGE_QCOM specifies a
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-blockmatching">
+    ///         block
+    ///         matching image descriptor
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_DESCRIPTOR_TYPE_BLOCK_MATCH_IMAGE_QCOM = 1000440001,
+
+    /// <summary>
     ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK specifies an
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inlineuniformblock">

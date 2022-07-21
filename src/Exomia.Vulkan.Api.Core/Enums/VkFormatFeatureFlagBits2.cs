@@ -355,28 +355,51 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_LINEAR_COLOR_ATTACHMENT_BIT_NV = 0x4000000000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_RESERVED_34_BIT_QCOM<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
+    ///     VK_FORMAT_FEATURE_2_WEIGHT_IMAGE_BIT_QCOM specifies that image views created with this format can be used as the
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-weightimage">
+    ///         weight
+    ///         image
+    ///     </a>
+    ///     input to
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-weightimage">
+    ///         weight
+    ///         image sampling
+    ///     </a>
+    ///     operations.
     /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_34_BIT_QCOM = 0x400000000,
+    VK_FORMAT_FEATURE_2_WEIGHT_IMAGE_BIT_QCOM = 0x400000000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_RESERVED_35_BIT_QCOM<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
+    ///     VK_FORMAT_FEATURE_2_WEIGHT_SAMPLED_IMAGE_BIT_QCOM specifies that image views created with this format can be
+    ///     sampled in
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-weightimage">
+    ///         weight
+    ///         image sampling
+    ///     </a>
+    ///     operations.
     /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_35_BIT_QCOM = 0x800000000,
+    VK_FORMAT_FEATURE_2_WEIGHT_SAMPLED_IMAGE_BIT_QCOM = 0x800000000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_RESERVED_36_BIT_QCOM<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
+    ///     VK_FORMAT_FEATURE_2_BLOCK_MATCHING_BIT_QCOM specifies that image views created with this format can be used in
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-blockmatch">
+    ///         block
+    ///         matching
+    ///     </a>
+    ///     operations.
     /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_36_BIT_QCOM = 0x1000000000,
+    VK_FORMAT_FEATURE_2_BLOCK_MATCHING_BIT_QCOM = 0x1000000000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_RESERVED_37_BIT_QCOM<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
+    ///     VK_FORMAT_FEATURE_2_BOX_FILTER_SAMPLED_BIT_QCOM specifies that image views created with this format can be sampled
+    ///     in
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-boxfilter">
+    ///         box
+    ///         filter sampling
+    ///     </a>
+    ///     operations.
     /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_37_BIT_QCOM = 0x2000000000,
+    VK_FORMAT_FEATURE_2_BOX_FILTER_SAMPLED_BIT_QCOM = 0x2000000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_RESERVED_39_BIT_EXT<br />

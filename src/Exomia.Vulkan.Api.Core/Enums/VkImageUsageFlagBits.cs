@@ -216,16 +216,16 @@ public enum VkImageUsageFlagBits
     VK_IMAGE_USAGE_INVOCATION_MASK_BIT_HUAWEI = 0x40000,
 
     /// <summary>
-    ///     VK_IMAGE_USAGE_RESERVED_20_BIT_QCOM<br />
+    ///     VK_IMAGE_USAGE_SAMPLE_WEIGHT_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
     /// </summary>
-    VK_IMAGE_USAGE_RESERVED_20_BIT_QCOM = 0x100000,
+    VK_IMAGE_USAGE_SAMPLE_WEIGHT_BIT_QCOM = 0x100000,
 
     /// <summary>
-    ///     VK_IMAGE_USAGE_RESERVED_21_BIT_QCOM<br />
+    ///     VK_IMAGE_USAGE_SAMPLE_BLOCK_MATCH_BIT_QCOM<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
     /// </summary>
-    VK_IMAGE_USAGE_RESERVED_21_BIT_QCOM = 0x200000,
+    VK_IMAGE_USAGE_SAMPLE_BLOCK_MATCH_BIT_QCOM = 0x200000,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR specifies     that the image can be used to create a
