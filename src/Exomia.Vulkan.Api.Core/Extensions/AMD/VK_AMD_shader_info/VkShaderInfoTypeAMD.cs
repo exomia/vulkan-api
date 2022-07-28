@@ -25,6 +25,6 @@ public enum VkShaderInfoTypeAMD
     /// <summary>VK_SHADER_INFO_TYPE_BINARY_AMD specifies that implementation-specific information will be queried.</summary>
     VK_SHADER_INFO_TYPE_BINARY_AMD = 1,
 
-    /// <summary>VK_SHADER_INFO_TYPE_DISASSEMBLY_AMD specifies that human-readable dissassembly of a shader.</summary>
+    /// <summary>VK_SHADER_INFO_TYPE_DISASSEMBLY_AMD specifies that human-readable disassembly of a shader.</summary>
     VK_SHADER_INFO_TYPE_DISASSEMBLY_AMD = 2
 }

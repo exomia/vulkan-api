@@ -41,7 +41,7 @@ public unsafe struct VkDeviceDiagnosticsConfigCreateInfoNV
     public void* pNext;
 
     /// <summary>
-    ///     flags is a bitmask of VkDeviceDiagnosticsConfigFlagBitsNVspecifying addtional parameters for configuring
+    ///     flags is a bitmask of VkDeviceDiagnosticsConfigFlagBitsNVspecifying additional parameters for configuring
     ///     diagnostic tools.
     /// </summary>
     public VkDeviceDiagnosticsConfigFlagsNV flags;
