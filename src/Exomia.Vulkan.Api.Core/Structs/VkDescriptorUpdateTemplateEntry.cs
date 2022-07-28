@@ -49,7 +49,7 @@ public struct VkDescriptorUpdateTemplateEntry
     public nuint offset;
 
     /// <summary>
-    ///     stride is the stride in bytes between two consecutive array elements of the descriptor update informations in
+    ///     stride is the stride in bytes between two consecutive array elements of the descriptor update information in
     ///     the raw data structure. The actual pointer ptr for each array element j of update entry i is computed using the
     ///     following formula:    const char *ptr = (const char *)pData + pDescriptorUpdateEntries[i].offset + j *
     ///     pDescriptorUpdateEntries[i].strideThe stride is useful in case the bindings are stored in structs along with other

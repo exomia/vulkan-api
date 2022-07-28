@@ -40,12 +40,20 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT = 0x1,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT indicates that descriptors in this binding can be
-    ///     updated after a command buffer has bound this descriptor set, or while a command buffer that uses this descriptor
-    ///     set is pending execution, as long as the descriptors that are updated are not used by those command buffers. If
-    ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT is also set, then descriptors can be updated as long as they are not
-    ///     dynamically used by any shader invocations. If VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT is not set, then
-    ///     descriptors can be updated as long as they are not statically used by any shader invocations.
+    ///     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT indicates that descriptors in this binding can be updated
+    ///     after a command buffer has bound this descriptor set, or while a command buffer that uses this descriptor set is
+    ///     pending execution, as long as the descriptors that are updated are not used by those command buffers. Descriptor
+    ///     bindings created with this flag are also partially exempt from the external synchronization requirement in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html">
+    ///         vkUpdateDescriptorSetWithTemplateKHR
+    ///     </a>
+    ///     and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkUpdateDescriptorSets.html">vkUpdateDescriptorSets</a>
+    ///     in the same way as for VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT. If VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT is
+    ///     also set, then descriptors can be updated as long as they are not dynamically used by any shader invocations. If
+    ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT is not set, then descriptors can be updated as long as they are not
+    ///     statically used by any shader invocations.
     /// </summary>
     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT = 0x2,
 
@@ -106,12 +114,20 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT_EXT = VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT indicates that descriptors in this binding can be
-    ///     updated after a command buffer has bound this descriptor set, or while a command buffer that uses this descriptor
-    ///     set is pending execution, as long as the descriptors that are updated are not used by those command buffers. If
-    ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT is also set, then descriptors can be updated as long as they are not
-    ///     dynamically used by any shader invocations. If VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT is not set, then
-    ///     descriptors can be updated as long as they are not statically used by any shader invocations.
+    ///     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT indicates that descriptors in this binding can be updated
+    ///     after a command buffer has bound this descriptor set, or while a command buffer that uses this descriptor set is
+    ///     pending execution, as long as the descriptors that are updated are not used by those command buffers. Descriptor
+    ///     bindings created with this flag are also partially exempt from the external synchronization requirement in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html">
+    ///         vkUpdateDescriptorSetWithTemplateKHR
+    ///     </a>
+    ///     and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkUpdateDescriptorSets.html">vkUpdateDescriptorSets</a>
+    ///     in the same way as for VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT. If VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT is
+    ///     also set, then descriptors can be updated as long as they are not dynamically used by any shader invocations. If
+    ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT is not set, then descriptors can be updated as long as they are not
+    ///     statically used by any shader invocations.
     /// </summary>
     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT_EXT = VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT,
 

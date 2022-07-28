@@ -47,7 +47,7 @@ public unsafe struct VkDisplayNativeHdrSurfaceCapabilitiesAMD
     /// <summary>
     ///     localDimmingSupport specifies whether the surface supports local dimming. If this is VK_TRUE,
     ///     VkSwapchainDisplayNativeHdrCreateInfoAMDcan be used to explicitly enable or disable local dimming for the surface.
-    ///     Local dimming may also be overriden by vkSetLocalDimmingAMD during the lifetime of the swapchain.
+    ///     Local dimming may also be overridden by vkSetLocalDimmingAMDduring the lifetime of the swapchain.
     /// </summary>
     public VkBool32 localDimmingSupport;
 }

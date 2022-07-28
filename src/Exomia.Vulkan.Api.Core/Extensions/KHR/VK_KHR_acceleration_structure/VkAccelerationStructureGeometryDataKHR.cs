@@ -27,7 +27,7 @@ public struct VkAccelerationStructureGeometryDataKHR
     [FieldOffset(0)]
     public VkAccelerationStructureGeometryTrianglesDataKHR triangles;
 
-    /// <summary>aabbs is a VkAccelerationStructureGeometryAabbsDataKHRstruture.</summary>
+    /// <summary>aabbs is a VkAccelerationStructureGeometryAabbsDataKHRstructure.</summary>
     [FieldOffset(0)]
     public VkAccelerationStructureGeometryAabbsDataKHR aabbs;
 

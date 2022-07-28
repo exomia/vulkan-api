@@ -27,7 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkQcomRenderPassTransform
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION = 2;
+    public const uint VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION = 3;
 
     /// <summary> The extension name. </summary>
     public const string VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME = "VK_QCOM_render_pass_transform";

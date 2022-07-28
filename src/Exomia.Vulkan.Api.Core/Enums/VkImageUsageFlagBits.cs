@@ -170,7 +170,7 @@ public enum VkImageUsageFlagBits
 
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_ENCODE_SRC_BIT_KHR specifies that the image can be used as an
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#input-encode-picture">
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#encode-input-picture">
     ///         input
     ///         picture
     ///     </a>
@@ -190,7 +190,7 @@ public enum VkImageUsageFlagBits
     ///         encode operations
     ///     </a>
     ///     can use the image as an output to hold a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-picture-resources">
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#reconstructed-picture">
     ///         reconstructed
     ///         picture
     ///     </a>

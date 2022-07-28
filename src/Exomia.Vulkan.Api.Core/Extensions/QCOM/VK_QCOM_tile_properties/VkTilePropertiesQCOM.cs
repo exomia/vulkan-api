@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkTilePropertiesQCOM - Structure holding availabe tile properties -
+///     VkTilePropertiesQCOM - Structure holding available tile properties -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTilePropertiesQCOM.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTilePropertiesQCOM.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]

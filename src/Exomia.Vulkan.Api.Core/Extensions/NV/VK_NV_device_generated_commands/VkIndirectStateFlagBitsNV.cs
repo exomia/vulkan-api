@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkIndirectStateFlagBitsNV - Bitmask specifiying state that can be altered on the device -
+///     VkIndirectStateFlagBitsNV - Bitmask specifying state that can be altered on the device -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectStateFlagBitsNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectStateFlagBitsNV.html</a>
 /// </summary>
 [Flags]
