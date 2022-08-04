@@ -180,6 +180,12 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_LIBRARY_BIT_KHR = 0x800,
 
     /// <summary>
+    ///     VK_PIPELINE_CREATE_RESERVED_29_AMD<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_RESERVED_29_AMD = 0x20000000,
+
+    /// <summary>
     ///     VK_PIPELINE_CREATE_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_EXTspecifies that pipeline libraries should retain
     ///     any information necessary to later perform an optimal link with VK_PIPELINE_CREATE_LINK_TIME_OPTIMIZATION_BIT_EXT.
     /// </summary>
@@ -199,22 +205,28 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_RAY_TRACING_ALLOW_MOTION_BIT_NV = 0x100000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_RESERVED_25_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    ///     VK_PIPELINE_CREATE_COLOR_ATTACHMENT_FEEDBACK_LOOP_BIT_EXTspecifies that the pipeline may be used with an
+    ///     attachment feedback loop including color attachments.
     /// </summary>
-    VK_PIPELINE_CREATE_RESERVED_25_BIT_EXT = 0x2000000,
+    VK_PIPELINE_CREATE_COLOR_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT = 0x2000000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_RESERVED_26_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    ///     VK_PIPELINE_CREATE_DEPTH_STENCIL_ATTACHMENT_FEEDBACK_LOOP_BIT_EXTspecifies that the pipeline may be used with
+    ///     an attachment feedback loop including depth-stencil attachments.
     /// </summary>
-    VK_PIPELINE_CREATE_RESERVED_26_BIT_EXT = 0x4000000,
+    VK_PIPELINE_CREATE_DEPTH_STENCIL_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT = 0x4000000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RESERVED_24_BIT_NV<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
     /// </summary>
     VK_PIPELINE_CREATE_RESERVED_24_BIT_NV = 0x1000000,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RESERVED_BIT_28_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_RESERVED_BIT_28_NV = 0x10000000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RESERVED_27_BIT_EXT<br />
