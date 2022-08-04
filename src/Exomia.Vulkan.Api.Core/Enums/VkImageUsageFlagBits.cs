@@ -204,10 +204,12 @@ public enum VkImageUsageFlagBits
     VK_IMAGE_USAGE_VIDEO_ENCODE_DPB_BIT_KHR = 0x8000,
 
     /// <summary>
-    ///     VK_IMAGE_USAGE_RESERVED_19_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageUsageFlagBits</a>
+    ///     VK_IMAGE_USAGE_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT specifies that the image can be transitioned to the
+    ///     VK_IMAGE_LAYOUT_ATTACHMENT_FEEDBACK_LOOP_OPTIMAL_EXT layout to be used as a color or depth/stencil attachment in a
+    ///     VkFramebufferand/or as a read-only input resource in a shader (sampled image, combined image sampler or input
+    ///     attachment) in the same render pass.
     /// </summary>
-    VK_IMAGE_USAGE_RESERVED_19_BIT_EXT = 0x80000,
+    VK_IMAGE_USAGE_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT = 0x80000,
 
     /// <summary>
     ///     VK_IMAGE_USAGE_INVOCATION_MASK_BIT_HUAWEI<br />

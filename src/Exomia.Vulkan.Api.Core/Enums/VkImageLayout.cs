@@ -238,6 +238,16 @@ public enum VkImageLayout
     VK_IMAGE_LAYOUT_VIDEO_ENCODE_DPB_KHR = 1000299002,
 
     /// <summary>
+    ///     VK_IMAGE_LAYOUT_ATTACHMENT_FEEDBACK_LOOP_OPTIMAL_EXT must only be used as either a color attachment or
+    ///     depth/stencil attachment in a VkFramebuffer and/or read-only access in a shader as a sampled image, combined
+    ///     image/sampler, or input attachment. This layout is valid only for image subresources of images created with the
+    ///     VK_IMAGE_USAGE_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT usage bit enabled and either the
+    ///     VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT or VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT and either the
+    ///     VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT or VK_IMAGE_USAGE_SAMPLED_BIT usage bits enabled.
+    /// </summary>
+    VK_IMAGE_LAYOUT_ATTACHMENT_FEEDBACK_LOOP_OPTIMAL_EXT = 1000339000,
+
+    /// <summary>
     ///     VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMALspecifies a layout for depth/stencil format images
     ///     allowing read and write access to the stencil aspect as a stencil attachment, and read only access to the depth
     ///     aspect as a depth attachment or in shaders as a sampled image, combined image/sampler, or input attachment. It is
