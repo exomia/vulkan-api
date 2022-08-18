@@ -55,24 +55,23 @@ public enum VkToolPurposeFlagBits
 
     /// <summary>
     ///     VK_TOOL_PURPOSE_DEBUG_MARKERS_BIT_EXT specifies that the tool consumes
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#debugging-debug-markers">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#debugging-debug-markers">
     ///         debug
     ///         markers
     ///     </a>
     ///     or
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#debugging-object-debug-annotation">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#debugging-object-debug-annotation">
     ///         object
     ///         debug annotation
     ///     </a>
     ///     ,
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#debugging-queue-labels">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#debugging-queue-labels">
     ///         queue
     ///         labels
     ///     </a>
     ///     , or
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#debugging-command-buffer-labels">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#debugging-command-buffer-labels">
     ///         command
     ///         buffer labels
     ///     </a>

@@ -23,7 +23,7 @@ public enum VkFenceImportFlagBits
     /// <summary>
     ///     VK_FENCE_IMPORT_TEMPORARY_BIT specifies that the fence payload will be imported only temporarily, as described in
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-fences-importing">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-fences-importing">
     ///         Importing
     ///         Fence Payloads
     ///     </a>
@@ -34,7 +34,7 @@ public enum VkFenceImportFlagBits
     /// <summary>
     ///     VK_FENCE_IMPORT_TEMPORARY_BIT specifies that the fence payload will be imported only temporarily, as described in
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-fences-importing">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-fences-importing">
     ///         Importing
     ///         Fence Payloads
     ///     </a>

@@ -21,7 +21,7 @@ public enum VkDescriptorType
 {
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_SAMPLER specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampler">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampler">
     ///         sampler
     ///         descriptor
     ///     </a>
@@ -32,7 +32,7 @@ public enum VkDescriptorType
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER specifies a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler">
     ///         combined
     ///         image sampler descriptor
     ///     </a>
@@ -42,7 +42,7 @@ public enum VkDescriptorType
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage">
     ///         sampled
     ///         image descriptor
     ///     </a>
@@ -52,7 +52,7 @@ public enum VkDescriptorType
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_STORAGE_IMAGE specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
     ///         storage
     ///         image descriptor
     ///     </a>
@@ -63,7 +63,7 @@ public enum VkDescriptorType
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER specifies a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformtexelbuffer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformtexelbuffer">
     ///         uniform
     ///         texel buffer descriptor
     ///     </a>
@@ -74,7 +74,7 @@ public enum VkDescriptorType
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER specifies a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
     ///         storage
     ///         texel buffer descriptor
     ///     </a>
@@ -84,8 +84,7 @@ public enum VkDescriptorType
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER specifies a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer">
     ///         uniform
     ///         buffer descriptor
     ///     </a>
@@ -95,8 +94,7 @@ public enum VkDescriptorType
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_STORAGE_BUFFER specifies a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer">
     ///         storage
     ///         buffer descriptor
     ///     </a>
@@ -107,7 +105,7 @@ public enum VkDescriptorType
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC specifies a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbufferdynamic">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbufferdynamic">
     ///         dynamic
     ///         uniform buffer descriptor
     ///     </a>
@@ -118,7 +116,7 @@ public enum VkDescriptorType
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_STORAGE_BUFFER_DYNAMIC specifies a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebufferdynamic">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebufferdynamic">
     ///         dynamic
     ///         storage buffer descriptor
     ///     </a>
@@ -128,8 +126,7 @@ public enum VkDescriptorType
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT specifies an
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inputattachment">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inputattachment">
     ///         input
     ///         attachment descriptor
     ///     </a>
@@ -140,7 +137,7 @@ public enum VkDescriptorType
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK specifies an
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inlineuniformblock">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inlineuniformblock">
     ///         inline
     ///         uniform block
     ///     </a>
@@ -162,7 +159,7 @@ public enum VkDescriptorType
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_MUTABLE_VALVE specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-mutable">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-mutable">
     ///         descriptor
     ///         of mutable type
     ///     </a>
@@ -172,7 +169,7 @@ public enum VkDescriptorType
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_SAMPLE_WEIGHT_IMAGE_QCOM specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-weightimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-weightimage">
     ///         sampled
     ///         weight image descriptor
     ///     </a>
@@ -182,8 +179,7 @@ public enum VkDescriptorType
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_BLOCK_MATCH_IMAGE_QCOM specifies a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-blockmatching">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-blockmatching">
     ///         block
     ///         matching image descriptor
     ///     </a>
@@ -194,7 +190,7 @@ public enum VkDescriptorType
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK specifies an
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inlineuniformblock">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inlineuniformblock">
     ///         inline
     ///         uniform block
     ///     </a>

@@ -64,7 +64,7 @@ public enum VkImageLayout
     ///     VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL must only be used as a source image of a transfer command (see the definition
     ///     of
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-stages-transfer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-stages-transfer">
     ///         <code>VK_PIPELINE_STAGE_TRANSFER_BIT</code>
     ///     </a>
     ///     ). This layout is valid only for image subresources of images created with the VK_IMAGE_USAGE_TRANSFER_SRC_BIT
@@ -87,7 +87,7 @@ public enum VkImageLayout
     ///     . This layout is intended to be used as the initial layout for an image whose contents are written by the host, and
     ///     hence the data can be written to memory immediately, without first executing a layout transition. Currently,
     ///     VK_IMAGE_LAYOUT_PREINITIALIZED is only useful with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#glossary-linear-resource">linear</a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#glossary-linear-resource">linear</a>
     ///     images because there is not a standard layout defined for VK_IMAGE_TILING_OPTIMAL images.
     /// </summary>
     VK_IMAGE_LAYOUT_PREINITIALIZED = 8,
@@ -158,7 +158,7 @@ public enum VkImageLayout
 
     /// <summary>
     ///     VK_IMAGE_LAYOUT_VIDEO_DECODE_DST_KHR must only be used as a decode output image of a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operation
     ///     </a>
@@ -172,7 +172,7 @@ public enum VkImageLayout
 
     /// <summary>
     ///     VK_IMAGE_LAYOUT_VIDEO_DECODE_DPB_KHR must only be used as a decode source or destination image of a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operation
     ///     </a>
@@ -197,13 +197,12 @@ public enum VkImageLayout
     /// <summary>
     ///     VK_IMAGE_LAYOUT_FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR must    only be used as a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
     ///         fragment
     ///         shading rate     attachment
     ///     </a>
     ///     or
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
     ///         shading
     ///         rate image
     ///     </a>
@@ -217,7 +216,7 @@ public enum VkImageLayout
 
     /// <summary>
     ///     VK_IMAGE_LAYOUT_VIDEO_ENCODE_SRC_KHR must only be used as a encode source image of a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operation
     ///     </a>
@@ -228,7 +227,7 @@ public enum VkImageLayout
 
     /// <summary>
     ///     VK_IMAGE_LAYOUT_VIDEO_ENCODE_DPB_KHR must only be used as a encode source or destination image of a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operation
     ///     </a>
@@ -266,13 +265,12 @@ public enum VkImageLayout
     /// <summary>
     ///     VK_IMAGE_LAYOUT_FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR must    only be used as a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
     ///         fragment
     ///         shading rate     attachment
     ///     </a>
     ///     or
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
     ///         shading
     ///         rate image
     ///     </a>

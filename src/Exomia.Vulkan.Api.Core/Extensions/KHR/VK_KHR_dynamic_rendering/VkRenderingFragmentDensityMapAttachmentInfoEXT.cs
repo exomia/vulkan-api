@@ -41,7 +41,7 @@ public unsafe struct VkRenderingFragmentDensityMapAttachmentInfoEXT
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>imageView is the image view that will be used as a fragment shading rate attachment.</summary>
+    /// <summary>imageView is the image view that will be used as a fragment density map attachment.</summary>
     public VkImageView imageView;
 
     /// <summary>imageLayout is the layout that imageView will be in during rendering.</summary>

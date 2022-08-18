@@ -24,7 +24,7 @@ public enum VkSemaphoreImportFlagBits
     ///     VK_SEMAPHORE_IMPORT_TEMPORARY_BIT specifies that the semaphore payload will be imported only temporarily, as
     ///     described in
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-semaphores-importing">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-semaphores-importing">
     ///         Importing
     ///         Semaphore Payloads
     ///     </a>
@@ -36,7 +36,7 @@ public enum VkSemaphoreImportFlagBits
     ///     VK_SEMAPHORE_IMPORT_TEMPORARY_BIT specifies that the semaphore payload will be imported only temporarily, as
     ///     described in
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-semaphores-importing">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-semaphores-importing">
     ///         Importing
     ///         Semaphore Payloads
     ///     </a>

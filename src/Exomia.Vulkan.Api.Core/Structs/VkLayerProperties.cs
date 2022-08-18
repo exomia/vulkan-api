@@ -36,7 +36,7 @@ public unsafe struct VkLayerProperties
 
     /// <summary>
     ///     specVersion is the Vulkan version the layer was written to, encoded as described in
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-coreversions-versionnumbers.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-coreversions-versionnumbers.
     /// </summary>
     public VkVersion specVersion;
 

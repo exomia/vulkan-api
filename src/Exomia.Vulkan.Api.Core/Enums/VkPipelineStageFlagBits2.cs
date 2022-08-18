@@ -67,7 +67,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where early fragment tests (depth
     ///     and stencil tests before fragment shading) are performed. This stage also includes
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
     ///     </a>
@@ -78,7 +78,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where late fragment tests (depth
     ///     and stencil tests after fragment shading) are performed. This stage also includes
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         store operations
     ///     </a>
@@ -89,7 +89,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT specifies the stage of the pipeline after blending where the final
     ///     color values are output from the pipeline. This stage also includes
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load and store operations
     ///     </a>
@@ -158,7 +158,7 @@ public enum VkPipelineStageFlagBits2 : ulong
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_COPY_BIT specifies the execution of all
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>,
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>,
     ///     including
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyQueryPoolResults.html">vkCmdCopyQueryPoolResults</a>
     ///     .
@@ -181,8 +181,8 @@ public enum VkPipelineStageFlagBits2 : ulong
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_CLEAR_BIT specifies the execution of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>,
-    ///     with the exception of
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>, with
+    ///     the exception of
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdClearAttachments.html">vkCmdClearAttachments</a>
     ///     .
     /// </summary>
@@ -200,7 +200,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT is equivalent to specifying all supported
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
     ///         pre-rasterization
     ///         shader stages
     ///     </a>
@@ -216,7 +216,7 @@ public enum VkPipelineStageFlagBits2 : ulong
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_VIDEO_DECODE_BIT_KHR specifies the stage of the pipeline where
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operation
     ///     </a>
@@ -226,7 +226,7 @@ public enum VkPipelineStageFlagBits2 : ulong
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_VIDEO_ENCODE_BIT_KHR specifies the stage of the pipeline where
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operation
     ///     </a>
@@ -260,13 +260,12 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR    specifies the stage of the pipeline where the
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
     ///         fragment
     ///         shading rate     attachment
     ///     </a>
     ///     or
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
     ///         shading
     ///         rate image
     ///     </a>
@@ -276,7 +275,7 @@ public enum VkPipelineStageFlagBits2 : ulong
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR specifies the execution of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure">
     ///         acceleration
     ///         structure commands
     ///     </a>
@@ -290,7 +289,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT specifies the stage of the pipeline where the fragment density
     ///     map is read to
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fragmentdensitymapops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragmentdensitymapops">
     ///         generate
     ///         the fragment areas
     ///     </a>
@@ -315,8 +314,7 @@ public enum VkPipelineStageFlagBits2 : ulong
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_COPY_BIT_KHR specifies the execution of
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
     ///         acceleration
     ///         structure copy commands
     ///     </a>
@@ -383,7 +381,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where early fragment tests (depth
     ///     and stencil tests before fragment shading) are performed. This stage also includes
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
     ///     </a>
@@ -394,7 +392,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where late fragment tests (depth
     ///     and stencil tests after fragment shading) are performed. This stage also includes
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         store operations
     ///     </a>
@@ -405,7 +403,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT specifies the stage of the pipeline after blending where the final
     ///     color values are output from the pipeline. This stage also includes
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load and store operations
     ///     </a>
@@ -490,7 +488,7 @@ public enum VkPipelineStageFlagBits2 : ulong
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_COPY_BIT specifies the execution of all
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>,
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>,
     ///     including
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyQueryPoolResults.html">vkCmdCopyQueryPoolResults</a>
     ///     .
@@ -513,8 +511,8 @@ public enum VkPipelineStageFlagBits2 : ulong
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_CLEAR_BIT specifies the execution of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>,
-    ///     with the exception of
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>, with
+    ///     the exception of
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdClearAttachments.html">vkCmdClearAttachments</a>
     ///     .
     /// </summary>
@@ -532,7 +530,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT is equivalent to specifying all supported
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
     ///         pre-rasterization
     ///         shader stages
     ///     </a>
@@ -549,13 +547,12 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR    specifies the stage of the pipeline where the
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
     ///         fragment
     ///         shading rate     attachment
     ///     </a>
     ///     or
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
     ///         shading
     ///         rate image
     ///     </a>
@@ -568,7 +565,7 @@ public enum VkPipelineStageFlagBits2 : ulong
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR specifies the execution of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure">
     ///         acceleration
     ///         structure commands
     ///     </a>

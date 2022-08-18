@@ -21,7 +21,7 @@ public enum VkPrimitiveTopology
 {
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_POINT_LIST specifies a series of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-point-lists">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-point-lists">
     ///         separate
     ///         point primitives
     ///     </a>
@@ -31,7 +31,7 @@ public enum VkPrimitiveTopology
 
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_LINE_LIST specifies a series of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-line-lists">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-line-lists">
     ///         separate
     ///         line primitives
     ///     </a>
@@ -41,7 +41,7 @@ public enum VkPrimitiveTopology
 
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_LINE_STRIP specifies a series of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-line-strips">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-line-strips">
     ///         connected
     ///         line primitives
     ///     </a>
@@ -51,7 +51,7 @@ public enum VkPrimitiveTopology
 
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST specifies a series of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-lists">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-lists">
     ///         separate
     ///         triangle primitives
     ///     </a>
@@ -61,7 +61,7 @@ public enum VkPrimitiveTopology
 
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_TRIANGLE_STRIP specifies a series of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-strips">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-strips">
     ///         connected
     ///         triangle primitives
     ///     </a>
@@ -71,7 +71,7 @@ public enum VkPrimitiveTopology
 
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_TRIANGLE_FAN specifies a series of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-fans">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-fans">
     ///         connected
     ///         triangle primitives
     ///     </a>
@@ -89,7 +89,7 @@ public enum VkPrimitiveTopology
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_LINE_LIST_WITH_ADJACENCY specifies a series of
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-line-lists-with-adjacency">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-line-lists-with-adjacency">
     ///         separate
     ///         line primitives with adjacency
     ///     </a>
@@ -100,7 +100,7 @@ public enum VkPrimitiveTopology
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_LINE_STRIP_WITH_ADJACENCY specifies a series of
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-line-strips-with-adjacency">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-line-strips-with-adjacency">
     ///         connected
     ///         line primitives with adjacency
     ///     </a>
@@ -111,7 +111,7 @@ public enum VkPrimitiveTopology
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST_WITH_ADJACENCY specifies a series of
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-lists-with-adjacency">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-lists-with-adjacency">
     ///         separate
     ///         triangle primitives with adjacency
     ///     </a>
@@ -122,7 +122,7 @@ public enum VkPrimitiveTopology
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_TRIANGLE_STRIP_WITH_ADJACENCY specifies
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-strips-with-adjacency">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-triangle-strips-with-adjacency">
     ///         connected
     ///         triangle primitives with adjacency
     ///     </a>
@@ -132,7 +132,7 @@ public enum VkPrimitiveTopology
 
     /// <summary>
     ///     VK_PRIMITIVE_TOPOLOGY_PATCH_LIST specifies
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-patch-lists">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-patch-lists">
     ///         separate
     ///         patch primitives
     ///     </a>

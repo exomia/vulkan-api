@@ -42,7 +42,7 @@ public enum VkQueryResultFlagBits
     ///     VK_QUERY_RESULT_WITH_STATUS_BIT_KHR specifies that the last value returned in the query is a
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueryResultStatusKHR.html">VkQueryResultStatusKHR</a>
     ///     value. See
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-result-status-only">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-result-status-only">
     ///         result
     ///         status query
     ///     </a>

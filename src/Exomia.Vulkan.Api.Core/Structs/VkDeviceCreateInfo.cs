@@ -50,7 +50,7 @@ public unsafe struct VkDeviceCreateInfo
 
     /// <summary>
     ///     ppEnabledLayerNames is deprecated and ignored. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-layers-devicelayerdeprecation.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-layers-devicelayerdeprecation.
     /// </summary>
     public byte** ppEnabledLayerNames;
 
@@ -60,8 +60,8 @@ public unsafe struct VkDeviceCreateInfo
     /// <summary>
     ///     ppEnabledExtensionNames is a pointer to an array of enabledExtensionCount null-terminated UTF-8 strings
     ///     containing the names of extensions to enable for the created device. See the
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-extensions section
-    ///     for further details.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-extensions section for
+    ///     further details.
     /// </summary>
     public byte** ppEnabledExtensionNames;
 

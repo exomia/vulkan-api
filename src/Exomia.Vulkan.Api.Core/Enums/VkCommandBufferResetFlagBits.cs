@@ -24,7 +24,7 @@ public enum VkCommandBufferResetFlagBits
     ///     VK_COMMAND_BUFFER_RESET_RELEASE_RESOURCES_BIT specifies that most or all memory resources currently owned by the
     ///     command buffer should be returned to the parent command pool. If this flag is not set, then the command buffer may
     ///     hold onto memory resources and reuse them when recording commands. commandBuffer is moved to the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#commandbuffers-lifecycle">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#commandbuffers-lifecycle">
     ///         initial
     ///         state
     ///     </a>

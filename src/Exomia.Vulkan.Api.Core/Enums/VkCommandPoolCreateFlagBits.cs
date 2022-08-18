@@ -30,7 +30,7 @@ public enum VkCommandPoolCreateFlagBits
     /// <summary>
     ///     VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT allows any command buffer allocated from a pool to be individually
     ///     reset to the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#commandbuffers-lifecycle">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#commandbuffers-lifecycle">
     ///         initial
     ///         state
     ///     </a>

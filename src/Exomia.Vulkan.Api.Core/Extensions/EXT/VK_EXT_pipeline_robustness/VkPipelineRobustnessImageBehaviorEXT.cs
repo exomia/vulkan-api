@@ -37,7 +37,7 @@ public enum VkPipelineRobustnessImageBehaviorEXT
     /// <summary>
     ///     VK_PIPELINE_ROBUSTNESS_IMAGE_BEHAVIOR_ROBUST_IMAGE_ACCESS_EXTspecifies that out of bounds accesses by this pipeline
     ///     stage to images behave as if the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#features-robustImageAccess">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#features-robustImageAccess">
     ///         <code>robustImageAccess</code>
     ///     </a>
     ///     feature is enabled
@@ -47,7 +47,7 @@ public enum VkPipelineRobustnessImageBehaviorEXT
     /// <summary>
     ///     VK_PIPELINE_ROBUSTNESS_IMAGE_BEHAVIOR_ROBUST_IMAGE_ACCESS_2_EXTspecifies that out of bounds accesses by this
     ///     pipeline stage to images behave as if the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#features-robustImageAccess2">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#features-robustImageAccess2">
     ///         <code>robustImageAccess2</code>
     ///     </a>
     ///     feature is enabled

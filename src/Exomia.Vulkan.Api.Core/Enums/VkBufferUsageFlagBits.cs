@@ -24,7 +24,7 @@ public enum VkBufferUsageFlagBits
     ///     VK_BUFFER_USAGE_TRANSFER_SRC_BIT specifies that the buffer can be used as the source of a transfer command (see the
     ///     definition of
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-stages-transfer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-stages-transfer">
     ///         <code>VK_PIPELINE_STAGE_TRANSFER_BIT</code>
     ///     </a>
     ///     ).
@@ -108,7 +108,7 @@ public enum VkBufferUsageFlagBits
 
     /// <summary>
     ///     VK_BUFFER_USAGE_VIDEO_DECODE_SRC_BIT_KHR specifies that the buffer can be used as the source bitstream buffer in a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operation
     ///     </a>
@@ -119,7 +119,7 @@ public enum VkBufferUsageFlagBits
     /// <summary>
     ///     VK_BUFFER_USAGE_VIDEO_DECODE_DST_BIT_KHR specifies that the buffer can be used as the destination status buffer in
     ///     a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operation
     ///     </a>
@@ -168,8 +168,7 @@ public enum VkBufferUsageFlagBits
     /// <summary>
     ///     VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHRspecifies that the buffer is suitable for use
     ///     as a read-only input to an
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-building">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-building">
     ///         acceleration
     ///         structure build
     ///     </a>
@@ -187,7 +186,7 @@ public enum VkBufferUsageFlagBits
 
     /// <summary>
     ///     VK_BUFFER_USAGE_SHADER_BINDING_TABLE_BIT_KHR specifies that the buffer is suitable for use as a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
     ///         Shader
     ///         Binding Table
     ///     </a>
@@ -204,7 +203,7 @@ public enum VkBufferUsageFlagBits
     /// <summary>
     ///     VK_BUFFER_USAGE_VIDEO_ENCODE_DST_BIT_KHR specifies that the buffer can be used as the destination bitstream buffer
     ///     in a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operation
     ///     </a>
@@ -244,7 +243,7 @@ public enum VkBufferUsageFlagBits
 
     /// <summary>
     ///     VK_BUFFER_USAGE_SHADER_BINDING_TABLE_BIT_KHR specifies that the buffer is suitable for use as a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
     ///         Shader
     ///         Binding Table
     ///     </a>

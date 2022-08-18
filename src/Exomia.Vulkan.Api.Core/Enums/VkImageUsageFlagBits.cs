@@ -53,7 +53,7 @@ public enum VkImageUsageFlagBits
 
     /// <summary>
     ///     VK_IMAGE_USAGE_TRANSIENT_ATTACHMENT_BIT specifies that implementations may support using
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#memory">memory allocations</a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#memory">memory allocations</a>
     ///     with the VK_MEMORY_PROPERTY_LAZILY_ALLOCATED_BIT to back an image with this usage. This bit can be set for any
     ///     image that can be used to create a VkImageView suitable for use as a color, resolve, depth/stencil, or input
     ///     attachment.
@@ -69,7 +69,7 @@ public enum VkImageUsageFlagBits
 
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR specifies that
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operations
     ///     </a>
@@ -82,17 +82,17 @@ public enum VkImageUsageFlagBits
 
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR specifies that
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operations
     ///     </a>
     ///     can use the image as a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-picture-resources">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-picture-resources">
     ///         DPB
     ///         Video Picture Resource
     ///     </a>
     ///     , representing a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
     ///         reference
     ///         picture
     ///     </a>
@@ -107,7 +107,7 @@ public enum VkImageUsageFlagBits
     ///     VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR must be combined with VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR, if the DPB
     ///     image is required to coincide with the decoded output picture. In the case where DPB coincides with the decoded
     ///     output picture, image resources can be used as
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
     ///         reference
     ///         pictures
     ///     </a>
@@ -134,7 +134,7 @@ public enum VkImageUsageFlagBits
     /// <summary>
     ///     VK_IMAGE_USAGE_FRAGMENT_DENSITY_MAP_BIT_EXT specifies that the image can be used to create a VkImageView suitable
     ///     for use as a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fragmentdensitymapops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragmentdensitymapops">
     ///         fragment
     ///         density map image
     ///     </a>
@@ -146,13 +146,12 @@ public enum VkImageUsageFlagBits
     ///     VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR specifies     that the image can be used to create a
     ///     VkImageView suitable for     use as a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
     ///         fragment
     ///         shading rate     attachment
     ///     </a>
     ///     or
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
     ///         shading
     ///         rate image
     ///     </a>
@@ -170,12 +169,12 @@ public enum VkImageUsageFlagBits
 
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_ENCODE_SRC_BIT_KHR specifies that the image can be used as an
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#encode-input-picture">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-input-picture">
     ///         input
     ///         picture
     ///     </a>
     ///     for
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operations
     ///     </a>
@@ -185,17 +184,17 @@ public enum VkImageUsageFlagBits
 
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_ENCODE_DPB_BIT_KHR specifies that
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operations
     ///     </a>
     ///     can use the image as an output to hold a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#reconstructed-picture">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reconstructed-picture">
     ///         reconstructed
     ///         picture
     ///     </a>
     ///     that can subsequently act as an input
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
     ///         reference
     ///         picture
     ///     </a>
@@ -233,13 +232,12 @@ public enum VkImageUsageFlagBits
     ///     VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR specifies     that the image can be used to create a
     ///     VkImageView suitable for     use as a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
     ///         fragment
     ///         shading rate     attachment
     ///     </a>
     ///     or
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-shading-rate-image">
     ///         shading
     ///         rate image
     ///     </a>
