@@ -51,7 +51,7 @@ public enum VkResult
 
     /// <summary>
     ///     VK_ERROR_DEVICE_LOST The logical or physical device has been lost. See
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#devsandqueues-lost-device">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#devsandqueues-lost-device">
     ///         Lost
     ///         Device
     ///     </a>
@@ -174,21 +174,21 @@ public enum VkResult
 
     /// <summary>
     ///     VK_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR A video profile operation specified via
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileKHR.html">VkVideoProfileKHR</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileInfoKHR.html">VkVideoProfileInfoKHR</a>
     ///     ::videoCodecOperation is not supported.
     /// </summary>
     VK_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR = -1000023002,
 
     /// <summary>
     ///     VK_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR Format parameters in a requested
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileKHR.html">VkVideoProfileKHR</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileInfoKHR.html">VkVideoProfileInfoKHR</a>
     ///     chain are not supported.
     /// </summary>
     VK_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR = -1000023003,
 
     /// <summary>
     ///     VK_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR Codec-specific parameters in a requested
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileKHR.html">VkVideoProfileKHR</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileInfoKHR.html">VkVideoProfileInfoKHR</a>
     ///     chain are not supported.
     /// </summary>
     VK_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR = -1000023004,

@@ -25,7 +25,7 @@ public enum VkGeometryInstanceFlagBitsKHR
 
     /// <summary>
     ///     VK_GEOMETRY_INSTANCE_TRIANGLE_FLIP_FACING_BIT_KHR indicates that the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#ray-traversal-culling-face">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#ray-traversal-culling-face">
     ///         facing
     ///         determination
     ///     </a>
@@ -68,7 +68,7 @@ public enum VkGeometryInstanceFlagBitsKHR
 
     /// <summary>
     ///     VK_GEOMETRY_INSTANCE_TRIANGLE_FLIP_FACING_BIT_KHR indicates that the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#ray-traversal-culling-face">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#ray-traversal-culling-face">
     ///         facing
     ///         determination
     ///     </a>

@@ -23,7 +23,7 @@ public enum VkSamplerReductionMode
     ///     VK_SAMPLER_REDUCTION_MODE_WEIGHTED_AVERAGE specifies that texel values are combined by computing a weighted average
     ///     of values in the footprint, using weights as specified in
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-unnormalized-to-integer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-unnormalized-to-integer">
     ///         the
     ///         image operations chapter
     ///     </a>
@@ -47,7 +47,7 @@ public enum VkSamplerReductionMode
     ///     VK_SAMPLER_REDUCTION_MODE_WEIGHTED_AVERAGE specifies that texel values are combined by computing a weighted average
     ///     of values in the footprint, using weights as specified in
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-unnormalized-to-integer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-unnormalized-to-integer">
     ///         the
     ///         image operations chapter
     ///     </a>

@@ -23,7 +23,7 @@ public enum VkDependencyFlagBits
     /// <summary>
     ///     VK_DEPENDENCY_BY_REGION_BIT specifies that dependencies will be
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-framebuffer-regions">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-framebuffer-regions">
     ///         framebuffer-local
     ///     </a>
     ///     .
@@ -33,7 +33,7 @@ public enum VkDependencyFlagBits
     /// <summary>
     ///     VK_DEPENDENCY_DEVICE_GROUP_BIT specifies that dependencies are
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-device-local-dependencies">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-device-local-dependencies">
     ///         non-device-local
     ///     </a>
     ///     .
@@ -43,7 +43,7 @@ public enum VkDependencyFlagBits
     /// <summary>
     ///     VK_DEPENDENCY_VIEW_LOCAL_BIT specifies that a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-barriers-subpass-self-dependencies">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-barriers-subpass-self-dependencies">
     ///         subpass
     ///         has more than one view
     ///     </a>
@@ -60,7 +60,7 @@ public enum VkDependencyFlagBits
     /// <summary>
     ///     VK_DEPENDENCY_VIEW_LOCAL_BIT specifies that a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-barriers-subpass-self-dependencies">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-barriers-subpass-self-dependencies">
     ///         subpass
     ///         has more than one view
     ///     </a>
@@ -71,7 +71,7 @@ public enum VkDependencyFlagBits
     /// <summary>
     ///     VK_DEPENDENCY_DEVICE_GROUP_BIT specifies that dependencies are
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-device-local-dependencies">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-device-local-dependencies">
     ///         non-device-local
     ///     </a>
     ///     .

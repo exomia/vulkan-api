@@ -2872,7 +2872,7 @@ public static partial class Vk
     /// <param name="pColor">
     ///     pColor is a pointer to a VkClearColorValue structure containing the values that the image
     ///     subresource ranges will be cleared to (see
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#clears-values below).
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears-values below).
     /// </param>
     /// <param name="rangeCount">rangeCount is the number of image subresource range structures in pRanges.</param>
     /// <param name="pRanges">
@@ -2903,7 +2903,7 @@ public static partial class Vk
     /// <param name="pDepthStencil">
     ///     pDepthStencil is a pointer to a VkClearDepthStencilValuestructure containing the values
     ///     that the depth and stencil image subresource ranges will be cleared to (see
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#clears-values below).
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears-values below).
     /// </param>
     /// <param name="rangeCount">rangeCount is the number of image subresource range structures in pRanges.</param>
     /// <param name="pRanges">

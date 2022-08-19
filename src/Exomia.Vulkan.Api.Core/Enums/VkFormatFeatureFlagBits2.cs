@@ -22,7 +22,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 {
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT specifies that an image view can be
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage">
     ///         sampled
     ///         from
     ///     </a>
@@ -32,7 +32,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_STORAGE_IMAGE_BIT specifies that an image view can be used as a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
     ///         storage
     ///         image
     ///     </a>
@@ -128,15 +128,14 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT specifies that an image canbe used as a source image for
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>.
     /// </summary>
     VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT = 0x4000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT specifies that an image canbe used as a destination image for
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>
-    ///     and
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a> and
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>.
     /// </summary>
     VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT = 0x8000,
 
@@ -150,7 +149,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT specifies that an application can define a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
     ///         sampler
     ///         Y′C<sub>B</sub>C<sub>R</sub>conversion
     ///     </a>
@@ -169,7 +168,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BITspecifies that an application can define a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
     ///         sampler
     ///         Y′C<sub>B</sub>C<sub>R</sub> conversion
     ///     </a>
@@ -188,8 +187,8 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BITspecifies that reconstruction
     ///     is explicit, as described in
     ///     <a class="bare"
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-chroma-reconstruction">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-chroma-reconstruction
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-chroma-reconstruction">
+    ///         https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-chroma-reconstruction
     ///     </a>
     ///     . If this bit is not present, reconstruction is implicit by default.
     /// </summary>
@@ -216,7 +215,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT specifies that an application can define a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
     ///         sampler
     ///         Y′C<sub>B</sub>C<sub>R</sub>conversion
     ///     </a>
@@ -229,7 +228,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     xChromaOffset and/or yChromaOffset of VK_CHROMA_LOCATION_COSITED_EVEN. Otherwise both xChromaOffset and
     ///     yChromaOffset must be VK_CHROMA_LOCATION_MIDPOINT. If neither VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT nor
     ///     VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT is set, the application must not define a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
     ///         sampler
     ///         Y′C<sub>B</sub>C<sub>R</sub> conversion
     ///     </a>
@@ -238,9 +237,9 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT = 0x800000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT specifies that image views created with this format can be used
-    ///     as
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
+    ///     VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT specifies that image views or buffer views created with this
+    ///     format can be used as
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
     ///         storage
     ///         images
     ///     </a>
@@ -249,9 +248,9 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT = 0x80000000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT specifies that image views created with this format can be
-    ///     used as
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
+    ///     VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT specifies that image views or buffer views created with this
+    ///     format can be used as
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
     ///         storage
     ///         images
     ///     </a>
@@ -268,7 +267,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_DECODE_OUTPUT_BIT_KHR specifies that an image view with this format can be used as an
     ///     output for
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operations
     ///     </a>
@@ -277,7 +276,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_DECODE_DPB_BIT_KHR specifies that an image view with this format can be used as a DPB for
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operations
     ///     </a>
@@ -287,13 +286,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_ACCELERATION_STRUCTURE_VERTEX_BUFFER_BIT_KHRspecifies that the format can be used as the vertex
     ///     format when creating an
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure">
     ///         acceleration
     ///         structure
     ///     </a>
     ///     (VkAccelerationStructureGeometryTrianglesDataKHR::vertexFormat). This format can also be used as
     ///     the vertex format in host memory when doing
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#host-acceleration-structure">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#host-acceleration-structure">
     ///         host
     ///         acceleration structure
     ///     </a>
@@ -304,7 +303,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_FRAGMENT_DENSITY_MAP_BIT_EXT specifies that an image view can be used as a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-fragmentdensitymapattachment">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-fragmentdensitymapattachment">
     ///         fragment
     ///         density map attachment
     ///     </a>
@@ -315,7 +314,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that an image view can be used as a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-fragment-shading-rate-attachment">
     ///         fragment
     ///         shading rate attachment
     ///     </a>
@@ -339,7 +338,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_INPUT_BIT_KHR specifies that an image view with this format can be used as an
     ///     input to
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operations
     ///     </a>
@@ -348,7 +347,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_DPB_BIT_KHR specifies that an image view with this format can be used as a DPB for
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operations
     ///     </a>
@@ -357,7 +356,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_LINEAR_COLOR_ATTACHMENT_BIT_NV specifies that    the format is supported as a renderable
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#glossary">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#glossary">
     ///         Linear Color
     ///         Attachment
     ///     </a>
@@ -368,12 +367,12 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_WEIGHT_IMAGE_BIT_QCOM specifies that image views created with this format can be used as the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-weightimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-weightimage">
     ///         weight
     ///         image
     ///     </a>
     ///     input to
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-weightimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-weightimage">
     ///         weight
     ///         image sampling
     ///     </a>
@@ -384,7 +383,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_WEIGHT_SAMPLED_IMAGE_BIT_QCOM specifies that image views created with this format can be
     ///     sampled in
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-weightimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-weightimage">
     ///         weight
     ///         image sampling
     ///     </a>
@@ -394,7 +393,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_BLOCK_MATCHING_BIT_QCOM specifies that image views created with this format can be used in
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-blockmatch">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-blockmatch">
     ///         block
     ///         matching
     ///     </a>
@@ -405,9 +404,9 @@ public enum VkFormatFeatureFlagBits2 : ulong
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_BOX_FILTER_SAMPLED_BIT_QCOM specifies that image views created with this format can be sampled
     ///     in
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-boxfilter">
-    ///         box
-    ///         filter sampling
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-boxfilter">
+    ///         box filter
+    ///         sampling
     ///     </a>
     ///     operations.
     /// </summary>
@@ -445,7 +444,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_BIT specifies that an image view can be
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage">
     ///         sampled
     ///         from
     ///     </a>
@@ -455,7 +454,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_STORAGE_IMAGE_BIT specifies that an image view can be used as a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
     ///         storage
     ///         image
     ///     </a>
@@ -551,15 +550,14 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT specifies that an image canbe used as a source image for
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>.
     /// </summary>
     VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT_KHR = VK_FORMAT_FEATURE_2_TRANSFER_SRC_BIT,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT specifies that an image canbe used as a destination image for
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>
-    ///     and
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a> and
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>.
     /// </summary>
     VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT_KHR = VK_FORMAT_FEATURE_2_TRANSFER_DST_BIT,
 
@@ -573,7 +571,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT specifies that an application can define a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
     ///         sampler
     ///         Y′C<sub>B</sub>C<sub>R</sub>conversion
     ///     </a>
@@ -592,7 +590,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_BITspecifies that an application can define a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
     ///         sampler
     ///         Y′C<sub>B</sub>C<sub>R</sub> conversion
     ///     </a>
@@ -611,8 +609,8 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_BITspecifies that reconstruction
     ///     is explicit, as described in
     ///     <a class="bare"
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-chroma-reconstruction">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-chroma-reconstruction
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-chroma-reconstruction">
+    ///         https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-chroma-reconstruction
     ///     </a>
     ///     . If this bit is not present, reconstruction is implicit by default.
     /// </summary>
@@ -640,7 +638,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT specifies that an application can define a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
     ///         sampler
     ///         Y′C<sub>B</sub>C<sub>R</sub>conversion
     ///     </a>
@@ -653,7 +651,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     xChromaOffset and/or yChromaOffset of VK_CHROMA_LOCATION_COSITED_EVEN. Otherwise both xChromaOffset and
     ///     yChromaOffset must be VK_CHROMA_LOCATION_MIDPOINT. If neither VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT nor
     ///     VK_FORMAT_FEATURE_2_MIDPOINT_CHROMA_SAMPLES_BIT is set, the application must not define a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-YCbCr-conversion">
     ///         sampler
     ///         Y′C<sub>B</sub>C<sub>R</sub> conversion
     ///     </a>
@@ -662,9 +660,9 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT_KHR = VK_FORMAT_FEATURE_2_COSITED_CHROMA_SAMPLES_BIT,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT specifies that image views created with this format can be used
-    ///     as
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
+    ///     VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT specifies that image views or buffer views created with this
+    ///     format can be used as
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
     ///         storage
     ///         images
     ///     </a>
@@ -673,9 +671,9 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT_KHR = VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT specifies that image views created with this format can be
-    ///     used as
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
+    ///     VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT specifies that image views or buffer views created with this
+    ///     format can be used as
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
     ///         storage
     ///         images
     ///     </a>

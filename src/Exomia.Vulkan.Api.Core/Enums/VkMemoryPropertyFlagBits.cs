@@ -54,8 +54,7 @@ public enum VkMemoryPropertyFlagBits
     ///     VK_MEMORY_PROPERTY_LAZILY_ALLOCATED_BIT bit specifies that the memory type only allows device access to the memory.
     ///     Memory types must not have both VK_MEMORY_PROPERTY_LAZILY_ALLOCATED_BIT and VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT
     ///     set. Additionally, the object&#8217;s backing memory may be provided by the implementation lazily as specified in
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#memory-device-lazy_allocation">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#memory-device-lazy_allocation">
     ///         Lazily
     ///         Allocated Memory
     ///     </a>

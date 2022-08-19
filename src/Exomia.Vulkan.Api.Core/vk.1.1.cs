@@ -24,7 +24,7 @@ public static partial class Vk
     /// <param name="pApiVersion">
     ///     pApiVersion is a pointer to a uint32_t, which is the version of Vulkan supported by
     ///     instance-level functionality, encoded as described in
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-coreversions-versionnumbers.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-coreversions-versionnumbers.
     /// </param>
     /// <remarks>
     ///     <list type="table">

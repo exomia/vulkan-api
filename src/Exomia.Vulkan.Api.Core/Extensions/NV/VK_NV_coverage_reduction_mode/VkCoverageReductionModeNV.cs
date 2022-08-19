@@ -30,7 +30,7 @@ public enum VkCoverageReductionModeNV
     ///     VK_COVERAGE_REDUCTION_MODE_TRUNCATE_NV specifies that for color samples present in the color attachments, a color
     ///     sample is covered if the pixel coverage sample with the same
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-multisampling-coverage-mask">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-multisampling-coverage-mask">
     ///         sample
     ///         index
     ///     </a>

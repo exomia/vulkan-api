@@ -21,7 +21,7 @@ public enum VkQueryType
 {
     /// <summary>
     ///     VK_QUERY_TYPE_OCCLUSION specifies an
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-occlusion">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-occlusion">
     ///         occlusion
     ///         query
     ///     </a>
@@ -31,7 +31,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_PIPELINE_STATISTICS specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-pipestats">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-pipestats">
     ///         pipeline
     ///         statistics query
     ///     </a>
@@ -41,7 +41,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_TIMESTAMP specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-timestamps">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-timestamps">
     ///         timestamp
     ///         query
     ///     </a>
@@ -51,7 +51,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_RESULT_STATUS_ONLY_KHR specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-result-status-only">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-result-status-only">
     ///         result
     ///         status query
     ///     </a>
@@ -61,7 +61,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_TRANSFORM_FEEDBACK_STREAM_EXT specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-transform-feedback">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-transform-feedback">
     ///         transform
     ///         feedback query
     ///     </a>
@@ -71,7 +71,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_PERFORMANCE_QUERY_KHR specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-performance">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-performance">
     ///         performance
     ///         query
     ///     </a>
@@ -81,8 +81,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR specifies a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
     ///         acceleration
     ///         structure size query
     ///     </a>
@@ -102,8 +101,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHRspecifies a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
     ///         serialization
     ///         acceleration structure size query
     ///     </a>
@@ -113,8 +111,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV specifies an
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
     ///         acceleration
     ///         structure size query
     ///     </a>
@@ -129,7 +126,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_PERFORMANCE_QUERY_INTEL specifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-performance-intel">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-performance-intel">
     ///         Intel
     ///         performance query
     ///     </a>
@@ -140,7 +137,7 @@ public enum VkQueryType
     /// <summary>
     ///     VK_QUERY_TYPE_VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR specifies a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-video-encode-bitstream-buffer-range">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-video-encode-bitstream-buffer-range">
     ///         video
     ///         encode bitstream range query
     ///     </a>
@@ -150,8 +147,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT specifies a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-primitives-generated">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-primitives-generated">
     ///         primitives
     ///         generated query
     ///     </a>
@@ -161,7 +157,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SERIALIZATION_BOTTOM_LEVEL_POINTERS_KHRspecifies a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#serialized-as-header">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#serialized-as-header">
     ///         serialization
     ///         acceleration structure pointer count query
     ///     </a>
@@ -171,8 +167,7 @@ public enum VkQueryType
 
     /// <summary>
     ///     VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SIZE_KHR specifies an
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
     ///         acceleration
     ///         structure size query
     ///     </a>

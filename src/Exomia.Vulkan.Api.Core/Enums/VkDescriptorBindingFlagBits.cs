@@ -76,12 +76,12 @@ public enum VkDescriptorBindingFlagBits
     ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.     In this case, descriptorCount specifies the upper bound on the
     ///     byte size of the binding; thus it counts against the
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformBlockSize">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformBlockSize">
     ///         <code>maxInlineUniformBlockSize</code>
     ///     </a>
     ///     and
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformTotalSize">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformTotalSize">
     ///         <code>maxInlineUniformTotalSize</code>
     ///     </a>
     ///     limits instead.
@@ -150,12 +150,12 @@ public enum VkDescriptorBindingFlagBits
     ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.     In this case, descriptorCount specifies the upper bound on the
     ///     byte size of the binding; thus it counts against the
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformBlockSize">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformBlockSize">
     ///         <code>maxInlineUniformBlockSize</code>
     ///     </a>
     ///     and
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformTotalSize">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformTotalSize">
     ///         <code>maxInlineUniformTotalSize</code>
     ///     </a>
     ///     limits instead.

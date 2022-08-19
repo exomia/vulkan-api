@@ -41,7 +41,7 @@ public unsafe struct VkQueryPoolCreateInfo
     /// <summary>
     ///     pipelineStatistics is a bitmask of VkQueryPipelineStatisticFlagBits specifying which counters will be returned
     ///     in queries on the new pool, as described below in
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#queries-pipestats.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-pipestats.
     /// </summary>
     public VkQueryPipelineStatisticFlags pipelineStatistics;
 }

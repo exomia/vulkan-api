@@ -50,8 +50,8 @@ public unsafe struct VkPhysicalDeviceProtectedMemoryProperties
     ///     query in a protected queue operation. If this limit is VK_TRUE, such writes will be discarded or have undefined
     ///     values written, reads and queries will return undefined values. If this limit is VK_FALSE, applications must not
     ///     perform these operations. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#memory-protected-access-rules for
-    ///     more information.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#memory-protected-access-rules for more
+    ///     information.
     /// </summary>
     public VkBool32 protectedNoFault;
 }

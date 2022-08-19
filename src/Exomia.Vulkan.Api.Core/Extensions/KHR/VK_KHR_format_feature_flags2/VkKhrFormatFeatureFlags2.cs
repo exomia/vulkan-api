@@ -28,7 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkKhrFormatFeatureFlags2
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_KHR_FORMAT_FEATURE_FLAGS_2_SPEC_VERSION = 1;
+    public const uint VK_KHR_FORMAT_FEATURE_FLAGS_2_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_KHR_FORMAT_FEATURE_FLAGS_2_EXTENSION_NAME = "VK_KHR_format_feature_flags2";

@@ -26,7 +26,7 @@ public enum VkPipelineShaderStageCreateFlagBits
     /// <summary>
     ///     VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BITspecifies that the
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-builtin-variables-sgs">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-builtin-variables-sgs">
     ///         <code>SubgroupSize</code>
     ///     </a>
     ///     may vary in the shader stage.
@@ -40,15 +40,6 @@ public enum VkPipelineShaderStageCreateFlagBits
     VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT = 0x2,
 
     /// <summary>
-    ///     VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_2_BIT_NV<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineShaderStageCreateFlagBits">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineShaderStageCreateFlagBits
-    ///     </a>
-    /// </summary>
-    VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_2_BIT_NV = 0x4,
-
-    /// <summary>
     ///     VK_PIPELINE_SHADER_STAGE_CREATE_RESERVED_3_BIT_KHR<br />
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineShaderStageCreateFlagBits">
@@ -60,7 +51,7 @@ public enum VkPipelineShaderStageCreateFlagBits
     /// <summary>
     ///     VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BITspecifies that the
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-builtin-variables-sgs">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-builtin-variables-sgs">
     ///         <code>SubgroupSize</code>
     ///     </a>
     ///     may vary in the shader stage.

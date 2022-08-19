@@ -117,7 +117,7 @@ public struct VkPhysicalDeviceLimits
     /// <summary>
     ///     maxBoundDescriptorSets is the maximum number of descriptor sets that can be simultaneously used by a
     ///     pipeline. All DescriptorSet decorations in shader modules must have a value less than maxBoundDescriptorSets. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sets.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sets.
     /// </summary>
     public uint maxBoundDescriptorSets;
 
@@ -128,8 +128,8 @@ public struct VkPhysicalDeviceLimits
     ///     created without the VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. A
     ///     descriptor is accessible to a shader stage when the stageFlagsmember of the VkDescriptorSetLayoutBinding structure
     ///     has the bit for that shader stage set. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampler and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampler and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler.
     /// </summary>
     public uint maxPerStageDescriptorSamplers;
 
@@ -140,8 +140,8 @@ public struct VkPhysicalDeviceLimits
     ///     created without the VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. A
     ///     descriptor is accessible to a shader stage when the stageFlagsmember of the VkDescriptorSetLayoutBinding structure
     ///     has the bit for that shader stage set. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbufferdynamic.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbufferdynamic.
     /// </summary>
     public uint maxPerStageDescriptorUniformBuffers;
 
@@ -152,8 +152,8 @@ public struct VkPhysicalDeviceLimits
     ///     created without the VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. A
     ///     descriptor is accessible to a pipeline shader stage when the stageFlags member of the
     ///     VkDescriptorSetLayoutBindingstructure has the bit for that shader stage set. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebufferdynamic.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebufferdynamic.
     /// </summary>
     public uint maxPerStageDescriptorStorageBuffers;
 
@@ -165,9 +165,9 @@ public struct VkPhysicalDeviceLimits
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. A descriptor is
     ///     accessible to a pipeline shader stage when the stageFlags member of the VkDescriptorSetLayoutBindingstructure has
     ///     the bit for that shader stage set. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler,
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage, and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformtexelbuffer.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler,
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage, and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformtexelbuffer.
     /// </summary>
     public uint maxPerStageDescriptorSampledImages;
 
@@ -178,8 +178,8 @@ public struct VkPhysicalDeviceLimits
     ///     created without the VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. A
     ///     descriptor is accessible to a pipeline shader stage when the stageFlags member of the
     ///     VkDescriptorSetLayoutBindingstructure has the bit for that shader stage set. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage, and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage, and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer.
     /// </summary>
     public uint maxPerStageDescriptorStorageImages;
 
@@ -190,7 +190,7 @@ public struct VkPhysicalDeviceLimits
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. A descriptor is
     ///     accessible to a pipeline shader stage when the stageFlags member of the VkDescriptorSetLayoutBindingstructure has
     ///     the bit for that shader stage set. These are only supported for the fragment stage. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inputattachment.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inputattachment.
     /// </summary>
     public uint maxPerStageDescriptorInputAttachments;
 
@@ -211,8 +211,8 @@ public struct VkPhysicalDeviceLimits
     ///     Descriptors with a type of VK_DESCRIPTOR_TYPE_SAMPLER or VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER count against
     ///     this limit. Only descriptors in descriptor set layouts created without the
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampler and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampler and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler.
     /// </summary>
     public uint maxDescriptorSetSamplers;
 
@@ -221,8 +221,8 @@ public struct VkPhysicalDeviceLimits
     ///     layout. Descriptors with a type of VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER or VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC
     ///     count against this limit. Only descriptors in descriptor set layouts created without the
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbufferdynamic.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbufferdynamic.
     /// </summary>
     public uint maxDescriptorSetUniformBuffers;
 
@@ -231,7 +231,7 @@ public struct VkPhysicalDeviceLimits
     ///     a pipeline layout. Descriptors with a type of VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC count against this limit.
     ///     Only descriptors in descriptor set layouts created without the
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbufferdynamic.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbufferdynamic.
     /// </summary>
     public uint maxDescriptorSetUniformBuffersDynamic;
 
@@ -240,8 +240,8 @@ public struct VkPhysicalDeviceLimits
     ///     layout. Descriptors with a type of VK_DESCRIPTOR_TYPE_STORAGE_BUFFER or VK_DESCRIPTOR_TYPE_STORAGE_BUFFER_DYNAMIC
     ///     count against this limit. Only descriptors in descriptor set layouts created without the
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebufferdynamic.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebufferdynamic.
     /// </summary>
     public uint maxDescriptorSetStorageBuffers;
 
@@ -250,7 +250,7 @@ public struct VkPhysicalDeviceLimits
     ///     a pipeline layout. Descriptors with a type of VK_DESCRIPTOR_TYPE_STORAGE_BUFFER_DYNAMIC count against this limit.
     ///     Only descriptors in descriptor set layouts created without the
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebufferdynamic.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebufferdynamic.
     /// </summary>
     public uint maxDescriptorSetStorageBuffersDynamic;
 
@@ -259,10 +259,9 @@ public struct VkPhysicalDeviceLimits
     ///     layout. Descriptors with a type of VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE, or
     ///     VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER count against this limit. Only descriptors in descriptor set layouts
     ///     created without the VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit.
-    ///     See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler,
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage, and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformtexelbuffer.
+    ///     See https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-combinedimagesampler,
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage, and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformtexelbuffer.
     /// </summary>
     public uint maxDescriptorSetSampledImages;
 
@@ -271,8 +270,8 @@ public struct VkPhysicalDeviceLimits
     ///     layout. Descriptors with a type of VK_DESCRIPTOR_TYPE_STORAGE_IMAGE, or VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER
     ///     count against this limit. Only descriptors in descriptor set layouts created without the
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage, and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage, and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer.
     /// </summary>
     public uint maxDescriptorSetStorageImages;
 
@@ -281,7 +280,7 @@ public struct VkPhysicalDeviceLimits
     ///     layout. Descriptors with a type of VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENTcount against this limit. Only descriptors in
     ///     descriptor set layouts created without the VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count
     ///     against this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inputattachment.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inputattachment.
     /// </summary>
     public uint maxDescriptorSetInputAttachments;
 
@@ -290,8 +289,8 @@ public struct VkPhysicalDeviceLimits
     ///     graphics pipeline. These are described in the array of VkVertexInputAttributeDescription structures that are
     ///     provided at graphics pipeline creation time via the pVertexAttributeDescriptions member of the
     ///     VkPipelineVertexInputStateCreateInfo structure. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-attrib and
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-input.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-attrib and
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-input.
     /// </summary>
     public uint maxVertexInputAttributes;
 
@@ -300,35 +299,34 @@ public struct VkPhysicalDeviceLimits
     ///     attributes to a graphics pipeline. These are described in the array of VkVertexInputBindingDescription structures
     ///     that are provided at graphics pipeline creation time via the pVertexBindingDescriptionsmember of the
     ///     VkPipelineVertexInputStateCreateInfo structure. The binding member of VkVertexInputBindingDescription mustbe less
-    ///     than this limit. See https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-input.
+    ///     than this limit. See https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-input.
     /// </summary>
     public uint maxVertexInputBindings;
 
     /// <summary>
     ///     maxVertexInputAttributeOffset is the maximum vertex input attribute offset that can be added to the vertex
     ///     input binding stride. The offset member of the VkVertexInputAttributeDescriptionstructure must be less than or
-    ///     equal to this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-input.
+    ///     equal to this limit. See https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-input.
     /// </summary>
     public uint maxVertexInputAttributeOffset;
 
     /// <summary>
     ///     maxVertexInputBindingStrideis the maximum vertex input binding stride that can be specified in a vertex input
     ///     binding. The stride member of the VkVertexInputBindingDescriptionstructure must be less than or equal to this
-    ///     limit. See https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-input.
+    ///     limit. See https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fxvertex-input.
     /// </summary>
     public uint maxVertexInputBindingStride;
 
     /// <summary>
     ///     maxVertexOutputComponents is the maximum number of components of output variables which can be output by a
-    ///     vertex shader. See https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#shaders-vertex.
+    ///     vertex shader. See https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#shaders-vertex.
     /// </summary>
     public uint maxVertexOutputComponents;
 
     /// <summary>
     ///     maxTessellationGenerationLevel is the maximum tessellation generation level supported by the fixed-function
     ///     tessellation primitive generator. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#tessellation.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#tessellation.
     /// </summary>
     public uint maxTessellationGenerationLevel;
 
@@ -337,7 +335,7 @@ public struct VkPhysicalDeviceLimits
     ///     tessellation control shader and tessellation primitive generator. The patchControlPoints member of the
     ///     VkPipelineTessellationStateCreateInfo structure specified at pipeline creation time and the value provided in the
     ///     OutputVerticesexecution mode of shader modules must be less than or equal to this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#tessellation.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#tessellation.
     /// </summary>
     public uint maxTessellationPatchSize;
 
@@ -380,7 +378,7 @@ public struct VkPhysicalDeviceLimits
     /// <summary>
     ///     maxGeometryShaderInvocations is the maximum invocation count supported for instanced geometry shaders. The
     ///     value provided in the Invocations execution mode of shader modules must be less than or equal to this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#geometry.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#geometry.
     /// </summary>
     public uint maxGeometryShaderInvocations;
 
@@ -420,7 +418,7 @@ public struct VkPhysicalDeviceLimits
     /// <summary>
     ///     maxFragmentDualSrcAttachments is the maximum number of output attachments which can be written to by the
     ///     fragment shader stage when blending is enabled and one of the dual source blend modes is in use. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-dsb and dualSrcBlend.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-dsb and dualSrcBlend.
     /// </summary>
     public uint maxFragmentDualSrcAttachments;
 
@@ -448,8 +446,7 @@ public struct VkPhysicalDeviceLimits
     ///     maxComputeWorkGroupCount[3] is the maximum number of local workgroups that can be dispatched by a single
     ///     dispatching command. These three values represent the maximum number of local workgroups for the X, Y, and Z
     ///     dimensions, respectively. The workgroup count parameters to the dispatching commands must be less than or equal to
-    ///     the corresponding limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#dispatch.
+    ///     the corresponding limit. See https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#dispatch.
     /// </summary>
     public VkArray3<uint> maxComputeWorkGroupCount;
 
@@ -471,7 +468,7 @@ public struct VkPhysicalDeviceLimits
 
     /// <summary>
     ///     subPixelPrecisionBits is the number of bits of subpixel precision in framebuffer coordinates xf and yf. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast.
     /// </summary>
     public uint subPixelPrecisionBits;
 
@@ -507,7 +504,7 @@ public struct VkPhysicalDeviceLimits
     ///     VkSamplerCreateInfostructure and the Bias operand of image sampling operations in shader modules (or 0 if no Bias
     ///     operand is provided to an image sampling operation) are clamped to the range
     ///     [-maxSamplerLodBias,+maxSamplerLodBias]. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-mipLodBias.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-mipLodBias.
     /// </summary>
     public float maxSamplerLodBias;
 
@@ -515,7 +512,7 @@ public struct VkPhysicalDeviceLimits
     ///     maxSamplerAnisotropy is the maximum degree of sampler anisotropy. The maximum degree of anisotropic filtering
     ///     used for an image sampling operation is the minimum of the maxAnisotropy member of the VkSamplerCreateInfo
     ///     structure and this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-maxAnisotropy.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#samplers-maxAnisotropy.
     /// </summary>
     public float maxSamplerAnisotropy;
 
@@ -554,8 +551,8 @@ public struct VkPhysicalDeviceLimits
     ///     minMemoryMapAlignment is the minimum required alignment, in bytes, of host visible memory allocations within
     ///     the host address space. When mapping a memory allocation with vkMapMemory, subtracting offset bytes from the
     ///     returned pointer will always produce an integer multiple of this limit. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#memory-device-hostaccess. The value
-    ///     must be a power of two.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#memory-device-hostaccess. The value must
+    ///     be a power of two.
     /// </summary>
     public nuint minMemoryMapAlignment;
 
@@ -757,7 +754,7 @@ public struct VkPhysicalDeviceLimits
     ///     discreteQueuePriorities is the number of discrete priorities that can be assigned to a queue based on the
     ///     value of each member of VkDeviceQueueCreateInfo::pQueuePriorities. This must be at least 2, and levels must be
     ///     spread evenly over the range, with at least one level at 1.0, and another at 0.0. See
-    ///     https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#devsandqueues-priority.
+    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#devsandqueues-priority.
     /// </summary>
     public uint discreteQueuePriorities;
 

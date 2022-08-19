@@ -31,10 +31,7 @@ public enum VkImageAspectFlagBits
 
     /// <summary>
     ///     VK_IMAGE_ASPECT_METADATA_BIT specifies the metadata aspect, used for
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#sparsememory">
-    ///         sparse
-    ///         resource
-    ///     </a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#sparsememory">sparse resource</a>
     ///     operations.
     /// </summary>
     VK_IMAGE_ASPECT_METADATA_BIT = 0x8,

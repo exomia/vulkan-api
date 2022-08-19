@@ -29,7 +29,7 @@ public enum VkRenderPassCreateFlagBits
     /// <summary>
     ///     VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM specifies that the created render pass is compatible with
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#vertexpostproc-renderpass-transform">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#vertexpostproc-renderpass-transform">
     ///         render
     ///         pass transform
     ///     </a>

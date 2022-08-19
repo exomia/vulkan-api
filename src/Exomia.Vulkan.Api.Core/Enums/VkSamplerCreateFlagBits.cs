@@ -40,9 +40,9 @@ public enum VkSamplerCreateFlagBits
 
     /// <summary>
     ///     VK_SAMPLER_CREATE_NON_SEAMLESS_CUBE_MAP_BIT_EXT specifies that
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#textures-cubemapedge">
-    ///         cube
-    ///         map edge handling
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-cubemapedge">
+    ///         cube map
+    ///         edge handling
     ///     </a>
     ///     is not performed.
     /// </summary>

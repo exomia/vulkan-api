@@ -38,7 +38,7 @@ public enum VkCoarseSampleOrderTypeNV
     ///     VK_COARSE_SAMPLE_ORDER_TYPE_PIXEL_MAJOR_NV specifies that coverage samples will be ordered sequentially, sorted
     ///     first by pixel coordinate (in row-major order) and then by
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-multisampling-coverage-mask">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-multisampling-coverage-mask">
     ///         sample
     ///         index
     ///     </a>
@@ -50,7 +50,7 @@ public enum VkCoarseSampleOrderTypeNV
     ///     VK_COARSE_SAMPLE_ORDER_TYPE_SAMPLE_MAJOR_NV specifies that coverage samples will be ordered sequentially, sorted
     ///     first by
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-multisampling-coverage-mask">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-multisampling-coverage-mask">
     ///         sample
     ///         index
     ///     </a>

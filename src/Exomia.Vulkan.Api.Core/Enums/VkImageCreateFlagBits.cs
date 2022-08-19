@@ -40,7 +40,7 @@ public enum VkImageCreateFlagBits
     ///     VK_IMAGE_CREATE_MUTABLE_FORMAT_BIT specifies that the image canbe used to create a VkImageView with a different
     ///     format from the image. For
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#formats-requiring-sampler-ycbcr-conversion">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#formats-requiring-sampler-ycbcr-conversion">
     ///         multi-planar
     ///     </a>
     ///     formats, VK_IMAGE_CREATE_MUTABLE_FORMAT_BIT specifies that a VkImageView can be created of a plane of the image.
@@ -57,7 +57,7 @@ public enum VkImageCreateFlagBits
     ///     VK_IMAGE_CREATE_ALIAS_BIT specifies that two images created with     the same creation parameters and aliased to
     ///     the same memory can    interpret the contents of the memory consistently with each other,     subject to the rules
     ///     described in the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#resources-memory-aliasing">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#resources-memory-aliasing">
     ///         Memory
     ///         Aliasing
     ///     </a>
@@ -66,8 +66,8 @@ public enum VkImageCreateFlagBits
     ///     in-memory non-linear     representation with a plane of a multi-planar disjoint image, according     to the rules
     ///     in
     ///     <a class="bare"
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#formats-compatible-planes">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#formats-compatible-planes
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#formats-compatible-planes">
+    ///         https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#formats-compatible-planes
     ///     </a>
     ///     .     If the pNext chain includes a
     ///     <a
@@ -122,7 +122,7 @@ public enum VkImageCreateFlagBits
     /// <summary>
     ///     VK_IMAGE_CREATE_DISJOINT_BIT specifies that an image with a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#formats-requiring-sampler-ycbcr-conversion">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#formats-requiring-sampler-ycbcr-conversion">
     ///         multi-planar
     ///         format
     ///     </a>
@@ -133,8 +133,7 @@ public enum VkImageCreateFlagBits
 
     /// <summary>
     ///     VK_IMAGE_CREATE_CORNER_SAMPLED_BIT_NV specifies that the image is a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#resources-images-corner-sampled">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#resources-images-corner-sampled">
     ///         corner-sampled
     ///         image
     ///     </a>
@@ -184,7 +183,7 @@ public enum VkImageCreateFlagBits
     /// <summary>
     ///     VK_IMAGE_CREATE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_BIT_EXTspecifies that an image can be used with
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#multisampled-render-to-single-sampled">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#multisampled-render-to-single-sampled">
     ///         multisampled
     ///         rendering as a single-sampled framebuffer attachment
     ///     </a>
@@ -201,7 +200,7 @@ public enum VkImageCreateFlagBits
     ///     VK_IMAGE_CREATE_FRAGMENT_DENSITY_MAP_OFFSET_BIT_QCOM specifies that an image can be used in a render pass with
     ///     non-zero
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-fragmentdensitymapoffsets">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-fragmentdensitymapoffsets">
     ///         fragment
     ///         density map offsets
     ///     </a>
@@ -247,7 +246,7 @@ public enum VkImageCreateFlagBits
     /// <summary>
     ///     VK_IMAGE_CREATE_DISJOINT_BIT specifies that an image with a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#formats-requiring-sampler-ycbcr-conversion">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#formats-requiring-sampler-ycbcr-conversion">
     ///         multi-planar
     ///         format
     ///     </a>
@@ -260,7 +259,7 @@ public enum VkImageCreateFlagBits
     ///     VK_IMAGE_CREATE_ALIAS_BIT specifies that two images created with     the same creation parameters and aliased to
     ///     the same memory can    interpret the contents of the memory consistently with each other,     subject to the rules
     ///     described in the
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#resources-memory-aliasing">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#resources-memory-aliasing">
     ///         Memory
     ///         Aliasing
     ///     </a>
@@ -269,8 +268,8 @@ public enum VkImageCreateFlagBits
     ///     in-memory non-linear     representation with a plane of a multi-planar disjoint image, according     to the rules
     ///     in
     ///     <a class="bare"
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#formats-compatible-planes">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#formats-compatible-planes
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#formats-compatible-planes">
+    ///         https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#formats-compatible-planes
     ///     </a>
     ///     .     If the pNext chain includes a
     ///     <a

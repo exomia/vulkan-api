@@ -24,8 +24,7 @@ public enum VkPipelineCacheCreateFlagBits
     ///     VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT specifies that all commands that modify the created
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCache.html">VkPipelineCache</a>
     ///     will be
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fundamentals-threadingbehavior">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fundamentals-threadingbehavior">
     ///         externally
     ///         synchronized
     ///     </a>
@@ -56,8 +55,7 @@ public enum VkPipelineCacheCreateFlagBits
     ///     VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT specifies that all commands that modify the created
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCache.html">VkPipelineCache</a>
     ///     will be
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fundamentals-threadingbehavior">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fundamentals-threadingbehavior">
     ///         externally
     ///         synchronized
     ///     </a>

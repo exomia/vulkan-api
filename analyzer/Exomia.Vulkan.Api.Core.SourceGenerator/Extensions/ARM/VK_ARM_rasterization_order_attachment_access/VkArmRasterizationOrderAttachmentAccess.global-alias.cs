@@ -1,0 +1,1 @@
+global using VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM = Exomia.Vulkan.Api.Core.VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT;

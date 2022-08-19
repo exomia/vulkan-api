@@ -26,7 +26,7 @@ public enum VkGraphicsPipelineLibraryFlagBitsEXT
     /// <summary>
     ///     VK_GRAPHICS_PIPELINE_LIBRARY_VERTEX_INPUT_INTERFACE_BIT_EXTspecifies that a pipeline will include
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-vertex-input">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-vertex-input">
     ///         vertex
     ///         input interface state
     ///     </a>
@@ -37,7 +37,7 @@ public enum VkGraphicsPipelineLibraryFlagBitsEXT
     /// <summary>
     ///     VK_GRAPHICS_PIPELINE_LIBRARY_PRE_RASTERIZATION_SHADERS_BIT_EXTspecifies that a pipeline will include
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
     ///         pre-rasterization
     ///         shader state
     ///     </a>
@@ -48,7 +48,7 @@ public enum VkGraphicsPipelineLibraryFlagBitsEXT
     /// <summary>
     ///     VK_GRAPHICS_PIPELINE_LIBRARY_FRAGMENT_SHADER_BIT_EXT specifies that a pipeline will include
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-fragment-shader">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-fragment-shader">
     ///         fragment
     ///         shader state
     ///     </a>
@@ -59,7 +59,7 @@ public enum VkGraphicsPipelineLibraryFlagBitsEXT
     /// <summary>
     ///     VK_GRAPHICS_PIPELINE_LIBRARY_FRAGMENT_OUTPUT_INTERFACE_BIT_EXTspecifies that a pipeline will include
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-fragment-output">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-fragment-output">
     ///         fragment
     ///         output interface state
     ///     </a>

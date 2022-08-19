@@ -37,8 +37,7 @@ public enum VkDeviceDiagnosticsConfigFlagBitsNV
 
     /// <summary>
     ///     VK_DEVICE_DIAGNOSTICS_CONFIG_ENABLE_AUTOMATIC_CHECKPOINTS_BIT_NVenables automatic insertion of
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#device-diagnostic-checkpoints">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#device-diagnostic-checkpoints">
     ///         diagnostic
     ///         checkpoints
     ///     </a>

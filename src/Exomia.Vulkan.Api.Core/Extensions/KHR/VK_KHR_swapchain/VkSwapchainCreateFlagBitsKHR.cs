@@ -41,5 +41,14 @@ public enum VkSwapchainCreateFlagBitsKHR
     ///     . In addition, this flag also specifies that the swapchain can be created with usage flags that are not supported
     ///     for the format the swapchain is created with but are supported for at least one of the allowed image view formats.
     /// </summary>
-    VK_SWAPCHAIN_CREATE_MUTABLE_FORMAT_BIT_KHR = 0x4
+    VK_SWAPCHAIN_CREATE_MUTABLE_FORMAT_BIT_KHR = 0x4,
+
+    /// <summary>
+    ///     VK_SWAPCHAIN_CREATE_RESERVED_3_BIT_SEC<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainCreateFlagBitsKHR">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainCreateFlagBitsKHR
+    ///     </a>
+    /// </summary>
+    VK_SWAPCHAIN_CREATE_RESERVED_3_BIT_SEC = 0x8
 }

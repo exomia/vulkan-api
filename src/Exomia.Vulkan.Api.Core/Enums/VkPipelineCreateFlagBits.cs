@@ -164,8 +164,8 @@ public enum VkPipelineCreateFlagBits
     /// <summary>
     ///     VK_PIPELINE_CREATE_INDIRECT_BINDABLE_BIT_NV specifies that the pipeline can be used in combination with
     ///     <a class="bare"
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands">
+    ///         https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands
     ///     </a>
     ///     .
     /// </summary>

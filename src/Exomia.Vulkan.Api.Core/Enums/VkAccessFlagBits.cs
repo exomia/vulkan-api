@@ -45,8 +45,7 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_UNIFORM_READ_BIT specifies read access to a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer">
     ///         uniform
     ///         buffer
     ///     </a>
@@ -56,7 +55,7 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_INPUT_ATTACHMENT_READ_BIT specifies read access to an
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">input attachment</a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">input attachment</a>
     ///     within a render pass during subpass shading or fragment shading. Such access occurs in the
     ///     VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI or VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT pipeline stage.
     /// </summary>
@@ -64,47 +63,45 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_SHADER_READ_BIT specifies read access to a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer">
     ///         uniform
     ///         buffer
     ///     </a>
     ///     ,
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformtexelbuffer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformtexelbuffer">
     ///         uniform
     ///         texel buffer
     ///     </a>
     ///     ,
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-sampledimage">
     ///         sampled
     ///         image
     ///     </a>
     ///     ,
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer">
     ///         storage
     ///         buffer
     ///     </a>
     ///     ,
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-physical-storage-buffer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-physical-storage-buffer">
     ///         physical
     ///         storage buffer
     ///     </a>
     ///     ,
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#shader-binding-table">
     ///         shader
     ///         binding table
     ///     </a>
     ///     ,
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
     ///         storage
     ///         texel buffer
     ///     </a>
     ///     , or
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
     ///         storage
     ///         image
     ///     </a>
@@ -114,25 +111,24 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_SHADER_WRITE_BIT specifies write access to a
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagebuffer">
     ///         storage
     ///         buffer
     ///     </a>
     ///     ,
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-physical-storage-buffer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-physical-storage-buffer">
     ///         physical
     ///         storage buffer
     ///     </a>
     ///     ,
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
     ///         storage
     ///         texel buffer
     ///     </a>
     ///     , or
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage">
     ///         storage
     ///         image
     ///     </a>
@@ -142,21 +138,21 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_COLOR_ATTACHMENT_READ_BIT specifies read access to a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">color attachment</a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">color attachment</a>
     ///     , such as via
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blending">blending</a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blending">blending</a>
     ///     ,
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-logicop">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-logicop">
     ///         logic
     ///         operations
     ///     </a>
     ///     , or via certain
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
     ///     </a>
     ///     . It does not include
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blend-advanced">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blend-advanced">
     ///         advanced
     ///         blend operations
     ///     </a>
@@ -167,9 +163,9 @@ public enum VkAccessFlagBits
     /// <summary>
     ///     VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT specifies write access to a
     ///     <a href="#renderpass">color, resolve, or depth/stencil resolve attachment</a>during a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">render pass</a>
-    ///     or via certain
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">render pass</a> or
+    ///     via certain
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load and store operations
     ///     </a>
@@ -180,17 +176,17 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_READ_BIT specifies read access to a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">
     ///         depth/stencil
     ///         attachment
     ///     </a>
     ///     , via
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-ds-state">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-ds-state">
     ///         depth or
     ///         stencil operations
     ///     </a>
     ///     or via certain
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
     ///     </a>
@@ -201,17 +197,17 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT specifies write access to a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">
     ///         depth/stencil
     ///         attachment
     ///     </a>
     ///     , via
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-ds-state">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-ds-state">
     ///         depth or
     ///         stencil operations
     ///     </a>
     ///     or via certain
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load and store operations
     ///     </a>
@@ -222,16 +218,16 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_TRANSFER_READ_BIT specifies read access to an image or buffer in a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy</a> operation.
-    ///     Such access occurs in the VK_PIPELINE_STAGE_2_ALL_TRANSFER_BITpipeline stage.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy</a> operation. Such
+    ///     access occurs in the VK_PIPELINE_STAGE_2_ALL_TRANSFER_BITpipeline stage.
     /// </summary>
     VK_ACCESS_TRANSFER_READ_BIT = 0x800,
 
     /// <summary>
     ///     VK_ACCESS_TRANSFER_WRITE_BIT specifies write access to an image or buffer in a
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear</a> or
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy</a> operation.
-    ///     Such access occurs in the VK_PIPELINE_STAGE_2_ALL_TRANSFER_BITpipeline stage.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear</a> or
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy</a> operation. Such
+    ///     access occurs in the VK_PIPELINE_STAGE_2_ALL_TRANSFER_BITpipeline stage.
     /// </summary>
     VK_ACCESS_TRANSFER_WRITE_BIT = 0x1000,
 
@@ -291,12 +287,9 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT specifies read access to
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">
-    ///         color
-    ///         attachments
-    ///     </a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">color attachments</a>
     ///     , including
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blend-advanced">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blend-advanced">
     ///         advanced
     ///         blend operations
     ///     </a>
@@ -307,8 +300,7 @@ public enum VkAccessFlagBits
     /// <summary>
     ///     VK_ACCESS_ACCELERATION_STRUCTURE_READ_BIT_KHR specifies read access to an acceleration structure as part of a
     ///     trace, build, or copy command, or to an
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-scratch">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-scratch">
     ///         acceleration
     ///         structure scratch buffer
     ///     </a>
@@ -320,8 +312,7 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_ACCELERATION_STRUCTURE_WRITE_BIT_KHR specifies write access to an acceleration structure or
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-scratch">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-scratch">
     ///         acceleration
     ///         structure scratch buffer
     ///     </a>
@@ -333,12 +324,12 @@ public enum VkAccessFlagBits
     /// <summary>
     ///     VK_ACCESS_FRAGMENT_DENSITY_MAP_READ_BIT_EXT specifies read access to a
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-fragmentdensitymapattachment">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-fragmentdensitymapattachment">
     ///         fragment
     ///         density map attachment
     ///     </a>
     ///     during dynamic
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#fragmentdensitymapops">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragmentdensitymapops">
     ///         fragment
     ///         density map operations
     ///     </a>
@@ -385,8 +376,7 @@ public enum VkAccessFlagBits
     /// <summary>
     ///     VK_ACCESS_ACCELERATION_STRUCTURE_READ_BIT_KHR specifies read access to an acceleration structure as part of a
     ///     trace, build, or copy command, or to an
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-scratch">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-scratch">
     ///         acceleration
     ///         structure scratch buffer
     ///     </a>
@@ -398,8 +388,7 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_ACCELERATION_STRUCTURE_WRITE_BIT_KHR specifies write access to an acceleration structure or
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-scratch">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-scratch">
     ///         acceleration
     ///         structure scratch buffer
     ///     </a>

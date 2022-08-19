@@ -32,19 +32,15 @@ public enum VkQueueFlagBits
     /// <summary>
     ///     VK_QUEUE_SPARSE_BINDING_BIT specifies that queues in this queue family support sparse memory management
     ///     operations (see
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#sparsememory">
-    ///         Sparse
-    ///         Resources
-    ///     </a>
-    ///     ). If any of the sparse resource features are enabled, then at least one queue family must support
-    ///     this bit.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#sparsememory">Sparse Resources</a>
+    ///     ). If any of the sparse resource features are enabled, then at least one queue family must support this bit.
     /// </summary>
     VK_QUEUE_SPARSE_BINDING_BIT = 0x8,
 
     /// <summary>
     ///     VK_QUEUE_PROTECTED_BIT specifies that queues in this queue family support the VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT
     ///     bit. (see
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#memory-protected-memory">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#memory-protected-memory">
     ///         Protected
     ///         Memory
     ///     </a>
