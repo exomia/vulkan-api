@@ -85,7 +85,7 @@ public unsafe struct VkPhysicalDeviceVulkan12Features
 
     /// <summary>
     ///     shaderSharedInt64Atomics indicates whether shaders can perform 64-bit unsigned and signed integer atomic
-    ///     operations on shared memory.
+    ///     operations on shared and payload memory.
     /// </summary>
     public VkBool32 shaderSharedInt64Atomics;
 
@@ -368,18 +368,18 @@ public unsafe struct VkPhysicalDeviceVulkan12Features
     public VkBool32 vulkanMemoryModelAvailabilityVisibilityChains;
 
     /// <summary>
-    ///     shaderOutputViewportIndexindicates whether the implementation supports the ShaderViewportIndex SPIR-V
-    ///     capability enabling variables decorated with the ViewportIndex built-in to be exported from vertex or tessellation
-    ///     evaluation shaders. If this feature is not enabled, the ViewportIndex built-in decoration must not be used on
-    ///     outputs in vertex or tessellation evaluation shaders.
+    ///     shaderOutputViewportIndex    indicates whether the implementation supports the     ShaderViewportIndex SPIR-V
+    ///     capability enabling variables decorated     with the ViewportIndex built-in to be exported from mesh,     vertex or
+    ///     tessellation evaluation shaders.     If this feature is not enabled, the ViewportIndex built-in     decoration must
+    ///     not be used on outputs in mesh,     vertex or tessellation evaluation shaders.
     /// </summary>
     public VkBool32 shaderOutputViewportIndex;
 
     /// <summary>
-    ///     shaderOutputLayer indicates whether the implementation supports the ShaderLayer SPIR-V capability enabling
-    ///     variables decorated with the Layer built-in to be exported from vertex or tessellation evaluation shaders. If this
-    ///     feature is not enabled, the Layer built-in decoration mustnot be used on outputs in vertex or tessellation
-    ///     evaluation shaders.
+    ///     shaderOutputLayer indicates whether     the implementation supports the ShaderLayer SPIR-V capability
+    ///     enabling variables decorated with the Layer built-in to be exported     from mesh,     vertex or tessellation
+    ///     evaluation shaders.     If this feature is not enabled, the Layer built-in decoration must    not be used on
+    ///     outputs in mesh,     vertex or tessellation evaluation shaders.
     /// </summary>
     public VkBool32 shaderOutputLayer;
 

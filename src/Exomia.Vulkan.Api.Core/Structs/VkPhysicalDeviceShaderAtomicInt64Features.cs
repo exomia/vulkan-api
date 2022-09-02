@@ -48,7 +48,7 @@ public unsafe struct VkPhysicalDeviceShaderAtomicInt64Features
 
     /// <summary>
     ///     shaderSharedInt64Atomics indicates whether shaders can perform 64-bit unsigned and signed integer atomic
-    ///     operations on shared memory.
+    ///     operations on shared and payload memory.
     /// </summary>
     public VkBool32 shaderSharedInt64Atomics;
 }

@@ -102,7 +102,7 @@ public unsafe struct VkPhysicalDeviceMeshShaderPropertiesNV
     /// <summary>maxMeshOutputPrimitives is the maximum number of primitives a mesh shader output can store.</summary>
     public uint maxMeshOutputPrimitives;
 
-    /// <summary>maxMeshMultiviewViewCount is the maximum number of multi-view views a mesh shader can use.</summary>
+    /// <summary>maxMeshMultiviewViewCount is the maximum number of multiview views a mesh shader can use.</summary>
     public uint maxMeshMultiviewViewCount;
 
     /// <summary>

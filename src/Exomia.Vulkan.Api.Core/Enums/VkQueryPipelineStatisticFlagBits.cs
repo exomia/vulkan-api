@@ -137,5 +137,19 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     additional compute shader invocations for implementation-dependent reasons as long as the results of rendering
     ///     otherwise remain unchanged.
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_COMPUTE_SHADER_INVOCATIONS_BIT = 0x400
+    VK_QUERY_PIPELINE_STATISTIC_COMPUTE_SHADER_INVOCATIONS_BIT = 0x400,
+
+    /// <summary>
+    ///     VK_QUERY_PIPELINE_STATISTIC_TASK_SHADER_INVOCATIONS_BIT_EXTspecifies that queries managed by the pool will
+    ///     count the number of task shader invocations. The counter&#8217;s value is incremented every time the task shader is
+    ///     invoked.
+    /// </summary>
+    VK_QUERY_PIPELINE_STATISTIC_TASK_SHADER_INVOCATIONS_BIT_EXT = 0x800,
+
+    /// <summary>
+    ///     VK_QUERY_PIPELINE_STATISTIC_MESH_SHADER_INVOCATIONS_BIT_EXTspecifies that queries managed by the pool will
+    ///     count the number of mesh shader invocations. The counter&#8217;s value is incremented every time the mesh shader is
+    ///     invoked.
+    /// </summary>
+    VK_QUERY_PIPELINE_STATISTIC_MESH_SHADER_INVOCATIONS_BIT_EXT = 0x1000
 }

@@ -124,8 +124,8 @@ public enum VkPipelineStageFlagBits
     ///     VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is equivalent to
     ///     the logical OR of:<br />
     ///     VK_PIPELINE_STAGE_DRAW_INDIRECT_BIT<br />
-    ///     VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV<br />
-    ///     VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_TASK_SHADER_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_MESH_SHADER_BIT_EXT<br />
     ///     VK_PIPELINE_STAGE_VERTEX_INPUT_BIT<br />
     ///     VK_PIPELINE_STAGE_VERTEX_SHADER_BIT<br />
     ///     VK_PIPELINE_STAGE_TESSELLATION_CONTROL_SHADER_BIT<br />
@@ -223,12 +223,6 @@ public enum VkPipelineStageFlagBits
     /// </summary>
     VK_PIPELINE_STAGE_RAY_TRACING_SHADER_BIT_KHR = 0x200000,
 
-    /// <summary>VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV specifies the task shader stage.</summary>
-    VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV = 0x80000,
-
-    /// <summary>VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV specifies the mesh shader stage.</summary>
-    VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV = 0x100000,
-
     /// <summary>
     ///     VK_PIPELINE_STAGE_FRAGMENT_DENSITY_PROCESS_BIT_EXT specifies the stage of the pipeline where the fragment density
     ///     map is read to
@@ -266,6 +260,12 @@ public enum VkPipelineStageFlagBits
     ///     is handled.
     /// </summary>
     VK_PIPELINE_STAGE_COMMAND_PREPROCESS_BIT_NV = 0x20000,
+
+    /// <summary>VK_PIPELINE_STAGE_TASK_SHADER_BIT_EXT specifies the task shader stage.</summary>
+    VK_PIPELINE_STAGE_TASK_SHADER_BIT_EXT = 0x80000,
+
+    /// <summary>VK_PIPELINE_STAGE_MESH_SHADER_BIT_EXT specifies the mesh shader stage.</summary>
+    VK_PIPELINE_STAGE_MESH_SHADER_BIT_EXT = 0x100000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR    specifies the stage of the pipeline where the
@@ -342,6 +342,12 @@ public enum VkPipelineStageFlagBits
     ///     .
     /// </summary>
     VK_PIPELINE_STAGE_ACCELERATION_STRUCTURE_BUILD_BIT_NV = VK_PIPELINE_STAGE_ACCELERATION_STRUCTURE_BUILD_BIT_KHR,
+
+    /// <summary>VK_PIPELINE_STAGE_TASK_SHADER_BIT_EXT specifies the task shader stage.</summary>
+    VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV = VK_PIPELINE_STAGE_TASK_SHADER_BIT_EXT,
+
+    /// <summary>VK_PIPELINE_STAGE_MESH_SHADER_BIT_EXT specifies the mesh shader stage.</summary>
+    VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV = VK_PIPELINE_STAGE_MESH_SHADER_BIT_EXT,
 
     /// <summary>VK_PIPELINE_STAGE_NONE specifies no stages of execution.</summary>
     VK_PIPELINE_STAGE_NONE_KHR = VK_PIPELINE_STAGE_NONE

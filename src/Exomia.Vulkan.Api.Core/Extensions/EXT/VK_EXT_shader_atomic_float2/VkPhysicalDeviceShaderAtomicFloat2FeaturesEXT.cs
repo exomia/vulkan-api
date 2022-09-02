@@ -73,31 +73,31 @@ public unsafe struct VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT
 
     /// <summary>
     ///     shaderSharedFloat16Atomicsindicates whether shaders can perform 16-bit floating-point load, store and
-    ///     exchange atomic operations on shared memory.
+    ///     exchange atomic operations on shared and payload memory.
     /// </summary>
     public VkBool32 shaderSharedFloat16Atomics;
 
     /// <summary>
     ///     shaderSharedFloat16AtomicAdd indicates whether shaders canperform 16-bit floating-point add atomic operations
-    ///     on shared memory.
+    ///     on shared and payload memory.
     /// </summary>
     public VkBool32 shaderSharedFloat16AtomicAdd;
 
     /// <summary>
     ///     shaderSharedFloat16AtomicMinMax indicates whether shaders canperform 16-bit floating-point min and max atomic
-    ///     operations on shared memory.
+    ///     operations on shared and payload memory.
     /// </summary>
     public VkBool32 shaderSharedFloat16AtomicMinMax;
 
     /// <summary>
     ///     shaderSharedFloat32AtomicMinMax indicates whether shaders canperform 32-bit floating-point min and max atomic
-    ///     operations on shared memory.
+    ///     operations on shared and payload memory.
     /// </summary>
     public VkBool32 shaderSharedFloat32AtomicMinMax;
 
     /// <summary>
     ///     shaderSharedFloat64AtomicMinMax indicates whether shaders canperform 64-bit floating-point min and max atomic
-    ///     operations on shared memory.
+    ///     operations on shared and payload memory.
     /// </summary>
     public VkBool32 shaderSharedFloat64AtomicMinMax;
 

@@ -91,8 +91,8 @@ public unsafe struct VkPhysicalDeviceVulkan13Features
     public VkBool32 subgroupSizeControl;
 
     /// <summary>
-    ///     computeFullSubgroups indicates whether the implementation supports requiring full subgroups in compute shaders
-    ///     via the VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT flag.
+    ///     computeFullSubgroups indicates whether the implementation supports requiring full subgroups in compute , mesh,
+    ///     or task shaders via the VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT flag.
     /// </summary>
     public VkBool32 computeFullSubgroups;
 

@@ -131,8 +131,8 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is equivalent to
     ///     the logical OR of:<br />
     ///     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT<br />
-    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV<br />
-    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT<br />
     ///     VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT<br />
     ///     VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT<br />
     ///     VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT<br />
@@ -209,8 +209,8 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT<br />
     ///     VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT<br />
     ///     VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT<br />
-    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV<br />
-    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT = 0x4000000000,
 
@@ -297,11 +297,11 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// </summary>
     VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT = 0x800000,
 
-    /// <summary>VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV specifies the task shader stage.</summary>
-    VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV = 0x80000,
+    /// <summary>VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT specifies the task shader stage.</summary>
+    VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT = 0x80000,
 
-    /// <summary>VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV specifies the mesh shader stage.</summary>
-    VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV = 0x100000,
+    /// <summary>VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT specifies the mesh shader stage.</summary>
+    VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT = 0x100000,
 
     /// <summary>VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI specifies the subpass shading shader stage.</summary>
     VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI = 0x8000000000,
@@ -461,8 +461,8 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT specifies the execution of all graphics pipeline stages, and is equivalent to
     ///     the logical OR of:<br />
     ///     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT<br />
-    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV<br />
-    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT<br />
     ///     VK_PIPELINE_STAGE_2_VERTEX_INPUT_BIT<br />
     ///     VK_PIPELINE_STAGE_2_VERTEX_SHADER_BIT<br />
     ///     VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT<br />
@@ -539,8 +539,8 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_TESSELLATION_CONTROL_SHADER_BIT<br />
     ///     VK_PIPELINE_STAGE_2_TESSELLATION_EVALUATION_SHADER_BIT<br />
     ///     VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT<br />
-    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV<br />
-    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT_KHR = VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT,
 
@@ -571,5 +571,11 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_NV = VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR
+    VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_NV = VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR,
+
+    /// <summary>VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT specifies the task shader stage.</summary>
+    VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV = VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT,
+
+    /// <summary>VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT specifies the mesh shader stage.</summary>
+    VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV = VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT
 }

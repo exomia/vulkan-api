@@ -235,6 +235,12 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_RESERVED_27_BIT_EXT = 0x8000000,
 
     /// <summary>
+    ///     VK_PIPELINE_CREATE_RESERVED_30_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_RESERVED_30_BIT_EXT = 0x40000000,
+
+    /// <summary>
     ///     VK_PIPELINE_CREATE_DISPATCH_BASE<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
     /// </summary>

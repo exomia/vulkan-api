@@ -146,6 +146,16 @@ public enum VkQueryType
     VK_QUERY_TYPE_VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR = 1000299000,
 
     /// <summary>
+    ///     VK_QUERY_TYPE_MESH_PRIMITIVES_GENERATED_EXT specifies a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-mesh-shader">
+    ///         generated
+    ///         mesh primitives query
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_QUERY_TYPE_MESH_PRIMITIVES_GENERATED_EXT = 1000328000,
+
+    /// <summary>
     ///     VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT specifies a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-primitives-generated">
     ///         primitives

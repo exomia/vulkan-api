@@ -41,9 +41,15 @@ public unsafe struct VkPhysicalDeviceMeshShaderFeaturesNV
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary> taskShader indicates whether the task shader stage is supported.</summary>
+    /// <summary>
+    ///     taskShader specifies whether task shaders are supported. If this feature is not enabled, the
+    ///     VK_SHADER_STAGE_TASK_BIT_NVand VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV enum values must not be used.
+    /// </summary>
     public VkBool32 taskShader;
 
-    /// <summary> meshShader indicates whether the mesh shader stage is supported.</summary>
+    /// <summary>
+    ///     meshShader specifies whether mesh shaders are supported. If this feature is not enabled, the
+    ///     VK_SHADER_STAGE_MESH_BIT_NVand VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV enum values must not be used.
+    /// </summary>
     public VkBool32 meshShader;
 }

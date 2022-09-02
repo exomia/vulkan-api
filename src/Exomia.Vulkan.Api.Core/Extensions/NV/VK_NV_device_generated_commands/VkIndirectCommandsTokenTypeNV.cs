@@ -89,5 +89,14 @@ public enum VkIndirectCommandsTokenTypeNV
     ///         </item>
     ///     </list>
     /// </summary>
-    VK_INDIRECT_COMMANDS_TOKEN_TYPE_DRAW_TASKS_NV = 7
+    VK_INDIRECT_COMMANDS_TOKEN_TYPE_DRAW_TASKS_NV = 7,
+
+    /// <summary>
+    ///     <list type="table">
+    ///         <item>
+    ///             <term>Equivalent command</term><description>vkCmdDrawMeshTasksIndirectEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </summary>
+    VK_INDIRECT_COMMANDS_TOKEN_TYPE_DRAW_MESH_TASKS_NV = 1000328000
 }
