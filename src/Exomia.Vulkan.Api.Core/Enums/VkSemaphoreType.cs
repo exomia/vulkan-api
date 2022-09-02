@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkSemaphoreType - Sepcifies the type of a semaphore object -
+///     VkSemaphoreType - Specifies the type of a semaphore object -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreType.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreType.html</a>
 /// </summary>
 public enum VkSemaphoreType

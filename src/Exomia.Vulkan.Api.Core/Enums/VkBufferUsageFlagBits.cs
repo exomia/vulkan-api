@@ -91,7 +91,7 @@ public enum VkBufferUsageFlagBits
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html">
     ///         vkCmdDrawMeshTasksIndirectCountNV
     ///     </a>
-    ///     , or
+    ///     , vkCmdDrawMeshTasksIndirectEXT, vkCmdDrawMeshTasksIndirectCountEXT, or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDispatchIndirect.html">vkCmdDispatchIndirect</a>
     ///     . It is also suitable for passing as the buffer member of VkIndirectCommandsStreamNV, or sequencesCountBuffer or
     ///     sequencesIndexBuffer or preprocessedBuffer member of VkGeneratedCommandsInfoNV

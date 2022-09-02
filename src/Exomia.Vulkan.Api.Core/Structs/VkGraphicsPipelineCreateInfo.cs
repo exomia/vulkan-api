@@ -42,14 +42,15 @@ public unsafe struct VkGraphicsPipelineCreateInfo
     public VkPipelineShaderStageCreateInfo* pStages;
 
     /// <summary>
-    ///     pVertexInputState is a pointer to a VkPipelineVertexInputStateCreateInfo structure defining vertex input state
-    ///     for use with vertex shading.
+    ///     pVertexInputState is a pointer to a VkPipelineVertexInputStateCreateInfo structure. It is ignored if the
+    ///     pipeline includes a mesh shader stage. It is ignored if the pipeline is created with the
+    ///     VK_DYNAMIC_STATE_VERTEX_INPUT_EXT dynamic state set.
     /// </summary>
     public VkPipelineVertexInputStateCreateInfo* pVertexInputState;
 
     /// <summary>
     ///     pInputAssemblyState is a pointer to a VkPipelineInputAssemblyStateCreateInfo structure which determines input
-    ///     assembly behavior for vertex shading, as described in Drawing Commands.
+    ///     assembly behavior, as described in Drawing Commands. It is ignored if the pipeline includes a mesh shader stage.
     /// </summary>
     public VkPipelineInputAssemblyStateCreateInfo* pInputAssemblyState;
 

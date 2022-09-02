@@ -68,11 +68,11 @@ public enum VkShaderStageFlagBits
     /// <summary>VK_SHADER_STAGE_CALLABLE_BIT_KHR specifies the callable stage.</summary>
     VK_SHADER_STAGE_CALLABLE_BIT_KHR = 0x2000,
 
-    /// <summary>VK_SHADER_STAGE_TASK_BIT_NV specifies the task stage.</summary>
-    VK_SHADER_STAGE_TASK_BIT_NV = 0x40,
+    /// <summary>VK_SHADER_STAGE_TASK_BIT_EXT specifies the task stage.</summary>
+    VK_SHADER_STAGE_TASK_BIT_EXT = 0x40,
 
-    /// <summary>VK_SHADER_STAGE_MESH_BIT_NV specifies the mesh stage.</summary>
-    VK_SHADER_STAGE_MESH_BIT_NV = 0x80,
+    /// <summary>VK_SHADER_STAGE_MESH_BIT_EXT specifies the mesh stage.</summary>
+    VK_SHADER_STAGE_MESH_BIT_EXT = 0x80,
 
     /// <summary>
     ///     VK_SHADER_STAGE_SUBPASS_SHADING_BIT_HUAWEI<br />
@@ -114,5 +114,11 @@ public enum VkShaderStageFlagBits
     VK_SHADER_STAGE_INTERSECTION_BIT_NV = VK_SHADER_STAGE_INTERSECTION_BIT_KHR,
 
     /// <summary>VK_SHADER_STAGE_CALLABLE_BIT_KHR specifies the callable stage.</summary>
-    VK_SHADER_STAGE_CALLABLE_BIT_NV = VK_SHADER_STAGE_CALLABLE_BIT_KHR
+    VK_SHADER_STAGE_CALLABLE_BIT_NV = VK_SHADER_STAGE_CALLABLE_BIT_KHR,
+
+    /// <summary>VK_SHADER_STAGE_TASK_BIT_EXT specifies the task stage.</summary>
+    VK_SHADER_STAGE_TASK_BIT_NV = VK_SHADER_STAGE_TASK_BIT_EXT,
+
+    /// <summary>VK_SHADER_STAGE_MESH_BIT_EXT specifies the mesh stage.</summary>
+    VK_SHADER_STAGE_MESH_BIT_NV = VK_SHADER_STAGE_MESH_BIT_EXT
 }

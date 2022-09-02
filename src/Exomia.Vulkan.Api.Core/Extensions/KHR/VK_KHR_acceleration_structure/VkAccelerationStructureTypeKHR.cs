@@ -33,7 +33,8 @@ public enum VkAccelerationStructureTypeKHR
 
     /// <summary>
     ///     VK_ACCELERATION_STRUCTURE_TYPE_GENERIC_KHR is an acceleration structure whose type is determined at build time
-    ///     used for special circumstances.
+    ///     used for special circumstances. In these cases, the acceleration structure type is not known at creation time, but
+    ///     must be specified at build time as either top or bottom.
     /// </summary>
     VK_ACCELERATION_STRUCTURE_TYPE_GENERIC_KHR = 2,
 
