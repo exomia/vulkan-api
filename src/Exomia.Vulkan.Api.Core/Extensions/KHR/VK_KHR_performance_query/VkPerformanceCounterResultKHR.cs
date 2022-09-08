@@ -20,63 +20,27 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Explicit)]
 public struct VkPerformanceCounterResultKHR
 {
-    /// <summary>
-    ///     int32<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR
-    ///     </a>
-    /// </summary>
+    /// <summary>int32 is a 32-bit signed integer value.</summary>
     [FieldOffset(0)]
     public int int32;
 
-    /// <summary>
-    ///     int64<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR
-    ///     </a>
-    /// </summary>
+    /// <summary>int64 is a 64-bit signed integer value.</summary>
     [FieldOffset(0)]
     public long int64;
 
-    /// <summary>
-    ///     uint32<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR
-    ///     </a>
-    /// </summary>
+    /// <summary>uint32 is a 32-bit unsigned integer value.</summary>
     [FieldOffset(0)]
     public uint uint32;
 
-    /// <summary>
-    ///     uint64<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR
-    ///     </a>
-    /// </summary>
+    /// <summary>uint64 is a 64-bit unsigned integer value.</summary>
     [FieldOffset(0)]
     public ulong uint64;
 
-    /// <summary>
-    ///     float32<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR
-    ///     </a>
-    /// </summary>
+    /// <summary>float32 is a 32-bit floating-point value.</summary>
     [FieldOffset(0)]
     public float float32;
 
-    /// <summary>
-    ///     float64<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPerformanceCounterResultKHR
-    ///     </a>
-    /// </summary>
+    /// <summary>float64 is a 64-bit floating-point value.</summary>
     [FieldOffset(0)]
     public double float64;
 }
