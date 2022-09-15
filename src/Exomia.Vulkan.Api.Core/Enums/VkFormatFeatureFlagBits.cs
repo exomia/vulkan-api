@@ -112,14 +112,18 @@ public enum VkFormatFeatureFlagBits
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_TRANSFER_SRC_BIT specifies that an image can be used as a source image for
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>. If
+    ///     the application apiVersion is Vulkan 1.0 and VK_KHR_maintenance1 is not supported,
+    ///     VK_FORMAT_FEATURE_TRANSFER_SRC_BIT is implied to be set when the format feature flag is not 0.
     /// </summary>
     VK_FORMAT_FEATURE_TRANSFER_SRC_BIT = 0x4000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_TRANSFER_DST_BIT specifies that an image can be used as a destination image for
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a> and
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>. If
+    ///     the application apiVersion is Vulkan 1.0 and VK_KHR_maintenance1 is not supported,
+    ///     VK_FORMAT_FEATURE_TRANSFER_DST_BIT is implied to be set when the format feature flag is not 0.
     /// </summary>
     VK_FORMAT_FEATURE_TRANSFER_DST_BIT = 0x8000,
 
@@ -318,14 +322,18 @@ public enum VkFormatFeatureFlagBits
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_TRANSFER_SRC_BIT specifies that an image can be used as a source image for
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a>. If
+    ///     the application apiVersion is Vulkan 1.0 and VK_KHR_maintenance1 is not supported,
+    ///     VK_FORMAT_FEATURE_TRANSFER_SRC_BIT is implied to be set when the format feature flag is not 0.
     /// </summary>
     VK_FORMAT_FEATURE_TRANSFER_SRC_BIT_KHR = VK_FORMAT_FEATURE_TRANSFER_SRC_BIT,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_TRANSFER_DST_BIT specifies that an image can be used as a destination image for
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#copies">copy commands</a> and
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>.
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#clears">clear commands</a>. If
+    ///     the application apiVersion is Vulkan 1.0 and VK_KHR_maintenance1 is not supported,
+    ///     VK_FORMAT_FEATURE_TRANSFER_DST_BIT is implied to be set when the format feature flag is not 0.
     /// </summary>
     VK_FORMAT_FEATURE_TRANSFER_DST_BIT_KHR = VK_FORMAT_FEATURE_TRANSFER_DST_BIT,
 

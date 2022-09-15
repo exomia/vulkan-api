@@ -24,7 +24,7 @@ public enum VkSubpassDescriptionFlagBits
     ///     VK_SUBPASS_DESCRIPTION_PER_VIEW_ATTRIBUTES_BIT_NVX specifies that shaders compiled for this subpass write the
     ///     attributes for all views in a single invocation of each
     ///     <a
-    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipelines-graphics-subsets-pre-rasterization">
     ///         pre-rasterization
     ///         shader stage
     ///     </a>

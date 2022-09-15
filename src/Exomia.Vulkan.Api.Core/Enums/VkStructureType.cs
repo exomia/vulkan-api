@@ -3710,18 +3710,6 @@ public enum VkStructureType
     VK_STRUCTURE_TYPE_DIRECTFB_SURFACE_CREATE_INFO_EXT = 1000346000,
 
     /// <summary>
-    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
-    /// </summary>
-    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE = 1000351000,
-
-    /// <summary>
-    ///     VK_STRUCTURE_TYPE_MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
-    /// </summary>
-    VK_STRUCTURE_TYPE_MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE = 1000351002,
-
-    /// <summary>
     ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
@@ -4164,6 +4152,18 @@ public enum VkStructureType
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
     VK_STRUCTURE_TYPE_AMIGO_PROFILING_SUBMIT_INFO_SEC = 1000485001,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_EXT = 1000351000,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_EXT = 1000351002,
 
     /// <summary>
     ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VARIABLE_POINTER_FEATURES<br />
@@ -5142,6 +5142,18 @@ public enum VkStructureType
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_EXT,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_EXT,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE = VK_STRUCTURE_TYPE_MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_EXT,
 
     /// <summary>
     ///     VK_STRUCTURE_TYPE_FORMAT_PROPERTIES_3_KHR<br />

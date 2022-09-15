@@ -31,7 +31,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkGoogleSurfacelessQuery
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_GOOGLE_SURFACELESS_QUERY_SPEC_VERSION = 1;
+    public const uint VK_GOOGLE_SURFACELESS_QUERY_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_GOOGLE_SURFACELESS_QUERY_EXTENSION_NAME = "VK_GOOGLE_surfaceless_query";

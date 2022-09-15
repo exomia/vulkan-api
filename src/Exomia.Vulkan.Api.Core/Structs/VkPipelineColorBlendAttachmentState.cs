@@ -48,7 +48,7 @@ public struct VkPipelineColorBlendAttachmentState
     public VkBlendFactor dstAlphaBlendFactor;
 
     /// <summary>
-    ///     alphaBlendOp selects which blend operation is use to calculate the alpha values to write to the color
+    ///     alphaBlendOp selects which blend operation is used to calculate the alpha values to write to the color
     ///     attachment.
     /// </summary>
     public VkBlendOp alphaBlendOp;

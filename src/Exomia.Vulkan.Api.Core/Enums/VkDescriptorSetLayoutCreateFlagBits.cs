@@ -69,14 +69,14 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     VK_DESCRIPTOR_SET_LAYOUT_CREATE_RESERVED_3_BIT_AMD = 0x8,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_VALVE specifies that descriptor sets using this layout must
-    ///     be allocated from a descriptor pool created with the VK_DESCRIPTOR_POOL_CREATE_HOST_ONLY_BIT_VALVE bit set.
+    ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_EXT specifies that descriptor sets using this layout must
+    ///     be allocated from a descriptor pool created with the VK_DESCRIPTOR_POOL_CREATE_HOST_ONLY_BIT_EXT bit set.
     ///     Descriptor set layouts created with this bit have no expressible limit for maximum number of descriptors per-stage.
     ///     Host descriptor sets are limited only by available host memory, but maybe limited for implementation specific
     ///     reasons. Implementations may limit the number of supported descriptors to UpdateAfterBind limits or
     ///     non-UpdateAfterBind limits, whichever is larger.
     /// </summary>
-    VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_VALVE = 0x4,
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_EXT = 0x4,
 
     /// <summary>
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BITspecifies that descriptor sets using this layout
@@ -86,5 +86,15 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     ///     this flag. The UpdateAfterBind limits count all descriptors, but the limits may be higher than the
     ///     non-UpdateAfterBind limits.
     /// </summary>
-    VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT_EXT = VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT_EXT = VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT,
+
+    /// <summary>
+    ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_EXT specifies that descriptor sets using this layout must
+    ///     be allocated from a descriptor pool created with the VK_DESCRIPTOR_POOL_CREATE_HOST_ONLY_BIT_EXT bit set.
+    ///     Descriptor set layouts created with this bit have no expressible limit for maximum number of descriptors per-stage.
+    ///     Host descriptor sets are limited only by available host memory, but maybe limited for implementation specific
+    ///     reasons. Implementations may limit the number of supported descriptors to UpdateAfterBind limits or
+    ///     non-UpdateAfterBind limits, whichever is larger.
+    /// </summary>
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_VALVE = VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_EXT
 }

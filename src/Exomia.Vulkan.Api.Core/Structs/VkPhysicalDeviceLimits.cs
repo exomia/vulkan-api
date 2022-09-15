@@ -438,7 +438,8 @@ public struct VkPhysicalDeviceLimits
     ///     class is implementation-dependent. However, the amount of storage consumed may not exceed the largest block size
     ///     that would be obtained if all active non-Block variables declared with Workgroup storage class were assigned
     ///     offsets in an arbitrary order by successively taking the smallest valid offset according to the Standard Storage
-    ///     Buffer Layout rules. (This is equivalent to using the GLSL std430 layout rules.)
+    ///     Buffer Layout rules, and with Boolean values considered as 32-bit integer values for the purpose of this
+    ///     calculation. (This is equivalent to using the GLSL std430 layout rules.)
     /// </summary>
     public uint maxComputeSharedMemorySize;
 
