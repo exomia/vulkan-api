@@ -50,7 +50,8 @@ public unsafe struct VkGraphicsPipelineCreateInfo
 
     /// <summary>
     ///     pInputAssemblyState is a pointer to a VkPipelineInputAssemblyStateCreateInfo structure which determines input
-    ///     assembly behavior, as described in Drawing Commands. It is ignored if the pipeline includes a mesh shader stage.
+    ///     assembly behavior for vertex shading, as described in Drawing Commands. It is ignored if the pipeline includes a
+    ///     mesh shader stage.
     /// </summary>
     public VkPipelineInputAssemblyStateCreateInfo* pInputAssemblyState;
 

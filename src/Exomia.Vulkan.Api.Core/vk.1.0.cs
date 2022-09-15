@@ -2929,8 +2929,7 @@ public static partial class Vk
     /// <param name="attachmentCount">attachmentCount is the number of entries in the pAttachmentsarray.</param>
     /// <param name="pAttachments">
     ///     pAttachments is a pointer to an array of VkClearAttachmentstructures defining the
-    ///     attachments to clear and the clear values to use. If any attachment index to be cleared is not backed by an image
-    ///     view, then the clear has no effect.
+    ///     attachments to clear and the clear values to use.
     /// </param>
     /// <param name="rectCount">rectCount is the number of entries in the pRects array.</param>
     /// <param name="pRects">
