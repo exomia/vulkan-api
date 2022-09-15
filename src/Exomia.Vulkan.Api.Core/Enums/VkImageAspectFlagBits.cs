@@ -30,7 +30,7 @@ public enum VkImageAspectFlagBits
     VK_IMAGE_ASPECT_STENCIL_BIT = 0x4,
 
     /// <summary>
-    ///     VK_IMAGE_ASPECT_METADATA_BIT specifies the metadata aspect, used for
+    ///     VK_IMAGE_ASPECT_METADATA_BIT specifies the metadata aspect used for
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#sparsememory">sparse resource</a>
     ///     operations.
     /// </summary>

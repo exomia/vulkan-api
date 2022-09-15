@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE - Structure describing whether the mutable descriptor type is
+///     VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT - Structure describing whether the mutable descriptor type is
 ///     supported -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -30,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPhysicalDeviceFeatures2,VkDeviceCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE
+public unsafe struct VkPhysicalDeviceMutableDescriptorTypeFeaturesEXT
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_EXT;
 
     /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
@@ -43,7 +43,7 @@ public unsafe struct VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE
 
     /// <summary>
     ///     mutableDescriptorType indicates that the implementation must support using the VkDescriptorTypeof
-    ///     VK_DESCRIPTOR_TYPE_MUTABLE_VALVE with at least the following descriptor types, where any combination of the types
+    ///     VK_DESCRIPTOR_TYPE_MUTABLE_EXT with at least the following descriptor types, where any combination of the types
     ///     must be
     ///     supported:VK_DESCRIPTOR_TYPE_SAMPLED_IMAGEVK_DESCRIPTOR_TYPE_STORAGE_IMAGEVK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFERVK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFERVK_DESCRIPTOR_TYPE_UNIFORM_BUFFERVK_DESCRIPTOR_TYPE_STORAGE_BUFFER
     /// </summary>

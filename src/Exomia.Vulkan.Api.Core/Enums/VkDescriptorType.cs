@@ -158,16 +158,6 @@ public enum VkDescriptorType
     VK_DESCRIPTOR_TYPE_ACCELERATION_STRUCTURE_NV = 1000165000,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_TYPE_MUTABLE_VALVE specifies a
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-mutable">
-    ///         descriptor
-    ///         of mutable type
-    ///     </a>
-    ///     .
-    /// </summary>
-    VK_DESCRIPTOR_TYPE_MUTABLE_VALVE = 1000351000,
-
-    /// <summary>
     ///     VK_DESCRIPTOR_TYPE_SAMPLE_WEIGHT_IMAGE_QCOM specifies a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-weightimage">
     ///         sampled
@@ -179,13 +169,23 @@ public enum VkDescriptorType
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_BLOCK_MATCH_IMAGE_QCOM specifies a
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-blockmatching">
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-blockmatch">
     ///         block
     ///         matching image descriptor
     ///     </a>
     ///     .
     /// </summary>
     VK_DESCRIPTOR_TYPE_BLOCK_MATCH_IMAGE_QCOM = 1000440001,
+
+    /// <summary>
+    ///     VK_DESCRIPTOR_TYPE_MUTABLE_EXT specifies a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-mutable">
+    ///         descriptor
+    ///         of mutable type
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_DESCRIPTOR_TYPE_MUTABLE_EXT = 1000351000,
 
     /// <summary>
     ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK specifies an
@@ -196,5 +196,15 @@ public enum VkDescriptorType
     ///     </a>
     ///     .
     /// </summary>
-    VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK_EXT = VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK
+    VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK_EXT = VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK,
+
+    /// <summary>
+    ///     VK_DESCRIPTOR_TYPE_MUTABLE_EXT specifies a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-mutable">
+    ///         descriptor
+    ///         of mutable type
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_DESCRIPTOR_TYPE_MUTABLE_VALVE = VK_DESCRIPTOR_TYPE_MUTABLE_EXT
 }

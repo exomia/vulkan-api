@@ -608,8 +608,8 @@ public static partial class Vk
     /// </param>
     /// <param name="flags">flags is reserved for future use.</param>
     /// <param name="ppData">
-    ///     ppData is a pointer to a void * variable in which is returned a host-accessible pointer to the
-    ///     beginning of the mapped range. This pointer minus offset must be aligned to at least
+    ///     ppData is a pointer to a void* variable in which a host-accessible pointer to the beginning of the
+    ///     mapped range is returned. This pointer minus offset must be aligned to at least
     ///     VkPhysicalDeviceLimits::minMemoryMapAlignment.
     /// </param>
     /// <remarks>
@@ -2929,8 +2929,7 @@ public static partial class Vk
     /// <param name="attachmentCount">attachmentCount is the number of entries in the pAttachmentsarray.</param>
     /// <param name="pAttachments">
     ///     pAttachments is a pointer to an array of VkClearAttachmentstructures defining the
-    ///     attachments to clear and the clear values to use. If any attachment index to be cleared is not backed by an image
-    ///     view, then the clear has no effect.
+    ///     attachments to clear and the clear values to use.
     /// </param>
     /// <param name="rectCount">rectCount is the number of entries in the pRects array.</param>
     /// <param name="pRects">

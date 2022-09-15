@@ -288,6 +288,12 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_VIDEO_DECODE_WRITE_BIT_KHR = 0x1000000000,
 
     /// <summary>
+    ///     VK_ACCESS_2_RESERVED_46_BIT_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
+    /// </summary>
+    VK_ACCESS_2_RESERVED_46_BIT_EXT = 0x400000000000,
+
+    /// <summary>
     ///     VK_ACCESS_2_VIDEO_ENCODE_READ_BIT_KHR specifies read access to an image or buffer resource as part of a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video

@@ -44,8 +44,11 @@ public enum VkQueueFlagBits
     ///         Protected
     ///         Memory
     ///     </a>
-    ///     ). If the physical device supports the protectedMemory feature, at least one of its queue families
-    ///     must support this bit.
+    ///     ). If the physical device supports the
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#features-protectedMemory">
+    ///         <code>protectedMemory</code>
+    ///     </a>
+    ///     feature, at least one of its queue families must support this bit.
     /// </summary>
     VK_QUEUE_PROTECTED_BIT = 0x10,
 

@@ -24,7 +24,7 @@ public enum VkSubpassDescriptionFlagBits
     ///     VK_SUBPASS_DESCRIPTION_PER_VIEW_ATTRIBUTES_BIT_NVX specifies that shaders compiled for this subpass write the
     ///     attributes for all views in a single invocation of each
     ///     <a
-    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipelines-graphics-subsets-pre-rasterization">
     ///         pre-rasterization
     ///         shader stage
     ///     </a>
@@ -69,13 +69,14 @@ public enum VkSubpassDescriptionFlagBits
     VK_SUBPASS_DESCRIPTION_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_EXT = 0x40,
 
     /// <summary>
-    ///     VK_SUBPASS_DESCRIPTION_RESERVED_7_BIT_EXT<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubpassDescriptionFlagBits">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubpassDescriptionFlagBits
+    ///     VK_SUBPASS_DESCRIPTION_ENABLE_LEGACY_DITHERING_BIT_EXT specifies that
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-legacy-dithering">
+    ///         Legacy
+    ///         Dithering
     ///     </a>
+    ///     is enabled for this subpass.
     /// </summary>
-    VK_SUBPASS_DESCRIPTION_RESERVED_7_BIT_EXT = 0x80,
+    VK_SUBPASS_DESCRIPTION_ENABLE_LEGACY_DITHERING_BIT_EXT = 0x80,
 
     /// <summary>
     ///     VK_SUBPASS_DESCRIPTION_RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_BIT_EXTspecifies that this subpass supports

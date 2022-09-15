@@ -82,7 +82,7 @@ public struct VkPhysicalDeviceFeatures
     ///     byte size of the memory range bound to the vertex buffer binding.If a vertex input attribute is out of bounds, the
     ///     raw data extracted are zero values, and missing G, B, or A components are filled with (0,0,1).If robustBufferAccess
     ///     is not enabled, applications must not perform out of bounds accesses except under the conditions enabled by the
-    ///     pipelineRobustness feature. .
+    ///     pipelineRobustness feature .
     /// </summary>
     public VkBool32 robustBufferAccess;
 

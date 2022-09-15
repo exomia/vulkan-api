@@ -200,7 +200,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT is equivalent to specifying all supported
     ///     <a
-    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipelines-graphics-subsets-pre-rasterization">
     ///         pre-rasterization
     ///         shader stages
     ///     </a>
@@ -530,7 +530,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT is equivalent to specifying all supported
     ///     <a
-    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipeline-graphics-subsets-pre-rasterization">
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#pipelines-graphics-subsets-pre-rasterization">
     ///         pre-rasterization
     ///         shader stages
     ///     </a>

@@ -55,7 +55,7 @@ public unsafe struct VkWriteDescriptorSet
     /// <summary>
     ///     descriptorType is a VkDescriptorType specifying the type of each descriptor in pImageInfo, pBufferInfo, or
     ///     pTexelBufferView, as described below. If VkDescriptorSetLayoutBinding for dstSet at dstBinding is not equal to
-    ///     VK_DESCRIPTOR_TYPE_MUTABLE_VALVE, descriptorType mustbe the same type as the descriptorType specified in
+    ///     VK_DESCRIPTOR_TYPE_MUTABLE_EXT, descriptorType mustbe the same type as the descriptorType specified in
     ///     VkDescriptorSetLayoutBinding for dstSet at dstBinding. The type of the descriptor also controls which array the
     ///     descriptors are taken from.
     /// </summary>

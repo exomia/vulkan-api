@@ -29,7 +29,7 @@ public unsafe struct VkImageViewCreateInfo
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>flags is a bitmask of VkImageViewCreateFlagBits describing additional parameters of the image view.</summary>
+    /// <summary>flags is a bitmask of VkImageViewCreateFlagBits specifying additional parameters of the image view.</summary>
     public VkImageViewCreateFlags flags;
 
     /// <summary>image is a VkImage on which the view will be created.</summary>
@@ -38,7 +38,7 @@ public unsafe struct VkImageViewCreateInfo
     /// <summary>viewType is a VkImageViewType value specifying the type of the image view.</summary>
     public VkImageViewType viewType;
 
-    /// <summary>format is a VkFormat describing the format and type used to interpret texel blocks in the image.</summary>
+    /// <summary>format is a VkFormat specifying the format and type used to interpret texel blocks of the image.</summary>
     public VkFormat format;
 
     /// <summary>

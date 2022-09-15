@@ -38,7 +38,7 @@ public struct VkQueueFamilyProperties
 
     /// <summary>
     ///     timestampValidBits is the unsigned integer count of meaningful bits in the timestamps written via
-    ///     vkCmdWriteTimestamp2 or vkCmdWriteTimestamp. The valid range for the count is 36..64 bits, or a value of 0,
+    ///     vkCmdWriteTimestamp2 or vkCmdWriteTimestamp. The valid range for the count is 36 to 64 bits, or a value of 0,
     ///     indicating no support for timestamps. Bits outside the valid range are guaranteed to be zeros.
     /// </summary>
     public uint timestampValidBits;

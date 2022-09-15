@@ -151,7 +151,7 @@ public static partial class Vk
     /// <param name="commandBuffer">commandBuffer is the command buffer in which to end the current render pass instance.</param>
     /// <param name="pSubpassEndInfo">
     ///     pSubpassEndInfo is a pointer to a VkSubpassEndInfo structure containing information about
-    ///     how the previous subpass will be ended.
+    ///     how the last subpass will be ended.
     /// </param>
     [VkVersion("1.2")]
     [SuppressUnmanagedCodeSecurity]

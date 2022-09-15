@@ -24,7 +24,7 @@ public unsafe struct VkSpecializationInfo
     public uint mapEntryCount;
 
     /// <summary>
-    ///     pMapEntries is a pointer to an array of VkSpecializationMapEntry structures which map constant IDs to offsets
+    ///     pMapEntries is a pointer to an array of VkSpecializationMapEntry structures, which map constant IDs to offsets
     ///     in pData.
     /// </summary>
     public VkSpecializationMapEntry* pMapEntries;

@@ -353,7 +353,7 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_PRIMITIVE_RESTART_ENABLE = 1000377004,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_VIEWPORT_W_SCALING_NV specifies that the pViewportScalings state in
+    ///     VK_DYNAMIC_STATE_VIEWPORT_W_SCALING_NV specifies that the pViewportWScalings state in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html">
     ///         VkPipelineViewportWScalingStateCreateInfoNV

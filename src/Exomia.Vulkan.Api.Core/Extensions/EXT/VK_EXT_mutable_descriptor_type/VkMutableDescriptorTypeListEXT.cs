@@ -14,15 +14,12 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkMutableDescriptorTypeListVALVE - Structure describing descriptor types that a given descriptor may mutate
-///     to -
-///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListVALVE.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListVALVE.html
-///     </a>
+///     VkMutableDescriptorTypeListEXT - Structure describing descriptor types that a given descriptor may mutate to
+///     -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListEXT.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkMutableDescriptorTypeListVALVE
+public unsafe struct VkMutableDescriptorTypeListEXT
 {
     /// <summary>descriptorTypeCount is the number of elements in pDescriptorTypes.</summary>
     public uint descriptorTypeCount;

@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkMutableDescriptorTypeCreateInfoVALVE - Structure describing the list of possible active descriptor types for
+///     VkMutableDescriptorTypeCreateInfoEXT - Structure describing the list of possible active descriptor types for
 ///     mutable type descriptors -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeCreateInfoVALVE.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeCreateInfoVALVE.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeCreateInfoEXT.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeCreateInfoEXT.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -31,10 +31,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkDescriptorSetLayoutCreateInfo,VkDescriptorPoolCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkMutableDescriptorTypeCreateInfoVALVE
+public unsafe struct VkMutableDescriptorTypeCreateInfoEXT
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_EXT;
 
     /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
@@ -45,6 +45,6 @@ public unsafe struct VkMutableDescriptorTypeCreateInfoVALVE
     /// <summary>mutableDescriptorTypeListCount is the number of elements in pMutableDescriptorTypeLists.</summary>
     public uint mutableDescriptorTypeListCount;
 
-    /// <summary>pMutableDescriptorTypeLists is a pointer to an array of VkMutableDescriptorTypeListVALVE structures.</summary>
-    public VkMutableDescriptorTypeListVALVE* pMutableDescriptorTypeLists;
+    /// <summary>pMutableDescriptorTypeLists is a pointer to an array of VkMutableDescriptorTypeListEXT structures.</summary>
+    public VkMutableDescriptorTypeListEXT* pMutableDescriptorTypeLists;
 }
