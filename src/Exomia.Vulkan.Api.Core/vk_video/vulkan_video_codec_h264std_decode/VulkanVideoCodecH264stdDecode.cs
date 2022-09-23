@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VulkanVideoCodecH264stdDecode
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_STD_VULKAN_VIDEO_CODEC_H264_DECODE_SPEC_VERSION = VK_STD_VULKAN_VIDEO_CODEC_H264_DECODE_API_VERSION_0_9_6;
+    public const uint VK_STD_VULKAN_VIDEO_CODEC_H264_DECODE_SPEC_VERSION = VK_STD_VULKAN_VIDEO_CODEC_H264_DECODE_API_VERSION_0_9_7;
 
     /// <summary> The extension name. </summary>
     public const string VK_STD_VULKAN_VIDEO_CODEC_H264_DECODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_h264_decode";
@@ -40,8 +40,6 @@ public static class VulkanVideoCodecH264stdDecode
     /// </remarks>
     public const string VK_STD_VULKAN_VIDEO_CODEC_H264_DECODE_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u535f\u4454\u565f\u4c55\u414b\u5f4e\u4956\u4544\u5f4f\u4f43\u4544\u5f43\u3248\u3436\u445f\u4345\u444f\u5f45\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
-
-    public const int STD_VIDEO_DECODE_H264_MVC_REF_LIST_SIZE = 15;
 
     public const int STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_LIST_SIZE = 2;
 }

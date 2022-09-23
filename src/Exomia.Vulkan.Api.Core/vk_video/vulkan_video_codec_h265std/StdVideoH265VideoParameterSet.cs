@@ -34,4 +34,6 @@ public unsafe struct StdVideoH265VideoParameterSet
     public StdVideoH265DecPicBufMgr* pDecPicBufMgr;
 
     public StdVideoH265HrdParameters* pHrdParameters;
+
+    public StdVideoH265ProfileTierLevel* pProfileTierLevel;
 }

@@ -21,10 +21,6 @@ public unsafe struct StdVideoH265SequenceParameterSet
 {
     public StdVideoH265SpsFlags flags;
 
-    public StdVideoH265ProfileIdc profile_idc;
-
-    public StdVideoH265Level level_idc;
-
     public uint pic_width_in_luma_samples;
 
     public uint pic_height_in_luma_samples;
@@ -35,7 +31,7 @@ public unsafe struct StdVideoH265SequenceParameterSet
 
     public byte sps_seq_parameter_set_id;
 
-    public byte chroma_format_idc;
+    public StdVideoH265ChromaFormatIdc chroma_format_idc;
 
     public byte bit_depth_luma_minus8;
 
@@ -57,8 +53,6 @@ public unsafe struct StdVideoH265SequenceParameterSet
 
     public byte num_short_term_ref_pic_sets;
 
-    public byte num_long_term_ref_pics_sps;
-
     public byte pcm_sample_bit_depth_luma_minus1;
 
     public byte pcm_sample_bit_depth_chroma_minus1;
@@ -75,9 +69,15 @@ public unsafe struct StdVideoH265SequenceParameterSet
 
     public uint conf_win_bottom_offset;
 
+    public StdVideoH265ProfileTierLevel* pProfileTierLevel;
+
     public StdVideoH265DecPicBufMgr* pDecPicBufMgr;
 
     public StdVideoH265ScalingLists* pScalingLists;
+
+    public VkArray64<StdVideoH265ShortTermRefPicSet>* pShortTermRefPicSet;
+
+    public StdVideoH265LongTermRefPicsSps* pLongTermRefPicsSps;
 
     public StdVideoH265SequenceParameterSetVui* pSequenceParameterSetVui;
 
@@ -87,7 +87,7 @@ public unsafe struct StdVideoH265SequenceParameterSet
 
     public byte motion_vector_resolution_control_idc;
 
-    public byte sps_num_palette_predictor_initializer_minus1;
+    public byte sps_num_palette_predictor_initializers_minus1;
 
     public StdVideoH265PredictorPaletteEntries* pPredictorPaletteEntries;
 }

@@ -25,6 +25,8 @@ public unsafe struct StdVideoH265PictureParameterSet
 
     public byte pps_seq_parameter_set_id;
 
+    public byte sps_video_parameter_set_id;
+
     public byte num_extra_slice_header_bits;
 
     public byte num_ref_idx_l0_default_active_minus1;
@@ -73,9 +75,9 @@ public unsafe struct StdVideoH265PictureParameterSet
 
     public sbyte pps_act_cb_qp_offset_plus5;
 
-    public sbyte pps_act_cr_qp_offset_plus5;
+    public sbyte pps_act_cr_qp_offset_plus3;
 
-    public byte pps_num_palette_predictor_initializer;
+    public byte pps_num_palette_predictor_initializers;
 
     public byte luma_bit_depth_entry_minus8;
 

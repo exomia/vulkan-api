@@ -45,33 +45,27 @@ public struct StdVideoH264PpsFlags
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFF7) | (((uint)value & 0x00000001) << 3); }
     }
 
-    public uint weighted_bipred_idc_flag
+    public uint weighted_pred_flag
     {
         get { return (uint)((_bitfield1 >> 4) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFEF) | (((uint)value & 0x00000001) << 4); }
     }
 
-    public uint weighted_pred_flag
+    public uint bottom_field_pic_order_in_frame_present_flag
     {
         get { return (uint)((_bitfield1 >> 5) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFDF) | (((uint)value & 0x00000001) << 5); }
     }
 
-    public uint pic_order_present_flag
+    public uint entropy_coding_mode_flag
     {
         get { return (uint)((_bitfield1 >> 6) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFBF) | (((uint)value & 0x00000001) << 6); }
     }
 
-    public uint entropy_coding_mode_flag
+    public uint pic_scaling_matrix_present_flag
     {
         get { return (uint)((_bitfield1 >> 7) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFF7F) | (((uint)value & 0x00000001) << 7); }
-    }
-
-    public uint pic_scaling_matrix_present_flag
-    {
-        get { return (uint)((_bitfield1 >> 8) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFFEFF) | (((uint)value & 0x00000001) << 8); }
     }
 }

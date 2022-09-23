@@ -23,7 +23,7 @@ public unsafe struct StdVideoH264SequenceParameterSet
 
     public StdVideoH264ProfileIdc profile_idc;
 
-    public StdVideoH264Level level_idc;
+    public StdVideoH264LevelIdc level_idc;
 
     public byte seq_parameter_set_id;
 

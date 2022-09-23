@@ -29,7 +29,7 @@ public unsafe struct StdVideoH264SequenceParameterSetVui
 
     public byte video_format;
 
-    public byte color_primaries;
+    public byte colour_primaries;
 
     public byte transfer_characteristics;
 
@@ -44,4 +44,8 @@ public unsafe struct StdVideoH264SequenceParameterSetVui
     public byte max_num_reorder_frames;
 
     public byte max_dec_frame_buffering;
+
+    public byte chroma_sample_loc_type_top_field;
+
+    public byte chroma_sample_loc_type_bottom_field;
 }
