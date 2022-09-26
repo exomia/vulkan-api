@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkShaderModule - Opaque handle to a shader module object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderModule.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderModule.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderModule.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderModule.html </a>
 /// </summary>
 public readonly unsafe struct VkShaderModule
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkShaderModule
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkShaderModule left, VkShaderModule right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkShaderModule
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkShaderModule left, VkShaderModule right)

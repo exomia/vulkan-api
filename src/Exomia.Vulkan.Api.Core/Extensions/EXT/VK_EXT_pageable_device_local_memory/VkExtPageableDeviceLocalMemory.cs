@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtPageableDeviceLocalMemory;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_pageable_device_local_memory - device extension (nr. 413) - author 'EXT' [platform '' | contact 'Piers
-///     Daniell @pdaniell-nv']<br />
+///     VK_EXT_pageable_device_local_memory - device extension (nr. 413) - author 'EXT' [platform '' | contact 'Piers Daniell @pdaniell-nv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pageable_device_local_memory.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pageable_device_local_memory.html
@@ -43,8 +43,8 @@ public static unsafe class VkExtPageableDeviceLocalMemory
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_PAGEABLE_DEVICE_LOCAL_MEMORY_EXTENSION_NAME_UTF8_NT =
@@ -52,15 +52,11 @@ public static unsafe class VkExtPageableDeviceLocalMemory
 
     /// <summary>
     ///     vkSetDeviceMemoryPriorityEXT - Change a memory allocation priority -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDeviceMemoryPriorityEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDeviceMemoryPriorityEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDeviceMemoryPriorityEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDeviceMemoryPriorityEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the memory.</param>
-    /// <param name="memory">memory is the VkDeviceMemory object to which the new priority will be applied.</param>
-    /// <param name="priority">
-    ///     priority is a floating-point value between 0 and 1, indicating the priority of the allocation
-    ///     relative to other memory allocations. Larger values are higher priority. The granularity of the priorities is
-    ///     implementation-dependent.
-    /// </param>
+    /// <param name="device"> device is the logical device that owns the memory. </param>
+    /// <param name="memory"> memory is the VkDeviceMemory object to which the new priority will be applied. </param>
+    /// <param name="priority"> priority is a floating-point value between 0 and 1, indicating the priority of the allocation relative to other memory allocations. Larger values are higher priority. The granularity of the priorities is implementation-dependent. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkDeviceMemory /*memory*/,
@@ -73,7 +69,7 @@ public static unsafe class VkExtPageableDeviceLocalMemory
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkSetDeviceMemoryPriorityEXT</description>
+    ///             <description> vkSetDeviceMemoryPriorityEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

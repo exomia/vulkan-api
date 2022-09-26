@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_AMD_shader_info - device extension (nr. 43) - author 'AMD' [platform '' | contact 'Jaakko Konttinen @jaakkoamd']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_info.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_info.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_info.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_info.html </a>
 /// </summary>
 /// <remarks>
 ///     specialuse: devtools
@@ -35,43 +35,35 @@ public static unsafe class VkAmdShaderInfo
     /// <summary> The extension name. </summary>
     public const string VK_AMD_SHADER_INFO_EXTENSION_NAME = "VK_AMD_shader_info";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_AMD_SHADER_INFO_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_AMD_SHADER_INFO_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_AMD_SHADER_INFO_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_AMD_SHADER_INFO_EXTENSION_NAME_UTF8_NT = "\u4b56\u415f\u444d\u535f\u4148\u4544\u5f52\u4e49\u4f46\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkGetShaderInfoAMD - Get information about a shader in a pipeline -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderInfoAMD.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderInfoAMD.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderInfoAMD.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderInfoAMD.html </a>
     /// </summary>
-    /// <param name="device">device is the device that created pipeline.</param>
-    /// <param name="pipeline">pipeline is the target of the query.</param>
-    /// <param name="shaderStage">
-    ///     shaderStage is a VkShaderStageFlagBits specifying the particular shader within the pipeline
-    ///     about which information is being queried.
-    /// </param>
-    /// <param name="infoType">infoType describes what kind of information is being queried.</param>
-    /// <param name="pInfoSize">
-    ///     pInfoSize is a pointer to a value related to the amount of data the query returns, as described
-    ///     below.
-    /// </param>
-    /// <param name="pInfo">pInfo is either NULL or a pointer to a buffer.</param>
+    /// <param name="device"> device is the device that created pipeline. </param>
+    /// <param name="pipeline"> pipeline is the target of the query. </param>
+    /// <param name="shaderStage"> shaderStage is a VkShaderStageFlagBits specifying the particular shader within the pipeline about which information is being queried. </param>
+    /// <param name="infoType"> infoType describes what kind of information is being queried. </param>
+    /// <param name="pInfoSize"> pInfoSize is a pointer to a value related to the amount of data the query returns, as described below. </param>
+    /// <param name="pInfo"> pInfo is either NULL or a pointer to a buffer. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_FEATURE_NOT_PRESENT,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_FEATURE_NOT_PRESENT,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -90,7 +82,7 @@ public static unsafe class VkAmdShaderInfo
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetShaderInfoAMD</description>
+    ///             <description> vkGetShaderInfoAMD </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkBuffer - Opaque handle to a buffer object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBuffer.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBuffer.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBuffer.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBuffer.html </a>
 /// </summary>
 public readonly unsafe struct VkBuffer
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkBuffer
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkBuffer left, VkBuffer right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkBuffer
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkBuffer left, VkBuffer right)

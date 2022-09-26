@@ -15,21 +15,21 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSurfaceFormatKHR - Structure describing a supported swapchain format-color space pair -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormatKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormatKHR.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormatKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormatKHR.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkSurfaceFormatKHR
 {
-    /// <summary>format is a VkFormat that is compatible with the specified surface.</summary>
+    /// <summary> format is a VkFormat that is compatible with the specified surface. </summary>
     public VkFormat format;
 
-    /// <summary>colorSpace is a presentation VkColorSpaceKHR that is compatible with the surface.</summary>
+    /// <summary> colorSpace is a presentation VkColorSpaceKHR that is compatible with the surface. </summary>
     public VkColorSpaceKHR colorSpace;
 }

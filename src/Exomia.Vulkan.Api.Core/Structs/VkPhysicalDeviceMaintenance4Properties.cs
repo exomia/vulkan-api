@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceMaintenance4Properties - Structure describing various implementation-defined properties introduced
-///     with VK_KHR_maintenance4 -
+///     VkPhysicalDeviceMaintenance4Properties - Structure describing various implementation-defined properties introduced with VK_KHR_maintenance4 -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMaintenance4Properties.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMaintenance4Properties.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,12 +37,12 @@ public unsafe struct VkPhysicalDeviceMaintenance4Properties
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MAINTENANCE_4_PROPERTIES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary> maxBufferSize is the maximum size VkBuffer that can be created.</summary>
+    /// <summary> maxBufferSize is the maximum size VkBuffer that can be created. </summary>
     public VkDeviceSize maxBufferSize;
 }

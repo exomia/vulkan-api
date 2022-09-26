@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkGraphicsPipelineShaderGroupsCreateInfoNV - Structure specifying parameters of a newly created multi shader group
-///     pipeline -
+///     VkGraphicsPipelineShaderGroupsCreateInfoNV - Structure specifying parameters of a newly created multi shader group pipeline -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsPipelineShaderGroupsCreateInfoNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsPipelineShaderGroupsCreateInfoNV.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkGraphicsPipelineCreateInfo</description>
+///             <term> structextends </term><description> VkGraphicsPipelineCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,27 +34,21 @@ public unsafe struct VkGraphicsPipelineShaderGroupsCreateInfoNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>groupCount is the number of elements in the pGroups array.</summary>
+    /// <summary> groupCount is the number of elements in the pGroups array. </summary>
     public uint groupCount;
 
-    /// <summary>
-    ///     pGroups is a pointer to an array of VkGraphicsShaderGroupCreateInfoNV structures specifying which state of the
-    ///     original VkGraphicsPipelineCreateInfo each shader group overrides.
-    /// </summary>
+    /// <summary> pGroups is a pointer to an array of VkGraphicsShaderGroupCreateInfoNV structures specifying which state of the original VkGraphicsPipelineCreateInfo each shader group overrides. </summary>
     public VkGraphicsShaderGroupCreateInfoNV* pGroups;
 
-    /// <summary>pipelineCount is the number of elements in the pPipelinesarray.</summary>
+    /// <summary> pipelineCount is the number of elements in the pPipelinesarray. </summary>
     public uint pipelineCount;
 
-    /// <summary>
-    ///     pPipelines is a pointer to an array of graphics VkPipelinestructures which are referenced within the created
-    ///     pipeline, including all their shader groups.
-    /// </summary>
+    /// <summary> pPipelines is a pointer to an array of graphics VkPipelinestructures which are referenced within the created pipeline, including all their shader groups. </summary>
     public VkPipeline* pPipelines;
 }

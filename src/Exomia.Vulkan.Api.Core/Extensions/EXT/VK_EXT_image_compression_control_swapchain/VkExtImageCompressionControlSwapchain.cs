@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtImageCompressionControlSwapchain
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_image_compression_control_swapchain - device extension (nr. 438) - author 'EXT' [platform '' | contact
-///     'Jan-Harald Fredriksen @janharaldfredriksen-arm']<br />
+///     VK_EXT_image_compression_control_swapchain - device extension (nr. 438) - author 'EXT' [platform '' | contact 'Jan-Harald Fredriksen @janharaldfredriksen-arm']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_compression_control_swapchain.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_compression_control_swapchain.html
@@ -43,8 +43,8 @@ public static class VkExtImageCompressionControlSwapchain
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_IMAGE_COMPRESSION_CONTROL_SWAPCHAIN_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_IMAGE_COMPRESSION_CONTROL_SWAPCHAIN_EXTENSION_NAME_UTF8_NT =

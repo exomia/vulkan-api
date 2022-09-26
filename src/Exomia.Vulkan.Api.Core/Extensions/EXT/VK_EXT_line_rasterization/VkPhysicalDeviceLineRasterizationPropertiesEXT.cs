@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceLineRasterizationPropertiesEXT - Structure describing line rasterization properties supported by an
-///     implementation -
+///     VkPhysicalDeviceLineRasterizationPropertiesEXT - Structure describing line rasterization properties supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,15 +37,12 @@ public unsafe struct VkPhysicalDeviceLineRasterizationPropertiesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     lineSubPixelPrecisionBits is the number of bits of subpixel precision in framebuffer coordinates xf and yf
-    ///     when rasterizing line segments.
-    /// </summary>
+    /// <summary> lineSubPixelPrecisionBits is the number of bits of subpixel precision in framebuffer coordinates xf and yf when rasterizing line segments. </summary>
     public uint lineSubPixelPrecisionBits;
 }

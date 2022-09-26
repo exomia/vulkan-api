@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDeviceGroupBindSparseInfo - Structure indicating which instances are bound -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupBindSparseInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupBindSparseInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupBindSparseInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupBindSparseInfo.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkBindSparseInfo</description>
+///             <term> structextends </term><description> VkBindSparseInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,15 +31,15 @@ public unsafe struct VkDeviceGroupBindSparseInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DEVICE_GROUP_BIND_SPARSE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>resourceDeviceIndex is a device index indicating which instance of the resource is bound.</summary>
+    /// <summary> resourceDeviceIndex is a device index indicating which instance of the resource is bound. </summary>
     public uint resourceDeviceIndex;
 
-    /// <summary>memoryDeviceIndex is a device index indicating which instance of the memory the resource instance is bound to.</summary>
+    /// <summary> memoryDeviceIndex is a device index indicating which instance of the memory the resource instance is bound to. </summary>
     public uint memoryDeviceIndex;
 }

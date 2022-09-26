@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtVertexAttributeDivisor;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_vertex_attribute_divisor - device extension (nr. 191) - author 'NV' [platform '' | contact 'Vikram Kushwaha
-///     @vkushwaha']<br />
+///     VK_EXT_vertex_attribute_divisor - device extension (nr. 191) - author 'NV' [platform '' | contact 'Vikram Kushwaha @vkushwaha']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_vertex_attribute_divisor.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_vertex_attribute_divisor.html
@@ -35,16 +35,13 @@ public static class VkExtVertexAttributeDivisor
     /// <summary> The extension name. </summary>
     public const string VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME = "VK_EXT_vertex_attribute_divisor";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME_UTF8_NT =

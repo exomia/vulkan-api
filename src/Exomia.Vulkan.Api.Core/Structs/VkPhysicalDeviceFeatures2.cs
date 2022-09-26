@@ -14,14 +14,13 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceFeatures2 - Structure describing the fine-grained features that can be supported by an
-///     implementation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFeatures2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFeatures2.html</a>
+///     VkPhysicalDeviceFeatures2 - Structure describing the fine-grained features that can be supported by an implementation -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFeatures2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFeatures2.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -32,12 +31,12 @@ public unsafe struct VkPhysicalDeviceFeatures2
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FEATURES_2;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>features is a VkPhysicalDeviceFeatures structure describing the fine-grained features of the Vulkan 1.0 API.</summary>
+    /// <summary> features is a VkPhysicalDeviceFeatures structure describing the fine-grained features of the Vulkan 1.0 API. </summary>
     public VkPhysicalDeviceFeatures features;
 }

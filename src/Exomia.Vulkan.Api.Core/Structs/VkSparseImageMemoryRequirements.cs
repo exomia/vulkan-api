@@ -23,35 +23,25 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkSparseImageMemoryRequirements
 {
-    /// <summary>formatProperties is a VkSparseImageFormatPropertiesstructure specifying properties of the image format.</summary>
+    /// <summary> formatProperties is a VkSparseImageFormatPropertiesstructure specifying properties of the image format. </summary>
     public VkSparseImageFormatProperties formatProperties;
 
-    /// <summary>imageMipTailFirstLod is the first mip level at which image subresources are included in the mip tail region.</summary>
+    /// <summary> imageMipTailFirstLod is the first mip level at which image subresources are included in the mip tail region. </summary>
     public uint imageMipTailFirstLod;
 
-    /// <summary>
-    ///     imageMipTailSize is the memory size (in bytes) of the mip tail region. If formatProperties.flags contains
-    ///     VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT, this is the size of the whole mip tail, otherwise this is the size of
-    ///     the mip tail of a single array layer. This value is guaranteed to be a multiple of the sparse block size in bytes.
-    /// </summary>
+    /// <summary> imageMipTailSize is the memory size (in bytes) of the mip tail region. If formatProperties.flags contains VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT, this is the size of the whole mip tail, otherwise this is the size of the mip tail of a single array layer. This value is guaranteed to be a multiple of the sparse block size in bytes. </summary>
     public VkDeviceSize imageMipTailSize;
 
-    /// <summary>
-    ///     imageMipTailOffset is the opaque memory offset used with VkSparseImageOpaqueMemoryBindInfo to bind the mip
-    ///     tail region(s).
-    /// </summary>
+    /// <summary> imageMipTailOffset is the opaque memory offset used with VkSparseImageOpaqueMemoryBindInfo to bind the mip tail region(s). </summary>
     public VkDeviceSize imageMipTailOffset;
 
-    /// <summary>
-    ///     imageMipTailStride is the offset stride between each array-layer&#8217;s mip tail, if formatProperties.flags
-    ///     does not contain VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT (otherwise the value is undefined).
-    /// </summary>
+    /// <summary> imageMipTailStride is the offset stride between each array-layer&#8217;s mip tail, if formatProperties.flags does not contain VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT (otherwise the value is undefined). </summary>
     public VkDeviceSize imageMipTailStride;
 }

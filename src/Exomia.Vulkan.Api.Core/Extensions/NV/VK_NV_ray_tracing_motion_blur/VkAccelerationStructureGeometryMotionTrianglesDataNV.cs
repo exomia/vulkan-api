@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAccelerationStructureGeometryMotionTrianglesDataNV - Structure specifying vertex motion in a bottom-level
-///     acceleration structure -
+///     VkAccelerationStructureGeometryMotionTrianglesDataNV - Structure specifying vertex motion in a bottom-level acceleration structure -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureGeometryMotionTrianglesDataNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureGeometryMotionTrianglesDataNV.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkAccelerationStructureGeometryTrianglesDataKHR</description>
+///             <term> structextends </term><description> VkAccelerationStructureGeometryTrianglesDataKHR </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,12 +34,12 @@ public unsafe struct VkAccelerationStructureGeometryMotionTrianglesDataNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>vertexData is a pointer to vertex data for this geometry at time 1.0</summary>
+    /// <summary> vertexData is a pointer to vertex data for this geometry at time 1.0 </summary>
     public VkDeviceOrHostAddressConstKHR vertexData;
 }

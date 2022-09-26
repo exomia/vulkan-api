@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkLogicOp - Framebuffer logical operations -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkLogicOp.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkLogicOp.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkLogicOp.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkLogicOp.html </a>
 /// </summary>
 public enum VkLogicOp
 {
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>0</description>
+    ///             <term> Operation </term><description> 0 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -31,7 +31,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>s ∧ d</description>
+    ///             <term> Operation </term><description> s ∧ d </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -40,7 +40,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>s ∧ ¬ d</description>
+    ///             <term> Operation </term><description> s ∧ ¬ d </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -49,7 +49,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>s</description>
+    ///             <term> Operation </term><description> s </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -58,7 +58,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>¬ s ∧ d</description>
+    ///             <term> Operation </term><description> ¬ s ∧ d </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -67,7 +67,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>d</description>
+    ///             <term> Operation </term><description> d </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -76,7 +76,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>s ⊕ d</description>
+    ///             <term> Operation </term><description> s ⊕ d </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -85,7 +85,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>s ∨ d</description>
+    ///             <term> Operation </term><description> s ∨ d </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -94,7 +94,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>¬ (s ∨ d)</description>
+    ///             <term> Operation </term><description> ¬ (s ∨ d) </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -103,7 +103,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>¬ (s ⊕ d)</description>
+    ///             <term> Operation </term><description> ¬ (s ⊕ d) </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -112,7 +112,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>¬ d</description>
+    ///             <term> Operation </term><description> ¬ d </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -121,7 +121,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>s ∨ ¬ d</description>
+    ///             <term> Operation </term><description> s ∨ ¬ d </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -130,7 +130,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>¬ s</description>
+    ///             <term> Operation </term><description> ¬ s </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -139,7 +139,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>¬ s ∨ d</description>
+    ///             <term> Operation </term><description> ¬ s ∨ d </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -148,7 +148,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>¬ (s ∧ d)</description>
+    ///             <term> Operation </term><description> ¬ (s ∧ d) </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -157,7 +157,7 @@ public enum VkLogicOp
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Operation</term><description>all 1s</description>
+    ///             <term> Operation </term><description> all 1s </description>
     ///         </item>
     ///     </list>
     /// </summary>

@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtShaderSubgroupBallot;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_shader_subgroup_ballot - device extension (nr. 65) - author 'NV' [platform '' | contact 'Daniel Koch
-///     @dgkoch']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_subgroup_ballot.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_subgroup_ballot.html</a>
+///     VK_EXT_shader_subgroup_ballot - device extension (nr. 65) - author 'NV' [platform '' | contact 'Daniel Koch @dgkoch']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_subgroup_ballot.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_subgroup_ballot.html </a>
 /// </summary>
 [Obsolete("deprecated by VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_subgroup_ballot.html#_deprecation_state")]
 public static class VkExtShaderSubgroupBallot
@@ -32,16 +32,13 @@ public static class VkExtShaderSubgroupBallot
     /// <summary> The extension name. </summary>
     public const string VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME = "VK_EXT_shader_subgroup_ballot";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME_UTF8_NT =

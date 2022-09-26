@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_EXT_memory_budget - device extension (nr. 238) - author 'EXT' [platform '' | contact 'Jeff Bolz @jeffbolznv']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_memory_budget.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_memory_budget.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_memory_budget.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_memory_budget.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static class VkExtMemoryBudget
@@ -32,16 +32,13 @@ public static class VkExtMemoryBudget
     /// <summary> The extension name. </summary>
     public const string VK_EXT_MEMORY_BUDGET_EXTENSION_NAME = "VK_EXT_memory_budget";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_MEMORY_BUDGET_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_MEMORY_BUDGET_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_MEMORY_BUDGET_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_MEMORY_BUDGET_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u4d5f\u4d45\u524f\u5f59\u5542\u4744\u5445\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";

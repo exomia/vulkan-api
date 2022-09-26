@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvSampleMaskOverrideCoverage;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_sample_mask_override_coverage - device extension (nr. 95) - author 'NV' [platform '' | contact 'Piers Daniell
-///     @pdaniell-nv']<br />
+///     VK_NV_sample_mask_override_coverage - device extension (nr. 95) - author 'NV' [platform '' | contact 'Piers Daniell @pdaniell-nv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_sample_mask_override_coverage.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_sample_mask_override_coverage.html
@@ -42,8 +42,8 @@ public static class VkNvSampleMaskOverrideCoverage
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_EXTENSION_NAME_UTF8_NT =

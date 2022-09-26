@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_KHR_maintenance1 - device extension (nr. 70) - author 'KHR' [platform '' | contact 'Piers Daniell @pdaniell-nv']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance1.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance1.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance1.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance1.html </a>
 /// </summary>
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance1.html#_deprecation_state")]
 public static unsafe class VkKhrMaintenance1
@@ -32,16 +32,13 @@ public static unsafe class VkKhrMaintenance1
     /// <summary> The extension name. </summary>
     public const string VK_KHR_MAINTENANCE_1_EXTENSION_NAME = "VK_KHR_maintenance1";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_MAINTENANCE_1_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_MAINTENANCE_1_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_MAINTENANCE_1_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_MAINTENANCE_1_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u4d5f\u4941\u544e\u4e45\u4e41\u4543\u315f\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
@@ -52,16 +49,13 @@ public static unsafe class VkKhrMaintenance1
     /// <summary> The extension name. </summary>
     public const string VK_KHR_MAINTENANCE1_EXTENSION_NAME = VK_KHR_MAINTENANCE_1_EXTENSION_NAME;
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_MAINTENANCE1_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_MAINTENANCE1_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_MAINTENANCE1_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_MAINTENANCE1_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u4d5f\u4941\u544e\u4e45\u4e41\u4543\u5f31\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
@@ -69,7 +63,7 @@ public static unsafe class VkKhrMaintenance1
     /// vkTrimCommandPoolKHR alias for vkTrimCommandPool
     /// <summary>
     ///     vkTrimCommandPool - Trim a command pool -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkTrimCommandPoolKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkTrimCommandPoolKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkTrimCommandPoolKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkTrimCommandPoolKHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkDevice /*device*/,
@@ -83,7 +77,7 @@ public static unsafe class VkKhrMaintenance1
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkTrimCommandPoolKHR</description>
+    ///             <description> vkTrimCommandPoolKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

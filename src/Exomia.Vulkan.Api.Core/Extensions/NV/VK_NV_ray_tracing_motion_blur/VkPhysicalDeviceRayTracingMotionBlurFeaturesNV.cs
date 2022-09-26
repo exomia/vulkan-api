@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceRayTracingMotionBlurFeaturesNV - Structure describing the ray tracing motion blur features that can
-///     be supported by an implementation -
+///     VkPhysicalDeviceRayTracingMotionBlurFeaturesNV - Structure describing the ray tracing motion blur features that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingMotionBlurFeaturesNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingMotionBlurFeaturesNV.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,18 +34,15 @@ public unsafe struct VkPhysicalDeviceRayTracingMotionBlurFeaturesNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary> rayTracingMotionBlur indicates whether the implementation supports the motion blur feature.</summary>
+    /// <summary> rayTracingMotionBlur indicates whether the implementation supports the motion blur feature. </summary>
     public VkBool32 rayTracingMotionBlur;
 
-    /// <summary>
-    ///     rayTracingMotionBlurPipelineTraceRaysIndirect indicates whether the implementation supports indirect ray
-    ///     tracing commands with the motion blur feature enabled.
-    /// </summary>
+    /// <summary> rayTracingMotionBlurPipelineTraceRaysIndirect indicates whether the implementation supports indirect ray tracing commands with the motion blur feature enabled. </summary>
     public VkBool32 rayTracingMotionBlurPipelineTraceRaysIndirect;
 }

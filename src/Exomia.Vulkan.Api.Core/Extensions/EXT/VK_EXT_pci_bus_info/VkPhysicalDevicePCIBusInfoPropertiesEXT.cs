@@ -23,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -37,21 +37,21 @@ public unsafe struct VkPhysicalDevicePCIBusInfoPropertiesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>pciDomain is the PCI bus domain.</summary>
+    /// <summary> pciDomain is the PCI bus domain. </summary>
     public uint pciDomain;
 
-    /// <summary>pciBus is the PCI bus identifier.</summary>
+    /// <summary> pciBus is the PCI bus identifier. </summary>
     public uint pciBus;
 
-    /// <summary>pciDevice is the PCI device identifier.</summary>
+    /// <summary> pciDevice is the PCI device identifier. </summary>
     public uint pciDevice;
 
-    /// <summary>pciFunction is the PCI device function identifier.</summary>
+    /// <summary> pciFunction is the PCI device function identifier. </summary>
     public uint pciFunction;
 }

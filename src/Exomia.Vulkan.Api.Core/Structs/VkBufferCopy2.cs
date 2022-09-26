@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkBufferCopy2 - Structure specifying a buffer copy operation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy2.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy2.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkBufferCopy2
@@ -23,18 +23,18 @@ public unsafe struct VkBufferCopy2
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_BUFFER_COPY_2;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>srcOffset is the starting offset in bytes from the start of srcBuffer.</summary>
+    /// <summary> srcOffset is the starting offset in bytes from the start of srcBuffer. </summary>
     public VkDeviceSize srcOffset;
 
-    /// <summary>dstOffset is the starting offset in bytes from the start of dstBuffer.</summary>
+    /// <summary> dstOffset is the starting offset in bytes from the start of dstBuffer. </summary>
     public VkDeviceSize dstOffset;
 
-    /// <summary>size is the number of bytes to copy.</summary>
+    /// <summary> size is the number of bytes to copy. </summary>
     public VkDeviceSize size;
 }

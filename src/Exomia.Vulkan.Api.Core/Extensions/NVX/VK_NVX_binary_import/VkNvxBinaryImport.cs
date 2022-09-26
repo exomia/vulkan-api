@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkNvxBinaryImport;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NVX_binary_import - device extension (nr. 30) - author 'NVX' [platform '' | contact 'Eric Werness
-///     @ewerness-nv,Liam Middlebrook @liam-middlebrook']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_binary_import.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_binary_import.html</a>
+///     VK_NVX_binary_import - device extension (nr. 30) - author 'NVX' [platform '' | contact 'Eric Werness @ewerness-nv,Liam Middlebrook @liam-middlebrook']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_binary_import.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_binary_import.html </a>
 /// </summary>
 public static unsafe class VkNvxBinaryImport
 {
@@ -31,45 +31,33 @@ public static unsafe class VkNvxBinaryImport
     /// <summary> The extension name. </summary>
     public const string VK_NVX_BINARY_IMPORT_EXTENSION_NAME = "VK_NVX_binary_import";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NVX_BINARY_IMPORT_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NVX_BINARY_IMPORT_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NVX_BINARY_IMPORT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NVX_BINARY_IMPORT_EXTENSION_NAME_UTF8_NT = "\u4b56\u4e5f\u5856\u425f\u4e49\u5241\u5f59\u4d49\u4f50\u5452\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkCreateCuModuleNVX - Stub description of vkCreateCuModuleNVX -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuModuleNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuModuleNVX.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuModuleNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuModuleNVX.html </a>
     /// </summary>
-    /// <param name="device"> VUID-vkCreateCuModuleNVX-device-parameter device must be a valid VkDevice handle</param>
-    /// <param name="pCreateInfo">
-    ///     VUID-vkCreateCuModuleNVX-pCreateInfo-parameter pCreateInfo must be a valid pointer to a
-    ///     valid VkCuModuleCreateInfoNVX structure
-    /// </param>
-    /// <param name="pAllocator">
-    ///     VUID-vkCreateCuModuleNVX-pAllocator-parameter If pAllocator is not NULL, pAllocator must be a
-    ///     valid pointer to a valid VkAllocationCallbacks structure
-    /// </param>
-    /// <param name="pModule">
-    ///     VUID-vkCreateCuModuleNVX-pModule-parameter pModule must be a valid pointer to a VkCuModuleNVX
-    ///     handle
-    /// </param>
+    /// <param name="device"> VUID-vkCreateCuModuleNVX-device-parameter device must be a valid VkDevice handle </param>
+    /// <param name="pCreateInfo"> VUID-vkCreateCuModuleNVX-pCreateInfo-parameter pCreateInfo must be a valid pointer to a valid VkCuModuleCreateInfoNVX structure </param>
+    /// <param name="pAllocator"> VUID-vkCreateCuModuleNVX-pAllocator-parameter If pAllocator is not NULL, pAllocator must be a valid pointer to a valid VkAllocationCallbacks structure </param>
+    /// <param name="pModule"> VUID-vkCreateCuModuleNVX-pModule-parameter pModule must be a valid pointer to a VkCuModuleNVX handle </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -82,29 +70,20 @@ public static unsafe class VkNvxBinaryImport
 
     /// <summary>
     ///     vkCreateCuFunctionNVX - Stub description of vkCreateCuFunctionNVX -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuFunctionNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuFunctionNVX.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuFunctionNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuFunctionNVX.html </a>
     /// </summary>
-    /// <param name="device"> VUID-vkCreateCuFunctionNVX-device-parameter device must be a valid VkDevice handle</param>
-    /// <param name="pCreateInfo">
-    ///     VUID-vkCreateCuFunctionNVX-pCreateInfo-parameter pCreateInfo must be a valid pointer to a
-    ///     valid VkCuFunctionCreateInfoNVX structure
-    /// </param>
-    /// <param name="pAllocator">
-    ///     VUID-vkCreateCuFunctionNVX-pAllocator-parameter If pAllocator is not NULL, pAllocator must be
-    ///     a valid pointer to a valid VkAllocationCallbacks structure
-    /// </param>
-    /// <param name="pFunction">
-    ///     VUID-vkCreateCuFunctionNVX-pFunction-parameter pFunction must be a valid pointer to a
-    ///     VkCuFunctionNVX handle
-    /// </param>
+    /// <param name="device"> VUID-vkCreateCuFunctionNVX-device-parameter device must be a valid VkDevice handle </param>
+    /// <param name="pCreateInfo"> VUID-vkCreateCuFunctionNVX-pCreateInfo-parameter pCreateInfo must be a valid pointer to a valid VkCuFunctionCreateInfoNVX structure </param>
+    /// <param name="pAllocator"> VUID-vkCreateCuFunctionNVX-pAllocator-parameter If pAllocator is not NULL, pAllocator must be a valid pointer to a valid VkAllocationCallbacks structure </param>
+    /// <param name="pFunction"> VUID-vkCreateCuFunctionNVX-pFunction-parameter pFunction must be a valid pointer to a VkCuFunctionNVX handle </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -117,14 +96,11 @@ public static unsafe class VkNvxBinaryImport
 
     /// <summary>
     ///     vkDestroyCuModuleNVX - Stub description of vkDestroyCuModuleNVX -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuModuleNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuModuleNVX.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuModuleNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuModuleNVX.html </a>
     /// </summary>
-    /// <param name="device"> VUID-vkDestroyCuModuleNVX-device-parameter device must be a valid VkDevice handle</param>
-    /// <param name="module"> VUID-vkDestroyCuModuleNVX-module-parameter module must be a valid VkCuModuleNVX handle</param>
-    /// <param name="pAllocator">
-    ///     VUID-vkDestroyCuModuleNVX-pAllocator-parameter If pAllocator is not NULL, pAllocator must be
-    ///     a valid pointer to a valid VkAllocationCallbacks structure
-    /// </param>
+    /// <param name="device"> VUID-vkDestroyCuModuleNVX-device-parameter device must be a valid VkDevice handle </param>
+    /// <param name="module"> VUID-vkDestroyCuModuleNVX-module-parameter module must be a valid VkCuModuleNVX handle </param>
+    /// <param name="pAllocator"> VUID-vkDestroyCuModuleNVX-pAllocator-parameter If pAllocator is not NULL, pAllocator must be a valid pointer to a valid VkAllocationCallbacks structure </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkCuModuleNVX /*module*/,
@@ -133,14 +109,11 @@ public static unsafe class VkNvxBinaryImport
 
     /// <summary>
     ///     vkDestroyCuFunctionNVX - Stub description of vkDestroyCuFunctionNVX -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuFunctionNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuFunctionNVX.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuFunctionNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuFunctionNVX.html </a>
     /// </summary>
-    /// <param name="device"> VUID-vkDestroyCuFunctionNVX-device-parameter device must be a valid VkDevice handle</param>
-    /// <param name="function"> VUID-vkDestroyCuFunctionNVX-function-parameter function must be a valid VkCuFunctionNVX handle</param>
-    /// <param name="pAllocator">
-    ///     VUID-vkDestroyCuFunctionNVX-pAllocator-parameter If pAllocator is not NULL, pAllocator must
-    ///     be a valid pointer to a valid VkAllocationCallbacks structure
-    /// </param>
+    /// <param name="device"> VUID-vkDestroyCuFunctionNVX-device-parameter device must be a valid VkDevice handle </param>
+    /// <param name="function"> VUID-vkDestroyCuFunctionNVX-function-parameter function must be a valid VkCuFunctionNVX handle </param>
+    /// <param name="pAllocator"> VUID-vkDestroyCuFunctionNVX-pAllocator-parameter If pAllocator is not NULL, pAllocator must be a valid pointer to a valid VkAllocationCallbacks structure </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkCuFunctionNVX /*function*/,
@@ -149,16 +122,10 @@ public static unsafe class VkNvxBinaryImport
 
     /// <summary>
     ///     vkCmdCuLaunchKernelNVX - Stub description of vkCmdCuLaunchKernelNVX -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCuLaunchKernelNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCuLaunchKernelNVX.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCuLaunchKernelNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCuLaunchKernelNVX.html </a>
     /// </summary>
-    /// <param name="commandBuffer">
-    ///     VUID-vkCmdCuLaunchKernelNVX-commandBuffer-parameter commandBuffer must be a valid
-    ///     VkCommandBuffer handle
-    /// </param>
-    /// <param name="pLaunchInfo">
-    ///     VUID-vkCmdCuLaunchKernelNVX-pLaunchInfo-parameter pLaunchInfo must be a valid pointer to a
-    ///     valid VkCuLaunchInfoNVX structure
-    /// </param>
+    /// <param name="commandBuffer"> VUID-vkCmdCuLaunchKernelNVX-commandBuffer-parameter commandBuffer must be a valid VkCommandBuffer handle </param>
+    /// <param name="pLaunchInfo"> VUID-vkCmdCuLaunchKernelNVX-pLaunchInfo-parameter pLaunchInfo must be a valid pointer to a valid VkCuLaunchInfoNVX structure </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkCuLaunchInfoNVX* /*pLaunchInfo*/,
@@ -170,19 +137,19 @@ public static unsafe class VkNvxBinaryImport
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateCuModuleNVX</description>
+    ///             <description> vkCreateCuModuleNVX </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCreateCuFunctionNVX</description>
+    ///             <description> vkCreateCuFunctionNVX </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyCuModuleNVX</description>
+    ///             <description> vkDestroyCuModuleNVX </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyCuFunctionNVX</description>
+    ///             <description> vkDestroyCuFunctionNVX </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdCuLaunchKernelNVX</description>
+    ///             <description> vkCmdCuLaunchKernelNVX </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -24,19 +24,16 @@ public static partial class Vk
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceToolProperties.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the handle to the physical device to query for active tools.</param>
-    /// <param name="pToolCount">pToolCount is a pointer to an integer describing the number of tools active on physicalDevice.</param>
-    /// <param name="pToolProperties">
-    ///     pToolProperties is either NULL or a pointer to an array of VkPhysicalDeviceToolProperties
-    ///     structures.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the handle to the physical device to query for active tools. </param>
+    /// <param name="pToolCount"> pToolCount is a pointer to an integer describing the number of tools active on physicalDevice. </param>
+    /// <param name="pToolProperties"> pToolProperties is either NULL or a pointer to an array of VkPhysicalDeviceToolProperties structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -50,25 +47,19 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCreatePrivateDataSlot - Create a slot for private data storage -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePrivateDataSlot.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePrivateDataSlot.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePrivateDataSlot.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePrivateDataSlot.html </a>
     /// </summary>
-    /// <param name="device">
-    ///     device is the logical device associated with the creation of the object(s) holding the private
-    ///     data slot.
-    /// </param>
-    /// <param name="pCreateInfo">pCreateInfo is a pointer to a VkPrivateDataSlotCreateInfo</param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
-    /// <param name="pPrivateDataSlot">
-    ///     pPrivateDataSlot is a pointer to a VkPrivateDataSlot handle in which the resulting
-    ///     private data slot is returned
-    /// </param>
+    /// <param name="device"> device is the logical device associated with the creation of the object(s) holding the private data slot. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkPrivateDataSlotCreateInfo </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
+    /// <param name="pPrivateDataSlot"> pPrivateDataSlot is a pointer to a VkPrivateDataSlot handle in which the resulting private data slot is returned </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -83,14 +74,11 @@ public static partial class Vk
 
     /// <summary>
     ///     vkDestroyPrivateDataSlot - Destroy a private data slot -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyPrivateDataSlot.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyPrivateDataSlot.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyPrivateDataSlot.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyPrivateDataSlot.html </a>
     /// </summary>
-    /// <param name="device">
-    ///     device is the logical device associated with the creation of the object(s) holding the private
-    ///     data slot.
-    /// </param>
-    /// <param name="privateDataSlot">privateDataSlot is the private data slot to destroy.</param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
+    /// <param name="device"> device is the logical device associated with the creation of the object(s) holding the private data slot. </param>
+    /// <param name="privateDataSlot"> privateDataSlot is the private data slot to destroy. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyPrivateDataSlot")]
@@ -101,23 +89,20 @@ public static partial class Vk
 
     /// <summary>
     ///     vkSetPrivateData - Associate data with a Vulkan object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetPrivateData.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetPrivateData.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetPrivateData.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetPrivateData.html </a>
     /// </summary>
-    /// <param name="device">device is the device that created the object.</param>
-    /// <param name="objectType">objectType is a VkObjectType specifying the type of object to associate data with.</param>
-    /// <param name="objectHandle">objectHandle is a handle to the object to associate data with.</param>
-    /// <param name="privateDataSlot">
-    ///     privateDataSlot is a handle to a VkPrivateDataSlotspecifying location of private data
-    ///     storage.
-    /// </param>
-    /// <param name="data">data is user defined data to associate the object with. This data will be stored at privateDataSlot.</param>
+    /// <param name="device"> device is the device that created the object. </param>
+    /// <param name="objectType"> objectType is a VkObjectType specifying the type of object to associate data with. </param>
+    /// <param name="objectHandle"> objectHandle is a handle to the object to associate data with. </param>
+    /// <param name="privateDataSlot"> privateDataSlot is a handle to a VkPrivateDataSlotspecifying location of private data storage. </param>
+    /// <param name="data"> data is user defined data to associate the object with. This data will be stored at privateDataSlot. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -133,19 +118,13 @@ public static partial class Vk
 
     /// <summary>
     ///     vkGetPrivateData - Retrieve data associated with a Vulkan object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPrivateData.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPrivateData.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPrivateData.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPrivateData.html </a>
     /// </summary>
-    /// <param name="device">device is the device that created the object</param>
-    /// <param name="objectType">objectType is a VkObjectType specifying the type of object data is associated with.</param>
-    /// <param name="objectHandle">objectHandle is a handle to the object data is associated with.</param>
-    /// <param name="privateDataSlot">
-    ///     privateDataSlot is a handle to a VkPrivateDataSlotspecifying location of private data
-    ///     pointer storage.
-    /// </param>
-    /// <param name="pData">
-    ///     pData is a pointer to specify where user data is returned. 0 will be written in the absence of a
-    ///     previous call to vkSetPrivateData using the object specified by objectHandle.
-    /// </param>
+    /// <param name="device"> device is the device that created the object </param>
+    /// <param name="objectType"> objectType is a VkObjectType specifying the type of object data is associated with. </param>
+    /// <param name="objectHandle"> objectHandle is a handle to the object data is associated with. </param>
+    /// <param name="privateDataSlot"> privateDataSlot is a handle to a VkPrivateDataSlotspecifying location of private data pointer storage. </param>
+    /// <param name="pData"> pData is a pointer to specify where user data is returned. 0 will be written in the absence of a previous call to vkSetPrivateData using the object specified by objectHandle. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkGetPrivateData")]
@@ -158,14 +137,11 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetEvent2 - Set an event object to signaled state -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetEvent2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetEvent2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetEvent2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetEvent2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="event">event is the event that will be signaled.</param>
-    /// <param name="pDependencyInfo">
-    ///     pDependencyInfo is a pointer to a VkDependencyInfo structure defining the first scopes of
-    ///     this operation.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="event"> event is the event that will be signaled. </param>
+    /// <param name="pDependencyInfo"> pDependencyInfo is a pointer to a VkDependencyInfo structure defining the first scopes of this operation. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetEvent2")]
@@ -176,14 +152,11 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdResetEvent2 - Reset an event object to non-signaled state -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResetEvent2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResetEvent2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResetEvent2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResetEvent2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="event">event is the event that will be unsignaled.</param>
-    /// <param name="stageMask">
-    ///     stageMask is a VkPipelineStageFlags2 mask of pipeline stages used to determine the first
-    ///     synchronization scope.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="event"> event is the event that will be unsignaled. </param>
+    /// <param name="stageMask"> stageMask is a VkPipelineStageFlags2 mask of pipeline stages used to determine the first synchronization scope. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdResetEvent2")]
@@ -194,15 +167,12 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdWaitEvents2 - Wait for one or more events -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWaitEvents2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWaitEvents2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWaitEvents2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWaitEvents2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="eventCount">eventCount is the length of the pEvents array.</param>
-    /// <param name="pEvents">pEvents is a pointer to an array of eventCount events to wait on.</param>
-    /// <param name="pDependencyInfos">
-    ///     pDependencyInfos is a pointer to an array of eventCountVkDependencyInfo structures,
-    ///     defining the second synchronization scope.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="eventCount"> eventCount is the length of the pEvents array. </param>
+    /// <param name="pEvents"> pEvents is a pointer to an array of eventCount events to wait on. </param>
+    /// <param name="pDependencyInfos"> pDependencyInfos is a pointer to an array of eventCountVkDependencyInfo structures, defining the second synchronization scope. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdWaitEvents2")]
@@ -214,13 +184,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdPipelineBarrier2 - Insert a memory dependency -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPipelineBarrier2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPipelineBarrier2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPipelineBarrier2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPipelineBarrier2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="pDependencyInfo">
-    ///     pDependencyInfo is a pointer to a VkDependencyInfo structure defining the scopes of this
-    ///     operation.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="pDependencyInfo"> pDependencyInfo is a pointer to a VkDependencyInfo structure defining the scopes of this operation. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdPipelineBarrier2")]
@@ -230,12 +197,12 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdWriteTimestamp2 - Write a device timestamp into a query object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="stage">stage specifies a stage of the pipeline.</param>
-    /// <param name="queryPool">queryPool is the query pool that will manage the timestamp.</param>
-    /// <param name="query">query is the query within the query pool that will contain the timestamp.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="stage"> stage specifies a stage of the pipeline. </param>
+    /// <param name="queryPool"> queryPool is the query pool that will manage the timestamp. </param>
+    /// <param name="query"> query is the query within the query pool that will contain the timestamp. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdWriteTimestamp2")]
@@ -247,26 +214,20 @@ public static partial class Vk
 
     /// <summary>
     ///     vkQueueSubmit2 - Submits command buffers to a queue -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueSubmit2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueSubmit2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueSubmit2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueSubmit2.html </a>
     /// </summary>
-    /// <param name="queue">queue is the queue that the command buffers will be submitted to.</param>
-    /// <param name="submitCount">submitCount is the number of elements in the pSubmits array.</param>
-    /// <param name="pSubmits">
-    ///     pSubmits is a pointer to an array of VkSubmitInfo2structures, each specifying a command buffer
-    ///     submission batch.
-    /// </param>
-    /// <param name="fence">
-    ///     fence is an optional handle to a fence to be signaled once all submitted command buffers have
-    ///     completed execution. If fence is not VK_NULL_HANDLE, it defines a fence signal operation.
-    /// </param>
+    /// <param name="queue"> queue is the queue that the command buffers will be submitted to. </param>
+    /// <param name="submitCount"> submitCount is the number of elements in the pSubmits array. </param>
+    /// <param name="pSubmits"> pSubmits is a pointer to an array of VkSubmitInfo2structures, each specifying a command buffer submission batch. </param>
+    /// <param name="fence"> fence is an optional handle to a fence to be signaled once all submitted command buffers have completed execution. If fence is not VK_NULL_HANDLE, it defines a fence signal operation. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -281,13 +242,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdCopyBuffer2 - Copy data between buffer regions -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBuffer2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBuffer2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBuffer2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBuffer2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pCopyBufferInfo">
-    ///     pCopyBufferInfo is a pointer to a VkCopyBufferInfo2structure describing the copy
-    ///     parameters.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pCopyBufferInfo"> pCopyBufferInfo is a pointer to a VkCopyBufferInfo2structure describing the copy parameters. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdCopyBuffer2")]
@@ -297,13 +255,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdCopyImage2 - Copy data between images -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImage2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImage2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImage2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImage2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pCopyImageInfo">
-    ///     pCopyImageInfo is a pointer to a VkCopyImageInfo2 structure describing the copy
-    ///     parameters.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pCopyImageInfo"> pCopyImageInfo is a pointer to a VkCopyImageInfo2 structure describing the copy parameters. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdCopyImage2")]
@@ -313,13 +268,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdCopyBufferToImage2 - Copy data from a buffer into an image -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBufferToImage2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBufferToImage2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBufferToImage2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBufferToImage2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pCopyBufferToImageInfo">
-    ///     pCopyBufferToImageInfo is a pointer to a VkCopyBufferToImageInfo2 structure
-    ///     describing the copy parameters.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pCopyBufferToImageInfo"> pCopyBufferToImageInfo is a pointer to a VkCopyBufferToImageInfo2 structure describing the copy parameters. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdCopyBufferToImage2")]
@@ -329,13 +281,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdCopyImageToBuffer2 - Copy image data into a buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImageToBuffer2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImageToBuffer2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImageToBuffer2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImageToBuffer2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pCopyImageToBufferInfo">
-    ///     pCopyImageToBufferInfo is a pointer to a VkCopyImageToBufferInfo2 structure
-    ///     describing the copy parameters.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pCopyImageToBufferInfo"> pCopyImageToBufferInfo is a pointer to a VkCopyImageToBufferInfo2 structure describing the copy parameters. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdCopyImageToBuffer2")]
@@ -345,13 +294,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdBlitImage2 - Copy regions of an image, potentially performing format conversion, -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pBlitImageInfo">
-    ///     pBlitImageInfo is a pointer to a VkBlitImageInfo2 structure describing the blit
-    ///     parameters.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pBlitImageInfo"> pBlitImageInfo is a pointer to a VkBlitImageInfo2 structure describing the blit parameters. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBlitImage2")]
@@ -361,13 +307,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdResolveImage2 - Resolve regions of an image -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResolveImage2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResolveImage2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResolveImage2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResolveImage2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pResolveImageInfo">
-    ///     pResolveImageInfo is a pointer to a VkResolveImageInfo2structure describing the resolve
-    ///     parameters.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pResolveImageInfo"> pResolveImageInfo is a pointer to a VkResolveImageInfo2structure describing the resolve parameters. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdResolveImage2")]
@@ -377,13 +320,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdBeginRendering - Begin a dynamic render pass instance -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginRendering.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginRendering.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginRendering.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginRendering.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer in which to record the command.</param>
-    /// <param name="pRenderingInfo">
-    ///     pRenderingInfo is a pointer to a VkRenderingInfo structure specifying details of the
-    ///     render pass instance to begin.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer in which to record the command. </param>
+    /// <param name="pRenderingInfo"> pRenderingInfo is a pointer to a VkRenderingInfo structure specifying details of the render pass instance to begin. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBeginRendering")]
@@ -393,9 +333,9 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdEndRendering - End a dynamic render pass instance -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndRendering.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndRendering.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndRendering.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndRendering.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer in which to record the command.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer in which to record the command. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdEndRendering")]
@@ -403,10 +343,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetCullMode - Set cull mode dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullMode.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullMode.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullMode.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullMode.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="cullMode">cullMode specifies the cull mode property to use for drawing.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="cullMode"> cullMode specifies the cull mode property to use for drawing. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetCullMode")]
@@ -416,13 +356,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetFrontFace - Set front face orientation dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFace.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFace.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFace.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFace.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="frontFace">
-    ///     frontFace is a VkFrontFace value specifying the front-facing triangle orientation to be used
-    ///     for culling.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="frontFace"> frontFace is a VkFrontFace value specifying the front-facing triangle orientation to be used for culling. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetFrontFace")]
@@ -432,10 +369,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetPrimitiveTopology - Set primitive topology state dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopology.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopology.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopology.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopology.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="primitiveTopology">primitiveTopology specifies the primitive topology to use for drawing.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="primitiveTopology"> primitiveTopology specifies the primitive topology to use for drawing. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetPrimitiveTopology")]
@@ -445,11 +382,11 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetViewportWithCount - Set the viewport count and viewports dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCount.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCount.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCount.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCount.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="viewportCount">viewportCount specifies the viewport count.</param>
-    /// <param name="pViewports">pViewports specifies the viewports to use for drawing.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="viewportCount"> viewportCount specifies the viewport count. </param>
+    /// <param name="pViewports"> pViewports specifies the viewports to use for drawing. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetViewportWithCount")]
@@ -459,13 +396,12 @@ public static partial class Vk
         VkViewport*     pViewports);
 
     /// <summary>
-    ///     vkCmdSetScissorWithCount - Set the scissor count and scissor rectangular bounds dynamically for a command
-    ///     buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCount.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCount.html</a>
+    ///     vkCmdSetScissorWithCount - Set the scissor count and scissor rectangular bounds dynamically for a command buffer -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCount.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCount.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="scissorCount">scissorCount specifies the scissor count.</param>
-    /// <param name="pScissors">pScissors specifies the scissors to use for drawing.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="scissorCount"> scissorCount specifies the scissor count. </param>
+    /// <param name="pScissors"> pScissors specifies the scissors to use for drawing. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetScissorWithCount")]
@@ -476,18 +412,15 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdBindVertexBuffers2 - Bind vertex buffers to a command buffer and dynamically set strides -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="firstBinding">
-    ///     firstBinding is the index of the first vertex input binding whose state is updated by the
-    ///     command.
-    /// </param>
-    /// <param name="bindingCount">bindingCount is the number of vertex input bindings whose state is updated by the command.</param>
-    /// <param name="pBuffers">pBuffers is a pointer to an array of buffer handles.</param>
-    /// <param name="pOffsets">pOffsets is a pointer to an array of buffer offsets.</param>
-    /// <param name="pSizes">pSizes is NULL or a pointer to an array of the size in bytes of vertex data bound from pBuffers.</param>
-    /// <param name="pStrides">pStrides is NULL or a pointer to an array of buffer strides.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="firstBinding"> firstBinding is the index of the first vertex input binding whose state is updated by the command. </param>
+    /// <param name="bindingCount"> bindingCount is the number of vertex input bindings whose state is updated by the command. </param>
+    /// <param name="pBuffers"> pBuffers is a pointer to an array of buffer handles. </param>
+    /// <param name="pOffsets"> pOffsets is a pointer to an array of buffer offsets. </param>
+    /// <param name="pSizes"> pSizes is NULL or a pointer to an array of the size in bytes of vertex data bound from pBuffers. </param>
+    /// <param name="pStrides"> pStrides is NULL or a pointer to an array of buffer strides. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBindVertexBuffers2")]
@@ -502,10 +435,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetDepthTestEnable - Set depth test enable dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnable.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnable.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnable.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnable.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="depthTestEnable">depthTestEnable specifies if the depth test is enabled.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="depthTestEnable"> depthTestEnable specifies if the depth test is enabled. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthTestEnable")]
@@ -515,10 +448,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetDepthWriteEnable - Set depth write enable dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnable.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnable.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnable.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnable.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="depthWriteEnable">depthWriteEnable specifies if depth writes are enabled.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="depthWriteEnable"> depthWriteEnable specifies if depth writes are enabled. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthWriteEnable")]
@@ -528,13 +461,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetDepthCompareOp - Set depth comparison operator dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="depthCompareOp">
-    ///     depthCompareOp is a VkCompareOp value specifying the comparison operator used for the
-    ///     Depth Comparison step of the depth test.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="depthCompareOp"> depthCompareOp is a VkCompareOp value specifying the comparison operator used for the Depth Comparison step of the depth test. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthCompareOp")]
@@ -544,10 +474,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetDepthBoundsTestEnable - Set depth bounds test enable dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBoundsTestEnable.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBoundsTestEnable.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBoundsTestEnable.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBoundsTestEnable.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="depthBoundsTestEnable">depthBoundsTestEnable specifies if the depth bounds test is enabled.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="depthBoundsTestEnable"> depthBoundsTestEnable specifies if the depth bounds test is enabled. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthBoundsTestEnable")]
@@ -557,10 +487,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetStencilTestEnable - Set stencil test enable dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnable.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnable.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnable.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnable.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="stencilTestEnable">stencilTestEnable specifies if the stencil test is enabled.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="stencilTestEnable"> stencilTestEnable specifies if the stencil test is enabled. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetStencilTestEnable")]
@@ -570,26 +500,14 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetStencilOp - Set stencil operation dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOp.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOp.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOp.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOp.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="faceMask">
-    ///     faceMask is a bitmask of VkStencilFaceFlagBits specifying the set of stencil state for which to
-    ///     update the stencil operation.
-    /// </param>
-    /// <param name="failOp">
-    ///     failOp is a VkStencilOp value specifying the action performed on samples that fail the stencil
-    ///     test.
-    /// </param>
-    /// <param name="passOp">
-    ///     passOp is a VkStencilOp value specifying the action performed on samples that pass both the depth
-    ///     and stencil tests.
-    /// </param>
-    /// <param name="depthFailOp">
-    ///     depthFailOp is a VkStencilOp value specifying the action performed on samples that pass the
-    ///     stencil test and fail the depth test.
-    /// </param>
-    /// <param name="compareOp">compareOp is a VkCompareOp value specifying the comparison operator used in the stencil test.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="faceMask"> faceMask is a bitmask of VkStencilFaceFlagBits specifying the set of stencil state for which to update the stencil operation. </param>
+    /// <param name="failOp"> failOp is a VkStencilOp value specifying the action performed on samples that fail the stencil test. </param>
+    /// <param name="passOp"> passOp is a VkStencilOp value specifying the action performed on samples that pass both the depth and stencil tests. </param>
+    /// <param name="depthFailOp"> depthFailOp is a VkStencilOp value specifying the action performed on samples that pass the stencil test and fail the depth test. </param>
+    /// <param name="compareOp"> compareOp is a VkCompareOp value specifying the comparison operator used in the stencil test. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetStencilOp")]
@@ -602,18 +520,14 @@ public static partial class Vk
         VkCompareOp        compareOp);
 
     /// <summary>
-    ///     vkCmdSetRasterizerDiscardEnable - Control whether primitives are discarded before the rasterization stage
-    ///     dynamically for a command buffer -
+    ///     vkCmdSetRasterizerDiscardEnable - Control whether primitives are discarded before the rasterization stage dynamically for a command buffer -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRasterizerDiscardEnable.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRasterizerDiscardEnable.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="rasterizerDiscardEnable">
-    ///     rasterizerDiscardEnable controls whether primitives are discarded immediately
-    ///     before the rasterization stage.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="rasterizerDiscardEnable"> rasterizerDiscardEnable controls whether primitives are discarded immediately before the rasterization stage. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetRasterizerDiscardEnable")]
@@ -623,10 +537,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetDepthBiasEnable - Control whether to bias fragment depth values dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnable.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnable.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnable.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnable.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="depthBiasEnable">depthBiasEnable controls whether to bias fragment depth values.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="depthBiasEnable"> depthBiasEnable controls whether to bias fragment depth values. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthBiasEnable")]
@@ -636,14 +550,10 @@ public static partial class Vk
 
     /// <summary>
     ///     vkCmdSetPrimitiveRestartEnable - Set primitive assembly restart state dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnable.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnable.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnable.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnable.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="primitiveRestartEnable">
-    ///     primitiveRestartEnable controls whether a special vertex index value is treated as
-    ///     restarting the assembly of primitives. It behaves in the same way as
-    ///     VkPipelineInputAssemblyStateCreateInfo::primitiveRestartEnable
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="primitiveRestartEnable"> primitiveRestartEnable controls whether a special vertex index value is treated as restarting the assembly of primitives. It behaves in the same way as VkPipelineInputAssemblyStateCreateInfo::primitiveRestartEnable </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetPrimitiveRestartEnable")]
@@ -658,15 +568,9 @@ public static partial class Vk
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceBufferMemoryRequirements.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device intended to own the buffer.</param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkDeviceBufferMemoryRequirementsstructure containing parameters required
-    ///     for the memory requirements query.
-    /// </param>
-    /// <param name="pMemoryRequirements">
-    ///     pMemoryRequirements is a pointer to a VkMemoryRequirements2structure in which the
-    ///     memory requirements of the buffer object are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device intended to own the buffer. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkDeviceBufferMemoryRequirementsstructure containing parameters required for the memory requirements query. </param>
+    /// <param name="pMemoryRequirements"> pMemoryRequirements is a pointer to a VkMemoryRequirements2structure in which the memory requirements of the buffer object are returned. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkGetDeviceBufferMemoryRequirements")]
@@ -682,15 +586,9 @@ public static partial class Vk
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceImageMemoryRequirements.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device intended to own the image.</param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkDeviceImageMemoryRequirementsstructure containing parameters required for
-    ///     the memory requirements query.
-    /// </param>
-    /// <param name="pMemoryRequirements">
-    ///     pMemoryRequirements is a pointer to a VkMemoryRequirements2structure in which the
-    ///     memory requirements of the image object are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device intended to own the image. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkDeviceImageMemoryRequirementsstructure containing parameters required for the memory requirements query. </param>
+    /// <param name="pMemoryRequirements"> pMemoryRequirements is a pointer to a VkMemoryRequirements2structure in which the memory requirements of the image object are returned. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkGetDeviceImageMemoryRequirements")]
@@ -706,19 +604,10 @@ public static partial class Vk
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceImageSparseMemoryRequirements.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device intended to own the image.</param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkDeviceImageMemoryRequirementsstructure containing parameters required for
-    ///     the memory requirements query.
-    /// </param>
-    /// <param name="pSparseMemoryRequirementCount">
-    ///     pSparseMemoryRequirementCount is a pointer to an integer related to the
-    ///     number of sparse memory requirements available or queried, as described below.
-    /// </param>
-    /// <param name="pSparseMemoryRequirements">
-    ///     pSparseMemoryRequirements is either NULL or a pointer to an array of
-    ///     VkSparseImageMemoryRequirements2 structures.
-    /// </param>
+    /// <param name="device"> device is the logical device intended to own the image. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkDeviceImageMemoryRequirementsstructure containing parameters required for the memory requirements query. </param>
+    /// <param name="pSparseMemoryRequirementCount"> pSparseMemoryRequirementCount is a pointer to an integer related to the number of sparse memory requirements available or queried, as described below. </param>
+    /// <param name="pSparseMemoryRequirements"> pSparseMemoryRequirements is either NULL or a pointer to an array of VkSparseImageMemoryRequirements2 structures. </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]
     [DllImport(VK_IMPORT, EntryPoint = "vkGetDeviceImageSparseMemoryRequirements")]

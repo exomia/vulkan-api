@@ -14,14 +14,13 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkDescriptorSetLayoutSupport - Structure returning information about whether a descriptor set layout can be
-///     supported -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutSupport.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutSupport.html</a>
+///     VkDescriptorSetLayoutSupport - Structure returning information about whether a descriptor set layout can be supported -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutSupport.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutSupport.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,12 +30,12 @@ public unsafe struct VkDescriptorSetLayoutSupport
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_SUPPORT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>supported specifies whether the descriptor set layout can be created.</summary>
+    /// <summary> supported specifies whether the descriptor set layout can be created. </summary>
     public VkBool32 supported;
 }

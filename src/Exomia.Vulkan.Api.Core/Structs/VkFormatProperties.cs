@@ -15,30 +15,24 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkFormatProperties - Structure specifying image format properties -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkFormatProperties
 {
-    /// <summary>
-    ///     linearTilingFeatures is a bitmask of VkFormatFeatureFlagBitsspecifying features supported by images created
-    ///     with a tilingparameter of VK_IMAGE_TILING_LINEAR.
-    /// </summary>
+    /// <summary> linearTilingFeatures is a bitmask of VkFormatFeatureFlagBitsspecifying features supported by images created with a tilingparameter of VK_IMAGE_TILING_LINEAR. </summary>
     public VkFormatFeatureFlags linearTilingFeatures;
 
-    /// <summary>
-    ///     optimalTilingFeatures is a bitmask of VkFormatFeatureFlagBits specifying features supported by images created
-    ///     with a tiling parameter of VK_IMAGE_TILING_OPTIMAL.
-    /// </summary>
+    /// <summary> optimalTilingFeatures is a bitmask of VkFormatFeatureFlagBits specifying features supported by images created with a tiling parameter of VK_IMAGE_TILING_OPTIMAL. </summary>
     public VkFormatFeatureFlags optimalTilingFeatures;
 
-    /// <summary>bufferFeatures is a bitmask of VkFormatFeatureFlagBitsspecifying features supported by buffers.</summary>
+    /// <summary> bufferFeatures is a bitmask of VkFormatFeatureFlagBitsspecifying features supported by buffers. </summary>
     public VkFormatFeatureFlags bufferFeatures;
 }

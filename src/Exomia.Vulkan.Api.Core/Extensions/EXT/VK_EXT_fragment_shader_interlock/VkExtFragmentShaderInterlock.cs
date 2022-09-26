@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtFragmentShaderInterlock;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_fragment_shader_interlock - device extension (nr. 252) - author 'EXT' [platform '' | contact 'Piers Daniell
-///     @pdaniell-nv']<br />
+///     VK_EXT_fragment_shader_interlock - device extension (nr. 252) - author 'EXT' [platform '' | contact 'Piers Daniell @pdaniell-nv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_fragment_shader_interlock.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_fragment_shader_interlock.html
@@ -35,16 +35,13 @@ public static class VkExtFragmentShaderInterlock
     /// <summary> The extension name. </summary>
     public const string VK_EXT_FRAGMENT_SHADER_INTERLOCK_EXTENSION_NAME = "VK_EXT_fragment_shader_interlock";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_FRAGMENT_SHADER_INTERLOCK_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_FRAGMENT_SHADER_INTERLOCK_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_FRAGMENT_SHADER_INTERLOCK_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_FRAGMENT_SHADER_INTERLOCK_EXTENSION_NAME_UTF8_NT =

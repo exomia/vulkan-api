@@ -23,25 +23,19 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkRenderPassSubpassFeedbackInfoEXT
 {
-    /// <summary>
-    ///     subpassMergeStatus is a VkSubpassMergeStatusEXT value specifying information about whether the subpass is
-    ///     merged with previous subpass and the reason why it is not merged.
-    /// </summary>
+    /// <summary> subpassMergeStatus is a VkSubpassMergeStatusEXT value specifying information about whether the subpass is merged with previous subpass and the reason why it is not merged. </summary>
     public VkSubpassMergeStatusEXT subpassMergeStatus;
 
-    /// <summary>
-    ///     description is an array of VK_MAX_DESCRIPTION_SIZE charcontaining a null-terminated UTF-8 string which
-    ///     provides additional details.
-    /// </summary>
+    /// <summary> description is an array of VK_MAX_DESCRIPTION_SIZE charcontaining a null-terminated UTF-8 string which provides additional details. </summary>
     public fixed byte description[(int)VK_MAX_DESCRIPTION_SIZE];
 
-    /// <summary>postMergeIndex is the subpass index after the subpass merging.</summary>
+    /// <summary> postMergeIndex is the subpass index after the subpass merging. </summary>
     public uint postMergeIndex;
 }

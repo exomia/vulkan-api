@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkCuModuleNVX - Stub description of VkCuModuleNVX -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleNVX.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleNVX.html </a>
 /// </summary>
 public readonly unsafe struct VkCuModuleNVX
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkCuModuleNVX
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkCuModuleNVX left, VkCuModuleNVX right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkCuModuleNVX
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkCuModuleNVX left, VkCuModuleNVX right)

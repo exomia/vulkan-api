@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkImageSwapchainCreateInfoKHR - Specify that an image will be bound to swapchain memory -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSwapchainCreateInfoKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSwapchainCreateInfoKHR.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSwapchainCreateInfoKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSwapchainCreateInfoKHR.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkImageCreateInfo</description>
+///             <term> structextends </term><description> VkImageCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,12 +31,12 @@ public unsafe struct VkImageSwapchainCreateInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_SWAPCHAIN_CREATE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>swapchain is VK_NULL_HANDLE or a handle of a swapchain that the image will be bound to.</summary>
+    /// <summary> swapchain is VK_NULL_HANDLE or a handle of a swapchain that the image will be bound to. </summary>
     public VkSwapchainKHR swapchain;
 }

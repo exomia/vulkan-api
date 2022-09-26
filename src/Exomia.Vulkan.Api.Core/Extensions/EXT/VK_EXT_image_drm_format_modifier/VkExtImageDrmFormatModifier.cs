@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtImageDrmFormatModifier;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_image_drm_format_modifier - device extension (nr. 159) - author 'EXT' [platform '' | contact 'Chad Versace
-///     @chadversary']<br />
+///     VK_EXT_image_drm_format_modifier - device extension (nr. 159) - author 'EXT' [platform '' | contact 'Chad Versace @chadversary']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_drm_format_modifier.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_drm_format_modifier.html
@@ -35,16 +35,13 @@ public static unsafe class VkExtImageDrmFormatModifier
     /// <summary> The extension name. </summary>
     public const string VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME = "VK_EXT_image_drm_format_modifier";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME_UTF8_NT =
@@ -57,19 +54,16 @@ public static unsafe class VkExtImageDrmFormatModifier
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the image.</param>
-    /// <param name="image">image is the queried image.</param>
-    /// <param name="pProperties">
-    ///     pProperties is a pointer to a VkImageDrmFormatModifierPropertiesEXT structure in which
-    ///     properties of the image&#8217;s DRM format modifier are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that owns the image. </param>
+    /// <param name="image"> image is the queried image. </param>
+    /// <param name="pProperties"> pProperties is a pointer to a VkImageDrmFormatModifierPropertiesEXT structure in which properties of the image&#8217;s DRM format modifier are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -85,7 +79,7 @@ public static unsafe class VkExtImageDrmFormatModifier
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetImageDrmFormatModifierPropertiesEXT</description>
+    ///             <description> vkGetImageDrmFormatModifierPropertiesEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

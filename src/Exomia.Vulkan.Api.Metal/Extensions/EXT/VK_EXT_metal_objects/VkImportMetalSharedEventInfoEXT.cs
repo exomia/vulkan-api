@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Metal;
 
 /// <summary>
-///     VkImportMetalSharedEventInfoEXT - Structure that identifies a VkSemaphore or VkEvent object and corresponding
-///     Metal Shared Event object to use. -
+///     VkImportMetalSharedEventInfoEXT - Structure that identifies a VkSemaphore or VkEvent object and corresponding Metal Shared Event object to use. -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalSharedEventInfoEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalSharedEventInfoEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Metal;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSemaphoreCreateInfo,VkEventCreateInfo</description>
+///             <term> structextends </term><description> VkSemaphoreCreateInfo,VkEventCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,12 +34,12 @@ public unsafe struct VkImportMetalSharedEventInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMPORT_METAL_SHARED_EVENT_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>mtlSharedEvent is the Metal id&lt;MTLSharedEvent&gt; object that is to underlie the VkSemaphore or VkEvent.</summary>
+    /// <summary> mtlSharedEvent is the Metal id&lt;MTLSharedEvent&gt; object that is to underlie the VkSemaphore or VkEvent. </summary>
     public MTLSharedEvent_id mtlSharedEvent;
 }

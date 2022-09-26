@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Metal;
 
 /// <summary>
-///     VkExportMetalSharedEventInfoEXT - Structure that identifies a VkSemaphore or VkEvent object and corresponding
-///     Metal MTLSharedEvent object -
+///     VkExportMetalSharedEventInfoEXT - Structure that identifies a VkSemaphore or VkEvent object and corresponding Metal MTLSharedEvent object -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMetalSharedEventInfoEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMetalSharedEventInfoEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Metal;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkExportMetalObjectsInfoEXT</description>
+///             <term> structextends </term><description> VkExportMetalObjectsInfoEXT </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,22 +34,18 @@ public unsafe struct VkExportMetalSharedEventInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_EXPORT_METAL_SHARED_EVENT_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>semaphore is VK_NULL_HANDLE or a VkSemaphore.</summary>
+    /// <summary> semaphore is VK_NULL_HANDLE or a VkSemaphore. </summary>
     public VkSemaphore semaphore;
 
-    /// <summary>event is VK_NULL_HANDLE or a VkEvent.</summary>
+    /// <summary> event is VK_NULL_HANDLE or a VkEvent. </summary>
     public VkEvent @event;
 
-    /// <summary>
-    ///     mtlSharedEvent is the Metal id&lt;MTLSharedEvent&gt; object underlying the VkSemaphore or VkEvent object in
-    ///     semaphore or event, respectively. The implementation will return the MTLSharedEvent in this member, or it will
-    ///     return NULL if no MTLSharedEvent could be found underlying the VkSemaphore or VkEvent object.
-    /// </summary>
+    /// <summary> mtlSharedEvent is the Metal id&lt;MTLSharedEvent&gt; object underlying the VkSemaphore or VkEvent object in semaphore or event, respectively. The implementation will return the MTLSharedEvent in this member, or it will return NULL if no MTLSharedEvent could be found underlying the VkSemaphore or VkEvent object. </summary>
     public MTLSharedEvent_id mtlSharedEvent;
 }

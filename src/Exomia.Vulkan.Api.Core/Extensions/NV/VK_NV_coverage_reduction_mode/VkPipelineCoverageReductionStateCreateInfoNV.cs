@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPipelineMultisampleStateCreateInfo</description>
+///             <term> structextends </term><description> VkPipelineMultisampleStateCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,18 +34,15 @@ public unsafe struct VkPipelineCoverageReductionStateCreateInfoNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary> flags is reserved for future use. </summary>
     public VkPipelineCoverageReductionStateCreateFlagsNV flags;
 
-    /// <summary>
-    ///     coverageReductionMode is a VkCoverageReductionModeNV value controlling how color sample coverage is generated
-    ///     from pixel coverage.
-    /// </summary>
+    /// <summary> coverageReductionMode is a VkCoverageReductionModeNV value controlling how color sample coverage is generated from pixel coverage. </summary>
     public VkCoverageReductionModeNV coverageReductionMode;
 }

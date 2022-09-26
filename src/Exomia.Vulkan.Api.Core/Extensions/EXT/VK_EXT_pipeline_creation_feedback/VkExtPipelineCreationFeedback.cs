@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtPipelineCreationFeedback;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_pipeline_creation_feedback - device extension (nr. 193) - author 'GOOGLE' [platform '' | contact
-///     'Jean-Francois Roy @jfroy']<br />
+///     VK_EXT_pipeline_creation_feedback - device extension (nr. 193) - author 'GOOGLE' [platform '' | contact 'Jean-Francois Roy @jfroy']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_creation_feedback.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_creation_feedback.html
@@ -47,8 +47,8 @@ public static class VkExtPipelineCreationFeedback
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_PIPELINE_CREATION_FEEDBACK_EXTENSION_NAME_UTF8_NT =

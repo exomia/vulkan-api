@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkValidationFlagsEXT - Specify validation checks to disable for a Vulkan instance -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFlagsEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFlagsEXT.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFlagsEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFlagsEXT.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkInstanceCreateInfo</description>
+///             <term> structextends </term><description> VkInstanceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,18 +31,15 @@ public unsafe struct VkValidationFlagsEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_VALIDATION_FLAGS_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>disabledValidationCheckCount is the number of checks to disable.</summary>
+    /// <summary> disabledValidationCheckCount is the number of checks to disable. </summary>
     public uint disabledValidationCheckCount;
 
-    /// <summary>
-    ///     pDisabledValidationChecks is a pointer to an array of VkValidationCheckEXT values specifying the validation
-    ///     checks to be disabled.
-    /// </summary>
+    /// <summary> pDisabledValidationChecks is a pointer to an array of VkValidationCheckEXT values specifying the validation checks to be disabled. </summary>
     public VkValidationCheckEXT* pDisabledValidationChecks;
 }

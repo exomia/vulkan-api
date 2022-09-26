@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT - Structure describing whether querying and providing an
-///     identifier of a shader module is supported by the implementation -
+///     VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT - Structure describing whether querying and providing an identifier of a shader module is supported by the implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,15 +34,12 @@ public unsafe struct VkPhysicalDeviceShaderModuleIdentifierFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_MODULE_IDENTIFIER_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     shaderModuleIdentifierindicates whether the implementation supports querying an identifier of a
-    ///     VkShaderModule or VkShaderModuleCreateInfo structure, and creating pipelines from identifiers only.
-    /// </summary>
+    /// <summary> shaderModuleIdentifierindicates whether the implementation supports querying an identifier of a VkShaderModule or VkShaderModuleCreateInfo structure, and creating pipelines from identifiers only. </summary>
     public VkBool32 shaderModuleIdentifier;
 }

@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkQcomFragmentDensityMapOffset;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_QCOM_fragment_density_map_offset - device extension (nr. 426) - author 'QCOM' [platform '' | contact 'Matthew
-///     Netsch @mnetsch']<br />
+///     VK_QCOM_fragment_density_map_offset - device extension (nr. 426) - author 'QCOM' [platform '' | contact 'Matthew Netsch @mnetsch']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_fragment_density_map_offset.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_fragment_density_map_offset.html
@@ -43,8 +43,8 @@ public static class VkQcomFragmentDensityMapOffset
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_QCOM_FRAGMENT_DENSITY_MAP_OFFSET_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_QCOM_FRAGMENT_DENSITY_MAP_OFFSET_EXTENSION_NAME_UTF8_NT =

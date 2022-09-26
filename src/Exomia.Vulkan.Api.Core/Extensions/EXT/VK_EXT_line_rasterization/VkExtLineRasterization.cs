@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtLineRasterization;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_line_rasterization - device extension (nr. 260) - author 'EXT' [platform '' | contact 'Jeff Bolz
-///     @jeffbolznv']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_line_rasterization.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_line_rasterization.html</a>
+///     VK_EXT_line_rasterization - device extension (nr. 260) - author 'EXT' [platform '' | contact 'Jeff Bolz @jeffbolznv']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_line_rasterization.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_line_rasterization.html </a>
 /// </summary>
 /// <remarks>
 ///     specialuse: cadsupport
@@ -36,16 +36,13 @@ public static unsafe class VkExtLineRasterization
     /// <summary> The extension name. </summary>
     public const string VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME = "VK_EXT_line_rasterization";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME_UTF8_NT =
@@ -53,11 +50,11 @@ public static unsafe class VkExtLineRasterization
 
     /// <summary>
     ///     vkCmdSetLineStippleEXT - Set line stipple dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="lineStippleFactor">lineStippleFactor is the repeat factor used in stippled line rasterization.</param>
-    /// <param name="lineStipplePattern">lineStipplePattern is the bit pattern used in stippled line rasterization.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="lineStippleFactor"> lineStippleFactor is the repeat factor used in stippled line rasterization. </param>
+    /// <param name="lineStipplePattern"> lineStipplePattern is the bit pattern used in stippled line rasterization. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*lineStippleFactor*/,
@@ -70,7 +67,7 @@ public static unsafe class VkExtLineRasterization
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetLineStippleEXT</description>
+    ///             <description> vkCmdSetLineStippleEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

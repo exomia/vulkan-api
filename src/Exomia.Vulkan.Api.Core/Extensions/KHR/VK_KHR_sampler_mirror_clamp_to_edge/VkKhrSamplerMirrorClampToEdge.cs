@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrSamplerMirrorClampToEdge;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_sampler_mirror_clamp_to_edge - device extension (nr. 15) - author 'KHR' [platform '' | contact 'Tobias
-///     Hector @tobski']<br />
+///     VK_KHR_sampler_mirror_clamp_to_edge - device extension (nr. 15) - author 'KHR' [platform '' | contact 'Tobias Hector @tobski']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_sampler_mirror_clamp_to_edge.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_sampler_mirror_clamp_to_edge.html
@@ -43,8 +43,8 @@ public static class VkKhrSamplerMirrorClampToEdge
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_EXTENSION_NAME_UTF8_NT =

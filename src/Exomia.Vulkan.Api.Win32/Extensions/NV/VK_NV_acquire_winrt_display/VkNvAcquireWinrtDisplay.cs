@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Win32.VkNvAcquireWinrtDisplay;
 namespace Exomia.Vulkan.Api.Win32;
 
 /// <summary>
-///     VK_NV_acquire_winrt_display - device extension (nr. 346) - author 'NV' [platform 'win32' | contact 'Jeff Juliano
-///     @jjuliano']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_acquire_winrt_display.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_acquire_winrt_display.html</a>
+///     VK_NV_acquire_winrt_display - device extension (nr. 346) - author 'NV' [platform 'win32' | contact 'Jeff Juliano @jjuliano']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_acquire_winrt_display.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_acquire_winrt_display.html </a>
 /// </summary>
 [VkRequires("VK_EXT_direct_mode_display")]
 public static unsafe class VkNvAcquireWinrtDisplay
@@ -32,16 +32,13 @@ public static unsafe class VkNvAcquireWinrtDisplay
     /// <summary> The extension name. </summary>
     public const string VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME = "VK_NV_acquire_winrt_display";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_ACQUIRE_WINRT_DISPLAY_EXTENSION_NAME_UTF8_NT =
@@ -49,18 +46,18 @@ public static unsafe class VkNvAcquireWinrtDisplay
 
     /// <summary>
     ///     vkAcquireWinrtDisplayNV - Acquire access to a VkDisplayKHR -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireWinrtDisplayNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireWinrtDisplayNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireWinrtDisplayNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireWinrtDisplayNV.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice The physical device the display is on.</param>
-    /// <param name="display">display The display the caller wishes to control in Vulkan.</param>
+    /// <param name="physicalDevice"> physicalDevice The physical device the display is on. </param>
+    /// <param name="display"> display The display the caller wishes to control in Vulkan. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -71,23 +68,19 @@ public static unsafe class VkNvAcquireWinrtDisplay
 
     /// <summary>
     ///     vkGetWinrtDisplayNV - Query the VkDisplayKHR corresponding to a WinRT DisplayTarget -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetWinrtDisplayNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetWinrtDisplayNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetWinrtDisplayNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetWinrtDisplayNV.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice The physical device on which to query the display handle.</param>
-    /// <param name="deviceRelativeId">
-    ///     deviceRelativeId The value of the &#8220;AdapterRelativeId&#8221;property of a &#8220;
-    ///     DisplayTarget&#8221;that is enumerated by a &#8220;DisplayAdapter&#8221;with an &#8220;Id&#8221;property matching
-    ///     the deviceLUID property of a VkPhysicalDeviceIDProperties for physicalDevice.
-    /// </param>
-    /// <param name="pDisplay">pDisplay The corresponding VkDisplayKHR handle will be returned here.</param>
+    /// <param name="physicalDevice"> physicalDevice The physical device on which to query the display handle. </param>
+    /// <param name="deviceRelativeId"> deviceRelativeId The value of the &#8220;AdapterRelativeId&#8221;property of a &#8220;DisplayTarget&#8221;that is enumerated by a &#8220;DisplayAdapter&#8221;with an &#8220;Id&#8221;property matching the deviceLUID property of a VkPhysicalDeviceIDProperties for physicalDevice. </param>
+    /// <param name="pDisplay"> pDisplay The corresponding VkDisplayKHR handle will be returned here. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -103,10 +96,10 @@ public static unsafe class VkNvAcquireWinrtDisplay
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkAcquireWinrtDisplayNV</description>
+    ///             <description> vkAcquireWinrtDisplayNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetWinrtDisplayNV</description>
+    ///             <description> vkGetWinrtDisplayNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

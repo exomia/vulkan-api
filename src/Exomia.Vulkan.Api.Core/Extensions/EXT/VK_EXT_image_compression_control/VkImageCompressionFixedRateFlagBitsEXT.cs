@@ -23,79 +23,43 @@ namespace Exomia.Vulkan.Api.Core;
 [Flags]
 public enum VkImageCompressionFixedRateFlagBitsEXT
 {
-    /// <summary>VK_IMAGE_COMPRESSION_FIXED_RATE_NONE_EXT specifies that fixed-rate compression must not be used.</summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_NONE_EXT specifies that fixed-rate compression must not be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_NONE_EXT = 0,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_1BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [1,2)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_1BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [1,2) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_1BPC_BIT_EXT = 0x1,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_2BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [2,3)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_2BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [2,3) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_2BPC_BIT_EXT = 0x2,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_3BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [3,4)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_3BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [3,4) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_3BPC_BIT_EXT = 0x4,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_4BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [4,5)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_4BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [4,5) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_4BPC_BIT_EXT = 0x8,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_5BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [5,6)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_5BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [5,6) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_5BPC_BIT_EXT = 0x10,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_6BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [6,7)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_6BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [6,7) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_6BPC_BIT_EXT = 0x20,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_7BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [7,8)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_7BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [7,8) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_7BPC_BIT_EXT = 0x40,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_8BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [8,9)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_8BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [8,9) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_8BPC_BIT_EXT = 0x80,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_9BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [9,10)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_9BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [9,10) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_9BPC_BIT_EXT = 0x100,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_10BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [10,11)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_10BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [10,11) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_10BPC_BIT_EXT = 0x200,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_11BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [11,12)
-    ///     bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_11BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of [11,12) bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_11BPC_BIT_EXT = 0x400,
 
-    /// <summary>
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_12BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of at least
-    ///     12 bits per component may be used.
-    /// </summary>
+    /// <summary> VK_IMAGE_COMPRESSION_FIXED_RATE_12BPC_BIT_EXT specifies that fixed-rate compression with a bitrate of at least 12 bits per component may be used. </summary>
     VK_IMAGE_COMPRESSION_FIXED_RATE_12BPC_BIT_EXT = 0x800,
 
     /// <summary>

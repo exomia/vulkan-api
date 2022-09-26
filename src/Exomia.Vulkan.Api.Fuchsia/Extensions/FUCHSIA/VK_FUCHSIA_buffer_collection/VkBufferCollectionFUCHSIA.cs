@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Fuchsia;
 
 /// <summary>
 ///     VkBufferCollectionFUCHSIA - Opaque handle to a buffer collection object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionFUCHSIA.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionFUCHSIA.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionFUCHSIA.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionFUCHSIA.html </a>
 /// </summary>
 public readonly unsafe struct VkBufferCollectionFUCHSIA
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkBufferCollectionFUCHSIA
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkBufferCollectionFUCHSIA left, VkBufferCollectionFUCHSIA right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkBufferCollectionFUCHSIA
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkBufferCollectionFUCHSIA left, VkBufferCollectionFUCHSIA right)

@@ -23,8 +23,8 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term>
-///             <description>VkCommandBufferInheritanceInfo,VkGraphicsPipelineCreateInfo,VkRenderingInfo</description>
+///             <term> structextends </term>
+///             <description> VkCommandBufferInheritanceInfo,VkGraphicsPipelineCreateInfo,VkRenderingInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,23 +35,15 @@ public unsafe struct VkMultiviewPerViewAttributesInfoNVX
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_MULTIVIEW_PER_VIEW_ATTRIBUTES_INFO_NVX;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     perViewAttributes specifies that shaders compiled for this pipeline write the attributes for all views in a
-    ///     single invocation of each vertex processing stage. All pipelines executed within a render pass instance that
-    ///     includes this bit must write per-view attributes to the *PerViewNV[] shader outputs, in addition to the
-    ///     non-per-view (e.g. Position) outputs.
-    /// </summary>
+    /// <summary> perViewAttributes specifies that shaders compiled for this pipeline write the attributes for all views in a single invocation of each vertex processing stage. All pipelines executed within a render pass instance that includes this bit must write per-view attributes to the *PerViewNV[] shader outputs, in addition to the non-per-view (e.g. Position) outputs. </summary>
     public VkBool32 perViewAttributes;
 
-    /// <summary>
-    ///     perViewAttributesPositionXOnly specifies that shaders compiled for this pipeline use per-view positions which
-    ///     only differ in value in the x component. Per-view viewport mask can also be used.
-    /// </summary>
+    /// <summary> perViewAttributesPositionXOnly specifies that shaders compiled for this pipeline use per-view positions which only differ in value in the x component. Per-view viewport mask can also be used. </summary>
     public VkBool32 perViewAttributesPositionXOnly;
 }

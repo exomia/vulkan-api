@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_NV_fill_rectangle - device extension (nr. 154) - author 'NV' [platform '' | contact 'Jeff Bolz @jeffbolznv']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_fill_rectangle.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_fill_rectangle.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_fill_rectangle.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_fill_rectangle.html </a>
 /// </summary>
 public static class VkNvFillRectangle
 {
@@ -31,16 +31,13 @@ public static class VkNvFillRectangle
     /// <summary> The extension name. </summary>
     public const string VK_NV_FILL_RECTANGLE_EXTENSION_NAME = "VK_NV_fill_rectangle";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_FILL_RECTANGLE_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_FILL_RECTANGLE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_FILL_RECTANGLE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_FILL_RECTANGLE_EXTENSION_NAME_UTF8_NT = "\u4b56\u4e5f\u5f56\u4946\u4c4c\u525f\u4345\u4154\u474e\u454c\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";

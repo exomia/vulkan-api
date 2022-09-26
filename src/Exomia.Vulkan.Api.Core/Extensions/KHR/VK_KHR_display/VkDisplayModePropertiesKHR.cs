@@ -15,27 +15,21 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDisplayModePropertiesKHR - Structure describing display mode properties -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModePropertiesKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModePropertiesKHR.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModePropertiesKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModePropertiesKHR.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkDisplayModePropertiesKHR
 {
-    /// <summary>
-    ///     displayMode is a handle to the display mode described in this structure. This handle will be valid for the
-    ///     lifetime of the Vulkan instance.
-    /// </summary>
+    /// <summary> displayMode is a handle to the display mode described in this structure. This handle will be valid for the lifetime of the Vulkan instance. </summary>
     public VkDisplayModeKHR displayMode;
 
-    /// <summary>
-    ///     parameters is a VkDisplayModeParametersKHR structure describing the display parameters associated with
-    ///     displayMode.
-    /// </summary>
+    /// <summary> parameters is a VkDisplayModeParametersKHR structure describing the display parameters associated with displayMode. </summary>
     public VkDisplayModeParametersKHR parameters;
 }

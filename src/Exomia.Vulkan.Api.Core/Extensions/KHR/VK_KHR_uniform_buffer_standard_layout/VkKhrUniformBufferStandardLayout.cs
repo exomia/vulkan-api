@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrUniformBufferStandardLayout;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_uniform_buffer_standard_layout - device extension (nr. 254) - author 'KHR' [platform '' | contact 'Graeme
-///     Leese @gnl21']<br />
+///     VK_KHR_uniform_buffer_standard_layout - device extension (nr. 254) - author 'KHR' [platform '' | contact 'Graeme Leese @gnl21']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_uniform_buffer_standard_layout.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_uniform_buffer_standard_layout.html
@@ -44,8 +44,8 @@ public static class VkKhrUniformBufferStandardLayout
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_UNIFORM_BUFFER_STANDARD_LAYOUT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_UNIFORM_BUFFER_STANDARD_LAYOUT_EXTENSION_NAME_UTF8_NT =

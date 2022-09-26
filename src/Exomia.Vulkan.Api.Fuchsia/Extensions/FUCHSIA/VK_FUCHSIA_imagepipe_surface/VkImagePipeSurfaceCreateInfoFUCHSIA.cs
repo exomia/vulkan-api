@@ -26,15 +26,15 @@ public unsafe struct VkImagePipeSurfaceCreateInfoFUCHSIA
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary> flags is reserved for future use. </summary>
     public VkImagePipeSurfaceCreateFlagsFUCHSIA flags;
 
-    /// <summary>imagePipeHandle is a zx_handle_t referring to the ImagePipe to associate with the surface.</summary>
+    /// <summary> imagePipeHandle is a zx_handle_t referring to the ImagePipe to associate with the surface. </summary>
     public zx_handle_t imagePipeHandle;
 }

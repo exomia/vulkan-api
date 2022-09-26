@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtShaderViewportIndexLayer;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_shader_viewport_index_layer - device extension (nr. 163) - author 'NV' [platform '' | contact 'Daniel Koch
-///     @dgkoch']<br />
+///     VK_EXT_shader_viewport_index_layer - device extension (nr. 163) - author 'NV' [platform '' | contact 'Daniel Koch @dgkoch']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_viewport_index_layer.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_viewport_index_layer.html
@@ -43,8 +43,8 @@ public static class VkExtShaderViewportIndexLayer
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_EXTENSION_NAME_UTF8_NT =

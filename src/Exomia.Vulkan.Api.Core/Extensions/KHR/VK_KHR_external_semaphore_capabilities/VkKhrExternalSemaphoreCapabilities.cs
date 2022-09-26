@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrExternalSemaphoreCapabilities;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_external_semaphore_capabilities - instance extension (nr. 77) - author 'KHR' [platform '' | contact 'James
-///     Jones @cubanismo']<br />
+///     VK_KHR_external_semaphore_capabilities - instance extension (nr. 77) - author 'KHR' [platform '' | contact 'James Jones @cubanismo']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_semaphore_capabilities.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_semaphore_capabilities.html
@@ -44,8 +44,8 @@ public static unsafe class VkKhrExternalSemaphoreCapabilities
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME_UTF8_NT =
@@ -53,7 +53,7 @@ public static unsafe class VkKhrExternalSemaphoreCapabilities
 
     /// <summary>
     ///     VK_LUID_SIZE - Length of a locally unique device identifier -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LUID_SIZE.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LUID_SIZE.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LUID_SIZE.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LUID_SIZE.html </a>
     /// </summary>
     /// <remarks> VK_LUID_SIZE_KHR alias for VK_LUID_SIZE_KHR. </remarks>
     public const uint VK_LUID_SIZE_KHR = VK_LUID_SIZE;
@@ -78,7 +78,7 @@ public static unsafe class VkKhrExternalSemaphoreCapabilities
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceExternalSemaphorePropertiesKHR</description>
+    ///             <description> vkGetPhysicalDeviceExternalSemaphorePropertiesKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

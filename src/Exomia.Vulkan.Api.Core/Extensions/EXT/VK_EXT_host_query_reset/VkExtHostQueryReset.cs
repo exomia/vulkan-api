@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtHostQueryReset;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_host_query_reset - device extension (nr. 262) - author 'EXT' [platform '' | contact 'Bas Nieuwenhuizen
-///     @BNieuwenhuizen']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_host_query_reset.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_host_query_reset.html</a>
+///     VK_EXT_host_query_reset - device extension (nr. 262) - author 'EXT' [platform '' | contact 'Bas Nieuwenhuizen @BNieuwenhuizen']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_host_query_reset.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_host_query_reset.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_host_query_reset.html#_deprecation_state")]
@@ -33,16 +33,13 @@ public static unsafe class VkExtHostQueryReset
     /// <summary> The extension name. </summary>
     public const string VK_EXT_HOST_QUERY_RESET_EXTENSION_NAME = "VK_EXT_host_query_reset";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_HOST_QUERY_RESET_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_HOST_QUERY_RESET_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_HOST_QUERY_RESET_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_HOST_QUERY_RESET_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u485f\u534f\u5f54\u5551\u5245\u5f59\u4552\u4553\u5f54\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
@@ -50,7 +47,7 @@ public static unsafe class VkExtHostQueryReset
     /// vkResetQueryPoolEXT alias for vkResetQueryPool
     /// <summary>
     ///     vkResetQueryPool - Reset queries in a query pool -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkResetQueryPoolEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkResetQueryPoolEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkResetQueryPoolEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkResetQueryPoolEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkDevice /*device*/,
@@ -65,7 +62,7 @@ public static unsafe class VkExtHostQueryReset
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkResetQueryPoolEXT</description>
+    ///             <description> vkResetQueryPoolEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

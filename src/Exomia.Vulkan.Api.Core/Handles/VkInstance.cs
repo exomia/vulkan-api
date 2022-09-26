@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkInstance - Opaque handle to an instance object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstance.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstance.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstance.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstance.html </a>
 /// </summary>
 public readonly unsafe struct VkInstance
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkInstance
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkInstance left, VkInstance right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkInstance
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkInstance left, VkInstance right)

@@ -23,8 +23,8 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term>
-///             <description>VkShaderModuleCreateInfo,VkPipelineShaderStageCreateInfo</description>
+///             <term> structextends </term>
+///             <description> VkShaderModuleCreateInfo,VkPipelineShaderStageCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,15 +35,12 @@ public unsafe struct VkShaderModuleValidationCacheCreateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     validationCache is the validation cache object from which the results of prior validation attempts will be
-    ///     written, and to which new validation results for this VkShaderModule will be written (if not already present).
-    /// </summary>
+    /// <summary> validationCache is the validation cache object from which the results of prior validation attempts will be written, and to which new validation results for this VkShaderModule will be written (if not already present). </summary>
     public VkValidationCacheEXT validationCache;
 }

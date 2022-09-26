@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrSurface;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_surface - instance extension (nr. 1) - author 'KHR' [platform '' | contact 'James Jones @cubanismo,Ian
-///     Elliott @ianelliottus']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_surface.html</a>
+///     VK_KHR_surface - instance extension (nr. 1) - author 'KHR' [platform '' | contact 'James Jones @cubanismo,Ian Elliott @ianelliottus']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_surface.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_surface.html </a>
 /// </summary>
 public static unsafe class VkKhrSurface
 {
@@ -31,30 +31,24 @@ public static unsafe class VkKhrSurface
     /// <summary> The extension name. </summary>
     public const string VK_KHR_SURFACE_EXTENSION_NAME = "VK_KHR_surface";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_SURFACE_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_SURFACE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SURFACE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SURFACE_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u535f\u5255\u4146\u4543\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkDestroySurfaceKHR - Destroy a VkSurfaceKHR object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySurfaceKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySurfaceKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySurfaceKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySurfaceKHR.html </a>
     /// </summary>
-    /// <param name="instance">instance is the instance used to create the surface.</param>
-    /// <param name="surface">surface is the surface to destroy.</param>
-    /// <param name="pAllocator">
-    ///     pAllocator is the allocator used for host memory allocated for the surface object when there
-    ///     is no more specific allocator available (see Memory Allocation).
-    /// </param>
+    /// <param name="instance"> instance is the instance used to create the surface. </param>
+    /// <param name="surface"> surface is the surface to destroy. </param>
+    /// <param name="pAllocator"> pAllocator is the allocator used for host memory allocated for the surface object when there is no more specific allocator available (see Memory Allocation). </param>
     public static readonly delegate*<
         VkInstance /*instance*/,
         VkSurfaceKHR /*surface*/,
@@ -68,21 +62,18 @@ public static unsafe class VkKhrSurface
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device.</param>
-    /// <param name="queueFamilyIndex">queueFamilyIndex is the queue family.</param>
-    /// <param name="surface">surface is the surface.</param>
-    /// <param name="pSupported">
-    ///     pSupported is a pointer to a VkBool32, which is set to VK_TRUE to indicate support, and
-    ///     VK_FALSE otherwise.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device. </param>
+    /// <param name="queueFamilyIndex"> queueFamilyIndex is the queue family. </param>
+    /// <param name="surface"> surface is the surface. </param>
+    /// <param name="pSupported"> pSupported is a pointer to a VkBool32, which is set to VK_TRUE to indicate support, and VK_FALSE otherwise. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -100,23 +91,17 @@ public static unsafe class VkKhrSurface
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the physical device that will be associated with the swapchain to be
-    ///     created, as described for vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="surface">surface is the surface that will be associated with the swapchain.</param>
-    /// <param name="pSurfaceCapabilities">
-    ///     pSurfaceCapabilities is a pointer to a VkSurfaceCapabilitiesKHR structure in which
-    ///     the capabilities are returned.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device that will be associated with the swapchain to be created, as described for vkCreateSwapchainKHR. </param>
+    /// <param name="surface"> surface is the surface that will be associated with the swapchain. </param>
+    /// <param name="pSurfaceCapabilities"> pSurfaceCapabilities is a pointer to a VkSurfaceCapabilitiesKHR structure in which the capabilities are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -133,24 +118,18 @@ public static unsafe class VkKhrSurface
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the physical device that will be associated with the swapchain to be
-    ///     created, as described for vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="surface">surface is the surface that will be associated with the swapchain.</param>
-    /// <param name="pSurfaceFormatCount">
-    ///     pSurfaceFormatCount is a pointer to an integer related to the number of format pairs
-    ///     available or queried, as described below.
-    /// </param>
-    /// <param name="pSurfaceFormats">pSurfaceFormats is either NULL or a pointer to an array of VkSurfaceFormatKHR structures.</param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device that will be associated with the swapchain to be created, as described for vkCreateSwapchainKHR. </param>
+    /// <param name="surface"> surface is the surface that will be associated with the swapchain. </param>
+    /// <param name="pSurfaceFormatCount"> pSurfaceFormatCount is a pointer to an integer related to the number of format pairs available or queried, as described below. </param>
+    /// <param name="pSurfaceFormats"> pSurfaceFormats is either NULL or a pointer to an array of VkSurfaceFormatKHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -168,27 +147,18 @@ public static unsafe class VkKhrSurface
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the physical device that will be associated with the swapchain to be
-    ///     created, as described for vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="surface">surface is the surface that will be associated with the swapchain.</param>
-    /// <param name="pPresentModeCount">
-    ///     pPresentModeCount is a pointer to an integer related to the number of presentation
-    ///     modes available or queried, as described below.
-    /// </param>
-    /// <param name="pPresentModes">
-    ///     pPresentModes is either NULL or a pointer to an array of VkPresentModeKHR values,
-    ///     indicating the supported presentation modes.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device that will be associated with the swapchain to be created, as described for vkCreateSwapchainKHR. </param>
+    /// <param name="surface"> surface is the surface that will be associated with the swapchain. </param>
+    /// <param name="pPresentModeCount"> pPresentModeCount is a pointer to an integer related to the number of presentation modes available or queried, as described below. </param>
+    /// <param name="pPresentModes"> pPresentModes is either NULL or a pointer to an array of VkPresentModeKHR values, indicating the supported presentation modes. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -205,19 +175,19 @@ public static unsafe class VkKhrSurface
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkDestroySurfaceKHR</description>
+    ///             <description> vkDestroySurfaceKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSurfaceSupportKHR</description>
+    ///             <description> vkGetPhysicalDeviceSurfaceSupportKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSurfaceCapabilitiesKHR</description>
+    ///             <description> vkGetPhysicalDeviceSurfaceCapabilitiesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSurfaceFormatsKHR</description>
+    ///             <description> vkGetPhysicalDeviceSurfaceFormatsKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSurfacePresentModesKHR</description>
+    ///             <description> vkGetPhysicalDeviceSurfacePresentModesKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

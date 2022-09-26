@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkApplicationInfo - Structure specifying application information -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkApplicationInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkApplicationInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkApplicationInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkApplicationInfo.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkApplicationInfo
@@ -23,42 +23,24 @@ public unsafe struct VkApplicationInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_APPLICATION_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     pApplicationName is NULL or is a pointer to a null-terminated UTF-8 string containing the name of the
-    ///     application.
-    /// </summary>
+    /// <summary> pApplicationName is NULL or is a pointer to a null-terminated UTF-8 string containing the name of the application. </summary>
     public byte* pApplicationName;
 
-    /// <summary>
-    ///     applicationVersion is an unsigned integer variable containing the developer-supplied version number of the
-    ///     application.
-    /// </summary>
+    /// <summary> applicationVersion is an unsigned integer variable containing the developer-supplied version number of the application. </summary>
     public VkVersion applicationVersion;
 
-    /// <summary>
-    ///     pEngineName is NULL or is a pointer to a null-terminated UTF-8 string containing the name of the engine (if
-    ///     any) used to create the application.
-    /// </summary>
+    /// <summary> pEngineName is NULL or is a pointer to a null-terminated UTF-8 string containing the name of the engine (if any) used to create the application. </summary>
     public byte* pEngineName;
 
-    /// <summary>
-    ///     engineVersion is an unsigned integer variable containing the developer-supplied version number of the engine
-    ///     used to create the application.
-    /// </summary>
+    /// <summary> engineVersion is an unsigned integer variable containing the developer-supplied version number of the engine used to create the application. </summary>
     public VkVersion engineVersion;
 
-    /// <summary>
-    ///     apiVersion must be the highest version of Vulkan that the application is designed to use, encoded as described
-    ///     in
-    ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-coreversions-versionnumbers.
-    ///     The patch version number specified in apiVersion is ignored when creating an instance object. Only the major and
-    ///     minor versions of the instance must match those requested in apiVersion.
-    /// </summary>
+    /// <summary> apiVersion must be the highest version of Vulkan that the application is designed to use, encoded as described in https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-coreversions-versionnumbers. The patch version number specified in apiVersion is ignored when creating an instance object. Only the major and minor versions of the instance must match those requested in apiVersion. </summary>
     public VkVersion apiVersion;
 }

@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtConservativeRasterization;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_conservative_rasterization - device extension (nr. 102) - author 'NV' [platform '' | contact 'Piers Daniell
-///     @pdaniell-nv']<br />
+///     VK_EXT_conservative_rasterization - device extension (nr. 102) - author 'NV' [platform '' | contact 'Piers Daniell @pdaniell-nv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_conservative_rasterization.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_conservative_rasterization.html
@@ -43,8 +43,8 @@ public static class VkExtConservativeRasterization
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME_UTF8_NT =

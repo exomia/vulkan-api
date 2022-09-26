@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkFenceImportFlagBits - Bitmask specifying additional parameters of fence payload import -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceImportFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceImportFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceImportFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceImportFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkFenceImportFlagBits
@@ -24,8 +24,7 @@ public enum VkFenceImportFlagBits
     ///     VK_FENCE_IMPORT_TEMPORARY_BIT specifies that the fence payload will be imported only temporarily, as described in
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-fences-importing">
-    ///         Importing
-    ///         Fence Payloads
+    ///         Importing Fence Payloads
     ///     </a>
     ///     , regardless of the permanence of handleType.
     /// </summary>
@@ -35,8 +34,7 @@ public enum VkFenceImportFlagBits
     ///     VK_FENCE_IMPORT_TEMPORARY_BIT specifies that the fence payload will be imported only temporarily, as described in
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-fences-importing">
-    ///         Importing
-    ///         Fence Payloads
+    ///         Importing Fence Payloads
     ///     </a>
     ///     , regardless of the permanence of handleType.
     /// </summary>

@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvDeviceDiagnosticsConfig;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_device_diagnostics_config - device extension (nr. 301) - author 'NV' [platform '' | contact 'Kedarnath
-///     Thangudu @kthangudu']<br />
+///     VK_NV_device_diagnostics_config - device extension (nr. 301) - author 'NV' [platform '' | contact 'Kedarnath Thangudu @kthangudu']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_device_diagnostics_config.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_device_diagnostics_config.html
@@ -35,16 +35,13 @@ public static class VkNvDeviceDiagnosticsConfig
     /// <summary> The extension name. </summary>
     public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME = "VK_NV_device_diagnostics_config";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_DEVICE_DIAGNOSTICS_CONFIG_EXTENSION_NAME_UTF8_NT =

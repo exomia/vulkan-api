@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkCuLaunchInfoNVX - Stub description of VkCuLaunchInfoNVX -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuLaunchInfoNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuLaunchInfoNVX.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuLaunchInfoNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuLaunchInfoNVX.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkCuLaunchInfoNVX
@@ -25,85 +25,85 @@ public unsafe struct VkCuLaunchInfoNVX
 
     /// <summary>
     ///     sType<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public VkStructureType sType;
 
     /// <summary>
     ///     pNext<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public void* pNext;
 
     /// <summary>
     ///     function<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public VkCuFunctionNVX function;
 
     /// <summary>
     ///     gridDimX<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public uint gridDimX;
 
     /// <summary>
     ///     gridDimY<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public uint gridDimY;
 
     /// <summary>
     ///     gridDimZ<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public uint gridDimZ;
 
     /// <summary>
     ///     blockDimX<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public uint blockDimX;
 
     /// <summary>
     ///     blockDimY<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public uint blockDimY;
 
     /// <summary>
     ///     blockDimZ<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public uint blockDimZ;
 
     /// <summary>
     ///     sharedMemBytes<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public uint sharedMemBytes;
 
     /// <summary>
     ///     paramCount<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public nuint paramCount;
 
     /// <summary>
     ///     pParams<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public void** pParams;
 
     /// <summary>
     ///     extraCount<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public nuint extraCount;
 
     /// <summary>
     ///     pExtras<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuLaunchInfoNVX </a>
     /// </summary>
     public void** pExtras;
 }

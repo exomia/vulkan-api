@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSubpassDependency2 - Structure specifying a subpass dependency -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassDependency2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassDependency2.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassDependency2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassDependency2.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkSubpassDependency2
@@ -23,33 +23,33 @@ public unsafe struct VkSubpassDependency2
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SUBPASS_DEPENDENCY_2;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>srcSubpass is the subpass index of the first subpass in the dependency, or VK_SUBPASS_EXTERNAL.</summary>
+    /// <summary> srcSubpass is the subpass index of the first subpass in the dependency, or VK_SUBPASS_EXTERNAL. </summary>
     public uint srcSubpass;
 
-    /// <summary>dstSubpass is the subpass index of the second subpass in the dependency, or VK_SUBPASS_EXTERNAL.</summary>
+    /// <summary> dstSubpass is the subpass index of the second subpass in the dependency, or VK_SUBPASS_EXTERNAL. </summary>
     public uint dstSubpass;
 
-    /// <summary>srcStageMask is a bitmask of VkPipelineStageFlagBitsspecifying the source stage mask.</summary>
+    /// <summary> srcStageMask is a bitmask of VkPipelineStageFlagBitsspecifying the source stage mask. </summary>
     public VkPipelineStageFlags srcStageMask;
 
-    /// <summary>dstStageMask is a bitmask of VkPipelineStageFlagBitsspecifying the destination stage mask</summary>
+    /// <summary> dstStageMask is a bitmask of VkPipelineStageFlagBitsspecifying the destination stage mask </summary>
     public VkPipelineStageFlags dstStageMask;
 
-    /// <summary>srcAccessMask is a bitmask of VkAccessFlagBits specifying a source access mask.</summary>
+    /// <summary> srcAccessMask is a bitmask of VkAccessFlagBits specifying a source access mask. </summary>
     public VkAccessFlags srcAccessMask;
 
-    /// <summary>dstAccessMask is a bitmask of VkAccessFlagBits specifying a destination access mask.</summary>
+    /// <summary> dstAccessMask is a bitmask of VkAccessFlagBits specifying a destination access mask. </summary>
     public VkAccessFlags dstAccessMask;
 
-    /// <summary>dependencyFlags is a bitmask of VkDependencyFlagBits.</summary>
+    /// <summary> dependencyFlags is a bitmask of VkDependencyFlagBits. </summary>
     public VkDependencyFlags dependencyFlags;
 
-    /// <summary>viewOffset controls which views in the source subpass the views in the destination subpass depend on.</summary>
+    /// <summary> viewOffset controls which views in the source subpass the views in the destination subpass depend on. </summary>
     public int viewOffset;
 }

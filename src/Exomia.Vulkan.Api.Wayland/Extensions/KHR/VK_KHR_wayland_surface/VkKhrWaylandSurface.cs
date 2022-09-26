@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Wayland.VkKhrWaylandSurface;
 namespace Exomia.Vulkan.Api.Wayland;
 
 /// <summary>
-///     VK_KHR_wayland_surface - instance extension (nr. 7) - author 'KHR' [platform 'wayland' | contact 'Jesse Hall
-///     @critsec,Ian Elliott @ianelliottus']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_wayland_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_wayland_surface.html</a>
+///     VK_KHR_wayland_surface - instance extension (nr. 7) - author 'KHR' [platform 'wayland' | contact 'Jesse Hall @critsec,Ian Elliott @ianelliottus']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_wayland_surface.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_wayland_surface.html </a>
 /// </summary>
 [VkRequires("VK_KHR_surface")]
 public static unsafe class VkKhrWaylandSurface
@@ -32,41 +32,33 @@ public static unsafe class VkKhrWaylandSurface
     /// <summary> The extension name. </summary>
     public const string VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME = "VK_KHR_wayland_surface";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_WAYLAND_SURFACE_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u575f\u5941\u414c\u444e\u535f\u5255\u4146\u4543\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkCreateWaylandSurfaceKHR - Create a slink:VkSurfaceKHR object for a Wayland window -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWaylandSurfaceKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWaylandSurfaceKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWaylandSurfaceKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWaylandSurfaceKHR.html </a>
     /// </summary>
-    /// <param name="instance">instance is the instance to associate the surface with.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkWaylandSurfaceCreateInfoKHRstructure containing parameters
-    ///     affecting the creation of the surface object.
-    /// </param>
-    /// <param name="pAllocator">
-    ///     pAllocator is the allocator used for host memory allocated for the surface object when there
-    ///     is no more specific allocator available (see Memory Allocation).
-    /// </param>
-    /// <param name="pSurface">pSurface is a pointer to a VkSurfaceKHR handle in which the created surface object is returned.</param>
+    /// <param name="instance"> instance is the instance to associate the surface with. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkWaylandSurfaceCreateInfoKHRstructure containing parameters affecting the creation of the surface object. </param>
+    /// <param name="pAllocator"> pAllocator is the allocator used for host memory allocated for the surface object when there is no more specific allocator available (see Memory Allocation). </param>
+    /// <param name="pSurface"> pSurface is a pointer to a VkSurfaceKHR handle in which the created surface object is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -84,9 +76,9 @@ public static unsafe class VkKhrWaylandSurface
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceWaylandPresentationSupportKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device.</param>
-    /// <param name="queueFamilyIndex">queueFamilyIndex is the queue family index.</param>
-    /// <param name="display">display is a pointer to the wl_display associated with a Wayland compositor.</param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device. </param>
+    /// <param name="queueFamilyIndex"> queueFamilyIndex is the queue family index. </param>
+    /// <param name="display"> display is a pointer to the wl_display associated with a Wayland compositor. </param>
     public static readonly delegate*<
         VkPhysicalDevice /*physicalDevice*/,
         uint /*queueFamilyIndex*/,
@@ -99,10 +91,10 @@ public static unsafe class VkKhrWaylandSurface
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateWaylandSurfaceKHR</description>
+    ///             <description> vkCreateWaylandSurfaceKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceWaylandPresentationSupportKHR</description>
+    ///             <description> vkGetPhysicalDeviceWaylandPresentationSupportKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

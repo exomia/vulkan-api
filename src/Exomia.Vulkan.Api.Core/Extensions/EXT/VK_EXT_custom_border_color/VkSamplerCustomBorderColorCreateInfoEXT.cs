@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSamplerCreateInfo</description>
+///             <term> structextends </term><description> VkSamplerCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,18 +34,15 @@ public unsafe struct VkSamplerCustomBorderColorCreateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>customBorderColor is a VkClearColorValue representing the desired custom sampler border color.</summary>
+    /// <summary> customBorderColor is a VkClearColorValue representing the desired custom sampler border color. </summary>
     public VkClearColorValue customBorderColor;
 
-    /// <summary>
-    ///     format is a VkFormat representing the format of the sampled image view(s). This field may be
-    ///     VK_FORMAT_UNDEFINED if the customBorderColorWithoutFormat feature is enabled.
-    /// </summary>
+    /// <summary> format is a VkFormat representing the format of the sampled image view(s). This field may be VK_FORMAT_UNDEFINED if the customBorderColorWithoutFormat feature is enabled. </summary>
     public VkFormat format;
 }

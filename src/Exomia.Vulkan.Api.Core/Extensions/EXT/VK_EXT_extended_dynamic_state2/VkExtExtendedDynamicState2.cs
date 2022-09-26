@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtExtendedDynamicState2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_extended_dynamic_state2 - device extension (nr. 378) - author 'EXT' [platform '' | contact 'Vikram Kushwaha
-///     @vkushwaha-nv']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state2.html</a>
+///     VK_EXT_extended_dynamic_state2 - device extension (nr. 378) - author 'EXT' [platform '' | contact 'Vikram Kushwaha @vkushwaha-nv']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state2.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state2.html#_deprecation_state")]
@@ -33,28 +33,24 @@ public static unsafe class VkExtExtendedDynamicState2
     /// <summary> The extension name. </summary>
     public const string VK_EXT_EXTENDED_DYNAMIC_STATE_2_EXTENSION_NAME = "VK_EXT_extended_dynamic_state2";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_EXTENDED_DYNAMIC_STATE_2_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_EXTENDED_DYNAMIC_STATE_2_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_EXTENDED_DYNAMIC_STATE_2_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_EXTENDED_DYNAMIC_STATE_2_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u455f\u5458\u455f\u5458\u4e45\u4544\u5f44\u5944\u414e\u494d\u5f43\u5453\u5441\u5f45\u5f32\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
-    ///     vkCmdSetPatchControlPointsEXT - Specify the number of control points per patch dynamically for a command
-    ///     buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPatchControlPointsEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPatchControlPointsEXT.html</a>
+    ///     vkCmdSetPatchControlPointsEXT - Specify the number of control points per patch dynamically for a command buffer -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPatchControlPointsEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPatchControlPointsEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="patchControlPoints">patchControlPoints specifies the number of control points per patch.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="patchControlPoints"> patchControlPoints specifies the number of control points per patch. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*patchControlPoints*/,
@@ -62,8 +58,7 @@ public static unsafe class VkExtExtendedDynamicState2
 
     /// vkCmdSetRasterizerDiscardEnableEXT alias for vkCmdSetRasterizerDiscardEnable
     /// <summary>
-    ///     vkCmdSetRasterizerDiscardEnable - Control whether primitives are discarded before the rasterization stage
-    ///     dynamically for a command buffer -
+    ///     vkCmdSetRasterizerDiscardEnable - Control whether primitives are discarded before the rasterization stage dynamically for a command buffer -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRasterizerDiscardEnableEXT.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRasterizerDiscardEnableEXT.html
@@ -77,7 +72,7 @@ public static unsafe class VkExtExtendedDynamicState2
     /// vkCmdSetDepthBiasEnableEXT alias for vkCmdSetDepthBiasEnable
     /// <summary>
     ///     vkCmdSetDepthBiasEnable - Control whether to bias fragment depth values dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnableEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnableEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnableEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnableEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -85,12 +80,11 @@ public static unsafe class VkExtExtendedDynamicState2
         void> vkCmdSetDepthBiasEnableEXT = null;
 
     /// <summary>
-    ///     vkCmdSetLogicOpEXT - Select which logical operation to apply for blend state dynamically for a command buffer
-    ///     -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLogicOpEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLogicOpEXT.html</a>
+    ///     vkCmdSetLogicOpEXT - Select which logical operation to apply for blend state dynamically for a command buffer -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLogicOpEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLogicOpEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="logicOp">logicOp specifies the logical operation to apply for blend state.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="logicOp"> logicOp specifies the logical operation to apply for blend state. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkLogicOp /*logicOp*/,
@@ -115,19 +109,19 @@ public static unsafe class VkExtExtendedDynamicState2
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetPatchControlPointsEXT</description>
+    ///             <description> vkCmdSetPatchControlPointsEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetRasterizerDiscardEnableEXT</description>
+    ///             <description> vkCmdSetRasterizerDiscardEnableEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetDepthBiasEnableEXT</description>
+    ///             <description> vkCmdSetDepthBiasEnableEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetLogicOpEXT</description>
+    ///             <description> vkCmdSetLogicOpEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetPrimitiveRestartEnableEXT</description>
+    ///             <description> vkCmdSetPrimitiveRestartEnableEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

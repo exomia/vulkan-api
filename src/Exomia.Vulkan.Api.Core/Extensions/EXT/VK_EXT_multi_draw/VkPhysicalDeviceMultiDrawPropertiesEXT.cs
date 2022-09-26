@@ -23,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -46,9 +46,9 @@ public unsafe struct VkPhysicalDeviceMultiDrawPropertiesEXT
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary> maxMultiDrawCount indicates the maximum number of draw calls which can be batched into a single multidraw.</summary>
+    /// <summary> maxMultiDrawCount indicates the maximum number of draw calls which can be batched into a single multidraw. </summary>
     public uint maxMultiDrawCount;
 }

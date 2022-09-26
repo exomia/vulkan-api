@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Screen.VkQnxScreenSurface;
 namespace Exomia.Vulkan.Api.Screen;
 
 /// <summary>
-///     VK_QNX_screen_surface - instance extension (nr. 379) - author 'QNX' [platform 'screen' | contact 'Mike Gorchak
-///     @mgorchak-blackberry']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QNX_screen_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QNX_screen_surface.html</a>
+///     VK_QNX_screen_surface - instance extension (nr. 379) - author 'QNX' [platform 'screen' | contact 'Mike Gorchak @mgorchak-blackberry']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QNX_screen_surface.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QNX_screen_surface.html </a>
 /// </summary>
 [VkRequires("VK_KHR_surface")]
 public static unsafe class VkQnxScreenSurface
@@ -32,41 +32,33 @@ public static unsafe class VkQnxScreenSurface
     /// <summary> The extension name. </summary>
     public const string VK_QNX_SCREEN_SURFACE_EXTENSION_NAME = "VK_QNX_screen_surface";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_QNX_SCREEN_SURFACE_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_QNX_SCREEN_SURFACE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_QNX_SCREEN_SURFACE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_QNX_SCREEN_SURFACE_EXTENSION_NAME_UTF8_NT = "\u4b56\u515f\u584e\u535f\u5243\u4545\u5f4e\u5553\u4652\u4341\u5f45\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
     ///     vkCreateScreenSurfaceQNX - Create a slink:VkSurfaceKHR object for a QNX Screen window -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateScreenSurfaceQNX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateScreenSurfaceQNX.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateScreenSurfaceQNX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateScreenSurfaceQNX.html </a>
     /// </summary>
-    /// <param name="instance">instance is the instance to associate the surface with.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkScreenSurfaceCreateInfoQNXstructure containing parameters
-    ///     affecting the creation of the surface object.
-    /// </param>
-    /// <param name="pAllocator">
-    ///     pAllocator is the allocator used for host memory allocated for the surface object when there
-    ///     is no more specific allocator available (see Memory Allocation).
-    /// </param>
-    /// <param name="pSurface">pSurface is a pointer to a VkSurfaceKHR handle in which the created surface object is returned.</param>
+    /// <param name="instance"> instance is the instance to associate the surface with. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkScreenSurfaceCreateInfoQNXstructure containing parameters affecting the creation of the surface object. </param>
+    /// <param name="pAllocator"> pAllocator is the allocator used for host memory allocated for the surface object when there is no more specific allocator available (see Memory Allocation). </param>
+    /// <param name="pSurface"> pSurface is a pointer to a VkSurfaceKHR handle in which the created surface object is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -84,9 +76,9 @@ public static unsafe class VkQnxScreenSurface
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceScreenPresentationSupportQNX.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device.</param>
-    /// <param name="queueFamilyIndex">queueFamilyIndex is the queue family index.</param>
-    /// <param name="window">window is the QNX Screen window object.</param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device. </param>
+    /// <param name="queueFamilyIndex"> queueFamilyIndex is the queue family index. </param>
+    /// <param name="window"> window is the QNX Screen window object. </param>
     public static readonly delegate*<
         VkPhysicalDevice /*physicalDevice*/,
         uint /*queueFamilyIndex*/,
@@ -99,10 +91,10 @@ public static unsafe class VkQnxScreenSurface
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateScreenSurfaceQNX</description>
+    ///             <description> vkCreateScreenSurfaceQNX </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceScreenPresentationSupportQNX</description>
+    ///             <description> vkGetPhysicalDeviceScreenPresentationSupportQNX </description>
     ///         </item>
     ///     </list>
     /// </remarks>

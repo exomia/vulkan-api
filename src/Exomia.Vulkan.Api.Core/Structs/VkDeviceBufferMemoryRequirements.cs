@@ -26,15 +26,12 @@ public unsafe struct VkDeviceBufferMemoryRequirements
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DEVICE_BUFFER_MEMORY_REQUIREMENTS;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     pCreateInfo is a pointer to a VkBufferCreateInfo structure containing parameters affecting creation of the
-    ///     buffer to query.
-    /// </summary>
+    /// <summary> pCreateInfo is a pointer to a VkBufferCreateInfo structure containing parameters affecting creation of the buffer to query. </summary>
     public VkBufferCreateInfo* pCreateInfo;
 }

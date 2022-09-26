@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Fuchsia.VkFuchsiaExternalMemory;
 namespace Exomia.Vulkan.Api.Fuchsia;
 
 /// <summary>
-///     VK_FUCHSIA_external_memory - device extension (nr. 365) - author 'FUCHSIA' [platform 'fuchsia' | contact 'John
-///     Rosasco @rosasco']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_memory.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_memory.html</a>
+///     VK_FUCHSIA_external_memory - device extension (nr. 365) - author 'FUCHSIA' [platform 'fuchsia' | contact 'John Rosasco @rosasco']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_memory.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_memory.html </a>
 /// </summary>
 [VkRequires("VK_KHR_external_memory_capabilities,VK_KHR_external_memory")]
 public static unsafe class VkFuchsiaExternalMemory
@@ -32,16 +32,13 @@ public static unsafe class VkFuchsiaExternalMemory
     /// <summary> The extension name. </summary>
     public const string VK_FUCHSIA_EXTERNAL_MEMORY_EXTENSION_NAME = "VK_FUCHSIA_external_memory";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_FUCHSIA_EXTERNAL_MEMORY_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_FUCHSIA_EXTERNAL_MEMORY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_FUCHSIA_EXTERNAL_MEMORY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_FUCHSIA_EXTERNAL_MEMORY_EXTENSION_NAME_UTF8_NT =
@@ -49,18 +46,18 @@ public static unsafe class VkFuchsiaExternalMemory
 
     /// <summary>
     ///     vkGetMemoryZirconHandleFUCHSIA - Get a Zircon handle for an external memory object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html </a>
     /// </summary>
-    /// <param name="device">device is the VkDevice.</param>
-    /// <param name="pGetZirconHandleInfo">pGetZirconHandleInfo is a pointer to a VkMemoryGetZirconHandleInfoFUCHSIA structure.</param>
-    /// <param name="pZirconHandle">pZirconHandle is a pointer to a zx_handle_t which holds the resulting Zircon handle.</param>
+    /// <param name="device"> device is the VkDevice. </param>
+    /// <param name="pGetZirconHandleInfo"> pGetZirconHandleInfo is a pointer to a VkMemoryGetZirconHandleInfoFUCHSIA structure. </param>
+    /// <param name="pZirconHandle"> pZirconHandle is a pointer to a zx_handle_t which holds the resulting Zircon handle. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -77,20 +74,17 @@ public static unsafe class VkFuchsiaExternalMemory
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryZirconHandlePropertiesFUCHSIA.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the VkDevice.</param>
-    /// <param name="handleType">handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of zirconHandle</param>
-    /// <param name="zirconHandle">zirconHandle is a zx_handle_t (Zircon) handle to the external resource.</param>
-    /// <param name="pMemoryZirconHandleProperties">
-    ///     pMemoryZirconHandleProperties is a pointer to a
-    ///     VkMemoryZirconHandlePropertiesFUCHSIA structure in which the result will be stored.
-    /// </param>
+    /// <param name="device"> device is the VkDevice. </param>
+    /// <param name="handleType"> handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of zirconHandle </param>
+    /// <param name="zirconHandle"> zirconHandle is a zx_handle_t (Zircon) handle to the external resource. </param>
+    /// <param name="pMemoryZirconHandleProperties"> pMemoryZirconHandleProperties is a pointer to a VkMemoryZirconHandlePropertiesFUCHSIA structure in which the result will be stored. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_INVALID_EXTERNAL_HANDLE</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_INVALID_EXTERNAL_HANDLE </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -107,10 +101,10 @@ public static unsafe class VkFuchsiaExternalMemory
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetMemoryZirconHandleFUCHSIA</description>
+    ///             <description> vkGetMemoryZirconHandleFUCHSIA </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetMemoryZirconHandlePropertiesFUCHSIA</description>
+    ///             <description> vkGetMemoryZirconHandlePropertiesFUCHSIA </description>
     ///         </item>
     ///     </list>
     /// </remarks>

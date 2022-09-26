@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPipelineShaderStageCreateInfo</description>
+///             <term> structextends </term><description> VkPipelineShaderStageCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,15 +34,15 @@ public unsafe struct VkPipelineShaderStageModuleIdentifierCreateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_MODULE_IDENTIFIER_CREATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>identifierSize is the size, in bytes, of the buffer pointed to by pIdentifier.</summary>
+    /// <summary> identifierSize is the size, in bytes, of the buffer pointed to by pIdentifier. </summary>
     public uint identifierSize;
 
-    /// <summary>pIdentifier points to a buffer of opaque data specifying an identifier.</summary>
+    /// <summary> pIdentifier points to a buffer of opaque data specifying an identifier. </summary>
     public byte* pIdentifier;
 }

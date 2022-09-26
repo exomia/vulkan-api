@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceTimelineSemaphoreProperties - Structure describing timeline semaphore properties that can be
-///     supported by an implementation -
+///     VkPhysicalDeviceTimelineSemaphoreProperties - Structure describing timeline semaphore properties that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreProperties.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreProperties.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,15 +37,12 @@ public unsafe struct VkPhysicalDeviceTimelineSemaphoreProperties
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     maxTimelineSemaphoreValueDifference indicates the maximum difference allowed by the implementation between the
-    ///     current value of a timeline semaphore and any pending signal or wait operations.
-    /// </summary>
+    /// <summary> maxTimelineSemaphoreValueDifference indicates the maximum difference allowed by the implementation between the current value of a timeline semaphore and any pending signal or wait operations. </summary>
     public ulong maxTimelineSemaphoreValueDifference;
 }

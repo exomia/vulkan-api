@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceComputeShaderDerivativesFeaturesNV - Structure describing compute shader derivative features that
-///     can be supported by an implementation -
+///     VkPhysicalDeviceComputeShaderDerivativesFeaturesNV - Structure describing compute shader derivative features that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,21 +34,15 @@ public unsafe struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     computeDerivativeGroupQuads indicates that the implementation supports the ComputeDerivativeGroupQuadsNV
-    ///     SPIR-V capability.
-    /// </summary>
+    /// <summary> computeDerivativeGroupQuads indicates that the implementation supports the ComputeDerivativeGroupQuadsNV SPIR-V capability. </summary>
     public VkBool32 computeDerivativeGroupQuads;
 
-    /// <summary>
-    ///     computeDerivativeGroupLinear indicates that the implementation supports the ComputeDerivativeGroupLinearNV
-    ///     SPIR-V capability.
-    /// </summary>
+    /// <summary> computeDerivativeGroupLinear indicates that the implementation supports the ComputeDerivativeGroupLinearNV SPIR-V capability. </summary>
     public VkBool32 computeDerivativeGroupLinear;
 }

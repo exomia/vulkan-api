@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrBufferDeviceAddress;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_buffer_device_address - device extension (nr. 258) - author 'KHR' [platform '' | contact 'Jeff Bolz
-///     @jeffbolznv']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_buffer_device_address.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_buffer_device_address.html</a>
+///     VK_KHR_buffer_device_address - device extension (nr. 258) - author 'KHR' [platform '' | contact 'Jeff Bolz @jeffbolznv']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_buffer_device_address.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_buffer_device_address.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_buffer_device_address.html#_deprecation_state")]
@@ -33,16 +33,13 @@ public static unsafe class VkKhrBufferDeviceAddress
     /// <summary> The extension name. </summary>
     public const string VK_KHR_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME = "VK_KHR_buffer_device_address";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME_UTF8_NT =
@@ -51,7 +48,7 @@ public static unsafe class VkKhrBufferDeviceAddress
     /// vkGetBufferDeviceAddressKHR alias for vkGetBufferDeviceAddress
     /// <summary>
     ///     vkGetBufferDeviceAddress - Query an address of a buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferDeviceAddressKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferDeviceAddressKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferDeviceAddressKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferDeviceAddressKHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkDevice /*device*/,
@@ -90,13 +87,13 @@ public static unsafe class VkKhrBufferDeviceAddress
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetBufferDeviceAddressKHR</description>
+    ///             <description> vkGetBufferDeviceAddressKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetBufferOpaqueCaptureAddressKHR</description>
+    ///             <description> vkGetBufferOpaqueCaptureAddressKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDeviceMemoryOpaqueCaptureAddressKHR</description>
+    ///             <description> vkGetDeviceMemoryOpaqueCaptureAddressKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

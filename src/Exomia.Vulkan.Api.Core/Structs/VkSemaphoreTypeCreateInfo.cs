@@ -15,13 +15,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSemaphoreTypeCreateInfo - Structure specifying the type of a newly created semaphore -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfo.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term>
-///             <description>VkSemaphoreCreateInfo,VkPhysicalDeviceExternalSemaphoreInfo</description>
+///             <term> structextends </term>
+///             <description> VkSemaphoreCreateInfo,VkPhysicalDeviceExternalSemaphoreInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -32,15 +32,15 @@ public unsafe struct VkSemaphoreTypeCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SEMAPHORE_TYPE_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>semaphoreType is a VkSemaphoreType value specifying the type of the semaphore.</summary>
+    /// <summary> semaphoreType is a VkSemaphoreType value specifying the type of the semaphore. </summary>
     public VkSemaphoreType semaphoreType;
 
-    /// <summary>initialValue is the initial payload value if semaphoreTypeis VK_SEMAPHORE_TYPE_TIMELINE.</summary>
+    /// <summary> initialValue is the initial payload value if semaphoreTypeis VK_SEMAPHORE_TYPE_TIMELINE. </summary>
     public ulong initialValue;
 }

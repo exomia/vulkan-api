@@ -15,25 +15,16 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDescriptorUpdateTemplateType - Indicates the valid usage of the descriptor update template -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateType.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateType.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateType.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateType.html </a>
 /// </summary>
 public enum VkDescriptorUpdateTemplateType
 {
-    /// <summary>
-    ///     VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET specifies that the descriptor update template will be used
-    ///     for descriptor set updates only.
-    /// </summary>
+    /// <summary> VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET specifies that the descriptor update template will be used for descriptor set updates only. </summary>
     VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET = 0,
 
-    /// <summary>
-    ///     VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_PUSH_DESCRIPTORS_KHR specifies that the descriptor update template will be
-    ///     used for push descriptor updates only.
-    /// </summary>
+    /// <summary> VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_PUSH_DESCRIPTORS_KHR specifies that the descriptor update template will be used for push descriptor updates only. </summary>
     VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_PUSH_DESCRIPTORS_KHR = 1,
 
-    /// <summary>
-    ///     VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET specifies that the descriptor update template will be used
-    ///     for descriptor set updates only.
-    /// </summary>
+    /// <summary> VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET specifies that the descriptor update template will be used for descriptor set updates only. </summary>
     VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET_KHR = VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET
 }

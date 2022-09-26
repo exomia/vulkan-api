@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkDescriptorPoolInlineUniformBlockCreateInfo - Structure specifying the maximum number of inline uniform block
-///     bindings of a newly created descriptor pool -
+///     VkDescriptorPoolInlineUniformBlockCreateInfo - Structure specifying the maximum number of inline uniform block bindings of a newly created descriptor pool -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolInlineUniformBlockCreateInfo.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolInlineUniformBlockCreateInfo.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkDescriptorPoolCreateInfo</description>
+///             <term> structextends </term><description> VkDescriptorPoolCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,12 +34,12 @@ public unsafe struct VkDescriptorPoolInlineUniformBlockCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>maxInlineUniformBlockBindings is the number of inline uniform block bindings to allocate.</summary>
+    /// <summary> maxInlineUniformBlockBindings is the number of inline uniform block bindings to allocate. </summary>
     public uint maxInlineUniformBlockBindings;
 }

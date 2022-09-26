@@ -15,17 +15,17 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSparseBufferMemoryBindInfo - Structure specifying a sparse buffer memory bind operation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseBufferMemoryBindInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseBufferMemoryBindInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseBufferMemoryBindInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseBufferMemoryBindInfo.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkSparseBufferMemoryBindInfo
 {
-    /// <summary>buffer is the VkBuffer object to be bound.</summary>
+    /// <summary> buffer is the VkBuffer object to be bound. </summary>
     public VkBuffer buffer;
 
-    /// <summary>bindCount is the number of VkSparseMemoryBind structures in the pBinds array.</summary>
+    /// <summary> bindCount is the number of VkSparseMemoryBind structures in the pBinds array. </summary>
     public uint bindCount;
 
-    /// <summary>pBinds is a pointer to an array of VkSparseMemoryBindstructures.</summary>
+    /// <summary> pBinds is a pointer to an array of VkSparseMemoryBindstructures. </summary>
     public VkSparseMemoryBind* pBinds;
 }

@@ -15,24 +15,21 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkPipelineCreationFeedback - Feedback about the creation of a pipeline or pipeline stage -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCreationFeedback.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCreationFeedback.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCreationFeedback.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCreationFeedback.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkPipelineCreationFeedback
 {
-    /// <summary>
-    ///     flags is a bitmask of VkPipelineCreationFeedbackFlagBitsproviding feedback about the creation of a pipeline or
-    ///     of a pipeline stage.
-    /// </summary>
+    /// <summary> flags is a bitmask of VkPipelineCreationFeedbackFlagBitsproviding feedback about the creation of a pipeline or of a pipeline stage. </summary>
     public VkPipelineCreationFeedbackFlags flags;
 
-    /// <summary>duration is the duration spent creating a pipeline or pipeline stage in nanoseconds.</summary>
+    /// <summary> duration is the duration spent creating a pipeline or pipeline stage in nanoseconds. </summary>
     public ulong duration;
 }

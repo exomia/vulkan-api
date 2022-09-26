@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtQueueFamilyForeign;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_queue_family_foreign - device extension (nr. 127) - author 'EXT' [platform '' | contact 'Chad Versace
-///     @chadversary']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_queue_family_foreign.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_queue_family_foreign.html</a>
+///     VK_EXT_queue_family_foreign - device extension (nr. 127) - author 'EXT' [platform '' | contact 'Chad Versace @chadversary']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_queue_family_foreign.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_queue_family_foreign.html </a>
 /// </summary>
 [VkRequires("VK_KHR_external_memory")]
 public static class VkExtQueueFamilyForeign
@@ -32,16 +32,13 @@ public static class VkExtQueueFamilyForeign
     /// <summary> The extension name. </summary>
     public const string VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME = "VK_EXT_queue_family_foreign";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME_UTF8_NT =
@@ -49,7 +46,7 @@ public static class VkExtQueueFamilyForeign
 
     /// <summary>
     ///     VK_QUEUE_FAMILY_FOREIGN_EXT - Foreign queue family index sentinel -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QUEUE_FAMILY_FOREIGN_EXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QUEUE_FAMILY_FOREIGN_EXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QUEUE_FAMILY_FOREIGN_EXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QUEUE_FAMILY_FOREIGN_EXT.html </a>
     /// </summary>
     public const uint VK_QUEUE_FAMILY_FOREIGN_EXT = (~2U);
 }

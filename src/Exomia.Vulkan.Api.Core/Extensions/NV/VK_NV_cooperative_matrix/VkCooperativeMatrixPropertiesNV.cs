@@ -26,33 +26,33 @@ public unsafe struct VkCooperativeMatrixPropertiesNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_COOPERATIVE_MATRIX_PROPERTIES_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>MSize is the number of rows in matrices A, C, and D.</summary>
+    /// <summary> MSize is the number of rows in matrices A, C, and D. </summary>
     public uint MSize;
 
-    /// <summary>NSize is the number of columns in matrices B, C, D.</summary>
+    /// <summary> NSize is the number of columns in matrices B, C, D. </summary>
     public uint NSize;
 
-    /// <summary>KSize is the number of columns in matrix A and rows in matrix B.</summary>
+    /// <summary> KSize is the number of columns in matrix A and rows in matrix B. </summary>
     public uint KSize;
 
-    /// <summary>AType is the component type of matrix A, of type VkComponentTypeNV.</summary>
+    /// <summary> AType is the component type of matrix A, of type VkComponentTypeNV. </summary>
     public VkComponentTypeNV AType;
 
-    /// <summary>BType is the component type of matrix B, of type VkComponentTypeNV.</summary>
+    /// <summary> BType is the component type of matrix B, of type VkComponentTypeNV. </summary>
     public VkComponentTypeNV BType;
 
-    /// <summary>CType is the component type of matrix C, of type VkComponentTypeNV.</summary>
+    /// <summary> CType is the component type of matrix C, of type VkComponentTypeNV. </summary>
     public VkComponentTypeNV CType;
 
-    /// <summary>DType is the component type of matrix D, of type VkComponentTypeNV.</summary>
+    /// <summary> DType is the component type of matrix D, of type VkComponentTypeNV. </summary>
     public VkComponentTypeNV DType;
 
-    /// <summary>scope is the scope of all the matrix types, of type VkScopeNV.</summary>
+    /// <summary> scope is the scope of all the matrix types, of type VkScopeNV. </summary>
     public VkScopeNV scope;
 }

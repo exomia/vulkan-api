@@ -23,15 +23,12 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct VkStridedDeviceAddressRegionKHR
 {
-    /// <summary>
-    ///     deviceAddress is the device address (as returned by the vkGetBufferDeviceAddress command) at which the region
-    ///     starts, or zero if the region is unused.
-    /// </summary>
+    /// <summary> deviceAddress is the device address (as returned by the vkGetBufferDeviceAddress command) at which the region starts, or zero if the region is unused. </summary>
     public VkDeviceAddress deviceAddress;
 
-    /// <summary>stride is the byte stride between consecutive elements.</summary>
+    /// <summary> stride is the byte stride between consecutive elements. </summary>
     public VkDeviceSize stride;
 
-    /// <summary>size is the size in bytes of the region starting at deviceAddress.</summary>
+    /// <summary> size is the size in bytes of the region starting at deviceAddress. </summary>
     public VkDeviceSize size;
 }

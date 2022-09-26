@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAccelerationStructureCreateInfoKHR - Structure specifying the parameters of a newly created acceleration
-///     structure object -
+///     VkAccelerationStructureCreateInfoKHR - Structure specifying the parameters of a newly created acceleration structure object -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureCreateInfoKHR.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureCreateInfoKHR.html
@@ -27,39 +26,27 @@ public unsafe struct VkAccelerationStructureCreateInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_ACCELERATION_STRUCTURE_CREATE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     createFlags is a bitmask of VkAccelerationStructureCreateFlagBitsKHR specifying additional creation parameters
-    ///     of the acceleration structure.
-    /// </summary>
+    /// <summary> createFlags is a bitmask of VkAccelerationStructureCreateFlagBitsKHR specifying additional creation parameters of the acceleration structure. </summary>
     public VkAccelerationStructureCreateFlagsKHR createFlags;
 
-    /// <summary>buffer is the buffer on which the acceleration structure will be stored.</summary>
+    /// <summary> buffer is the buffer on which the acceleration structure will be stored. </summary>
     public VkBuffer buffer;
 
-    /// <summary>
-    ///     offset is an offset in bytes from the base address of the buffer at which the acceleration structure will be
-    ///     stored, and must be a multiple of 256.
-    /// </summary>
+    /// <summary> offset is an offset in bytes from the base address of the buffer at which the acceleration structure will be stored, and must be a multiple of 256. </summary>
     public VkDeviceSize offset;
 
-    /// <summary>size is the size required for the acceleration structure.</summary>
+    /// <summary> size is the size required for the acceleration structure. </summary>
     public VkDeviceSize size;
 
-    /// <summary>
-    ///     type is a VkAccelerationStructureTypeKHR value specifying the type of acceleration structure that will be
-    ///     created.
-    /// </summary>
+    /// <summary> type is a VkAccelerationStructureTypeKHR value specifying the type of acceleration structure that will be created. </summary>
     public VkAccelerationStructureTypeKHR type;
 
-    /// <summary>
-    ///     deviceAddress is the device address requested for the acceleration structure if the
-    ///     accelerationStructureCaptureReplay feature is being used.
-    /// </summary>
+    /// <summary> deviceAddress is the device address requested for the acceleration structure if the accelerationStructureCaptureReplay feature is being used. </summary>
     public VkDeviceAddress deviceAddress;
 }

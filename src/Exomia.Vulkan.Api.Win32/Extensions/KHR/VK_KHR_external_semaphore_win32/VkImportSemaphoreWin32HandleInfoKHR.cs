@@ -26,27 +26,24 @@ public unsafe struct VkImportSemaphoreWin32HandleInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>semaphore is the semaphore into which the payload will be imported.</summary>
+    /// <summary> semaphore is the semaphore into which the payload will be imported. </summary>
     public VkSemaphore semaphore;
 
-    /// <summary>
-    ///     flags is a bitmask of VkSemaphoreImportFlagBits specifying additional parameters for the semaphore payload
-    ///     import operation.
-    /// </summary>
+    /// <summary> flags is a bitmask of VkSemaphoreImportFlagBits specifying additional parameters for the semaphore payload import operation. </summary>
     public VkSemaphoreImportFlags flags;
 
-    /// <summary>handleType is a VkExternalSemaphoreHandleTypeFlagBits value specifying the type of handle.</summary>
+    /// <summary> handleType is a VkExternalSemaphoreHandleTypeFlagBits value specifying the type of handle. </summary>
     public VkExternalSemaphoreHandleTypeFlagBits handleType;
 
-    /// <summary>handle is NULL or the external handle to import.</summary>
+    /// <summary> handle is NULL or the external handle to import. </summary>
     public HANDLE handle;
 
-    /// <summary>name is NULL or a null-terminated UTF-16 string naming the underlying synchronization primitive to import.</summary>
+    /// <summary> name is NULL or a null-terminated UTF-16 string naming the underlying synchronization primitive to import. </summary>
     public char* name;
 }

@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtDirectModeDisplay;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_direct_mode_display - instance extension (nr. 89) - author 'NV' [platform '' | contact 'James Jones
-///     @cubanismo']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_direct_mode_display.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_direct_mode_display.html</a>
+///     VK_EXT_direct_mode_display - instance extension (nr. 89) - author 'NV' [platform '' | contact 'James Jones @cubanismo']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_direct_mode_display.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_direct_mode_display.html </a>
 /// </summary>
 [VkRequires("VK_KHR_display")]
 public static unsafe class VkExtDirectModeDisplay
@@ -32,16 +32,13 @@ public static unsafe class VkExtDirectModeDisplay
     /// <summary> The extension name. </summary>
     public const string VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME = "VK_EXT_direct_mode_display";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME_UTF8_NT =
@@ -49,14 +46,14 @@ public static unsafe class VkExtDirectModeDisplay
 
     /// <summary>
     ///     vkReleaseDisplayEXT - Release access to an acquired VkDisplayKHR -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleaseDisplayEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleaseDisplayEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleaseDisplayEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleaseDisplayEXT.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice The physical device the display is on.</param>
-    /// <param name="display">display The display to release control of.</param>
+    /// <param name="physicalDevice"> physicalDevice The physical device the display is on. </param>
+    /// <param name="display"> display The display to release control of. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -71,7 +68,7 @@ public static unsafe class VkExtDirectModeDisplay
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkReleaseDisplayEXT</description>
+    ///             <description> vkReleaseDisplayEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

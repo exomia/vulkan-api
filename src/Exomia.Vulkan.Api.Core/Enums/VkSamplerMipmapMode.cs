@@ -15,13 +15,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSamplerMipmapMode - Specify mipmap mode used for texture lookups -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerMipmapMode.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerMipmapMode.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerMipmapMode.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerMipmapMode.html </a>
 /// </summary>
 public enum VkSamplerMipmapMode
 {
-    /// <summary>VK_SAMPLER_MIPMAP_MODE_NEAREST specifies nearest filtering.</summary>
+    /// <summary> VK_SAMPLER_MIPMAP_MODE_NEAREST specifies nearest filtering. </summary>
     VK_SAMPLER_MIPMAP_MODE_NEAREST = 0,
 
-    /// <summary>VK_SAMPLER_MIPMAP_MODE_LINEAR specifies linear filtering.</summary>
+    /// <summary> VK_SAMPLER_MIPMAP_MODE_LINEAR specifies linear filtering. </summary>
     VK_SAMPLER_MIPMAP_MODE_LINEAR = 1
 }

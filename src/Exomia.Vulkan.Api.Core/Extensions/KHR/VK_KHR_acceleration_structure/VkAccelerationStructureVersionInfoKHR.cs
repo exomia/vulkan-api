@@ -26,15 +26,12 @@ public unsafe struct VkAccelerationStructureVersionInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_ACCELERATION_STRUCTURE_VERSION_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     pVersionData is a pointer to the version header of an acceleration structure as defined in
-    ///     vkCmdCopyAccelerationStructureToMemoryKHR
-    /// </summary>
+    /// <summary> pVersionData is a pointer to the version header of an acceleration structure as defined in vkCmdCopyAccelerationStructureToMemoryKHR </summary>
     public byte* pVersionData;
 }

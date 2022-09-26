@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkPipelineCache - Opaque handle to a pipeline cache object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCache.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCache.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCache.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCache.html </a>
 /// </summary>
 public readonly unsafe struct VkPipelineCache
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkPipelineCache
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkPipelineCache left, VkPipelineCache right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkPipelineCache
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkPipelineCache left, VkPipelineCache right)

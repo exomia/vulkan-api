@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrPortabilityEnumeration;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_portability_enumeration - instance extension (nr. 395) - author 'KHR' [platform '' | contact 'Charles
-///     Giessen @charles-lunarg']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_portability_enumeration.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_portability_enumeration.html</a>
+///     VK_KHR_portability_enumeration - instance extension (nr. 395) - author 'KHR' [platform '' | contact 'Charles Giessen @charles-lunarg']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_portability_enumeration.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_portability_enumeration.html </a>
 /// </summary>
 public static class VkKhrPortabilityEnumeration
 {
@@ -31,16 +31,13 @@ public static class VkKhrPortabilityEnumeration
     /// <summary> The extension name. </summary>
     public const string VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME = "VK_KHR_portability_enumeration";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME_UTF8_NT =

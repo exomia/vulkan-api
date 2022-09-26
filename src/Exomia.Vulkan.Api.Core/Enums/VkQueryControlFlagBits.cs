@@ -15,17 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkQueryControlFlagBits - Bitmask specifying constraints on a query -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueryControlFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueryControlFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueryControlFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueryControlFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkQueryControlFlagBits
 {
     /// <summary>
     ///     VK_QUERY_CONTROL_PRECISE_BIT specifies the precision of
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-occlusion">
-    ///         occlusion
-    ///         queries
-    ///     </a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-occlusion"> occlusion queries </a>
     ///     .
     /// </summary>
     VK_QUERY_CONTROL_PRECISE_BIT = 0x1

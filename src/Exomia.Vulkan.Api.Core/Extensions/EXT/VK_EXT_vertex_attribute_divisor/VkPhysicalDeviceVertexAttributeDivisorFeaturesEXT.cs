@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT - Structure describing if fetching of vertex attribute may be
-///     repeated for instanced rendering -
+///     VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT - Structure describing if fetching of vertex attribute may be repeated for instanced rendering -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,21 +34,15 @@ public unsafe struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     vertexAttributeInstanceRateDivisor specifies whether vertex attribute fetching may be repeated in case of
-    ///     instanced rendering.
-    /// </summary>
+    /// <summary> vertexAttributeInstanceRateDivisor specifies whether vertex attribute fetching may be repeated in case of instanced rendering. </summary>
     public VkBool32 vertexAttributeInstanceRateDivisor;
 
-    /// <summary>
-    ///     vertexAttributeInstanceRateZeroDivisor specifies whether a zero value for
-    ///     VkVertexInputBindingDivisorDescriptionEXT::divisoris supported.
-    /// </summary>
+    /// <summary> vertexAttributeInstanceRateZeroDivisor specifies whether a zero value for VkVertexInputBindingDivisorDescriptionEXT::divisoris supported. </summary>
     public VkBool32 vertexAttributeInstanceRateZeroDivisor;
 }

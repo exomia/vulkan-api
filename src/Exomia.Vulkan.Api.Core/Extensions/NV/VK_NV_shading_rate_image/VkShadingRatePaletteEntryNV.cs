@@ -15,20 +15,20 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkShadingRatePaletteEntryNV - Shading rate image palette entry types -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShadingRatePaletteEntryNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShadingRatePaletteEntryNV.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShadingRatePaletteEntryNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShadingRatePaletteEntryNV.html </a>
 /// </summary>
 public enum VkShadingRatePaletteEntryNV
 {
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>0</description>
+    ///             <term> Width </term><description> 0 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>0</description>
+    ///             <term> Height </term><description> 0 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>0</description>
+    ///             <term> Invocations </term><description> 0 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -37,13 +37,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>1</description>
+    ///             <term> Width </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>1</description>
+    ///             <term> Height </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>16</description>
+    ///             <term> Invocations </term><description> 16 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -52,13 +52,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>1</description>
+    ///             <term> Width </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>1</description>
+    ///             <term> Height </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>8</description>
+    ///             <term> Invocations </term><description> 8 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -67,13 +67,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>1</description>
+    ///             <term> Width </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>1</description>
+    ///             <term> Height </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>4</description>
+    ///             <term> Invocations </term><description> 4 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -82,13 +82,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>1</description>
+    ///             <term> Width </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>1</description>
+    ///             <term> Height </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>2</description>
+    ///             <term> Invocations </term><description> 2 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -97,13 +97,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>1</description>
+    ///             <term> Width </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>1</description>
+    ///             <term> Height </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>1</description>
+    ///             <term> Invocations </term><description> 1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -112,13 +112,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>2</description>
+    ///             <term> Width </term><description> 2 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>1</description>
+    ///             <term> Height </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>1</description>
+    ///             <term> Invocations </term><description> 1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -127,13 +127,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>1</description>
+    ///             <term> Width </term><description> 1 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>2</description>
+    ///             <term> Height </term><description> 2 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>1</description>
+    ///             <term> Invocations </term><description> 1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -142,13 +142,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>2</description>
+    ///             <term> Width </term><description> 2 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>2</description>
+    ///             <term> Height </term><description> 2 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>1</description>
+    ///             <term> Invocations </term><description> 1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -157,13 +157,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>4</description>
+    ///             <term> Width </term><description> 4 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>2</description>
+    ///             <term> Height </term><description> 2 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>1</description>
+    ///             <term> Invocations </term><description> 1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -172,13 +172,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>2</description>
+    ///             <term> Width </term><description> 2 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>4</description>
+    ///             <term> Height </term><description> 4 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>1</description>
+    ///             <term> Invocations </term><description> 1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -187,13 +187,13 @@ public enum VkShadingRatePaletteEntryNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Width</term><description>4</description>
+    ///             <term> Width </term><description> 4 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Height</term><description>4</description>
+    ///             <term> Height </term><description> 4 </description>
     ///         </item>
     ///         <item>
-    ///             <term>Invocations</term><description>1</description>
+    ///             <term> Invocations </term><description> 1 </description>
     ///         </item>
     ///     </list>
     /// </summary>

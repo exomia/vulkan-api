@@ -15,13 +15,10 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDisplayEventTypeEXT - Events that can occur on a display object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayEventTypeEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayEventTypeEXT.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayEventTypeEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayEventTypeEXT.html </a>
 /// </summary>
 public enum VkDisplayEventTypeEXT
 {
-    /// <summary>
-    ///     VK_DISPLAY_EVENT_TYPE_FIRST_PIXEL_OUT_EXT specifies that the fence is signaled when the first pixel of the
-    ///     next display refresh cycle leaves the display engine for the display.
-    /// </summary>
+    /// <summary> VK_DISPLAY_EVENT_TYPE_FIRST_PIXEL_OUT_EXT specifies that the fence is signaled when the first pixel of the next display refresh cycle leaves the display engine for the display. </summary>
     VK_DISPLAY_EVENT_TYPE_FIRST_PIXEL_OUT_EXT = 0
 }

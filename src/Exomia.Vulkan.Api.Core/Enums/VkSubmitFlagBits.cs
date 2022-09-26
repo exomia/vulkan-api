@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSubmitFlagBits - Bitmask specifying behavior of a submission -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubmitFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubmitFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubmitFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubmitFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkSubmitFlagBits
 {
-    /// <summary>VK_SUBMIT_PROTECTED_BIT specifies that this batch is a protected submission.</summary>
+    /// <summary> VK_SUBMIT_PROTECTED_BIT specifies that this batch is a protected submission. </summary>
     VK_SUBMIT_PROTECTED_BIT = 0x1,
 
-    /// <summary>VK_SUBMIT_PROTECTED_BIT specifies that this batch is a protected submission.</summary>
+    /// <summary> VK_SUBMIT_PROTECTED_BIT specifies that this batch is a protected submission. </summary>
     VK_SUBMIT_PROTECTED_BIT_KHR = VK_SUBMIT_PROTECTED_BIT
 }

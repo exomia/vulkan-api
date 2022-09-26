@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAccelerationStructureBuildGeometryInfoKHR - Structure specifying the geometry data used to build an acceleration
-///     structure -
+///     VkAccelerationStructureBuildGeometryInfoKHR - Structure specifying the geometry data used to build an acceleration structure -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureBuildGeometryInfoKHR.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureBuildGeometryInfoKHR.html
@@ -27,42 +26,36 @@ public unsafe struct VkAccelerationStructureBuildGeometryInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>type is a VkAccelerationStructureTypeKHR value specifying the type of acceleration structure being built.</summary>
+    /// <summary> type is a VkAccelerationStructureTypeKHR value specifying the type of acceleration structure being built. </summary>
     public VkAccelerationStructureTypeKHR type;
 
-    /// <summary>
-    ///     flags is a bitmask of VkBuildAccelerationStructureFlagBitsKHR specifying additional parameters of the
-    ///     acceleration structure.
-    /// </summary>
+    /// <summary> flags is a bitmask of VkBuildAccelerationStructureFlagBitsKHR specifying additional parameters of the acceleration structure. </summary>
     public VkBuildAccelerationStructureFlagsKHR flags;
 
-    /// <summary>mode is a VkBuildAccelerationStructureModeKHR value specifying the type of operation to perform.</summary>
+    /// <summary> mode is a VkBuildAccelerationStructureModeKHR value specifying the type of operation to perform. </summary>
     public VkBuildAccelerationStructureModeKHR mode;
 
-    /// <summary>
-    ///     srcAccelerationStructure is a pointer to an existing acceleration structure that is to be used to update the
-    ///     dst acceleration structure when mode is VK_BUILD_ACCELERATION_STRUCTURE_MODE_UPDATE_KHR.
-    /// </summary>
+    /// <summary> srcAccelerationStructure is a pointer to an existing acceleration structure that is to be used to update the dst acceleration structure when mode is VK_BUILD_ACCELERATION_STRUCTURE_MODE_UPDATE_KHR. </summary>
     public VkAccelerationStructureKHR srcAccelerationStructure;
 
-    /// <summary>dstAccelerationStructure is a pointer to the target acceleration structure for the build.</summary>
+    /// <summary> dstAccelerationStructure is a pointer to the target acceleration structure for the build. </summary>
     public VkAccelerationStructureKHR dstAccelerationStructure;
 
-    /// <summary>geometryCount specifies the number of geometries that will be built into dstAccelerationStructure.</summary>
+    /// <summary> geometryCount specifies the number of geometries that will be built into dstAccelerationStructure. </summary>
     public uint geometryCount;
 
-    /// <summary>pGeometries is a pointer to an array of VkAccelerationStructureGeometryKHR structures.</summary>
+    /// <summary> pGeometries is a pointer to an array of VkAccelerationStructureGeometryKHR structures. </summary>
     public VkAccelerationStructureGeometryKHR* pGeometries;
 
-    /// <summary>ppGeometries is a pointer to an array of pointers to VkAccelerationStructureGeometryKHR structures.</summary>
+    /// <summary> ppGeometries is a pointer to an array of pointers to VkAccelerationStructureGeometryKHR structures. </summary>
     public VkAccelerationStructureGeometryKHR** ppGeometries;
 
-    /// <summary>scratchData is the device or host address to memory that will be used as scratch memory for the build.</summary>
+    /// <summary> scratchData is the device or host address to memory that will be used as scratch memory for the build. </summary>
     public VkDeviceOrHostAddressKHR scratchData;
 }

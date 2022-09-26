@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkRayTracingPipelineInterfaceCreateInfoKHR - Structure specifying additional interface information when using
-///     libraries -
+///     VkRayTracingPipelineInterfaceCreateInfoKHR - Structure specifying additional interface information when using libraries -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingPipelineInterfaceCreateInfoKHR.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingPipelineInterfaceCreateInfoKHR.html
@@ -27,18 +26,15 @@ public unsafe struct VkRayTracingPipelineInterfaceCreateInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>maxPipelineRayPayloadSize is the maximum payload size in bytes used by any shader in the pipeline.</summary>
+    /// <summary> maxPipelineRayPayloadSize is the maximum payload size in bytes used by any shader in the pipeline. </summary>
     public uint maxPipelineRayPayloadSize;
 
-    /// <summary>
-    ///     maxPipelineRayHitAttributeSize is the maximum attribute structure size in bytes used by any shader in the
-    ///     pipeline.
-    /// </summary>
+    /// <summary> maxPipelineRayHitAttributeSize is the maximum attribute structure size in bytes used by any shader in the pipeline. </summary>
     public uint maxPipelineRayHitAttributeSize;
 }

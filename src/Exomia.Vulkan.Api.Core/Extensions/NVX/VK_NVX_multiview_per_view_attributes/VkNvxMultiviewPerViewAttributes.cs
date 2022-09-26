@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvxMultiviewPerViewAttributes;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NVX_multiview_per_view_attributes - device extension (nr. 98) - author 'NVX' [platform '' | contact 'Jeff Bolz
-///     @jeffbolznv']<br />
+///     VK_NVX_multiview_per_view_attributes - device extension (nr. 98) - author 'NVX' [platform '' | contact 'Jeff Bolz @jeffbolznv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_multiview_per_view_attributes.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_multiview_per_view_attributes.html
@@ -43,8 +43,8 @@ public static class VkNvxMultiviewPerViewAttributes
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME_UTF8_NT =

@@ -15,13 +15,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkImageFormatListCreateInfo - Specify that an image can: be used with a particular set of formats -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatListCreateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatListCreateInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatListCreateInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatListCreateInfo.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term>
-///             <description>VkImageCreateInfo,VkSwapchainCreateInfoKHR,VkPhysicalDeviceImageFormatInfo2</description>
+///             <term> structextends </term>
+///             <description> VkImageCreateInfo,VkSwapchainCreateInfoKHR,VkPhysicalDeviceImageFormatInfo2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -32,18 +32,15 @@ public unsafe struct VkImageFormatListCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_FORMAT_LIST_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>viewFormatCount is the number of entries in the pViewFormatsarray.</summary>
+    /// <summary> viewFormatCount is the number of entries in the pViewFormatsarray. </summary>
     public uint viewFormatCount;
 
-    /// <summary>
-    ///     pViewFormats is a pointer to an array of VkFormat values specifying all formats which can be used when
-    ///     creating views of this image.
-    /// </summary>
+    /// <summary> pViewFormats is a pointer to an array of VkFormat values specifying all formats which can be used when creating views of this image. </summary>
     public VkFormat* pViewFormats;
 }

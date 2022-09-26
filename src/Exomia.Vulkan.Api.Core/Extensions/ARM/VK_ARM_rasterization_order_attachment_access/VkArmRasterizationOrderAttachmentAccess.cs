@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkArmRasterizationOrderAttachmentAcce
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_ARM_rasterization_order_attachment_access - device extension (nr. 343) - author 'ARM' [platform '' | contact
-///     'Jan-Harald Fredriksen @janharaldfredriksen-arm']<br />
+///     VK_ARM_rasterization_order_attachment_access - device extension (nr. 343) - author 'ARM' [platform '' | contact 'Jan-Harald Fredriksen @janharaldfredriksen-arm']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_rasterization_order_attachment_access.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_rasterization_order_attachment_access.html
@@ -46,8 +46,8 @@ public static class VkArmRasterizationOrderAttachmentAccess
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_ARM_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_ARM_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_EXTENSION_NAME_UTF8_NT =

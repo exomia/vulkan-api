@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkRenderPassBeginInfo,VkRenderingInfo</description>
+///             <term> structextends </term><description> VkRenderPassBeginInfo,VkRenderingInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,21 +34,18 @@ public unsafe struct VkDeviceGroupRenderPassBeginInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DEVICE_GROUP_RENDER_PASS_BEGIN_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>deviceMask is the device mask for the render pass instance.</summary>
+    /// <summary> deviceMask is the device mask for the render pass instance. </summary>
     public uint deviceMask;
 
-    /// <summary>deviceRenderAreaCount is the number of elements in the pDeviceRenderAreas array.</summary>
+    /// <summary> deviceRenderAreaCount is the number of elements in the pDeviceRenderAreas array. </summary>
     public uint deviceRenderAreaCount;
 
-    /// <summary>
-    ///     pDeviceRenderAreas is a pointer to an array of VkRect2Dstructures defining the render area for each physical
-    ///     device.
-    /// </summary>
+    /// <summary> pDeviceRenderAreas is a pointer to an array of VkRect2Dstructures defining the render area for each physical device. </summary>
     public VkRect2D* pDeviceRenderAreas;
 }

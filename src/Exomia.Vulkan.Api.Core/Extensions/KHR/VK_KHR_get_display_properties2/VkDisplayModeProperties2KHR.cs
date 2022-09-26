@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDisplayModeProperties2KHR - Structure describing an available display mode -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeProperties2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeProperties2KHR.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeProperties2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeProperties2KHR.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -30,12 +30,12 @@ public unsafe struct VkDisplayModeProperties2KHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DISPLAY_MODE_PROPERTIES_2_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>displayModeProperties is a VkDisplayModePropertiesKHRstructure.</summary>
+    /// <summary> displayModeProperties is a VkDisplayModePropertiesKHRstructure. </summary>
     public VkDisplayModePropertiesKHR displayModeProperties;
 }

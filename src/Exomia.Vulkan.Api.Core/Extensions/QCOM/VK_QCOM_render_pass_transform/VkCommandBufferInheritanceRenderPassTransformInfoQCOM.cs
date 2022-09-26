@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkCommandBufferInheritanceRenderPassTransformInfoQCOM - Structure describing transformed render pass parameters
-///     command buffer -
+///     VkCommandBufferInheritanceRenderPassTransformInfoQCOM - Structure describing transformed render pass parameters command buffer -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferInheritanceRenderPassTransformInfoQCOM.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferInheritanceRenderPassTransformInfoQCOM.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkCommandBufferInheritanceInfo</description>
+///             <term> structextends </term><description> VkCommandBufferInheritanceInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,15 +34,15 @@ public unsafe struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>transform is a VkSurfaceTransformFlagBitsKHR value describing the transform to be applied to the render pass.</summary>
+    /// <summary> transform is a VkSurfaceTransformFlagBitsKHR value describing the transform to be applied to the render pass. </summary>
     public VkSurfaceTransformFlagBitsKHR transform;
 
-    /// <summary>renderArea is the render area that is affected by the command buffer.</summary>
+    /// <summary> renderArea is the render area that is affected by the command buffer. </summary>
     public VkRect2D renderArea;
 }

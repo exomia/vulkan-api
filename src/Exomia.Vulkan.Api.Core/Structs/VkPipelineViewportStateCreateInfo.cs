@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelineViewportStateCreateInfo - Structure specifying parameters of a newly created pipeline viewport
-///     state -
+///     VkPipelineViewportStateCreateInfo - Structure specifying parameters of a newly created pipeline viewport state -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportStateCreateInfo.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportStateCreateInfo.html
@@ -27,30 +26,24 @@ public unsafe struct VkPipelineViewportStateCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary> flags is reserved for future use. </summary>
     public VkPipelineViewportStateCreateFlags flags;
 
-    /// <summary>viewportCount is the number of viewports used by the pipeline.</summary>
+    /// <summary> viewportCount is the number of viewports used by the pipeline. </summary>
     public uint viewportCount;
 
-    /// <summary>
-    ///     pViewports is a pointer to an array of VkViewportstructures, defining the viewport transforms. If the viewport
-    ///     state is dynamic, this member is ignored.
-    /// </summary>
+    /// <summary> pViewports is a pointer to an array of VkViewportstructures, defining the viewport transforms. If the viewport state is dynamic, this member is ignored. </summary>
     public VkViewport* pViewports;
 
-    /// <summary>scissorCount is the number of scissors and must match the number of viewports.</summary>
+    /// <summary> scissorCount is the number of scissors and must match the number of viewports. </summary>
     public uint scissorCount;
 
-    /// <summary>
-    ///     pScissors is a pointer to an array of VkRect2D structures defining the rectangular bounds of the scissor for
-    ///     the corresponding viewport. If the scissor state is dynamic, this member is ignored.
-    /// </summary>
+    /// <summary> pScissors is a pointer to an array of VkRect2D structures defining the rectangular bounds of the scissor for the corresponding viewport. If the scissor state is dynamic, this member is ignored. </summary>
     public VkRect2D* pScissors;
 }

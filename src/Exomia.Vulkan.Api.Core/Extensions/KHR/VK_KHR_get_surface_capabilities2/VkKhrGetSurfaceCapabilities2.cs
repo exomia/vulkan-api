@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrGetSurfaceCapabilities2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_get_surface_capabilities2 - instance extension (nr. 120) - author 'KHR' [platform '' | contact 'James Jones
-///     @cubanismo']<br />
+///     VK_KHR_get_surface_capabilities2 - instance extension (nr. 120) - author 'KHR' [platform '' | contact 'James Jones @cubanismo']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_surface_capabilities2.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_surface_capabilities2.html
@@ -43,8 +43,8 @@ public static unsafe class VkKhrGetSurfaceCapabilities2
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME_UTF8_NT =
@@ -57,26 +57,17 @@ public static unsafe class VkKhrGetSurfaceCapabilities2
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the physical device that will be associated with the swapchain to be
-    ///     created, as described for vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="pSurfaceInfo">
-    ///     pSurfaceInfo is a pointer to a VkPhysicalDeviceSurfaceInfo2KHR structure describing the
-    ///     surface and other fixed parameters that would be consumed by vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="pSurfaceCapabilities">
-    ///     pSurfaceCapabilities is a pointer to a VkSurfaceCapabilities2KHR structure in which
-    ///     the capabilities are returned.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device that will be associated with the swapchain to be created, as described for vkCreateSwapchainKHR. </param>
+    /// <param name="pSurfaceInfo"> pSurfaceInfo is a pointer to a VkPhysicalDeviceSurfaceInfo2KHR structure describing the surface and other fixed parameters that would be consumed by vkCreateSwapchainKHR. </param>
+    /// <param name="pSurfaceCapabilities"> pSurfaceCapabilities is a pointer to a VkSurfaceCapabilities2KHR structure in which the capabilities are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -93,30 +84,18 @@ public static unsafe class VkKhrGetSurfaceCapabilities2
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the physical device that will be associated with the swapchain to be
-    ///     created, as described for vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="pSurfaceInfo">
-    ///     pSurfaceInfo is a pointer to a VkPhysicalDeviceSurfaceInfo2KHR structure describing the
-    ///     surface and other fixed parameters that would be consumed by vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="pSurfaceFormatCount">
-    ///     pSurfaceFormatCount is a pointer to an integer related to the number of format tuples
-    ///     available or queried, as described below.
-    /// </param>
-    /// <param name="pSurfaceFormats">
-    ///     pSurfaceFormats is either NULL or a pointer to an array of VkSurfaceFormat2KHR
-    ///     structures.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device that will be associated with the swapchain to be created, as described for vkCreateSwapchainKHR. </param>
+    /// <param name="pSurfaceInfo"> pSurfaceInfo is a pointer to a VkPhysicalDeviceSurfaceInfo2KHR structure describing the surface and other fixed parameters that would be consumed by vkCreateSwapchainKHR. </param>
+    /// <param name="pSurfaceFormatCount"> pSurfaceFormatCount is a pointer to an integer related to the number of format tuples available or queried, as described below. </param>
+    /// <param name="pSurfaceFormats"> pSurfaceFormats is either NULL or a pointer to an array of VkSurfaceFormat2KHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -133,10 +112,10 @@ public static unsafe class VkKhrGetSurfaceCapabilities2
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSurfaceCapabilities2KHR</description>
+    ///             <description> vkGetPhysicalDeviceSurfaceCapabilities2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSurfaceFormats2KHR</description>
+    ///             <description> vkGetPhysicalDeviceSurfaceFormats2KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

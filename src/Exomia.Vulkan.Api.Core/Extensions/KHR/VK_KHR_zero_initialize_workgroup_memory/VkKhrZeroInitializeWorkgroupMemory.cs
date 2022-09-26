@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrZeroInitializeWorkgroupMemory;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_zero_initialize_workgroup_memory - device extension (nr. 326) - author 'KHR' [platform '' | contact 'Alan
-///     Baker @alan-baker']<br />
+///     VK_KHR_zero_initialize_workgroup_memory - device extension (nr. 326) - author 'KHR' [platform '' | contact 'Alan Baker @alan-baker']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_zero_initialize_workgroup_memory.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_zero_initialize_workgroup_memory.html
@@ -44,8 +44,8 @@ public static class VkKhrZeroInitializeWorkgroupMemory
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_ZERO_INITIALIZE_WORKGROUP_MEMORY_EXTENSION_NAME_UTF8_NT =

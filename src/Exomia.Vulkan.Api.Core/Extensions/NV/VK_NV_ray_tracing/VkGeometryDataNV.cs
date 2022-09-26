@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkGeometryDataNV - Structure specifying geometry in a bottom-level acceleration structure -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryDataNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryDataNV.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryDataNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryDataNV.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkGeometryDataNV
 {
-    /// <summary>triangles contains triangle data if VkGeometryNV::geometryType is VK_GEOMETRY_TYPE_TRIANGLES_NV.</summary>
+    /// <summary> triangles contains triangle data if VkGeometryNV::geometryType is VK_GEOMETRY_TYPE_TRIANGLES_NV. </summary>
     public VkGeometryTrianglesNV triangles;
 
-    /// <summary>aabbs contains axis-aligned bounding box data if VkGeometryNV::geometryType is VK_GEOMETRY_TYPE_AABBS_NV.</summary>
+    /// <summary> aabbs contains axis-aligned bounding box data if VkGeometryNV::geometryType is VK_GEOMETRY_TYPE_AABBS_NV. </summary>
     public VkGeometryAABBNV aabbs;
 }

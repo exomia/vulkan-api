@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_KHR_push_descriptor - device extension (nr. 81) - author 'KHR' [platform '' | contact 'Jeff Bolz @jeffbolznv']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_push_descriptor.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_push_descriptor.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_push_descriptor.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_push_descriptor.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkKhrPushDescriptor
@@ -32,37 +32,27 @@ public static unsafe class VkKhrPushDescriptor
     /// <summary> The extension name. </summary>
     public const string VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME = "VK_KHR_push_descriptor";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u505f\u5355\u5f48\u4544\u4353\u4952\u5450\u524f\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkCmdPushDescriptorSetKHR - Pushes descriptor updates into a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPushDescriptorSetKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPushDescriptorSetKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPushDescriptorSetKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPushDescriptorSetKHR.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer that the descriptors will be recorded in.</param>
-    /// <param name="pipelineBindPoint">
-    ///     pipelineBindPoint is a VkPipelineBindPoint indicating the type of the pipeline that
-    ///     will use the descriptors. There is a separate set of push descriptor bindings for each pipeline type, so binding
-    ///     one does not disturb the others.
-    /// </param>
-    /// <param name="layout">layout is a VkPipelineLayout object used to program the bindings.</param>
-    /// <param name="set">set is the set number of the descriptor set in the pipeline layout that will be updated.</param>
-    /// <param name="descriptorWriteCount">descriptorWriteCount is the number of elements in the pDescriptorWrites array.</param>
-    /// <param name="pDescriptorWrites">
-    ///     pDescriptorWrites is a pointer to an array of VkWriteDescriptorSet structures
-    ///     describing the descriptors to be updated.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer that the descriptors will be recorded in. </param>
+    /// <param name="pipelineBindPoint"> pipelineBindPoint is a VkPipelineBindPoint indicating the type of the pipeline that will use the descriptors. There is a separate set of push descriptor bindings for each pipeline type, so binding one does not disturb the others. </param>
+    /// <param name="layout"> layout is a VkPipelineLayout object used to program the bindings. </param>
+    /// <param name="set"> set is the set number of the descriptor set in the pipeline layout that will be updated. </param>
+    /// <param name="descriptorWriteCount"> descriptorWriteCount is the number of elements in the pDescriptorWrites array. </param>
+    /// <param name="pDescriptorWrites"> pDescriptorWrites is a pointer to an array of VkWriteDescriptorSet structures describing the descriptors to be updated. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkPipelineBindPoint /*pipelineBindPoint*/,
@@ -73,27 +63,17 @@ public static unsafe class VkKhrPushDescriptor
         void> vkCmdPushDescriptorSetKHR = null;
 
     /// <summary>
-    ///     vkCmdPushDescriptorSetWithTemplateKHR - Pushes descriptor updates into a command buffer using a descriptor update
-    ///     template -
+    ///     vkCmdPushDescriptorSetWithTemplateKHR - Pushes descriptor updates into a command buffer using a descriptor update template -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer that the descriptors will be recorded in.</param>
-    /// <param name="descriptorUpdateTemplate">
-    ///     descriptorUpdateTemplate is a descriptor update template defining how to
-    ///     interpret the descriptor information in pData.
-    /// </param>
-    /// <param name="layout">
-    ///     layout is a VkPipelineLayout object used to program the bindings. It must be compatible with the
-    ///     layout used to create the descriptorUpdateTemplate handle.
-    /// </param>
-    /// <param name="set">
-    ///     set is the set number of the descriptor set in the pipeline layout that will be updated. This must be
-    ///     the same number used to create the descriptorUpdateTemplate handle.
-    /// </param>
-    /// <param name="pData">pData is a pointer to memory containing descriptors for the templated update.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer that the descriptors will be recorded in. </param>
+    /// <param name="descriptorUpdateTemplate"> descriptorUpdateTemplate is a descriptor update template defining how to interpret the descriptor information in pData. </param>
+    /// <param name="layout"> layout is a VkPipelineLayout object used to program the bindings. It must be compatible with the layout used to create the descriptorUpdateTemplate handle. </param>
+    /// <param name="set"> set is the set number of the descriptor set in the pipeline layout that will be updated. This must be the same number used to create the descriptorUpdateTemplate handle. </param>
+    /// <param name="pData"> pData is a pointer to memory containing descriptors for the templated update. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkDescriptorUpdateTemplate /*descriptorUpdateTemplate*/,
@@ -108,10 +88,10 @@ public static unsafe class VkKhrPushDescriptor
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdPushDescriptorSetKHR</description>
+    ///             <description> vkCmdPushDescriptorSetKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdPushDescriptorSetWithTemplateKHR</description>
+    ///             <description> vkCmdPushDescriptorSetWithTemplateKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

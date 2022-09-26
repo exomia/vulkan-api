@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_NV_ray_tracing - device extension (nr. 166) - author 'NV' [platform '' | contact 'Eric Werness @ewerness-nv']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_ray_tracing.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_ray_tracing.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_ray_tracing.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_ray_tracing.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2,VK_KHR_get_memory_requirements2")]
 public static unsafe class VkNvRayTracing
@@ -32,23 +32,20 @@ public static unsafe class VkNvRayTracing
     /// <summary> The extension name. </summary>
     public const string VK_NV_RAY_TRACING_EXTENSION_NAME = "VK_NV_ray_tracing";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_RAY_TRACING_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_RAY_TRACING_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_RAY_TRACING_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_RAY_TRACING_EXTENSION_NAME_UTF8_NT = "\u4b56\u4e5f\u5f56\u4152\u5f59\u5254\u4341\u4e49\u5f47\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
     ///     VK_SHADER_UNUSED_KHR - Sentinel for an unused shader index -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_SHADER_UNUSED_KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_SHADER_UNUSED_KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_SHADER_UNUSED_KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_SHADER_UNUSED_KHR.html </a>
     /// </summary>
     /// <remarks> VK_SHADER_UNUSED_NV alias for VK_SHADER_UNUSED_NV. </remarks>
     public const uint VK_SHADER_UNUSED_NV = VK_SHADER_UNUSED_KHR;
@@ -60,23 +57,17 @@ public static unsafe class VkNvRayTracing
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateAccelerationStructureNV.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that creates the buffer object.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkAccelerationStructureCreateInfoNV structure containing
-    ///     parameters affecting creation of the acceleration structure.
-    /// </param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
-    /// <param name="pAccelerationStructure">
-    ///     pAccelerationStructure is a pointer to a VkAccelerationStructureNV handle in which
-    ///     the resulting acceleration structure object is returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that creates the buffer object. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkAccelerationStructureCreateInfoNV structure containing parameters affecting creation of the acceleration structure. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
+    /// <param name="pAccelerationStructure"> pAccelerationStructure is a pointer to a VkAccelerationStructureNV handle in which the resulting acceleration structure object is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -94,9 +85,9 @@ public static unsafe class VkNvRayTracing
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyAccelerationStructureNV.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that destroys the buffer.</param>
-    /// <param name="accelerationStructure">accelerationStructure is the acceleration structure to destroy.</param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
+    /// <param name="device"> device is the logical device that destroys the buffer. </param>
+    /// <param name="accelerationStructure"> accelerationStructure is the acceleration structure to destroy. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkAccelerationStructureNV /*accelerationStructure*/,
@@ -110,15 +101,9 @@ public static unsafe class VkNvRayTracing
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device on which the acceleration structure was created.</param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkAccelerationStructureMemoryRequirementsInfoNV structure specifying the
-    ///     acceleration structure to get memory requirements for.
-    /// </param>
-    /// <param name="pMemoryRequirements">
-    ///     pMemoryRequirements is a pointer to a VkMemoryRequirements2KHR structure in which the
-    ///     requested acceleration structure memory requirements are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device on which the acceleration structure was created. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkAccelerationStructureMemoryRequirementsInfoNV structure specifying the acceleration structure to get memory requirements for. </param>
+    /// <param name="pMemoryRequirements"> pMemoryRequirements is a pointer to a VkMemoryRequirements2KHR structure in which the requested acceleration structure memory requirements are returned. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkAccelerationStructureMemoryRequirementsInfoNV* /*pInfo*/,
@@ -132,19 +117,17 @@ public static unsafe class VkNvRayTracing
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBindAccelerationStructureMemoryNV.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the acceleration structures and memory.</param>
-    /// <param name="bindInfoCount">bindInfoCount is the number of elements in pBindInfos.</param>
-    /// <param name="pBindInfos">
-    ///     pBindInfos is a pointer to an array of VkBindAccelerationStructureMemoryInfoNV structures
-    ///     describing acceleration structures and memory to bind.
-    /// </param>
+    /// <param name="device"> device is the logical device that owns the acceleration structures and memory. </param>
+    /// <param name="bindInfoCount"> bindInfoCount is the number of elements in pBindInfos. </param>
+    /// <param name="pBindInfos"> pBindInfos is a pointer to an array of VkBindAccelerationStructureMemoryInfoNV structures describing acceleration structures and memory to bind. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -161,27 +144,15 @@ public static unsafe class VkNvRayTracing
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBuildAccelerationStructureNV.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pInfo">pInfo contains the shared information for the acceleration structure&#8217;s structure.</param>
-    /// <param name="instanceData">
-    ///     instanceData is the buffer containing an array of VkAccelerationStructureInstanceKHR
-    ///     structures defining acceleration structures. This parameter must be NULL for bottom level acceleration structures.
-    /// </param>
-    /// <param name="instanceOffset">
-    ///     instanceOffset is the offset in bytes (relative to the start of instanceData) at which the
-    ///     instance data is located.
-    /// </param>
-    /// <param name="update">update specifies whether to update the dst acceleration structure with the data in src.</param>
-    /// <param name="dst">dst is a pointer to the target acceleration structure for the build.</param>
-    /// <param name="src">
-    ///     src is a pointer to an existing acceleration structure that is to be used to update the dst
-    ///     acceleration structure.
-    /// </param>
-    /// <param name="scratch">scratch is the VkBuffer that will be used as scratch memory for the build.</param>
-    /// <param name="scratchOffset">
-    ///     scratchOffset is the offset in bytes relative to the start of scratch that will be used as
-    ///     a scratch memory.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pInfo"> pInfo contains the shared information for the acceleration structure&#8217;s structure. </param>
+    /// <param name="instanceData"> instanceData is the buffer containing an array of VkAccelerationStructureInstanceKHR structures defining acceleration structures. This parameter must be NULL for bottom level acceleration structures. </param>
+    /// <param name="instanceOffset"> instanceOffset is the offset in bytes (relative to the start of instanceData) at which the instance data is located. </param>
+    /// <param name="update"> update specifies whether to update the dst acceleration structure with the data in src. </param>
+    /// <param name="dst"> dst is a pointer to the target acceleration structure for the build. </param>
+    /// <param name="src"> src is a pointer to an existing acceleration structure that is to be used to update the dst acceleration structure. </param>
+    /// <param name="scratch"> scratch is the VkBuffer that will be used as scratch memory for the build. </param>
+    /// <param name="scratchOffset"> scratchOffset is the offset in bytes relative to the start of scratch that will be used as a scratch memory. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkAccelerationStructureInfoNV* /*pInfo*/,
@@ -201,13 +172,10 @@ public static unsafe class VkNvRayTracing
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyAccelerationStructureNV.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="dst">dst is the target acceleration structure for the copy.</param>
-    /// <param name="src">src is the source acceleration structure for the copy.</param>
-    /// <param name="mode">
-    ///     mode is a VkCopyAccelerationStructureModeKHR value specifying additional operations to perform
-    ///     during the copy.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="dst"> dst is the target acceleration structure for the copy. </param>
+    /// <param name="src"> src is the source acceleration structure for the copy. </param>
+    /// <param name="mode"> mode is a VkCopyAccelerationStructureModeKHR value specifying additional operations to perform during the copy. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkAccelerationStructureNV /*dst*/,
@@ -217,56 +185,23 @@ public static unsafe class VkNvRayTracing
 
     /// <summary>
     ///     vkCmdTraceRaysNV - Initialize a ray tracing dispatch -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdTraceRaysNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdTraceRaysNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdTraceRaysNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdTraceRaysNV.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="raygenShaderBindingTableBuffer">
-    ///     raygenShaderBindingTableBuffer is the buffer object that holds the shader
-    ///     binding table data for the ray generation shader stage.
-    /// </param>
-    /// <param name="raygenShaderBindingOffset">
-    ///     raygenShaderBindingOffset is the offset in bytes (relative to
-    ///     raygenShaderBindingTableBuffer) of the ray generation shader being used for the trace.
-    /// </param>
-    /// <param name="missShaderBindingTableBuffer">
-    ///     missShaderBindingTableBuffer is the buffer object that holds the shader
-    ///     binding table data for the miss shader stage.
-    /// </param>
-    /// <param name="missShaderBindingOffset">
-    ///     missShaderBindingOffset is the offset in bytes (relative to
-    ///     missShaderBindingTableBuffer) of the miss shader being used for the trace.
-    /// </param>
-    /// <param name="missShaderBindingStride">
-    ///     missShaderBindingStride is the size in bytes of each shader binding table record
-    ///     in missShaderBindingTableBuffer.
-    /// </param>
-    /// <param name="hitShaderBindingTableBuffer">
-    ///     hitShaderBindingTableBuffer is the buffer object that holds the shader
-    ///     binding table data for the hit shader stages.
-    /// </param>
-    /// <param name="hitShaderBindingOffset">
-    ///     hitShaderBindingOffset is the offset in bytes (relative to
-    ///     hitShaderBindingTableBuffer) of the hit shader group being used for the trace.
-    /// </param>
-    /// <param name="hitShaderBindingStride">
-    ///     hitShaderBindingStride is the size in bytes of each shader binding table record in
-    ///     hitShaderBindingTableBuffer.
-    /// </param>
-    /// <param name="callableShaderBindingTableBuffer">
-    ///     callableShaderBindingTableBuffer is the buffer object that holds the
-    ///     shader binding table data for the callable shader stage.
-    /// </param>
-    /// <param name="callableShaderBindingOffset">
-    ///     callableShaderBindingOffset is the offset in bytes (relative to
-    ///     callableShaderBindingTableBuffer) of the callable shader being used for the trace.
-    /// </param>
-    /// <param name="callableShaderBindingStride">
-    ///     callableShaderBindingStride is the size in bytes of each shader binding table
-    ///     record in callableShaderBindingTableBuffer.
-    /// </param>
-    /// <param name="width">width is the width of the ray trace query dimensions.</param>
-    /// <param name="height">height is height of the ray trace query dimensions.</param>
-    /// <param name="depth">depth is depth of the ray trace query dimensions.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="raygenShaderBindingTableBuffer"> raygenShaderBindingTableBuffer is the buffer object that holds the shader binding table data for the ray generation shader stage. </param>
+    /// <param name="raygenShaderBindingOffset"> raygenShaderBindingOffset is the offset in bytes (relative to raygenShaderBindingTableBuffer) of the ray generation shader being used for the trace. </param>
+    /// <param name="missShaderBindingTableBuffer"> missShaderBindingTableBuffer is the buffer object that holds the shader binding table data for the miss shader stage. </param>
+    /// <param name="missShaderBindingOffset"> missShaderBindingOffset is the offset in bytes (relative to missShaderBindingTableBuffer) of the miss shader being used for the trace. </param>
+    /// <param name="missShaderBindingStride"> missShaderBindingStride is the size in bytes of each shader binding table record in missShaderBindingTableBuffer. </param>
+    /// <param name="hitShaderBindingTableBuffer"> hitShaderBindingTableBuffer is the buffer object that holds the shader binding table data for the hit shader stages. </param>
+    /// <param name="hitShaderBindingOffset"> hitShaderBindingOffset is the offset in bytes (relative to hitShaderBindingTableBuffer) of the hit shader group being used for the trace. </param>
+    /// <param name="hitShaderBindingStride"> hitShaderBindingStride is the size in bytes of each shader binding table record in hitShaderBindingTableBuffer. </param>
+    /// <param name="callableShaderBindingTableBuffer"> callableShaderBindingTableBuffer is the buffer object that holds the shader binding table data for the callable shader stage. </param>
+    /// <param name="callableShaderBindingOffset"> callableShaderBindingOffset is the offset in bytes (relative to callableShaderBindingTableBuffer) of the callable shader being used for the trace. </param>
+    /// <param name="callableShaderBindingStride"> callableShaderBindingStride is the size in bytes of each shader binding table record in callableShaderBindingTableBuffer. </param>
+    /// <param name="width"> width is the width of the ray trace query dimensions. </param>
+    /// <param name="height"> height is height of the ray trace query dimensions. </param>
+    /// <param name="depth"> depth is depth of the ray trace query dimensions. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkBuffer /*raygenShaderBindingTableBuffer*/,
@@ -287,29 +222,22 @@ public static unsafe class VkNvRayTracing
 
     /// <summary>
     ///     vkCreateRayTracingPipelinesNV - Creates a new ray tracing pipeline object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRayTracingPipelinesNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRayTracingPipelinesNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRayTracingPipelinesNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRayTracingPipelinesNV.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that creates the ray tracing pipelines.</param>
-    /// <param name="pipelineCache">
-    ///     pipelineCache is either VK_NULL_HANDLE, indicating that pipeline caching is disabled, or
-    ///     the handle of a valid pipeline cache object, in which case use of that cache is enabled for the duration of the
-    ///     command.
-    /// </param>
-    /// <param name="createInfoCount">createInfoCount is the length of the pCreateInfos and pPipelines arrays.</param>
-    /// <param name="pCreateInfos">pCreateInfos is a pointer to an array of VkRayTracingPipelineCreateInfoNV structures.</param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
-    /// <param name="pPipelines">
-    ///     pPipelines is a pointer to an array in which the resulting ray tracing pipeline objects are
-    ///     returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that creates the ray tracing pipelines. </param>
+    /// <param name="pipelineCache"> pipelineCache is either VK_NULL_HANDLE, indicating that pipeline caching is disabled, or the handle of a valid pipeline cache object, in which case use of that cache is enabled for the duration of the command. </param>
+    /// <param name="createInfoCount"> createInfoCount is the length of the pCreateInfos and pPipelines arrays. </param>
+    /// <param name="pCreateInfos"> pCreateInfos is a pointer to an array of VkRayTracingPipelineCreateInfoNV structures. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
+    /// <param name="pPipelines"> pPipelines is a pointer to an array in which the resulting ray tracing pipeline objects are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_PIPELINE_COMPILE_REQUIRED_EXT</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_PIPELINE_COMPILE_REQUIRED_EXT </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INVALID_SHADER_NV</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INVALID_SHADER_NV </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -346,17 +274,18 @@ public static unsafe class VkNvRayTracing
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureHandleNV.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the acceleration structures.</param>
-    /// <param name="accelerationStructure">accelerationStructure is the acceleration structure.</param>
-    /// <param name="dataSize">dataSize is the size in bytes of the buffer pointed to by pData.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the results will be written.</param>
+    /// <param name="device"> device is the logical device that owns the acceleration structures. </param>
+    /// <param name="accelerationStructure"> accelerationStructure is the acceleration structure. </param>
+    /// <param name="dataSize"> dataSize is the size in bytes of the buffer pointed to by pData. </param>
+    /// <param name="pData"> pData is a pointer to a user-allocated buffer where the results will be written. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -374,21 +303,12 @@ public static unsafe class VkNvRayTracing
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesNV.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="accelerationStructureCount">
-    ///     accelerationStructureCount is the count of acceleration structures for which
-    ///     to query the property.
-    /// </param>
-    /// <param name="pAccelerationStructures">
-    ///     pAccelerationStructures is a pointer to an array of existing previously built
-    ///     acceleration structures.
-    /// </param>
-    /// <param name="queryType">queryType is a VkQueryType value specifying the type of queries managed by the pool.</param>
-    /// <param name="queryPool">queryPool is the query pool that will manage the results of the query.</param>
-    /// <param name="firstQuery">
-    ///     firstQuery is the first query index within the query pool that will contain the
-    ///     accelerationStructureCount number of results.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="accelerationStructureCount"> accelerationStructureCount is the count of acceleration structures for which to query the property. </param>
+    /// <param name="pAccelerationStructures"> pAccelerationStructures is a pointer to an array of existing previously built acceleration structures. </param>
+    /// <param name="queryType"> queryType is a VkQueryType value specifying the type of queries managed by the pool. </param>
+    /// <param name="queryPool"> queryPool is the query pool that will manage the results of the query. </param>
+    /// <param name="firstQuery"> firstQuery is the first query index within the query pool that will contain the accelerationStructureCount number of results. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*accelerationStructureCount*/,
@@ -400,18 +320,19 @@ public static unsafe class VkNvRayTracing
 
     /// <summary>
     ///     vkCompileDeferredNV - Deferred compilation of shaders -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCompileDeferredNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCompileDeferredNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCompileDeferredNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCompileDeferredNV.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device containing the ray tracing pipeline.</param>
-    /// <param name="pipeline">pipeline is the ray tracing pipeline object containing the shaders.</param>
-    /// <param name="shader">shader is the index of the shader to compile.</param>
+    /// <param name="device"> device is the logical device containing the ray tracing pipeline. </param>
+    /// <param name="pipeline"> pipeline is the ray tracing pipeline object containing the shaders. </param>
+    /// <param name="shader"> shader is the index of the shader to compile. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -427,40 +348,40 @@ public static unsafe class VkNvRayTracing
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateAccelerationStructureNV</description>
+    ///             <description> vkCreateAccelerationStructureNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyAccelerationStructureNV</description>
+    ///             <description> vkDestroyAccelerationStructureNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetAccelerationStructureMemoryRequirementsNV</description>
+    ///             <description> vkGetAccelerationStructureMemoryRequirementsNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkBindAccelerationStructureMemoryNV</description>
+    ///             <description> vkBindAccelerationStructureMemoryNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdBuildAccelerationStructureNV</description>
+    ///             <description> vkCmdBuildAccelerationStructureNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdCopyAccelerationStructureNV</description>
+    ///             <description> vkCmdCopyAccelerationStructureNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdTraceRaysNV</description>
+    ///             <description> vkCmdTraceRaysNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCreateRayTracingPipelinesNV</description>
+    ///             <description> vkCreateRayTracingPipelinesNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetRayTracingShaderGroupHandlesNV</description>
+    ///             <description> vkGetRayTracingShaderGroupHandlesNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetAccelerationStructureHandleNV</description>
+    ///             <description> vkGetAccelerationStructureHandleNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdWriteAccelerationStructuresPropertiesNV</description>
+    ///             <description> vkCmdWriteAccelerationStructuresPropertiesNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCompileDeferredNV</description>
+    ///             <description> vkCompileDeferredNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkRenderPassCreateInfo</description>
+///             <term> structextends </term><description> VkRenderPassCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,38 +34,27 @@ public unsafe struct VkRenderPassMultiviewCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_RENDER_PASS_MULTIVIEW_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>subpassCount is zero or the number of subpasses in the render pass.</summary>
+    /// <summary> subpassCount is zero or the number of subpasses in the render pass. </summary>
     public uint subpassCount;
 
-    /// <summary>
-    ///     pViewMasks is a pointer to an array of subpassCount view masks, where each mask is a bitfield of view indices
-    ///     describing which views rendering is broadcast to in each subpass, when multiview is enabled. If subpassCount is
-    ///     zero, each view mask is treated as zero.
-    /// </summary>
+    /// <summary> pViewMasks is a pointer to an array of subpassCount view masks, where each mask is a bitfield of view indices describing which views rendering is broadcast to in each subpass, when multiview is enabled. If subpassCount is zero, each view mask is treated as zero. </summary>
     public uint* pViewMasks;
 
-    /// <summary>dependencyCount is zero or the number of dependencies in the render pass.</summary>
+    /// <summary> dependencyCount is zero or the number of dependencies in the render pass. </summary>
     public uint dependencyCount;
 
-    /// <summary>
-    ///     pViewOffsets is a pointer to an array of dependencyCountview offsets, one for each dependency. If
-    ///     dependencyCount is zero, each dependency&#8217;s view offset is treated as zero. Each view offset controls which
-    ///     views in the source subpass the views in the destination subpass depend on.
-    /// </summary>
+    /// <summary> pViewOffsets is a pointer to an array of dependencyCountview offsets, one for each dependency. If dependencyCount is zero, each dependency&#8217;s view offset is treated as zero. Each view offset controls which views in the source subpass the views in the destination subpass depend on. </summary>
     public int* pViewOffsets;
 
-    /// <summary>correlationMaskCount is zero or the number of correlation masks.</summary>
+    /// <summary> correlationMaskCount is zero or the number of correlation masks. </summary>
     public uint correlationMaskCount;
 
-    /// <summary>
-    ///     pCorrelationMasks is a pointer to an array of correlationMaskCount view masks indicating sets of views that
-    ///     maybe more efficient to render concurrently.
-    /// </summary>
+    /// <summary> pCorrelationMasks is a pointer to an array of correlationMaskCount view masks indicating sets of views that maybe more efficient to render concurrently. </summary>
     public uint* pCorrelationMasks;
 }

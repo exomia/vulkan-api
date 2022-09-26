@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT - Structure describing whether list type primitives can
-///     support primitive restart -
+///     VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT - Structure describing whether list type primitives can support primitive restart -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,23 +34,15 @@ public unsafe struct VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     primitiveTopologyListRestart indicates that list type primitives, VK_PRIMITIVE_TOPOLOGY_POINT_LIST,
-    ///     VK_PRIMITIVE_TOPOLOGY_LINE_LIST, VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST,
-    ///     VK_PRIMITIVE_TOPOLOGY_LINE_LIST_WITH_ADJACENCY and VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST_WITH_ADJACENCY, can use the
-    ///     primitive restart index value in index buffers.
-    /// </summary>
+    /// <summary> primitiveTopologyListRestart indicates that list type primitives, VK_PRIMITIVE_TOPOLOGY_POINT_LIST, VK_PRIMITIVE_TOPOLOGY_LINE_LIST, VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST, VK_PRIMITIVE_TOPOLOGY_LINE_LIST_WITH_ADJACENCY and VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST_WITH_ADJACENCY, can use the primitive restart index value in index buffers. </summary>
     public VkBool32 primitiveTopologyListRestart;
 
-    /// <summary>
-    ///     primitiveTopologyPatchListRestart indicates that the VK_PRIMITIVE_TOPOLOGY_PATCH_LIST topology can use the
-    ///     primitive restart index value in index buffers.
-    /// </summary>
+    /// <summary> primitiveTopologyPatchListRestart indicates that the VK_PRIMITIVE_TOPOLOGY_PATCH_LIST topology can use the primitive restart index value in index buffers. </summary>
     public VkBool32 primitiveTopologyPatchListRestart;
 }

@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Directfb.VkExtDirectfbSurface;
 namespace Exomia.Vulkan.Api.Directfb;
 
 /// <summary>
-///     VK_EXT_directfb_surface - instance extension (nr. 347) - author 'EXT' [platform 'directfb' | contact 'Nicolas
-///     Caramelli @caramelli']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_directfb_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_directfb_surface.html</a>
+///     VK_EXT_directfb_surface - instance extension (nr. 347) - author 'EXT' [platform 'directfb' | contact 'Nicolas Caramelli @caramelli']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_directfb_surface.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_directfb_surface.html </a>
 /// </summary>
 [VkRequires("VK_KHR_surface")]
 public static unsafe class VkExtDirectfbSurface
@@ -32,41 +32,33 @@ public static unsafe class VkExtDirectfbSurface
     /// <summary> The extension name. </summary>
     public const string VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME = "VK_EXT_directfb_surface";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_DIRECTFB_SURFACE_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u445f\u5249\u4345\u4654\u5f42\u5553\u4652\u4341\u5f45\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
     ///     vkCreateDirectFBSurfaceEXT - Create a slink:VkSurfaceKHR object for a DirectFB surface -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDirectFBSurfaceEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDirectFBSurfaceEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDirectFBSurfaceEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDirectFBSurfaceEXT.html </a>
     /// </summary>
-    /// <param name="instance">instance is the instance to associate the surface with.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkDirectFBSurfaceCreateInfoEXTstructure containing parameters
-    ///     affecting the creation of the surface object.
-    /// </param>
-    /// <param name="pAllocator">
-    ///     pAllocator is the allocator used for host memory allocated for the surface object when there
-    ///     is no more specific allocator available (see Memory Allocation).
-    /// </param>
-    /// <param name="pSurface">pSurface is a pointer to a VkSurfaceKHR handle in which the created surface object is returned.</param>
+    /// <param name="instance"> instance is the instance to associate the surface with. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkDirectFBSurfaceCreateInfoEXTstructure containing parameters affecting the creation of the surface object. </param>
+    /// <param name="pAllocator"> pAllocator is the allocator used for host memory allocated for the surface object when there is no more specific allocator available (see Memory Allocation). </param>
+    /// <param name="pSurface"> pSurface is a pointer to a VkSurfaceKHR handle in which the created surface object is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -84,9 +76,9 @@ public static unsafe class VkExtDirectfbSurface
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceDirectFBPresentationSupportEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device.</param>
-    /// <param name="queueFamilyIndex">queueFamilyIndex is the queue family index.</param>
-    /// <param name="dfb">dfb is a pointer to the IDirectFB main interface of DirectFB.</param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device. </param>
+    /// <param name="queueFamilyIndex"> queueFamilyIndex is the queue family index. </param>
+    /// <param name="dfb"> dfb is a pointer to the IDirectFB main interface of DirectFB. </param>
     public static readonly delegate*<
         VkPhysicalDevice /*physicalDevice*/,
         uint /*queueFamilyIndex*/,
@@ -99,10 +91,10 @@ public static unsafe class VkExtDirectfbSurface
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateDirectFBSurfaceEXT</description>
+    ///             <description> vkCreateDirectFBSurfaceEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceDirectFBPresentationSupportEXT</description>
+    ///             <description> vkGetPhysicalDeviceDirectFBPresentationSupportEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

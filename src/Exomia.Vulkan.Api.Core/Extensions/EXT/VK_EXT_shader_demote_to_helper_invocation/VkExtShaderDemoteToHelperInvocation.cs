@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtShaderDemoteToHelperInvocation;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_shader_demote_to_helper_invocation - device extension (nr. 277) - author 'EXT' [platform '' | contact 'Jeff
-///     Bolz @jeffbolznv']<br />
+///     VK_EXT_shader_demote_to_helper_invocation - device extension (nr. 277) - author 'EXT' [platform '' | contact 'Jeff Bolz @jeffbolznv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_demote_to_helper_invocation.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_demote_to_helper_invocation.html
@@ -44,8 +44,8 @@ public static class VkExtShaderDemoteToHelperInvocation
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_SHADER_DEMOTE_TO_HELPER_INVOCATION_EXTENSION_NAME_UTF8_NT =

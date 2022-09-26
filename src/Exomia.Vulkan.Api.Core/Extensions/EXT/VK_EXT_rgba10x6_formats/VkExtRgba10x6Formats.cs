@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtRgba10x6Formats;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_rgba10x6_formats - device extension (nr. 345) - author 'EXT' [platform '' | contact 'Jan-Harald Fredriksen
-///     @janharaldfredriksen-arm']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_rgba10x6_formats.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_rgba10x6_formats.html</a>
+///     VK_EXT_rgba10x6_formats - device extension (nr. 345) - author 'EXT' [platform '' | contact 'Jan-Harald Fredriksen @janharaldfredriksen-arm']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_rgba10x6_formats.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_rgba10x6_formats.html </a>
 /// </summary>
 [VkRequires("VK_KHR_sampler_ycbcr_conversion")]
 public static class VkExtRgba10x6Formats
@@ -32,16 +32,13 @@ public static class VkExtRgba10x6Formats
     /// <summary> The extension name. </summary>
     public const string VK_EXT_RGBA10X6_FORMATS_EXTENSION_NAME = "VK_EXT_rgba10x6_formats";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_RGBA10X6_FORMATS_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_RGBA10X6_FORMATS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_RGBA10X6_FORMATS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_RGBA10X6_FORMATS_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u525f\u4247\u3141\u5830\u5f36\u4f46\u4d52\u5441\u5f53\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";

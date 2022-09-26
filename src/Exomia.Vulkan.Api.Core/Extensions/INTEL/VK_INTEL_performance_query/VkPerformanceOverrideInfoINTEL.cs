@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkPerformanceOverrideInfoINTEL - Performance override information -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceOverrideInfoINTEL.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceOverrideInfoINTEL.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceOverrideInfoINTEL.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceOverrideInfoINTEL.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkPerformanceOverrideInfoINTEL
@@ -32,15 +32,15 @@ public unsafe struct VkPerformanceOverrideInfoINTEL
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>type is the particular VkPerformanceOverrideTypeINTEL to set.</summary>
+    /// <summary> type is the particular VkPerformanceOverrideTypeINTEL to set. </summary>
     public VkPerformanceOverrideTypeINTEL type;
 
-    /// <summary>enable defines whether the override is enabled.</summary>
+    /// <summary> enable defines whether the override is enabled. </summary>
     public VkBool32 enable;
 
-    /// <summary>parameter is a potential required parameter for the override.</summary>
+    /// <summary> parameter is a potential required parameter for the override. </summary>
     public ulong parameter;
 }

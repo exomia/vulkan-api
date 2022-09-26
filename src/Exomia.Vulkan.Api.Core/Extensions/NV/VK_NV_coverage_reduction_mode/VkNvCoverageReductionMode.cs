@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkNvCoverageReductionMode;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_coverage_reduction_mode - device extension (nr. 251) - author 'NV' [platform '' | contact 'Kedarnath Thangudu
-///     @kthangudu']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_coverage_reduction_mode.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_coverage_reduction_mode.html</a>
+///     VK_NV_coverage_reduction_mode - device extension (nr. 251) - author 'NV' [platform '' | contact 'Kedarnath Thangudu @kthangudu']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_coverage_reduction_mode.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_coverage_reduction_mode.html </a>
 /// </summary>
 [VkRequires("VK_NV_framebuffer_mixed_samples")]
 public static unsafe class VkNvCoverageReductionMode
@@ -32,16 +32,13 @@ public static unsafe class VkNvCoverageReductionMode
     /// <summary> The extension name. </summary>
     public const string VK_NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME = "VK_NV_coverage_reduction_mode";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME_UTF8_NT =
@@ -54,23 +51,17 @@ public static unsafe class VkNvCoverageReductionMode
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device from which to query the set of combinations.</param>
-    /// <param name="pCombinationCount">
-    ///     pCombinationCount is a pointer to an integer related to the number of combinations
-    ///     available or queried, as described below.
-    /// </param>
-    /// <param name="pCombinations">
-    ///     pCombinations is either NULL or a pointer to an array of
-    ///     VkFramebufferMixedSamplesCombinationNV values, indicating the supported combinations of coverage reduction mode,
-    ///     rasterization samples, and color, depth, stencil attachment sample counts.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device from which to query the set of combinations. </param>
+    /// <param name="pCombinationCount"> pCombinationCount is a pointer to an integer related to the number of combinations available or queried, as described below. </param>
+    /// <param name="pCombinations"> pCombinations is either NULL or a pointer to an array of VkFramebufferMixedSamplesCombinationNV values, indicating the supported combinations of coverage reduction mode, rasterization samples, and color, depth, stencil attachment sample counts. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -86,7 +77,7 @@ public static unsafe class VkNvCoverageReductionMode
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV</description>
+    ///             <description> vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceProvokingVertexPropertiesEXT - Structure describing provoking vertex properties supported by an
-///     implementation -
+///     VkPhysicalDeviceProvokingVertexPropertiesEXT - Structure describing provoking vertex properties supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProvokingVertexPropertiesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProvokingVertexPropertiesEXT.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,21 +37,15 @@ public unsafe struct VkPhysicalDeviceProvokingVertexPropertiesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     provokingVertexModePerPipeline indicates whether the implementation supports graphics pipelines with different
-    ///     provoking vertex modes within the same render pass instance.
-    /// </summary>
+    /// <summary> provokingVertexModePerPipeline indicates whether the implementation supports graphics pipelines with different provoking vertex modes within the same render pass instance. </summary>
     public VkBool32 provokingVertexModePerPipeline;
 
-    /// <summary>
-    ///     transformFeedbackPreservesTriangleFanProvokingVertex indicates whether the implementation can preserve the
-    ///     provoking vertex order when writing triangle fan vertices to transform feedback.
-    /// </summary>
+    /// <summary> transformFeedbackPreservesTriangleFanProvokingVertex indicates whether the implementation can preserve the provoking vertex order when writing triangle fan vertices to transform feedback. </summary>
     public VkBool32 transformFeedbackPreservesTriangleFanProvokingVertex;
 }

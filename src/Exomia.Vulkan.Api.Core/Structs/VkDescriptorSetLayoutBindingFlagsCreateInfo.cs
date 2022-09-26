@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkDescriptorSetLayoutBindingFlagsCreateInfo - Structure specifying creation flags for descriptor set layout
-///     bindings -
+///     VkDescriptorSetLayoutBindingFlagsCreateInfo - Structure specifying creation flags for descriptor set layout bindings -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutBindingFlagsCreateInfo.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutBindingFlagsCreateInfo.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkDescriptorSetLayoutCreateInfo</description>
+///             <term> structextends </term><description> VkDescriptorSetLayoutCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,18 +34,15 @@ public unsafe struct VkDescriptorSetLayoutBindingFlagsCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>bindingCount is zero or the number of elements in pBindingFlags.</summary>
+    /// <summary> bindingCount is zero or the number of elements in pBindingFlags. </summary>
     public uint bindingCount;
 
-    /// <summary>
-    ///     pBindingFlags is a pointer to an array of VkDescriptorBindingFlags bitfields, one for each descriptor set
-    ///     layout binding.
-    /// </summary>
+    /// <summary> pBindingFlags is a pointer to an array of VkDescriptorBindingFlags bitfields, one for each descriptor set layout binding. </summary>
     public VkDescriptorBindingFlags* pBindingFlags;
 }

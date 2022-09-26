@@ -24,25 +24,15 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkPipelineColorBlendStateCreateFlagBits
 {
     /// <summary>
-    ///     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXTindicates that access to color
-    ///     and input attachments will have implicit framebuffer-local memory dependencies, allowing applications to express
-    ///     custom blending operations in a fragment shader. See
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-feedbackloop">
-    ///         renderpass
-    ///         feedback loops
-    ///     </a>
+    ///     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXTindicates that access to color and input attachments will have implicit framebuffer-local memory dependencies, allowing applications to express custom blending operations in a fragment shader. See
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-feedbackloop"> renderpass feedback loops </a>
     ///     for more information.
     /// </summary>
     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXT = 0x1,
 
     /// <summary>
-    ///     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXTindicates that access to color
-    ///     and input attachments will have implicit framebuffer-local memory dependencies, allowing applications to express
-    ///     custom blending operations in a fragment shader. See
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-feedbackloop">
-    ///         renderpass
-    ///         feedback loops
-    ///     </a>
+    ///     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXTindicates that access to color and input attachments will have implicit framebuffer-local memory dependencies, allowing applications to express custom blending operations in a fragment shader. See
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-feedbackloop"> renderpass feedback loops </a>
     ///     for more information.
     /// </summary>
     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_ARM = VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXT

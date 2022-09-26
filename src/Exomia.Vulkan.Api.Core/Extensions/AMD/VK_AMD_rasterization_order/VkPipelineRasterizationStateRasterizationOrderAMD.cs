@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelineRasterizationStateRasterizationOrderAMD - Structure defining rasterization order for a graphics pipeline
-///     -
+///     VkPipelineRasterizationStateRasterizationOrderAMD - Structure defining rasterization order for a graphics pipeline -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPipelineRasterizationStateCreateInfo</description>
+///             <term> structextends </term><description> VkPipelineRasterizationStateCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,12 +34,12 @@ public unsafe struct VkPipelineRasterizationStateRasterizationOrderAMD
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>rasterizationOrder is a VkRasterizationOrderAMD value specifying the primitive rasterization order to use.</summary>
+    /// <summary> rasterizationOrder is a VkRasterizationOrderAMD value specifying the primitive rasterization order to use. </summary>
     public VkRasterizationOrderAMD rasterizationOrder;
 }

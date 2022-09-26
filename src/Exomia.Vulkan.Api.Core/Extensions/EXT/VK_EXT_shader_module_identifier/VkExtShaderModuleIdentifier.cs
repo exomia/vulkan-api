@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtShaderModuleIdentifier;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_shader_module_identifier - device extension (nr. 463) - author 'EXT' [platform '' | contact 'Hans-Kristian
-///     Arntzen @HansKristian-Work']<br />
+///     VK_EXT_shader_module_identifier - device extension (nr. 463) - author 'EXT' [platform '' | contact 'Hans-Kristian Arntzen @HansKristian-Work']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_module_identifier.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_module_identifier.html
@@ -35,16 +35,13 @@ public static unsafe class VkExtShaderModuleIdentifier
     /// <summary> The extension name. </summary>
     public const string VK_EXT_SHADER_MODULE_IDENTIFIER_EXTENSION_NAME = "VK_EXT_shader_module_identifier";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_SHADER_MODULE_IDENTIFIER_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_SHADER_MODULE_IDENTIFIER_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_SHADER_MODULE_IDENTIFIER_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_SHADER_MODULE_IDENTIFIER_EXTENSION_NAME_UTF8_NT =
@@ -54,11 +51,11 @@ public static unsafe class VkExtShaderModuleIdentifier
 
     /// <summary>
     ///     vkGetShaderModuleIdentifierEXT - Query a unique identifier for a shader module -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderModuleIdentifierEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderModuleIdentifierEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderModuleIdentifierEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderModuleIdentifierEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that created the shader module.</param>
-    /// <param name="shaderModule">shaderModule is the handle of the shader module.</param>
-    /// <param name="pIdentifier">pIdentifier is a pointer to the returned VkShaderModuleIdentifierEXT.</param>
+    /// <param name="device"> device is the logical device that created the shader module. </param>
+    /// <param name="shaderModule"> shaderModule is the handle of the shader module. </param>
+    /// <param name="pIdentifier"> pIdentifier is a pointer to the returned VkShaderModuleIdentifierEXT. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkShaderModule /*shaderModule*/,
@@ -72,9 +69,9 @@ public static unsafe class VkExtShaderModuleIdentifier
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderModuleCreateInfoIdentifierEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that can create a VkShaderModule from pCreateInfo.</param>
-    /// <param name="pCreateInfo">pCreateInfo is a pointer to a VkShaderModuleCreateInfostructure.</param>
-    /// <param name="pIdentifier">pIdentifier is a pointer to the returned VkShaderModuleIdentifierEXT.</param>
+    /// <param name="device"> device is the logical device that can create a VkShaderModule from pCreateInfo. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkShaderModuleCreateInfostructure. </param>
+    /// <param name="pIdentifier"> pIdentifier is a pointer to the returned VkShaderModuleIdentifierEXT. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkShaderModuleCreateInfo* /*pCreateInfo*/,
@@ -87,10 +84,10 @@ public static unsafe class VkExtShaderModuleIdentifier
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetShaderModuleIdentifierEXT</description>
+    ///             <description> vkGetShaderModuleIdentifierEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetShaderModuleCreateInfoIdentifierEXT</description>
+    ///             <description> vkGetShaderModuleCreateInfoIdentifierEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

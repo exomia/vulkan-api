@@ -15,20 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSurfaceCounterFlagBitsEXT - Surface-relative counter types -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCounterFlagBitsEXT.html </a>
 /// </summary>
 [Flags]
 public enum VkSurfaceCounterFlagBitsEXT
 {
-    /// <summary>
-    ///     VK_SURFACE_COUNTER_VBLANK_BIT_EXT specifies a counter incrementing once every time a vertical blanking period
-    ///     occurs on the display associated with the surface.
-    /// </summary>
+    /// <summary> VK_SURFACE_COUNTER_VBLANK_BIT_EXT specifies a counter incrementing once every time a vertical blanking period occurs on the display associated with the surface. </summary>
     VK_SURFACE_COUNTER_VBLANK_BIT_EXT = 0x1,
 
-    /// <summary>
-    ///     VK_SURFACE_COUNTER_VBLANK_BIT_EXT specifies a counter incrementing once every time a vertical blanking period
-    ///     occurs on the display associated with the surface.
-    /// </summary>
+    /// <summary> VK_SURFACE_COUNTER_VBLANK_BIT_EXT specifies a counter incrementing once every time a vertical blanking period occurs on the display associated with the surface. </summary>
     VK_SURFACE_COUNTER_VBLANK_EXT = VK_SURFACE_COUNTER_VBLANK_BIT_EXT
 }

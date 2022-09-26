@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,27 +34,18 @@ public unsafe struct VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     fragmentShadingRateEnumsindicates that the implementation supports specifying fragment shading rates using
-    ///     the VkFragmentShadingRateNV enumerated type.
-    /// </summary>
+    /// <summary> fragmentShadingRateEnumsindicates that the implementation supports specifying fragment shading rates using the VkFragmentShadingRateNV enumerated type. </summary>
     public VkBool32 fragmentShadingRateEnums;
 
-    /// <summary>
-    ///     supersampleFragmentShadingRates indicates that the implementation supports fragment shading rate enum values
-    ///     indicating more than one invocation per fragment.
-    /// </summary>
+    /// <summary> supersampleFragmentShadingRates indicates that the implementation supports fragment shading rate enum values indicating more than one invocation per fragment. </summary>
     public VkBool32 supersampleFragmentShadingRates;
 
-    /// <summary>
-    ///     noInvocationFragmentShadingRates indicates that the implementation supports a fragment shading rate enum value
-    ///     indicating that no fragment shaders should be invoked when that shading rate is used.
-    /// </summary>
+    /// <summary> noInvocationFragmentShadingRates indicates that the implementation supports a fragment shading rate enum value indicating that no fragment shaders should be invoked when that shading rate is used. </summary>
     public VkBool32 noInvocationFragmentShadingRates;
 }

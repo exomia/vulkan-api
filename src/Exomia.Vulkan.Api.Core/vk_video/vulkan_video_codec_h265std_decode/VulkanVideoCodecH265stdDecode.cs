@@ -34,8 +34,8 @@ public static class VulkanVideoCodecH265stdDecode
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_STD_VULKAN_VIDEO_CODEC_H265_DECODE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_STD_VULKAN_VIDEO_CODEC_H265_DECODE_EXTENSION_NAME_UTF8_NT =

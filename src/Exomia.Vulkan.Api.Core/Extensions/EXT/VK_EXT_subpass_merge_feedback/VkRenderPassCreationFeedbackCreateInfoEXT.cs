@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkRenderPassCreateInfo2</description>
+///             <term> structextends </term><description> VkRenderPassCreateInfo2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,15 +34,12 @@ public unsafe struct VkRenderPassCreationFeedbackCreateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_RENDER_PASS_CREATION_FEEDBACK_CREATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to an extension-specific structure.</summary>
+    /// <summary> pNext is NULL or a pointer to an extension-specific structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     pRenderPassFeedback is a pointer to a VkRenderPassCreationFeedbackInfoEXT structure in which feedback is
-    ///     returned.
-    /// </summary>
+    /// <summary> pRenderPassFeedback is a pointer to a VkRenderPassCreationFeedbackInfoEXT structure in which feedback is returned. </summary>
     public VkRenderPassCreationFeedbackInfoEXT* pRenderPassFeedback;
 }

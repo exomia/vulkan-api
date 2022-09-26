@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Xcb.VkKhrXcbSurface;
 namespace Exomia.Vulkan.Api.Xcb;
 
 /// <summary>
-///     VK_KHR_xcb_surface - instance extension (nr. 6) - author 'KHR' [platform 'xcb' | contact 'Jesse Hall @critsec,Ian
-///     Elliott @ianelliottus']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_xcb_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_xcb_surface.html</a>
+///     VK_KHR_xcb_surface - instance extension (nr. 6) - author 'KHR' [platform 'xcb' | contact 'Jesse Hall @critsec,Ian Elliott @ianelliottus']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_xcb_surface.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_xcb_surface.html </a>
 /// </summary>
 [VkRequires("VK_KHR_surface")]
 public static unsafe class VkKhrXcbSurface
@@ -32,42 +32,33 @@ public static unsafe class VkKhrXcbSurface
     /// <summary> The extension name. </summary>
     public const string VK_KHR_XCB_SURFACE_EXTENSION_NAME = "VK_KHR_xcb_surface";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_XCB_SURFACE_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_XCB_SURFACE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_XCB_SURFACE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_XCB_SURFACE_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u585f\u4243\u535f\u5255\u4146\u4543\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
-    ///     vkCreateXcbSurfaceKHR - Create a slink:VkSurfaceKHR object for a X11 window, using the XCB client-side
-    ///     library -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateXcbSurfaceKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateXcbSurfaceKHR.html</a>
+    ///     vkCreateXcbSurfaceKHR - Create a slink:VkSurfaceKHR object for a X11 window, using the XCB client-side library -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateXcbSurfaceKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateXcbSurfaceKHR.html </a>
     /// </summary>
-    /// <param name="instance">instance is the instance to associate the surface with.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkXcbSurfaceCreateInfoKHRstructure containing parameters
-    ///     affecting the creation of the surface object.
-    /// </param>
-    /// <param name="pAllocator">
-    ///     pAllocator is the allocator used for host memory allocated for the surface object when there
-    ///     is no more specific allocator available (see Memory Allocation).
-    /// </param>
-    /// <param name="pSurface">pSurface is a pointer to a VkSurfaceKHR handle in which the created surface object is returned.</param>
+    /// <param name="instance"> instance is the instance to associate the surface with. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkXcbSurfaceCreateInfoKHRstructure containing parameters affecting the creation of the surface object. </param>
+    /// <param name="pAllocator"> pAllocator is the allocator used for host memory allocated for the surface object when there is no more specific allocator available (see Memory Allocation). </param>
+    /// <param name="pSurface"> pSurface is a pointer to a VkSurfaceKHR handle in which the created surface object is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -85,10 +76,10 @@ public static unsafe class VkKhrXcbSurface
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceXcbPresentationSupportKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device.</param>
-    /// <param name="queueFamilyIndex">queueFamilyIndex is the queue family index.</param>
-    /// <param name="connection">connection is a pointer to an xcb_connection_t to the X server.</param>
-    /// <param name="visual_id">visual_id is an X11 visual (xcb_visualid_t).</param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device. </param>
+    /// <param name="queueFamilyIndex"> queueFamilyIndex is the queue family index. </param>
+    /// <param name="connection"> connection is a pointer to an xcb_connection_t to the X server. </param>
+    /// <param name="visual_id"> visual_id is an X11 visual (xcb_visualid_t). </param>
     public static readonly delegate*<
         VkPhysicalDevice /*physicalDevice*/,
         uint /*queueFamilyIndex*/,
@@ -102,10 +93,10 @@ public static unsafe class VkKhrXcbSurface
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateXcbSurfaceKHR</description>
+    ///             <description> vkCreateXcbSurfaceKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceXcbPresentationSupportKHR</description>
+    ///             <description> vkGetPhysicalDeviceXcbPresentationSupportKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

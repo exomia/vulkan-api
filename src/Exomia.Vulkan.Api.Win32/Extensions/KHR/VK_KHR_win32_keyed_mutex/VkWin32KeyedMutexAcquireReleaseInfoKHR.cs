@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Win32;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSubmitInfo,VkSubmitInfo2</description>
+///             <term> structextends </term><description> VkSubmitInfo,VkSubmitInfo2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,45 +34,30 @@ public unsafe struct VkWin32KeyedMutexAcquireReleaseInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>acquireCount is the number of entries in the pAcquireSyncs, pAcquireKeys, and pAcquireTimeouts arrays.</summary>
+    /// <summary> acquireCount is the number of entries in the pAcquireSyncs, pAcquireKeys, and pAcquireTimeouts arrays. </summary>
     public uint acquireCount;
 
-    /// <summary>
-    ///     pAcquireSyncs is a pointer to an array of VkDeviceMemoryobjects which were imported from Direct3D 11
-    ///     resources.
-    /// </summary>
+    /// <summary> pAcquireSyncs is a pointer to an array of VkDeviceMemoryobjects which were imported from Direct3D 11 resources. </summary>
     public VkDeviceMemory* pAcquireSyncs;
 
-    /// <summary>
-    ///     pAcquireKeys is a pointer to an array of mutex key values to wait for prior to beginning the submitted work.
-    ///     Entries refer to the keyed mutex associated with the corresponding entries in pAcquireSyncs.
-    /// </summary>
+    /// <summary> pAcquireKeys is a pointer to an array of mutex key values to wait for prior to beginning the submitted work. Entries refer to the keyed mutex associated with the corresponding entries in pAcquireSyncs. </summary>
     public ulong* pAcquireKeys;
 
-    /// <summary>
-    ///     pAcquireTimeouts is a pointer to an array of timeout values, in millisecond units, for each acquire specified
-    ///     in pAcquireKeys.
-    /// </summary>
+    /// <summary> pAcquireTimeouts is a pointer to an array of timeout values, in millisecond units, for each acquire specified in pAcquireKeys. </summary>
     public uint* pAcquireTimeouts;
 
-    /// <summary>releaseCount is the number of entries in the pReleaseSyncsand pReleaseKeys arrays.</summary>
+    /// <summary> releaseCount is the number of entries in the pReleaseSyncsand pReleaseKeys arrays. </summary>
     public uint releaseCount;
 
-    /// <summary>
-    ///     pReleaseSyncs is a pointer to an array of VkDeviceMemoryobjects which were imported from Direct3D 11
-    ///     resources.
-    /// </summary>
+    /// <summary> pReleaseSyncs is a pointer to an array of VkDeviceMemoryobjects which were imported from Direct3D 11 resources. </summary>
     public VkDeviceMemory* pReleaseSyncs;
 
-    /// <summary>
-    ///     pReleaseKeys is a pointer to an array of mutex key values to set when the submitted work has completed.
-    ///     Entries refer to the keyed mutex associated with the corresponding entries in pReleaseSyncs.
-    /// </summary>
+    /// <summary> pReleaseKeys is a pointer to an array of mutex key values to set when the submitted work has completed. Entries refer to the keyed mutex associated with the corresponding entries in pReleaseSyncs. </summary>
     public ulong* pReleaseKeys;
 }

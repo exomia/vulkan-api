@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,41 +34,21 @@ public unsafe struct VkPhysicalDevice16BitStorageFeatures
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     storageBuffer16BitAccess specifies whether objects in the     StorageBuffer, ShaderRecordBufferKHR,     or
-    ///     PhysicalStorageBuffer    storage class with the Block decoration can have 16-bit integer     and 16-bit
-    ///     floating-point members.     If this feature is not enabled, 16-bit integer or 16-bit floating-point     members
-    ///     must not be used in such objects.     This also specifies whether shader modules can declare the
-    ///     StorageBuffer16BitAccess capability.
-    /// </summary>
+    /// <summary> storageBuffer16BitAccess specifies whether objects in the     StorageBuffer, ShaderRecordBufferKHR,     or PhysicalStorageBuffer    storage class with the Block decoration can have 16-bit integer     and 16-bit floating-point members.     If this feature is not enabled, 16-bit integer or 16-bit floating-point     members must not be used in such objects.     This also specifies whether shader modules can declare the     StorageBuffer16BitAccess capability. </summary>
     public VkBool32 storageBuffer16BitAccess;
 
-    /// <summary>
-    ///     uniformAndStorageBuffer16BitAccess specifies whether objects in the Uniform storage class with the Block
-    ///     decoration can have 16-bit integer and 16-bit floating-point members. If this feature is not enabled, 16-bit
-    ///     integer or 16-bit floating-point members must not be used in such objects. This also specifies whether shader
-    ///     modules can declare the UniformAndStorageBuffer16BitAccess capability.
-    /// </summary>
+    /// <summary> uniformAndStorageBuffer16BitAccess specifies whether objects in the Uniform storage class with the Block decoration can have 16-bit integer and 16-bit floating-point members. If this feature is not enabled, 16-bit integer or 16-bit floating-point members must not be used in such objects. This also specifies whether shader modules can declare the UniformAndStorageBuffer16BitAccess capability. </summary>
     public VkBool32 uniformAndStorageBuffer16BitAccess;
 
-    /// <summary>
-    ///     storagePushConstant16 specifies whether objects in the PushConstant storage class can have 16-bit integer and
-    ///     16-bit floating-point members. If this feature is not enabled, 16-bit integer or floating-point members must not be
-    ///     used in such objects. This also specifies whether shader modules can declare the StoragePushConstant16 capability.
-    /// </summary>
+    /// <summary> storagePushConstant16 specifies whether objects in the PushConstant storage class can have 16-bit integer and 16-bit floating-point members. If this feature is not enabled, 16-bit integer or floating-point members must not be used in such objects. This also specifies whether shader modules can declare the StoragePushConstant16 capability. </summary>
     public VkBool32 storagePushConstant16;
 
-    /// <summary>
-    ///     storageInputOutput16 specifies whether objects in the Inputand Output storage classes can have 16-bit integer
-    ///     and 16-bit floating-point members. If this feature is not enabled, 16-bit integer or 16-bit floating-point members
-    ///     must not be used in such objects. This also specifies whether shader modules can declare the StorageInputOutput16
-    ///     capability.
-    /// </summary>
+    /// <summary> storageInputOutput16 specifies whether objects in the Inputand Output storage classes can have 16-bit integer and 16-bit floating-point members. If this feature is not enabled, 16-bit integer or 16-bit floating-point members must not be used in such objects. This also specifies whether shader modules can declare the StorageInputOutput16 capability. </summary>
     public VkBool32 storageInputOutput16;
 }

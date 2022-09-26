@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkAmigoProfilingSubmitInfoSEC - Stub description of VkAmigoProfilingSubmitInfoSEC -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAmigoProfilingSubmitInfoSEC.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAmigoProfilingSubmitInfoSEC.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAmigoProfilingSubmitInfoSEC.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAmigoProfilingSubmitInfoSEC.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSubmitInfo</description>
+///             <term> structextends </term><description> VkSubmitInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>

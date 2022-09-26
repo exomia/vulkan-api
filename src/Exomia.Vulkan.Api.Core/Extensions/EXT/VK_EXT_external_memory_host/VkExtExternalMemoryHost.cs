@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtExternalMemoryHost;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_external_memory_host - device extension (nr. 179) - author 'EXT' [platform '' | contact 'Daniel Rakos
-///     @drakos-amd']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_host.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_host.html</a>
+///     VK_EXT_external_memory_host - device extension (nr. 179) - author 'EXT' [platform '' | contact 'Daniel Rakos @drakos-amd']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_host.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_host.html </a>
 /// </summary>
 [VkRequires("VK_KHR_external_memory")]
 public static unsafe class VkExtExternalMemoryHost
@@ -32,16 +32,13 @@ public static unsafe class VkExtExternalMemoryHost
     /// <summary> The extension name. </summary>
     public const string VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME = "VK_EXT_external_memory_host";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME_UTF8_NT =
@@ -54,24 +51,18 @@ public static unsafe class VkExtExternalMemoryHost
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that will be importing pHostPointer.</param>
-    /// <param name="handleType">
-    ///     handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of the handle
-    ///     pHostPointer.
-    /// </param>
-    /// <param name="pHostPointer">pHostPointer is the host pointer to import from.</param>
-    /// <param name="pMemoryHostPointerProperties">
-    ///     pMemoryHostPointerProperties is a pointer to a
-    ///     VkMemoryHostPointerPropertiesEXT structure in which the host pointer properties are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that will be importing pHostPointer. </param>
+    /// <param name="handleType"> handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of the handle pHostPointer. </param>
+    /// <param name="pHostPointer"> pHostPointer is the host pointer to import from. </param>
+    /// <param name="pMemoryHostPointerProperties"> pMemoryHostPointerProperties is a pointer to a VkMemoryHostPointerPropertiesEXT structure in which the host pointer properties are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -88,7 +79,7 @@ public static unsafe class VkExtExternalMemoryHost
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetMemoryHostPointerPropertiesEXT</description>
+    ///             <description> vkGetMemoryHostPointerPropertiesEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

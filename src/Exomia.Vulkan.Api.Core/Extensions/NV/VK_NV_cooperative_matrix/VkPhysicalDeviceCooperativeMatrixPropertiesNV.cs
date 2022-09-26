@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceCooperativeMatrixPropertiesNV - Structure describing cooperative matrix properties supported by an
-///     implementation -
+///     VkPhysicalDeviceCooperativeMatrixPropertiesNV - Structure describing cooperative matrix properties supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCooperativeMatrixPropertiesNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCooperativeMatrixPropertiesNV.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,16 +37,12 @@ public unsafe struct VkPhysicalDeviceCooperativeMatrixPropertiesNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     cooperativeMatrixSupportedStages is a bitfield of VkShaderStageFlagBits describing the shader stages that
-    ///     cooperative matrix instructions are supported in. cooperativeMatrixSupportedStages will have the
-    ///     VK_SHADER_STAGE_COMPUTE_BIT bit set if any of the physical device&#8217;s queues support VK_QUEUE_COMPUTE_BIT.
-    /// </summary>
+    /// <summary> cooperativeMatrixSupportedStages is a bitfield of VkShaderStageFlagBits describing the shader stages that cooperative matrix instructions are supported in. cooperativeMatrixSupportedStages will have the VK_SHADER_STAGE_COMPUTE_BIT bit set if any of the physical device&#8217;s queues support VK_QUEUE_COMPUTE_BIT. </summary>
     public VkShaderStageFlags cooperativeMatrixSupportedStages;
 }

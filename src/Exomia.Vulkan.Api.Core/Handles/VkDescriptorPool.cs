@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDescriptorPool - Opaque handle to a descriptor pool object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPool.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPool.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPool.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPool.html </a>
 /// </summary>
 public readonly unsafe struct VkDescriptorPool
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkDescriptorPool
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkDescriptorPool left, VkDescriptorPool right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkDescriptorPool
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkDescriptorPool left, VkDescriptorPool right)

@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceDepthClipControlFeaturesEXT - Structure describing additional depth clip control supported by an
-///     implementation -
+///     VkPhysicalDeviceDepthClipControlFeaturesEXT - Structure describing additional depth clip control supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDepthClipControlFeaturesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDepthClipControlFeaturesEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,15 +34,12 @@ public unsafe struct VkPhysicalDeviceDepthClipControlFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     depthClipControl indicates that the implementation supports setting
-    ///     VkPipelineViewportDepthClipControlCreateInfoEXT::negativeOneToOneto VK_TRUE.
-    /// </summary>
+    /// <summary> depthClipControl indicates that the implementation supports setting VkPipelineViewportDepthClipControlCreateInfoEXT::negativeOneToOneto VK_TRUE. </summary>
     public VkBool32 depthClipControl;
 }

@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkNvExternalMemoryRdma;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_external_memory_rdma - device extension (nr. 372) - author 'NV' [platform '' | contact 'Carsten Rohde
-///     @crohde']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_rdma.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_rdma.html</a>
+///     VK_NV_external_memory_rdma - device extension (nr. 372) - author 'NV' [platform '' | contact 'Carsten Rohde @crohde']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_rdma.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_rdma.html </a>
 /// </summary>
 [VkRequires("VK_KHR_external_memory")]
 public static unsafe class VkNvExternalMemoryRdma
@@ -32,16 +32,13 @@ public static unsafe class VkNvExternalMemoryRdma
     /// <summary> The extension name. </summary>
     public const string VK_NV_EXTERNAL_MEMORY_RDMA_EXTENSION_NAME = "VK_NV_external_memory_rdma";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_EXTERNAL_MEMORY_RDMA_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_EXTERNAL_MEMORY_RDMA_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_EXTERNAL_MEMORY_RDMA_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_EXTERNAL_MEMORY_RDMA_EXTENSION_NAME_UTF8_NT =
@@ -49,21 +46,18 @@ public static unsafe class VkNvExternalMemoryRdma
 
     /// <summary>
     ///     vkGetMemoryRemoteAddressNV - Get an address for a memory object accessible by remote devices -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryRemoteAddressNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryRemoteAddressNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryRemoteAddressNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryRemoteAddressNV.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that created the device memory being exported.</param>
-    /// <param name="pMemoryGetRemoteAddressInfo">
-    ///     pMemoryGetRemoteAddressInfo is a pointer to a VkMemoryGetRemoteAddressInfoNV
-    ///     structure containing parameters of the export operation.
-    /// </param>
-    /// <param name="pAddress">pAddress will return the address representing the payload of the device memory object.</param>
+    /// <param name="device"> device is the logical device that created the device memory being exported. </param>
+    /// <param name="pMemoryGetRemoteAddressInfo"> pMemoryGetRemoteAddressInfo is a pointer to a VkMemoryGetRemoteAddressInfoNV structure containing parameters of the export operation. </param>
+    /// <param name="pAddress"> pAddress will return the address representing the payload of the device memory object. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_INVALID_EXTERNAL_HANDLE</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_INVALID_EXTERNAL_HANDLE </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -79,7 +73,7 @@ public static unsafe class VkNvExternalMemoryRdma
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetMemoryRemoteAddressNV</description>
+    ///             <description> vkGetMemoryRemoteAddressNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

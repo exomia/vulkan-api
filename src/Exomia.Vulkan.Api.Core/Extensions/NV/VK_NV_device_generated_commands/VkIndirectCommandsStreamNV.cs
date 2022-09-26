@@ -15,17 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkIndirectCommandsStreamNV - Structure specifying input streams for generated command tokens -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsStreamNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsStreamNV.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsStreamNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsStreamNV.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkIndirectCommandsStreamNV
 {
-    /// <summary>
-    ///     buffer specifies the VkBuffer storing the functional arguments for each sequence. These arguments can be
-    ///     written by the device.
-    /// </summary>
+    /// <summary> buffer specifies the VkBuffer storing the functional arguments for each sequence. These arguments can be written by the device. </summary>
     public VkBuffer buffer;
 
-    /// <summary>offset specified an offset into buffer where the arguments start.</summary>
+    /// <summary> offset specified an offset into buffer where the arguments start. </summary>
     public VkDeviceSize offset;
 }

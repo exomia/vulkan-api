@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtConditionalRendering;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_conditional_rendering - device extension (nr. 82) - author 'NV' [platform '' | contact 'Vikram Kushwaha
-///     @vkushwaha']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_conditional_rendering.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_conditional_rendering.html</a>
+///     VK_EXT_conditional_rendering - device extension (nr. 82) - author 'NV' [platform '' | contact 'Vikram Kushwaha @vkushwaha']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_conditional_rendering.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_conditional_rendering.html </a>
 /// </summary>
 public static unsafe class VkExtConditionalRendering
 {
@@ -31,16 +31,13 @@ public static unsafe class VkExtConditionalRendering
     /// <summary> The extension name. </summary>
     public const string VK_EXT_CONDITIONAL_RENDERING_EXTENSION_NAME = "VK_EXT_conditional_rendering";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_CONDITIONAL_RENDERING_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_CONDITIONAL_RENDERING_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_CONDITIONAL_RENDERING_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_CONDITIONAL_RENDERING_EXTENSION_NAME_UTF8_NT =
@@ -53,11 +50,8 @@ public static unsafe class VkExtConditionalRendering
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginConditionalRenderingEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which this command will be recorded.</param>
-    /// <param name="pConditionalRenderingBegin">
-    ///     pConditionalRenderingBegin is a pointer to a
-    ///     VkConditionalRenderingBeginInfoEXT structure specifying parameters of conditional rendering.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which this command will be recorded. </param>
+    /// <param name="pConditionalRenderingBegin"> pConditionalRenderingBegin is a pointer to a VkConditionalRenderingBeginInfoEXT structure specifying parameters of conditional rendering. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkConditionalRenderingBeginInfoEXT* /*pConditionalRenderingBegin*/,
@@ -70,7 +64,7 @@ public static unsafe class VkExtConditionalRendering
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndConditionalRenderingEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which this command will be recorded.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which this command will be recorded. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         void> vkCmdEndConditionalRenderingEXT = null;
@@ -81,10 +75,10 @@ public static unsafe class VkExtConditionalRendering
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdBeginConditionalRenderingEXT</description>
+    ///             <description> vkCmdBeginConditionalRenderingEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdEndConditionalRenderingEXT</description>
+    ///             <description> vkCmdEndConditionalRenderingEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkRenderPassCreateFlagBits - Bitmask specifying additional properties of a render pass -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreateFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreateFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreateFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreateFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkRenderPassCreateFlagBits
 {
     /// <summary>
     ///     VK_RENDER_PASS_CREATE_RESERVED_0_BIT_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderPassCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderPassCreateFlagBits</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderPassCreateFlagBits"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkRenderPassCreateFlagBits </a>
     /// </summary>
     VK_RENDER_PASS_CREATE_RESERVED_0_BIT_KHR = 0x1,
 
@@ -30,8 +30,7 @@ public enum VkRenderPassCreateFlagBits
     ///     VK_RENDER_PASS_CREATE_TRANSFORM_BIT_QCOM specifies that the created render pass is compatible with
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#vertexpostproc-renderpass-transform">
-    ///         render
-    ///         pass transform
+    ///         render pass transform
     ///     </a>
     ///     .
     /// </summary>

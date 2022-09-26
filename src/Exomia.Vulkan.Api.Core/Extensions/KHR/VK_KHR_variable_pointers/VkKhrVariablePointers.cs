@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_KHR_variable_pointers - device extension (nr. 121) - author 'KHR' [platform '' | contact 'Jesse Hall @critsec']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_variable_pointers.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_variable_pointers.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_variable_pointers.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_variable_pointers.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2,VK_KHR_storage_buffer_storage_class")]
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_variable_pointers.html#_deprecation_state")]
@@ -33,16 +33,13 @@ public static class VkKhrVariablePointers
     /// <summary> The extension name. </summary>
     public const string VK_KHR_VARIABLE_POINTERS_EXTENSION_NAME = "VK_KHR_variable_pointers";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_VARIABLE_POINTERS_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_VARIABLE_POINTERS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_VARIABLE_POINTERS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_VARIABLE_POINTERS_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u565f\u5241\u4149\u4c42\u5f45\u4f50\u4e49\u4554\u5352\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";

@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtDiscardRectangles;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_discard_rectangles - device extension (nr. 100) - author 'NV' [platform '' | contact 'Piers Daniell
-///     @pdaniell-nv']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_discard_rectangles.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_discard_rectangles.html</a>
+///     VK_EXT_discard_rectangles - device extension (nr. 100) - author 'NV' [platform '' | contact 'Piers Daniell @pdaniell-nv']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_discard_rectangles.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_discard_rectangles.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkExtDiscardRectangles
@@ -32,16 +32,13 @@ public static unsafe class VkExtDiscardRectangles
     /// <summary> The extension name. </summary>
     public const string VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME = "VK_EXT_discard_rectangles";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME_UTF8_NT =
@@ -49,21 +46,12 @@ public static unsafe class VkExtDiscardRectangles
 
     /// <summary>
     ///     vkCmdSetDiscardRectangleEXT - Set discard rectangles dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="firstDiscardRectangle">
-    ///     firstDiscardRectangle is the index of the first discard rectangle whose state is
-    ///     updated by the command.
-    /// </param>
-    /// <param name="discardRectangleCount">
-    ///     discardRectangleCount is the number of discard rectangles whose state are updated
-    ///     by the command.
-    /// </param>
-    /// <param name="pDiscardRectangles">
-    ///     pDiscardRectangles is a pointer to an array of VkRect2Dstructures specifying discard
-    ///     rectangles.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="firstDiscardRectangle"> firstDiscardRectangle is the index of the first discard rectangle whose state is updated by the command. </param>
+    /// <param name="discardRectangleCount"> discardRectangleCount is the number of discard rectangles whose state are updated by the command. </param>
+    /// <param name="pDiscardRectangles"> pDiscardRectangles is a pointer to an array of VkRect2Dstructures specifying discard rectangles. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*firstDiscardRectangle*/,
@@ -77,7 +65,7 @@ public static unsafe class VkExtDiscardRectangles
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetDiscardRectangleEXT</description>
+    ///             <description> vkCmdSetDiscardRectangleEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

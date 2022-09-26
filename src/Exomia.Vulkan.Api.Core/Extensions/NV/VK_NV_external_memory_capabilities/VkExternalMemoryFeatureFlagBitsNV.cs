@@ -23,21 +23,12 @@ namespace Exomia.Vulkan.Api.Core;
 [Flags]
 public enum VkExternalMemoryFeatureFlagBitsNV
 {
-    /// <summary>
-    ///     VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT_NV specifies that external memory of the specified type must be
-    ///     created as a dedicated allocation when used in the manner specified.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT_NV specifies that external memory of the specified type must be created as a dedicated allocation when used in the manner specified. </summary>
     VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT_NV = 0x1,
 
-    /// <summary>
-    ///     VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT_NV specifies that the implementation supports exporting handles of
-    ///     the specified type.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT_NV specifies that the implementation supports exporting handles of the specified type. </summary>
     VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT_NV = 0x2,
 
-    /// <summary>
-    ///     VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT_NV specifies that the implementation supports importing handles of
-    ///     the specified type.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT_NV specifies that the implementation supports importing handles of the specified type. </summary>
     VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT_NV = 0x4
 }

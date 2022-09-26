@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrFragmentShadingRate;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_fragment_shading_rate - device extension (nr. 227) - author 'KHR' [platform '' | contact 'Tobias Hector
-///     @tobski']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_fragment_shading_rate.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_fragment_shading_rate.html</a>
+///     VK_KHR_fragment_shading_rate - device extension (nr. 227) - author 'KHR' [platform '' | contact 'Tobias Hector @tobski']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_fragment_shading_rate.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_fragment_shading_rate.html </a>
 /// </summary>
 [VkRequires("VK_KHR_create_renderpass2,VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkKhrFragmentShadingRate
@@ -32,16 +32,13 @@ public static unsafe class VkKhrFragmentShadingRate
     /// <summary> The extension name. </summary>
     public const string VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME = "VK_KHR_fragment_shading_rate";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME_UTF8_NT =
@@ -54,22 +51,16 @@ public static unsafe class VkKhrFragmentShadingRate
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceFragmentShadingRatesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the handle to the physical device whose properties will be queried.</param>
-    /// <param name="pFragmentShadingRateCount">
-    ///     pFragmentShadingRateCount is a pointer to an integer related to the number of
-    ///     fragment shading rates available or queried, as described below.
-    /// </param>
-    /// <param name="pFragmentShadingRates">
-    ///     pFragmentShadingRates is either NULL or a pointer to an array of
-    ///     VkPhysicalDeviceFragmentShadingRateKHR structures.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the handle to the physical device whose properties will be queried. </param>
+    /// <param name="pFragmentShadingRateCount"> pFragmentShadingRateCount is a pointer to an integer related to the number of fragment shading rates available or queried, as described below. </param>
+    /// <param name="pFragmentShadingRates"> pFragmentShadingRates is either NULL or a pointer to an array of VkPhysicalDeviceFragmentShadingRateKHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -80,16 +71,12 @@ public static unsafe class VkKhrFragmentShadingRate
         VkResult> vkGetPhysicalDeviceFragmentShadingRatesKHR = null;
 
     /// <summary>
-    ///     vkCmdSetFragmentShadingRateKHR - Set pipeline fragment shading rate and combiner operation dynamically for a
-    ///     command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html</a>
+    ///     vkCmdSetFragmentShadingRateKHR - Set pipeline fragment shading rate and combiner operation dynamically for a command buffer -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pFragmentSize">pFragmentSize specifies the pipeline fragment shading rate for subsequent drawing commands.</param>
-    /// <param name="combinerOps">
-    ///     combinerOps specifies a VkFragmentShadingRateCombinerOpKHRdetermining how the pipeline,
-    ///     primitive, and attachment shading ratesare combined for fragments generated by subsequent drawing commands.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pFragmentSize"> pFragmentSize specifies the pipeline fragment shading rate for subsequent drawing commands. </param>
+    /// <param name="combinerOps"> combinerOps specifies a VkFragmentShadingRateCombinerOpKHRdetermining how the pipeline, primitive, and attachment shading ratesare combined for fragments generated by subsequent drawing commands. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkExtent2D* /*pFragmentSize*/,
@@ -102,7 +89,7 @@ public static unsafe class VkKhrFragmentShadingRate
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceFragmentShadingRatesKHR</description>
+    ///             <description> vkGetPhysicalDeviceFragmentShadingRatesKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -121,7 +108,7 @@ public static unsafe class VkKhrFragmentShadingRate
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetFragmentShadingRateKHR</description>
+    ///             <description> vkCmdSetFragmentShadingRateKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -33,15 +33,15 @@ public unsafe struct VkImageViewAddressPropertiesNVX
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_VIEW_ADDRESS_PROPERTIES_NVX;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>deviceAddress is the device address of the image view.</summary>
+    /// <summary> deviceAddress is the device address of the image view. </summary>
     public VkDeviceAddress deviceAddress;
 
-    /// <summary>size is the size in bytes of the image view device memory.</summary>
+    /// <summary> size is the size in bytes of the image view device memory. </summary>
     public VkDeviceSize size;
 }

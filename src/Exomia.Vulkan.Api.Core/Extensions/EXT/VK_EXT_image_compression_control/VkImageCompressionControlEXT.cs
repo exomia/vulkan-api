@@ -15,13 +15,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkImageCompressionControlEXT - Specify image compression properties -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageCompressionControlEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageCompressionControlEXT.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageCompressionControlEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageCompressionControlEXT.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term>
-///             <description>VkImageCreateInfo,VkSwapchainCreateInfoKHR,VkPhysicalDeviceImageFormatInfo2</description>
+///             <term> structextends </term>
+///             <description> VkImageCreateInfo,VkSwapchainCreateInfoKHR,VkPhysicalDeviceImageFormatInfo2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -32,22 +32,18 @@ public unsafe struct VkImageCompressionControlEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_COMPRESSION_CONTROL_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is a bitmask of VkImageCompressionFlagBitsEXTdescribing compression controls for the image.</summary>
+    /// <summary> flags is a bitmask of VkImageCompressionFlagBitsEXTdescribing compression controls for the image. </summary>
     public VkImageCompressionFlagsEXT flags;
 
-    /// <summary>compressionControlPlaneCount is the number of entries in the pFixedRateFlags array.</summary>
+    /// <summary> compressionControlPlaneCount is the number of entries in the pFixedRateFlags array. </summary>
     public uint compressionControlPlaneCount;
 
-    /// <summary>
-    ///     pFixedRateFlags is NULL or a pointer to an array of VkImageCompressionFixedRateFlagsEXT bitfields describing
-    ///     allowed fixed-rate compression rates of each image plane. It is ignored if flags does not include
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_EXPLICIT_EXT.
-    /// </summary>
+    /// <summary> pFixedRateFlags is NULL or a pointer to an array of VkImageCompressionFixedRateFlagsEXT bitfields describing allowed fixed-rate compression rates of each image plane. It is ignored if flags does not include VK_IMAGE_COMPRESSION_FIXED_RATE_EXPLICIT_EXT. </summary>
     public VkImageCompressionFixedRateFlagsEXT* pFixedRateFlags;
 }

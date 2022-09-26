@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkImageDrmFormatModifierListCreateInfoEXT - Specify that an image must be created with a DRM format modifier from
-///     the provided list -
+///     VkImageDrmFormatModifierListCreateInfoEXT - Specify that an image must be created with a DRM format modifier from the provided list -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageDrmFormatModifierListCreateInfoEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageDrmFormatModifierListCreateInfoEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkImageCreateInfo</description>
+///             <term> structextends </term><description> VkImageCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,15 +34,15 @@ public unsafe struct VkImageDrmFormatModifierListCreateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>drmFormatModifierCount is the length of the pDrmFormatModifiers array.</summary>
+    /// <summary> drmFormatModifierCount is the length of the pDrmFormatModifiers array. </summary>
     public uint drmFormatModifierCount;
 
-    /// <summary>pDrmFormatModifiers is a pointer to an array of Linux DRM format modifiers.</summary>
+    /// <summary> pDrmFormatModifiers is a pointer to an array of Linux DRM format modifiers. </summary>
     public ulong* pDrmFormatModifiers;
 }

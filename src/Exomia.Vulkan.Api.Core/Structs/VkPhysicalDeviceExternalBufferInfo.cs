@@ -26,27 +26,18 @@ public unsafe struct VkPhysicalDeviceExternalBufferInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     flags is a bitmask of VkBufferCreateFlagBits describing additional parameters of the buffer, corresponding to
-    ///     VkBufferCreateInfo::flags.
-    /// </summary>
+    /// <summary> flags is a bitmask of VkBufferCreateFlagBits describing additional parameters of the buffer, corresponding to VkBufferCreateInfo::flags. </summary>
     public VkBufferCreateFlags flags;
 
-    /// <summary>
-    ///     usage is a bitmask of VkBufferUsageFlagBits describing the intended usage of the buffer, corresponding to
-    ///     VkBufferCreateInfo::usage.
-    /// </summary>
+    /// <summary> usage is a bitmask of VkBufferUsageFlagBits describing the intended usage of the buffer, corresponding to VkBufferCreateInfo::usage. </summary>
     public VkBufferUsageFlags usage;
 
-    /// <summary>
-    ///     handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the memory handle type that will be used
-    ///     with the memory associated with the buffer.
-    /// </summary>
+    /// <summary> handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the memory handle type that will be used with the memory associated with the buffer. </summary>
     public VkExternalMemoryHandleTypeFlagBits handleType;
 }

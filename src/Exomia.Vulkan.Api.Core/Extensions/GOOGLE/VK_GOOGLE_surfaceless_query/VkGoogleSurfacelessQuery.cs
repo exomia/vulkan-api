@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkGoogleSurfacelessQuery;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_GOOGLE_surfaceless_query - instance extension (nr. 434) - author 'GOOGLE' [platform '' | contact 'Shahbaz
-///     Youssefi @syoussefi']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_surfaceless_query.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_surfaceless_query.html</a>
+///     VK_GOOGLE_surfaceless_query - instance extension (nr. 434) - author 'GOOGLE' [platform '' | contact 'Shahbaz Youssefi @syoussefi']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_surfaceless_query.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_surfaceless_query.html </a>
 /// </summary>
 /// <remarks>
 ///     specialuse: glemulation
@@ -36,16 +36,13 @@ public static class VkGoogleSurfacelessQuery
     /// <summary> The extension name. </summary>
     public const string VK_GOOGLE_SURFACELESS_QUERY_EXTENSION_NAME = "VK_GOOGLE_surfaceless_query";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_GOOGLE_SURFACELESS_QUERY_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_GOOGLE_SURFACELESS_QUERY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_GOOGLE_SURFACELESS_QUERY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_GOOGLE_SURFACELESS_QUERY_EXTENSION_NAME_UTF8_NT =

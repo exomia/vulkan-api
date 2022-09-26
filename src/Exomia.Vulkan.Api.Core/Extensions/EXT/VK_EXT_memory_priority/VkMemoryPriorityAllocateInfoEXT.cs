@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkMemoryAllocateInfo</description>
+///             <term> structextends </term><description> VkMemoryAllocateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,16 +34,12 @@ public unsafe struct VkMemoryPriorityAllocateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_MEMORY_PRIORITY_ALLOCATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     priority is a floating-point value between 0 and 1, indicating the priority of the allocation relative to
-    ///     other memory allocations. Larger values are higher priority. The granularity of the priorities is
-    ///     implementation-dependent.
-    /// </summary>
+    /// <summary> priority is a floating-point value between 0 and 1, indicating the priority of the allocation relative to other memory allocations. Larger values are higher priority. The granularity of the priorities is implementation-dependent. </summary>
     public float priority;
 }

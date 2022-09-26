@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT - Structure describing whether the implementation supports
-///     pageable device-local memory -
+///     VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT - Structure describing whether the implementation supports pageable device-local memory -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,16 +34,12 @@ public unsafe struct VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     pageableDeviceLocalMemoryindicates that the implementation supports pageable device-local memory and may
-    ///     transparently move device-local memory allocations to host-local memory to better share device-local memory with
-    ///     other applications.
-    /// </summary>
+    /// <summary> pageableDeviceLocalMemoryindicates that the implementation supports pageable device-local memory and may transparently move device-local memory allocations to host-local memory to better share device-local memory with other applications. </summary>
     public VkBool32 pageableDeviceLocalMemory;
 }

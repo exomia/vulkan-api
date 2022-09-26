@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkAmdNegativeViewportHeight;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_AMD_negative_viewport_height - device extension (nr. 36) - author 'AMD' [platform '' | contact 'Matthaeus G.
-///     Chajdas @anteru']<br />
+///     VK_AMD_negative_viewport_height - device extension (nr. 36) - author 'AMD' [platform '' | contact 'Matthaeus G. Chajdas @anteru']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_negative_viewport_height.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_negative_viewport_height.html
@@ -35,16 +35,13 @@ public static class VkAmdNegativeViewportHeight
     /// <summary> The extension name. </summary>
     public const string VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_EXTENSION_NAME = "VK_AMD_negative_viewport_height";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_EXTENSION_NAME_UTF8_NT =

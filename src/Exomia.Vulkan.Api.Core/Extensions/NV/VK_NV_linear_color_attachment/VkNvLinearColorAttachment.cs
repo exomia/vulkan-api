@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkNvLinearColorAttachment;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_linear_color_attachment - device extension (nr. 431) - author 'NVIDIA' [platform '' | contact 'sourav parmar
-///     @souravpNV']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_linear_color_attachment.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_linear_color_attachment.html</a>
+///     VK_NV_linear_color_attachment - device extension (nr. 431) - author 'NVIDIA' [platform '' | contact 'sourav parmar @souravpNV']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_linear_color_attachment.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_linear_color_attachment.html </a>
 /// </summary>
 public static class VkNvLinearColorAttachment
 {
@@ -31,16 +31,13 @@ public static class VkNvLinearColorAttachment
     /// <summary> The extension name. </summary>
     public const string VK_NV_LINEAR_COLOR_ATTACHMENT_EXTENSION_NAME = "VK_NV_linear_color_attachment";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_LINEAR_COLOR_ATTACHMENT_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_LINEAR_COLOR_ATTACHMENT_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_LINEAR_COLOR_ATTACHMENT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_LINEAR_COLOR_ATTACHMENT_EXTENSION_NAME_UTF8_NT =

@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Android;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkMemoryAllocateInfo</description>
+///             <term> structextends </term><description> VkMemoryAllocateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,12 +34,12 @@ public unsafe struct VkImportAndroidHardwareBufferInfoANDROID
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>buffer is the Android hardware buffer to import.</summary>
+    /// <summary> buffer is the Android hardware buffer to import. </summary>
     public AHardwareBuffer* buffer;
 }

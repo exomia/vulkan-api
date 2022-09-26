@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrPerformanceQuery;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_performance_query - device extension (nr. 117) - author 'KHR' [platform '' | contact 'Alon Or-bach
-///     @alonorbach']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_performance_query.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_performance_query.html</a>
+///     VK_KHR_performance_query - device extension (nr. 117) - author 'KHR' [platform '' | contact 'Alon Or-bach @alonorbach']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_performance_query.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_performance_query.html </a>
 /// </summary>
 /// <remarks>
 ///     specialuse: devtools
@@ -36,53 +36,37 @@ public static unsafe class VkKhrPerformanceQuery
     /// <summary> The extension name. </summary>
     public const string VK_KHR_PERFORMANCE_QUERY_EXTENSION_NAME = "VK_KHR_performance_query";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_PERFORMANCE_QUERY_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_PERFORMANCE_QUERY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_PERFORMANCE_QUERY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_PERFORMANCE_QUERY_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u505f\u5245\u4f46\u4d52\u4e41\u4543\u515f\u4555\u5952\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
-    ///     vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR - Reports properties of the performance query
-    ///     counters available on a queue family of a device -
+    ///     vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR - Reports properties of the performance query counters available on a queue family of a device -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the handle to the physical device whose queue family performance query
-    ///     counter properties will be queried.
-    /// </param>
-    /// <param name="queueFamilyIndex">
-    ///     queueFamilyIndex is the index into the queue family of the physical device we want to
-    ///     get properties for.
-    /// </param>
-    /// <param name="pCounterCount">
-    ///     pCounterCount is a pointer to an integer related to the number of counters available or
-    ///     queried, as described below.
-    /// </param>
-    /// <param name="pCounters">pCounters is either NULL or a pointer to an array of VkPerformanceCounterKHR structures.</param>
-    /// <param name="pCounterDescriptions">
-    ///     pCounterDescriptions is either NULL or a pointer to an array of
-    ///     VkPerformanceCounterDescriptionKHR structures.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the handle to the physical device whose queue family performance query counter properties will be queried. </param>
+    /// <param name="queueFamilyIndex"> queueFamilyIndex is the index into the queue family of the physical device we want to get properties for. </param>
+    /// <param name="pCounterCount"> pCounterCount is a pointer to an integer related to the number of counters available or queried, as described below. </param>
+    /// <param name="pCounters"> pCounters is either NULL or a pointer to an array of VkPerformanceCounterKHR structures. </param>
+    /// <param name="pCounterDescriptions"> pCounterDescriptions is either NULL or a pointer to an array of VkPerformanceCounterDescriptionKHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -95,25 +79,15 @@ public static unsafe class VkKhrPerformanceQuery
         VkResult> vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR = null;
 
     /// <summary>
-    ///     vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR - Reports the number of passes require for a performance
-    ///     query pool type -
+    ///     vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR - Reports the number of passes require for a performance query pool type -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the handle to the physical device whose queue family performance query
-    ///     counter properties will be queried.
-    /// </param>
-    /// <param name="pPerformanceQueryCreateInfo">
-    ///     pPerformanceQueryCreateInfo is a pointer to a
-    ///     VkQueryPoolPerformanceCreateInfoKHR of the performance query that is to be created.
-    /// </param>
-    /// <param name="pNumPasses">
-    ///     pNumPasses is a pointer to an integer related to the number of passes required to query the
-    ///     performance query pool, as described below.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the handle to the physical device whose queue family performance query counter properties will be queried. </param>
+    /// <param name="pPerformanceQueryCreateInfo"> pPerformanceQueryCreateInfo is a pointer to a VkQueryPoolPerformanceCreateInfoKHR of the performance query that is to be created. </param>
+    /// <param name="pNumPasses"> pNumPasses is a pointer to an integer related to the number of passes required to query the performance query pool, as described below. </param>
     public static readonly delegate*<
         VkPhysicalDevice /*physicalDevice*/,
         VkQueryPoolPerformanceCreateInfoKHR* /*pPerformanceQueryCreateInfo*/,
@@ -122,20 +96,17 @@ public static unsafe class VkKhrPerformanceQuery
 
     /// <summary>
     ///     vkAcquireProfilingLockKHR - Acquires the profiling lock -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireProfilingLockKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireProfilingLockKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireProfilingLockKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireProfilingLockKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device to profile.</param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkAcquireProfilingLockInfoKHRstructure containing information about how the
-    ///     profiling is to be acquired.
-    /// </param>
+    /// <param name="device"> device is the logical device to profile. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkAcquireProfilingLockInfoKHRstructure containing information about how the profiling is to be acquired. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_TIMEOUT</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_TIMEOUT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -146,9 +117,9 @@ public static unsafe class VkKhrPerformanceQuery
 
     /// <summary>
     ///     vkReleaseProfilingLockKHR - Releases the profiling lock -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleaseProfilingLockKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleaseProfilingLockKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleaseProfilingLockKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleaseProfilingLockKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device to cease profiling on.</param>
+    /// <param name="device"> device is the logical device to cease profiling on. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         void> vkReleaseProfilingLockKHR = null;
@@ -159,10 +130,10 @@ public static unsafe class VkKhrPerformanceQuery
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR</description>
+    ///             <description> vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR</description>
+    ///             <description> vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -191,10 +162,10 @@ public static unsafe class VkKhrPerformanceQuery
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkAcquireProfilingLockKHR</description>
+    ///             <description> vkAcquireProfilingLockKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkReleaseProfilingLockKHR</description>
+    ///             <description> vkReleaseProfilingLockKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

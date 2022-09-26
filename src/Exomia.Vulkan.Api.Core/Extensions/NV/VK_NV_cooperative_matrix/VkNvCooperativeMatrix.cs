@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_NV_cooperative_matrix - device extension (nr. 250) - author 'NV' [platform '' | contact 'Jeff Bolz @jeffbolznv']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_cooperative_matrix.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_cooperative_matrix.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_cooperative_matrix.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_cooperative_matrix.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkNvCooperativeMatrix
@@ -32,44 +32,35 @@ public static unsafe class VkNvCooperativeMatrix
     /// <summary> The extension name. </summary>
     public const string VK_NV_COOPERATIVE_MATRIX_EXTENSION_NAME = "VK_NV_cooperative_matrix";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_COOPERATIVE_MATRIX_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_COOPERATIVE_MATRIX_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_COOPERATIVE_MATRIX_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_COOPERATIVE_MATRIX_EXTENSION_NAME_UTF8_NT = "\u4b56\u4e5f\u5f56\u4f43\u504f\u5245\u5441\u5649\u5f45\u414d\u5254\u5849\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
-    ///     vkGetPhysicalDeviceCooperativeMatrixPropertiesNV - Returns properties describing what cooperative matrix types are
-    ///     supported -
+    ///     vkGetPhysicalDeviceCooperativeMatrixPropertiesNV - Returns properties describing what cooperative matrix types are supported -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceCooperativeMatrixPropertiesNV.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceCooperativeMatrixPropertiesNV.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device.</param>
-    /// <param name="pPropertyCount">
-    ///     pPropertyCount is a pointer to an integer related to the number of cooperative matrix
-    ///     properties available or queried.
-    /// </param>
-    /// <param name="pProperties">
-    ///     pProperties is either NULL or a pointer to an array of VkCooperativeMatrixPropertiesNV
-    ///     structures.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device. </param>
+    /// <param name="pPropertyCount"> pPropertyCount is a pointer to an integer related to the number of cooperative matrix properties available or queried. </param>
+    /// <param name="pProperties"> pProperties is either NULL or a pointer to an array of VkCooperativeMatrixPropertiesNV structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -85,7 +76,7 @@ public static unsafe class VkNvCooperativeMatrix
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceCooperativeMatrixPropertiesNV</description>
+    ///             <description> vkGetPhysicalDeviceCooperativeMatrixPropertiesNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -22,15 +22,9 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkPerformanceParameterTypeINTEL
 {
-    /// <summary>
-    ///     VK_PERFORMANCE_PARAMETER_TYPE_HW_COUNTERS_SUPPORTED_INTEL has a boolean result which tells whether hardware
-    ///     counters can be captured.
-    /// </summary>
+    /// <summary> VK_PERFORMANCE_PARAMETER_TYPE_HW_COUNTERS_SUPPORTED_INTEL has a boolean result which tells whether hardware counters can be captured. </summary>
     VK_PERFORMANCE_PARAMETER_TYPE_HW_COUNTERS_SUPPORTED_INTEL = 0,
 
-    /// <summary>
-    ///     VK_PERFORMANCE_PARAMETER_TYPE_STREAM_MARKER_VALID_BITS_INTEL has a 32 bits integer result which tells how many
-    ///     bits can be written into the VkPerformanceValueINTEL value.
-    /// </summary>
+    /// <summary> VK_PERFORMANCE_PARAMETER_TYPE_STREAM_MARKER_VALID_BITS_INTEL has a 32 bits integer result which tells how many bits can be written into the VkPerformanceValueINTEL value. </summary>
     VK_PERFORMANCE_PARAMETER_TYPE_STREAM_MARKER_VALID_BITS_INTEL = 1
 }

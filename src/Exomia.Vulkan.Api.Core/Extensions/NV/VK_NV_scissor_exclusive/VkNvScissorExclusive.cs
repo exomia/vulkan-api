@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_NV_scissor_exclusive - device extension (nr. 206) - author 'NV' [platform '' | contact 'Pat Brown @nvpbrown']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_scissor_exclusive.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_scissor_exclusive.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_scissor_exclusive.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_scissor_exclusive.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkNvScissorExclusive
@@ -32,37 +32,25 @@ public static unsafe class VkNvScissorExclusive
     /// <summary> The extension name. </summary>
     public const string VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME = "VK_NV_scissor_exclusive";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME_UTF8_NT = "\u4b56\u4e5f\u5f56\u4353\u5349\u4f53\u5f52\u5845\u4c43\u5355\u5649\u5f45\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
     ///     vkCmdSetExclusiveScissorNV - Set exclusive scissor rectangles dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorNV.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="firstExclusiveScissor">
-    ///     firstExclusiveScissor is the index of the first exclusive scissor rectangle whose
-    ///     state is updated by the command.
-    /// </param>
-    /// <param name="exclusiveScissorCount">
-    ///     exclusiveScissorCount is the number of exclusive scissor rectangles updated by the
-    ///     command.
-    /// </param>
-    /// <param name="pExclusiveScissors">
-    ///     pExclusiveScissors is a pointer to an array of VkRect2Dstructures defining exclusive
-    ///     scissor rectangles.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="firstExclusiveScissor"> firstExclusiveScissor is the index of the first exclusive scissor rectangle whose state is updated by the command. </param>
+    /// <param name="exclusiveScissorCount"> exclusiveScissorCount is the number of exclusive scissor rectangles updated by the command. </param>
+    /// <param name="pExclusiveScissors"> pExclusiveScissors is a pointer to an array of VkRect2Dstructures defining exclusive scissor rectangles. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*firstExclusiveScissor*/,
@@ -76,7 +64,7 @@ public static unsafe class VkNvScissorExclusive
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetExclusiveScissorNV</description>
+    ///             <description> vkCmdSetExclusiveScissorNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

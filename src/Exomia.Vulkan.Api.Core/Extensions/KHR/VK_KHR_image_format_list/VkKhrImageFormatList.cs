@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrImageFormatList;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_image_format_list - device extension (nr. 148) - author 'KHR' [platform '' | contact 'Jason Ekstrand
-///     @jekstrand']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_image_format_list.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_image_format_list.html</a>
+///     VK_KHR_image_format_list - device extension (nr. 148) - author 'KHR' [platform '' | contact 'Jason Ekstrand @jekstrand']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_image_format_list.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_image_format_list.html </a>
 /// </summary>
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_image_format_list.html#_deprecation_state")]
 public static class VkKhrImageFormatList
@@ -32,16 +32,13 @@ public static class VkKhrImageFormatList
     /// <summary> The extension name. </summary>
     public const string VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME = "VK_KHR_image_format_list";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u495f\u414d\u4547\u465f\u524f\u414d\u5f54\u494c\u5453\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";

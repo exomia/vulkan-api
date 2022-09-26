@@ -26,24 +26,24 @@ public unsafe struct VkPhysicalDeviceSparseImageFormatInfo2
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>format is the image format.</summary>
+    /// <summary> format is the image format. </summary>
     public VkFormat format;
 
-    /// <summary>type is the dimensionality of image.</summary>
+    /// <summary> type is the dimensionality of image. </summary>
     public VkImageType type;
 
-    /// <summary>samples is a VkSampleCountFlagBits value specifying the number of samples per texel.</summary>
+    /// <summary> samples is a VkSampleCountFlagBits value specifying the number of samples per texel. </summary>
     public VkSampleCountFlagBits samples;
 
-    /// <summary>usage is a bitmask describing the intended usage of the image.</summary>
+    /// <summary> usage is a bitmask describing the intended usage of the image. </summary>
     public VkImageUsageFlags usage;
 
-    /// <summary>tiling is the tiling arrangement of the texel blocks in memory.</summary>
+    /// <summary> tiling is the tiling arrangement of the texel blocks in memory. </summary>
     public VkImageTiling tiling;
 }

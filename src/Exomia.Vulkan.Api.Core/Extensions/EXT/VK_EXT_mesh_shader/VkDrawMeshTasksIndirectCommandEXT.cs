@@ -23,12 +23,12 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct VkDrawMeshTasksIndirectCommandEXT
 {
-    /// <summary>groupCountX is the number of local workgroups to dispatch in the X dimension.</summary>
+    /// <summary> groupCountX is the number of local workgroups to dispatch in the X dimension. </summary>
     public uint groupCountX;
 
-    /// <summary>groupCountY is the number of local workgroups to dispatch in the Y dimension.</summary>
+    /// <summary> groupCountY is the number of local workgroups to dispatch in the Y dimension. </summary>
     public uint groupCountY;
 
-    /// <summary>groupCountZ is the number of local workgroups to dispatch in the Z dimension.</summary>
+    /// <summary> groupCountZ is the number of local workgroups to dispatch in the Z dimension. </summary>
     public uint groupCountZ;
 }

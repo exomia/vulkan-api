@@ -23,12 +23,12 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkSparseImageOpaqueMemoryBindInfo
 {
-    /// <summary>image is the VkImage object to be bound.</summary>
+    /// <summary> image is the VkImage object to be bound. </summary>
     public VkImage image;
 
-    /// <summary>bindCount is the number of VkSparseMemoryBind structures in the pBinds array.</summary>
+    /// <summary> bindCount is the number of VkSparseMemoryBind structures in the pBinds array. </summary>
     public uint bindCount;
 
-    /// <summary>pBinds is a pointer to an array of VkSparseMemoryBindstructures.</summary>
+    /// <summary> pBinds is a pointer to an array of VkSparseMemoryBindstructures. </summary>
     public VkSparseMemoryBind* pBinds;
 }

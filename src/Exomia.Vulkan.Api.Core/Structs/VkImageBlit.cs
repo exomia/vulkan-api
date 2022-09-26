@@ -15,26 +15,20 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkImageBlit - Structure specifying an image blit operation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageBlit.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageBlit.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageBlit.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageBlit.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkImageBlit
 {
-    /// <summary>srcSubresource is the subresource to blit from.</summary>
+    /// <summary> srcSubresource is the subresource to blit from. </summary>
     public VkImageSubresourceLayers srcSubresource;
 
-    /// <summary>
-    ///     srcOffsets is a pointer to an array of two VkOffset3Dstructures specifying the bounds of the source region
-    ///     within srcSubresource.
-    /// </summary>
+    /// <summary> srcOffsets is a pointer to an array of two VkOffset3Dstructures specifying the bounds of the source region within srcSubresource. </summary>
     public VkArray2<VkOffset3D> srcOffsets;
 
-    /// <summary>dstSubresource is the subresource to blit into.</summary>
+    /// <summary> dstSubresource is the subresource to blit into. </summary>
     public VkImageSubresourceLayers dstSubresource;
 
-    /// <summary>
-    ///     dstOffsets is a pointer to an array of two VkOffset3Dstructures specifying the bounds of the destination
-    ///     region within dstSubresource.
-    /// </summary>
+    /// <summary> dstOffsets is a pointer to an array of two VkOffset3Dstructures specifying the bounds of the destination region within dstSubresource. </summary>
     public VkArray2<VkOffset3D> dstOffsets;
 }

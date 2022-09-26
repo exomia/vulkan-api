@@ -26,24 +26,21 @@ public unsafe struct VkImportSemaphoreZirconHandleInfoFUCHSIA
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>semaphore is the semaphore into which the payload will be imported.</summary>
+    /// <summary> semaphore is the semaphore into which the payload will be imported. </summary>
     public VkSemaphore semaphore;
 
-    /// <summary>
-    ///     flags is a bitmask of VkSemaphoreImportFlagBits specifying additional parameters for the semaphore payload
-    ///     import operation.
-    /// </summary>
+    /// <summary> flags is a bitmask of VkSemaphoreImportFlagBits specifying additional parameters for the semaphore payload import operation. </summary>
     public VkSemaphoreImportFlags flags;
 
-    /// <summary>handleType is a VkExternalSemaphoreHandleTypeFlagBits value specifying the type of zirconHandle.</summary>
+    /// <summary> handleType is a VkExternalSemaphoreHandleTypeFlagBits value specifying the type of zirconHandle. </summary>
     public VkExternalSemaphoreHandleTypeFlagBits handleType;
 
-    /// <summary>zirconHandle is the external handle to import.</summary>
+    /// <summary> zirconHandle is the external handle to import. </summary>
     public zx_handle_t zirconHandle;
 }

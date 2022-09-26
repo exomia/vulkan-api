@@ -15,16 +15,16 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkShaderInfoTypeAMD - Enum specifying which type of shader information to query -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderInfoTypeAMD.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderInfoTypeAMD.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderInfoTypeAMD.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderInfoTypeAMD.html </a>
 /// </summary>
 public enum VkShaderInfoTypeAMD
 {
-    /// <summary>VK_SHADER_INFO_TYPE_STATISTICS_AMD specifies that device resources used by a shader will be queried.</summary>
+    /// <summary> VK_SHADER_INFO_TYPE_STATISTICS_AMD specifies that device resources used by a shader will be queried. </summary>
     VK_SHADER_INFO_TYPE_STATISTICS_AMD = 0,
 
-    /// <summary>VK_SHADER_INFO_TYPE_BINARY_AMD specifies that implementation-specific information will be queried.</summary>
+    /// <summary> VK_SHADER_INFO_TYPE_BINARY_AMD specifies that implementation-specific information will be queried. </summary>
     VK_SHADER_INFO_TYPE_BINARY_AMD = 1,
 
-    /// <summary>VK_SHADER_INFO_TYPE_DISASSEMBLY_AMD specifies that human-readable disassembly of a shader.</summary>
+    /// <summary> VK_SHADER_INFO_TYPE_DISASSEMBLY_AMD specifies that human-readable disassembly of a shader. </summary>
     VK_SHADER_INFO_TYPE_DISASSEMBLY_AMD = 2
 }

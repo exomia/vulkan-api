@@ -26,18 +26,18 @@ public unsafe struct VkConditionalRenderingBeginInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_CONDITIONAL_RENDERING_BEGIN_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>buffer is a buffer containing the predicate for conditional rendering.</summary>
+    /// <summary> buffer is a buffer containing the predicate for conditional rendering. </summary>
     public VkBuffer buffer;
 
-    /// <summary>offset is the byte offset into buffer where the predicate is located.</summary>
+    /// <summary> offset is the byte offset into buffer where the predicate is located. </summary>
     public VkDeviceSize offset;
 
-    /// <summary>flags is a bitmask of VkConditionalRenderingFlagsEXTspecifying the behavior of conditional rendering.</summary>
+    /// <summary> flags is a bitmask of VkConditionalRenderingFlagsEXTspecifying the behavior of conditional rendering. </summary>
     public VkConditionalRenderingFlagsEXT flags;
 }

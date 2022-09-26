@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Win32.VkExtFullScreenExclusive;
 namespace Exomia.Vulkan.Api.Win32;
 
 /// <summary>
-///     VK_EXT_full_screen_exclusive - device extension (nr. 256) - author 'EXT' [platform 'win32' | contact 'James Jones
-///     @cubanismo']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_full_screen_exclusive.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_full_screen_exclusive.html</a>
+///     VK_EXT_full_screen_exclusive - device extension (nr. 256) - author 'EXT' [platform 'win32' | contact 'James Jones @cubanismo']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_full_screen_exclusive.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_full_screen_exclusive.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2,VK_KHR_surface,VK_KHR_get_surface_capabilities2,VK_KHR_swapchain")]
 public static unsafe class VkExtFullScreenExclusive
@@ -32,16 +32,13 @@ public static unsafe class VkExtFullScreenExclusive
     /// <summary> The extension name. </summary>
     public const string VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME = "VK_EXT_full_screen_exclusive";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_FULL_SCREEN_EXCLUSIVE_EXTENSION_NAME_UTF8_NT =
@@ -54,30 +51,18 @@ public static unsafe class VkExtFullScreenExclusive
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModes2EXT.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the physical device that will be associated with the swapchain to be
-    ///     created, as described for vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="pSurfaceInfo">
-    ///     pSurfaceInfo is a pointer to a VkPhysicalDeviceSurfaceInfo2KHR structure describing the
-    ///     surface and other fixed parameters that would be consumed by vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="pPresentModeCount">
-    ///     pPresentModeCount is a pointer to an integer related to the number of presentation
-    ///     modes available or queried, as described below.
-    /// </param>
-    /// <param name="pPresentModes">
-    ///     pPresentModes is either NULL or a pointer to an array of VkPresentModeKHR values,
-    ///     indicating the supported presentation modes.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device that will be associated with the swapchain to be created, as described for vkCreateSwapchainKHR. </param>
+    /// <param name="pSurfaceInfo"> pSurfaceInfo is a pointer to a VkPhysicalDeviceSurfaceInfo2KHR structure describing the surface and other fixed parameters that would be consumed by vkCreateSwapchainKHR. </param>
+    /// <param name="pPresentModeCount"> pPresentModeCount is a pointer to an integer related to the number of presentation modes available or queried, as described below. </param>
+    /// <param name="pPresentModes"> pPresentModes is either NULL or a pointer to an array of VkPresentModeKHR values, indicating the supported presentation modes. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -95,16 +80,16 @@ public static unsafe class VkExtFullScreenExclusive
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireFullScreenExclusiveModeEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device associated with swapchain.</param>
-    /// <param name="swapchain">swapchain is the swapchain to acquire exclusive full-screen access for.</param>
+    /// <param name="device"> device is the device associated with swapchain. </param>
+    /// <param name="swapchain"> swapchain is the swapchain to acquire exclusive full-screen access for. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -120,16 +105,16 @@ public static unsafe class VkExtFullScreenExclusive
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleaseFullScreenExclusiveModeEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device associated with swapchain.</param>
-    /// <param name="swapchain">swapchain is the swapchain to release exclusive full-screen access from.</param>
+    /// <param name="device"> device is the device associated with swapchain. </param>
+    /// <param name="swapchain"> swapchain is the swapchain to release exclusive full-screen access from. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -145,23 +130,17 @@ public static unsafe class VkExtFullScreenExclusive
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceGroupSurfacePresentModes2EXT.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device.</param>
-    /// <param name="pSurfaceInfo">
-    ///     pSurfaceInfo is a pointer to a VkPhysicalDeviceSurfaceInfo2KHR structure describing the
-    ///     surface and other fixed parameters that would be consumed by vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="pModes">
-    ///     pModes is a pointer to a VkDeviceGroupPresentModeFlagsKHR in which the supported device group
-    ///     present modes for the surface are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device. </param>
+    /// <param name="pSurfaceInfo"> pSurfaceInfo is a pointer to a VkPhysicalDeviceSurfaceInfo2KHR structure describing the surface and other fixed parameters that would be consumed by vkCreateSwapchainKHR. </param>
+    /// <param name="pModes"> pModes is a pointer to a VkDeviceGroupPresentModeFlagsKHR in which the supported device group present modes for the surface are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -177,7 +156,7 @@ public static unsafe class VkExtFullScreenExclusive
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSurfacePresentModes2EXT</description>
+    ///             <description> vkGetPhysicalDeviceSurfacePresentModes2EXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -197,13 +176,13 @@ public static unsafe class VkExtFullScreenExclusive
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkAcquireFullScreenExclusiveModeEXT</description>
+    ///             <description> vkAcquireFullScreenExclusiveModeEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkReleaseFullScreenExclusiveModeEXT</description>
+    ///             <description> vkReleaseFullScreenExclusiveModeEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDeviceGroupSurfacePresentModes2EXT</description>
+    ///             <description> vkGetDeviceGroupSurfacePresentModes2EXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

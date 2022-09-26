@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkAmdMemoryOverallocationBehavior;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_AMD_memory_overallocation_behavior - device extension (nr. 190) - author 'AMD' [platform '' | contact 'Martin
-///     Dinkov @mdinkov']<br />
+///     VK_AMD_memory_overallocation_behavior - device extension (nr. 190) - author 'AMD' [platform '' | contact 'Martin Dinkov @mdinkov']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_memory_overallocation_behavior.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_memory_overallocation_behavior.html
@@ -42,8 +42,8 @@ public static class VkAmdMemoryOverallocationBehavior
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME_UTF8_NT =

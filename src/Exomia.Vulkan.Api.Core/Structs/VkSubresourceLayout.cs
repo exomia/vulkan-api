@@ -15,33 +15,30 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSubresourceLayout - Structure specifying subresource layout -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkSubresourceLayout
 {
-    /// <summary>offset is the byte offset from the start of the image or the plane where the image subresource begins.</summary>
+    /// <summary> offset is the byte offset from the start of the image or the plane where the image subresource begins. </summary>
     public VkDeviceSize offset;
 
-    /// <summary>
-    ///     size is the size in bytes of the image subresource. size includes any extra memory that is required based on
-    ///     rowPitch.
-    /// </summary>
+    /// <summary> size is the size in bytes of the image subresource. size includes any extra memory that is required based on rowPitch. </summary>
     public VkDeviceSize size;
 
-    /// <summary>rowPitch describes the number of bytes between each row of texels in an image.</summary>
+    /// <summary> rowPitch describes the number of bytes between each row of texels in an image. </summary>
     public VkDeviceSize rowPitch;
 
-    /// <summary>arrayPitch describes the number of bytes between each array layer of an image.</summary>
+    /// <summary> arrayPitch describes the number of bytes between each array layer of an image. </summary>
     public VkDeviceSize arrayPitch;
 
-    /// <summary>depthPitch describes the number of bytes between each slice of 3D image.</summary>
+    /// <summary> depthPitch describes the number of bytes between each slice of 3D image. </summary>
     public VkDeviceSize depthPitch;
 }

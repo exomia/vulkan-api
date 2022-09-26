@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtPhysicalDeviceDrm;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_physical_device_drm - device extension (nr. 354) - author 'EXT' [platform '' | contact 'Simon Ser
-///     @emersion']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_physical_device_drm.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_physical_device_drm.html</a>
+///     VK_EXT_physical_device_drm - device extension (nr. 354) - author 'EXT' [platform '' | contact 'Simon Ser @emersion']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_physical_device_drm.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_physical_device_drm.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static class VkExtPhysicalDeviceDrm
@@ -32,16 +32,13 @@ public static class VkExtPhysicalDeviceDrm
     /// <summary> The extension name. </summary>
     public const string VK_EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME = "VK_EXT_physical_device_drm";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_PHYSICAL_DEVICE_DRM_EXTENSION_NAME_UTF8_NT =

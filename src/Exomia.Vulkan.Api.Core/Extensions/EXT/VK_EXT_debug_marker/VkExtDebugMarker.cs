@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtDebugMarker;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_debug_marker - device extension (nr. 23) - author 'Baldur Karlsson' [platform '' | contact 'Baldur Karlsson
-///     @baldurk']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_debug_marker.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_debug_marker.html</a>
+///     VK_EXT_debug_marker - device extension (nr. 23) - author 'Baldur Karlsson' [platform '' | contact 'Baldur Karlsson @baldurk']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_debug_marker.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_debug_marker.html </a>
 /// </summary>
 /// <remarks>
 ///     specialuse: debugging
@@ -37,36 +37,31 @@ public static unsafe class VkExtDebugMarker
     /// <summary> The extension name. </summary>
     public const string VK_EXT_DEBUG_MARKER_EXTENSION_NAME = "VK_EXT_debug_marker";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_DEBUG_MARKER_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_DEBUG_MARKER_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_DEBUG_MARKER_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_DEBUG_MARKER_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u445f\u4245\u4755\u4d5f\u5241\u454b\u5f52\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
     ///     vkDebugMarkerSetObjectTagEXT - Attach arbitrary data to an object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the device that created the object.</param>
-    /// <param name="pTagInfo">
-    ///     pTagInfo is a pointer to a VkDebugMarkerObjectTagInfoEXTstructure specifying the parameters of
-    ///     the tag to attach to the object.
-    /// </param>
+    /// <param name="device"> device is the device that created the object. </param>
+    /// <param name="pTagInfo"> pTagInfo is a pointer to a VkDebugMarkerObjectTagInfoEXTstructure specifying the parameters of the tag to attach to the object. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -77,20 +72,18 @@ public static unsafe class VkExtDebugMarker
 
     /// <summary>
     ///     vkDebugMarkerSetObjectNameEXT - Give a user-friendly name to an object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the device that created the object.</param>
-    /// <param name="pNameInfo">
-    ///     pNameInfo is a pointer to a VkDebugMarkerObjectNameInfoEXTstructure specifying the parameters
-    ///     of the name to set on the object.
-    /// </param>
+    /// <param name="device"> device is the device that created the object. </param>
+    /// <param name="pNameInfo"> pNameInfo is a pointer to a VkDebugMarkerObjectNameInfoEXTstructure specifying the parameters of the name to set on the object. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -101,13 +94,10 @@ public static unsafe class VkExtDebugMarker
 
     /// <summary>
     ///     vkCmdDebugMarkerBeginEXT - Open a command buffer marker region -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerBeginEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerBeginEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerBeginEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerBeginEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="pMarkerInfo">
-    ///     pMarkerInfo is a pointer to a VkDebugMarkerMarkerInfoEXTstructure specifying the parameters
-    ///     of the marker region to open.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="pMarkerInfo"> pMarkerInfo is a pointer to a VkDebugMarkerMarkerInfoEXTstructure specifying the parameters of the marker region to open. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkDebugMarkerMarkerInfoEXT* /*pMarkerInfo*/,
@@ -115,22 +105,19 @@ public static unsafe class VkExtDebugMarker
 
     /// <summary>
     ///     vkCmdDebugMarkerEndEXT - Close a command buffer marker region -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerEndEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerEndEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerEndEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerEndEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         void> vkCmdDebugMarkerEndEXT = null;
 
     /// <summary>
     ///     vkCmdDebugMarkerInsertEXT - Insert a marker label into a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerInsertEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerInsertEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerInsertEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerInsertEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="pMarkerInfo">
-    ///     pMarkerInfo is a pointer to a VkDebugMarkerMarkerInfoEXTstructure specifying the parameters
-    ///     of the marker to insert.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="pMarkerInfo"> pMarkerInfo is a pointer to a VkDebugMarkerMarkerInfoEXTstructure specifying the parameters of the marker to insert. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkDebugMarkerMarkerInfoEXT* /*pMarkerInfo*/,
@@ -142,19 +129,19 @@ public static unsafe class VkExtDebugMarker
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkDebugMarkerSetObjectTagEXT</description>
+    ///             <description> vkDebugMarkerSetObjectTagEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDebugMarkerSetObjectNameEXT</description>
+    ///             <description> vkDebugMarkerSetObjectNameEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdDebugMarkerBeginEXT</description>
+    ///             <description> vkCmdDebugMarkerBeginEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdDebugMarkerEndEXT</description>
+    ///             <description> vkCmdDebugMarkerEndEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdDebugMarkerInsertEXT</description>
+    ///             <description> vkCmdDebugMarkerInsertEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtHdrMetadata;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_hdr_metadata - device extension (nr. 106) - author 'GOOGLE' [platform '' | contact 'Courtney
-///     Goeltzenleuchter @courtney-g']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_hdr_metadata.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_hdr_metadata.html</a>
+///     VK_EXT_hdr_metadata - device extension (nr. 106) - author 'GOOGLE' [platform '' | contact 'Courtney Goeltzenleuchter @courtney-g']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_hdr_metadata.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_hdr_metadata.html </a>
 /// </summary>
 [VkRequires("VK_KHR_swapchain")]
 public static unsafe class VkExtHdrMetadata
@@ -32,28 +32,25 @@ public static unsafe class VkExtHdrMetadata
     /// <summary> The extension name. </summary>
     public const string VK_EXT_HDR_METADATA_EXTENSION_NAME = "VK_EXT_hdr_metadata";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_HDR_METADATA_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_HDR_METADATA_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_HDR_METADATA_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_HDR_METADATA_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u485f\u5244\u4d5f\u5445\u4441\u5441\u5f41\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
     ///     vkSetHdrMetadataEXT - Set Hdr metadata -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetHdrMetadataEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetHdrMetadataEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetHdrMetadataEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetHdrMetadataEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device where the swapchain(s) were created.</param>
-    /// <param name="swapchainCount">swapchainCount is the number of swapchains included in pSwapchains.</param>
-    /// <param name="pSwapchains">pSwapchains is a pointer to an array of swapchainCountVkSwapchainKHR handles.</param>
-    /// <param name="pMetadata">pMetadata is a pointer to an array of swapchainCountVkHdrMetadataEXT structures.</param>
+    /// <param name="device"> device is the logical device where the swapchain(s) were created. </param>
+    /// <param name="swapchainCount"> swapchainCount is the number of swapchains included in pSwapchains. </param>
+    /// <param name="pSwapchains"> pSwapchains is a pointer to an array of swapchainCountVkSwapchainKHR handles. </param>
+    /// <param name="pMetadata"> pMetadata is a pointer to an array of swapchainCountVkHdrMetadataEXT structures. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         uint /*swapchainCount*/,
@@ -67,7 +64,7 @@ public static unsafe class VkExtHdrMetadata
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkSetHdrMetadataEXT</description>
+    ///             <description> vkSetHdrMetadataEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

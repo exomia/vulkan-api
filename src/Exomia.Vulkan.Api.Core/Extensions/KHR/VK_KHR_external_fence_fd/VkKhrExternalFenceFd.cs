@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_KHR_external_fence_fd - device extension (nr. 116) - author 'KHR' [platform '' | contact 'Jesse Hall @critsec']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence_fd.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence_fd.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence_fd.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence_fd.html </a>
 /// </summary>
 [VkRequires("VK_KHR_external_fence")]
 public static unsafe class VkKhrExternalFenceFd
@@ -32,37 +32,31 @@ public static unsafe class VkKhrExternalFenceFd
     /// <summary> The extension name. </summary>
     public const string VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME = "VK_KHR_external_fence_fd";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u455f\u5458\u5245\u414e\u5f4c\u4546\u434e\u5f45\u4446\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkImportFenceFdKHR - Import a fence from a POSIX file descriptor -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkImportFenceFdKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkImportFenceFdKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkImportFenceFdKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkImportFenceFdKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that created the fence.</param>
-    /// <param name="pImportFenceFdInfo">
-    ///     pImportFenceFdInfo is a pointer to a VkImportFenceFdInfoKHRstructure specifying the
-    ///     fence and import parameters.
-    /// </param>
+    /// <param name="device"> device is the logical device that created the fence. </param>
+    /// <param name="pImportFenceFdInfo"> pImportFenceFdInfo is a pointer to a VkImportFenceFdInfoKHRstructure specifying the fence and import parameters. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -73,21 +67,18 @@ public static unsafe class VkKhrExternalFenceFd
 
     /// <summary>
     ///     vkGetFenceFdKHR - Get a POSIX file descriptor handle for a fence -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetFenceFdKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetFenceFdKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetFenceFdKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetFenceFdKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that created the fence being exported.</param>
-    /// <param name="pGetFdInfo">
-    ///     pGetFdInfo is a pointer to a VkFenceGetFdInfoKHR structure containing parameters of the export
-    ///     operation.
-    /// </param>
-    /// <param name="pFd">pFd will return the file descriptor representing the fence payload.</param>
+    /// <param name="device"> device is the logical device that created the fence being exported. </param>
+    /// <param name="pGetFdInfo"> pGetFdInfo is a pointer to a VkFenceGetFdInfoKHR structure containing parameters of the export operation. </param>
+    /// <param name="pFd"> pFd will return the file descriptor representing the fence payload. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -103,10 +94,10 @@ public static unsafe class VkKhrExternalFenceFd
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkImportFenceFdKHR</description>
+    ///             <description> vkImportFenceFdKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetFenceFdKHR</description>
+    ///             <description> vkGetFenceFdKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

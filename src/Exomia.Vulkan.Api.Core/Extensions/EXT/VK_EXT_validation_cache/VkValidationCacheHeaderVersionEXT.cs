@@ -22,6 +22,6 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkValidationCacheHeaderVersionEXT
 {
-    /// <summary>VK_VALIDATION_CACHE_HEADER_VERSION_ONE_EXT specifies version one of the validation cache.</summary>
+    /// <summary> VK_VALIDATION_CACHE_HEADER_VERSION_ONE_EXT specifies version one of the validation cache. </summary>
     VK_VALIDATION_CACHE_HEADER_VERSION_ONE_EXT = 1
 }

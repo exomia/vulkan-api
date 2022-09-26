@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkMultisampledRenderToSingleSampledInfoEXT - Structure containing info for multisampled rendering to single-sampled
-///     attachments in a subpass -
+///     VkMultisampledRenderToSingleSampledInfoEXT - Structure containing info for multisampled rendering to single-sampled attachments in a subpass -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultisampledRenderToSingleSampledInfoEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultisampledRenderToSingleSampledInfoEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSubpassDescription2,VkRenderingInfo</description>
+///             <term> structextends </term><description> VkSubpassDescription2,VkRenderingInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,18 +34,15 @@ public unsafe struct VkMultisampledRenderToSingleSampledInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     multisampledRenderToSingleSampledEnable controls whether multisampled rendering to single-sampled attachments
-    ///     is performed as described below.
-    /// </summary>
+    /// <summary> multisampledRenderToSingleSampledEnable controls whether multisampled rendering to single-sampled attachments is performed as described below. </summary>
     public VkBool32 multisampledRenderToSingleSampledEnable;
 
-    /// <summary>rasterizationSamples is a VkSampleCountFlagBits specifying the number of samples used in rasterization.</summary>
+    /// <summary> rasterizationSamples is a VkSampleCountFlagBits specifying the number of samples used in rasterization. </summary>
     public VkSampleCountFlagBits rasterizationSamples;
 }

@@ -26,27 +26,21 @@ public unsafe struct VkGraphicsShaderGroupCreateInfoNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_GRAPHICS_SHADER_GROUP_CREATE_INFO_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>stageCount is the number of entries in the pStages array.</summary>
+    /// <summary> stageCount is the number of entries in the pStages array. </summary>
     public uint stageCount;
 
-    /// <summary>
-    ///     pStages is a pointer to an array VkPipelineShaderStageCreateInfo structures specifying the set of the shader
-    ///     stages to be included in this shader group.
-    /// </summary>
+    /// <summary> pStages is a pointer to an array VkPipelineShaderStageCreateInfo structures specifying the set of the shader stages to be included in this shader group. </summary>
     public VkPipelineShaderStageCreateInfo* pStages;
 
-    /// <summary>pVertexInputState is a pointer to a VkPipelineVertexInputStateCreateInfo structure.</summary>
+    /// <summary> pVertexInputState is a pointer to a VkPipelineVertexInputStateCreateInfo structure. </summary>
     public VkPipelineVertexInputStateCreateInfo* pVertexInputState;
 
-    /// <summary>
-    ///     pTessellationState is a pointer to a VkPipelineTessellationStateCreateInfo structure, and is ignored if the
-    ///     shader group does not include a tessellation control shader stage and tessellation evaluation shader stage.
-    /// </summary>
+    /// <summary> pTessellationState is a pointer to a VkPipelineTessellationStateCreateInfo structure, and is ignored if the shader group does not include a tessellation control shader stage and tessellation evaluation shader stage. </summary>
     public VkPipelineTessellationStateCreateInfo* pTessellationState;
 }

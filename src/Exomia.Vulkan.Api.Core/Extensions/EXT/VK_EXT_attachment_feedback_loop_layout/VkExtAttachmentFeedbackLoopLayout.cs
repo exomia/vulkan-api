@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtAttachmentFeedbackLoopLayout;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_attachment_feedback_loop_layout - device extension (nr. 340) - author 'EXT' [platform '' | contact 'Joshua
-///     Ashton @Joshua-Ashton']<br />
+///     VK_EXT_attachment_feedback_loop_layout - device extension (nr. 340) - author 'EXT' [platform '' | contact 'Joshua Ashton @Joshua-Ashton']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_attachment_feedback_loop_layout.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_attachment_feedback_loop_layout.html
@@ -43,8 +43,8 @@ public static class VkExtAttachmentFeedbackLoopLayout
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_ATTACHMENT_FEEDBACK_LOOP_LAYOUT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_ATTACHMENT_FEEDBACK_LOOP_LAYOUT_EXTENSION_NAME_UTF8_NT =

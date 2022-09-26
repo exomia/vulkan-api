@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkExtent2D - Structure specifying a two-dimensional extent -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExtent2D.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExtent2D.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExtent2D.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExtent2D.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkExtent2D
 {
-    /// <summary>width is the width of the extent.</summary>
+    /// <summary> width is the width of the extent. </summary>
     public uint width;
 
-    /// <summary>height is the height of the extent.</summary>
+    /// <summary> height is the height of the extent. </summary>
     public uint height;
 }

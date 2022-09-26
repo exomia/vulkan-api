@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkImageView - Opaque handle to an image view object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageView.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageView.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageView.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageView.html </a>
 /// </summary>
 public readonly unsafe struct VkImageView
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkImageView
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkImageView left, VkImageView right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkImageView
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkImageView left, VkImageView right)

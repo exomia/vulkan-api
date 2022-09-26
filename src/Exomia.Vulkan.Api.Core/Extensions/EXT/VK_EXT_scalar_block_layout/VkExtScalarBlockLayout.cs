@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtScalarBlockLayout;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_scalar_block_layout - device extension (nr. 222) - author 'EXT' [platform '' | contact 'Tobias Hector
-///     @tobski']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_scalar_block_layout.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_scalar_block_layout.html</a>
+///     VK_EXT_scalar_block_layout - device extension (nr. 222) - author 'EXT' [platform '' | contact 'Tobias Hector @tobski']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_scalar_block_layout.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_scalar_block_layout.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_scalar_block_layout.html#_deprecation_state")]
@@ -33,16 +33,13 @@ public static class VkExtScalarBlockLayout
     /// <summary> The extension name. </summary>
     public const string VK_EXT_SCALAR_BLOCK_LAYOUT_EXTENSION_NAME = "VK_EXT_scalar_block_layout";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_SCALAR_BLOCK_LAYOUT_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_SCALAR_BLOCK_LAYOUT_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_SCALAR_BLOCK_LAYOUT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_SCALAR_BLOCK_LAYOUT_EXTENSION_NAME_UTF8_NT =

@@ -23,38 +23,16 @@ namespace Exomia.Vulkan.Api.Core;
 [Flags]
 public enum VkExternalFenceHandleTypeFlagBits
 {
-    /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT specifies a POSIX file descriptor handle that has only limited
-    ///     valid usage outside of Vulkan and other compatible APIs. It must be compatible with the POSIX system calls dup,
-    ///     dup2, close, and the non-standard system call dup3. Additionally, it must be transportable over a socket using an
-    ///     SCM_RIGHTS control message. It owns a reference to the underlying synchronization primitive represented by its
-    ///     Vulkan fence object.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT specifies a POSIX file descriptor handle that has only limited valid usage outside of Vulkan and other compatible APIs. It must be compatible with the POSIX system calls dup, dup2, close, and the non-standard system call dup3. Additionally, it must be transportable over a socket using an SCM_RIGHTS control message. It owns a reference to the underlying synchronization primitive represented by its Vulkan fence object. </summary>
     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT = 0x1,
 
-    /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT specifies an NT handle that has only limited valid usage
-    ///     outside of Vulkan and other compatible APIs. It must be compatible with the functions DuplicateHandle, CloseHandle,
-    ///     CompareObjectHandles, GetHandleInformation, and SetHandleInformation. It owns a reference to the underlying
-    ///     synchronization primitive represented by its Vulkan fence object.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT specifies an NT handle that has only limited valid usage outside of Vulkan and other compatible APIs. It must be compatible with the functions DuplicateHandle, CloseHandle, CompareObjectHandles, GetHandleInformation, and SetHandleInformation. It owns a reference to the underlying synchronization primitive represented by its Vulkan fence object. </summary>
     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT = 0x2,
 
-    /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT specifies a global share handle that has only limited valid
-    ///     usage outside of Vulkan and other compatible APIs. It is not compatible with any native APIs. It does not own a
-    ///     reference to the underlying synchronization primitive represented by its Vulkan fence object, and will therefore
-    ///     become invalid when all Vulkan fence objects associated with it are destroyed.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT specifies a global share handle that has only limited valid usage outside of Vulkan and other compatible APIs. It is not compatible with any native APIs. It does not own a reference to the underlying synchronization primitive represented by its Vulkan fence object, and will therefore become invalid when all Vulkan fence objects associated with it are destroyed. </summary>
     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT = 0x4,
 
-    /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT specifies a POSIX file descriptor handle to a Linux Sync File or
-    ///     Android Fence. It can be used with any native API accepting a valid sync file or fence as input. It owns a
-    ///     reference to the underlying synchronization primitive associated with the file descriptor. Implementations which
-    ///     support importing this handle type must accept any type of sync or fence FD supported by the native system they are
-    ///     running on.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT specifies a POSIX file descriptor handle to a Linux Sync File or Android Fence. It can be used with any native API accepting a valid sync file or fence as input. It owns a reference to the underlying synchronization primitive associated with the file descriptor. Implementations which support importing this handle type must accept any type of sync or fence FD supported by the native system they are running on. </summary>
     VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT = 0x8,
 
     /// <summary>
@@ -75,37 +53,15 @@ public enum VkExternalFenceHandleTypeFlagBits
     /// </summary>
     VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_5_BIT_NV = 0x20,
 
-    /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT specifies a POSIX file descriptor handle that has only limited
-    ///     valid usage outside of Vulkan and other compatible APIs. It must be compatible with the POSIX system calls dup,
-    ///     dup2, close, and the non-standard system call dup3. Additionally, it must be transportable over a socket using an
-    ///     SCM_RIGHTS control message. It owns a reference to the underlying synchronization primitive represented by its
-    ///     Vulkan fence object.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT specifies a POSIX file descriptor handle that has only limited valid usage outside of Vulkan and other compatible APIs. It must be compatible with the POSIX system calls dup, dup2, close, and the non-standard system call dup3. Additionally, it must be transportable over a socket using an SCM_RIGHTS control message. It owns a reference to the underlying synchronization primitive represented by its Vulkan fence object. </summary>
     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT_KHR = VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT,
 
-    /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT specifies an NT handle that has only limited valid usage
-    ///     outside of Vulkan and other compatible APIs. It must be compatible with the functions DuplicateHandle, CloseHandle,
-    ///     CompareObjectHandles, GetHandleInformation, and SetHandleInformation. It owns a reference to the underlying
-    ///     synchronization primitive represented by its Vulkan fence object.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT specifies an NT handle that has only limited valid usage outside of Vulkan and other compatible APIs. It must be compatible with the functions DuplicateHandle, CloseHandle, CompareObjectHandles, GetHandleInformation, and SetHandleInformation. It owns a reference to the underlying synchronization primitive represented by its Vulkan fence object. </summary>
     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT_KHR = VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT,
 
-    /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT specifies a global share handle that has only limited valid
-    ///     usage outside of Vulkan and other compatible APIs. It is not compatible with any native APIs. It does not own a
-    ///     reference to the underlying synchronization primitive represented by its Vulkan fence object, and will therefore
-    ///     become invalid when all Vulkan fence objects associated with it are destroyed.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT specifies a global share handle that has only limited valid usage outside of Vulkan and other compatible APIs. It is not compatible with any native APIs. It does not own a reference to the underlying synchronization primitive represented by its Vulkan fence object, and will therefore become invalid when all Vulkan fence objects associated with it are destroyed. </summary>
     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_KHR = VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT,
 
-    /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT specifies a POSIX file descriptor handle to a Linux Sync File or
-    ///     Android Fence. It can be used with any native API accepting a valid sync file or fence as input. It owns a
-    ///     reference to the underlying synchronization primitive associated with the file descriptor. Implementations which
-    ///     support importing this handle type must accept any type of sync or fence FD supported by the native system they are
-    ///     running on.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT specifies a POSIX file descriptor handle to a Linux Sync File or Android Fence. It can be used with any native API accepting a valid sync file or fence as input. It owns a reference to the underlying synchronization primitive associated with the file descriptor. Implementations which support importing this handle type must accept any type of sync or fence FD supported by the native system they are running on. </summary>
     VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT_KHR = VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT
 }

@@ -22,21 +22,12 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkConservativeRasterizationModeEXT
 {
-    /// <summary>
-    ///     VK_CONSERVATIVE_RASTERIZATION_MODE_DISABLED_EXT specifies that conservative rasterization is disabled and
-    ///     rasterization proceeds as normal.
-    /// </summary>
+    /// <summary> VK_CONSERVATIVE_RASTERIZATION_MODE_DISABLED_EXT specifies that conservative rasterization is disabled and rasterization proceeds as normal. </summary>
     VK_CONSERVATIVE_RASTERIZATION_MODE_DISABLED_EXT = 0,
 
-    /// <summary>
-    ///     VK_CONSERVATIVE_RASTERIZATION_MODE_OVERESTIMATE_EXT specifies that conservative rasterization is enabled in
-    ///     overestimation mode.
-    /// </summary>
+    /// <summary> VK_CONSERVATIVE_RASTERIZATION_MODE_OVERESTIMATE_EXT specifies that conservative rasterization is enabled in overestimation mode. </summary>
     VK_CONSERVATIVE_RASTERIZATION_MODE_OVERESTIMATE_EXT = 1,
 
-    /// <summary>
-    ///     VK_CONSERVATIVE_RASTERIZATION_MODE_UNDERESTIMATE_EXT specifies that conservative rasterization is enabled in
-    ///     underestimation mode.
-    /// </summary>
+    /// <summary> VK_CONSERVATIVE_RASTERIZATION_MODE_UNDERESTIMATE_EXT specifies that conservative rasterization is enabled in underestimation mode. </summary>
     VK_CONSERVATIVE_RASTERIZATION_MODE_UNDERESTIMATE_EXT = 2
 }

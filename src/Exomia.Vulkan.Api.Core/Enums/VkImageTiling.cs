@@ -15,28 +15,19 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkImageTiling - Specifies the tiling arrangement of data in an image -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageTiling.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageTiling.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageTiling.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageTiling.html </a>
 /// </summary>
 public enum VkImageTiling
 {
-    /// <summary>
-    ///     VK_IMAGE_TILING_OPTIMAL specifies optimal tiling (texels are laid out in an implementation-dependent
-    ///     arrangement, for more efficient memory access).
-    /// </summary>
+    /// <summary> VK_IMAGE_TILING_OPTIMAL specifies optimal tiling (texels are laid out in an implementation-dependent arrangement, for more efficient memory access). </summary>
     VK_IMAGE_TILING_OPTIMAL = 0,
 
-    /// <summary>
-    ///     VK_IMAGE_TILING_LINEAR specifies linear tiling (texels are laid out in memory in row-major order, possibly
-    ///     with some padding on each row).
-    /// </summary>
+    /// <summary> VK_IMAGE_TILING_LINEAR specifies linear tiling (texels are laid out in memory in row-major order, possibly with some padding on each row). </summary>
     VK_IMAGE_TILING_LINEAR = 1,
 
     /// <summary>
     ///     VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT indicates that the image&#8217;s tiling is defined by a
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#glossary-drm-format-modifier">
-    ///         Linux
-    ///         DRM format modifier
-    ///     </a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#glossary-drm-format-modifier"> Linux DRM format modifier </a>
     ///     . The modifier is specified at image creation with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageDrmFormatModifierListCreateInfoEXT.html">

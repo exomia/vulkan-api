@@ -24,8 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkIndirectCommandsLayoutUsageFlagBitsNV
 {
     /// <summary>
-    ///     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_EXPLICIT_PREPROCESS_BIT_NVspecifies that the layout is always used with the
-    ///     manual preprocessing step through calling
+    ///     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_EXPLICIT_PREPROCESS_BIT_NVspecifies that the layout is always used with the manual preprocessing step through calling
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html">
     ///         vkCmdPreprocessGeneratedCommandsNV
@@ -39,15 +38,9 @@ public enum VkIndirectCommandsLayoutUsageFlagBitsNV
     /// </summary>
     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_EXPLICIT_PREPROCESS_BIT_NV = 0x1,
 
-    /// <summary>
-    ///     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_INDEXED_SEQUENCES_BIT_NVspecifies that the input data for the sequences is
-    ///     not implicitly indexed from 0..sequencesUsed but a user provided VkBufferencoding the index is provided.
-    /// </summary>
+    /// <summary> VK_INDIRECT_COMMANDS_LAYOUT_USAGE_INDEXED_SEQUENCES_BIT_NVspecifies that the input data for the sequences is not implicitly indexed from 0..sequencesUsed but a user provided VkBufferencoding the index is provided. </summary>
     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_INDEXED_SEQUENCES_BIT_NV = 0x2,
 
-    /// <summary>
-    ///     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_UNORDERED_SEQUENCES_BIT_NVspecifies that the processing of sequences can
-    ///     happen at an implementation-dependent order, which is not: guaranteed to be coherent using the same input data.
-    /// </summary>
+    /// <summary> VK_INDIRECT_COMMANDS_LAYOUT_USAGE_UNORDERED_SEQUENCES_BIT_NVspecifies that the processing of sequences can happen at an implementation-dependent order, which is not: guaranteed to be coherent using the same input data. </summary>
     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_UNORDERED_SEQUENCES_BIT_NV = 0x4
 }

@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrStorageBufferStorageClass;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_storage_buffer_storage_class - device extension (nr. 132) - author 'KHR' [platform '' | contact 'Alexander
-///     Galazin @alegal-arm']<br />
+///     VK_KHR_storage_buffer_storage_class - device extension (nr. 132) - author 'KHR' [platform '' | contact 'Alexander Galazin @alegal-arm']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_storage_buffer_storage_class.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_storage_buffer_storage_class.html
@@ -43,8 +43,8 @@ public static class VkKhrStorageBufferStorageClass
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_EXTENSION_NAME_UTF8_NT =

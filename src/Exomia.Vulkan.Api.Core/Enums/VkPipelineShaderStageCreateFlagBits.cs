@@ -33,10 +33,7 @@ public enum VkPipelineShaderStageCreateFlagBits
     /// </summary>
     VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT = 0x1,
 
-    /// <summary>
-    ///     VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BITspecifies that the subgroup sizes must be launched
-    ///     with all invocations active in the compute stage.
-    /// </summary>
+    /// <summary> VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BITspecifies that the subgroup sizes must be launched with all invocations active in the compute stage. </summary>
     VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT = 0x2,
 
     /// <summary>
@@ -58,9 +55,6 @@ public enum VkPipelineShaderStageCreateFlagBits
     /// </summary>
     VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT_EXT = VK_PIPELINE_SHADER_STAGE_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT,
 
-    /// <summary>
-    ///     VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BITspecifies that the subgroup sizes must be launched
-    ///     with all invocations active in the compute stage.
-    /// </summary>
+    /// <summary> VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BITspecifies that the subgroup sizes must be launched with all invocations active in the compute stage. </summary>
     VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT_EXT = VK_PIPELINE_SHADER_STAGE_CREATE_REQUIRE_FULL_SUBGROUPS_BIT
 }

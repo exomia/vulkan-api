@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtPrimitivesGeneratedQuery;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_primitives_generated_query - device extension (nr. 383) - author 'EXT' [platform '' | contact 'Shahbaz
-///     Youssefi @syoussefi']<br />
+///     VK_EXT_primitives_generated_query - device extension (nr. 383) - author 'EXT' [platform '' | contact 'Shahbaz Youssefi @syoussefi']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_primitives_generated_query.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_primitives_generated_query.html
@@ -47,8 +47,8 @@ public static class VkExtPrimitivesGeneratedQuery
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_PRIMITIVES_GENERATED_QUERY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_PRIMITIVES_GENERATED_QUERY_EXTENSION_NAME_UTF8_NT =

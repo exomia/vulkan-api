@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrSwapchain;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_swapchain - device extension (nr. 2) - author 'KHR' [platform '' | contact 'James Jones @cubanismo,Ian
-///     Elliott @ianelliottus']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_swapchain.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_swapchain.html</a>
+///     VK_KHR_swapchain - device extension (nr. 2) - author 'KHR' [platform '' | contact 'James Jones @cubanismo,Ian Elliott @ianelliottus']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_swapchain.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_swapchain.html </a>
 /// </summary>
 [VkRequires("VK_KHR_surface")]
 public static unsafe class VkKhrSwapchain
@@ -32,45 +32,33 @@ public static unsafe class VkKhrSwapchain
     /// <summary> The extension name. </summary>
     public const string VK_KHR_SWAPCHAIN_EXTENSION_NAME = "VK_KHR_swapchain";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_SWAPCHAIN_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_SWAPCHAIN_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SWAPCHAIN_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SWAPCHAIN_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u535f\u4157\u4350\u4148\u4e49\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkCreateSwapchainKHR - Create a swapchain -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the device to create the swapchain for.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkSwapchainCreateInfoKHRstructure specifying the parameters of
-    ///     the created swapchain.
-    /// </param>
-    /// <param name="pAllocator">
-    ///     pAllocator is the allocator used for host memory allocated for the swapchain object when there
-    ///     is no more specific allocator available (see Memory Allocation).
-    /// </param>
-    /// <param name="pSwapchain">
-    ///     pSwapchain is a pointer to a VkSwapchainKHR handle in which the created swapchain object will
-    ///     be returned.
-    /// </param>
+    /// <param name="device"> device is the device to create the swapchain for. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkSwapchainCreateInfoKHRstructure specifying the parameters of the created swapchain. </param>
+    /// <param name="pAllocator"> pAllocator is the allocator used for host memory allocated for the swapchain object when there is no more specific allocator available (see Memory Allocation). </param>
+    /// <param name="pSwapchain"> pSwapchain is a pointer to a VkSwapchainKHR handle in which the created swapchain object will be returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_NATIVE_WINDOW_IN_USE_KHR,VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_COMPRESSION_EXHAUSTED_EXT</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_NATIVE_WINDOW_IN_USE_KHR,VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_COMPRESSION_EXHAUSTED_EXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -83,14 +71,11 @@ public static unsafe class VkKhrSwapchain
 
     /// <summary>
     ///     vkDestroySwapchainKHR - Destroy a swapchain object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySwapchainKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySwapchainKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySwapchainKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySwapchainKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the VkDevice associated with swapchain.</param>
-    /// <param name="swapchain">swapchain is the swapchain to destroy.</param>
-    /// <param name="pAllocator">
-    ///     pAllocator is the allocator used for host memory allocated for the swapchain object when there
-    ///     is no more specific allocator available (see Memory Allocation).
-    /// </param>
+    /// <param name="device"> device is the VkDevice associated with swapchain. </param>
+    /// <param name="swapchain"> swapchain is the swapchain to destroy. </param>
+    /// <param name="pAllocator"> pAllocator is the allocator used for host memory allocated for the swapchain object when there is no more specific allocator available (see Memory Allocation). </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkSwapchainKHR /*swapchain*/,
@@ -99,22 +84,20 @@ public static unsafe class VkKhrSwapchain
 
     /// <summary>
     ///     vkGetSwapchainImagesKHR - Obtain the array of presentable images associated with a swapchain -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainImagesKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainImagesKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainImagesKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainImagesKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the device associated with swapchain.</param>
-    /// <param name="swapchain">swapchain is the swapchain to query.</param>
-    /// <param name="pSwapchainImageCount">
-    ///     pSwapchainImageCount is a pointer to an integer related to the number of presentable
-    ///     images available or queried, as described below.
-    /// </param>
-    /// <param name="pSwapchainImages">pSwapchainImages is either NULL or a pointer to an array of VkImage handles.</param>
+    /// <param name="device"> device is the device associated with swapchain. </param>
+    /// <param name="swapchain"> swapchain is the swapchain to query. </param>
+    /// <param name="pSwapchainImageCount"> pSwapchainImageCount is a pointer to an integer related to the number of presentable images available or queried, as described below. </param>
+    /// <param name="pSwapchainImages"> pSwapchainImages is either NULL or a pointer to an array of VkImage handles. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -127,25 +110,23 @@ public static unsafe class VkKhrSwapchain
 
     /// <summary>
     ///     vkAcquireNextImageKHR - Retrieve the index of the next available presentable image -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImageKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImageKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImageKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImageKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the device associated with swapchain.</param>
-    /// <param name="swapchain">swapchain is the non-retired swapchain from which an image is being acquired.</param>
-    /// <param name="timeout">timeout specifies how long the function waits, in nanoseconds, if no image is available.</param>
-    /// <param name="semaphore">semaphore is VK_NULL_HANDLE or a semaphore to signal.</param>
-    /// <param name="fence">fence is VK_NULL_HANDLE or a fence to signal.</param>
-    /// <param name="pImageIndex">
-    ///     pImageIndex is a pointer to a uint32_t in which the index of the next image to use (i.e. an
-    ///     index into the array of images returned by vkGetSwapchainImagesKHR) is returned.
-    /// </param>
+    /// <param name="device"> device is the device associated with swapchain. </param>
+    /// <param name="swapchain"> swapchain is the non-retired swapchain from which an image is being acquired. </param>
+    /// <param name="timeout"> timeout specifies how long the function waits, in nanoseconds, if no image is available. </param>
+    /// <param name="semaphore"> semaphore is VK_NULL_HANDLE or a semaphore to signal. </param>
+    /// <param name="fence"> fence is VK_NULL_HANDLE or a fence to signal. </param>
+    /// <param name="pImageIndex"> pImageIndex is a pointer to a uint32_t in which the index of the next image to use (i.e. an index into the array of images returned by vkGetSwapchainImagesKHR) is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_TIMEOUT,VK_NOT_READY,VK_SUBOPTIMAL_KHR</description>
+    ///             <term> successcodes </term>
+    ///             <description> VK_SUCCESS,VK_TIMEOUT,VK_NOT_READY,VK_SUBOPTIMAL_KHR </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -160,24 +141,18 @@ public static unsafe class VkKhrSwapchain
 
     /// <summary>
     ///     vkQueuePresentKHR - Queue an image for presentation -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueuePresentKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueuePresentKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueuePresentKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueuePresentKHR.html </a>
     /// </summary>
-    /// <param name="queue">
-    ///     queue is a queue that is capable of presentation to the target surface&#8217;s platform on the same
-    ///     device as the image&#8217;s swapchain.
-    /// </param>
-    /// <param name="pPresentInfo">
-    ///     pPresentInfo is a pointer to a VkPresentInfoKHR structure specifying parameters of the
-    ///     presentation.
-    /// </param>
+    /// <param name="queue"> queue is a queue that is capable of presentation to the target surface&#8217;s platform on the same device as the image&#8217;s swapchain. </param>
+    /// <param name="pPresentInfo"> pPresentInfo is a pointer to a VkPresentInfoKHR structure specifying parameters of the presentation. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_SUBOPTIMAL_KHR</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_SUBOPTIMAL_KHR </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -193,18 +168,16 @@ public static unsafe class VkKhrSwapchain
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceGroupPresentCapabilitiesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device.</param>
-    /// <param name="pDeviceGroupPresentCapabilities">
-    ///     pDeviceGroupPresentCapabilities is a pointer to a
-    ///     VkDeviceGroupPresentCapabilitiesKHR structure in which the device&#8217;s capabilities are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device. </param>
+    /// <param name="pDeviceGroupPresentCapabilities"> pDeviceGroupPresentCapabilities is a pointer to a VkDeviceGroupPresentCapabilitiesKHR structure in which the device&#8217;s capabilities are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -220,20 +193,17 @@ public static unsafe class VkKhrSwapchain
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device.</param>
-    /// <param name="surface">surface is the surface.</param>
-    /// <param name="pModes">
-    ///     pModes is a pointer to a VkDeviceGroupPresentModeFlagsKHR in which the supported device group
-    ///     present modes for the surface are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device. </param>
+    /// <param name="surface"> surface is the surface. </param>
+    /// <param name="pModes"> pModes is a pointer to a VkDeviceGroupPresentModeFlagsKHR in which the supported device group present modes for the surface are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -250,20 +220,18 @@ public static unsafe class VkKhrSwapchain
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device.</param>
-    /// <param name="surface">surface is the surface.</param>
-    /// <param name="pRectCount">
-    ///     pRectCount is a pointer to an integer related to the number of rectangles available or
-    ///     queried, as described below.
-    /// </param>
-    /// <param name="pRects">pRects is either NULL or a pointer to an array of VkRect2Dstructures.</param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device. </param>
+    /// <param name="surface"> surface is the surface. </param>
+    /// <param name="pRectCount"> pRectCount is a pointer to an integer related to the number of rectangles available or queried, as described below. </param>
+    /// <param name="pRects"> pRects is either NULL or a pointer to an array of VkRect2Dstructures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -276,22 +244,20 @@ public static unsafe class VkKhrSwapchain
 
     /// <summary>
     ///     vkAcquireNextImage2KHR - Retrieve the index of the next available presentable image -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImage2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImage2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImage2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImage2KHR.html </a>
     /// </summary>
-    /// <param name="device">device is the device associated with swapchain.</param>
-    /// <param name="pAcquireInfo">
-    ///     pAcquireInfo is a pointer to a VkAcquireNextImageInfoKHRstructure containing parameters of
-    ///     the acquire.
-    /// </param>
-    /// <param name="pImageIndex">pImageIndex is a pointer to a uint32_t that is set to the index of the next image to use.</param>
+    /// <param name="device"> device is the device associated with swapchain. </param>
+    /// <param name="pAcquireInfo"> pAcquireInfo is a pointer to a VkAcquireNextImageInfoKHRstructure containing parameters of the acquire. </param>
+    /// <param name="pImageIndex"> pImageIndex is a pointer to a uint32_t that is set to the index of the next image to use. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_TIMEOUT,VK_NOT_READY,VK_SUBOPTIMAL_KHR</description>
+    ///             <term> successcodes </term>
+    ///             <description> VK_SUCCESS,VK_TIMEOUT,VK_NOT_READY,VK_SUBOPTIMAL_KHR </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -307,28 +273,28 @@ public static unsafe class VkKhrSwapchain
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateSwapchainKHR</description>
+    ///             <description> vkCreateSwapchainKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroySwapchainKHR</description>
+    ///             <description> vkDestroySwapchainKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetSwapchainImagesKHR</description>
+    ///             <description> vkGetSwapchainImagesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkAcquireNextImageKHR</description>
+    ///             <description> vkAcquireNextImageKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkQueuePresentKHR</description>
+    ///             <description> vkQueuePresentKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDeviceGroupPresentCapabilitiesKHR</description>
+    ///             <description> vkGetDeviceGroupPresentCapabilitiesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDeviceGroupSurfacePresentModesKHR</description>
+    ///             <description> vkGetDeviceGroupSurfacePresentModesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkAcquireNextImage2KHR</description>
+    ///             <description> vkAcquireNextImage2KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -387,7 +353,7 @@ public static unsafe class VkKhrSwapchain
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDevicePresentRectanglesKHR</description>
+    ///             <description> vkGetPhysicalDevicePresentRectanglesKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

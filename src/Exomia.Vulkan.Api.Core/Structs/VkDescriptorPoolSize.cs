@@ -15,18 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDescriptorPoolSize - Structure specifying descriptor pool size -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolSize.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolSize.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolSize.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolSize.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkDescriptorPoolSize
 {
-    /// <summary>type is the type of descriptor.</summary>
+    /// <summary> type is the type of descriptor. </summary>
     public VkDescriptorType type;
 
-    /// <summary>
-    ///     descriptorCount is the number of descriptors of that type to allocate. If type is
-    ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK then descriptorCount is the number of bytes to allocate for descriptors of
-    ///     this type.
-    /// </summary>
+    /// <summary> descriptorCount is the number of descriptors of that type to allocate. If type is VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK then descriptorCount is the number of bytes to allocate for descriptors of this type. </summary>
     public uint descriptorCount;
 }

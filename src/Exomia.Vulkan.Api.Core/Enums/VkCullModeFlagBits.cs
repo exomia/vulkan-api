@@ -15,20 +15,20 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkCullModeFlagBits - Bitmask controlling triangle culling -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCullModeFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCullModeFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCullModeFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCullModeFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkCullModeFlagBits
 {
-    /// <summary>VK_CULL_MODE_NONE specifies that no triangles are discarded</summary>
+    /// <summary> VK_CULL_MODE_NONE specifies that no triangles are discarded </summary>
     VK_CULL_MODE_NONE = 0,
 
-    /// <summary>VK_CULL_MODE_FRONT_BIT specifies that front-facing triangles are discarded</summary>
+    /// <summary> VK_CULL_MODE_FRONT_BIT specifies that front-facing triangles are discarded </summary>
     VK_CULL_MODE_FRONT_BIT = 0x1,
 
-    /// <summary>VK_CULL_MODE_BACK_BIT specifies that back-facing triangles are discarded</summary>
+    /// <summary> VK_CULL_MODE_BACK_BIT specifies that back-facing triangles are discarded </summary>
     VK_CULL_MODE_BACK_BIT = 0x2,
 
-    /// <summary>VK_CULL_MODE_FRONT_AND_BACK specifies that all triangles are discarded.</summary>
+    /// <summary> VK_CULL_MODE_FRONT_AND_BACK specifies that all triangles are discarded. </summary>
     VK_CULL_MODE_FRONT_AND_BACK = 0x00000003
 }

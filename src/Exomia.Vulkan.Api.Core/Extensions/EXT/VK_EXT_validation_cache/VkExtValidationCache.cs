@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtValidationCache;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_validation_cache - device extension (nr. 161) - author 'GOOGLE' [platform '' | contact 'Cort Stratton
-///     @cdwfs']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_validation_cache.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_validation_cache.html</a>
+///     VK_EXT_validation_cache - device extension (nr. 161) - author 'GOOGLE' [platform '' | contact 'Cort Stratton @cdwfs']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_validation_cache.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_validation_cache.html </a>
 /// </summary>
 public static unsafe class VkExtValidationCache
 {
@@ -31,41 +31,32 @@ public static unsafe class VkExtValidationCache
     /// <summary> The extension name. </summary>
     public const string VK_EXT_VALIDATION_CACHE_EXTENSION_NAME = "VK_EXT_validation_cache";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_VALIDATION_CACHE_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_VALIDATION_CACHE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_VALIDATION_CACHE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_VALIDATION_CACHE_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u565f\u4c41\u4449\u5441\u4f49\u5f4e\u4143\u4843\u5f45\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
     ///     vkCreateValidationCacheEXT - Creates a new validation cache -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateValidationCacheEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateValidationCacheEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateValidationCacheEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateValidationCacheEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that creates the validation cache object.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkValidationCacheCreateInfoEXTstructure containing the initial
-    ///     parameters for the validation cache object.
-    /// </param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
-    /// <param name="pValidationCache">
-    ///     pValidationCache is a pointer to a VkValidationCacheEXThandle in which the resulting
-    ///     validation cache object is returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that creates the validation cache object. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkValidationCacheCreateInfoEXTstructure containing the initial parameters for the validation cache object. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
+    /// <param name="pValidationCache"> pValidationCache is a pointer to a VkValidationCacheEXThandle in which the resulting validation cache object is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -78,11 +69,11 @@ public static unsafe class VkExtValidationCache
 
     /// <summary>
     ///     vkDestroyValidationCacheEXT - Destroy a validation cache object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyValidationCacheEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyValidationCacheEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyValidationCacheEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyValidationCacheEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that destroys the validation cache object.</param>
-    /// <param name="validationCache">validationCache is the handle of the validation cache to destroy.</param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
+    /// <param name="device"> device is the logical device that destroys the validation cache object. </param>
+    /// <param name="validationCache"> validationCache is the handle of the validation cache to destroy. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkValidationCacheEXT /*validationCache*/,
@@ -91,22 +82,20 @@ public static unsafe class VkExtValidationCache
 
     /// <summary>
     ///     vkMergeValidationCachesEXT - Combine the data stores of validation caches -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkMergeValidationCachesEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkMergeValidationCachesEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkMergeValidationCachesEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkMergeValidationCachesEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the validation cache objects.</param>
-    /// <param name="dstCache">dstCache is the handle of the validation cache to merge results into.</param>
-    /// <param name="srcCacheCount">srcCacheCount is the length of the pSrcCaches array.</param>
-    /// <param name="pSrcCaches">
-    ///     pSrcCaches is a pointer to an array of validation cache handles, which will be merged into
-    ///     dstCache. The previous contents of dstCache are included after the merge.
-    /// </param>
+    /// <param name="device"> device is the logical device that owns the validation cache objects. </param>
+    /// <param name="dstCache"> dstCache is the handle of the validation cache to merge results into. </param>
+    /// <param name="srcCacheCount"> srcCacheCount is the length of the pSrcCaches array. </param>
+    /// <param name="pSrcCaches"> pSrcCaches is a pointer to an array of validation cache handles, which will be merged into dstCache. The previous contents of dstCache are included after the merge. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -119,22 +108,20 @@ public static unsafe class VkExtValidationCache
 
     /// <summary>
     ///     vkGetValidationCacheDataEXT - Get the data store from a validation cache -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetValidationCacheDataEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetValidationCacheDataEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetValidationCacheDataEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetValidationCacheDataEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the validation cache.</param>
-    /// <param name="validationCache">validationCache is the validation cache to retrieve data from.</param>
-    /// <param name="pDataSize">
-    ///     pDataSize is a pointer to a value related to the amount of data in the validation cache, as
-    ///     described below.
-    /// </param>
-    /// <param name="pData">pData is either NULL or a pointer to a buffer.</param>
+    /// <param name="device"> device is the logical device that owns the validation cache. </param>
+    /// <param name="validationCache"> validationCache is the validation cache to retrieve data from. </param>
+    /// <param name="pDataSize"> pDataSize is a pointer to a value related to the amount of data in the validation cache, as described below. </param>
+    /// <param name="pData"> pData is either NULL or a pointer to a buffer. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -151,16 +138,16 @@ public static unsafe class VkExtValidationCache
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateValidationCacheEXT</description>
+    ///             <description> vkCreateValidationCacheEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyValidationCacheEXT</description>
+    ///             <description> vkDestroyValidationCacheEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkMergeValidationCachesEXT</description>
+    ///             <description> vkMergeValidationCachesEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetValidationCacheDataEXT</description>
+    ///             <description> vkGetValidationCacheDataEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

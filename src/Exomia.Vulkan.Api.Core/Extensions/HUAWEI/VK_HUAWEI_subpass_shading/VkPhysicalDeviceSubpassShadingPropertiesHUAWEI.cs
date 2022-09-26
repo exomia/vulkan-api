@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceSubpassShadingPropertiesHUAWEI - Structure describing subpass shading properties supported by an
-///     implementation -
+///     VkPhysicalDeviceSubpassShadingPropertiesHUAWEI - Structure describing subpass shading properties supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubpassShadingPropertiesHUAWEI.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubpassShadingPropertiesHUAWEI.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,17 +37,12 @@ public unsafe struct VkPhysicalDeviceSubpassShadingPropertiesHUAWEI
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     maxSubpassShadingWorkgroupSizeAspectRatio indicates the maximum ratio between the width and height of the
-    ///     portion of the subpass shading shader workgroup size. maxSubpassShadingWorkgroupSizeAspectRatio must be a
-    ///     power-of-two value, and must be less than or equal to max(WorkgroupSize.x / WorkgroupSize.y, WorkgroupSize.y /
-    ///     WorkgroupSize.x).
-    /// </summary>
+    /// <summary> maxSubpassShadingWorkgroupSizeAspectRatio indicates the maximum ratio between the width and height of the portion of the subpass shading shader workgroup size. maxSubpassShadingWorkgroupSizeAspectRatio must be a power-of-two value, and must be less than or equal to max(WorkgroupSize.x / WorkgroupSize.y, WorkgroupSize.y / WorkgroupSize.x). </summary>
     public uint maxSubpassShadingWorkgroupSizeAspectRatio;
 }

@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkQueueFamilyProperties2</description>
+///             <term> structextends </term><description> VkQueueFamilyProperties2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,22 +34,15 @@ public unsafe struct VkQueueFamilyGlobalPriorityPropertiesKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     priorityCount is the number of supported global queue priorities in this queue family, and it must be greater
-    ///     than 0.
-    /// </summary>
+    /// <summary> priorityCount is the number of supported global queue priorities in this queue family, and it must be greater than 0. </summary>
     public uint priorityCount;
 
-    /// <summary>
-    ///     priorities is an array of VK_MAX_GLOBAL_PRIORITY_SIZE_EXTVkQueueGlobalPriorityEXT enums representing all
-    ///     supported global queue priorities in this queue family. The first priorityCount elements of the array will be
-    ///     valid.
-    /// </summary>
+    /// <summary> priorities is an array of VK_MAX_GLOBAL_PRIORITY_SIZE_EXTVkQueueGlobalPriorityEXT enums representing all supported global queue priorities in this queue family. The first priorityCount elements of the array will be valid. </summary>
     public VkArray16<VkQueueGlobalPriorityKHR> priorities;
 }

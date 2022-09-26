@@ -14,14 +14,13 @@
 namespace Exomia.Vulkan.Api.Metal;
 
 /// <summary>
-///     VkImportMetalIOSurfaceInfoEXT - Structure that identifies a VkImage object and corresponding Metal
-///     IOSurfaceRef object to use. -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalIOSurfaceInfoEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalIOSurfaceInfoEXT.html</a>
+///     VkImportMetalIOSurfaceInfoEXT - Structure that identifies a VkImage object and corresponding Metal IOSurfaceRef object to use. -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalIOSurfaceInfoEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalIOSurfaceInfoEXT.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkImageCreateInfo</description>
+///             <term> structextends </term><description> VkImageCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -32,12 +31,12 @@ public unsafe struct VkImportMetalIOSurfaceInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMPORT_METAL_IO_SURFACE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>ioSurface is VK_NULL_HANDLE or the Metal IOSurfaceRef object that is to underlie the VkImage.</summary>
+    /// <summary> ioSurface is VK_NULL_HANDLE or the Metal IOSurfaceRef object that is to underlie the VkImage. </summary>
     public IOSurfaceRef ioSurface;
 }

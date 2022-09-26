@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrAccelerationStructure;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_acceleration_structure - device extension (nr. 151) - author 'KHR' [platform '' | contact 'Daniel Koch
-///     @dgkoch']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_acceleration_structure.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_acceleration_structure.html</a>
+///     VK_KHR_acceleration_structure - device extension (nr. 151) - author 'KHR' [platform '' | contact 'Daniel Koch @dgkoch']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_acceleration_structure.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_acceleration_structure.html </a>
 /// </summary>
 [VkRequires("VK_EXT_descriptor_indexing,VK_KHR_buffer_device_address,VK_KHR_deferred_host_operations")]
 public static unsafe class VkKhrAccelerationStructure
@@ -32,16 +32,13 @@ public static unsafe class VkKhrAccelerationStructure
     /// <summary> The extension name. </summary>
     public const string VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME = "VK_KHR_acceleration_structure";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_ACCELERATION_STRUCTURE_EXTENSION_NAME_UTF8_NT =
@@ -54,24 +51,18 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateAccelerationStructureKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that creates the acceleration structure object.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkAccelerationStructureCreateInfoKHR structure containing
-    ///     parameters affecting creation of the acceleration structure.
-    /// </param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
-    /// <param name="pAccelerationStructure">
-    ///     pAccelerationStructure is a pointer to a VkAccelerationStructureKHR handle in
-    ///     which the resulting acceleration structure object is returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that creates the acceleration structure object. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkAccelerationStructureCreateInfoKHR structure containing parameters affecting creation of the acceleration structure. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
+    /// <param name="pAccelerationStructure"> pAccelerationStructure is a pointer to a VkAccelerationStructureKHR handle in which the resulting acceleration structure object is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -89,9 +80,9 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyAccelerationStructureKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that destroys the acceleration structure.</param>
-    /// <param name="accelerationStructure">accelerationStructure is the acceleration structure to destroy.</param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
+    /// <param name="device"> device is the logical device that destroys the acceleration structure. </param>
+    /// <param name="accelerationStructure"> accelerationStructure is the acceleration structure to destroy. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkAccelerationStructureKHR /*accelerationStructure*/,
@@ -105,21 +96,10 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBuildAccelerationStructuresKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="infoCount">
-    ///     infoCount is the number of acceleration structures to build. It specifies the number of the
-    ///     pInfos structures and ppBuildRangeInfos pointers that must be provided.
-    /// </param>
-    /// <param name="pInfos">
-    ///     pInfos is a pointer to an array of infoCountVkAccelerationStructureBuildGeometryInfoKHR structures
-    ///     defining the geometry used to build each acceleration structure.
-    /// </param>
-    /// <param name="ppBuildRangeInfos">
-    ///     ppBuildRangeInfos is a pointer to an array of infoCountpointers to arrays of
-    ///     VkAccelerationStructureBuildRangeInfoKHRstructures. Each ppBuildRangeInfos[i] is a pointer to an array of
-    ///     pInfos[i].geometryCountVkAccelerationStructureBuildRangeInfoKHR structures defining dynamic offsets to the
-    ///     addresses where geometry data is stored, as defined by pInfos[i].
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="infoCount"> infoCount is the number of acceleration structures to build. It specifies the number of the pInfos structures and ppBuildRangeInfos pointers that must be provided. </param>
+    /// <param name="pInfos"> pInfos is a pointer to an array of infoCountVkAccelerationStructureBuildGeometryInfoKHR structures defining the geometry used to build each acceleration structure. </param>
+    /// <param name="ppBuildRangeInfos"> ppBuildRangeInfos is a pointer to an array of infoCountpointers to arrays of VkAccelerationStructureBuildRangeInfoKHRstructures. Each ppBuildRangeInfos[i] is a pointer to an array of pInfos[i].geometryCountVkAccelerationStructureBuildRangeInfoKHR structures defining dynamic offsets to the addresses where geometry data is stored, as defined by pInfos[i]. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*infoCount*/,
@@ -128,33 +108,18 @@ public static unsafe class VkKhrAccelerationStructure
         void> vkCmdBuildAccelerationStructuresKHR = null;
 
     /// <summary>
-    ///     vkCmdBuildAccelerationStructuresIndirectKHR - Build an acceleration structure with some parameters provided on the
-    ///     device -
+    ///     vkCmdBuildAccelerationStructuresIndirectKHR - Build an acceleration structure with some parameters provided on the device -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBuildAccelerationStructuresIndirectKHR.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBuildAccelerationStructuresIndirectKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="infoCount">infoCount is the number of acceleration structures to build.</param>
-    /// <param name="pInfos">
-    ///     pInfos is a pointer to an array of infoCountVkAccelerationStructureBuildGeometryInfoKHR structures
-    ///     defining the geometry used to build each acceleration structure.
-    /// </param>
-    /// <param name="pIndirectDeviceAddresses">
-    ///     pIndirectDeviceAddresses is a pointer to an array of infoCount buffer device
-    ///     addresses which point to pInfos[i].geometryCountVkAccelerationStructureBuildRangeInfoKHR structures defining
-    ///     dynamic offsets to the addresses where geometry data is stored, as defined by pInfos[i].
-    /// </param>
-    /// <param name="pIndirectStrides">
-    ///     pIndirectStrides is a pointer to an array of infoCount byte strides between elements of
-    ///     pIndirectDeviceAddresses.
-    /// </param>
-    /// <param name="ppMaxPrimitiveCounts">
-    ///     ppMaxPrimitiveCounts is a pointer to an array of infoCountpointers to arrays of
-    ///     pInfos[i].geometryCount values indicating the maximum number of primitives that will be built by this command for
-    ///     each geometry.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="infoCount"> infoCount is the number of acceleration structures to build. </param>
+    /// <param name="pInfos"> pInfos is a pointer to an array of infoCountVkAccelerationStructureBuildGeometryInfoKHR structures defining the geometry used to build each acceleration structure. </param>
+    /// <param name="pIndirectDeviceAddresses"> pIndirectDeviceAddresses is a pointer to an array of infoCount buffer device addresses which point to pInfos[i].geometryCountVkAccelerationStructureBuildRangeInfoKHR structures defining dynamic offsets to the addresses where geometry data is stored, as defined by pInfos[i]. </param>
+    /// <param name="pIndirectStrides"> pIndirectStrides is a pointer to an array of infoCount byte strides between elements of pIndirectDeviceAddresses. </param>
+    /// <param name="ppMaxPrimitiveCounts"> ppMaxPrimitiveCounts is a pointer to an array of infoCountpointers to arrays of pInfos[i].geometryCount values indicating the maximum number of primitives that will be built by this command for each geometry. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*infoCount*/,
@@ -171,33 +136,20 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBuildAccelerationStructuresKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the VkDevice for which the acceleration structures are being built.</param>
-    /// <param name="deferredOperation">
-    ///     deferredOperation is an optional VkDeferredOperationKHR to request deferral for this
-    ///     command.
-    /// </param>
-    /// <param name="infoCount">
-    ///     infoCount is the number of acceleration structures to build. It specifies the number of the
-    ///     pInfos structures and ppBuildRangeInfos pointers that must be provided.
-    /// </param>
-    /// <param name="pInfos">
-    ///     pInfos is a pointer to an array of infoCountVkAccelerationStructureBuildGeometryInfoKHR structures
-    ///     defining the geometry used to build each acceleration structure.
-    /// </param>
-    /// <param name="ppBuildRangeInfos">
-    ///     ppBuildRangeInfos is a pointer to an array of infoCountpointers to arrays of
-    ///     VkAccelerationStructureBuildRangeInfoKHRstructures. Each ppBuildRangeInfos[i] is a pointer to an array of
-    ///     pInfos[i].geometryCountVkAccelerationStructureBuildRangeInfoKHR structures defining dynamic offsets to the
-    ///     addresses where geometry data is stored, as defined by pInfos[i].
-    /// </param>
+    /// <param name="device"> device is the VkDevice for which the acceleration structures are being built. </param>
+    /// <param name="deferredOperation"> deferredOperation is an optional VkDeferredOperationKHR to request deferral for this command. </param>
+    /// <param name="infoCount"> infoCount is the number of acceleration structures to build. It specifies the number of the pInfos structures and ppBuildRangeInfos pointers that must be provided. </param>
+    /// <param name="pInfos"> pInfos is a pointer to an array of infoCountVkAccelerationStructureBuildGeometryInfoKHR structures defining the geometry used to build each acceleration structure. </param>
+    /// <param name="ppBuildRangeInfos"> ppBuildRangeInfos is a pointer to an array of infoCountpointers to arrays of VkAccelerationStructureBuildRangeInfoKHRstructures. Each ppBuildRangeInfos[i] is a pointer to an array of pInfos[i].geometryCountVkAccelerationStructureBuildRangeInfoKHR structures defining dynamic offsets to the addresses where geometry data is stored, as defined by pInfos[i]. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term>
-    ///             <description>VK_SUCCESS,VK_OPERATION_DEFERRED_KHR,VK_OPERATION_NOT_DEFERRED_KHR</description>
+    ///             <term> successcodes </term>
+    ///             <description> VK_SUCCESS,VK_OPERATION_DEFERRED_KHR,VK_OPERATION_NOT_DEFERRED_KHR </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -211,22 +163,20 @@ public static unsafe class VkKhrAccelerationStructure
 
     /// <summary>
     ///     vkCopyAccelerationStructureKHR - Copy an acceleration structure on the host -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCopyAccelerationStructureKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCopyAccelerationStructureKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCopyAccelerationStructureKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCopyAccelerationStructureKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the device which owns the acceleration structures.</param>
-    /// <param name="deferredOperation">
-    ///     deferredOperation is an optional VkDeferredOperationKHR to request deferral for this
-    ///     command.
-    /// </param>
-    /// <param name="pInfo">pInfo is a pointer to a VkCopyAccelerationStructureInfoKHRstructure defining the copy operation.</param>
+    /// <param name="device"> device is the device which owns the acceleration structures. </param>
+    /// <param name="deferredOperation"> deferredOperation is an optional VkDeferredOperationKHR to request deferral for this command. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkCopyAccelerationStructureInfoKHRstructure defining the copy operation. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term>
-    ///             <description>VK_SUCCESS,VK_OPERATION_DEFERRED_KHR,VK_OPERATION_NOT_DEFERRED_KHR</description>
+    ///             <term> successcodes </term>
+    ///             <description> VK_SUCCESS,VK_OPERATION_DEFERRED_KHR,VK_OPERATION_NOT_DEFERRED_KHR </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -243,23 +193,18 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCopyAccelerationStructureToMemoryKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device which owns pInfo-&gt;src.</param>
-    /// <param name="deferredOperation">
-    ///     deferredOperation is an optional VkDeferredOperationKHR to request deferral for this
-    ///     command.
-    /// </param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkCopyAccelerationStructureToMemoryInfoKHR structure defining the copy
-    ///     operation.
-    /// </param>
+    /// <param name="device"> device is the device which owns pInfo-&gt;src. </param>
+    /// <param name="deferredOperation"> deferredOperation is an optional VkDeferredOperationKHR to request deferral for this command. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkCopyAccelerationStructureToMemoryInfoKHR structure defining the copy operation. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term>
-    ///             <description>VK_SUCCESS,VK_OPERATION_DEFERRED_KHR,VK_OPERATION_NOT_DEFERRED_KHR</description>
+    ///             <term> successcodes </term>
+    ///             <description> VK_SUCCESS,VK_OPERATION_DEFERRED_KHR,VK_OPERATION_NOT_DEFERRED_KHR </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -276,23 +221,18 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCopyMemoryToAccelerationStructureKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device which owns pInfo-&gt;dst.</param>
-    /// <param name="deferredOperation">
-    ///     deferredOperation is an optional VkDeferredOperationKHR to request deferral for this
-    ///     command.
-    /// </param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkCopyMemoryToAccelerationStructureInfoKHR structure defining the copy
-    ///     operation.
-    /// </param>
+    /// <param name="device"> device is the device which owns pInfo-&gt;dst. </param>
+    /// <param name="deferredOperation"> deferredOperation is an optional VkDeferredOperationKHR to request deferral for this command. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkCopyMemoryToAccelerationStructureInfoKHR structure defining the copy operation. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term>
-    ///             <description>VK_SUCCESS,VK_OPERATION_DEFERRED_KHR,VK_OPERATION_NOT_DEFERRED_KHR</description>
+    ///             <term> successcodes </term>
+    ///             <description> VK_SUCCESS,VK_OPERATION_DEFERRED_KHR,VK_OPERATION_NOT_DEFERRED_KHR </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -309,26 +249,21 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkWriteAccelerationStructuresPropertiesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device which owns the acceleration structures in pAccelerationStructures.</param>
-    /// <param name="accelerationStructureCount">
-    ///     accelerationStructureCount is the count of acceleration structures for which
-    ///     to query the property.
-    /// </param>
-    /// <param name="pAccelerationStructures">
-    ///     pAccelerationStructures is a pointer to an array of existing previously built
-    ///     acceleration structures.
-    /// </param>
-    /// <param name="queryType">queryType is a VkQueryType value specifying the property to be queried.</param>
-    /// <param name="dataSize">dataSize is the size in bytes of the buffer pointed to by pData.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the results will be written.</param>
-    /// <param name="stride">stride is the stride in bytes between results for individual queries within pData.</param>
+    /// <param name="device"> device is the device which owns the acceleration structures in pAccelerationStructures. </param>
+    /// <param name="accelerationStructureCount"> accelerationStructureCount is the count of acceleration structures for which to query the property. </param>
+    /// <param name="pAccelerationStructures"> pAccelerationStructures is a pointer to an array of existing previously built acceleration structures. </param>
+    /// <param name="queryType"> queryType is a VkQueryType value specifying the property to be queried. </param>
+    /// <param name="dataSize"> dataSize is the size in bytes of the buffer pointed to by pData. </param>
+    /// <param name="pData"> pData is a pointer to a user-allocated buffer where the results will be written. </param>
+    /// <param name="stride"> stride is the stride in bytes between results for individual queries within pData. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -349,8 +284,8 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyAccelerationStructureKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pInfo">pInfo is a pointer to a VkCopyAccelerationStructureInfoKHRstructure defining the copy operation.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkCopyAccelerationStructureInfoKHRstructure defining the copy operation. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkCopyAccelerationStructureInfoKHR* /*pInfo*/,
@@ -363,11 +298,8 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyAccelerationStructureToMemoryKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pInfo">
-    ///     pInfo is an a pointer to a VkCopyAccelerationStructureToMemoryInfoKHR structure defining the copy
-    ///     operation.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pInfo"> pInfo is an a pointer to a VkCopyAccelerationStructureToMemoryInfoKHR structure defining the copy operation. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkCopyAccelerationStructureToMemoryInfoKHR* /*pInfo*/,
@@ -380,11 +312,8 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyMemoryToAccelerationStructureKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkCopyMemoryToAccelerationStructureInfoKHR structure defining the copy
-    ///     operation.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkCopyMemoryToAccelerationStructureInfoKHR structure defining the copy operation. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkCopyMemoryToAccelerationStructureInfoKHR* /*pInfo*/,
@@ -397,11 +326,8 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureDeviceAddressKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that the acceleration structure was created on.</param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkAccelerationStructureDeviceAddressInfoKHR structure specifying the
-    ///     acceleration structure to retrieve an address for.
-    /// </param>
+    /// <param name="device"> device is the logical device that the acceleration structure was created on. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkAccelerationStructureDeviceAddressInfoKHR structure specifying the acceleration structure to retrieve an address for. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkAccelerationStructureDeviceAddressInfoKHR* /*pInfo*/,
@@ -414,21 +340,12 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="accelerationStructureCount">
-    ///     accelerationStructureCount is the count of acceleration structures for which
-    ///     to query the property.
-    /// </param>
-    /// <param name="pAccelerationStructures">
-    ///     pAccelerationStructures is a pointer to an array of existing previously built
-    ///     acceleration structures.
-    /// </param>
-    /// <param name="queryType">queryType is a VkQueryType value specifying the type of queries managed by the pool.</param>
-    /// <param name="queryPool">queryPool is the query pool that will manage the results of the query.</param>
-    /// <param name="firstQuery">
-    ///     firstQuery is the first query index within the query pool that will contain the
-    ///     accelerationStructureCount number of results.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="accelerationStructureCount"> accelerationStructureCount is the count of acceleration structures for which to query the property. </param>
+    /// <param name="pAccelerationStructures"> pAccelerationStructures is a pointer to an array of existing previously built acceleration structures. </param>
+    /// <param name="queryType"> queryType is a VkQueryType value specifying the type of queries managed by the pool. </param>
+    /// <param name="queryPool"> queryPool is the query pool that will manage the results of the query. </param>
+    /// <param name="firstQuery"> firstQuery is the first query index within the query pool that will contain the accelerationStructureCount number of results. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*accelerationStructureCount*/,
@@ -439,22 +356,15 @@ public static unsafe class VkKhrAccelerationStructure
         void> vkCmdWriteAccelerationStructuresPropertiesKHR = null;
 
     /// <summary>
-    ///     vkGetDeviceAccelerationStructureCompatibilityKHR - Check if a serialized acceleration structure is compatible with
-    ///     the current device -
+    ///     vkGetDeviceAccelerationStructureCompatibilityKHR - Check if a serialized acceleration structure is compatible with the current device -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceAccelerationStructureCompatibilityKHR.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceAccelerationStructureCompatibilityKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device to check the version against.</param>
-    /// <param name="pVersionInfo">
-    ///     pVersionInfo is a pointer to a VkAccelerationStructureVersionInfoKHR structure specifying
-    ///     version information to check against the device.
-    /// </param>
-    /// <param name="pCompatibility">
-    ///     pCompatibility is a pointer to a VkAccelerationStructureCompatibilityKHR value in which
-    ///     compatibility information is returned.
-    /// </param>
+    /// <param name="device"> device is the device to check the version against. </param>
+    /// <param name="pVersionInfo"> pVersionInfo is a pointer to a VkAccelerationStructureVersionInfoKHR structure specifying version information to check against the device. </param>
+    /// <param name="pCompatibility"> pCompatibility is a pointer to a VkAccelerationStructureCompatibilityKHR value in which compatibility information is returned. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkAccelerationStructureVersionInfoKHR* /*pVersionInfo*/,
@@ -468,21 +378,11 @@ public static unsafe class VkKhrAccelerationStructure
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureBuildSizesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that will be used for creating the acceleration structure.</param>
-    /// <param name="buildType">buildType defines whether host or device operations (or both) are being queried for.</param>
-    /// <param name="pBuildInfo">
-    ///     pBuildInfo is a pointer to a VkAccelerationStructureBuildGeometryInfoKHR structure describing
-    ///     parameters of a build operation.
-    /// </param>
-    /// <param name="pMaxPrimitiveCounts">
-    ///     pMaxPrimitiveCounts is a pointer to an array of pBuildInfo-&gt;geometryCount uint32_t
-    ///     values defining the number of primitives built into each geometry.
-    /// </param>
-    /// <param name="pSizeInfo">
-    ///     pSizeInfo is a pointer to a VkAccelerationStructureBuildSizesInfoKHR structure which returns
-    ///     the size required for an acceleration structure and the sizes required for the scratch buffers, given the build
-    ///     parameters.
-    /// </param>
+    /// <param name="device"> device is the logical device that will be used for creating the acceleration structure. </param>
+    /// <param name="buildType"> buildType defines whether host or device operations (or both) are being queried for. </param>
+    /// <param name="pBuildInfo"> pBuildInfo is a pointer to a VkAccelerationStructureBuildGeometryInfoKHR structure describing parameters of a build operation. </param>
+    /// <param name="pMaxPrimitiveCounts"> pMaxPrimitiveCounts is a pointer to an array of pBuildInfo-&gt;geometryCount uint32_t values defining the number of primitives built into each geometry. </param>
+    /// <param name="pSizeInfo"> pSizeInfo is a pointer to a VkAccelerationStructureBuildSizesInfoKHR structure which returns the size required for an acceleration structure and the sizes required for the scratch buffers, given the build parameters. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkAccelerationStructureBuildTypeKHR /*buildType*/,
@@ -497,52 +397,52 @@ public static unsafe class VkKhrAccelerationStructure
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateAccelerationStructureKHR</description>
+    ///             <description> vkCreateAccelerationStructureKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyAccelerationStructureKHR</description>
+    ///             <description> vkDestroyAccelerationStructureKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdBuildAccelerationStructuresKHR</description>
+    ///             <description> vkCmdBuildAccelerationStructuresKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdBuildAccelerationStructuresIndirectKHR</description>
+    ///             <description> vkCmdBuildAccelerationStructuresIndirectKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkBuildAccelerationStructuresKHR</description>
+    ///             <description> vkBuildAccelerationStructuresKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCopyAccelerationStructureKHR</description>
+    ///             <description> vkCopyAccelerationStructureKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCopyAccelerationStructureToMemoryKHR</description>
+    ///             <description> vkCopyAccelerationStructureToMemoryKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCopyMemoryToAccelerationStructureKHR</description>
+    ///             <description> vkCopyMemoryToAccelerationStructureKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkWriteAccelerationStructuresPropertiesKHR</description>
+    ///             <description> vkWriteAccelerationStructuresPropertiesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdCopyAccelerationStructureKHR</description>
+    ///             <description> vkCmdCopyAccelerationStructureKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdCopyAccelerationStructureToMemoryKHR</description>
+    ///             <description> vkCmdCopyAccelerationStructureToMemoryKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdCopyMemoryToAccelerationStructureKHR</description>
+    ///             <description> vkCmdCopyMemoryToAccelerationStructureKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetAccelerationStructureDeviceAddressKHR</description>
+    ///             <description> vkGetAccelerationStructureDeviceAddressKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdWriteAccelerationStructuresPropertiesKHR</description>
+    ///             <description> vkCmdWriteAccelerationStructuresPropertiesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDeviceAccelerationStructureCompatibilityKHR</description>
+    ///             <description> vkGetDeviceAccelerationStructureCompatibilityKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetAccelerationStructureBuildSizesKHR</description>
+    ///             <description> vkGetAccelerationStructureBuildSizesKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

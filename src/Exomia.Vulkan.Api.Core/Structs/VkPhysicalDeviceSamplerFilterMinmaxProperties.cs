@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceSamplerFilterMinmaxProperties - Structure describing sampler filter minmax limits that can be
-///     supported by an implementation -
+///     VkPhysicalDeviceSamplerFilterMinmaxProperties - Structure describing sampler filter minmax limits that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSamplerFilterMinmaxProperties.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSamplerFilterMinmaxProperties.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,21 +37,15 @@ public unsafe struct VkPhysicalDeviceSamplerFilterMinmaxProperties
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     filterMinmaxSingleComponentFormats is a boolean value indicating whether a minimum set of required formats
-    ///     support min/max filtering.
-    /// </summary>
+    /// <summary> filterMinmaxSingleComponentFormats is a boolean value indicating whether a minimum set of required formats support min/max filtering. </summary>
     public VkBool32 filterMinmaxSingleComponentFormats;
 
-    /// <summary>
-    ///     filterMinmaxImageComponentMapping is a boolean value indicating whether the implementation supports
-    ///     non-identity component mapping of the image when doing min/max filtering.
-    /// </summary>
+    /// <summary> filterMinmaxImageComponentMapping is a boolean value indicating whether the implementation supports non-identity component mapping of the image when doing min/max filtering. </summary>
     public VkBool32 filterMinmaxImageComponentMapping;
 }

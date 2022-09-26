@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtAcquireDrmDisplay;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_acquire_drm_display - instance extension (nr. 286) - author 'EXT' [platform '' | contact 'Drew DeVault
-///     sir@cmpwn.com']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_drm_display.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_drm_display.html</a>
+///     VK_EXT_acquire_drm_display - instance extension (nr. 286) - author 'EXT' [platform '' | contact 'Drew DeVault sir@cmpwn.com']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_drm_display.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_drm_display.html </a>
 /// </summary>
 [VkRequires("VK_EXT_direct_mode_display")]
 public static unsafe class VkExtAcquireDrmDisplay
@@ -32,16 +32,13 @@ public static unsafe class VkExtAcquireDrmDisplay
     /// <summary> The extension name. </summary>
     public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME = "VK_EXT_acquire_drm_display";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_ACQUIRE_DRM_DISPLAY_EXTENSION_NAME_UTF8_NT =
@@ -49,18 +46,18 @@ public static unsafe class VkExtAcquireDrmDisplay
 
     /// <summary>
     ///     vkAcquireDrmDisplayEXT - Acquire access to a VkDisplayKHR using DRM -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireDrmDisplayEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireDrmDisplayEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireDrmDisplayEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireDrmDisplayEXT.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice The physical device the display is on.</param>
-    /// <param name="drmFd">drmFd DRM primary file descriptor.</param>
-    /// <param name="display">display The display the caller wishes Vulkan to control.</param>
+    /// <param name="physicalDevice"> physicalDevice The physical device the display is on. </param>
+    /// <param name="drmFd"> drmFd DRM primary file descriptor. </param>
+    /// <param name="display"> display The display the caller wishes Vulkan to control. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -72,20 +69,20 @@ public static unsafe class VkExtAcquireDrmDisplay
 
     /// <summary>
     ///     vkGetDrmDisplayEXT - Query the VkDisplayKHR corresponding to a DRM connector ID -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDrmDisplayEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDrmDisplayEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDrmDisplayEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDrmDisplayEXT.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice The physical device to query the display from.</param>
-    /// <param name="drmFd">drmFd DRM primary file descriptor.</param>
-    /// <param name="connectorId">connectorId Identifier of the specified DRM connector.</param>
-    /// <param name="display">display The corresponding VkDisplayKHR handle will be returned here.</param>
+    /// <param name="physicalDevice"> physicalDevice The physical device to query the display from. </param>
+    /// <param name="drmFd"> drmFd DRM primary file descriptor. </param>
+    /// <param name="connectorId"> connectorId Identifier of the specified DRM connector. </param>
+    /// <param name="display"> display The corresponding VkDisplayKHR handle will be returned here. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -102,10 +99,10 @@ public static unsafe class VkExtAcquireDrmDisplay
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkAcquireDrmDisplayEXT</description>
+    ///             <description> vkAcquireDrmDisplayEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDrmDisplayEXT</description>
+    ///             <description> vkGetDrmDisplayEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

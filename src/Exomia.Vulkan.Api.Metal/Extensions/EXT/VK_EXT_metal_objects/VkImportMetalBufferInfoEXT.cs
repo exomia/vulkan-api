@@ -14,14 +14,13 @@
 namespace Exomia.Vulkan.Api.Metal;
 
 /// <summary>
-///     VkImportMetalBufferInfoEXT - Structure that identifies a Metal MTLBuffer object to use when creating a
-///     VkDeviceMemory object. -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalBufferInfoEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalBufferInfoEXT.html</a>
+///     VkImportMetalBufferInfoEXT - Structure that identifies a Metal MTLBuffer object to use when creating a VkDeviceMemory object. -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalBufferInfoEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMetalBufferInfoEXT.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkMemoryAllocateInfo</description>
+///             <term> structextends </term><description> VkMemoryAllocateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -32,12 +31,12 @@ public unsafe struct VkImportMetalBufferInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMPORT_METAL_BUFFER_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>mtlBuffer is the Metal id&lt;MTLBuffer&gt; object that is to underlie the VkDeviceMemory.</summary>
+    /// <summary> mtlBuffer is the Metal id&lt;MTLBuffer&gt; object that is to underlie the VkDeviceMemory. </summary>
     public MTLBuffer_id mtlBuffer;
 }

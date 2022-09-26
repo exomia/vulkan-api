@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrSharedPresentableImage;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_shared_presentable_image - device extension (nr. 112) - author 'KHR' [platform '' | contact 'Alon Or-bach
-///     @alonorbach']<br />
+///     VK_KHR_shared_presentable_image - device extension (nr. 112) - author 'KHR' [platform '' | contact 'Alon Or-bach @alonorbach']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shared_presentable_image.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shared_presentable_image.html
@@ -35,16 +35,13 @@ public static unsafe class VkKhrSharedPresentableImage
     /// <summary> The extension name. </summary>
     public const string VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME = "VK_KHR_shared_presentable_image";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME_UTF8_NT =
@@ -52,18 +49,18 @@ public static unsafe class VkKhrSharedPresentableImage
 
     /// <summary>
     ///     vkGetSwapchainStatusKHR - Get a swapchain's status -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainStatusKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainStatusKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainStatusKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainStatusKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the device associated with swapchain.</param>
-    /// <param name="swapchain">swapchain is the swapchain to query.</param>
+    /// <param name="device"> device is the device associated with swapchain. </param>
+    /// <param name="swapchain"> swapchain is the swapchain to query. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_SUBOPTIMAL_KHR</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_SUBOPTIMAL_KHR </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR,VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -78,7 +75,7 @@ public static unsafe class VkKhrSharedPresentableImage
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetSwapchainStatusKHR</description>
+    ///             <description> vkGetSwapchainStatusKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

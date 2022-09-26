@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,27 +34,18 @@ public unsafe struct VkPhysicalDeviceVulkanMemoryModelFeatures
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     vulkanMemoryModelindicates whether the Vulkan Memory Model is supported, as defined in Vulkan Memory Model.
-    ///     This also indicates whether shader modules can declare the VulkanMemoryModel capability.
-    /// </summary>
+    /// <summary> vulkanMemoryModelindicates whether the Vulkan Memory Model is supported, as defined in Vulkan Memory Model. This also indicates whether shader modules can declare the VulkanMemoryModel capability. </summary>
     public VkBool32 vulkanMemoryModel;
 
-    /// <summary>
-    ///     vulkanMemoryModelDeviceScope indicates whether the Vulkan Memory Model can use Device scope synchronization.
-    ///     This also indicates whether shader modules can declare the VulkanMemoryModelDeviceScope capability.
-    /// </summary>
+    /// <summary> vulkanMemoryModelDeviceScope indicates whether the Vulkan Memory Model can use Device scope synchronization. This also indicates whether shader modules can declare the VulkanMemoryModelDeviceScope capability. </summary>
     public VkBool32 vulkanMemoryModelDeviceScope;
 
-    /// <summary>
-    ///     vulkanMemoryModelAvailabilityVisibilityChains indicates whether the Vulkan Memory Model can use availability
-    ///     and visibility chains with more than one element.
-    /// </summary>
+    /// <summary> vulkanMemoryModelAvailabilityVisibilityChains indicates whether the Vulkan Memory Model can use availability and visibility chains with more than one element. </summary>
     public VkBool32 vulkanMemoryModelAvailabilityVisibilityChains;
 }

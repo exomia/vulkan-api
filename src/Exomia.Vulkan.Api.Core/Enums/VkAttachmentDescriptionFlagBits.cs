@@ -23,9 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 [Flags]
 public enum VkAttachmentDescriptionFlagBits
 {
-    /// <summary>
-    ///     VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT specifies that the attachment aliases the same device memory as other
-    ///     attachments.
-    /// </summary>
+    /// <summary> VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT specifies that the attachment aliases the same device memory as other attachments. </summary>
     VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT = 0x1
 }

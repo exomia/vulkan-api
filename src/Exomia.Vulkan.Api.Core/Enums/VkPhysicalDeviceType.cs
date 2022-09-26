@@ -15,28 +15,22 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkPhysicalDeviceType - Supported physical device types -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceType.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceType.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceType.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceType.html </a>
 /// </summary>
 public enum VkPhysicalDeviceType
 {
-    /// <summary>VK_PHYSICAL_DEVICE_TYPE_OTHER - the device does not match any other available types.</summary>
+    /// <summary> VK_PHYSICAL_DEVICE_TYPE_OTHER - the device does not match any other available types. </summary>
     VK_PHYSICAL_DEVICE_TYPE_OTHER = 0,
 
-    /// <summary>
-    ///     VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU - the device is typically one embedded in or tightly coupled with the
-    ///     host.
-    /// </summary>
+    /// <summary> VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU - the device is typically one embedded in or tightly coupled with the host. </summary>
     VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU = 1,
 
-    /// <summary>
-    ///     VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU - the device is typically a separate processor connected to the host via
-    ///     an interlink.
-    /// </summary>
+    /// <summary> VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU - the device is typically a separate processor connected to the host via an interlink. </summary>
     VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU = 2,
 
-    /// <summary>VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU - the device is typically a virtual node in a virtualization environment.</summary>
+    /// <summary> VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU - the device is typically a virtual node in a virtualization environment. </summary>
     VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU = 3,
 
-    /// <summary>VK_PHYSICAL_DEVICE_TYPE_CPU - the device is typically running on the same processors as the host.</summary>
+    /// <summary> VK_PHYSICAL_DEVICE_TYPE_CPU - the device is typically running on the same processors as the host. </summary>
     VK_PHYSICAL_DEVICE_TYPE_CPU = 4
 }

@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDisplayModeCreateInfoKHR - Structure specifying parameters of a newly created display mode object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeCreateInfoKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeCreateInfoKHR.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeCreateInfoKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeCreateInfoKHR.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkDisplayModeCreateInfoKHR
@@ -23,19 +23,15 @@ public unsafe struct VkDisplayModeCreateInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DISPLAY_MODE_CREATE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use, and must be zero.</summary>
+    /// <summary> flags is reserved for future use, and must be zero. </summary>
     public VkDisplayModeCreateFlagsKHR flags;
 
-    /// <summary>
-    ///     parameters is a VkDisplayModeParametersKHR structure describing the display parameters to use in creating the
-    ///     new mode. If the parameters are not compatible with the specified display, the implementation must return
-    ///     VK_ERROR_INITIALIZATION_FAILED.
-    /// </summary>
+    /// <summary> parameters is a VkDisplayModeParametersKHR structure describing the display parameters to use in creating the new mode. If the parameters are not compatible with the specified display, the implementation must return VK_ERROR_INITIALIZATION_FAILED. </summary>
     public VkDisplayModeParametersKHR parameters;
 }

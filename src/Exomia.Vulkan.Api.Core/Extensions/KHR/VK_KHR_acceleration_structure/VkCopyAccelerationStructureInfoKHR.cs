@@ -26,21 +26,18 @@ public unsafe struct VkCopyAccelerationStructureInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_COPY_ACCELERATION_STRUCTURE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>src is the source acceleration structure for the copy.</summary>
+    /// <summary> src is the source acceleration structure for the copy. </summary>
     public VkAccelerationStructureKHR src;
 
-    /// <summary>dst is the target acceleration structure for the copy.</summary>
+    /// <summary> dst is the target acceleration structure for the copy. </summary>
     public VkAccelerationStructureKHR dst;
 
-    /// <summary>
-    ///     mode is a VkCopyAccelerationStructureModeKHR value specifying additional operations to perform during the
-    ///     copy.
-    /// </summary>
+    /// <summary> mode is a VkCopyAccelerationStructureModeKHR value specifying additional operations to perform during the copy. </summary>
     public VkCopyAccelerationStructureModeKHR mode;
 }

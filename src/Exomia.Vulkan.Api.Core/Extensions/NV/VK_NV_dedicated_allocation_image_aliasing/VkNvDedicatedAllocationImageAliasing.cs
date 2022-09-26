@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvDedicatedAllocationImageAliasing;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_dedicated_allocation_image_aliasing - device extension (nr. 241) - author 'NVIDIA' [platform '' | contact
-///     'Nuno Subtil @nsubtil']<br />
+///     VK_NV_dedicated_allocation_image_aliasing - device extension (nr. 241) - author 'NVIDIA' [platform '' | contact 'Nuno Subtil @nsubtil']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_dedicated_allocation_image_aliasing.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_dedicated_allocation_image_aliasing.html
@@ -43,8 +43,8 @@ public static class VkNvDedicatedAllocationImageAliasing
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_DEDICATED_ALLOCATION_IMAGE_ALIASING_EXTENSION_NAME_UTF8_NT =

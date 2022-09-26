@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrDeferredHostOperations;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_deferred_host_operations - device extension (nr. 269) - author 'KHR' [platform '' | contact 'Josh Barczak
-///     @jbarczak']<br />
+///     VK_KHR_deferred_host_operations - device extension (nr. 269) - author 'KHR' [platform '' | contact 'Josh Barczak @jbarczak']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_deferred_host_operations.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_deferred_host_operations.html
@@ -34,16 +34,13 @@ public static unsafe class VkKhrDeferredHostOperations
     /// <summary> The extension name. </summary>
     public const string VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME = "VK_KHR_deferred_host_operations";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME_UTF8_NT =
@@ -51,21 +48,18 @@ public static unsafe class VkKhrDeferredHostOperations
 
     /// <summary>
     ///     vkCreateDeferredOperationKHR - Create a deferred operation handle -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDeferredOperationKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDeferredOperationKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDeferredOperationKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDeferredOperationKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the device which owns operation.</param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
-    /// <param name="pDeferredOperation">
-    ///     pDeferredOperation is a pointer to a handle in which the created
-    ///     VkDeferredOperationKHR is returned.
-    /// </param>
+    /// <param name="device"> device is the device which owns operation. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
+    /// <param name="pDeferredOperation"> pDeferredOperation is a pointer to a handle in which the created VkDeferredOperationKHR is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -77,11 +71,11 @@ public static unsafe class VkKhrDeferredHostOperations
 
     /// <summary>
     ///     vkDestroyDeferredOperationKHR - Destroy a deferred operation handle -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyDeferredOperationKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyDeferredOperationKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyDeferredOperationKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyDeferredOperationKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the device which owns operation.</param>
-    /// <param name="operation">operation is the completed operation to be destroyed.</param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
+    /// <param name="device"> device is the device which owns operation. </param>
+    /// <param name="operation"> operation is the completed operation to be destroyed. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkDeferredOperationKHR /*operation*/,
@@ -95,8 +89,8 @@ public static unsafe class VkKhrDeferredHostOperations
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeferredOperationMaxConcurrencyKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device which owns operation.</param>
-    /// <param name="operation">operation is the deferred operation to be queried.</param>
+    /// <param name="device"> device is the device which owns operation. </param>
+    /// <param name="operation"> operation is the deferred operation to be queried. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkDeferredOperationKHR /*operation*/,
@@ -109,12 +103,12 @@ public static unsafe class VkKhrDeferredHostOperations
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeferredOperationResultKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device which owns operation.</param>
-    /// <param name="operation">operation is the operation whose deferred result is being queried.</param>
+    /// <param name="device"> device is the device which owns operation. </param>
+    /// <param name="operation"> operation is the operation whose deferred result is being queried. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_NOT_READY</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_NOT_READY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -125,17 +119,18 @@ public static unsafe class VkKhrDeferredHostOperations
 
     /// <summary>
     ///     vkDeferredOperationJoinKHR - Assign a thread to a deferred operation -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDeferredOperationJoinKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDeferredOperationJoinKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDeferredOperationJoinKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDeferredOperationJoinKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the device which owns operation.</param>
-    /// <param name="operation">operation is the deferred operation that the calling thread should work on.</param>
+    /// <param name="device"> device is the device which owns operation. </param>
+    /// <param name="operation"> operation is the deferred operation that the calling thread should work on. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_THREAD_DONE_KHR,VK_THREAD_IDLE_KHR</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_THREAD_DONE_KHR,VK_THREAD_IDLE_KHR </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -150,19 +145,19 @@ public static unsafe class VkKhrDeferredHostOperations
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateDeferredOperationKHR</description>
+    ///             <description> vkCreateDeferredOperationKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyDeferredOperationKHR</description>
+    ///             <description> vkDestroyDeferredOperationKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDeferredOperationMaxConcurrencyKHR</description>
+    ///             <description> vkGetDeferredOperationMaxConcurrencyKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDeferredOperationResultKHR</description>
+    ///             <description> vkGetDeferredOperationResultKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDeferredOperationJoinKHR</description>
+    ///             <description> vkDeferredOperationJoinKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

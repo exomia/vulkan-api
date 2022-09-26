@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtDisplaySurfaceCounter;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_display_surface_counter - instance extension (nr. 91) - author 'NV' [platform '' | contact 'James Jones
-///     @cubanismo']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_display_surface_counter.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_display_surface_counter.html</a>
+///     VK_EXT_display_surface_counter - instance extension (nr. 91) - author 'NV' [platform '' | contact 'James Jones @cubanismo']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_display_surface_counter.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_display_surface_counter.html </a>
 /// </summary>
 [VkRequires("VK_KHR_display")]
 public static unsafe class VkExtDisplaySurfaceCounter
@@ -32,16 +32,13 @@ public static unsafe class VkExtDisplaySurfaceCounter
     /// <summary> The extension name. </summary>
     public const string VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME = "VK_EXT_display_surface_counter";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME_UTF8_NT =
@@ -54,23 +51,17 @@ public static unsafe class VkExtDisplaySurfaceCounter
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2EXT.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the physical device that will be associated with the swapchain to be
-    ///     created, as described for vkCreateSwapchainKHR.
-    /// </param>
-    /// <param name="surface">surface is the surface that will be associated with the swapchain.</param>
-    /// <param name="pSurfaceCapabilities">
-    ///     pSurfaceCapabilities is a pointer to a VkSurfaceCapabilities2EXT structure in which
-    ///     the capabilities are returned.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device that will be associated with the swapchain to be created, as described for vkCreateSwapchainKHR. </param>
+    /// <param name="surface"> surface is the surface that will be associated with the swapchain. </param>
+    /// <param name="pSurfaceCapabilities"> pSurfaceCapabilities is a pointer to a VkSurfaceCapabilities2EXT structure in which the capabilities are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -86,7 +77,7 @@ public static unsafe class VkExtDisplaySurfaceCounter
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSurfaceCapabilities2EXT</description>
+    ///             <description> vkGetPhysicalDeviceSurfaceCapabilities2EXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

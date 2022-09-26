@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDeviceMemory - Opaque handle to a device memory object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemory.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemory.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemory.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemory.html </a>
 /// </summary>
 public readonly unsafe struct VkDeviceMemory
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkDeviceMemory
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkDeviceMemory left, VkDeviceMemory right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkDeviceMemory
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkDeviceMemory left, VkDeviceMemory right)

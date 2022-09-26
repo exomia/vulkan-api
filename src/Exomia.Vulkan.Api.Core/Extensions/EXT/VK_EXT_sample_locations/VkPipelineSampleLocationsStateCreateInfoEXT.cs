@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPipelineMultisampleStateCreateInfo</description>
+///             <term> structextends </term><description> VkPipelineMultisampleStateCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,21 +34,15 @@ public unsafe struct VkPipelineSampleLocationsStateCreateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     sampleLocationsEnable controls whether custom sample locations are used. If sampleLocationsEnable is VK_FALSE,
-    ///     the default sample locations are used and the values specified in sampleLocationsInfoare ignored.
-    /// </summary>
+    /// <summary> sampleLocationsEnable controls whether custom sample locations are used. If sampleLocationsEnable is VK_FALSE, the default sample locations are used and the values specified in sampleLocationsInfoare ignored. </summary>
     public VkBool32 sampleLocationsEnable;
 
-    /// <summary>
-    ///     sampleLocationsInfo is the sample locations to use during rasterization if sampleLocationsEnable is VK_TRUE
-    ///     and the graphics pipeline is not created with VK_DYNAMIC_STATE_SAMPLE_LOCATIONS_EXT.
-    /// </summary>
+    /// <summary> sampleLocationsInfo is the sample locations to use during rasterization if sampleLocationsEnable is VK_TRUE and the graphics pipeline is not created with VK_DYNAMIC_STATE_SAMPLE_LOCATIONS_EXT. </summary>
     public VkSampleLocationsInfoEXT sampleLocationsInfo;
 }

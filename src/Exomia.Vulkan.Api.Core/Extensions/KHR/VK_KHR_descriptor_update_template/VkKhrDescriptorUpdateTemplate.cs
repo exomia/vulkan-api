@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrDescriptorUpdateTemplate;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_descriptor_update_template - device extension (nr. 86) - author 'KHR' [platform '' | contact 'Markus
-///     Tavenrath @mtavenrath']<br />
+///     VK_KHR_descriptor_update_template - device extension (nr. 86) - author 'KHR' [platform '' | contact 'Markus Tavenrath @mtavenrath']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_descriptor_update_template.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_descriptor_update_template.html
@@ -43,8 +43,8 @@ public static unsafe class VkKhrDescriptorUpdateTemplate
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME_UTF8_NT =
@@ -95,27 +95,17 @@ public static unsafe class VkKhrDescriptorUpdateTemplate
         void> vkUpdateDescriptorSetWithTemplateKHR = null;
 
     /// <summary>
-    ///     vkCmdPushDescriptorSetWithTemplateKHR - Pushes descriptor updates into a command buffer using a descriptor update
-    ///     template -
+    ///     vkCmdPushDescriptorSetWithTemplateKHR - Pushes descriptor updates into a command buffer using a descriptor update template -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer that the descriptors will be recorded in.</param>
-    /// <param name="descriptorUpdateTemplate">
-    ///     descriptorUpdateTemplate is a descriptor update template defining how to
-    ///     interpret the descriptor information in pData.
-    /// </param>
-    /// <param name="layout">
-    ///     layout is a VkPipelineLayout object used to program the bindings. It must be compatible with the
-    ///     layout used to create the descriptorUpdateTemplate handle.
-    /// </param>
-    /// <param name="set">
-    ///     set is the set number of the descriptor set in the pipeline layout that will be updated. This must be
-    ///     the same number used to create the descriptorUpdateTemplate handle.
-    /// </param>
-    /// <param name="pData">pData is a pointer to memory containing descriptors for the templated update.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer that the descriptors will be recorded in. </param>
+    /// <param name="descriptorUpdateTemplate"> descriptorUpdateTemplate is a descriptor update template defining how to interpret the descriptor information in pData. </param>
+    /// <param name="layout"> layout is a VkPipelineLayout object used to program the bindings. It must be compatible with the layout used to create the descriptorUpdateTemplate handle. </param>
+    /// <param name="set"> set is the set number of the descriptor set in the pipeline layout that will be updated. This must be the same number used to create the descriptorUpdateTemplate handle. </param>
+    /// <param name="pData"> pData is a pointer to memory containing descriptors for the templated update. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkDescriptorUpdateTemplate /*descriptorUpdateTemplate*/,
@@ -130,16 +120,16 @@ public static unsafe class VkKhrDescriptorUpdateTemplate
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateDescriptorUpdateTemplateKHR</description>
+    ///             <description> vkCreateDescriptorUpdateTemplateKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyDescriptorUpdateTemplateKHR</description>
+    ///             <description> vkDestroyDescriptorUpdateTemplateKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkUpdateDescriptorSetWithTemplateKHR</description>
+    ///             <description> vkUpdateDescriptorSetWithTemplateKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdPushDescriptorSetWithTemplateKHR</description>
+    ///             <description> vkCmdPushDescriptorSetWithTemplateKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

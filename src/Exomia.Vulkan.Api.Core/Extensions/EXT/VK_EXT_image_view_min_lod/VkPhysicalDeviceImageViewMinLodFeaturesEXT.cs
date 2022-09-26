@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceImageViewMinLodFeaturesEXT - Structure describing whether clamping the min lod of a image view is
-///     supported by the implementation -
+///     VkPhysicalDeviceImageViewMinLodFeaturesEXT - Structure describing whether clamping the min lod of a image view is supported by the implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageViewMinLodFeaturesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageViewMinLodFeaturesEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,16 +34,12 @@ public unsafe struct VkPhysicalDeviceImageViewMinLodFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     minLod indicates whether the implementation supports clamping the minimum LOD value during Image Level(s)
-    ///     Selection, Texel Gathering and Integer Texel Coordinate Operations with a given VkImageView by
-    ///     VkImageViewMinLodCreateInfoEXT::minLod.
-    /// </summary>
+    /// <summary> minLod indicates whether the implementation supports clamping the minimum LOD value during Image Level(s) Selection, Texel Gathering and Integer Texel Coordinate Operations with a given VkImageView by VkImageViewMinLodCreateInfoEXT::minLod. </summary>
     public VkBool32 minLod;
 }

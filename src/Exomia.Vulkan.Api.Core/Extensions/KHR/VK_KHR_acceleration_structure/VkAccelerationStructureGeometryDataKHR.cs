@@ -23,15 +23,15 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Explicit)]
 public struct VkAccelerationStructureGeometryDataKHR
 {
-    /// <summary>triangles is a VkAccelerationStructureGeometryTrianglesDataKHR structure.</summary>
+    /// <summary> triangles is a VkAccelerationStructureGeometryTrianglesDataKHR structure. </summary>
     [FieldOffset(0)]
     public VkAccelerationStructureGeometryTrianglesDataKHR triangles;
 
-    /// <summary>aabbs is a VkAccelerationStructureGeometryAabbsDataKHRstructure.</summary>
+    /// <summary> aabbs is a VkAccelerationStructureGeometryAabbsDataKHRstructure. </summary>
     [FieldOffset(0)]
     public VkAccelerationStructureGeometryAabbsDataKHR aabbs;
 
-    /// <summary>instances is a VkAccelerationStructureGeometryInstancesDataKHR structure.</summary>
+    /// <summary> instances is a VkAccelerationStructureGeometryInstancesDataKHR structure. </summary>
     [FieldOffset(0)]
     public VkAccelerationStructureGeometryInstancesDataKHR instances;
 }

@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAccelerationStructureMotionInstanceDataNV - Union specifying a acceleration structure motion instance data for
-///     building into an acceleration structure geometry -
+///     VkAccelerationStructureMotionInstanceDataNV - Union specifying a acceleration structure motion instance data for building into an acceleration structure geometry -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInstanceDataNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInstanceDataNV.html
@@ -24,21 +23,15 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Explicit)]
 public struct VkAccelerationStructureMotionInstanceDataNV
 {
-    /// <summary>staticInstance is a VkAccelerationStructureInstanceKHRstructure containing data for a static instance.</summary>
+    /// <summary> staticInstance is a VkAccelerationStructureInstanceKHRstructure containing data for a static instance. </summary>
     [FieldOffset(0)]
     public VkAccelerationStructureInstanceKHR staticInstance;
 
-    /// <summary>
-    ///     matrixMotionInstance is a VkAccelerationStructureMatrixMotionInstanceNV structure containing data for a matrix
-    ///     motion instance.
-    /// </summary>
+    /// <summary> matrixMotionInstance is a VkAccelerationStructureMatrixMotionInstanceNV structure containing data for a matrix motion instance. </summary>
     [FieldOffset(0)]
     public VkAccelerationStructureMatrixMotionInstanceNV matrixMotionInstance;
 
-    /// <summary>
-    ///     srtMotionInstance is a VkAccelerationStructureSRTMotionInstanceNV structure containing data for an SRT motion
-    ///     instance.
-    /// </summary>
+    /// <summary> srtMotionInstance is a VkAccelerationStructureSRTMotionInstanceNV structure containing data for an SRT motion instance. </summary>
     [FieldOffset(0)]
     public VkAccelerationStructureSRTMotionInstanceNV srtMotionInstance;
 }

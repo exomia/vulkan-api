@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSampler - Opaque handle to a sampler object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampler.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampler.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampler.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampler.html </a>
 /// </summary>
 public readonly unsafe struct VkSampler
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkSampler
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkSampler left, VkSampler right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkSampler
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkSampler left, VkSampler right)

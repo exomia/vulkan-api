@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelineDepthStencilStateCreateInfo - Structure specifying parameters of a newly created pipeline depth stencil
-///     state -
+///     VkPipelineDepthStencilStateCreateInfo - Structure specifying parameters of a newly created pipeline depth stencil state -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html
@@ -27,48 +26,39 @@ public unsafe struct VkPipelineDepthStencilStateCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     flags is a bitmask of VkPipelineDepthStencilStateCreateFlagBits specifying additional depth/stencil state
-    ///     information.
-    /// </summary>
+    /// <summary> flags is a bitmask of VkPipelineDepthStencilStateCreateFlagBits specifying additional depth/stencil state information. </summary>
     public VkPipelineDepthStencilStateCreateFlags flags;
 
-    /// <summary>depthTestEnable controls whether depth testingis enabled.</summary>
+    /// <summary> depthTestEnable controls whether depth testingis enabled. </summary>
     public VkBool32 depthTestEnable;
 
-    /// <summary>
-    ///     depthWriteEnable controls whether depth writes are enabled when depthTestEnable is VK_TRUE. Depth writes are
-    ///     always disabled when depthTestEnable is VK_FALSE.
-    /// </summary>
+    /// <summary> depthWriteEnable controls whether depth writes are enabled when depthTestEnable is VK_TRUE. Depth writes are always disabled when depthTestEnable is VK_FALSE. </summary>
     public VkBool32 depthWriteEnable;
 
-    /// <summary>
-    ///     depthCompareOp is a VkCompareOp value specifying the comparison operator to use in the Depth Comparison step
-    ///     of the depth test.
-    /// </summary>
+    /// <summary> depthCompareOp is a VkCompareOp value specifying the comparison operator to use in the Depth Comparison step of the depth test. </summary>
     public VkCompareOp depthCompareOp;
 
-    /// <summary>depthBoundsTestEnable controls whether depth bounds testing is enabled.</summary>
+    /// <summary> depthBoundsTestEnable controls whether depth bounds testing is enabled. </summary>
     public VkBool32 depthBoundsTestEnable;
 
-    /// <summary>stencilTestEnable controls whether stencil testing is enabled.</summary>
+    /// <summary> stencilTestEnable controls whether stencil testing is enabled. </summary>
     public VkBool32 stencilTestEnable;
 
-    /// <summary>front and back control the parameters of the stencil test.</summary>
+    /// <summary> front and back control the parameters of the stencil test. </summary>
     public VkStencilOpState front;
 
-    /// <summary>front and back control the parameters of the stencil test.</summary>
+    /// <summary> front and back control the parameters of the stencil test. </summary>
     public VkStencilOpState back;
 
-    /// <summary>minDepthBounds is the minimum depth bound used in the depth bounds test.</summary>
+    /// <summary> minDepthBounds is the minimum depth bound used in the depth bounds test. </summary>
     public float minDepthBounds;
 
-    /// <summary>maxDepthBounds is the maximum depth bound used in the depth bounds test.</summary>
+    /// <summary> maxDepthBounds is the maximum depth bound used in the depth bounds test. </summary>
     public float maxDepthBounds;
 }

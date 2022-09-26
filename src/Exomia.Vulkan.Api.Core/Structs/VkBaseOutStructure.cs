@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkBaseOutStructure - Base structure for a read-only pointer chain -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBaseOutStructure.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBaseOutStructure.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBaseOutStructure.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBaseOutStructure.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkBaseOutStructure
 {
-    /// <summary>sType is the structure type of the structure being iterated through.</summary>
+    /// <summary> sType is the structure type of the structure being iterated through. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to the next structure in a structure chain.</summary>
+    /// <summary> pNext is NULL or a pointer to the next structure in a structure chain. </summary>
     public VkBaseOutStructure* pNext;
 }

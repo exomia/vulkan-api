@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkCopyCommandTransformInfoQCOM - Structure describing transform parameters of rotated copy command -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyCommandTransformInfoQCOM.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyCommandTransformInfoQCOM.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyCommandTransformInfoQCOM.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyCommandTransformInfoQCOM.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkBufferImageCopy2,VkImageBlit2</description>
+///             <term> structextends </term><description> VkBufferImageCopy2,VkImageBlit2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,12 +31,12 @@ public unsafe struct VkCopyCommandTransformInfoQCOM
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_COPY_COMMAND_TRANSFORM_INFO_QCOM;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>transform is a VkSurfaceTransformFlagBitsKHR value describing the transform to be applied.</summary>
+    /// <summary> transform is a VkSurfaceTransformFlagBitsKHR value describing the transform to be applied. </summary>
     public VkSurfaceTransformFlagBitsKHR transform;
 }

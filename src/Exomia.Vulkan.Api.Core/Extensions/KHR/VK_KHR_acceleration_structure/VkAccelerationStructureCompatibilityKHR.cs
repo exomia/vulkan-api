@@ -22,15 +22,9 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkAccelerationStructureCompatibilityKHR
 {
-    /// <summary>
-    ///     VK_ACCELERATION_STRUCTURE_COMPATIBILITY_COMPATIBLE_KHR if the pVersionData version acceleration structure is
-    ///     compatible with device.
-    /// </summary>
+    /// <summary> VK_ACCELERATION_STRUCTURE_COMPATIBILITY_COMPATIBLE_KHR if the pVersionData version acceleration structure is compatible with device. </summary>
     VK_ACCELERATION_STRUCTURE_COMPATIBILITY_COMPATIBLE_KHR = 0,
 
-    /// <summary>
-    ///     VK_ACCELERATION_STRUCTURE_COMPATIBILITY_INCOMPATIBLE_KHR if the pVersionData version acceleration structure is
-    ///     not compatible with device.
-    /// </summary>
+    /// <summary> VK_ACCELERATION_STRUCTURE_COMPATIBILITY_INCOMPATIBLE_KHR if the pVersionData version acceleration structure is not compatible with device. </summary>
     VK_ACCELERATION_STRUCTURE_COMPATIBILITY_INCOMPATIBLE_KHR = 1
 }

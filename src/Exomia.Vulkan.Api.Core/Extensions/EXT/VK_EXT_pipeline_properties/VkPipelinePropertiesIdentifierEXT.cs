@@ -26,15 +26,12 @@ public unsafe struct VkPipelinePropertiesIdentifierEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_PROPERTIES_IDENTIFIER_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to an extension-specific structure.</summary>
+    /// <summary> pNext is NULL or a pointer to an extension-specific structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     pipelineIdentifier is an array of VK_UUID_SIZE uint8_tvalues into which the pipeline identifier will be
-    ///     written.
-    /// </summary>
+    /// <summary> pipelineIdentifier is an array of VK_UUID_SIZE uint8_tvalues into which the pipeline identifier will be written. </summary>
     public fixed byte pipelineIdentifier[(int)VK_UUID_SIZE];
 }

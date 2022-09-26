@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrShaderTerminateInvocation;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_shader_terminate_invocation - device extension (nr. 216) - author 'KHR' [platform '' | contact 'Jesse Hall
-///     @critsec']<br />
+///     VK_KHR_shader_terminate_invocation - device extension (nr. 216) - author 'KHR' [platform '' | contact 'Jesse Hall @critsec']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_terminate_invocation.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_terminate_invocation.html
@@ -44,8 +44,8 @@ public static class VkKhrShaderTerminateInvocation
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SHADER_TERMINATE_INVOCATION_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SHADER_TERMINATE_INVOCATION_EXTENSION_NAME_UTF8_NT =

@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkInstanceCreateInfo</description>
+///             <term> structextends </term><description> VkInstanceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,31 +34,25 @@ public unsafe struct VkDebugUtilsMessengerCreateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is 0 and is reserved for future use.</summary>
+    /// <summary> flags is 0 and is reserved for future use. </summary>
     public VkDebugUtilsMessengerCreateFlagsEXT flags;
 
-    /// <summary>
-    ///     messageSeverity is a bitmask of VkDebugUtilsMessageSeverityFlagBitsEXT specifying which severity of event(s)
-    ///     will cause this callback to be called.
-    /// </summary>
+    /// <summary> messageSeverity is a bitmask of VkDebugUtilsMessageSeverityFlagBitsEXT specifying which severity of event(s) will cause this callback to be called. </summary>
     public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
 
-    /// <summary>
-    ///     messageType is a bitmask of VkDebugUtilsMessageTypeFlagBitsEXT specifying which type of event(s) will cause
-    ///     this callback to be called.
-    /// </summary>
+    /// <summary> messageType is a bitmask of VkDebugUtilsMessageTypeFlagBitsEXT specifying which type of event(s) will cause this callback to be called. </summary>
     public VkDebugUtilsMessageTypeFlagsEXT messageType;
 
-    /// <summary>pfnUserCallback is the application callback function to call.</summary>
+    /// <summary> pfnUserCallback is the application callback function to call. </summary>
     public delegate*<VkDebugUtilsMessageSeverityFlagBitsEXT /*messageSeverity*/, VkDebugUtilsMessageTypeFlagsEXT /*messageTypes*/, VkDebugUtilsMessengerCallbackDataEXT* /*pCallbackData*/
       , void* /*pUserData*/, VkBool32> pfnUserCallback;
 
-    /// <summary>pUserData is user data to be passed to the callback.</summary>
+    /// <summary> pUserData is user data to be passed to the callback. </summary>
     public void* pUserData;
 }

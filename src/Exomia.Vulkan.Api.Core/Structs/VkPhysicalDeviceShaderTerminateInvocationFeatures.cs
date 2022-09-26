@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceShaderTerminateInvocationFeatures - Structure describing support for the SPIR-V
-///     code:SPV_KHR_terminate_invocation extension -
+///     VkPhysicalDeviceShaderTerminateInvocationFeatures - Structure describing support for the SPIR-V code:SPV_KHR_terminate_invocation extension -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderTerminateInvocationFeatures.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderTerminateInvocationFeatures.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,15 +34,12 @@ public unsafe struct VkPhysicalDeviceShaderTerminateInvocationFeatures
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     shaderTerminateInvocation specifies whether the implementation supports SPIR-V modules that use the
-    ///     SPV_KHR_terminate_invocationextension.
-    /// </summary>
+    /// <summary> shaderTerminateInvocation specifies whether the implementation supports SPIR-V modules that use the SPV_KHR_terminate_invocationextension. </summary>
     public VkBool32 shaderTerminateInvocation;
 }

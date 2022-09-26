@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkSecAmigoProfiling;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_SEC_amigo_profiling - device extension (nr. 486) - author 'SEC' [platform '' | contact 'Ralph Potter
-///     gitlab:@r_potter']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_SEC_amigo_profiling.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_SEC_amigo_profiling.html</a>
+///     VK_SEC_amigo_profiling - device extension (nr. 486) - author 'SEC' [platform '' | contact 'Ralph Potter gitlab:@r_potter']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_SEC_amigo_profiling.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_SEC_amigo_profiling.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static class VkSecAmigoProfiling
@@ -32,16 +32,13 @@ public static class VkSecAmigoProfiling
     /// <summary> The extension name. </summary>
     public const string VK_SEC_AMIGO_PROFILING_EXTENSION_NAME = "VK_SEC_amigo_profiling";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_SEC_AMIGO_PROFILING_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_SEC_AMIGO_PROFILING_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_SEC_AMIGO_PROFILING_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_SEC_AMIGO_PROFILING_EXTENSION_NAME_UTF8_NT = "\u4b56\u535f\u4345\u415f\u494d\u4f47\u505f\u4f52\u4946\u494c\u474e\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";

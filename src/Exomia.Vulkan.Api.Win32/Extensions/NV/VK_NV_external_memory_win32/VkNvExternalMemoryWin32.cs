@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Win32.VkNvExternalMemoryWin32;
 namespace Exomia.Vulkan.Api.Win32;
 
 /// <summary>
-///     VK_NV_external_memory_win32 - device extension (nr. 58) - author 'NV' [platform 'win32' | contact 'James Jones
-///     @cubanismo']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_win32.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_win32.html</a>
+///     VK_NV_external_memory_win32 - device extension (nr. 58) - author 'NV' [platform 'win32' | contact 'James Jones @cubanismo']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_win32.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_win32.html </a>
 /// </summary>
 [VkRequires("VK_NV_external_memory")]
 [Obsolete("deprecated by VK_KHR_external_memory_win32", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_win32.html#_deprecation_state")]
@@ -33,16 +33,13 @@ public static unsafe class VkNvExternalMemoryWin32
     /// <summary> The extension name. </summary>
     public const string VK_NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME = "VK_NV_external_memory_win32";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME_UTF8_NT =
@@ -50,24 +47,21 @@ public static unsafe class VkNvExternalMemoryWin32
 
     /// <summary>
     ///     vkGetMemoryWin32HandleNV - Retrieve Win32 handle to a device memory object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the memory.</param>
-    /// <param name="memory">memory is the VkDeviceMemory object.</param>
-    /// <param name="handleType">
-    ///     handleType is a bitmask of VkExternalMemoryHandleTypeFlagBitsNV containing a single bit
-    ///     specifying the type of handle requested.
-    /// </param>
+    /// <param name="device"> device is the logical device that owns the memory. </param>
+    /// <param name="memory"> memory is the VkDeviceMemory object. </param>
+    /// <param name="handleType"> handleType is a bitmask of VkExternalMemoryHandleTypeFlagBitsNV containing a single bit specifying the type of handle requested. </param>
     /// <param name="pHandle">
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html </a>
     /// </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -84,7 +78,7 @@ public static unsafe class VkNvExternalMemoryWin32
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetMemoryWin32HandleNV</description>
+    ///             <description> vkGetMemoryWin32HandleNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

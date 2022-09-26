@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceImageFormatInfo2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceImageFormatInfo2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,12 +34,12 @@ public unsafe struct VkPhysicalDeviceImageViewImageFormatInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>imageViewType is a VkImageViewType value specifying the type of the image view.</summary>
+    /// <summary> imageViewType is a VkImageViewType value specifying the type of the image view. </summary>
     public VkImageViewType imageViewType;
 }

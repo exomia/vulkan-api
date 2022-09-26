@@ -15,17 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkShadingRatePaletteNV - Structure specifying a single shading rate palette -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShadingRatePaletteNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShadingRatePaletteNV.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShadingRatePaletteNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShadingRatePaletteNV.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkShadingRatePaletteNV
 {
-    /// <summary>shadingRatePaletteEntryCount specifies the number of entries in the shading rate image palette.</summary>
+    /// <summary> shadingRatePaletteEntryCount specifies the number of entries in the shading rate image palette. </summary>
     public uint shadingRatePaletteEntryCount;
 
-    /// <summary>
-    ///     pShadingRatePaletteEntries is a pointer to an array of VkShadingRatePaletteEntryNV enums defining the shading
-    ///     rate for each palette entry.
-    /// </summary>
+    /// <summary> pShadingRatePaletteEntries is a pointer to an array of VkShadingRatePaletteEntryNV enums defining the shading rate for each palette entry. </summary>
     public VkShadingRatePaletteEntryNV* pShadingRatePaletteEntries;
 }

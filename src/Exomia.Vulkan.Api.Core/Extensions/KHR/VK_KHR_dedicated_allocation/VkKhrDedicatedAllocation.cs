@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrDedicatedAllocation;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_dedicated_allocation - device extension (nr. 128) - author 'KHR' [platform '' | contact 'James Jones
-///     @cubanismo']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_dedicated_allocation.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_dedicated_allocation.html</a>
+///     VK_KHR_dedicated_allocation - device extension (nr. 128) - author 'KHR' [platform '' | contact 'James Jones @cubanismo']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_dedicated_allocation.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_dedicated_allocation.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_memory_requirements2")]
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_dedicated_allocation.html#_deprecation_state")]
@@ -33,16 +33,13 @@ public static class VkKhrDedicatedAllocation
     /// <summary> The extension name. </summary>
     public const string VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME = "VK_KHR_dedicated_allocation";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME_UTF8_NT =

@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkSubpassFragmentDensityMapOffsetEndInfoQCOM - Structure specifying fragment density map offset subpass end
-///     information -
+///     VkSubpassFragmentDensityMapOffsetEndInfoQCOM - Structure specifying fragment density map offset subpass end information -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassFragmentDensityMapOffsetEndInfoQCOM.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassFragmentDensityMapOffsetEndInfoQCOM.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSubpassEndInfo</description>
+///             <term> structextends </term><description> VkSubpassEndInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,18 +34,15 @@ public unsafe struct VkSubpassFragmentDensityMapOffsetEndInfoQCOM
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SUBPASS_FRAGMENT_DENSITY_MAP_OFFSET_END_INFO_QCOM;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>fragmentDensityOffsetCount is the number of offsets being specified.</summary>
+    /// <summary> fragmentDensityOffsetCount is the number of offsets being specified. </summary>
     public uint fragmentDensityOffsetCount;
 
-    /// <summary>
-    ///     pFragmentDensityOffsets is a pointer to an array of VkOffset2D structs, each of which describes the offset per
-    ///     layer.
-    /// </summary>
+    /// <summary> pFragmentDensityOffsets is a pointer to an array of VkOffset2D structs, each of which describes the offset per layer. </summary>
     public VkOffset2D* pFragmentDensityOffsets;
 }

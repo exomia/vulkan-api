@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkMemoryGetRemoteAddressInfoNV - Structure describing a remote accessible address export operation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetRemoteAddressInfoNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetRemoteAddressInfoNV.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetRemoteAddressInfoNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetRemoteAddressInfoNV.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkMemoryGetRemoteAddressInfoNV
@@ -23,15 +23,15 @@ public unsafe struct VkMemoryGetRemoteAddressInfoNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_MEMORY_GET_REMOTE_ADDRESS_INFO_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>memory is the memory object from which the remote accessible address will be exported.</summary>
+    /// <summary> memory is the memory object from which the remote accessible address will be exported. </summary>
     public VkDeviceMemory memory;
 
-    /// <summary>handleType is the type of handle requested.</summary>
+    /// <summary> handleType is the type of handle requested. </summary>
     public VkExternalMemoryHandleTypeFlagBits handleType;
 }

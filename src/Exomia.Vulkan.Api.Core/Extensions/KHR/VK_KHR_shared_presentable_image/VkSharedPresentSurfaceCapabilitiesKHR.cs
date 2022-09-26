@@ -23,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSurfaceCapabilities2KHR</description>
+///             <term> structextends </term><description> VkSurfaceCapabilities2KHR </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -37,18 +37,12 @@ public unsafe struct VkSharedPresentSurfaceCapabilitiesKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SHARED_PRESENT_SURFACE_CAPABILITIES_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     sharedPresentSupportedUsageFlags is a bitmask of VkImageUsageFlagBits representing the ways the application
-    ///     canuse the shared presentable image from a swapchain created with VkPresentModeKHR set to
-    ///     VK_PRESENT_MODE_SHARED_DEMAND_REFRESH_KHR or VK_PRESENT_MODE_SHARED_CONTINUOUS_REFRESH_KHR for the surface on the
-    ///     specified device. VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT must be included in the set but implementations may support
-    ///     additional usages.
-    /// </summary>
+    /// <summary> sharedPresentSupportedUsageFlags is a bitmask of VkImageUsageFlagBits representing the ways the application canuse the shared presentable image from a swapchain created with VkPresentModeKHR set to VK_PRESENT_MODE_SHARED_DEMAND_REFRESH_KHR or VK_PRESENT_MODE_SHARED_CONTINUOUS_REFRESH_KHR for the surface on the specified device. VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT must be included in the set but implementations may support additional usages. </summary>
     public VkImageUsageFlags sharedPresentSupportedUsageFlags;
 }

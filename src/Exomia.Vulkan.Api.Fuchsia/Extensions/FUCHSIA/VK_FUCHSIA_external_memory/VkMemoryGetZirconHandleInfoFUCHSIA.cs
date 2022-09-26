@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Fuchsia;
 
 /// <summary>
-///     VkMemoryGetZirconHandleInfoFUCHSIA - Structure specifying export parameters for Zircon handle to device
-///     memory -
+///     VkMemoryGetZirconHandleInfoFUCHSIA - Structure specifying export parameters for Zircon handle to device memory -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetZirconHandleInfoFUCHSIA.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetZirconHandleInfoFUCHSIA.html
@@ -27,18 +26,15 @@ public unsafe struct VkMemoryGetZirconHandleInfoFUCHSIA
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>memory the VkDeviceMemory being exported.</summary>
+    /// <summary> memory the VkDeviceMemory being exported. </summary>
     public VkDeviceMemory memory;
 
-    /// <summary>
-    ///     handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of the handle pointed to by
-    ///     vkGetMemoryZirconHandleFUCHSIA::pZirconHandle.
-    /// </summary>
+    /// <summary> handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of the handle pointed to by vkGetMemoryZirconHandleFUCHSIA::pZirconHandle. </summary>
     public VkExternalMemoryHandleTypeFlagBits handleType;
 }

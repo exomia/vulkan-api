@@ -15,10 +15,10 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkInternalAllocationType - Allocation type -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInternalAllocationType.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInternalAllocationType.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInternalAllocationType.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInternalAllocationType.html </a>
 /// </summary>
 public enum VkInternalAllocationType
 {
-    /// <summary>VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE specifies that the allocation is intended for execution by the host.</summary>
+    /// <summary> VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE specifies that the allocation is intended for execution by the host. </summary>
     VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE = 0
 }

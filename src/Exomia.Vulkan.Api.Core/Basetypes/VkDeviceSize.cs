@@ -81,7 +81,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -91,7 +91,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -101,7 +101,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -111,7 +111,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -121,7 +121,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -131,7 +131,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -141,7 +141,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Greater-than-or-equal comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -151,7 +151,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Less-than-or-equal comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -161,7 +161,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Greater-than-or-equal comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -171,7 +171,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Less-than-or-equal comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -181,7 +181,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Greater-than-or-equal comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -191,7 +191,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Less-than-or-equal comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -201,7 +201,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Greater-than comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -211,7 +211,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Less-than comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -221,7 +221,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Greater-than comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -231,7 +231,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Less-than comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -241,7 +241,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Greater-than comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -251,7 +251,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Less-than comparison operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -261,7 +261,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Addition operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -271,7 +271,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Subtraction operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -281,7 +281,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Addition operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -291,7 +291,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Subtraction operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -301,7 +301,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Addition operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -311,7 +311,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Subtraction operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -321,7 +321,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Multiplication operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -331,7 +331,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Division operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -341,7 +341,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Multiplication operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -351,7 +351,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Division operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -361,7 +361,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Multiplication operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -371,7 +371,7 @@ public readonly unsafe struct VkDeviceSize
     }
 
     /// <summary> Division operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]

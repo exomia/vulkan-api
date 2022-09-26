@@ -15,17 +15,17 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkBlendFactor - Framebuffer blending factors -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBlendFactor.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBlendFactor.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBlendFactor.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBlendFactor.html </a>
 /// </summary>
 public enum VkBlendFactor
 {
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(0,0,0)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (0,0,0) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>0</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 0 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -34,10 +34,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(1,1,1)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (1,1,1) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -46,10 +46,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(Rs0,Gs0,Bs0)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (Rs0,Gs0,Bs0) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>As0</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> As0 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -58,10 +58,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(1-Rs0,1-Gs0,1-Bs0)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (1-Rs0,1-Gs0,1-Bs0) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1-As0</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1-As0 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -70,10 +70,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(Rd,Gd,Bd)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (Rd,Gd,Bd) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>Ad</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> Ad </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -82,10 +82,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(1-Rd,1-Gd,1-Bd)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (1-Rd,1-Gd,1-Bd) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1-Ad</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1-Ad </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -94,10 +94,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(As0,As0,As0)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (As0,As0,As0) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>As0</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> As0 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -106,10 +106,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(1-As0,1-As0,1-As0)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (1-As0,1-As0,1-As0) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1-As0</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1-As0 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -118,10 +118,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(Ad,Ad,Ad)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (Ad,Ad,Ad) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>Ad</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> Ad </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -130,10 +130,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(1-Ad,1-Ad,1-Ad)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (1-Ad,1-Ad,1-Ad) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1-Ad</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1-Ad </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -142,10 +142,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(Rc,Gc,Bc)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (Rc,Gc,Bc) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>Ac</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> Ac </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -154,10 +154,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(1-Rc,1-Gc,1-Bc)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (1-Rc,1-Gc,1-Bc) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1-Ac</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1-Ac </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -166,10 +166,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(Ac,Ac,Ac)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (Ac,Ac,Ac) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>Ac</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> Ac </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -178,10 +178,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(1-Ac,1-Ac,1-Ac)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (1-Ac,1-Ac,1-Ac) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1-Ac</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1-Ac </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -190,11 +190,11 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term>
-    ///             <description>(f,f,f); f = min(As0,1-Ad)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term>
+    ///             <description> (f,f,f); f = min(As0,1-Ad) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -203,10 +203,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(Rs1,Gs1,Bs1)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (Rs1,Gs1,Bs1) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>As1</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> As1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -215,10 +215,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(1-Rs1,1-Gs1,1-Bs1)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (1-Rs1,1-Gs1,1-Bs1) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1-As1</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1-As1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -227,10 +227,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(As1,As1,As1)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (As1,As1,As1) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>As1</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> As1 </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -239,10 +239,10 @@ public enum VkBlendFactor
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db)</term><description>(1-As1,1-As1,1-As1)</description>
+    ///             <term> RGB Blend Factors (Sr,Sg,Sb) or (Dr,Dg,Db) </term><description> (1-As1,1-As1,1-As1) </description>
     ///         </item>
     ///         <item>
-    ///             <term>Alpha Blend Factor (Sa or Da)</term><description>1-As1</description>
+    ///             <term> Alpha Blend Factor (Sa or Da) </term><description> 1-As1 </description>
     ///         </item>
     ///     </list>
     /// </summary>

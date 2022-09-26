@@ -15,17 +15,17 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkOffset3D - Structure specifying a three-dimensional offset -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOffset3D.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOffset3D.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOffset3D.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOffset3D.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkOffset3D
 {
-    /// <summary>x is the x offset.</summary>
+    /// <summary> x is the x offset. </summary>
     public int x;
 
-    /// <summary>y is the y offset.</summary>
+    /// <summary> y is the y offset. </summary>
     public int y;
 
-    /// <summary>z is the z offset.</summary>
+    /// <summary> z is the z offset. </summary>
     public int z;
 }

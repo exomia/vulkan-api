@@ -26,33 +26,21 @@ public unsafe struct VkVertexInputBindingDescription2EXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>binding is the binding number that this structure describes.</summary>
+    /// <summary> binding is the binding number that this structure describes. </summary>
     public uint binding;
 
-    /// <summary>stride is the byte stride between consecutive elements within the buffer.</summary>
+    /// <summary> stride is the byte stride between consecutive elements within the buffer. </summary>
     public uint stride;
 
-    /// <summary>
-    ///     inputRate is a VkVertexInputRate value specifying whether vertex attribute addressing is a function of the
-    ///     vertex index or of the instance index.
-    /// </summary>
+    /// <summary> inputRate is a VkVertexInputRate value specifying whether vertex attribute addressing is a function of the vertex index or of the instance index. </summary>
     public VkVertexInputRate inputRate;
 
-    /// <summary>
-    ///     divisor is the number of successive instances that will use the same value of the vertex attribute when
-    ///     instanced rendering is enabled. This member can be set to a value other than 1 if the
-    ///     vertexAttributeInstanceRateDivisor feature is enabled. For example, if the divisor is N, the same vertex attribute
-    ///     will be applied to N successive instances before moving on to the next vertex attribute. The maximum value of
-    ///     divisor is implementation-dependent and can be queried using
-    ///     VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT::maxVertexAttribDivisor. A value of 0 can be used for the
-    ///     divisor if the vertexAttributeInstanceRateZeroDivisor feature is enabled. In this case, the same vertex attribute
-    ///     will be applied to all instances.
-    /// </summary>
+    /// <summary> divisor is the number of successive instances that will use the same value of the vertex attribute when instanced rendering is enabled. This member can be set to a value other than 1 if the vertexAttributeInstanceRateDivisor feature is enabled. For example, if the divisor is N, the same vertex attribute will be applied to N successive instances before moving on to the next vertex attribute. The maximum value of divisor is implementation-dependent and can be queried using VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT::maxVertexAttribDivisor. A value of 0 can be used for the divisor if the vertexAttributeInstanceRateZeroDivisor feature is enabled. In this case, the same vertex attribute will be applied to all instances. </summary>
     public uint divisor;
 }

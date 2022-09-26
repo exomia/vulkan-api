@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDeviceGroupPresentInfoKHR - Mode and mask controlling which physical devices' images are presented -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentInfoKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentInfoKHR.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentInfoKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentInfoKHR.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPresentInfoKHR</description>
+///             <term> structextends </term><description> VkPresentInfoKHR </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,21 +31,18 @@ public unsafe struct VkDeviceGroupPresentInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DEVICE_GROUP_PRESENT_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>swapchainCount is zero or the number of elements in pDeviceMasks.</summary>
+    /// <summary> swapchainCount is zero or the number of elements in pDeviceMasks. </summary>
     public uint swapchainCount;
 
-    /// <summary>pDeviceMasks is a pointer to an array of device masks, one for each element of VkPresentInfoKHR::pSwapchains.</summary>
+    /// <summary> pDeviceMasks is a pointer to an array of device masks, one for each element of VkPresentInfoKHR::pSwapchains. </summary>
     public uint* pDeviceMasks;
 
-    /// <summary>
-    ///     mode is a VkDeviceGroupPresentModeFlagBitsKHR value specifying the device group present mode that will be used
-    ///     for this present.
-    /// </summary>
+    /// <summary> mode is a VkDeviceGroupPresentModeFlagBitsKHR value specifying the device group present mode that will be used for this present. </summary>
     public VkDeviceGroupPresentModeFlagBitsKHR mode;
 }

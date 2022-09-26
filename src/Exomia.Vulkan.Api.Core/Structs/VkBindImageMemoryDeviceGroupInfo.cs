@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkBindImageMemoryInfo</description>
+///             <term> structextends </term><description> VkBindImageMemoryInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,24 +34,21 @@ public unsafe struct VkBindImageMemoryDeviceGroupInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>deviceIndexCount is the number of elements in pDeviceIndices.</summary>
+    /// <summary> deviceIndexCount is the number of elements in pDeviceIndices. </summary>
     public uint deviceIndexCount;
 
-    /// <summary>pDeviceIndices is a pointer to an array of device indices.</summary>
+    /// <summary> pDeviceIndices is a pointer to an array of device indices. </summary>
     public uint* pDeviceIndices;
 
-    /// <summary>splitInstanceBindRegionCount is the number of elements in pSplitInstanceBindRegions.</summary>
+    /// <summary> splitInstanceBindRegionCount is the number of elements in pSplitInstanceBindRegions. </summary>
     public uint splitInstanceBindRegionCount;
 
-    /// <summary>
-    ///     pSplitInstanceBindRegions is a pointer to an array of VkRect2D structures describing which regions of the
-    ///     image are attached to each instance of memory.
-    /// </summary>
+    /// <summary> pSplitInstanceBindRegions is a pointer to an array of VkRect2D structures describing which regions of the image are attached to each instance of memory. </summary>
     public VkRect2D* pSplitInstanceBindRegions;
 }

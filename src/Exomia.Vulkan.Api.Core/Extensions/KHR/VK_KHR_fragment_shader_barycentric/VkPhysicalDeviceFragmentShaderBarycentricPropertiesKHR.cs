@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR - Structure describing fragment shader barycentric limits of
-///     an implementation -
+///     VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR - Structure describing fragment shader barycentric limits of an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -47,13 +46,9 @@ public unsafe struct VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     triStripVertexOrderIndependentOfProvokingVertex indicates that the implementation does not change its vertex
-    ///     numbering for triangle strip primitives when the provoking vertex modeis VK_PROVOKING_VERTEX_MODE_LAST_VERTEX_EXT,
-    ///     as shown in the last vertex table.
-    /// </summary>
+    /// <summary> triStripVertexOrderIndependentOfProvokingVertex indicates that the implementation does not change its vertex numbering for triangle strip primitives when the provoking vertex modeis VK_PROVOKING_VERTEX_MODE_LAST_VERTEX_EXT, as shown in the last vertex table. </summary>
     public VkBool32 triStripVertexOrderIndependentOfProvokingVertex;
 }

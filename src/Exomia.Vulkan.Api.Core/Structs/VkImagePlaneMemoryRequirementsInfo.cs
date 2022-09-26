@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkImageMemoryRequirementsInfo2</description>
+///             <term> structextends </term><description> VkImageMemoryRequirementsInfo2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,12 +34,12 @@ public unsafe struct VkImagePlaneMemoryRequirementsInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>planeAspect is a VkImageAspectFlagBits value specifying the aspect corresponding to the image plane to query.</summary>
+    /// <summary> planeAspect is a VkImageAspectFlagBits value specifying the aspect corresponding to the image plane to query. </summary>
     public VkImageAspectFlagBits planeAspect;
 }

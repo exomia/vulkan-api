@@ -23,27 +23,15 @@ namespace Exomia.Vulkan.Api.Core;
 [Flags]
 public enum VkExternalSemaphoreFeatureFlagBits
 {
-    /// <summary>
-    ///     VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT specifies that handles of this type can be exported from Vulkan
-    ///     semaphore objects.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT specifies that handles of this type can be exported from Vulkan semaphore objects. </summary>
     VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT = 0x1,
 
-    /// <summary>
-    ///     VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT specifies that handles of this type can be imported as Vulkan
-    ///     semaphore objects.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT specifies that handles of this type can be imported as Vulkan semaphore objects. </summary>
     VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT = 0x2,
 
-    /// <summary>
-    ///     VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT specifies that handles of this type can be exported from Vulkan
-    ///     semaphore objects.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT specifies that handles of this type can be exported from Vulkan semaphore objects. </summary>
     VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT_KHR = VK_EXTERNAL_SEMAPHORE_FEATURE_EXPORTABLE_BIT,
 
-    /// <summary>
-    ///     VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT specifies that handles of this type can be imported as Vulkan
-    ///     semaphore objects.
-    /// </summary>
+    /// <summary> VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT specifies that handles of this type can be imported as Vulkan semaphore objects. </summary>
     VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT_KHR = VK_EXTERNAL_SEMAPHORE_FEATURE_IMPORTABLE_BIT
 }

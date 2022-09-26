@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrGetMemoryRequirements2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_get_memory_requirements2 - device extension (nr. 147) - author 'KHR' [platform '' | contact 'Jason Ekstrand
-///     @jekstrand']<br />
+///     VK_KHR_get_memory_requirements2 - device extension (nr. 147) - author 'KHR' [platform '' | contact 'Jason Ekstrand @jekstrand']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_memory_requirements2.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_memory_requirements2.html
@@ -35,16 +35,13 @@ public static unsafe class VkKhrGetMemoryRequirements2
     /// <summary> The extension name. </summary>
     public const string VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME = "VK_KHR_get_memory_requirements2";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME_UTF8_NT =
@@ -99,13 +96,13 @@ public static unsafe class VkKhrGetMemoryRequirements2
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetImageMemoryRequirements2KHR</description>
+    ///             <description> vkGetImageMemoryRequirements2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetBufferMemoryRequirements2KHR</description>
+    ///             <description> vkGetBufferMemoryRequirements2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetImageSparseMemoryRequirements2KHR</description>
+    ///             <description> vkGetImageSparseMemoryRequirements2KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

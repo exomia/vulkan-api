@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkBufferCreateInfo</description>
+///             <term> structextends </term><description> VkBufferCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,15 +34,12 @@ public unsafe struct VkExternalMemoryBufferCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_EXTERNAL_MEMORY_BUFFER_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     handleTypes is zero or a bitmask of VkExternalMemoryHandleTypeFlagBits specifying one or more external memory
-    ///     handle types.
-    /// </summary>
+    /// <summary> handleTypes is zero or a bitmask of VkExternalMemoryHandleTypeFlagBits specifying one or more external memory handle types. </summary>
     public VkExternalMemoryHandleTypeFlags handleTypes;
 }

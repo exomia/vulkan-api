@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceCustomBorderColorPropertiesEXT - Structure describing whether custom border colors can be supported
-///     by an implementation -
+///     VkPhysicalDeviceCustomBorderColorPropertiesEXT - Structure describing whether custom border colors can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCustomBorderColorPropertiesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCustomBorderColorPropertiesEXT.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -47,12 +46,9 @@ public unsafe struct VkPhysicalDeviceCustomBorderColorPropertiesEXT
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     maxCustomBorderColorSamplers indicates the maximum number of samplers with custom border colors which can
-    ///     simultaneously exist on a device.
-    /// </summary>
+    /// <summary> maxCustomBorderColorSamplers indicates the maximum number of samplers with custom border colors which can simultaneously exist on a device. </summary>
     public uint maxCustomBorderColorSamplers;
 }

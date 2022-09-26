@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvInheritedViewportScissor;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_inherited_viewport_scissor - device extension (nr. 279) - author 'NV' [platform '' | contact 'David Zhao
-///     Akeley @akeley98']<br />
+///     VK_NV_inherited_viewport_scissor - device extension (nr. 279) - author 'NV' [platform '' | contact 'David Zhao Akeley @akeley98']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_inherited_viewport_scissor.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_inherited_viewport_scissor.html
@@ -34,16 +34,13 @@ public static class VkNvInheritedViewportScissor
     /// <summary> The extension name. </summary>
     public const string VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME = "VK_NV_inherited_viewport_scissor";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_INHERITED_VIEWPORT_SCISSOR_EXTENSION_NAME_UTF8_NT =

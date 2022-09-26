@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvRepresentativeFragmentTest;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_representative_fragment_test - device extension (nr. 167) - author 'NV' [platform '' | contact 'Kedarnath
-///     Thangudu @kthangudu']<br />
+///     VK_NV_representative_fragment_test - device extension (nr. 167) - author 'NV' [platform '' | contact 'Kedarnath Thangudu @kthangudu']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_representative_fragment_test.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_representative_fragment_test.html
@@ -42,8 +42,8 @@ public static class VkNvRepresentativeFragmentTest
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_REPRESENTATIVE_FRAGMENT_TEST_EXTENSION_NAME_UTF8_NT =

@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkSamplerBorderColorComponentMappingCreateInfoEXT - Structure specifying the component mapping of the border color
-///     -
+///     VkSamplerBorderColorComponentMappingCreateInfoEXT - Structure specifying the component mapping of the border color -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerBorderColorComponentMappingCreateInfoEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerBorderColorComponentMappingCreateInfoEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSamplerCreateInfo</description>
+///             <term> structextends </term><description> VkSamplerCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,18 +34,15 @@ public unsafe struct VkSamplerBorderColorComponentMappingCreateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SAMPLER_BORDER_COLOR_COMPONENT_MAPPING_CREATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>components is a VkComponentMapping structure specifying a remapping of the border color components.</summary>
+    /// <summary> components is a VkComponentMapping structure specifying a remapping of the border color components. </summary>
     public VkComponentMapping components;
 
-    /// <summary>
-    ///     srgb indicates that the sampler will be combined with an image view that has an image format which is sRGB
-    ///     encoded.
-    /// </summary>
+    /// <summary> srgb indicates that the sampler will be combined with an image view that has an image format which is sRGB encoded. </summary>
     public VkBool32 srgb;
 }

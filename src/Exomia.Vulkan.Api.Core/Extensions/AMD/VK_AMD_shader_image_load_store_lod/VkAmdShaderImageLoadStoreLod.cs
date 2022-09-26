@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkAmdShaderImageLoadStoreLod;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_AMD_shader_image_load_store_lod - device extension (nr. 47) - author 'AMD' [platform '' | contact 'Dominik
-///     Witczak @dominikwitczakamd']<br />
+///     VK_AMD_shader_image_load_store_lod - device extension (nr. 47) - author 'AMD' [platform '' | contact 'Dominik Witczak @dominikwitczakamd']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_image_load_store_lod.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_image_load_store_lod.html
@@ -42,8 +42,8 @@ public static class VkAmdShaderImageLoadStoreLod
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_EXTENSION_NAME_UTF8_NT =

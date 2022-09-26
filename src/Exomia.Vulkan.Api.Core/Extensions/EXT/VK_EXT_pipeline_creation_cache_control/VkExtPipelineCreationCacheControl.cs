@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtPipelineCreationCacheControl;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_pipeline_creation_cache_control - device extension (nr. 298) - author 'AMD' [platform '' | contact 'Gregory
-///     Grebe @grgrebe_amd']<br />
+///     VK_EXT_pipeline_creation_cache_control - device extension (nr. 298) - author 'AMD' [platform '' | contact 'Gregory Grebe @grgrebe_amd']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_creation_cache_control.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_creation_cache_control.html
@@ -43,8 +43,8 @@ public static class VkExtPipelineCreationCacheControl
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_PIPELINE_CREATION_CACHE_CONTROL_EXTENSION_NAME_UTF8_NT =

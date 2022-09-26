@@ -15,32 +15,32 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkPerformanceCounterResultKHR - Union containing a performance counter result -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceCounterResultKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceCounterResultKHR.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceCounterResultKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceCounterResultKHR.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Explicit)]
 public struct VkPerformanceCounterResultKHR
 {
-    /// <summary>int32 is a 32-bit signed integer value.</summary>
+    /// <summary> int32 is a 32-bit signed integer value. </summary>
     [FieldOffset(0)]
     public int int32;
 
-    /// <summary>int64 is a 64-bit signed integer value.</summary>
+    /// <summary> int64 is a 64-bit signed integer value. </summary>
     [FieldOffset(0)]
     public long int64;
 
-    /// <summary>uint32 is a 32-bit unsigned integer value.</summary>
+    /// <summary> uint32 is a 32-bit unsigned integer value. </summary>
     [FieldOffset(0)]
     public uint uint32;
 
-    /// <summary>uint64 is a 64-bit unsigned integer value.</summary>
+    /// <summary> uint64 is a 64-bit unsigned integer value. </summary>
     [FieldOffset(0)]
     public ulong uint64;
 
-    /// <summary>float32 is a 32-bit floating-point value.</summary>
+    /// <summary> float32 is a 32-bit floating-point value. </summary>
     [FieldOffset(0)]
     public float float32;
 
-    /// <summary>float64 is a 64-bit floating-point value.</summary>
+    /// <summary> float64 is a 64-bit floating-point value. </summary>
     [FieldOffset(0)]
     public double float64;
 }

@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDeviceGroupDeviceCreateInfo - Create a logical device from multiple physical devices -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupDeviceCreateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupDeviceCreateInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupDeviceCreateInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupDeviceCreateInfo.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,15 +31,15 @@ public unsafe struct VkDeviceGroupDeviceCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DEVICE_GROUP_DEVICE_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>physicalDeviceCount is the number of elements in the pPhysicalDevices array.</summary>
+    /// <summary> physicalDeviceCount is the number of elements in the pPhysicalDevices array. </summary>
     public uint physicalDeviceCount;
 
-    /// <summary>pPhysicalDevices is a pointer to an array of physical device handles belonging to the same device group.</summary>
+    /// <summary> pPhysicalDevices is a pointer to an array of physical device handles belonging to the same device group. </summary>
     public VkPhysicalDevice* pPhysicalDevices;
 }

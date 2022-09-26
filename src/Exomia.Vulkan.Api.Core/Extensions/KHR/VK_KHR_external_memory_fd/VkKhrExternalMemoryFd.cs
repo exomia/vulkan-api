@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrExternalMemoryFd;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_external_memory_fd - device extension (nr. 75) - author 'KHR' [platform '' | contact 'James Jones
-///     @cubanismo']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_memory_fd.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_memory_fd.html</a>
+///     VK_KHR_external_memory_fd - device extension (nr. 75) - author 'KHR' [platform '' | contact 'James Jones @cubanismo']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_memory_fd.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_memory_fd.html </a>
 /// </summary>
 [VkRequires("VK_KHR_external_memory")]
 public static unsafe class VkKhrExternalMemoryFd
@@ -32,16 +32,13 @@ public static unsafe class VkKhrExternalMemoryFd
     /// <summary> The extension name. </summary>
     public const string VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME = "VK_KHR_external_memory_fd";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME_UTF8_NT =
@@ -49,21 +46,18 @@ public static unsafe class VkKhrExternalMemoryFd
 
     /// <summary>
     ///     vkGetMemoryFdKHR - Get a POSIX file descriptor for a memory object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that created the device memory being exported.</param>
-    /// <param name="pGetFdInfo">
-    ///     pGetFdInfo is a pointer to a VkMemoryGetFdInfoKHR structure containing parameters of the
-    ///     export operation.
-    /// </param>
-    /// <param name="pFd">pFd will return a file descriptor referencing the payload of the device memory object.</param>
+    /// <param name="device"> device is the logical device that created the device memory being exported. </param>
+    /// <param name="pGetFdInfo"> pGetFdInfo is a pointer to a VkMemoryGetFdInfoKHR structure containing parameters of the export operation. </param>
+    /// <param name="pFd"> pFd will return a file descriptor referencing the payload of the device memory object. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -75,23 +69,20 @@ public static unsafe class VkKhrExternalMemoryFd
 
     /// <summary>
     ///     vkGetMemoryFdPropertiesKHR - Get Properties of External Memory File Descriptors -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdPropertiesKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdPropertiesKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdPropertiesKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdPropertiesKHR.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that will be importing fd.</param>
-    /// <param name="handleType">handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of the handle fd.</param>
-    /// <param name="fd">fd is the handle which will be imported.</param>
-    /// <param name="pMemoryFdProperties">
-    ///     pMemoryFdProperties is a pointer to a VkMemoryFdPropertiesKHR structure in which the
-    ///     properties of the handle fd are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that will be importing fd. </param>
+    /// <param name="handleType"> handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of the handle fd. </param>
+    /// <param name="fd"> fd is the handle which will be imported. </param>
+    /// <param name="pMemoryFdProperties"> pMemoryFdProperties is a pointer to a VkMemoryFdPropertiesKHR structure in which the properties of the handle fd are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -108,10 +99,10 @@ public static unsafe class VkKhrExternalMemoryFd
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetMemoryFdKHR</description>
+    ///             <description> vkGetMemoryFdKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetMemoryFdPropertiesKHR</description>
+    ///             <description> vkGetMemoryFdPropertiesKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

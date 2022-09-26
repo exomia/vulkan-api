@@ -15,14 +15,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkFramebufferCreateFlagBits - Bitmask specifying framebuffer properties -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferCreateFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferCreateFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferCreateFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferCreateFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkFramebufferCreateFlagBits
 {
     /// <summary>
-    ///     VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT specifies that image views are not specified, and only attachment
-    ///     compatibility information will be provided via a
+    ///     VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT specifies that image views are not specified, and only attachment compatibility information will be provided via a
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferAttachmentImageInfo.html">
     ///         VkFramebufferAttachmentImageInfo
@@ -32,8 +31,7 @@ public enum VkFramebufferCreateFlagBits
     VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT = 0x1,
 
     /// <summary>
-    ///     VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT specifies that image views are not specified, and only attachment
-    ///     compatibility information will be provided via a
+    ///     VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT specifies that image views are not specified, and only attachment compatibility information will be provided via a
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferAttachmentImageInfo.html">
     ///         VkFramebufferAttachmentImageInfo

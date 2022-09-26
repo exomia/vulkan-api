@@ -22,28 +22,15 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkPipelineExecutableStatisticFormatKHR
 {
-    /// <summary>
-    ///     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_BOOL32_KHR specifies that the statistic is returned as a 32-bit
-    ///     boolean value which must be either VK_TRUE or VK_FALSE and should be read from the b32 field of
-    ///     VkPipelineExecutableStatisticValueKHR.
-    /// </summary>
+    /// <summary> VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_BOOL32_KHR specifies that the statistic is returned as a 32-bit boolean value which must be either VK_TRUE or VK_FALSE and should be read from the b32 field of VkPipelineExecutableStatisticValueKHR. </summary>
     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_BOOL32_KHR = 0,
 
-    /// <summary>
-    ///     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_INT64_KHR specifies that the statistic is returned as a signed 64-bit
-    ///     integer and should be read from the i64 field of VkPipelineExecutableStatisticValueKHR.
-    /// </summary>
+    /// <summary> VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_INT64_KHR specifies that the statistic is returned as a signed 64-bit integer and should be read from the i64 field of VkPipelineExecutableStatisticValueKHR. </summary>
     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_INT64_KHR = 1,
 
-    /// <summary>
-    ///     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_UINT64_KHR specifies that the statistic is returned as an unsigned
-    ///     64-bit integer and should be read from the u64 field of VkPipelineExecutableStatisticValueKHR.
-    /// </summary>
+    /// <summary> VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_UINT64_KHR specifies that the statistic is returned as an unsigned 64-bit integer and should be read from the u64 field of VkPipelineExecutableStatisticValueKHR. </summary>
     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_UINT64_KHR = 2,
 
-    /// <summary>
-    ///     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_FLOAT64_KHR specifies that the statistic is returned as a 64-bit
-    ///     floating-point value and shouldbe read from the f64 field of VkPipelineExecutableStatisticValueKHR.
-    /// </summary>
+    /// <summary> VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_FLOAT64_KHR specifies that the statistic is returned as a 64-bit floating-point value and shouldbe read from the f64 field of VkPipelineExecutableStatisticValueKHR. </summary>
     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_FLOAT64_KHR = 3
 }

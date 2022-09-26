@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkHuaweiInvocationMask;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_HUAWEI_invocation_mask - device extension (nr. 371) - author 'Huawei' [platform '' | contact 'Pan Gao
-///     @PanGao-h']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_invocation_mask.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_invocation_mask.html</a>
+///     VK_HUAWEI_invocation_mask - device extension (nr. 371) - author 'Huawei' [platform '' | contact 'Pan Gao @PanGao-h']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_invocation_mask.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_invocation_mask.html </a>
 /// </summary>
 [VkRequires("VK_KHR_ray_tracing_pipeline,VK_KHR_synchronization2")]
 public static unsafe class VkHuaweiInvocationMask
@@ -32,16 +32,13 @@ public static unsafe class VkHuaweiInvocationMask
     /// <summary> The extension name. </summary>
     public const string VK_HUAWEI_INVOCATION_MASK_EXTENSION_NAME = "VK_HUAWEI_invocation_mask";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_HUAWEI_INVOCATION_MASK_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_HUAWEI_INVOCATION_MASK_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_HUAWEI_INVOCATION_MASK_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_HUAWEI_INVOCATION_MASK_EXTENSION_NAME_UTF8_NT =
@@ -49,17 +46,11 @@ public static unsafe class VkHuaweiInvocationMask
 
     /// <summary>
     ///     vkCmdBindInvocationMaskHUAWEI - Bind an invocation mask image on a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindInvocationMaskHUAWEI.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindInvocationMaskHUAWEI.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindInvocationMaskHUAWEI.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindInvocationMaskHUAWEI.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded</param>
-    /// <param name="imageView">
-    ///     imageView is an image view handle specifying the invocation mask image imageView may be set to
-    ///     VK_NULL_HANDLE, which is equivalent to specifying a view of an image filled with ones value.
-    /// </param>
-    /// <param name="imageLayout">
-    ///     imageLayout is the layout that the image subresources accessible from imageView will be in
-    ///     when the invocation mask image is accessed
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded </param>
+    /// <param name="imageView"> imageView is an image view handle specifying the invocation mask image imageView may be set to VK_NULL_HANDLE, which is equivalent to specifying a view of an image filled with ones value. </param>
+    /// <param name="imageLayout"> imageLayout is the layout that the image subresources accessible from imageView will be in when the invocation mask image is accessed </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkImageView /*imageView*/,
@@ -72,7 +63,7 @@ public static unsafe class VkHuaweiInvocationMask
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdBindInvocationMaskHUAWEI</description>
+    ///             <description> vkCmdBindInvocationMaskHUAWEI </description>
     ///         </item>
     ///     </list>
     /// </remarks>

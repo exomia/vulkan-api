@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAccelerationStructureBuildRangeInfoKHR - Structure specifying build offsets and counts for acceleration structure
-///     builds -
+///     VkAccelerationStructureBuildRangeInfoKHR - Structure specifying build offsets and counts for acceleration structure builds -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureBuildRangeInfoKHR.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureBuildRangeInfoKHR.html
@@ -24,15 +23,15 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct VkAccelerationStructureBuildRangeInfoKHR
 {
-    /// <summary>primitiveCount defines the number of primitives for a corresponding acceleration structure geometry.</summary>
+    /// <summary> primitiveCount defines the number of primitives for a corresponding acceleration structure geometry. </summary>
     public uint primitiveCount;
 
-    /// <summary>primitiveOffset defines an offset in bytes into the memory where primitive data is defined.</summary>
+    /// <summary> primitiveOffset defines an offset in bytes into the memory where primitive data is defined. </summary>
     public uint primitiveOffset;
 
-    /// <summary>firstVertex is the index of the first vertex to build from for triangle geometry.</summary>
+    /// <summary> firstVertex is the index of the first vertex to build from for triangle geometry. </summary>
     public uint firstVertex;
 
-    /// <summary>transformOffset defines an offset in bytes into the memory where a transform matrix is defined.</summary>
+    /// <summary> transformOffset defines an offset in bytes into the memory where a transform matrix is defined. </summary>
     public uint transformOffset;
 }

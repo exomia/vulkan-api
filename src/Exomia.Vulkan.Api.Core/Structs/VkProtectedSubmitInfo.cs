@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkProtectedSubmitInfo - Structure indicating whether the submission is protected -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkProtectedSubmitInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkProtectedSubmitInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkProtectedSubmitInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkProtectedSubmitInfo.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSubmitInfo</description>
+///             <term> structextends </term><description> VkSubmitInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -33,21 +33,13 @@ public unsafe struct VkProtectedSubmitInfo
 
     /// <summary>
     ///     sType<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkProtectedSubmitInfo">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkProtectedSubmitInfo</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkProtectedSubmitInfo"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkProtectedSubmitInfo </a>
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary>
-    ///     protectedSubmit specifies whether the batch is protected. If protectedSubmit is VK_TRUE, the batch is
-    ///     protected. If protectedSubmit is VK_FALSE, the batch is unprotected. If the VkSubmitInfo::pNext chain does not
-    ///     include this structure, the batch is unprotected.
-    /// </summary>
+    /// <summary> protectedSubmit specifies whether the batch is protected. If protectedSubmit is VK_TRUE, the batch is protected. If protectedSubmit is VK_FALSE, the batch is unprotected. If the VkSubmitInfo::pNext chain does not include this structure, the batch is unprotected. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     protectedSubmit specifies whether the batch is protected. If protectedSubmit is VK_TRUE, the batch is
-    ///     protected. If protectedSubmit is VK_FALSE, the batch is unprotected. If the VkSubmitInfo::pNext chain does not
-    ///     include this structure, the batch is unprotected.
-    /// </summary>
+    /// <summary> protectedSubmit specifies whether the batch is protected. If protectedSubmit is VK_TRUE, the batch is protected. If protectedSubmit is VK_FALSE, the batch is unprotected. If the VkSubmitInfo::pNext chain does not include this structure, the batch is unprotected. </summary>
     public VkBool32 protectedSubmit;
 }

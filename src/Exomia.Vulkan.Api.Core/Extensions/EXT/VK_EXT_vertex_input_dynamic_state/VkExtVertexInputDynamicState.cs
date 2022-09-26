@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtVertexInputDynamicState;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_vertex_input_dynamic_state - device extension (nr. 353) - author 'EXT' [platform '' | contact 'Piers Daniell
-///     @pdaniell-nv']<br />
+///     VK_EXT_vertex_input_dynamic_state - device extension (nr. 353) - author 'EXT' [platform '' | contact 'Piers Daniell @pdaniell-nv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_vertex_input_dynamic_state.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_vertex_input_dynamic_state.html
@@ -43,8 +43,8 @@ public static unsafe class VkExtVertexInputDynamicState
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_VERTEX_INPUT_DYNAMIC_STATE_EXTENSION_NAME_UTF8_NT =
@@ -52,25 +52,13 @@ public static unsafe class VkExtVertexInputDynamicState
 
     /// <summary>
     ///     vkCmdSetVertexInputEXT - Set the vertex input state dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetVertexInputEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetVertexInputEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetVertexInputEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetVertexInputEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="vertexBindingDescriptionCount">
-    ///     vertexBindingDescriptionCount is the number of vertex binding descriptions
-    ///     provided in pVertexBindingDescriptions.
-    /// </param>
-    /// <param name="pVertexBindingDescriptions">
-    ///     pVertexBindingDescriptions is a pointer to an array of
-    ///     VkVertexInputBindingDescription2EXT structures.
-    /// </param>
-    /// <param name="vertexAttributeDescriptionCount">
-    ///     vertexAttributeDescriptionCount is the number of vertex attribute
-    ///     descriptions provided in pVertexAttributeDescriptions.
-    /// </param>
-    /// <param name="pVertexAttributeDescriptions">
-    ///     pVertexAttributeDescriptions is a pointer to an array of
-    ///     VkVertexInputAttributeDescription2EXT structures.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="vertexBindingDescriptionCount"> vertexBindingDescriptionCount is the number of vertex binding descriptions provided in pVertexBindingDescriptions. </param>
+    /// <param name="pVertexBindingDescriptions"> pVertexBindingDescriptions is a pointer to an array of VkVertexInputBindingDescription2EXT structures. </param>
+    /// <param name="vertexAttributeDescriptionCount"> vertexAttributeDescriptionCount is the number of vertex attribute descriptions provided in pVertexAttributeDescriptions. </param>
+    /// <param name="pVertexAttributeDescriptions"> pVertexAttributeDescriptions is a pointer to an array of VkVertexInputAttributeDescription2EXT structures. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*vertexBindingDescriptionCount*/,
@@ -85,7 +73,7 @@ public static unsafe class VkExtVertexInputDynamicState
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetVertexInputEXT</description>
+    ///             <description> vkCmdSetVertexInputEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

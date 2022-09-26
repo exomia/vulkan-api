@@ -15,17 +15,17 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkBufferCopy - Structure specifying a buffer copy operation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkBufferCopy
 {
-    /// <summary>srcOffset is the starting offset in bytes from the start of srcBuffer.</summary>
+    /// <summary> srcOffset is the starting offset in bytes from the start of srcBuffer. </summary>
     public VkDeviceSize srcOffset;
 
-    /// <summary>dstOffset is the starting offset in bytes from the start of dstBuffer.</summary>
+    /// <summary> dstOffset is the starting offset in bytes from the start of dstBuffer. </summary>
     public VkDeviceSize dstOffset;
 
-    /// <summary>size is the number of bytes to copy.</summary>
+    /// <summary> size is the number of bytes to copy. </summary>
     public VkDeviceSize size;
 }

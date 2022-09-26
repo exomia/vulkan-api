@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceFragmentDensityMapPropertiesEXT - Structure describing fragment density map properties that can be
-///     supported by an implementation -
+///     VkPhysicalDeviceFragmentDensityMapPropertiesEXT - Structure describing fragment density map properties that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapPropertiesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapPropertiesEXT.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,21 +37,18 @@ public unsafe struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary> minFragmentDensityTexelSizeis the minimum fragment density texel size.</summary>
+    /// <summary> minFragmentDensityTexelSizeis the minimum fragment density texel size. </summary>
     public VkExtent2D minFragmentDensityTexelSize;
 
-    /// <summary> maxFragmentDensityTexelSizeis the maximum fragment density texel size.</summary>
+    /// <summary> maxFragmentDensityTexelSizeis the maximum fragment density texel size. </summary>
     public VkExtent2D maxFragmentDensityTexelSize;
 
-    /// <summary>
-    ///     fragmentDensityInvocationsspecifies whether the implementation may invoke additional fragment shader
-    ///     invocations for each covered sample.
-    /// </summary>
+    /// <summary> fragmentDensityInvocationsspecifies whether the implementation may invoke additional fragment shader invocations for each covered sample. </summary>
     public VkBool32 fragmentDensityInvocations;
 }

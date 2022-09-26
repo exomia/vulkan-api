@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Fuchsia;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkImageCreateInfo</description>
+///             <term> structextends </term><description> VkImageCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,15 +34,15 @@ public unsafe struct VkBufferCollectionImageCreateInfoFUCHSIA
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_BUFFER_COLLECTION_IMAGE_CREATE_INFO_FUCHSIA;
 
-    /// <summary>sType is the type of this structure</summary>
+    /// <summary> sType is the type of this structure </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure </summary>
     public void* pNext;
 
-    /// <summary>collection is the VkBufferCollectionFUCHSIA handle</summary>
+    /// <summary> collection is the VkBufferCollectionFUCHSIA handle </summary>
     public VkBufferCollectionFUCHSIA collection;
 
-    /// <summary>index is the index of the buffer in the buffer collection from which the memory will be imported</summary>
+    /// <summary> index is the index of the buffer in the buffer collection from which the memory will be imported </summary>
     public uint index;
 }

@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkHuaweiSubpassShading;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_HUAWEI_subpass_shading - device extension (nr. 370) - author 'HUAWEI' [platform '' | contact 'Pan Gao
-///     @PanGao-h']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_subpass_shading.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_subpass_shading.html</a>
+///     VK_HUAWEI_subpass_shading - device extension (nr. 370) - author 'HUAWEI' [platform '' | contact 'Pan Gao @PanGao-h']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_subpass_shading.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_subpass_shading.html </a>
 /// </summary>
 [VkRequires("VK_KHR_create_renderpass2,VK_KHR_synchronization2")]
 public static unsafe class VkHuaweiSubpassShading
@@ -32,44 +32,36 @@ public static unsafe class VkHuaweiSubpassShading
     /// <summary> The extension name. </summary>
     public const string VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME = "VK_HUAWEI_subpass_shading";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u485f\u4155\u4557\u5f49\u5553\u5042\u5341\u5f53\u4853\u4441\u4e49\u5f47\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
-    ///     vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI - Query maximum supported subpass shading workgroup size for a give
-    ///     render pass -
+    ///     vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI - Query maximum supported subpass shading workgroup size for a give render pass -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is a handle to a local device object that was used to create the given render pass.</param>
-    /// <param name="renderpass">
-    ///     renderPass is a handle to a render pass object describing the environment in which the
-    ///     pipeline will be used. The pipeline must only be used with a render pass instance compatible with the one provided.
-    ///     See Render Pass Compatibility for more information.
-    /// </param>
-    /// <param name="pMaxWorkgroupSize">pMaxWorkgroupSize is a pointer to a VkExtent2D structure.</param>
+    /// <param name="device"> device is a handle to a local device object that was used to create the given render pass. </param>
+    /// <param name="renderpass"> renderPass is a handle to a render pass object describing the environment in which the pipeline will be used. The pipeline must only be used with a render pass instance compatible with the one provided. See Render Pass Compatibility for more information. </param>
+    /// <param name="pMaxWorkgroupSize"> pMaxWorkgroupSize is a pointer to a VkExtent2D structure. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -81,9 +73,9 @@ public static unsafe class VkHuaweiSubpassShading
 
     /// <summary>
     ///     vkCmdSubpassShadingHUAWEI - Dispatch compute work items -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSubpassShadingHUAWEI.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSubpassShadingHUAWEI.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSubpassShadingHUAWEI.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSubpassShadingHUAWEI.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         void> vkCmdSubpassShadingHUAWEI = null;
@@ -94,10 +86,10 @@ public static unsafe class VkHuaweiSubpassShading
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI</description>
+    ///             <description> vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSubpassShadingHUAWEI</description>
+    ///             <description> vkCmdSubpassShadingHUAWEI </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrSurfaceProtectedCapabilities;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_surface_protected_capabilities - instance extension (nr. 240) - author 'KHR' [platform '' | contact 'Sandeep
-///     Shinde @sashinde']<br />
+///     VK_KHR_surface_protected_capabilities - instance extension (nr. 240) - author 'KHR' [platform '' | contact 'Sandeep Shinde @sashinde']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_surface_protected_capabilities.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_surface_protected_capabilities.html
@@ -43,8 +43,8 @@ public static class VkKhrSurfaceProtectedCapabilities
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SURFACE_PROTECTED_CAPABILITIES_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SURFACE_PROTECTED_CAPABILITIES_EXTENSION_NAME_UTF8_NT =

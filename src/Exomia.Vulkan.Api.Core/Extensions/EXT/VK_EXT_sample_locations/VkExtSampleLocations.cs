@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtSampleLocations;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_sample_locations - device extension (nr. 144) - author 'AMD' [platform '' | contact 'Daniel Rakos
-///     @drakos-amd']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_sample_locations.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_sample_locations.html</a>
+///     VK_EXT_sample_locations - device extension (nr. 144) - author 'AMD' [platform '' | contact 'Daniel Rakos @drakos-amd']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_sample_locations.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_sample_locations.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkExtSampleLocations
@@ -32,48 +32,38 @@ public static unsafe class VkExtSampleLocations
     /// <summary> The extension name. </summary>
     public const string VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME = "VK_EXT_sample_locations";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u535f\u4d41\u4c50\u5f45\u4f4c\u4143\u4954\u4e4f\u5f53\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
     ///     vkCmdSetSampleLocationsEXT - Set sample locations dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetSampleLocationsEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetSampleLocationsEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetSampleLocationsEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetSampleLocationsEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pSampleLocationsInfo">pSampleLocationsInfo is the sample locations state to set.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pSampleLocationsInfo"> pSampleLocationsInfo is the sample locations state to set. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkSampleLocationsInfoEXT* /*pSampleLocationsInfo*/,
         void> vkCmdSetSampleLocationsEXT = null;
 
     /// <summary>
-    ///     vkGetPhysicalDeviceMultisamplePropertiesEXT - Report sample count specific multisampling capabilities of a physical
-    ///     device -
+    ///     vkGetPhysicalDeviceMultisamplePropertiesEXT - Report sample count specific multisampling capabilities of a physical device -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceMultisamplePropertiesEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the physical device from which to query the additional multisampling
-    ///     capabilities.
-    /// </param>
-    /// <param name="samples">samples is a VkSampleCountFlagBits value specifying the sample count to query capabilities for.</param>
-    /// <param name="pMultisampleProperties">
-    ///     pMultisampleProperties is a pointer to a VkMultisamplePropertiesEXT structure in
-    ///     which information about additional multisampling capabilities specific to the sample count is returned.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device from which to query the additional multisampling capabilities. </param>
+    /// <param name="samples"> samples is a VkSampleCountFlagBits value specifying the sample count to query capabilities for. </param>
+    /// <param name="pMultisampleProperties"> pMultisampleProperties is a pointer to a VkMultisamplePropertiesEXT structure in which information about additional multisampling capabilities specific to the sample count is returned. </param>
     public static readonly delegate*<
         VkPhysicalDevice /*physicalDevice*/,
         VkSampleCountFlagBits /*samples*/,
@@ -86,7 +76,7 @@ public static unsafe class VkExtSampleLocations
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetSampleLocationsEXT</description>
+    ///             <description> vkCmdSetSampleLocationsEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -105,7 +95,7 @@ public static unsafe class VkExtSampleLocations
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceMultisamplePropertiesEXT</description>
+    ///             <description> vkGetPhysicalDeviceMultisamplePropertiesEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

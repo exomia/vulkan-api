@@ -26,15 +26,15 @@ public unsafe struct VkSemaphoreGetZirconHandleInfoFUCHSIA
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>semaphore is the semaphore from which state will be exported.</summary>
+    /// <summary> semaphore is the semaphore from which state will be exported. </summary>
     public VkSemaphore semaphore;
 
-    /// <summary>handleType is a VkExternalSemaphoreHandleTypeFlagBits value specifying the type of handle requested.</summary>
+    /// <summary> handleType is a VkExternalSemaphoreHandleTypeFlagBits value specifying the type of handle requested. </summary>
     public VkExternalSemaphoreHandleTypeFlagBits handleType;
 }

@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrSeparateDepthStencilLayouts;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_separate_depth_stencil_layouts - device extension (nr. 242) - author 'KHR' [platform '' | contact 'Piers
-///     Daniell @pdaniell-nv']<br />
+///     VK_KHR_separate_depth_stencil_layouts - device extension (nr. 242) - author 'KHR' [platform '' | contact 'Piers Daniell @pdaniell-nv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_separate_depth_stencil_layouts.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_separate_depth_stencil_layouts.html
@@ -44,8 +44,8 @@ public static class VkKhrSeparateDepthStencilLayouts
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SEPARATE_DEPTH_STENCIL_LAYOUTS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SEPARATE_DEPTH_STENCIL_LAYOUTS_EXTENSION_NAME_UTF8_NT =

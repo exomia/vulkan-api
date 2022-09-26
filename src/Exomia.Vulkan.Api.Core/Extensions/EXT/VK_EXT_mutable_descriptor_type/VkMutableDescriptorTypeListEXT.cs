@@ -14,19 +14,15 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkMutableDescriptorTypeListEXT - Structure describing descriptor types that a given descriptor may mutate to
-///     -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListEXT.html</a>
+///     VkMutableDescriptorTypeListEXT - Structure describing descriptor types that a given descriptor may mutate to -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListEXT.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkMutableDescriptorTypeListEXT
 {
-    /// <summary>descriptorTypeCount is the number of elements in pDescriptorTypes.</summary>
+    /// <summary> descriptorTypeCount is the number of elements in pDescriptorTypes. </summary>
     public uint descriptorTypeCount;
 
-    /// <summary>
-    ///     pDescriptorTypes is NULL or a pointer to an array of descriptorTypeCount VkDescriptorType values defining
-    ///     which descriptor types a given binding may mutate to.
-    /// </summary>
+    /// <summary> pDescriptorTypes is NULL or a pointer to an array of descriptorTypeCount VkDescriptorType values defining which descriptor types a given binding may mutate to. </summary>
     public VkDescriptorType* pDescriptorTypes;
 }

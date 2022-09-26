@@ -23,13 +23,13 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkRenderPassCreationFeedbackInfoEXT
 {
-    /// <summary>postMergeSubpassCount is the subpass count after merge.</summary>
+    /// <summary> postMergeSubpassCount is the subpass count after merge. </summary>
     public uint postMergeSubpassCount;
 }

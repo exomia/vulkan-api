@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkRenderPassCreationControlEXT - Control about the creation of render pass or subpass -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreationControlEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreationControlEXT.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreationControlEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreationControlEXT.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkRenderPassCreateInfo2,VkSubpassDescription2</description>
+///             <term> structextends </term><description> VkRenderPassCreateInfo2,VkSubpassDescription2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,12 +31,12 @@ public unsafe struct VkRenderPassCreationControlEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_RENDER_PASS_CREATION_CONTROL_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to an extension-specific structure.</summary>
+    /// <summary> pNext is NULL or a pointer to an extension-specific structure. </summary>
     public void* pNext;
 
-    /// <summary>disallowMerging is a boolean value indicating whether subpass merging will be disabled.</summary>
+    /// <summary> disallowMerging is a boolean value indicating whether subpass merging will be disabled. </summary>
     public VkBool32 disallowMerging;
 }

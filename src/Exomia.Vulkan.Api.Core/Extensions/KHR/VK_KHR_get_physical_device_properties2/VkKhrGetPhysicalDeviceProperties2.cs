@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrGetPhysicalDeviceProperties2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_get_physical_device_properties2 - instance extension (nr. 60) - author 'KHR' [platform '' | contact 'Jeff
-///     Bolz @jeffbolznv']<br />
+///     VK_KHR_get_physical_device_properties2 - instance extension (nr. 60) - author 'KHR' [platform '' | contact 'Jeff Bolz @jeffbolznv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_physical_device_properties2.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_physical_device_properties2.html
@@ -43,8 +43,8 @@ public static unsafe class VkKhrGetPhysicalDeviceProperties2
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME_UTF8_NT =
@@ -152,25 +152,25 @@ public static unsafe class VkKhrGetPhysicalDeviceProperties2
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceFeatures2KHR</description>
+    ///             <description> vkGetPhysicalDeviceFeatures2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceProperties2KHR</description>
+    ///             <description> vkGetPhysicalDeviceProperties2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceFormatProperties2KHR</description>
+    ///             <description> vkGetPhysicalDeviceFormatProperties2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceImageFormatProperties2KHR</description>
+    ///             <description> vkGetPhysicalDeviceImageFormatProperties2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceQueueFamilyProperties2KHR</description>
+    ///             <description> vkGetPhysicalDeviceQueueFamilyProperties2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceMemoryProperties2KHR</description>
+    ///             <description> vkGetPhysicalDeviceMemoryProperties2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceSparseImageFormatProperties2KHR</description>
+    ///             <description> vkGetPhysicalDeviceSparseImageFormatProperties2KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

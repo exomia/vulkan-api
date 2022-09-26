@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvShaderSubgroupPartitioned;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_shader_subgroup_partitioned - device extension (nr. 199) - author 'NV' [platform '' | contact 'Jeff Bolz
-///     @jeffbolznv']<br />
+///     VK_NV_shader_subgroup_partitioned - device extension (nr. 199) - author 'NV' [platform '' | contact 'Jeff Bolz @jeffbolznv']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_subgroup_partitioned.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_subgroup_partitioned.html
@@ -42,8 +42,8 @@ public static class VkNvShaderSubgroupPartitioned
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_SHADER_SUBGROUP_PARTITIONED_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_SHADER_SUBGROUP_PARTITIONED_EXTENSION_NAME_UTF8_NT =

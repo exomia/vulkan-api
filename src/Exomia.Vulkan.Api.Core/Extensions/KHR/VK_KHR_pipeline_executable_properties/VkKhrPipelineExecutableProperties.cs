@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrPipelineExecutableProperties;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_pipeline_executable_properties - device extension (nr. 270) - author 'KHR' [platform '' | contact 'Jason
-///     Ekstrand @jekstrand']<br />
+///     VK_KHR_pipeline_executable_properties - device extension (nr. 270) - author 'KHR' [platform '' | contact 'Jason Ekstrand @jekstrand']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_pipeline_executable_properties.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_pipeline_executable_properties.html
@@ -47,8 +47,8 @@ public static unsafe class VkKhrPipelineExecutableProperties
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_PIPELINE_EXECUTABLE_PROPERTIES_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_PIPELINE_EXECUTABLE_PROPERTIES_EXTENSION_NAME_UTF8_NT =
@@ -61,23 +61,18 @@ public static unsafe class VkKhrPipelineExecutableProperties
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineExecutablePropertiesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device that created the pipeline.</param>
-    /// <param name="pPipelineInfo">pPipelineInfo describes the pipeline being queried.</param>
-    /// <param name="pExecutableCount">
-    ///     pExecutableCount is a pointer to an integer related to the number of pipeline
-    ///     executables available or queried, as described below.
-    /// </param>
-    /// <param name="pProperties">
-    ///     pProperties is either NULL or a pointer to an array of VkPipelineExecutablePropertiesKHR
-    ///     structures.
-    /// </param>
+    /// <param name="device"> device is the device that created the pipeline. </param>
+    /// <param name="pPipelineInfo"> pPipelineInfo describes the pipeline being queried. </param>
+    /// <param name="pExecutableCount"> pExecutableCount is a pointer to an integer related to the number of pipeline executables available or queried, as described below. </param>
+    /// <param name="pProperties"> pProperties is either NULL or a pointer to an array of VkPipelineExecutablePropertiesKHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -95,23 +90,18 @@ public static unsafe class VkKhrPipelineExecutableProperties
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineExecutableStatisticsKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device that created the pipeline.</param>
-    /// <param name="pExecutableInfo">pExecutableInfo describes the pipeline executable being queried.</param>
-    /// <param name="pStatisticCount">
-    ///     pStatisticCount is a pointer to an integer related to the number of statistics available
-    ///     or queried, as described below.
-    /// </param>
-    /// <param name="pStatistics">
-    ///     pStatistics is either NULL or a pointer to an array of VkPipelineExecutableStatisticKHR
-    ///     structures.
-    /// </param>
+    /// <param name="device"> device is the device that created the pipeline. </param>
+    /// <param name="pExecutableInfo"> pExecutableInfo describes the pipeline executable being queried. </param>
+    /// <param name="pStatisticCount"> pStatisticCount is a pointer to an integer related to the number of statistics available or queried, as described below. </param>
+    /// <param name="pStatistics"> pStatistics is either NULL or a pointer to an array of VkPipelineExecutableStatisticKHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -129,23 +119,18 @@ public static unsafe class VkKhrPipelineExecutableProperties
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device that created the pipeline.</param>
-    /// <param name="pExecutableInfo">pExecutableInfo describes the pipeline executable being queried.</param>
-    /// <param name="pInternalRepresentationCount">
-    ///     pInternalRepresentationCount is a pointer to an integer related to the
-    ///     number of internal representations available or queried, as described below.
-    /// </param>
-    /// <param name="pInternalRepresentations">
-    ///     pInternalRepresentations is either NULL or a pointer to an array of
-    ///     VkPipelineExecutableInternalRepresentationKHR structures.
-    /// </param>
+    /// <param name="device"> device is the device that created the pipeline. </param>
+    /// <param name="pExecutableInfo"> pExecutableInfo describes the pipeline executable being queried. </param>
+    /// <param name="pInternalRepresentationCount"> pInternalRepresentationCount is a pointer to an integer related to the number of internal representations available or queried, as described below. </param>
+    /// <param name="pInternalRepresentations"> pInternalRepresentations is either NULL or a pointer to an array of VkPipelineExecutableInternalRepresentationKHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -162,13 +147,13 @@ public static unsafe class VkKhrPipelineExecutableProperties
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPipelineExecutablePropertiesKHR</description>
+    ///             <description> vkGetPipelineExecutablePropertiesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPipelineExecutableStatisticsKHR</description>
+    ///             <description> vkGetPipelineExecutableStatisticsKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPipelineExecutableInternalRepresentationsKHR</description>
+    ///             <description> vkGetPipelineExecutableInternalRepresentationsKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

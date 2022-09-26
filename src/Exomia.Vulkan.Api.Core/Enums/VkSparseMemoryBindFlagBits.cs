@@ -15,11 +15,11 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSparseMemoryBindFlagBits - Bitmask specifying usage of a sparse memory binding operation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseMemoryBindFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseMemoryBindFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseMemoryBindFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseMemoryBindFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkSparseMemoryBindFlagBits
 {
-    /// <summary>VK_SPARSE_MEMORY_BIND_METADATA_BIT specifies that the memory being bound is only for the metadata aspect.</summary>
+    /// <summary> VK_SPARSE_MEMORY_BIND_METADATA_BIT specifies that the memory being bound is only for the metadata aspect. </summary>
     VK_SPARSE_MEMORY_BIND_METADATA_BIT = 0x1
 }

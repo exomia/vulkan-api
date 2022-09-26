@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,16 +34,12 @@ public unsafe struct VkPhysicalDeviceDepthClipEnableFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     depthClipEnable indicates that the implementation supports setting the depth clipping operation explicitly
-    ///     via the VkPipelineRasterizationDepthClipStateCreateInfoEXTpipeline state. Otherwise depth clipping is only enabled
-    ///     when VkPipelineRasterizationStateCreateInfo::depthClampEnable is set to VK_FALSE.
-    /// </summary>
+    /// <summary> depthClipEnable indicates that the implementation supports setting the depth clipping operation explicitly via the VkPipelineRasterizationDepthClipStateCreateInfoEXTpipeline state. Otherwise depth clipping is only enabled when VkPipelineRasterizationStateCreateInfo::depthClampEnable is set to VK_FALSE. </summary>
     public VkBool32 depthClipEnable;
 }

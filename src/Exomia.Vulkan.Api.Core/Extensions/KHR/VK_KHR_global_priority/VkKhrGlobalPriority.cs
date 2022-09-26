@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_KHR_global_priority - device extension (nr. 189) - author 'KHR' [platform '' | contact 'Tobias Hector @tobski']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_global_priority.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_global_priority.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_global_priority.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_global_priority.html </a>
 /// </summary>
 public static class VkKhrGlobalPriority
 {
@@ -31,16 +31,13 @@ public static class VkKhrGlobalPriority
     /// <summary> The extension name. </summary>
     public const string VK_KHR_GLOBAL_PRIORITY_EXTENSION_NAME = "VK_KHR_global_priority";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_GLOBAL_PRIORITY_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_GLOBAL_PRIORITY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_GLOBAL_PRIORITY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_GLOBAL_PRIORITY_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u475f\u4f4c\u4142\u5f4c\u5250\u4f49\u4952\u5954\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";

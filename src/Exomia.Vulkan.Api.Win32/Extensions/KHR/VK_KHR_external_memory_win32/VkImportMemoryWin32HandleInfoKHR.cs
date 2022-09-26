@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Win32;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkMemoryAllocateInfo</description>
+///             <term> structextends </term><description> VkMemoryAllocateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,18 +34,18 @@ public unsafe struct VkImportMemoryWin32HandleInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of handle or name.</summary>
+    /// <summary> handleType is a VkExternalMemoryHandleTypeFlagBits value specifying the type of handle or name. </summary>
     public VkExternalMemoryHandleTypeFlagBits handleType;
 
-    /// <summary>handle is NULL or the external handle to import.</summary>
+    /// <summary> handle is NULL or the external handle to import. </summary>
     public HANDLE handle;
 
-    /// <summary>name is NULL or a null-terminated UTF-16 string naming the payload to import.</summary>
+    /// <summary> name is NULL or a null-terminated UTF-16 string naming the payload to import. </summary>
     public char* name;
 }

@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Win32;
 
 /// <summary>
-///     VkSurfaceCapabilitiesFullScreenExclusiveEXT - Structure describing full screen exclusive capabilities of a surface
-///     -
+///     VkSurfaceCapabilitiesFullScreenExclusiveEXT - Structure describing full screen exclusive capabilities of a surface -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilitiesFullScreenExclusiveEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilitiesFullScreenExclusiveEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Win32;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSurfaceCapabilities2KHR</description>
+///             <term> structextends </term><description> VkSurfaceCapabilities2KHR </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,10 +34,10 @@ public unsafe struct VkSurfaceCapabilitiesFullScreenExclusiveEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
     /// <summary>

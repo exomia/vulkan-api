@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrShaderIntegerDotProduct;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_shader_integer_dot_product - device extension (nr. 281) - author 'KHR' [platform '' | contact 'Kevin Petit
-///     @kevinpetit']<br />
+///     VK_KHR_shader_integer_dot_product - device extension (nr. 281) - author 'KHR' [platform '' | contact 'Kevin Petit @kevinpetit']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_integer_dot_product.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_integer_dot_product.html
@@ -44,8 +44,8 @@ public static class VkKhrShaderIntegerDotProduct
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SHADER_INTEGER_DOT_PRODUCT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SHADER_INTEGER_DOT_PRODUCT_EXTENSION_NAME_UTF8_NT =

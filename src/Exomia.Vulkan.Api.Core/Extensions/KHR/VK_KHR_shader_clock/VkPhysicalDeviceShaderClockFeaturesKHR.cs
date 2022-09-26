@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,15 +34,15 @@ public unsafe struct VkPhysicalDeviceShaderClockFeaturesKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary> shaderSubgroupClock indicates whether shaders can perform Subgroup scoped clock reads.</summary>
+    /// <summary> shaderSubgroupClock indicates whether shaders can perform Subgroup scoped clock reads. </summary>
     public VkBool32 shaderSubgroupClock;
 
-    /// <summary> shaderDeviceClock indicates whether shaders can perform Device scoped clock reads.</summary>
+    /// <summary> shaderDeviceClock indicates whether shaders can perform Device scoped clock reads. </summary>
     public VkBool32 shaderDeviceClock;
 }

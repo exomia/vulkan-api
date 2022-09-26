@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkAmdMixedAttachmentSamples;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_AMD_mixed_attachment_samples - device extension (nr. 137) - author 'AMD' [platform '' | contact 'Matthaeus G.
-///     Chajdas @anteru']<br />
+///     VK_AMD_mixed_attachment_samples - device extension (nr. 137) - author 'AMD' [platform '' | contact 'Matthaeus G. Chajdas @anteru']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_mixed_attachment_samples.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_mixed_attachment_samples.html
@@ -34,16 +34,13 @@ public static class VkAmdMixedAttachmentSamples
     /// <summary> The extension name. </summary>
     public const string VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME = "VK_AMD_mixed_attachment_samples";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME_UTF8_NT =

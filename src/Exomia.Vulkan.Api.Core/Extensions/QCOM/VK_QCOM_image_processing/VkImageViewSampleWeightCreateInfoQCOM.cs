@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkImageViewCreateInfo</description>
+///             <term> structextends </term><description> VkImageViewCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,18 +34,18 @@ public unsafe struct VkImageViewSampleWeightCreateInfoQCOM
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_VIEW_SAMPLE_WEIGHT_CREATE_INFO_QCOM;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>filterCenter is a VkOffset2D describing the location of the weight filter origin.</summary>
+    /// <summary> filterCenter is a VkOffset2D describing the location of the weight filter origin. </summary>
     public VkOffset2D filterCenter;
 
-    /// <summary>filterSize is a VkExtent2D specifying weight filter dimensions.</summary>
+    /// <summary> filterSize is a VkExtent2D specifying weight filter dimensions. </summary>
     public VkExtent2D filterSize;
 
-    /// <summary>numPhases is number of sub-pixel filter phases.</summary>
+    /// <summary> numPhases is number of sub-pixel filter phases. </summary>
     public uint numPhases;
 }

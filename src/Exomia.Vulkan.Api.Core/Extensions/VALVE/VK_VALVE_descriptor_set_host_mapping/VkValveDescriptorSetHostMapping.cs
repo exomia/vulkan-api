@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkValveDescriptorSetHostMapping;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_VALVE_descriptor_set_host_mapping - device extension (nr. 421) - author 'VALVE' [platform '' | contact
-///     'Hans-Kristian Arntzen @HansKristian-Work']<br />
+///     VK_VALVE_descriptor_set_host_mapping - device extension (nr. 421) - author 'VALVE' [platform '' | contact 'Hans-Kristian Arntzen @HansKristian-Work']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_VALVE_descriptor_set_host_mapping.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_VALVE_descriptor_set_host_mapping.html
@@ -46,8 +46,8 @@ public static unsafe class VkValveDescriptorSetHostMapping
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_VALVE_DESCRIPTOR_SET_HOST_MAPPING_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_VALVE_DESCRIPTOR_SET_HOST_MAPPING_EXTENSION_NAME_UTF8_NT =
@@ -60,18 +60,9 @@ public static unsafe class VkValveDescriptorSetHostMapping
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDescriptorSetLayoutHostMappingInfoVALVE.html
     ///     </a>
     /// </summary>
-    /// <param name="device">
-    ///     VUID-vkGetDescriptorSetLayoutHostMappingInfoVALVE-device-parameter device must be a valid
-    ///     VkDevice handle
-    /// </param>
-    /// <param name="pBindingReference">
-    ///     VUID-vkGetDescriptorSetLayoutHostMappingInfoVALVE-pBindingReference-parameter
-    ///     pBindingReference must be a valid pointer to a valid VkDescriptorSetBindingReferenceVALVE structure
-    /// </param>
-    /// <param name="pHostMapping">
-    ///     VUID-vkGetDescriptorSetLayoutHostMappingInfoVALVE-pHostMapping-parameter pHostMapping must
-    ///     be a valid pointer to a VkDescriptorSetLayoutHostMappingInfoVALVE structure
-    /// </param>
+    /// <param name="device"> VUID-vkGetDescriptorSetLayoutHostMappingInfoVALVE-device-parameter device must be a valid VkDevice handle </param>
+    /// <param name="pBindingReference"> VUID-vkGetDescriptorSetLayoutHostMappingInfoVALVE-pBindingReference-parameter pBindingReference must be a valid pointer to a valid VkDescriptorSetBindingReferenceVALVE structure </param>
+    /// <param name="pHostMapping"> VUID-vkGetDescriptorSetLayoutHostMappingInfoVALVE-pHostMapping-parameter pHostMapping must be a valid pointer to a VkDescriptorSetLayoutHostMappingInfoVALVE structure </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkDescriptorSetBindingReferenceVALVE* /*pBindingReference*/,
@@ -85,15 +76,9 @@ public static unsafe class VkValveDescriptorSetHostMapping
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDescriptorSetHostMappingVALVE.html
     ///     </a>
     /// </summary>
-    /// <param name="device"> VUID-vkGetDescriptorSetHostMappingVALVE-device-parameter device must be a valid VkDevice handle</param>
-    /// <param name="descriptorSet">
-    ///     VUID-vkGetDescriptorSetHostMappingVALVE-descriptorSet-parameter descriptorSet must be a
-    ///     valid VkDescriptorSet handle
-    /// </param>
-    /// <param name="ppData">
-    ///     VUID-vkGetDescriptorSetHostMappingVALVE-ppData-parameter ppData must be a valid pointer to a
-    ///     pointer value
-    /// </param>
+    /// <param name="device"> VUID-vkGetDescriptorSetHostMappingVALVE-device-parameter device must be a valid VkDevice handle </param>
+    /// <param name="descriptorSet"> VUID-vkGetDescriptorSetHostMappingVALVE-descriptorSet-parameter descriptorSet must be a valid VkDescriptorSet handle </param>
+    /// <param name="ppData"> VUID-vkGetDescriptorSetHostMappingVALVE-ppData-parameter ppData must be a valid pointer to a pointer value </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkDescriptorSet /*descriptorSet*/,
@@ -106,10 +91,10 @@ public static unsafe class VkValveDescriptorSetHostMapping
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetDescriptorSetLayoutHostMappingInfoVALVE</description>
+    ///             <description> vkGetDescriptorSetLayoutHostMappingInfoVALVE </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDescriptorSetHostMappingVALVE</description>
+    ///             <description> vkGetDescriptorSetHostMappingVALVE </description>
     ///         </item>
     ///     </list>
     /// </remarks>

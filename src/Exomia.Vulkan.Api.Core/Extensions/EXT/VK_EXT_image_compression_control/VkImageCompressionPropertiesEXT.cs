@@ -23,11 +23,11 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term>
-///             <description>VkImageFormatProperties2,VkSurfaceFormat2KHR,VkSubresourceLayout2EXT</description>
+///             <term> structextends </term>
+///             <description> VkImageFormatProperties2,VkSurfaceFormat2KHR,VkSubresourceLayout2EXT </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,23 +38,15 @@ public unsafe struct VkImageCompressionPropertiesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_COMPRESSION_PROPERTIES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     imageCompressionFlags returns a value describing the compression controls that apply to the image. The value
-    ///     will be either VK_IMAGE_COMPRESSION_DEFAULT_EXT to indicate no fixed-rate compression,
-    ///     VK_IMAGE_COMPRESSION_FIXED_RATE_EXPLICIT_EXT to indicate fixed-rate compression, or
-    ///     VK_IMAGE_COMPRESSION_DISABLED_EXT to indicate no compression.
-    /// </summary>
+    /// <summary> imageCompressionFlags returns a value describing the compression controls that apply to the image. The value will be either VK_IMAGE_COMPRESSION_DEFAULT_EXT to indicate no fixed-rate compression, VK_IMAGE_COMPRESSION_FIXED_RATE_EXPLICIT_EXT to indicate fixed-rate compression, or VK_IMAGE_COMPRESSION_DISABLED_EXT to indicate no compression. </summary>
     public VkImageCompressionFlagsEXT imageCompressionFlags;
 
-    /// <summary>
-    ///     imageCompressionFixedRateFlags returns a VkImageCompressionFixedRateFlagsEXT value describing the compression
-    ///     rates that apply to the specified aspect of the image.
-    /// </summary>
+    /// <summary> imageCompressionFixedRateFlags returns a VkImageCompressionFixedRateFlagsEXT value describing the compression rates that apply to the specified aspect of the image. </summary>
     public VkImageCompressionFixedRateFlagsEXT imageCompressionFixedRateFlags;
 }

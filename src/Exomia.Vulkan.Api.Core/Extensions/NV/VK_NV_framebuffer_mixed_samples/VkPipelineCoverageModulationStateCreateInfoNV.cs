@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPipelineMultisampleStateCreateInfo</description>
+///             <term> structextends </term><description> VkPipelineMultisampleStateCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,30 +34,24 @@ public unsafe struct VkPipelineCoverageModulationStateCreateInfoNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary> flags is reserved for future use. </summary>
     public VkPipelineCoverageModulationStateCreateFlagsNV flags;
 
-    /// <summary>coverageModulationMode is a VkCoverageModulationModeNV value controlling which color components are modulated.</summary>
+    /// <summary> coverageModulationMode is a VkCoverageModulationModeNV value controlling which color components are modulated. </summary>
     public VkCoverageModulationModeNV coverageModulationMode;
 
-    /// <summary>
-    ///     coverageModulationTableEnable controls whether the modulation factor is looked up from a table in
-    ///     pCoverageModulationTable.
-    /// </summary>
+    /// <summary> coverageModulationTableEnable controls whether the modulation factor is looked up from a table in pCoverageModulationTable. </summary>
     public VkBool32 coverageModulationTableEnable;
 
-    /// <summary>coverageModulationTableCount is the number of elements in pCoverageModulationTable.</summary>
+    /// <summary> coverageModulationTableCount is the number of elements in pCoverageModulationTable. </summary>
     public uint coverageModulationTableCount;
 
-    /// <summary>
-    ///     pCoverageModulationTable is a table of modulation factors containing a value for each number of covered
-    ///     samples.
-    /// </summary>
+    /// <summary> pCoverageModulationTable is a table of modulation factors containing a value for each number of covered samples. </summary>
     public float* pCoverageModulationTable;
 }

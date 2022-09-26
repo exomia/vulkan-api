@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceMeshShaderFeaturesNV - Structure describing mesh shading features that can be supported by an
-///     implementation -
+///     VkPhysicalDeviceMeshShaderFeaturesNV - Structure describing mesh shading features that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,21 +34,15 @@ public unsafe struct VkPhysicalDeviceMeshShaderFeaturesNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     taskShader specifies whether task shaders are supported. If this feature is not enabled, the
-    ///     VK_SHADER_STAGE_TASK_BIT_NVand VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV enum values must not be used.
-    /// </summary>
+    /// <summary> taskShader specifies whether task shaders are supported. If this feature is not enabled, the VK_SHADER_STAGE_TASK_BIT_NVand VK_PIPELINE_STAGE_TASK_SHADER_BIT_NV enum values must not be used. </summary>
     public VkBool32 taskShader;
 
-    /// <summary>
-    ///     meshShader specifies whether mesh shaders are supported. If this feature is not enabled, the
-    ///     VK_SHADER_STAGE_MESH_BIT_NVand VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV enum values must not be used.
-    /// </summary>
+    /// <summary> meshShader specifies whether mesh shaders are supported. If this feature is not enabled, the VK_SHADER_STAGE_MESH_BIT_NVand VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV enum values must not be used. </summary>
     public VkBool32 meshShader;
 }

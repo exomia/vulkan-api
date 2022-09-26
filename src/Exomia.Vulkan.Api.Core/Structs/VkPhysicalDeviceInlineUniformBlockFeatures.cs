@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceInlineUniformBlockFeatures - Structure describing inline uniform block features that can be
-///     supported by an implementation -
+///     VkPhysicalDeviceInlineUniformBlockFeatures - Structure describing inline uniform block features that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeatures.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeatures.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,22 +34,15 @@ public unsafe struct VkPhysicalDeviceInlineUniformBlockFeatures
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     inlineUniformBlockindicates whether the implementation supports inline uniform block descriptors. If this
-    ///     feature is not enabled, VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK must not be used.
-    /// </summary>
+    /// <summary> inlineUniformBlockindicates whether the implementation supports inline uniform block descriptors. If this feature is not enabled, VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK must not be used. </summary>
     public VkBool32 inlineUniformBlock;
 
-    /// <summary>
-    ///     descriptorBindingInlineUniformBlockUpdateAfterBindindicates whether the implementation supports updating
-    ///     inline uniform block descriptors after a set is bound. If this feature is not enabled,
-    ///     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT must not be used with VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.
-    /// </summary>
+    /// <summary> descriptorBindingInlineUniformBlockUpdateAfterBindindicates whether the implementation supports updating inline uniform block descriptors after a set is bound. If this feature is not enabled, VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT must not be used with VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK. </summary>
     public VkBool32 descriptorBindingInlineUniformBlockUpdateAfterBind;
 }

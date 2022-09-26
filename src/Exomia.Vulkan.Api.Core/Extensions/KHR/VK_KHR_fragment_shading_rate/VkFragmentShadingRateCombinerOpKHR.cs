@@ -22,24 +22,18 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkFragmentShadingRateCombinerOpKHR
 {
-    /// <summary>VK_FRAGMENT_SHADING_RATE_COMBINER_OP_KEEP_KHR specifies a combiner operation of combine(Axy,Bxy) = Axy.</summary>
+    /// <summary> VK_FRAGMENT_SHADING_RATE_COMBINER_OP_KEEP_KHR specifies a combiner operation of combine(Axy,Bxy) = Axy. </summary>
     VK_FRAGMENT_SHADING_RATE_COMBINER_OP_KEEP_KHR = 0,
 
-    /// <summary>VK_FRAGMENT_SHADING_RATE_COMBINER_OP_REPLACE_KHR specifies a combiner operation of combine(Axy,Bxy) = Bxy.</summary>
+    /// <summary> VK_FRAGMENT_SHADING_RATE_COMBINER_OP_REPLACE_KHR specifies a combiner operation of combine(Axy,Bxy) = Bxy. </summary>
     VK_FRAGMENT_SHADING_RATE_COMBINER_OP_REPLACE_KHR = 1,
 
-    /// <summary>
-    ///     VK_FRAGMENT_SHADING_RATE_COMBINER_OP_MIN_KHR specifies a combiner operation of combine(Axy,Bxy) =
-    ///     min(Axy,Bxy).
-    /// </summary>
+    /// <summary> VK_FRAGMENT_SHADING_RATE_COMBINER_OP_MIN_KHR specifies a combiner operation of combine(Axy,Bxy) = min(Axy,Bxy). </summary>
     VK_FRAGMENT_SHADING_RATE_COMBINER_OP_MIN_KHR = 2,
 
-    /// <summary>
-    ///     VK_FRAGMENT_SHADING_RATE_COMBINER_OP_MAX_KHR specifies a combiner operation of combine(Axy,Bxy) =
-    ///     max(Axy,Bxy).
-    /// </summary>
+    /// <summary> VK_FRAGMENT_SHADING_RATE_COMBINER_OP_MAX_KHR specifies a combiner operation of combine(Axy,Bxy) = max(Axy,Bxy). </summary>
     VK_FRAGMENT_SHADING_RATE_COMBINER_OP_MAX_KHR = 3,
 
-    /// <summary>VK_FRAGMENT_SHADING_RATE_COMBINER_OP_MUL_KHR specifies a combiner operation of combine(Axy,Bxy) = Axy*Bxy.</summary>
+    /// <summary> VK_FRAGMENT_SHADING_RATE_COMBINER_OP_MUL_KHR specifies a combiner operation of combine(Axy,Bxy) = Axy*Bxy. </summary>
     VK_FRAGMENT_SHADING_RATE_COMBINER_OP_MUL_KHR = 4
 }

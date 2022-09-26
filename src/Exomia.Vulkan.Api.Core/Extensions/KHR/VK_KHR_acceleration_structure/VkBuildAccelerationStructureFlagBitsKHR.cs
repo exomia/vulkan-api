@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkBuildAccelerationStructureFlagBitsKHR - Bitmask specifying additional parameters for acceleration structure
-///     builds -
+///     VkBuildAccelerationStructureFlagBitsKHR - Bitmask specifying additional parameters for acceleration structure builds -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBuildAccelerationStructureFlagBitsKHR.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBuildAccelerationStructureFlagBitsKHR.html
@@ -25,8 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkBuildAccelerationStructureFlagBitsKHR
 {
     /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR indicates     that the specified acceleration structure can be
-    ///     updated with     a mode of VK_BUILD_ACCELERATION_STRUCTURE_MODE_UPDATE_KHR in
+    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR indicates     that the specified acceleration structure can be updated with     a mode of VK_BUILD_ACCELERATION_STRUCTURE_MODE_UPDATE_KHR in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureBuildGeometryInfoKHR.html">
     ///         VkAccelerationStructureBuildGeometryInfoKHR
@@ -40,30 +38,16 @@ public enum VkBuildAccelerationStructureFlagBitsKHR
     /// </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR = 0x1,
 
-    /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_KHR indicates that the specified acceleration structure
-    ///     can act as the source for a copy acceleration structure command with mode of
-    ///     VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR to produce a compacted acceleration structure.
-    /// </summary>
+    /// <summary> VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_KHR indicates that the specified acceleration structure can act as the source for a copy acceleration structure command with mode of VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR to produce a compacted acceleration structure. </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_KHR = 0x2,
 
-    /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_KHRindicates that the given acceleration structure build
-    ///     should prioritize trace performance over build time.
-    /// </summary>
+    /// <summary> VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_KHRindicates that the given acceleration structure build should prioritize trace performance over build time. </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_KHR = 0x4,
 
-    /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_KHRindicates that the given acceleration structure build
-    ///     should prioritize build time over trace performance.
-    /// </summary>
+    /// <summary> VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_KHRindicates that the given acceleration structure build should prioritize build time over trace performance. </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_KHR = 0x8,
 
-    /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_KHR indicates that this acceleration structure should minimize
-    ///     the size of the scratch memory and the final result acceleration structure, potentially at the expense of build
-    ///     time or trace performance.
-    /// </summary>
+    /// <summary> VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_KHR indicates that this acceleration structure should minimize the size of the scratch memory and the final result acceleration structure, potentially at the expense of build time or trace performance. </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_KHR = 0x10,
 
     /// <summary>
@@ -112,8 +96,7 @@ public enum VkBuildAccelerationStructureFlagBitsKHR
     VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_BIT_10_NV = 0x400,
 
     /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR indicates     that the specified acceleration structure can be
-    ///     updated with     a mode of VK_BUILD_ACCELERATION_STRUCTURE_MODE_UPDATE_KHR in
+    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR indicates     that the specified acceleration structure can be updated with     a mode of VK_BUILD_ACCELERATION_STRUCTURE_MODE_UPDATE_KHR in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureBuildGeometryInfoKHR.html">
     ///         VkAccelerationStructureBuildGeometryInfoKHR
@@ -127,29 +110,15 @@ public enum VkBuildAccelerationStructureFlagBitsKHR
     /// </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_NV = VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR,
 
-    /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_KHR indicates that the specified acceleration structure
-    ///     can act as the source for a copy acceleration structure command with mode of
-    ///     VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR to produce a compacted acceleration structure.
-    /// </summary>
+    /// <summary> VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_KHR indicates that the specified acceleration structure can act as the source for a copy acceleration structure command with mode of VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR to produce a compacted acceleration structure. </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_NV = VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT_KHR,
 
-    /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_KHRindicates that the given acceleration structure build
-    ///     should prioritize trace performance over build time.
-    /// </summary>
+    /// <summary> VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_KHRindicates that the given acceleration structure build should prioritize trace performance over build time. </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_NV = VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT_KHR,
 
-    /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_KHRindicates that the given acceleration structure build
-    ///     should prioritize build time over trace performance.
-    /// </summary>
+    /// <summary> VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_KHRindicates that the given acceleration structure build should prioritize build time over trace performance. </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_NV = VK_BUILD_ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT_KHR,
 
-    /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_KHR indicates that this acceleration structure should minimize
-    ///     the size of the scratch memory and the final result acceleration structure, potentially at the expense of build
-    ///     time or trace performance.
-    /// </summary>
+    /// <summary> VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_KHR indicates that this acceleration structure should minimize the size of the scratch memory and the final result acceleration structure, potentially at the expense of build time or trace performance. </summary>
     VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_NV = VK_BUILD_ACCELERATION_STRUCTURE_LOW_MEMORY_BIT_KHR
 }

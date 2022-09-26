@@ -15,27 +15,17 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSparseImageFormatFlagBits - Bitmask specifying additional information about a sparse image resource -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageFormatFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageFormatFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageFormatFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageFormatFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkSparseImageFormatFlagBits
 {
-    /// <summary>
-    ///     VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT specifies that the image uses a single mip tail region for all array
-    ///     layers.
-    /// </summary>
+    /// <summary> VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT specifies that the image uses a single mip tail region for all array layers. </summary>
     VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT = 0x1,
 
-    /// <summary>
-    ///     VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT specifies that the first mip level whose dimensions are not
-    ///     integer multiples of the corresponding dimensions of the sparse image block begins the mip tail region.
-    /// </summary>
+    /// <summary> VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT specifies that the first mip level whose dimensions are not integer multiples of the corresponding dimensions of the sparse image block begins the mip tail region. </summary>
     VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT = 0x2,
 
-    /// <summary>
-    ///     VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT specifies that the image uses non-standard sparse image
-    ///     block dimensions, and the imageGranularity values do not match the standard sparse image block dimensions for the
-    ///     given format.
-    /// </summary>
+    /// <summary> VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT specifies that the image uses non-standard sparse image block dimensions, and the imageGranularity values do not match the standard sparse image block dimensions for the given format. </summary>
     VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT = 0x4
 }

@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrShaderDrawParameters;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_shader_draw_parameters - device extension (nr. 64) - author 'KHR' [platform '' | contact 'Daniel Koch
-///     @dgkoch']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_draw_parameters.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_draw_parameters.html</a>
+///     VK_KHR_shader_draw_parameters - device extension (nr. 64) - author 'KHR' [platform '' | contact 'Daniel Koch @dgkoch']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_draw_parameters.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_draw_parameters.html </a>
 /// </summary>
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_draw_parameters.html#_deprecation_state")]
 public static class VkKhrShaderDrawParameters
@@ -32,16 +32,13 @@ public static class VkKhrShaderDrawParameters
     /// <summary> The extension name. </summary>
     public const string VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME = "VK_KHR_shader_draw_parameters";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME_UTF8_NT =

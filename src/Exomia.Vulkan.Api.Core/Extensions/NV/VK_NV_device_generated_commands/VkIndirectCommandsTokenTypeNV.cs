@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkIndirectCommandsTokenTypeNV - Enum specifying token commands -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsTokenTypeNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsTokenTypeNV.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsTokenTypeNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsTokenTypeNV.html </a>
 /// </summary>
 public enum VkIndirectCommandsTokenTypeNV
 {
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Equivalent command</term><description>vkCmdBindPipelineShaderGroupNV</description>
+    ///             <term> Equivalent command </term><description> vkCmdBindPipelineShaderGroupNV </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -31,7 +31,7 @@ public enum VkIndirectCommandsTokenTypeNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Equivalent command</term><description>-</description>
+    ///             <term> Equivalent command </term><description> - </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -40,7 +40,7 @@ public enum VkIndirectCommandsTokenTypeNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Equivalent command</term><description>vkCmdBindIndexBuffer</description>
+    ///             <term> Equivalent command </term><description> vkCmdBindIndexBuffer </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -49,7 +49,7 @@ public enum VkIndirectCommandsTokenTypeNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Equivalent command</term><description>vkCmdBindVertexBuffers</description>
+    ///             <term> Equivalent command </term><description> vkCmdBindVertexBuffers </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -58,7 +58,7 @@ public enum VkIndirectCommandsTokenTypeNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Equivalent command</term><description>vkCmdPushConstants</description>
+    ///             <term> Equivalent command </term><description> vkCmdPushConstants </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -67,7 +67,7 @@ public enum VkIndirectCommandsTokenTypeNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Equivalent command</term><description>vkCmdDrawIndexedIndirect</description>
+    ///             <term> Equivalent command </term><description> vkCmdDrawIndexedIndirect </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -76,7 +76,7 @@ public enum VkIndirectCommandsTokenTypeNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Equivalent command</term><description>vkCmdDrawIndirect</description>
+    ///             <term> Equivalent command </term><description> vkCmdDrawIndirect </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -85,7 +85,7 @@ public enum VkIndirectCommandsTokenTypeNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Equivalent command</term><description>vkCmdDrawMeshTasksIndirectNV</description>
+    ///             <term> Equivalent command </term><description> vkCmdDrawMeshTasksIndirectNV </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -94,7 +94,7 @@ public enum VkIndirectCommandsTokenTypeNV
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Equivalent command</term><description>vkCmdDrawMeshTasksIndirectEXT</description>
+    ///             <term> Equivalent command </term><description> vkCmdDrawMeshTasksIndirectEXT </description>
     ///         </item>
     ///     </list>
     /// </summary>

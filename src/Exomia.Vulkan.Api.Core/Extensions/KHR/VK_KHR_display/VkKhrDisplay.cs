@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrDisplay;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_display - instance extension (nr. 3) - author 'KHR' [platform '' | contact 'James Jones @cubanismo,Norbert
-///     Nopper @FslNopper']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_display.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_display.html</a>
+///     VK_KHR_display - instance extension (nr. 3) - author 'KHR' [platform '' | contact 'James Jones @cubanismo,Norbert Nopper @FslNopper']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_display.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_display.html </a>
 /// </summary>
 [VkRequires("VK_KHR_surface")]
 public static unsafe class VkKhrDisplay
@@ -32,16 +32,13 @@ public static unsafe class VkKhrDisplay
     /// <summary> The extension name. </summary>
     public const string VK_KHR_DISPLAY_EXTENSION_NAME = "VK_KHR_display";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_DISPLAY_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_DISPLAY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_DISPLAY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_DISPLAY_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u445f\u5349\u4c50\u5941\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
@@ -53,19 +50,17 @@ public static unsafe class VkKhrDisplay
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is a physical device.</param>
-    /// <param name="pPropertyCount">
-    ///     pPropertyCount is a pointer to an integer related to the number of display devices
-    ///     available or queried, as described below.
-    /// </param>
-    /// <param name="pProperties">pProperties is either NULL or a pointer to an array of VkDisplayPropertiesKHR structures.</param>
+    /// <param name="physicalDevice"> physicalDevice is a physical device. </param>
+    /// <param name="pPropertyCount"> pPropertyCount is a pointer to an integer related to the number of display devices available or queried, as described below. </param>
+    /// <param name="pProperties"> pProperties is either NULL or a pointer to an array of VkDisplayPropertiesKHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -82,22 +77,17 @@ public static unsafe class VkKhrDisplay
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is a physical device.</param>
-    /// <param name="pPropertyCount">
-    ///     pPropertyCount is a pointer to an integer related to the number of display planes
-    ///     available or queried, as described below.
-    /// </param>
-    /// <param name="pProperties">
-    ///     pProperties is either NULL or a pointer to an array of VkDisplayPlanePropertiesKHR
-    ///     structures.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is a physical device. </param>
+    /// <param name="pPropertyCount"> pPropertyCount is a pointer to an integer related to the number of display planes available or queried, as described below. </param>
+    /// <param name="pProperties"> pProperties is either NULL or a pointer to an array of VkDisplayPlanePropertiesKHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -114,23 +104,18 @@ public static unsafe class VkKhrDisplay
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is a physical device.</param>
-    /// <param name="planeIndex">
-    ///     planeIndex is the plane which the application wishes to use, and must be in the range [0,
-    ///     physical device plane count - 1].
-    /// </param>
-    /// <param name="pDisplayCount">
-    ///     pDisplayCount is a pointer to an integer related to the number of displays available or
-    ///     queried, as described below.
-    /// </param>
-    /// <param name="pDisplays">pDisplays is either NULL or a pointer to an array of VkDisplayKHR handles.</param>
+    /// <param name="physicalDevice"> physicalDevice is a physical device. </param>
+    /// <param name="planeIndex"> planeIndex is the plane which the application wishes to use, and must be in the range [0, physical device plane count - 1]. </param>
+    /// <param name="pDisplayCount"> pDisplayCount is a pointer to an integer related to the number of displays available or queried, as described below. </param>
+    /// <param name="pDisplays"> pDisplays is either NULL or a pointer to an array of VkDisplayKHR handles. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -143,22 +128,20 @@ public static unsafe class VkKhrDisplay
 
     /// <summary>
     ///     vkGetDisplayModePropertiesKHR - Query the set of mode properties supported by the display -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModePropertiesKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModePropertiesKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModePropertiesKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModePropertiesKHR.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device associated with display.</param>
-    /// <param name="display">display is the display to query.</param>
-    /// <param name="pPropertyCount">
-    ///     pPropertyCount is a pointer to an integer related to the number of display modes available
-    ///     or queried, as described below.
-    /// </param>
-    /// <param name="pProperties">pProperties is either NULL or a pointer to an array of VkDisplayModePropertiesKHR structures.</param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device associated with display. </param>
+    /// <param name="display"> display is the display to query. </param>
+    /// <param name="pPropertyCount"> pPropertyCount is a pointer to an integer related to the number of display modes available or queried, as described below. </param>
+    /// <param name="pProperties"> pProperties is either NULL or a pointer to an array of VkDisplayModePropertiesKHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -171,27 +154,21 @@ public static unsafe class VkKhrDisplay
 
     /// <summary>
     ///     vkCreateDisplayModeKHR - Create a display mode -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayModeKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayModeKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayModeKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayModeKHR.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device associated with display.</param>
-    /// <param name="display">display is the display to create an additional mode for.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkDisplayModeCreateInfoKHRstructure describing the new mode to
-    ///     create.
-    /// </param>
-    /// <param name="pAllocator">
-    ///     pAllocator is the allocator used for host memory allocated for the display mode object when
-    ///     there is no more specific allocator available (see Memory Allocation).
-    /// </param>
-    /// <param name="pMode">pMode is a pointer to a VkDisplayModeKHR handle in which the mode created is returned.</param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device associated with display. </param>
+    /// <param name="display"> display is the display to create an additional mode for. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkDisplayModeCreateInfoKHRstructure describing the new mode to create. </param>
+    /// <param name="pAllocator"> pAllocator is the allocator used for host memory allocated for the display mode object when there is no more specific allocator available (see Memory Allocation). </param>
+    /// <param name="pMode"> pMode is a pointer to a VkDisplayModeKHR handle in which the mode created is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -210,26 +187,18 @@ public static unsafe class VkKhrDisplay
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayPlaneCapabilitiesKHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device associated with the display specified by mode</param>
-    /// <param name="mode">
-    ///     mode is the display mode the application intends to program when using the specified plane. Note
-    ///     this parameter also implicitly specifies a display.
-    /// </param>
-    /// <param name="planeIndex">
-    ///     planeIndex is the plane which the application intends to use with the display, and is less
-    ///     than the number of display planes supported by the device.
-    /// </param>
-    /// <param name="pCapabilities">
-    ///     pCapabilities is a pointer to a VkDisplayPlaneCapabilitiesKHR structure in which the
-    ///     capabilities are returned.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device associated with the display specified by mode </param>
+    /// <param name="mode"> mode is the display mode the application intends to program when using the specified plane. Note this parameter also implicitly specifies a display. </param>
+    /// <param name="planeIndex"> planeIndex is the plane which the application intends to use with the display, and is less than the number of display planes supported by the device. </param>
+    /// <param name="pCapabilities"> pCapabilities is a pointer to a VkDisplayPlaneCapabilitiesKHR structure in which the capabilities are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -241,27 +210,21 @@ public static unsafe class VkKhrDisplay
         VkResult> vkGetDisplayPlaneCapabilitiesKHR = null;
 
     /// <summary>
-    ///     vkCreateDisplayPlaneSurfaceKHR - Create a slink:VkSurfaceKHR structure representing a display plane and mode
-    ///     -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html</a>
+    ///     vkCreateDisplayPlaneSurfaceKHR - Create a slink:VkSurfaceKHR structure representing a display plane and mode -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html </a>
     /// </summary>
-    /// <param name="instance">instance is the instance corresponding to the physical device the targeted display is on.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkDisplaySurfaceCreateInfoKHRstructure specifying which mode,
-    ///     plane, and other parameters to use, as described below.
-    /// </param>
-    /// <param name="pAllocator">
-    ///     pAllocator is the allocator used for host memory allocated for the surface object when there
-    ///     is no more specific allocator available (see Memory Allocation).
-    /// </param>
-    /// <param name="pSurface">pSurface is a pointer to a VkSurfaceKHR handle in which the created surface is returned.</param>
+    /// <param name="instance"> instance is the instance corresponding to the physical device the targeted display is on. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkDisplaySurfaceCreateInfoKHRstructure specifying which mode, plane, and other parameters to use, as described below. </param>
+    /// <param name="pAllocator"> pAllocator is the allocator used for host memory allocated for the surface object when there is no more specific allocator available (see Memory Allocation). </param>
+    /// <param name="pSurface"> pSurface is a pointer to a VkSurfaceKHR handle in which the created surface is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -278,25 +241,25 @@ public static unsafe class VkKhrDisplay
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceDisplayPropertiesKHR</description>
+    ///             <description> vkGetPhysicalDeviceDisplayPropertiesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceDisplayPlanePropertiesKHR</description>
+    ///             <description> vkGetPhysicalDeviceDisplayPlanePropertiesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDisplayPlaneSupportedDisplaysKHR</description>
+    ///             <description> vkGetDisplayPlaneSupportedDisplaysKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDisplayModePropertiesKHR</description>
+    ///             <description> vkGetDisplayModePropertiesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCreateDisplayModeKHR</description>
+    ///             <description> vkCreateDisplayModeKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDisplayPlaneCapabilitiesKHR</description>
+    ///             <description> vkGetDisplayPlaneCapabilitiesKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCreateDisplayPlaneSurfaceKHR</description>
+    ///             <description> vkCreateDisplayPlaneSurfaceKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

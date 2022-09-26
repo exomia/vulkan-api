@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtCalibratedTimestamps;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_calibrated_timestamps - device extension (nr. 185) - author 'EXT' [platform '' | contact 'Daniel Rakos
-///     @drakos-amd']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_calibrated_timestamps.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_calibrated_timestamps.html</a>
+///     VK_EXT_calibrated_timestamps - device extension (nr. 185) - author 'EXT' [platform '' | contact 'Daniel Rakos @drakos-amd']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_calibrated_timestamps.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_calibrated_timestamps.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkExtCalibratedTimestamps
@@ -32,16 +32,13 @@ public static unsafe class VkExtCalibratedTimestamps
     /// <summary> The extension name. </summary>
     public const string VK_EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME = "VK_EXT_calibrated_timestamps";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME_UTF8_NT =
@@ -54,25 +51,17 @@ public static unsafe class VkExtCalibratedTimestamps
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceCalibrateableTimeDomainsEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">
-    ///     physicalDevice is the physical device from which to query the set of calibrateable time
-    ///     domains.
-    /// </param>
-    /// <param name="pTimeDomainCount">
-    ///     pTimeDomainCount is a pointer to an integer related to the number of calibrateable time
-    ///     domains available or queried, as described below.
-    /// </param>
-    /// <param name="pTimeDomains">
-    ///     pTimeDomains is either NULL or a pointer to an array of VkTimeDomainEXT values, indicating
-    ///     the supported calibrateable time domains.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device from which to query the set of calibrateable time domains. </param>
+    /// <param name="pTimeDomainCount"> pTimeDomainCount is a pointer to an integer related to the number of calibrateable time domains available or queried, as described below. </param>
+    /// <param name="pTimeDomains"> pTimeDomains is either NULL or a pointer to an array of VkTimeDomainEXT values, indicating the supported calibrateable time domains. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -84,29 +73,21 @@ public static unsafe class VkExtCalibratedTimestamps
 
     /// <summary>
     ///     vkGetCalibratedTimestampsEXT - Query calibrated timestamps -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetCalibratedTimestampsEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetCalibratedTimestampsEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetCalibratedTimestampsEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetCalibratedTimestampsEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device used to perform the query.</param>
-    /// <param name="timestampCount">timestampCount is the number of timestamps to query.</param>
-    /// <param name="pTimestampInfos">
-    ///     pTimestampInfos is a pointer to an array of timestampCountVkCalibratedTimestampInfoEXT
-    ///     structures, describing the time domains the calibrated timestamps should be captured from.
-    /// </param>
-    /// <param name="pTimestamps">
-    ///     pTimestamps is a pointer to an array of timestampCount64-bit unsigned integer values in which
-    ///     the requested calibrated timestamp values are returned.
-    /// </param>
-    /// <param name="pMaxDeviation">
-    ///     pMaxDeviation is a pointer to a 64-bit unsigned integer value in which the strictly
-    ///     positive maximum deviation, in nanoseconds, of the calibrated timestamp values is returned.
-    /// </param>
+    /// <param name="device"> device is the logical device used to perform the query. </param>
+    /// <param name="timestampCount"> timestampCount is the number of timestamps to query. </param>
+    /// <param name="pTimestampInfos"> pTimestampInfos is a pointer to an array of timestampCountVkCalibratedTimestampInfoEXT structures, describing the time domains the calibrated timestamps should be captured from. </param>
+    /// <param name="pTimestamps"> pTimestamps is a pointer to an array of timestampCount64-bit unsigned integer values in which the requested calibrated timestamp values are returned. </param>
+    /// <param name="pMaxDeviation"> pMaxDeviation is a pointer to a 64-bit unsigned integer value in which the strictly positive maximum deviation, in nanoseconds, of the calibrated timestamp values is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -124,7 +105,7 @@ public static unsafe class VkExtCalibratedTimestamps
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceCalibrateableTimeDomainsEXT</description>
+    ///             <description> vkGetPhysicalDeviceCalibrateableTimeDomainsEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -143,7 +124,7 @@ public static unsafe class VkExtCalibratedTimestamps
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetCalibratedTimestampsEXT</description>
+    ///             <description> vkGetCalibratedTimestampsEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

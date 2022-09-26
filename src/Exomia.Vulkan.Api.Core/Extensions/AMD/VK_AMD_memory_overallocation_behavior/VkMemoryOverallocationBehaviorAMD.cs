@@ -22,21 +22,19 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkMemoryOverallocationBehaviorAMD
 {
-    /// <summary>VK_MEMORY_OVERALLOCATION_BEHAVIOR_DEFAULT_AMD lets the implementation decide if overallocation is allowed.</summary>
+    /// <summary> VK_MEMORY_OVERALLOCATION_BEHAVIOR_DEFAULT_AMD lets the implementation decide if overallocation is allowed. </summary>
     VK_MEMORY_OVERALLOCATION_BEHAVIOR_DEFAULT_AMD = 0,
 
-    /// <summary>VK_MEMORY_OVERALLOCATION_BEHAVIOR_ALLOWED_AMD specifies overallocation is allowed if platform permits.</summary>
+    /// <summary> VK_MEMORY_OVERALLOCATION_BEHAVIOR_ALLOWED_AMD specifies overallocation is allowed if platform permits. </summary>
     VK_MEMORY_OVERALLOCATION_BEHAVIOR_ALLOWED_AMD = 1,
 
     /// <summary>
-    ///     VK_MEMORY_OVERALLOCATION_BEHAVIOR_DISALLOWED_AMD specifies the application is not allowed to allocate device
-    ///     memory beyond the heap sizes reported by
+    ///     VK_MEMORY_OVERALLOCATION_BEHAVIOR_DISALLOWED_AMD specifies the application is not allowed to allocate device memory beyond the heap sizes reported by
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMemoryProperties.html">
     ///         VkPhysicalDeviceMemoryProperties
     ///     </a>
-    ///     . Allocations that are not explicitly made by the application within the scope of the Vulkan instance are not
-    ///     accounted for.
+    ///     . Allocations that are not explicitly made by the application within the scope of the Vulkan instance are not accounted for.
     /// </summary>
     VK_MEMORY_OVERALLOCATION_BEHAVIOR_DISALLOWED_AMD = 2
 }

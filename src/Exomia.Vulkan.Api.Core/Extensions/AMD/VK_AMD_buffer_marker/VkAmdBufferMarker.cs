@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_AMD_buffer_marker - device extension (nr. 180) - author 'AMD' [platform '' | contact 'Daniel Rakos @drakos-amd']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_buffer_marker.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_buffer_marker.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_buffer_marker.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_buffer_marker.html </a>
 /// </summary>
 /// <remarks>
 ///     specialuse: devtools
@@ -35,32 +35,26 @@ public static unsafe class VkAmdBufferMarker
     /// <summary> The extension name. </summary>
     public const string VK_AMD_BUFFER_MARKER_EXTENSION_NAME = "VK_AMD_buffer_marker";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_AMD_BUFFER_MARKER_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_AMD_BUFFER_MARKER_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_AMD_BUFFER_MARKER_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_AMD_BUFFER_MARKER_EXTENSION_NAME_UTF8_NT = "\u4b56\u415f\u444d\u425f\u4655\u4546\u5f52\u414d\u4b52\u5245\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkCmdWriteBufferMarkerAMD - Execute a pipelined write of a marker value into a buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarkerAMD.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarkerAMD.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarkerAMD.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarkerAMD.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pipelineStage">
-    ///     pipelineStage is a VkPipelineStageFlagBits value specifying the pipeline stage whose
-    ///     completion triggers the marker write.
-    /// </param>
-    /// <param name="dstBuffer">dstBuffer is the buffer where the marker will be written to.</param>
-    /// <param name="dstOffset">dstOffset is the byte offset into the buffer where the marker will be written to.</param>
-    /// <param name="marker">marker is the 32-bit value of the marker.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="pipelineStage"> pipelineStage is a VkPipelineStageFlagBits value specifying the pipeline stage whose completion triggers the marker write. </param>
+    /// <param name="dstBuffer"> dstBuffer is the buffer where the marker will be written to. </param>
+    /// <param name="dstOffset"> dstOffset is the byte offset into the buffer where the marker will be written to. </param>
+    /// <param name="marker"> marker is the 32-bit value of the marker. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkPipelineStageFlagBits /*pipelineStage*/,
@@ -75,7 +69,7 @@ public static unsafe class VkAmdBufferMarker
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdWriteBufferMarkerAMD</description>
+    ///             <description> vkCmdWriteBufferMarkerAMD </description>
     ///         </item>
     ///     </list>
     /// </remarks>

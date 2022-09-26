@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkNvShaderImageFootprint;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_shader_image_footprint - device extension (nr. 205) - author 'NV' [platform '' | contact 'Pat Brown
-///     @nvpbrown']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_image_footprint.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_image_footprint.html</a>
+///     VK_NV_shader_image_footprint - device extension (nr. 205) - author 'NV' [platform '' | contact 'Pat Brown @nvpbrown']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_image_footprint.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_image_footprint.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static class VkNvShaderImageFootprint
@@ -32,16 +32,13 @@ public static class VkNvShaderImageFootprint
     /// <summary> The extension name. </summary>
     public const string VK_NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME = "VK_NV_shader_image_footprint";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_SHADER_IMAGE_FOOTPRINT_EXTENSION_NAME_UTF8_NT =

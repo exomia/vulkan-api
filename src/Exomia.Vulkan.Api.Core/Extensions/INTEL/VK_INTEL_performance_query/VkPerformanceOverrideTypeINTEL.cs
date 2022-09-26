@@ -15,16 +15,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkPerformanceOverrideTypeINTEL - Performance override type -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceOverrideTypeINTEL.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceOverrideTypeINTEL.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceOverrideTypeINTEL.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceOverrideTypeINTEL.html </a>
 /// </summary>
 public enum VkPerformanceOverrideTypeINTEL
 {
-    /// <summary>VK_PERFORMANCE_OVERRIDE_TYPE_NULL_HARDWARE_INTEL turns all rendering operations into noop.</summary>
+    /// <summary> VK_PERFORMANCE_OVERRIDE_TYPE_NULL_HARDWARE_INTEL turns all rendering operations into noop. </summary>
     VK_PERFORMANCE_OVERRIDE_TYPE_NULL_HARDWARE_INTEL = 0,
 
-    /// <summary>
-    ///     VK_PERFORMANCE_OVERRIDE_TYPE_FLUSH_GPU_CACHES_INTEL stalls the stream of commands until all previously emitted
-    ///     commands have completed and all caches been flushed and invalidated.
-    /// </summary>
+    /// <summary> VK_PERFORMANCE_OVERRIDE_TYPE_FLUSH_GPU_CACHES_INTEL stalls the stream of commands until all previously emitted commands have completed and all caches been flushed and invalidated. </summary>
     VK_PERFORMANCE_OVERRIDE_TYPE_FLUSH_GPU_CACHES_INTEL = 1
 }

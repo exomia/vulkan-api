@@ -23,21 +23,18 @@ namespace Exomia.Vulkan.Api.Fuchsia;
 [Flags]
 public enum VkImageConstraintsInfoFlagBitsFUCHSIA
 {
-    /// <summary>VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_RARELY_FUCHSIA</summary>
+    /// <summary> VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_RARELY_FUCHSIA </summary>
     VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_RARELY_FUCHSIA = 0x1,
 
-    /// <summary>VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_OFTEN_FUCHSIA</summary>
+    /// <summary> VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_OFTEN_FUCHSIA </summary>
     VK_IMAGE_CONSTRAINTS_INFO_CPU_READ_OFTEN_FUCHSIA = 0x2,
 
-    /// <summary>VK_IMAGE_CONSTRAINTS_INFO_CPU_WRITE_RARELY_FUCHSIA</summary>
+    /// <summary> VK_IMAGE_CONSTRAINTS_INFO_CPU_WRITE_RARELY_FUCHSIA </summary>
     VK_IMAGE_CONSTRAINTS_INFO_CPU_WRITE_RARELY_FUCHSIA = 0x4,
 
-    /// <summary>VK_IMAGE_CONSTRAINTS_INFO_CPU_WRITE_OFTEN_FUCHSIA</summary>
+    /// <summary> VK_IMAGE_CONSTRAINTS_INFO_CPU_WRITE_OFTEN_FUCHSIA </summary>
     VK_IMAGE_CONSTRAINTS_INFO_CPU_WRITE_OFTEN_FUCHSIA = 0x8,
 
-    /// <summary>
-    ///     VK_IMAGE_CONSTRAINTS_INFO_PROTECTED_OPTIONAL_FUCHSIA specifies that protected memory is optional for the
-    ///     buffer collection.
-    /// </summary>
+    /// <summary> VK_IMAGE_CONSTRAINTS_INFO_PROTECTED_OPTIONAL_FUCHSIA specifies that protected memory is optional for the buffer collection. </summary>
     VK_IMAGE_CONSTRAINTS_INFO_PROTECTED_OPTIONAL_FUCHSIA = 0x10
 }

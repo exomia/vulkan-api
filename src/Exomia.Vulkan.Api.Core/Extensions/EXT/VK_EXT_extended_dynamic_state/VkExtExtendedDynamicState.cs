@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkExtExtendedDynamicState;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_extended_dynamic_state - device extension (nr. 268) - author 'EXT' [platform '' | contact 'Piers Daniell
-///     @pdaniell-nv']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state.html</a>
+///     VK_EXT_extended_dynamic_state - device extension (nr. 268) - author 'EXT' [platform '' | contact 'Piers Daniell @pdaniell-nv']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state.html#_deprecation_state")]
@@ -33,16 +33,13 @@ public static unsafe class VkExtExtendedDynamicState
     /// <summary> The extension name. </summary>
     public const string VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME = "VK_EXT_extended_dynamic_state";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME_UTF8_NT =
@@ -51,7 +48,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdSetCullModeEXT alias for vkCmdSetCullMode
     /// <summary>
     ///     vkCmdSetCullMode - Set cull mode dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullModeEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullModeEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullModeEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullModeEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -61,7 +58,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdSetFrontFaceEXT alias for vkCmdSetFrontFace
     /// <summary>
     ///     vkCmdSetFrontFace - Set front face orientation dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFaceEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFaceEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFaceEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFaceEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -71,7 +68,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdSetPrimitiveTopologyEXT alias for vkCmdSetPrimitiveTopology
     /// <summary>
     ///     vkCmdSetPrimitiveTopology - Set primitive topology state dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopologyEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopologyEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopologyEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopologyEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -81,7 +78,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdSetViewportWithCountEXT alias for vkCmdSetViewportWithCount
     /// <summary>
     ///     vkCmdSetViewportWithCount - Set the viewport count and viewports dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCountEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCountEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCountEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCountEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -91,9 +88,8 @@ public static unsafe class VkExtExtendedDynamicState
 
     /// vkCmdSetScissorWithCountEXT alias for vkCmdSetScissorWithCount
     /// <summary>
-    ///     vkCmdSetScissorWithCount - Set the scissor count and scissor rectangular bounds dynamically for a command
-    ///     buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCountEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCountEXT.html</a>
+    ///     vkCmdSetScissorWithCount - Set the scissor count and scissor rectangular bounds dynamically for a command buffer -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCountEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCountEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -104,7 +100,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdBindVertexBuffers2EXT alias for vkCmdBindVertexBuffers2
     /// <summary>
     ///     vkCmdBindVertexBuffers2 - Bind vertex buffers to a command buffer and dynamically set strides -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2EXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2EXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2EXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2EXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -119,7 +115,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdSetDepthTestEnableEXT alias for vkCmdSetDepthTestEnable
     /// <summary>
     ///     vkCmdSetDepthTestEnable - Set depth test enable dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnableEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnableEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnableEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnableEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -129,7 +125,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdSetDepthWriteEnableEXT alias for vkCmdSetDepthWriteEnable
     /// <summary>
     ///     vkCmdSetDepthWriteEnable - Set depth write enable dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnableEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnableEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnableEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnableEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -139,7 +135,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdSetDepthCompareOpEXT alias for vkCmdSetDepthCompareOp
     /// <summary>
     ///     vkCmdSetDepthCompareOp - Set depth comparison operator dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOpEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOpEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOpEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOpEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -162,7 +158,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdSetStencilTestEnableEXT alias for vkCmdSetStencilTestEnable
     /// <summary>
     ///     vkCmdSetStencilTestEnable - Set stencil test enable dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnableEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnableEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnableEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnableEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -172,7 +168,7 @@ public static unsafe class VkExtExtendedDynamicState
     /// vkCmdSetStencilOpEXT alias for vkCmdSetStencilOp
     /// <summary>
     ///     vkCmdSetStencilOp - Set stencil operation dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOpEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOpEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOpEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOpEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -189,40 +185,40 @@ public static unsafe class VkExtExtendedDynamicState
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetCullModeEXT</description>
+    ///             <description> vkCmdSetCullModeEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetFrontFaceEXT</description>
+    ///             <description> vkCmdSetFrontFaceEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetPrimitiveTopologyEXT</description>
+    ///             <description> vkCmdSetPrimitiveTopologyEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetViewportWithCountEXT</description>
+    ///             <description> vkCmdSetViewportWithCountEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetScissorWithCountEXT</description>
+    ///             <description> vkCmdSetScissorWithCountEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdBindVertexBuffers2EXT</description>
+    ///             <description> vkCmdBindVertexBuffers2EXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetDepthTestEnableEXT</description>
+    ///             <description> vkCmdSetDepthTestEnableEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetDepthWriteEnableEXT</description>
+    ///             <description> vkCmdSetDepthWriteEnableEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetDepthCompareOpEXT</description>
+    ///             <description> vkCmdSetDepthCompareOpEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetDepthBoundsTestEnableEXT</description>
+    ///             <description> vkCmdSetDepthBoundsTestEnableEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetStencilTestEnableEXT</description>
+    ///             <description> vkCmdSetStencilTestEnableEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetStencilOpEXT</description>
+    ///             <description> vkCmdSetStencilOpEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -15,13 +15,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkFrontFace - Interpret polygon front-facing orientation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFrontFace.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFrontFace.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFrontFace.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFrontFace.html </a>
 /// </summary>
 public enum VkFrontFace
 {
-    /// <summary>VK_FRONT_FACE_COUNTER_CLOCKWISE specifies that a triangle with positive area is considered front-facing.</summary>
+    /// <summary> VK_FRONT_FACE_COUNTER_CLOCKWISE specifies that a triangle with positive area is considered front-facing. </summary>
     VK_FRONT_FACE_COUNTER_CLOCKWISE = 0,
 
-    /// <summary>VK_FRONT_FACE_CLOCKWISE specifies that a triangle with negative area is considered front-facing.</summary>
+    /// <summary> VK_FRONT_FACE_CLOCKWISE specifies that a triangle with negative area is considered front-facing. </summary>
     VK_FRONT_FACE_CLOCKWISE = 1
 }

@@ -15,38 +15,22 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkAccelerationStructureTypeKHR - Type of acceleration structure -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureTypeKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureTypeKHR.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureTypeKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureTypeKHR.html </a>
 /// </summary>
 public enum VkAccelerationStructureTypeKHR
 {
-    /// <summary>
-    ///     VK_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL_KHR is a top-level acceleration structure containing instance data
-    ///     referring to bottom-level acceleration structures.
-    /// </summary>
+    /// <summary> VK_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL_KHR is a top-level acceleration structure containing instance data referring to bottom-level acceleration structures. </summary>
     VK_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL_KHR = 0,
 
-    /// <summary>
-    ///     VK_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL_KHR is a bottom-level acceleration structure containing the AABBs
-    ///     or geometry to be intersected.
-    /// </summary>
+    /// <summary> VK_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL_KHR is a bottom-level acceleration structure containing the AABBs or geometry to be intersected. </summary>
     VK_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL_KHR = 1,
 
-    /// <summary>
-    ///     VK_ACCELERATION_STRUCTURE_TYPE_GENERIC_KHR is an acceleration structure whose type is determined at build time
-    ///     used for special circumstances. In these cases, the acceleration structure type is not known at creation time, but
-    ///     must be specified at build time as either top or bottom.
-    /// </summary>
+    /// <summary> VK_ACCELERATION_STRUCTURE_TYPE_GENERIC_KHR is an acceleration structure whose type is determined at build time used for special circumstances. In these cases, the acceleration structure type is not known at creation time, but must be specified at build time as either top or bottom. </summary>
     VK_ACCELERATION_STRUCTURE_TYPE_GENERIC_KHR = 2,
 
-    /// <summary>
-    ///     VK_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL_KHR is a top-level acceleration structure containing instance data
-    ///     referring to bottom-level acceleration structures.
-    /// </summary>
+    /// <summary> VK_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL_KHR is a top-level acceleration structure containing instance data referring to bottom-level acceleration structures. </summary>
     VK_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL_NV = VK_ACCELERATION_STRUCTURE_TYPE_TOP_LEVEL_KHR,
 
-    /// <summary>
-    ///     VK_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL_KHR is a bottom-level acceleration structure containing the AABBs
-    ///     or geometry to be intersected.
-    /// </summary>
+    /// <summary> VK_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL_KHR is a bottom-level acceleration structure containing the AABBs or geometry to be intersected. </summary>
     VK_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL_NV = VK_ACCELERATION_STRUCTURE_TYPE_BOTTOM_LEVEL_KHR
 }

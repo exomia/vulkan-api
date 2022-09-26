@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDynamicState - Indicate which dynamic state is taken from dynamic state commands -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDynamicState.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDynamicState.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDynamicState.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDynamicState.html </a>
 /// </summary>
 public enum VkDynamicState
 {
@@ -26,9 +26,8 @@ public enum VkDynamicState
     ///         VkPipelineViewportStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewport.html">vkCmdSetViewport</a>
-    ///     before any drawing commands. The number of viewports used by a pipeline is still specified by the viewportCount
-    ///     member of
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewport.html"> vkCmdSetViewport </a>
+    ///     before any drawing commands. The number of viewports used by a pipeline is still specified by the viewportCount member of
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportStateCreateInfo.html">
     ///         VkPipelineViewportStateCreateInfo
@@ -44,9 +43,8 @@ public enum VkDynamicState
     ///         VkPipelineViewportStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissor.html">vkCmdSetScissor</a>
-    ///     before any drawing commands. The number of scissor rectangles used by a pipeline is still specified by the
-    ///     scissorCount member of
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissor.html"> vkCmdSetScissor </a>
+    ///     before any drawing commands. The number of scissor rectangles used by a pipeline is still specified by the scissorCount member of
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportStateCreateInfo.html">
     ///         VkPipelineViewportStateCreateInfo
@@ -62,20 +60,19 @@ public enum VkDynamicState
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineWidth.html">vkCmdSetLineWidth</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineWidth.html"> vkCmdSetLineWidth </a>
     ///     before any drawing commands that generate line primitives for the rasterizer.
     /// </summary>
     VK_DYNAMIC_STATE_LINE_WIDTH = 2,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_DEPTH_BIAS specifies that the depthBiasConstantFactor, depthBiasClamp and depthBiasSlopeFactor
-    ///     states in
+    ///     VK_DYNAMIC_STATE_DEPTH_BIAS specifies that the depthBiasConstantFactor, depthBiasClamp and depthBiasSlopeFactor states in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
     ///     will be ignored and mustbe set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBias.html">vkCmdSetDepthBias</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBias.html"> vkCmdSetDepthBias </a>
     ///     before any draws are performed with depthBiasEnable in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
@@ -92,9 +89,8 @@ public enum VkDynamicState
     ///         VkPipelineColorBlendStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetBlendConstants.html">vkCmdSetBlendConstants</a>
-    ///     before any draws are performed with a pipeline state with VkPipelineColorBlendAttachmentState member blendEnable
-    ///     set to VK_TRUE and any of the blend functions using a constant blend color.
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetBlendConstants.html"> vkCmdSetBlendConstants </a>
+    ///     before any draws are performed with a pipeline state with VkPipelineColorBlendAttachmentState member blendEnable set to VK_TRUE and any of the blend functions using a constant blend color.
     /// </summary>
     VK_DYNAMIC_STATE_BLEND_CONSTANTS = 4,
 
@@ -105,7 +101,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBounds.html">vkCmdSetDepthBounds</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBounds.html"> vkCmdSetDepthBounds </a>
     ///     before any draws are performed with a pipeline state with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html">
@@ -122,7 +118,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     for both front and back will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilCompareMask.html">vkCmdSetStencilCompareMask</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilCompareMask.html"> vkCmdSetStencilCompareMask </a>
     ///     before any draws are performed with a pipeline state with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html">
@@ -139,7 +135,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     for both front and back will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilWriteMask.html">vkCmdSetStencilWriteMask</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilWriteMask.html"> vkCmdSetStencilWriteMask </a>
     ///     before any draws are performed with a pipeline state with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html">
@@ -156,7 +152,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     for both front and back will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilReference.html">vkCmdSetStencilReference</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilReference.html"> vkCmdSetStencilReference </a>
     ///     before any draws are performed with a pipeline state with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html">
@@ -173,7 +169,7 @@ public enum VkDynamicState
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullMode.html">vkCmdSetCullMode</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullMode.html"> vkCmdSetCullMode </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_CULL_MODE = 1000267000,
@@ -185,7 +181,7 @@ public enum VkDynamicState
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFace.html">vkCmdSetFrontFace</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFace.html"> vkCmdSetFrontFace </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_FRONT_FACE = 1000267001,
@@ -199,11 +195,10 @@ public enum VkDynamicState
     ///     only specifies the
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-primitive-topology-class">
-    ///         topology
-    ///         class
+    ///         topology class
     ///     </a>
     ///     , and the specific topology order and adjacency must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopology.html">vkCmdSetPrimitiveTopology</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopology.html"> vkCmdSetPrimitiveTopology </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_PRIMITIVE_TOPOLOGY = 1000267002,
@@ -215,7 +210,7 @@ public enum VkDynamicState
     ///         VkPipelineViewportStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCount.html">vkCmdSetViewportWithCount</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCount.html"> vkCmdSetViewportWithCount </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_VIEWPORT_WITH_COUNT = 1000267003,
@@ -227,7 +222,7 @@ public enum VkDynamicState
     ///         VkPipelineViewportStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCount.html">vkCmdSetScissorWithCount</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCount.html"> vkCmdSetScissorWithCount </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_SCISSOR_WITH_COUNT = 1000267004,
@@ -239,7 +234,7 @@ public enum VkDynamicState
     ///         VkVertexInputBindingDescription
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2.html">vkCmdBindVertexBuffers2</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2.html"> vkCmdBindVertexBuffers2 </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_VERTEX_INPUT_BINDING_STRIDE = 1000267005,
@@ -251,7 +246,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnable.html">vkCmdSetDepthTestEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnable.html"> vkCmdSetDepthTestEnable </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_TEST_ENABLE = 1000267006,
@@ -263,7 +258,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnable.html">vkCmdSetDepthWriteEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnable.html"> vkCmdSetDepthWriteEnable </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_WRITE_ENABLE = 1000267007,
@@ -275,7 +270,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html">vkCmdSetDepthCompareOp</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html"> vkCmdSetDepthCompareOp </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_COMPARE_OP = 1000267008,
@@ -287,7 +282,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBoundsTestEnable.html">vkCmdSetDepthBoundsTestEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBoundsTestEnable.html"> vkCmdSetDepthBoundsTestEnable </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_BOUNDS_TEST_ENABLE = 1000267009,
@@ -299,17 +294,15 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnable.html">vkCmdSetStencilTestEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnable.html"> vkCmdSetStencilTestEnable </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_STENCIL_TEST_ENABLE = 1000267010,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_STENCIL_OP specifies that the failOp, passOp, depthFailOp, and compareOp states in
-    ///     VkPipelineDepthStencilStateCreateInfo for both front and back will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOp.html">vkCmdSetStencilOp</a>
-    ///     before any draws are performed with a pipeline state with VkPipelineDepthStencilStateCreateInfo member
-    ///     stencilTestEnable set to VK_TRUE
+    ///     VK_DYNAMIC_STATE_STENCIL_OP specifies that the failOp, passOp, depthFailOp, and compareOp states in VkPipelineDepthStencilStateCreateInfo for both front and back will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOp.html"> vkCmdSetStencilOp </a>
+    ///     before any draws are performed with a pipeline state with VkPipelineDepthStencilStateCreateInfo member stencilTestEnable set to VK_TRUE
     /// </summary>
     VK_DYNAMIC_STATE_STENCIL_OP = 1000267011,
 
@@ -335,7 +328,7 @@ public enum VkDynamicState
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
     ///     will be ignored and mustbe set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnable.html">vkCmdSetDepthBiasEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnable.html"> vkCmdSetDepthBiasEnable </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_BIAS_ENABLE = 1000377002,
@@ -347,7 +340,7 @@ public enum VkDynamicState
     ///         VkPipelineInputAssemblyStateCreateInfo
     ///     </a>
     ///     will be ignored and mustbe set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnable.html">vkCmdSetPrimitiveRestartEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnable.html"> vkCmdSetPrimitiveRestartEnable </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_PRIMITIVE_RESTART_ENABLE = 1000377004,
@@ -359,7 +352,7 @@ public enum VkDynamicState
     ///         VkPipelineViewportWScalingStateCreateInfoNV
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWScalingNV.html">vkCmdSetViewportWScalingNV</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWScalingNV.html"> vkCmdSetViewportWScalingNV </a>
     ///     before any draws are performed with a pipeline state with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html">
@@ -376,11 +369,10 @@ public enum VkDynamicState
     ///         VkPipelineDiscardRectangleStateCreateInfoEXT
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEXT.html">vkCmdSetDiscardRectangleEXT</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEXT.html"> vkCmdSetDiscardRectangleEXT </a>
     ///     before any draw or clear commands. The
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDiscardRectangleModeEXT.html">VkDiscardRectangleModeEXT</a>
-    ///     and the number of active discard rectangles is still specified by the discardRectangleMode and
-    ///     discardRectangleCount members of
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDiscardRectangleModeEXT.html"> VkDiscardRectangleModeEXT </a>
+    ///     and the number of active discard rectangles is still specified by the discardRectangleMode and discardRectangleCount members of
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDiscardRectangleStateCreateInfoEXT.html">
     ///         VkPipelineDiscardRectangleStateCreateInfoEXT
@@ -396,9 +388,8 @@ public enum VkDynamicState
     ///         VkPipelineSampleLocationsStateCreateInfoEXT
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetSampleLocationsEXT.html">vkCmdSetSampleLocationsEXT</a>
-    ///     before any draw or clear commands. Enabling custom sample locations is still indicated by the sampleLocationsEnable
-    ///     member of
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetSampleLocationsEXT.html"> vkCmdSetSampleLocationsEXT </a>
+    ///     before any draw or clear commands. Enabling custom sample locations is still indicated by the sampleLocationsEnable member of
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineSampleLocationsStateCreateInfoEXT.html">
     ///         VkPipelineSampleLocationsStateCreateInfoEXT
@@ -408,8 +399,7 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_SAMPLE_LOCATIONS_EXT = 1000143000,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_RAY_TRACING_PIPELINE_STACK_SIZE_KHR specifies that the default stack size computation for the
-    ///     pipeline will be ignored and must be set dynamically with
+    ///     VK_DYNAMIC_STATE_RAY_TRACING_PIPELINE_STACK_SIZE_KHR specifies that the default stack size computation for the pipeline will be ignored and must be set dynamically with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRayTracingPipelineStackSizeKHR.html">
     ///         vkCmdSetRayTracingPipelineStackSizeKHR
@@ -440,7 +430,7 @@ public enum VkDynamicState
     ///         VkPipelineViewportCoarseSampleOrderStateCreateInfoNV
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html">vkCmdSetCoarseSampleOrderNV</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCoarseSampleOrderNV.html"> vkCmdSetCoarseSampleOrderNV </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_VIEWPORT_COARSE_SAMPLE_ORDER_NV = 1000164006,
@@ -452,9 +442,8 @@ public enum VkDynamicState
     ///         VkPipelineViewportExclusiveScissorStateCreateInfoNV
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorNV.html">vkCmdSetExclusiveScissorNV</a>
-    ///     before any drawing commands. The number of exclusive scissor rectangles used by a pipeline is still specified by
-    ///     the exclusiveScissorCount member of
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorNV.html"> vkCmdSetExclusiveScissorNV </a>
+    ///     before any drawing commands. The number of exclusive scissor rectangles used by a pipeline is still specified by the exclusiveScissorCount member of
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html">
     ///         VkPipelineViewportExclusiveScissorStateCreateInfoNV
@@ -475,7 +464,7 @@ public enum VkDynamicState
     ///         VkPipelineFragmentShadingRateEnumStateCreateInfoNV
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html">vkCmdSetFragmentShadingRateKHR</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFragmentShadingRateKHR.html"> vkCmdSetFragmentShadingRateKHR </a>
     ///     or
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html">
@@ -492,7 +481,7 @@ public enum VkDynamicState
     ///         VkPipelineRasterizationLineStateCreateInfoEXT
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html">vkCmdSetLineStippleEXT</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html"> vkCmdSetLineStippleEXT </a>
     ///     before any draws are performed with a pipeline state with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html">
@@ -503,9 +492,8 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_LINE_STIPPLE_EXT = 1000259000,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_VERTEX_INPUT_EXT specifies that the pVertexInputState state will be ignored and must be set
-    ///     dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetVertexInputEXT.html">vkCmdSetVertexInputEXT</a>
+    ///     VK_DYNAMIC_STATE_VERTEX_INPUT_EXT specifies that the pVertexInputState state will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetVertexInputEXT.html"> vkCmdSetVertexInputEXT </a>
     ///     before any drawing commands
     /// </summary>
     VK_DYNAMIC_STATE_VERTEX_INPUT_EXT = 1000352000,
@@ -517,7 +505,7 @@ public enum VkDynamicState
     ///         VkPipelineTessellationStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPatchControlPointsEXT.html">vkCmdSetPatchControlPointsEXT</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPatchControlPointsEXT.html"> vkCmdSetPatchControlPointsEXT </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_PATCH_CONTROL_POINTS_EXT = 1000377000,
@@ -529,7 +517,7 @@ public enum VkDynamicState
     ///         VkPipelineColorBlendStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLogicOpEXT.html">vkCmdSetLogicOpEXT</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLogicOpEXT.html"> vkCmdSetLogicOpEXT </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_LOGIC_OP_EXT = 1000377003,
@@ -541,7 +529,7 @@ public enum VkDynamicState
     ///         VkPipelineColorWriteCreateInfoEXT
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetColorWriteEnableEXT.html">vkCmdSetColorWriteEnableEXT</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetColorWriteEnableEXT.html"> vkCmdSetColorWriteEnableEXT </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_COLOR_WRITE_ENABLE_EXT = 1000381000,
@@ -553,7 +541,7 @@ public enum VkDynamicState
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullMode.html">vkCmdSetCullMode</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCullMode.html"> vkCmdSetCullMode </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_CULL_MODE_EXT = VK_DYNAMIC_STATE_CULL_MODE,
@@ -565,7 +553,7 @@ public enum VkDynamicState
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFace.html">vkCmdSetFrontFace</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFrontFace.html"> vkCmdSetFrontFace </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_FRONT_FACE_EXT = VK_DYNAMIC_STATE_FRONT_FACE,
@@ -579,11 +567,10 @@ public enum VkDynamicState
     ///     only specifies the
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-primitive-topology-class">
-    ///         topology
-    ///         class
+    ///         topology class
     ///     </a>
     ///     , and the specific topology order and adjacency must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopology.html">vkCmdSetPrimitiveTopology</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveTopology.html"> vkCmdSetPrimitiveTopology </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_PRIMITIVE_TOPOLOGY_EXT = VK_DYNAMIC_STATE_PRIMITIVE_TOPOLOGY,
@@ -595,7 +582,7 @@ public enum VkDynamicState
     ///         VkPipelineViewportStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCount.html">vkCmdSetViewportWithCount</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWithCount.html"> vkCmdSetViewportWithCount </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_VIEWPORT_WITH_COUNT_EXT = VK_DYNAMIC_STATE_VIEWPORT_WITH_COUNT,
@@ -607,7 +594,7 @@ public enum VkDynamicState
     ///         VkPipelineViewportStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCount.html">vkCmdSetScissorWithCount</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetScissorWithCount.html"> vkCmdSetScissorWithCount </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_SCISSOR_WITH_COUNT_EXT = VK_DYNAMIC_STATE_SCISSOR_WITH_COUNT,
@@ -619,7 +606,7 @@ public enum VkDynamicState
     ///         VkVertexInputBindingDescription
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2.html">vkCmdBindVertexBuffers2</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindVertexBuffers2.html"> vkCmdBindVertexBuffers2 </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_VERTEX_INPUT_BINDING_STRIDE_EXT = VK_DYNAMIC_STATE_VERTEX_INPUT_BINDING_STRIDE,
@@ -631,7 +618,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnable.html">vkCmdSetDepthTestEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthTestEnable.html"> vkCmdSetDepthTestEnable </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_TEST_ENABLE_EXT = VK_DYNAMIC_STATE_DEPTH_TEST_ENABLE,
@@ -643,7 +630,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnable.html">vkCmdSetDepthWriteEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthWriteEnable.html"> vkCmdSetDepthWriteEnable </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_WRITE_ENABLE_EXT = VK_DYNAMIC_STATE_DEPTH_WRITE_ENABLE,
@@ -655,7 +642,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html">vkCmdSetDepthCompareOp</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthCompareOp.html"> vkCmdSetDepthCompareOp </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_COMPARE_OP_EXT = VK_DYNAMIC_STATE_DEPTH_COMPARE_OP,
@@ -667,7 +654,7 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBoundsTestEnable.html">vkCmdSetDepthBoundsTestEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBoundsTestEnable.html"> vkCmdSetDepthBoundsTestEnable </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_BOUNDS_TEST_ENABLE_EXT = VK_DYNAMIC_STATE_DEPTH_BOUNDS_TEST_ENABLE,
@@ -679,17 +666,15 @@ public enum VkDynamicState
     ///         VkPipelineDepthStencilStateCreateInfo
     ///     </a>
     ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnable.html">vkCmdSetStencilTestEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilTestEnable.html"> vkCmdSetStencilTestEnable </a>
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_STENCIL_TEST_ENABLE_EXT = VK_DYNAMIC_STATE_STENCIL_TEST_ENABLE,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_STENCIL_OP specifies that the failOp, passOp, depthFailOp, and compareOp states in
-    ///     VkPipelineDepthStencilStateCreateInfo for both front and back will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOp.html">vkCmdSetStencilOp</a>
-    ///     before any draws are performed with a pipeline state with VkPipelineDepthStencilStateCreateInfo member
-    ///     stencilTestEnable set to VK_TRUE
+    ///     VK_DYNAMIC_STATE_STENCIL_OP specifies that the failOp, passOp, depthFailOp, and compareOp states in VkPipelineDepthStencilStateCreateInfo for both front and back will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetStencilOp.html"> vkCmdSetStencilOp </a>
+    ///     before any draws are performed with a pipeline state with VkPipelineDepthStencilStateCreateInfo member stencilTestEnable set to VK_TRUE
     /// </summary>
     VK_DYNAMIC_STATE_STENCIL_OP_EXT = VK_DYNAMIC_STATE_STENCIL_OP,
 
@@ -715,7 +700,7 @@ public enum VkDynamicState
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
     ///     will be ignored and mustbe set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnable.html">vkCmdSetDepthBiasEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnable.html"> vkCmdSetDepthBiasEnable </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_BIAS_ENABLE_EXT = VK_DYNAMIC_STATE_DEPTH_BIAS_ENABLE,
@@ -727,7 +712,7 @@ public enum VkDynamicState
     ///         VkPipelineInputAssemblyStateCreateInfo
     ///     </a>
     ///     will be ignored and mustbe set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnable.html">vkCmdSetPrimitiveRestartEnable</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnable.html"> vkCmdSetPrimitiveRestartEnable </a>
     ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_PRIMITIVE_RESTART_ENABLE_EXT = VK_DYNAMIC_STATE_PRIMITIVE_RESTART_ENABLE

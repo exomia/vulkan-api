@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkQcomTileProperties;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_QCOM_tile_properties - device extension (nr. 485) - author 'QCOM' [platform '' | contact 'Jeff Leger
-///     @jackohound']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_tile_properties.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_tile_properties.html</a>
+///     VK_QCOM_tile_properties - device extension (nr. 485) - author 'QCOM' [platform '' | contact 'Jeff Leger @jackohound']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_tile_properties.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_tile_properties.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkQcomTileProperties
@@ -32,16 +32,13 @@ public static unsafe class VkQcomTileProperties
     /// <summary> The extension name. </summary>
     public const string VK_QCOM_TILE_PROPERTIES_EXTENSION_NAME = "VK_QCOM_tile_properties";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_QCOM_TILE_PROPERTIES_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_QCOM_TILE_PROPERTIES_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_QCOM_TILE_PROPERTIES_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_QCOM_TILE_PROPERTIES_EXTENSION_NAME_UTF8_NT = "\u4b56\u515f\u4f43\u5f4d\u4954\u454c\u505f\u4f52\u4550\u5452\u4549\u5f53\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
@@ -53,17 +50,14 @@ public static unsafe class VkQcomTileProperties
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetFramebufferTilePropertiesQCOM.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is a logical device associated with the framebuffer.</param>
-    /// <param name="framebuffer">framebuffer is a handle of the framebuffer to query.</param>
-    /// <param name="pPropertiesCount">
-    ///     pPropertiesCount is a pointer to an integer related to the number of tile properties
-    ///     available or queried, as described below.
-    /// </param>
-    /// <param name="pProperties">pProperties is either NULL or a pointer to an array of VkTilePropertiesQCOM structures.</param>
+    /// <param name="device"> device is a logical device associated with the framebuffer. </param>
+    /// <param name="framebuffer"> framebuffer is a handle of the framebuffer to query. </param>
+    /// <param name="pPropertiesCount"> pPropertiesCount is a pointer to an integer related to the number of tile properties available or queried, as described below. </param>
+    /// <param name="pProperties"> pProperties is either NULL or a pointer to an array of VkTilePropertiesQCOM structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -81,19 +75,13 @@ public static unsafe class VkQcomTileProperties
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDynamicRenderingTilePropertiesQCOM.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is a logical device associated with the render pass.</param>
-    /// <param name="pRenderingInfo">
-    ///     pRenderingInfo is a pointer to the VkRenderingInfo structure specifying details of the
-    ///     render pass instance in dynamic rendering.
-    /// </param>
-    /// <param name="pProperties">
-    ///     pProperties is a pointer to a VkTilePropertiesQCOM structure in which the properties are
-    ///     returned.
-    /// </param>
+    /// <param name="device"> device is a logical device associated with the render pass. </param>
+    /// <param name="pRenderingInfo"> pRenderingInfo is a pointer to the VkRenderingInfo structure specifying details of the render pass instance in dynamic rendering. </param>
+    /// <param name="pProperties"> pProperties is a pointer to a VkTilePropertiesQCOM structure in which the properties are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -109,10 +97,10 @@ public static unsafe class VkQcomTileProperties
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetFramebufferTilePropertiesQCOM</description>
+    ///             <description> vkGetFramebufferTilePropertiesQCOM </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDynamicRenderingTilePropertiesQCOM</description>
+    ///             <description> vkGetDynamicRenderingTilePropertiesQCOM </description>
     ///         </item>
     ///     </list>
     /// </remarks>

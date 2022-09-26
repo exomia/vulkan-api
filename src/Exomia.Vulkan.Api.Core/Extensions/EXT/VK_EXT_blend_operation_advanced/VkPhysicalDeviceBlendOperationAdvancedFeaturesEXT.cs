@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT - Structure describing advanced blending features that can be
-///     supported by an implementation -
+///     VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT - Structure describing advanced blending features that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,18 +34,12 @@ public unsafe struct VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     advancedBlendCoherentOperations specifies whether blending using advanced blend operations is guaranteed to
-    ///     execute atomically and in primitive order. If this is VK_TRUE, VK_ACCESS_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT
-    ///     is treated the same as VK_ACCESS_COLOR_ATTACHMENT_READ_BIT, and advanced blending needs no additional
-    ///     synchronization over basic blending. If this is VK_FALSE, then memory dependencies are required to guarantee order
-    ///     between two advanced blending operations that occur on the same sample.
-    /// </summary>
+    /// <summary> advancedBlendCoherentOperations specifies whether blending using advanced blend operations is guaranteed to execute atomically and in primitive order. If this is VK_TRUE, VK_ACCESS_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT is treated the same as VK_ACCESS_COLOR_ATTACHMENT_READ_BIT, and advanced blending needs no additional synchronization over basic blending. If this is VK_FALSE, then memory dependencies are required to guarantee order between two advanced blending operations that occur on the same sample. </summary>
     public VkBool32 advancedBlendCoherentOperations;
 }

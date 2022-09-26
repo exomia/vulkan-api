@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceConditionalRenderingFeaturesEXT - Structure describing if a secondary command buffer can be
-///     executed if conditional rendering is active in the primary command buffer -
+///     VkPhysicalDeviceConditionalRenderingFeaturesEXT - Structure describing if a secondary command buffer can be executed if conditional rendering is active in the primary command buffer -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceConditionalRenderingFeaturesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceConditionalRenderingFeaturesEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,18 +34,15 @@ public unsafe struct VkPhysicalDeviceConditionalRenderingFeaturesEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary> conditionalRendering specifies whether conditional rendering is supported.</summary>
+    /// <summary> conditionalRendering specifies whether conditional rendering is supported. </summary>
     public VkBool32 conditionalRendering;
 
-    /// <summary>
-    ///     inheritedConditionalRendering specifies whether a secondary command buffer can be executed while conditional
-    ///     rendering is active in the primary command buffer.
-    /// </summary>
+    /// <summary> inheritedConditionalRendering specifies whether a secondary command buffer can be executed while conditional rendering is active in the primary command buffer. </summary>
     public VkBool32 inheritedConditionalRendering;
 }

@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDescriptorUpdateTemplate - Opaque handle to a descriptor update template -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplate.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplate.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplate.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplate.html </a>
 /// </summary>
 public readonly unsafe struct VkDescriptorUpdateTemplate
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkDescriptorUpdateTemplate
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkDescriptorUpdateTemplate left, VkDescriptorUpdateTemplate right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkDescriptorUpdateTemplate
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkDescriptorUpdateTemplate left, VkDescriptorUpdateTemplate right)

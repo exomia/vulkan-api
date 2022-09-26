@@ -14,20 +14,15 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAttachmentSampleLocationsEXT - Structure specifying the sample locations state to use in the initial layout
-///     transition of attachments -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentSampleLocationsEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentSampleLocationsEXT.html</a>
+///     VkAttachmentSampleLocationsEXT - Structure specifying the sample locations state to use in the initial layout transition of attachments -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentSampleLocationsEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentSampleLocationsEXT.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkAttachmentSampleLocationsEXT
 {
-    /// <summary>attachmentIndex is the index of the attachment for which the sample locations state is provided.</summary>
+    /// <summary> attachmentIndex is the index of the attachment for which the sample locations state is provided. </summary>
     public uint attachmentIndex;
 
-    /// <summary>
-    ///     sampleLocationsInfo is the sample locations state to use for the layout transition of the given attachment
-    ///     from the initial layout of the attachment to the image layout specified for the attachment in the first subpass
-    ///     using it.
-    /// </summary>
+    /// <summary> sampleLocationsInfo is the sample locations state to use for the layout transition of the given attachment from the initial layout of the attachment to the image layout specified for the attachment in the first subpass using it. </summary>
     public VkSampleLocationsInfoEXT sampleLocationsInfo;
 }

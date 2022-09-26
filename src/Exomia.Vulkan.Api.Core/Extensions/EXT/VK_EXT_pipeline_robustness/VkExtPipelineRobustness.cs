@@ -20,7 +20,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VK_EXT_pipeline_robustness - device extension (nr. 69) - author 'IMG' [platform '' | contact 'Jarred Davies']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_robustness.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_robustness.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_robustness.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_robustness.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static class VkExtPipelineRobustness
@@ -31,16 +31,13 @@ public static class VkExtPipelineRobustness
     /// <summary> The extension name. </summary>
     public const string VK_EXT_PIPELINE_ROBUSTNESS_EXTENSION_NAME = "VK_EXT_pipeline_robustness";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_PIPELINE_ROBUSTNESS_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_PIPELINE_ROBUSTNESS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_PIPELINE_ROBUSTNESS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_PIPELINE_ROBUSTNESS_EXTENSION_NAME_UTF8_NT =

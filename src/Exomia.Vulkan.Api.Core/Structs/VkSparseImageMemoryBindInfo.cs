@@ -15,17 +15,17 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSparseImageMemoryBindInfo - Structure specifying sparse image memory bind information -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageMemoryBindInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageMemoryBindInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageMemoryBindInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageMemoryBindInfo.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkSparseImageMemoryBindInfo
 {
-    /// <summary>image is the VkImage object to be bound</summary>
+    /// <summary> image is the VkImage object to be bound </summary>
     public VkImage image;
 
-    /// <summary>bindCount is the number of VkSparseImageMemoryBindstructures in pBinds array</summary>
+    /// <summary> bindCount is the number of VkSparseImageMemoryBindstructures in pBinds array </summary>
     public uint bindCount;
 
-    /// <summary>pBinds is a pointer to an array of VkSparseImageMemoryBindstructures</summary>
+    /// <summary> pBinds is a pointer to an array of VkSparseImageMemoryBindstructures </summary>
     public VkSparseImageMemoryBind* pBinds;
 }

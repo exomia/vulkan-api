@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_KHR_copy_commands2 - device extension (nr. 338) - author 'KHR' [platform '' | contact 'Jeff Leger @jackohound']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_copy_commands2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_copy_commands2.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_copy_commands2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_copy_commands2.html </a>
 /// </summary>
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_copy_commands2.html#_deprecation_state")]
 public static unsafe class VkKhrCopyCommands2
@@ -32,16 +32,13 @@ public static unsafe class VkKhrCopyCommands2
     /// <summary> The extension name. </summary>
     public const string VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME = "VK_KHR_copy_commands2";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_COPY_COMMANDS_2_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u435f\u504f\u5f59\u4f43\u4d4d\u4e41\u5344\u325f\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
@@ -49,7 +46,7 @@ public static unsafe class VkKhrCopyCommands2
     /// vkCmdCopyBuffer2KHR alias for vkCmdCopyBuffer2
     /// <summary>
     ///     vkCmdCopyBuffer2 - Copy data between buffer regions -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBuffer2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBuffer2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBuffer2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBuffer2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -59,7 +56,7 @@ public static unsafe class VkKhrCopyCommands2
     /// vkCmdCopyImage2KHR alias for vkCmdCopyImage2
     /// <summary>
     ///     vkCmdCopyImage2 - Copy data between images -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImage2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImage2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImage2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImage2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -69,7 +66,7 @@ public static unsafe class VkKhrCopyCommands2
     /// vkCmdCopyBufferToImage2KHR alias for vkCmdCopyBufferToImage2
     /// <summary>
     ///     vkCmdCopyBufferToImage2 - Copy data from a buffer into an image -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBufferToImage2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBufferToImage2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBufferToImage2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyBufferToImage2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -79,7 +76,7 @@ public static unsafe class VkKhrCopyCommands2
     /// vkCmdCopyImageToBuffer2KHR alias for vkCmdCopyImageToBuffer2
     /// <summary>
     ///     vkCmdCopyImageToBuffer2 - Copy image data into a buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImageToBuffer2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImageToBuffer2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImageToBuffer2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyImageToBuffer2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -89,7 +86,7 @@ public static unsafe class VkKhrCopyCommands2
     /// vkCmdBlitImage2KHR alias for vkCmdBlitImage2
     /// <summary>
     ///     vkCmdBlitImage2 - Copy regions of an image, potentially performing format conversion, -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBlitImage2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -99,7 +96,7 @@ public static unsafe class VkKhrCopyCommands2
     /// vkCmdResolveImage2KHR alias for vkCmdResolveImage2
     /// <summary>
     ///     vkCmdResolveImage2 - Resolve regions of an image -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResolveImage2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResolveImage2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResolveImage2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResolveImage2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -112,22 +109,22 @@ public static unsafe class VkKhrCopyCommands2
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdCopyBuffer2KHR</description>
+    ///             <description> vkCmdCopyBuffer2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdCopyImage2KHR</description>
+    ///             <description> vkCmdCopyImage2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdCopyBufferToImage2KHR</description>
+    ///             <description> vkCmdCopyBufferToImage2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdCopyImageToBuffer2KHR</description>
+    ///             <description> vkCmdCopyImageToBuffer2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdBlitImage2KHR</description>
+    ///             <description> vkCmdBlitImage2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdResolveImage2KHR</description>
+    ///             <description> vkCmdResolveImage2KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

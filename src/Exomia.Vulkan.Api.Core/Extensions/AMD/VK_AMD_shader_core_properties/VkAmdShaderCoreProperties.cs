@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkAmdShaderCoreProperties;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_AMD_shader_core_properties - device extension (nr. 186) - author 'AMD' [platform '' | contact 'Martin Dinkov
-///     @mdinkov']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_core_properties.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_core_properties.html</a>
+///     VK_AMD_shader_core_properties - device extension (nr. 186) - author 'AMD' [platform '' | contact 'Martin Dinkov @mdinkov']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_core_properties.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_core_properties.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 public static class VkAmdShaderCoreProperties
@@ -32,16 +32,13 @@ public static class VkAmdShaderCoreProperties
     /// <summary> The extension name. </summary>
     public const string VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME = "VK_AMD_shader_core_properties";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME_UTF8_NT =

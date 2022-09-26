@@ -23,16 +23,12 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct VkBindVertexBufferIndirectCommandNV
 {
-    /// <summary>bufferAddress specifies a physical address of the VkBufferused as vertex input binding.</summary>
+    /// <summary> bufferAddress specifies a physical address of the VkBufferused as vertex input binding. </summary>
     public VkDeviceAddress bufferAddress;
 
-    /// <summary>size is the byte size range which is available for this operation from the provided address.</summary>
+    /// <summary> size is the byte size range which is available for this operation from the provided address. </summary>
     public uint size;
 
-    /// <summary>
-    ///     stride is the byte size stride for this vertex input binding as in VkVertexInputBindingDescription::stride. It
-    ///     is only used if VkIndirectCommandsLayoutTokenNV::vertexDynamicStride was set, otherwise the stride is inherited
-    ///     from the current bound graphics pipeline.
-    /// </summary>
+    /// <summary> stride is the byte size stride for this vertex input binding as in VkVertexInputBindingDescription::stride. It is only used if VkIndirectCommandsLayoutTokenNV::vertexDynamicStride was set, otherwise the stride is inherited from the current bound graphics pipeline. </summary>
     public uint stride;
 }

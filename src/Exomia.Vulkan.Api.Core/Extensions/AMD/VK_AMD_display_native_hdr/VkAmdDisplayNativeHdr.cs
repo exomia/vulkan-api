@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkAmdDisplayNativeHdr;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_AMD_display_native_hdr - device extension (nr. 214) - author 'AMD' [platform '' | contact 'Matthaeus G. Chajdas
-///     @anteru']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_display_native_hdr.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_display_native_hdr.html</a>
+///     VK_AMD_display_native_hdr - device extension (nr. 214) - author 'AMD' [platform '' | contact 'Matthaeus G. Chajdas @anteru']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_display_native_hdr.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_display_native_hdr.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2,VK_KHR_get_surface_capabilities2,VK_KHR_swapchain")]
 public static unsafe class VkAmdDisplayNativeHdr
@@ -32,16 +32,13 @@ public static unsafe class VkAmdDisplayNativeHdr
     /// <summary> The extension name. </summary>
     public const string VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME = "VK_AMD_display_native_hdr";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_AMD_DISPLAY_NATIVE_HDR_EXTENSION_NAME_UTF8_NT =
@@ -49,11 +46,11 @@ public static unsafe class VkAmdDisplayNativeHdr
 
     /// <summary>
     ///     vkSetLocalDimmingAMD - Set Local Dimming -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetLocalDimmingAMD.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetLocalDimmingAMD.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetLocalDimmingAMD.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetLocalDimmingAMD.html </a>
     /// </summary>
-    /// <param name="device">device is the device associated with swapChain.</param>
-    /// <param name="swapChain">swapChain handle to enable local dimming.</param>
-    /// <param name="localDimmingEnable">localDimmingEnable specifies whether local dimming is enabled for the swapchain.</param>
+    /// <param name="device"> device is the device associated with swapChain. </param>
+    /// <param name="swapChain"> swapChain handle to enable local dimming. </param>
+    /// <param name="localDimmingEnable"> localDimmingEnable specifies whether local dimming is enabled for the swapchain. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkSwapchainKHR /*swapChain*/,
@@ -66,7 +63,7 @@ public static unsafe class VkAmdDisplayNativeHdr
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkSetLocalDimmingAMD</description>
+    ///             <description> vkSetLocalDimmingAMD </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_NV_shader_sm_builtins - device extension (nr. 155) - author 'NV' [platform '' | contact 'Daniel Koch @dgkoch']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_sm_builtins.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_sm_builtins.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_sm_builtins.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_sm_builtins.html </a>
 /// </summary>
 public static class VkNvShaderSmBuiltins
 {
@@ -31,16 +31,13 @@ public static class VkNvShaderSmBuiltins
     /// <summary> The extension name. </summary>
     public const string VK_NV_SHADER_SM_BUILTINS_EXTENSION_NAME = "VK_NV_shader_sm_builtins";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_SHADER_SM_BUILTINS_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_SHADER_SM_BUILTINS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_SHADER_SM_BUILTINS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_SHADER_SM_BUILTINS_EXTENSION_NAME_UTF8_NT = "\u4b56\u4e5f\u5f56\u4853\u4441\u5245\u535f\u5f4d\u5542\u4c49\u4954\u534e\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";

@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrGetDisplayProperties2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_get_display_properties2 - instance extension (nr. 122) - author 'KHR' [platform '' | contact 'James Jones
-///     @cubanismo']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_display_properties2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_display_properties2.html</a>
+///     VK_KHR_get_display_properties2 - instance extension (nr. 122) - author 'KHR' [platform '' | contact 'James Jones @cubanismo']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_display_properties2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_display_properties2.html </a>
 /// </summary>
 [VkRequires("VK_KHR_display")]
 public static unsafe class VkKhrGetDisplayProperties2
@@ -32,16 +32,13 @@ public static unsafe class VkKhrGetDisplayProperties2
     /// <summary> The extension name. </summary>
     public const string VK_KHR_GET_DISPLAY_PROPERTIES_2_EXTENSION_NAME = "VK_KHR_get_display_properties2";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_GET_DISPLAY_PROPERTIES_2_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_GET_DISPLAY_PROPERTIES_2_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_GET_DISPLAY_PROPERTIES_2_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_GET_DISPLAY_PROPERTIES_2_EXTENSION_NAME_UTF8_NT =
@@ -54,19 +51,17 @@ public static unsafe class VkKhrGetDisplayProperties2
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceDisplayProperties2KHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is a physical device.</param>
-    /// <param name="pPropertyCount">
-    ///     pPropertyCount is a pointer to an integer related to the number of display devices
-    ///     available or queried, as described below.
-    /// </param>
-    /// <param name="pProperties">pProperties is either NULL or a pointer to an array of VkDisplayProperties2KHR structures.</param>
+    /// <param name="physicalDevice"> physicalDevice is a physical device. </param>
+    /// <param name="pPropertyCount"> pPropertyCount is a pointer to an integer related to the number of display devices available or queried, as described below. </param>
+    /// <param name="pProperties"> pProperties is either NULL or a pointer to an array of VkDisplayProperties2KHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -83,22 +78,17 @@ public static unsafe class VkKhrGetDisplayProperties2
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceDisplayPlaneProperties2KHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is a physical device.</param>
-    /// <param name="pPropertyCount">
-    ///     pPropertyCount is a pointer to an integer related to the number of display planes
-    ///     available or queried, as described below.
-    /// </param>
-    /// <param name="pProperties">
-    ///     pProperties is either NULL or a pointer to an array of VkDisplayPlaneProperties2KHR
-    ///     structures.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is a physical device. </param>
+    /// <param name="pPropertyCount"> pPropertyCount is a pointer to an integer related to the number of display planes available or queried, as described below. </param>
+    /// <param name="pProperties"> pProperties is either NULL or a pointer to an array of VkDisplayPlaneProperties2KHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -110,25 +100,20 @@ public static unsafe class VkKhrGetDisplayProperties2
 
     /// <summary>
     ///     vkGetDisplayModeProperties2KHR - Query information about the available display modes. -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModeProperties2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModeProperties2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModeProperties2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModeProperties2KHR.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device associated with display.</param>
-    /// <param name="display">display is the display to query.</param>
-    /// <param name="pPropertyCount">
-    ///     pPropertyCount is a pointer to an integer related to the number of display modes available
-    ///     or queried, as described below.
-    /// </param>
-    /// <param name="pProperties">
-    ///     pProperties is either NULL or a pointer to an array of VkDisplayModeProperties2KHR
-    ///     structures.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device associated with display. </param>
+    /// <param name="display"> display is the display to query. </param>
+    /// <param name="pPropertyCount"> pPropertyCount is a pointer to an integer related to the number of display modes available or queried, as described below. </param>
+    /// <param name="pProperties"> pProperties is either NULL or a pointer to an array of VkDisplayModeProperties2KHR structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -146,22 +131,17 @@ public static unsafe class VkKhrGetDisplayProperties2
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayPlaneCapabilities2KHR.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device associated with pDisplayPlaneInfo.</param>
-    /// <param name="pDisplayPlaneInfo">
-    ///     pDisplayPlaneInfo is a pointer to a VkDisplayPlaneInfo2KHRstructure describing the
-    ///     plane and mode.
-    /// </param>
-    /// <param name="pCapabilities">
-    ///     pCapabilities is a pointer to a VkDisplayPlaneCapabilities2KHR structure in which the
-    ///     capabilities are returned.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device associated with pDisplayPlaneInfo. </param>
+    /// <param name="pDisplayPlaneInfo"> pDisplayPlaneInfo is a pointer to a VkDisplayPlaneInfo2KHRstructure describing the plane and mode. </param>
+    /// <param name="pCapabilities"> pCapabilities is a pointer to a VkDisplayPlaneCapabilities2KHR structure in which the capabilities are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -177,16 +157,16 @@ public static unsafe class VkKhrGetDisplayProperties2
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceDisplayProperties2KHR</description>
+    ///             <description> vkGetPhysicalDeviceDisplayProperties2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceDisplayPlaneProperties2KHR</description>
+    ///             <description> vkGetPhysicalDeviceDisplayPlaneProperties2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDisplayModeProperties2KHR</description>
+    ///             <description> vkGetDisplayModeProperties2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetDisplayPlaneCapabilities2KHR</description>
+    ///             <description> vkGetDisplayPlaneCapabilities2KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

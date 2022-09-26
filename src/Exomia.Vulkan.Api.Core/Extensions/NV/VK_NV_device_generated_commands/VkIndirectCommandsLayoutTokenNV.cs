@@ -26,57 +26,48 @@ public unsafe struct VkIndirectCommandsLayoutTokenNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_INDIRECT_COMMANDS_LAYOUT_TOKEN_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>tokenType specifies the token command type.</summary>
+    /// <summary> tokenType specifies the token command type. </summary>
     public VkIndirectCommandsTokenTypeNV tokenType;
 
-    /// <summary>stream is the index of the input stream containing the token argument data.</summary>
+    /// <summary> stream is the index of the input stream containing the token argument data. </summary>
     public uint stream;
 
-    /// <summary>offset is a relative starting offset within the input stream memory for the token argument data.</summary>
+    /// <summary> offset is a relative starting offset within the input stream memory for the token argument data. </summary>
     public uint offset;
 
-    /// <summary>vertexBindingUnit is used for the vertex buffer binding command.</summary>
+    /// <summary> vertexBindingUnit is used for the vertex buffer binding command. </summary>
     public uint vertexBindingUnit;
 
-    /// <summary>
-    ///     vertexDynamicStride sets if the vertex buffer stride is provided by the binding command rather than the
-    ///     current bound graphics pipeline state.
-    /// </summary>
+    /// <summary> vertexDynamicStride sets if the vertex buffer stride is provided by the binding command rather than the current bound graphics pipeline state. </summary>
     public VkBool32 vertexDynamicStride;
 
-    /// <summary>pushconstantPipelineLayout is the VkPipelineLayout used for the push constant command.</summary>
+    /// <summary> pushconstantPipelineLayout is the VkPipelineLayout used for the push constant command. </summary>
     public VkPipelineLayout pushconstantPipelineLayout;
 
-    /// <summary>pushconstantShaderStageFlags are the shader stage flags used for the push constant command.</summary>
+    /// <summary> pushconstantShaderStageFlags are the shader stage flags used for the push constant command. </summary>
     public VkShaderStageFlags pushconstantShaderStageFlags;
 
-    /// <summary>pushconstantOffset is the offset used for the push constant command.</summary>
+    /// <summary> pushconstantOffset is the offset used for the push constant command. </summary>
     public uint pushconstantOffset;
 
-    /// <summary>pushconstantSize is the size used for the push constant command.</summary>
+    /// <summary> pushconstantSize is the size used for the push constant command. </summary>
     public uint pushconstantSize;
 
-    /// <summary>indirectStateFlags are the active states for the state flag command.</summary>
+    /// <summary> indirectStateFlags are the active states for the state flag command. </summary>
     public VkIndirectStateFlagsNV indirectStateFlags;
 
-    /// <summary>
-    ///     indexTypeCount is the optional size of the pIndexTypes and pIndexTypeValues array pairings. If not zero, it
-    ///     allows to register a custom uint32_t value to be treated as specific VkIndexType.
-    /// </summary>
+    /// <summary> indexTypeCount is the optional size of the pIndexTypes and pIndexTypeValues array pairings. If not zero, it allows to register a custom uint32_t value to be treated as specific VkIndexType. </summary>
     public uint indexTypeCount;
 
-    /// <summary>pIndexTypes is the used VkIndexType for the corresponding uint32_t value entry in pIndexTypeValues.</summary>
+    /// <summary> pIndexTypes is the used VkIndexType for the corresponding uint32_t value entry in pIndexTypeValues. </summary>
     public VkIndexType* pIndexTypes;
 
-    /// <summary>
-    ///     indexTypeCount is the optional size of the pIndexTypes and pIndexTypeValues array pairings. If not zero, it
-    ///     allows to register a custom uint32_t value to be treated as specific VkIndexType.
-    /// </summary>
+    /// <summary> indexTypeCount is the optional size of the pIndexTypes and pIndexTypeValues array pairings. If not zero, it allows to register a custom uint32_t value to be treated as specific VkIndexType. </summary>
     public uint* pIndexTypeValues;
 }

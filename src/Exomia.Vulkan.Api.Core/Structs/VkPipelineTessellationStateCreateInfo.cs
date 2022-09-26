@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelineTessellationStateCreateInfo - Structure specifying parameters of a newly created pipeline tessellation
-///     state -
+///     VkPipelineTessellationStateCreateInfo - Structure specifying parameters of a newly created pipeline tessellation state -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineTessellationStateCreateInfo.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineTessellationStateCreateInfo.html
@@ -27,15 +26,15 @@ public unsafe struct VkPipelineTessellationStateCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_TESSELLATION_STATE_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary> flags is reserved for future use. </summary>
     public VkPipelineTessellationStateCreateFlags flags;
 
-    /// <summary>patchControlPoints is the number of control points per patch.</summary>
+    /// <summary> patchControlPoints is the number of control points per patch. </summary>
     public uint patchControlPoints;
 }

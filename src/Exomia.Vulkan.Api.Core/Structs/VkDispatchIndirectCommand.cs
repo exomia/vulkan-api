@@ -15,17 +15,17 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDispatchIndirectCommand - Structure specifying a indirect dispatching command -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDispatchIndirectCommand.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDispatchIndirectCommand.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDispatchIndirectCommand.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDispatchIndirectCommand.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkDispatchIndirectCommand
 {
-    /// <summary>x is the number of local workgroups to dispatch in the X dimension.</summary>
+    /// <summary> x is the number of local workgroups to dispatch in the X dimension. </summary>
     public uint x;
 
-    /// <summary>y is the number of local workgroups to dispatch in the Y dimension.</summary>
+    /// <summary> y is the number of local workgroups to dispatch in the Y dimension. </summary>
     public uint y;
 
-    /// <summary>z is the number of local workgroups to dispatch in the Z dimension.</summary>
+    /// <summary> z is the number of local workgroups to dispatch in the Z dimension. </summary>
     public uint z;
 }

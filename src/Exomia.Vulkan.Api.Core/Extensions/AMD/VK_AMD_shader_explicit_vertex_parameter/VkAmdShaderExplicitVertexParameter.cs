@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkAmdShaderExplicitVertexParameter;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_AMD_shader_explicit_vertex_parameter - device extension (nr. 22) - author 'AMD' [platform '' | contact 'Qun Lin
-///     @linqun']<br />
+///     VK_AMD_shader_explicit_vertex_parameter - device extension (nr. 22) - author 'AMD' [platform '' | contact 'Qun Lin @linqun']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_explicit_vertex_parameter.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_explicit_vertex_parameter.html
@@ -42,8 +42,8 @@ public static class VkAmdShaderExplicitVertexParameter
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_EXTENSION_NAME_UTF8_NT =

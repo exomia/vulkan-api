@@ -15,18 +15,18 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkRefreshCycleDurationGOOGLE - Structure containing the RC duration of a display -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRefreshCycleDurationGOOGLE.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRefreshCycleDurationGOOGLE.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRefreshCycleDurationGOOGLE.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRefreshCycleDurationGOOGLE.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkRefreshCycleDurationGOOGLE
 {
-    /// <summary>refreshDuration is the number of nanoseconds from the start of one refresh cycle to the next.</summary>
+    /// <summary> refreshDuration is the number of nanoseconds from the start of one refresh cycle to the next. </summary>
     public ulong refreshDuration;
 }

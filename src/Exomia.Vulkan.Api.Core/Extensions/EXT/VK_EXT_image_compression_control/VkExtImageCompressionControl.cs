@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtImageCompressionControl;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_image_compression_control - device extension (nr. 339) - author 'EXT' [platform '' | contact 'Jan-Harald
-///     Fredriksen @janharaldfredriksen-arm']<br />
+///     VK_EXT_image_compression_control - device extension (nr. 339) - author 'EXT' [platform '' | contact 'Jan-Harald Fredriksen @janharaldfredriksen-arm']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_compression_control.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_compression_control.html
@@ -34,16 +34,13 @@ public static unsafe class VkExtImageCompressionControl
     /// <summary> The extension name. </summary>
     public const string VK_EXT_IMAGE_COMPRESSION_CONTROL_EXTENSION_NAME = "VK_EXT_image_compression_control";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_IMAGE_COMPRESSION_CONTROL_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_IMAGE_COMPRESSION_CONTROL_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_IMAGE_COMPRESSION_CONTROL_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_IMAGE_COMPRESSION_CONTROL_EXTENSION_NAME_UTF8_NT =
@@ -56,13 +53,10 @@ public static unsafe class VkExtImageCompressionControl
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageSubresourceLayout2EXT.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the image.</param>
-    /// <param name="image">image is the image whose layout is being queried.</param>
-    /// <param name="pSubresource">
-    ///     pSubresource is a pointer to a VkImageSubresource2EXTstructure selecting a specific image
-    ///     for the image subresource.
-    /// </param>
-    /// <param name="pLayout">pLayout is a pointer to a VkSubresourceLayout2EXT structure in which the layout is returned.</param>
+    /// <param name="device"> device is the logical device that owns the image. </param>
+    /// <param name="image"> image is the image whose layout is being queried. </param>
+    /// <param name="pSubresource"> pSubresource is a pointer to a VkImageSubresource2EXTstructure selecting a specific image for the image subresource. </param>
+    /// <param name="pLayout"> pLayout is a pointer to a VkSubresourceLayout2EXT structure in which the layout is returned. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkImage /*image*/,
@@ -76,7 +70,7 @@ public static unsafe class VkExtImageCompressionControl
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetImageSubresourceLayout2EXT</description>
+    ///             <description> vkGetImageSubresourceLayout2EXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

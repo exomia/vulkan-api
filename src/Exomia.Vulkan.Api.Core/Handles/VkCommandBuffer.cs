@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkCommandBuffer - Opaque handle to a command buffer object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBuffer.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBuffer.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBuffer.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBuffer.html </a>
 /// </summary>
 public readonly unsafe struct VkCommandBuffer
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkCommandBuffer
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkCommandBuffer left, VkCommandBuffer right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkCommandBuffer
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkCommandBuffer left, VkCommandBuffer right)

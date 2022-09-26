@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Android.VkAndroidExternalMemoryAndroidHard
 namespace Exomia.Vulkan.Api.Android;
 
 /// <summary>
-///     VK_ANDROID_external_memory_android_hardware_buffer - device extension (nr. 130) - author 'ANDROID' [platform
-///     'android' | contact 'Jesse Hall @critsec']<br />
+///     VK_ANDROID_external_memory_android_hardware_buffer - device extension (nr. 130) - author 'ANDROID' [platform 'android' | contact 'Jesse Hall @critsec']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ANDROID_external_memory_android_hardware_buffer.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ANDROID_external_memory_android_hardware_buffer.html
@@ -43,8 +43,8 @@ public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_ANDROID_EXTERNAL_MEMORY_ANDROID_HARDWARE_BUFFER_EXTENSION_NAME_UTF8_NT =
@@ -57,20 +57,17 @@ public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that will be importing buffer.</param>
-    /// <param name="buffer">buffer is the Android hardware buffer which will be imported.</param>
-    /// <param name="pProperties">
-    ///     pProperties is a pointer to a VkAndroidHardwareBufferPropertiesANDROID structure in which the
-    ///     properties of buffer are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that will be importing buffer. </param>
+    /// <param name="buffer"> buffer is the Android hardware buffer which will be imported. </param>
+    /// <param name="pProperties"> pProperties is a pointer to a VkAndroidHardwareBufferPropertiesANDROID structure in which the properties of buffer are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -87,22 +84,16 @@ public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that created the device memory being exported.</param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkMemoryGetAndroidHardwareBufferInfoANDROID structure containing parameters
-    ///     of the export operation.
-    /// </param>
-    /// <param name="pBuffer">
-    ///     pBuffer will return an Android hardware buffer referencing the payload of the device memory
-    ///     object.
-    /// </param>
+    /// <param name="device"> device is the logical device that created the device memory being exported. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkMemoryGetAndroidHardwareBufferInfoANDROID structure containing parameters of the export operation. </param>
+    /// <param name="pBuffer"> pBuffer will return an Android hardware buffer referencing the payload of the device memory object. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -118,10 +109,10 @@ public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetAndroidHardwareBufferPropertiesANDROID</description>
+    ///             <description> vkGetAndroidHardwareBufferPropertiesANDROID </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetMemoryAndroidHardwareBufferANDROID</description>
+    ///             <description> vkGetMemoryAndroidHardwareBufferANDROID </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvExternalMemoryCapabilities;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_external_memory_capabilities - instance extension (nr. 56) - author 'NV' [platform '' | contact 'James Jones
-///     @cubanismo']<br />
+///     VK_NV_external_memory_capabilities - instance extension (nr. 56) - author 'NV' [platform '' | contact 'James Jones @cubanismo']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_capabilities.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_capabilities.html
@@ -45,46 +45,36 @@ public static unsafe class VkNvExternalMemoryCapabilities
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u4e5f\u5f56\u5845\u4554\u4e52\u4c41\u4d5f\u4d45\u524f\u5f59\u4143\u4150\u4942\u494c\u4954\u5345\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
-    ///     vkGetPhysicalDeviceExternalImageFormatPropertiesNV - Determine image capabilities compatible with external memory
-    ///     handle types -
+    ///     vkGetPhysicalDeviceExternalImageFormatPropertiesNV - Determine image capabilities compatible with external memory handle types -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceExternalImageFormatPropertiesNV.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceExternalImageFormatPropertiesNV.html
     ///     </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice is the physical device from which to query the image capabilities</param>
-    /// <param name="format">format is the image format, corresponding to VkImageCreateInfo::format.</param>
-    /// <param name="type">type is the image type, corresponding to VkImageCreateInfo::imageType.</param>
-    /// <param name="tiling">tiling is the image tiling, corresponding to VkImageCreateInfo::tiling.</param>
-    /// <param name="usage">usage is the intended usage of the image, corresponding to VkImageCreateInfo::usage.</param>
-    /// <param name="flags">
-    ///     flags is a bitmask describing additional parameters of the image, corresponding to
-    ///     VkImageCreateInfo::flags.
-    /// </param>
-    /// <param name="externalHandleType">
-    ///     externalHandleType is either one of the bits from
-    ///     VkExternalMemoryHandleTypeFlagBitsNV, or 0.
-    /// </param>
-    /// <param name="pExternalImageFormatProperties">
-    ///     pExternalImageFormatProperties is a pointer to a
-    ///     VkExternalImageFormatPropertiesNV structure in which capabilities are returned.
-    /// </param>
+    /// <param name="physicalDevice"> physicalDevice is the physical device from which to query the image capabilities </param>
+    /// <param name="format"> format is the image format, corresponding to VkImageCreateInfo::format. </param>
+    /// <param name="type"> type is the image type, corresponding to VkImageCreateInfo::imageType. </param>
+    /// <param name="tiling"> tiling is the image tiling, corresponding to VkImageCreateInfo::tiling. </param>
+    /// <param name="usage"> usage is the intended usage of the image, corresponding to VkImageCreateInfo::usage. </param>
+    /// <param name="flags"> flags is a bitmask describing additional parameters of the image, corresponding to VkImageCreateInfo::flags. </param>
+    /// <param name="externalHandleType"> externalHandleType is either one of the bits from VkExternalMemoryHandleTypeFlagBitsNV, or 0. </param>
+    /// <param name="pExternalImageFormatProperties"> pExternalImageFormatProperties is a pointer to a VkExternalImageFormatPropertiesNV structure in which capabilities are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_FORMAT_NOT_SUPPORTED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_FORMAT_NOT_SUPPORTED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -105,7 +95,7 @@ public static unsafe class VkNvExternalMemoryCapabilities
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetPhysicalDeviceExternalImageFormatPropertiesNV</description>
+    ///             <description> vkGetPhysicalDeviceExternalImageFormatPropertiesNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

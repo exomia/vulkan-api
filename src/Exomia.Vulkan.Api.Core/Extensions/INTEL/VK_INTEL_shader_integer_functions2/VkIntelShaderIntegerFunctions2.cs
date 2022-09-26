@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkIntelShaderIntegerFunctions2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_INTEL_shader_integer_functions2 - device extension (nr. 210) - author 'INTEL' [platform '' | contact 'Ian
-///     Romanick @ianromanick']<br />
+///     VK_INTEL_shader_integer_functions2 - device extension (nr. 210) - author 'INTEL' [platform '' | contact 'Ian Romanick @ianromanick']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_INTEL_shader_integer_functions2.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_INTEL_shader_integer_functions2.html
@@ -43,8 +43,8 @@ public static class VkIntelShaderIntegerFunctions2
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_INTEL_SHADER_INTEGER_FUNCTIONS_2_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_INTEL_SHADER_INTEGER_FUNCTIONS_2_EXTENSION_NAME_UTF8_NT =

@@ -23,15 +23,12 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct VkVertexInputBindingDescription
 {
-    /// <summary>binding is the binding number that this structure describes.</summary>
+    /// <summary> binding is the binding number that this structure describes. </summary>
     public uint binding;
 
-    /// <summary>stride is the byte stride between consecutive elements within the buffer.</summary>
+    /// <summary> stride is the byte stride between consecutive elements within the buffer. </summary>
     public uint stride;
 
-    /// <summary>
-    ///     inputRate is a VkVertexInputRate value specifying whether vertex attribute addressing is a function of the
-    ///     vertex index or of the instance index.
-    /// </summary>
+    /// <summary> inputRate is a VkVertexInputRate value specifying whether vertex attribute addressing is a function of the vertex index or of the instance index. </summary>
     public VkVertexInputRate inputRate;
 }

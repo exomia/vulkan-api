@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_KHR_synchronization2 - device extension (nr. 315) - author 'KHR' [platform '' | contact 'Tobias Hector @tobski']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_synchronization2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_synchronization2.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_synchronization2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_synchronization2.html </a>
 /// </summary>
 [VkRequires("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_synchronization2.html#_deprecation_state")]
@@ -33,16 +33,13 @@ public static unsafe class VkKhrSynchronization2
     /// <summary> The extension name. </summary>
     public const string VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME = "VK_KHR_synchronization2";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u535f\u4e59\u4843\u4f52\u494e\u415a\u4954\u4e4f\u325f\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
@@ -50,7 +47,7 @@ public static unsafe class VkKhrSynchronization2
     /// vkCmdSetEvent2KHR alias for vkCmdSetEvent2
     /// <summary>
     ///     vkCmdSetEvent2 - Set an event object to signaled state -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetEvent2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetEvent2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetEvent2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetEvent2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -61,7 +58,7 @@ public static unsafe class VkKhrSynchronization2
     /// vkCmdResetEvent2KHR alias for vkCmdResetEvent2
     /// <summary>
     ///     vkCmdResetEvent2 - Reset an event object to non-signaled state -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResetEvent2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResetEvent2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResetEvent2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdResetEvent2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -72,7 +69,7 @@ public static unsafe class VkKhrSynchronization2
     /// vkCmdWaitEvents2KHR alias for vkCmdWaitEvents2
     /// <summary>
     ///     vkCmdWaitEvents2 - Wait for one or more events -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWaitEvents2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWaitEvents2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWaitEvents2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWaitEvents2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -84,7 +81,7 @@ public static unsafe class VkKhrSynchronization2
     /// vkCmdPipelineBarrier2KHR alias for vkCmdPipelineBarrier2
     /// <summary>
     ///     vkCmdPipelineBarrier2 - Insert a memory dependency -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPipelineBarrier2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPipelineBarrier2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPipelineBarrier2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPipelineBarrier2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -94,7 +91,7 @@ public static unsafe class VkKhrSynchronization2
     /// vkCmdWriteTimestamp2KHR alias for vkCmdWriteTimestamp2
     /// <summary>
     ///     vkCmdWriteTimestamp2 - Write a device timestamp into a query object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteTimestamp2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -106,7 +103,7 @@ public static unsafe class VkKhrSynchronization2
     /// vkQueueSubmit2KHR alias for vkQueueSubmit2
     /// <summary>
     ///     vkQueueSubmit2 - Submits command buffers to a queue -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueSubmit2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueSubmit2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueSubmit2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueSubmit2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkQueue /*queue*/,
@@ -117,13 +114,13 @@ public static unsafe class VkKhrSynchronization2
 
     /// <summary>
     ///     vkCmdWriteBufferMarker2AMD - Execute a pipelined write of a marker value into a buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarker2AMD.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarker2AMD.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarker2AMD.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarker2AMD.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="stage">stage specifies the pipeline stage whose completion triggers the marker write.</param>
-    /// <param name="dstBuffer">dstBuffer is the buffer where the marker will be written.</param>
-    /// <param name="dstOffset">dstOffset is the byte offset into the buffer where the marker will be written.</param>
-    /// <param name="marker">marker is the 32-bit value of the marker.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="stage"> stage specifies the pipeline stage whose completion triggers the marker write. </param>
+    /// <param name="dstBuffer"> dstBuffer is the buffer where the marker will be written. </param>
+    /// <param name="dstOffset"> dstOffset is the byte offset into the buffer where the marker will be written. </param>
+    /// <param name="marker"> marker is the 32-bit value of the marker. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkPipelineStageFlags2 /*stage*/,
@@ -134,17 +131,11 @@ public static unsafe class VkKhrSynchronization2
 
     /// <summary>
     ///     vkGetQueueCheckpointData2NV - Retrieve diagnostic checkpoint data -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointData2NV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointData2NV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointData2NV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointData2NV.html </a>
     /// </summary>
-    /// <param name="queue">queue is the VkQueue object the caller would like to retrieve checkpoint data for</param>
-    /// <param name="pCheckpointDataCount">
-    ///     pCheckpointDataCount is a pointer to an integer related to the number of checkpoint
-    ///     markers available or queried, as described below.
-    /// </param>
-    /// <param name="pCheckpointData">
-    ///     pCheckpointData is either NULL or a pointer to an array of VkCheckpointData2NV
-    ///     structures.
-    /// </param>
+    /// <param name="queue"> queue is the VkQueue object the caller would like to retrieve checkpoint data for </param>
+    /// <param name="pCheckpointDataCount"> pCheckpointDataCount is a pointer to an integer related to the number of checkpoint markers available or queried, as described below. </param>
+    /// <param name="pCheckpointData"> pCheckpointData is either NULL or a pointer to an array of VkCheckpointData2NV structures. </param>
     public static readonly delegate*<
         VkQueue /*queue*/,
         uint* /*pCheckpointDataCount*/,
@@ -157,28 +148,28 @@ public static unsafe class VkKhrSynchronization2
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetEvent2KHR</description>
+    ///             <description> vkCmdSetEvent2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdResetEvent2KHR</description>
+    ///             <description> vkCmdResetEvent2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdWaitEvents2KHR</description>
+    ///             <description> vkCmdWaitEvents2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdPipelineBarrier2KHR</description>
+    ///             <description> vkCmdPipelineBarrier2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdWriteTimestamp2KHR</description>
+    ///             <description> vkCmdWriteTimestamp2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkQueueSubmit2KHR</description>
+    ///             <description> vkQueueSubmit2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdWriteBufferMarker2AMD</description>
+    ///             <description> vkCmdWriteBufferMarker2AMD </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetQueueCheckpointData2NV</description>
+    ///             <description> vkGetQueueCheckpointData2NV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

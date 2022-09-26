@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkBufferCreateInfo</description>
+///             <term> structextends </term><description> VkBufferCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,12 +34,12 @@ public unsafe struct VkBufferOpaqueCaptureAddressCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>opaqueCaptureAddress is the opaque capture address requested for the buffer.</summary>
+    /// <summary> opaqueCaptureAddress is the opaque capture address requested for the buffer. </summary>
     public ulong opaqueCaptureAddress;
 }

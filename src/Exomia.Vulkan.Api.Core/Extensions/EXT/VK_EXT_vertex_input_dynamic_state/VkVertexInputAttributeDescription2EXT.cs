@@ -26,21 +26,21 @@ public unsafe struct VkVertexInputAttributeDescription2EXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>location is the shader input location number for this attribute.</summary>
+    /// <summary> location is the shader input location number for this attribute. </summary>
     public uint location;
 
-    /// <summary>binding is the binding number which this attribute takes its data from.</summary>
+    /// <summary> binding is the binding number which this attribute takes its data from. </summary>
     public uint binding;
 
-    /// <summary>format is the size and type of the vertex attribute data.</summary>
+    /// <summary> format is the size and type of the vertex attribute data. </summary>
     public VkFormat format;
 
-    /// <summary>offset is a byte offset of this attribute relative to the start of an element in the vertex input binding.</summary>
+    /// <summary> offset is a byte offset of this attribute relative to the start of an element in the vertex input binding. </summary>
     public uint offset;
 }

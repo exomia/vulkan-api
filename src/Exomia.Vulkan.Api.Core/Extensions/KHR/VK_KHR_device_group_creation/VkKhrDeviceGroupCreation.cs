@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrDeviceGroupCreation;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_device_group_creation - instance extension (nr. 71) - author 'KHR' [platform '' | contact 'Jeff Bolz
-///     @jeffbolznv']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_device_group_creation.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_device_group_creation.html</a>
+///     VK_KHR_device_group_creation - instance extension (nr. 71) - author 'KHR' [platform '' | contact 'Jeff Bolz @jeffbolznv']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_device_group_creation.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_device_group_creation.html </a>
 /// </summary>
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_device_group_creation.html#_deprecation_state")]
 public static unsafe class VkKhrDeviceGroupCreation
@@ -32,16 +32,13 @@ public static unsafe class VkKhrDeviceGroupCreation
     /// <summary> The extension name. </summary>
     public const string VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME = "VK_KHR_device_group_creation";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME_UTF8_NT =
@@ -49,15 +46,14 @@ public static unsafe class VkKhrDeviceGroupCreation
 
     /// <summary>
     ///     VK_MAX_DEVICE_GROUP_SIZE - Length of a physical device handle array -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_DEVICE_GROUP_SIZE.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_DEVICE_GROUP_SIZE.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_DEVICE_GROUP_SIZE.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_DEVICE_GROUP_SIZE.html </a>
     /// </summary>
     /// <remarks> VK_MAX_DEVICE_GROUP_SIZE_KHR alias for VK_MAX_DEVICE_GROUP_SIZE_KHR. </remarks>
     public const uint VK_MAX_DEVICE_GROUP_SIZE_KHR = VK_MAX_DEVICE_GROUP_SIZE;
 
     /// vkEnumeratePhysicalDeviceGroupsKHR alias for vkEnumeratePhysicalDeviceGroups
     /// <summary>
-    ///     vkEnumeratePhysicalDeviceGroups - Enumerates groups of physical devices that can be used to create a single
-    ///     logical device -
+    ///     vkEnumeratePhysicalDeviceGroups - Enumerates groups of physical devices that can be used to create a single logical device -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html
@@ -75,7 +71,7 @@ public static unsafe class VkKhrDeviceGroupCreation
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkEnumeratePhysicalDeviceGroupsKHR</description>
+    ///             <description> vkEnumeratePhysicalDeviceGroupsKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

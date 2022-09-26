@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvFragmentShaderBarycentric;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_fragment_shader_barycentric - device extension (nr. 204) - author 'NV' [platform '' | contact 'Pat Brown
-///     @nvpbrown']<br />
+///     VK_NV_fragment_shader_barycentric - device extension (nr. 204) - author 'NV' [platform '' | contact 'Pat Brown @nvpbrown']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_fragment_shader_barycentric.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_fragment_shader_barycentric.html
@@ -46,8 +46,8 @@ public static class VkNvFragmentShaderBarycentric
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME_UTF8_NT =

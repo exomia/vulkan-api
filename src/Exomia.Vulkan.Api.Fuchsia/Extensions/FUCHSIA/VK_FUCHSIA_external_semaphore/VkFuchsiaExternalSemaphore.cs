@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Fuchsia.VkFuchsiaExternalSemaphore;
 namespace Exomia.Vulkan.Api.Fuchsia;
 
 /// <summary>
-///     VK_FUCHSIA_external_semaphore - device extension (nr. 366) - author 'FUCHSIA' [platform 'fuchsia' | contact 'John
-///     Rosasco @rosasco']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_semaphore.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_semaphore.html</a>
+///     VK_FUCHSIA_external_semaphore - device extension (nr. 366) - author 'FUCHSIA' [platform 'fuchsia' | contact 'John Rosasco @rosasco']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_semaphore.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_semaphore.html </a>
 /// </summary>
 [VkRequires("VK_KHR_external_semaphore_capabilities,VK_KHR_external_semaphore")]
 public static unsafe class VkFuchsiaExternalSemaphore
@@ -32,16 +32,13 @@ public static unsafe class VkFuchsiaExternalSemaphore
     /// <summary> The extension name. </summary>
     public const string VK_FUCHSIA_EXTERNAL_SEMAPHORE_EXTENSION_NAME = "VK_FUCHSIA_external_semaphore";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_FUCHSIA_EXTERNAL_SEMAPHORE_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_FUCHSIA_EXTERNAL_SEMAPHORE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_FUCHSIA_EXTERNAL_SEMAPHORE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_FUCHSIA_EXTERNAL_SEMAPHORE_EXTENSION_NAME_UTF8_NT =
@@ -54,19 +51,16 @@ public static unsafe class VkFuchsiaExternalSemaphore
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkImportSemaphoreZirconHandleFUCHSIA.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that created the semaphore.</param>
-    /// <param name="pImportSemaphoreZirconHandleInfo">
-    ///     pImportSemaphoreZirconHandleInfo is a pointer to a
-    ///     VkImportSemaphoreZirconHandleInfoFUCHSIA structure specifying the semaphore and import parameters.
-    /// </param>
+    /// <param name="device"> device is the logical device that created the semaphore. </param>
+    /// <param name="pImportSemaphoreZirconHandleInfo"> pImportSemaphoreZirconHandleInfo is a pointer to a VkImportSemaphoreZirconHandleInfoFUCHSIA structure specifying the semaphore and import parameters. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -82,19 +76,16 @@ public static unsafe class VkFuchsiaExternalSemaphore
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that created the semaphore being exported.</param>
-    /// <param name="pGetZirconHandleInfo">
-    ///     pGetZirconHandleInfo is a pointer to a VkSemaphoreGetZirconHandleInfoFUCHSIA
-    ///     structure containing parameters of the export operation.
-    /// </param>
-    /// <param name="pZirconHandle">pZirconHandle will return the Zircon event handle representing the semaphore payload.</param>
+    /// <param name="device"> device is the logical device that created the semaphore being exported. </param>
+    /// <param name="pGetZirconHandleInfo"> pGetZirconHandleInfo is a pointer to a VkSemaphoreGetZirconHandleInfoFUCHSIA structure containing parameters of the export operation. </param>
+    /// <param name="pZirconHandle"> pZirconHandle will return the Zircon event handle representing the semaphore payload. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -110,10 +101,10 @@ public static unsafe class VkFuchsiaExternalSemaphore
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkImportSemaphoreZirconHandleFUCHSIA</description>
+    ///             <description> vkImportSemaphoreZirconHandleFUCHSIA </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetSemaphoreZirconHandleFUCHSIA</description>
+    ///             <description> vkGetSemaphoreZirconHandleFUCHSIA </description>
     ///         </item>
     ///     </list>
     /// </remarks>

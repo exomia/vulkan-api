@@ -15,13 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkFragmentShadingRateTypeNV - Enumeration with fragment shading rate types -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFragmentShadingRateTypeNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFragmentShadingRateTypeNV.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFragmentShadingRateTypeNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFragmentShadingRateTypeNV.html </a>
 /// </summary>
 public enum VkFragmentShadingRateTypeNV
 {
     /// <summary>
-    ///     VK_FRAGMENT_SHADING_RATE_TYPE_FRAGMENT_SIZE_NV specifies that a graphics pipeline should obtain its pipeline
-    ///     fragment shading rate and shading rate combiner state from the
+    ///     VK_FRAGMENT_SHADING_RATE_TYPE_FRAGMENT_SIZE_NV specifies that a graphics pipeline should obtain its pipeline fragment shading rate and shading rate combiner state from the
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineFragmentShadingRateStateCreateInfoKHR.html">
     ///         VkPipelineFragmentShadingRateStateCreateInfoKHR
@@ -36,8 +35,7 @@ public enum VkFragmentShadingRateTypeNV
     VK_FRAGMENT_SHADING_RATE_TYPE_FRAGMENT_SIZE_NV = 0,
 
     /// <summary>
-    ///     VK_FRAGMENT_SHADING_RATE_TYPE_ENUMS_NV specifies that a graphics pipeline should obtain its pipeline fragment
-    ///     shading rate and shading rate combiner state from the
+    ///     VK_FRAGMENT_SHADING_RATE_TYPE_ENUMS_NV specifies that a graphics pipeline should obtain its pipeline fragment shading rate and shading rate combiner state from the
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineFragmentShadingRateEnumStateCreateInfoNV.html">
     ///         VkPipelineFragmentShadingRateEnumStateCreateInfoNV

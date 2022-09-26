@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkBindBufferMemoryInfo</description>
+///             <term> structextends </term><description> VkBindBufferMemoryInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,15 +34,15 @@ public unsafe struct VkBindBufferMemoryDeviceGroupInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>deviceIndexCount is the number of elements in pDeviceIndices.</summary>
+    /// <summary> deviceIndexCount is the number of elements in pDeviceIndices. </summary>
     public uint deviceIndexCount;
 
-    /// <summary>pDeviceIndices is a pointer to an array of device indices.</summary>
+    /// <summary> pDeviceIndices is a pointer to an array of device indices. </summary>
     public uint* pDeviceIndices;
 }

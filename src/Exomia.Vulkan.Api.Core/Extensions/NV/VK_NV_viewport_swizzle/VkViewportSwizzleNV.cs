@@ -15,32 +15,20 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkViewportSwizzleNV - Structure specifying a viewport swizzle -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportSwizzleNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportSwizzleNV.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportSwizzleNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportSwizzleNV.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkViewportSwizzleNV
 {
-    /// <summary>
-    ///     x is a VkViewportCoordinateSwizzleNV value specifying the swizzle operation to apply to the x component of the
-    ///     primitive
-    /// </summary>
+    /// <summary> x is a VkViewportCoordinateSwizzleNV value specifying the swizzle operation to apply to the x component of the primitive </summary>
     public VkViewportCoordinateSwizzleNV x;
 
-    /// <summary>
-    ///     y is a VkViewportCoordinateSwizzleNV value specifying the swizzle operation to apply to the y component of the
-    ///     primitive
-    /// </summary>
+    /// <summary> y is a VkViewportCoordinateSwizzleNV value specifying the swizzle operation to apply to the y component of the primitive </summary>
     public VkViewportCoordinateSwizzleNV y;
 
-    /// <summary>
-    ///     z is a VkViewportCoordinateSwizzleNV value specifying the swizzle operation to apply to the z component of the
-    ///     primitive
-    /// </summary>
+    /// <summary> z is a VkViewportCoordinateSwizzleNV value specifying the swizzle operation to apply to the z component of the primitive </summary>
     public VkViewportCoordinateSwizzleNV z;
 
-    /// <summary>
-    ///     w is a VkViewportCoordinateSwizzleNV value specifying the swizzle operation to apply to the w component of the
-    ///     primitive
-    /// </summary>
+    /// <summary> w is a VkViewportCoordinateSwizzleNV value specifying the swizzle operation to apply to the w component of the primitive </summary>
     public VkViewportCoordinateSwizzleNV w;
 }

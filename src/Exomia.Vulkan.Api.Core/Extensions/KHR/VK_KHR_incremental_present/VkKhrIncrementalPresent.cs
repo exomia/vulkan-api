@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrIncrementalPresent;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_incremental_present - device extension (nr. 85) - author 'KHR' [platform '' | contact 'Ian Elliott
-///     @ianelliottus']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_incremental_present.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_incremental_present.html</a>
+///     VK_KHR_incremental_present - device extension (nr. 85) - author 'KHR' [platform '' | contact 'Ian Elliott @ianelliottus']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_incremental_present.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_incremental_present.html </a>
 /// </summary>
 [VkRequires("VK_KHR_swapchain")]
 public static class VkKhrIncrementalPresent
@@ -32,16 +32,13 @@ public static class VkKhrIncrementalPresent
     /// <summary> The extension name. </summary>
     public const string VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME = "VK_KHR_incremental_present";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME_UTF8_NT =

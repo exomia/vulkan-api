@@ -26,12 +26,12 @@ public unsafe struct VkPhysicalDeviceSurfaceInfo2KHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SURFACE_INFO_2_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>surface is the surface that will be associated with the swapchain.</summary>
+    /// <summary> surface is the surface that will be associated with the swapchain. </summary>
     public VkSurfaceKHR surface;
 }

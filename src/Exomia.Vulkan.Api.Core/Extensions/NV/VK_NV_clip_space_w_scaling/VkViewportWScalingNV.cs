@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkViewportWScalingNV - Structure specifying a viewport -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportWScalingNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportWScalingNV.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportWScalingNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportWScalingNV.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkViewportWScalingNV
 {
-    /// <summary>xcoeff and ycoeff are the viewport&#8217;s W scaling factor for x and y respectively.</summary>
+    /// <summary> xcoeff and ycoeff are the viewport&#8217;s W scaling factor for x and y respectively. </summary>
     public float xcoeff;
 
-    /// <summary>xcoeff and ycoeff are the viewport&#8217;s W scaling factor for x and y respectively.</summary>
+    /// <summary> xcoeff and ycoeff are the viewport&#8217;s W scaling factor for x and y respectively. </summary>
     public float ycoeff;
 }

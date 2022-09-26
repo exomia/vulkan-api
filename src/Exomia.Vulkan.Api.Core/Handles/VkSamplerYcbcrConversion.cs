@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSamplerYcbcrConversion - Opaque handle to a device-specific sampler Y′CBCR conversion description -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversion.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversion.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversion.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversion.html </a>
 /// </summary>
 public readonly unsafe struct VkSamplerYcbcrConversion
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkSamplerYcbcrConversion
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkSamplerYcbcrConversion left, VkSamplerYcbcrConversion right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkSamplerYcbcrConversion
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkSamplerYcbcrConversion left, VkSamplerYcbcrConversion right)

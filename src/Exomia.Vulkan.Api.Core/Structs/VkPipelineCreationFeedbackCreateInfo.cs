@@ -23,8 +23,8 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term>
-///             <description>VkGraphicsPipelineCreateInfo,VkComputePipelineCreateInfo,VkRayTracingPipelineCreateInfoNV,VkRayTracingPipelineCreateInfoKHR</description>
+///             <term> structextends </term>
+///             <description> VkGraphicsPipelineCreateInfo,VkComputePipelineCreateInfo,VkRayTracingPipelineCreateInfoNV,VkRayTracingPipelineCreateInfoKHR </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,21 +35,18 @@ public unsafe struct VkPipelineCreationFeedbackCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_CREATION_FEEDBACK_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>pPipelineCreationFeedback is a pointer to a VkPipelineCreationFeedback structure.</summary>
+    /// <summary> pPipelineCreationFeedback is a pointer to a VkPipelineCreationFeedback structure. </summary>
     public VkPipelineCreationFeedback* pPipelineCreationFeedback;
 
-    /// <summary>pipelineStageCreationFeedbackCount is the number of elements in pPipelineStageCreationFeedbacks.</summary>
+    /// <summary> pipelineStageCreationFeedbackCount is the number of elements in pPipelineStageCreationFeedbacks. </summary>
     public uint pipelineStageCreationFeedbackCount;
 
-    /// <summary>
-    ///     pPipelineStageCreationFeedbacks is a pointer to an array of
-    ///     pipelineStageCreationFeedbackCountVkPipelineCreationFeedback structures.
-    /// </summary>
+    /// <summary> pPipelineStageCreationFeedbacks is a pointer to an array of pipelineStageCreationFeedbackCountVkPipelineCreationFeedback structures. </summary>
     public VkPipelineCreationFeedback* pPipelineStageCreationFeedbacks;
 }

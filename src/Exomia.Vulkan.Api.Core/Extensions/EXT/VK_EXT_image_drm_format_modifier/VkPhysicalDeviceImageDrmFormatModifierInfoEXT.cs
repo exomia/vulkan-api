@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceImageDrmFormatModifierInfoEXT - Structure specifying a DRM format modifier as image creation
-///     parameter -
+///     VkPhysicalDeviceImageDrmFormatModifierInfoEXT - Structure specifying a DRM format modifier as image creation parameter -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceImageFormatInfo2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceImageFormatInfo2 </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,28 +34,21 @@ public unsafe struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     drmFormatModifier is the image&#8217;s Linux DRM format modifier, corresponding to
-    ///     VkImageDrmFormatModifierExplicitCreateInfoEXT::modifier or to
-    ///     VkImageDrmFormatModifierListCreateInfoEXT::pModifiers.
-    /// </summary>
+    /// <summary> drmFormatModifier is the image&#8217;s Linux DRM format modifier, corresponding to VkImageDrmFormatModifierExplicitCreateInfoEXT::modifier or to VkImageDrmFormatModifierListCreateInfoEXT::pModifiers. </summary>
     public ulong drmFormatModifier;
 
-    /// <summary>sharingMode specifies how the image will be accessed by multiple queue families.</summary>
+    /// <summary> sharingMode specifies how the image will be accessed by multiple queue families. </summary>
     public VkSharingMode sharingMode;
 
-    /// <summary>queueFamilyIndexCount is the number of entries in the pQueueFamilyIndices array.</summary>
+    /// <summary> queueFamilyIndexCount is the number of entries in the pQueueFamilyIndices array. </summary>
     public uint queueFamilyIndexCount;
 
-    /// <summary>
-    ///     pQueueFamilyIndices is a pointer to an array of queue families that will access the image. It is ignored if
-    ///     sharingMode is not VK_SHARING_MODE_CONCURRENT.
-    /// </summary>
+    /// <summary> pQueueFamilyIndices is a pointer to an array of queue families that will access the image. It is ignored if sharingMode is not VK_SHARING_MODE_CONCURRENT. </summary>
     public uint* pQueueFamilyIndices;
 }

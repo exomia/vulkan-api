@@ -15,15 +15,15 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkFormatProperties3 - Structure specifying image format properties -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties3.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties3.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties3.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties3.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkFormatProperties2</description>
+///             <term> structextends </term><description> VkFormatProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -36,25 +36,19 @@ public unsafe struct VkFormatProperties3
 
     /// <summary>
     ///     sType<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatProperties3">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatProperties3</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatProperties3"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatProperties3 </a>
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     linearTilingFeatures is a bitmask of VkFormatFeatureFlagBits2 specifying features supported by images created
-    ///     with a tiling parameter of VK_IMAGE_TILING_LINEAR.
-    /// </summary>
+    /// <summary> linearTilingFeatures is a bitmask of VkFormatFeatureFlagBits2 specifying features supported by images created with a tiling parameter of VK_IMAGE_TILING_LINEAR. </summary>
     public VkFormatFeatureFlags2 linearTilingFeatures;
 
-    /// <summary>
-    ///     optimalTilingFeatures is a bitmask of VkFormatFeatureFlagBits2 specifying features supported by images created
-    ///     with a tiling parameter of VK_IMAGE_TILING_OPTIMAL.
-    /// </summary>
+    /// <summary> optimalTilingFeatures is a bitmask of VkFormatFeatureFlagBits2 specifying features supported by images created with a tiling parameter of VK_IMAGE_TILING_OPTIMAL. </summary>
     public VkFormatFeatureFlags2 optimalTilingFeatures;
 
-    /// <summary>bufferFeatures is a bitmask of VkFormatFeatureFlagBits2specifying features supported by buffers.</summary>
+    /// <summary> bufferFeatures is a bitmask of VkFormatFeatureFlagBits2specifying features supported by buffers. </summary>
     public VkFormatFeatureFlags2 bufferFeatures;
 }

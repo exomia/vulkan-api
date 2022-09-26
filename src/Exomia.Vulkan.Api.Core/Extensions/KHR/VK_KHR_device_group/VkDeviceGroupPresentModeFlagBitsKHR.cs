@@ -23,27 +23,15 @@ namespace Exomia.Vulkan.Api.Core;
 [Flags]
 public enum VkDeviceGroupPresentModeFlagBitsKHR
 {
-    /// <summary>
-    ///     VK_DEVICE_GROUP_PRESENT_MODE_LOCAL_BIT_KHR specifies that any physical device with a presentation engine can
-    ///     present its own swapchain images.
-    /// </summary>
+    /// <summary> VK_DEVICE_GROUP_PRESENT_MODE_LOCAL_BIT_KHR specifies that any physical device with a presentation engine can present its own swapchain images. </summary>
     VK_DEVICE_GROUP_PRESENT_MODE_LOCAL_BIT_KHR = 0x1,
 
-    /// <summary>
-    ///     VK_DEVICE_GROUP_PRESENT_MODE_REMOTE_BIT_KHR specifies that any physical device with a presentation engine can
-    ///     present swapchain images from any physical device in its presentMask.
-    /// </summary>
+    /// <summary> VK_DEVICE_GROUP_PRESENT_MODE_REMOTE_BIT_KHR specifies that any physical device with a presentation engine can present swapchain images from any physical device in its presentMask. </summary>
     VK_DEVICE_GROUP_PRESENT_MODE_REMOTE_BIT_KHR = 0x2,
 
-    /// <summary>
-    ///     VK_DEVICE_GROUP_PRESENT_MODE_SUM_BIT_KHR specifies that any physical device with a presentation engine can
-    ///     present the sum of swapchain images from any physical devices in its presentMask.
-    /// </summary>
+    /// <summary> VK_DEVICE_GROUP_PRESENT_MODE_SUM_BIT_KHR specifies that any physical device with a presentation engine can present the sum of swapchain images from any physical devices in its presentMask. </summary>
     VK_DEVICE_GROUP_PRESENT_MODE_SUM_BIT_KHR = 0x4,
 
-    /// <summary>
-    ///     VK_DEVICE_GROUP_PRESENT_MODE_LOCAL_MULTI_DEVICE_BIT_KHR specifies that multiple physical devices with a
-    ///     presentation engine can each present their own swapchain images.
-    /// </summary>
+    /// <summary> VK_DEVICE_GROUP_PRESENT_MODE_LOCAL_MULTI_DEVICE_BIT_KHR specifies that multiple physical devices with a presentation engine can each present their own swapchain images. </summary>
     VK_DEVICE_GROUP_PRESENT_MODE_LOCAL_MULTI_DEVICE_BIT_KHR = 0x8
 }

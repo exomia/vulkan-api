@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelineRasterizationLineStateCreateInfoEXT - Structure specifying parameters of a newly created pipeline line
-///     rasterization state -
+///     VkPipelineRasterizationLineStateCreateInfoEXT - Structure specifying parameters of a newly created pipeline line rasterization state -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPipelineRasterizationStateCreateInfo</description>
+///             <term> structextends </term><description> VkPipelineRasterizationStateCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,21 +34,21 @@ public unsafe struct VkPipelineRasterizationLineStateCreateInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>lineRasterizationMode is a VkLineRasterizationModeEXT value selecting the style of line rasterization.</summary>
+    /// <summary> lineRasterizationMode is a VkLineRasterizationModeEXT value selecting the style of line rasterization. </summary>
     public VkLineRasterizationModeEXT lineRasterizationMode;
 
-    /// <summary>stippledLineEnable enables stippled line rasterization.</summary>
+    /// <summary> stippledLineEnable enables stippled line rasterization. </summary>
     public VkBool32 stippledLineEnable;
 
-    /// <summary>lineStippleFactor is the repeat factor used in stippled line rasterization.</summary>
+    /// <summary> lineStippleFactor is the repeat factor used in stippled line rasterization. </summary>
     public uint lineStippleFactor;
 
-    /// <summary>lineStipplePattern is the bit pattern used in stippled line rasterization.</summary>
+    /// <summary> lineStipplePattern is the bit pattern used in stippled line rasterization. </summary>
     public ushort lineStipplePattern;
 }

@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_EXT_private_data - device extension (nr. 296) - author 'NV' [platform '' | contact 'Matthew Rusch @mattruschnv']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_private_data.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_private_data.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_private_data.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_private_data.html </a>
 /// </summary>
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_private_data.html#_deprecation_state")]
 public static unsafe class VkExtPrivateData
@@ -32,16 +32,13 @@ public static unsafe class VkExtPrivateData
     /// <summary> The extension name. </summary>
     public const string VK_EXT_PRIVATE_DATA_EXTENSION_NAME = "VK_EXT_private_data";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_PRIVATE_DATA_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_PRIVATE_DATA_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_PRIVATE_DATA_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_PRIVATE_DATA_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u505f\u4952\u4156\u4554\u445f\u5441\u5f41\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
@@ -49,7 +46,7 @@ public static unsafe class VkExtPrivateData
     /// vkCreatePrivateDataSlotEXT alias for vkCreatePrivateDataSlot
     /// <summary>
     ///     vkCreatePrivateDataSlot - Create a slot for private data storage -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePrivateDataSlotEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePrivateDataSlotEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePrivateDataSlotEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePrivateDataSlotEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkDevice /*device*/,
@@ -61,7 +58,7 @@ public static unsafe class VkExtPrivateData
     /// vkDestroyPrivateDataSlotEXT alias for vkDestroyPrivateDataSlot
     /// <summary>
     ///     vkDestroyPrivateDataSlot - Destroy a private data slot -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyPrivateDataSlotEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyPrivateDataSlotEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyPrivateDataSlotEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyPrivateDataSlotEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkDevice /*device*/,
@@ -72,7 +69,7 @@ public static unsafe class VkExtPrivateData
     /// vkSetPrivateDataEXT alias for vkSetPrivateData
     /// <summary>
     ///     vkSetPrivateData - Associate data with a Vulkan object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetPrivateDataEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetPrivateDataEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetPrivateDataEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetPrivateDataEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkDevice /*device*/,
@@ -85,7 +82,7 @@ public static unsafe class VkExtPrivateData
     /// vkGetPrivateDataEXT alias for vkGetPrivateData
     /// <summary>
     ///     vkGetPrivateData - Retrieve data associated with a Vulkan object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPrivateDataEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPrivateDataEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPrivateDataEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPrivateDataEXT.html </a>
     /// </summary>
     public static readonly delegate*<
         VkDevice /*device*/,
@@ -101,16 +98,16 @@ public static unsafe class VkExtPrivateData
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreatePrivateDataSlotEXT</description>
+    ///             <description> vkCreatePrivateDataSlotEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyPrivateDataSlotEXT</description>
+    ///             <description> vkDestroyPrivateDataSlotEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkSetPrivateDataEXT</description>
+    ///             <description> vkSetPrivateDataEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPrivateDataEXT</description>
+    ///             <description> vkGetPrivateDataEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

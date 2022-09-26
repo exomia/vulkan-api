@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkSubpassShadingPipelineCreateInfoHUAWEI - Structure specifying parameters of a newly created subpass shading
-///     pipeline -
+///     VkSubpassShadingPipelineCreateInfoHUAWEI - Structure specifying parameters of a newly created subpass shading pipeline -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassShadingPipelineCreateInfoHUAWEI.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassShadingPipelineCreateInfoHUAWEI.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkComputePipelineCreateInfo</description>
+///             <term> structextends </term><description> VkComputePipelineCreateInfo </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,19 +37,15 @@ public unsafe struct VkSubpassShadingPipelineCreateInfoHUAWEI
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     renderPass is a handle to a render pass object describing the environment in which the pipeline will be used.
-    ///     The pipeline must only be used with a render pass instance compatible with the one provided. See Render Pass
-    ///     Compatibility for more information.
-    /// </summary>
+    /// <summary> renderPass is a handle to a render pass object describing the environment in which the pipeline will be used. The pipeline must only be used with a render pass instance compatible with the one provided. See Render Pass Compatibility for more information. </summary>
     public VkRenderPass renderPass;
 
-    /// <summary>subpass is the index of the subpass in the render pass where this pipeline will be used.</summary>
+    /// <summary> subpass is the index of the subpass in the render pass where this pipeline will be used. </summary>
     public uint subpass;
 }

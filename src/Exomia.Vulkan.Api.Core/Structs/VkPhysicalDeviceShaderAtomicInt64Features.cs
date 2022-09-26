@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,21 +34,15 @@ public unsafe struct VkPhysicalDeviceShaderAtomicInt64Features
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     shaderBufferInt64Atomics indicates whether shaders can perform 64-bit unsigned and signed integer atomic
-    ///     operations on buffers.
-    /// </summary>
+    /// <summary> shaderBufferInt64Atomics indicates whether shaders can perform 64-bit unsigned and signed integer atomic operations on buffers. </summary>
     public VkBool32 shaderBufferInt64Atomics;
 
-    /// <summary>
-    ///     shaderSharedInt64Atomics indicates whether shaders can perform 64-bit unsigned and signed integer atomic
-    ///     operations on shared and payload memory.
-    /// </summary>
+    /// <summary> shaderSharedInt64Atomics indicates whether shaders can perform 64-bit unsigned and signed integer atomic operations on shared and payload memory. </summary>
     public VkBool32 shaderSharedInt64Atomics;
 }

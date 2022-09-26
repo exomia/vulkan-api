@@ -23,38 +23,26 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Explicit)]
 public struct VkPipelineExecutableStatisticValueKHR
 {
-    /// <summary>
-    ///     b32 is the 32-bit boolean value if the VkPipelineExecutableStatisticFormatKHR is
-    ///     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_BOOL32_KHR.
-    /// </summary>
+    /// <summary> b32 is the 32-bit boolean value if the VkPipelineExecutableStatisticFormatKHR is VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_BOOL32_KHR. </summary>
     [FieldOffset(0)]
     public VkBool32 b32;
 
-    /// <summary>
-    ///     i64 is the signed 64-bit integer value if the VkPipelineExecutableStatisticFormatKHR is
-    ///     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_INT64_KHR.
-    /// </summary>
+    /// <summary> i64 is the signed 64-bit integer value if the VkPipelineExecutableStatisticFormatKHR is VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_INT64_KHR. </summary>
     [FieldOffset(0)]
     public long i64;
 
-    /// <summary>
-    ///     u64 is the unsigned 64-bit integer value if the VkPipelineExecutableStatisticFormatKHR is
-    ///     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_UINT64_KHR.
-    /// </summary>
+    /// <summary> u64 is the unsigned 64-bit integer value if the VkPipelineExecutableStatisticFormatKHR is VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_UINT64_KHR. </summary>
     [FieldOffset(0)]
     public ulong u64;
 
-    /// <summary>
-    ///     f64 is the 64-bit floating-point value if the VkPipelineExecutableStatisticFormatKHR is
-    ///     VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_FLOAT64_KHR.
-    /// </summary>
+    /// <summary> f64 is the 64-bit floating-point value if the VkPipelineExecutableStatisticFormatKHR is VK_PIPELINE_EXECUTABLE_STATISTIC_FORMAT_FLOAT64_KHR. </summary>
     [FieldOffset(0)]
     public double f64;
 }

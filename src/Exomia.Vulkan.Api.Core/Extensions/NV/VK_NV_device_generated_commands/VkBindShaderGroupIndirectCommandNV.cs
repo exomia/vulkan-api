@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkBindShaderGroupIndirectCommandNV - Structure specifying input data for a single shader group command token
-///     -
+///     VkBindShaderGroupIndirectCommandNV - Structure specifying input data for a single shader group command token -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindShaderGroupIndirectCommandNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindShaderGroupIndirectCommandNV.html

@@ -23,21 +23,18 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkPipelineCacheHeaderVersionOne
 {
-    /// <summary>headerSize is the length in bytes of the pipeline cache header.</summary>
+    /// <summary> headerSize is the length in bytes of the pipeline cache header. </summary>
     public uint headerSize;
 
-    /// <summary>
-    ///     headerVersion is a VkPipelineCacheHeaderVersion enum value specifying the version of the header. A consumer of
-    ///     the pipeline cache should use the cache version to interpret the remainder of the cache header.
-    /// </summary>
+    /// <summary> headerVersion is a VkPipelineCacheHeaderVersion enum value specifying the version of the header. A consumer of the pipeline cache should use the cache version to interpret the remainder of the cache header. </summary>
     public VkPipelineCacheHeaderVersion headerVersion;
 
-    /// <summary>vendorID is the VkPhysicalDeviceProperties::vendorIDof the implementation.</summary>
+    /// <summary> vendorID is the VkPhysicalDeviceProperties::vendorIDof the implementation. </summary>
     public uint vendorID;
 
-    /// <summary>deviceID is the VkPhysicalDeviceProperties::deviceIDof the implementation.</summary>
+    /// <summary> deviceID is the VkPhysicalDeviceProperties::deviceIDof the implementation. </summary>
     public uint deviceID;
 
-    /// <summary>pipelineCacheUUID is the VkPhysicalDeviceProperties::pipelineCacheUUID of the implementation.</summary>
+    /// <summary> pipelineCacheUUID is the VkPhysicalDeviceProperties::pipelineCacheUUID of the implementation. </summary>
     public fixed byte pipelineCacheUUID[(int)VK_UUID_SIZE];
 }

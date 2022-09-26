@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkEvent - Opaque handle to an event object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEvent.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEvent.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEvent.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEvent.html </a>
 /// </summary>
 public readonly unsafe struct VkEvent
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkEvent
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkEvent left, VkEvent right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkEvent
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkEvent left, VkEvent right)

@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT - Structure describing whether rasterization order
-///     attachment access can be supported by an implementation -
+///     VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT - Structure describing whether rasterization order attachment access can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,27 +34,18 @@ public unsafe struct VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesE
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     rasterizationOrderColorAttachmentAccess indicates that rasterization order access to color and input
-    ///     attachments is supported by the implementation.
-    /// </summary>
+    /// <summary> rasterizationOrderColorAttachmentAccess indicates that rasterization order access to color and input attachments is supported by the implementation. </summary>
     public VkBool32 rasterizationOrderColorAttachmentAccess;
 
-    /// <summary>
-    ///     rasterizationOrderDepthAttachmentAccess indicates that rasterization order access to the depth aspect of
-    ///     depth/stencil and input attachments is supported by the implementation.
-    /// </summary>
+    /// <summary> rasterizationOrderDepthAttachmentAccess indicates that rasterization order access to the depth aspect of depth/stencil and input attachments is supported by the implementation. </summary>
     public VkBool32 rasterizationOrderDepthAttachmentAccess;
 
-    /// <summary>
-    ///     rasterizationOrderStencilAttachmentAccess indicates that rasterization order access to the stencil aspect of
-    ///     depth/stencil and input attachments is supported by the implementation.
-    /// </summary>
+    /// <summary> rasterizationOrderStencilAttachmentAccess indicates that rasterization order access to the stencil aspect of depth/stencil and input attachments is supported by the implementation. </summary>
     public VkBool32 rasterizationOrderStencilAttachmentAccess;
 }

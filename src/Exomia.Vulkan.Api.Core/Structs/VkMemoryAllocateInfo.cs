@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkMemoryAllocateInfo - Structure containing parameters of a memory allocation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateInfo.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkMemoryAllocateInfo
@@ -23,18 +23,15 @@ public unsafe struct VkMemoryAllocateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>allocationSize is the size of the allocation in bytes.</summary>
+    /// <summary> allocationSize is the size of the allocation in bytes. </summary>
     public VkDeviceSize allocationSize;
 
-    /// <summary>
-    ///     memoryTypeIndex is an index identifying a memory type from the memoryTypes array of the
-    ///     VkPhysicalDeviceMemoryPropertiesstructure.
-    /// </summary>
+    /// <summary> memoryTypeIndex is an index identifying a memory type from the memoryTypes array of the VkPhysicalDeviceMemoryPropertiesstructure. </summary>
     public uint memoryTypeIndex;
 }

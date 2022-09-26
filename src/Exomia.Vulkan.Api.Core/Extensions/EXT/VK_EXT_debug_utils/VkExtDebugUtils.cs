@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>
 ///     VK_EXT_debug_utils - instance extension (nr. 129) - author 'EXT' [platform '' | contact 'Mark Young @marky-lunarg']
 ///     <br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_debug_utils.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_debug_utils.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_debug_utils.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_debug_utils.html </a>
 /// </summary>
 /// <remarks>
 ///     specialuse: debugging
@@ -35,36 +35,31 @@ public static unsafe class VkExtDebugUtils
     /// <summary> The extension name. </summary>
     public const string VK_EXT_DEBUG_UTILS_EXTENSION_NAME = "VK_EXT_debug_utils";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_DEBUG_UTILS_EXTENSION_NAME" /> represented by an UTF16
-    ///     string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_DEBUG_UTILS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_DEBUG_UTILS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_DEBUG_UTILS_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u445f\u4245\u4755\u555f\u4954\u534c\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkSetDebugUtilsObjectNameEXT - Give a user-friendly name to an object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the device that created the object.</param>
-    /// <param name="pNameInfo">
-    ///     pNameInfo is a pointer to a VkDebugUtilsObjectNameInfoEXTstructure specifying parameters of the
-    ///     name to set on the object.
-    /// </param>
+    /// <param name="device"> device is the device that created the object. </param>
+    /// <param name="pNameInfo"> pNameInfo is a pointer to a VkDebugUtilsObjectNameInfoEXTstructure specifying parameters of the name to set on the object. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -75,20 +70,18 @@ public static unsafe class VkExtDebugUtils
 
     /// <summary>
     ///     vkSetDebugUtilsObjectTagEXT - Attach arbitrary data to an object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectTagEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectTagEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectTagEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectTagEXT.html </a>
     /// </summary>
-    /// <param name="device">device is the device that created the object.</param>
-    /// <param name="pTagInfo">
-    ///     pTagInfo is a pointer to a VkDebugUtilsObjectTagInfoEXTstructure specifying parameters of the
-    ///     tag to attach to the object.
-    /// </param>
+    /// <param name="device"> device is the device that created the object. </param>
+    /// <param name="pTagInfo"> pTagInfo is a pointer to a VkDebugUtilsObjectTagInfoEXTstructure specifying parameters of the tag to attach to the object. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -99,13 +92,10 @@ public static unsafe class VkExtDebugUtils
 
     /// <summary>
     ///     vkQueueBeginDebugUtilsLabelEXT - Open a queue debug label region -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueBeginDebugUtilsLabelEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueBeginDebugUtilsLabelEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueBeginDebugUtilsLabelEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueBeginDebugUtilsLabelEXT.html </a>
     /// </summary>
-    /// <param name="queue">queue is the queue in which to start a debug label region.</param>
-    /// <param name="pLabelInfo">
-    ///     pLabelInfo is a pointer to a VkDebugUtilsLabelEXT structure specifying parameters of the label
-    ///     region to open.
-    /// </param>
+    /// <param name="queue"> queue is the queue in which to start a debug label region. </param>
+    /// <param name="pLabelInfo"> pLabelInfo is a pointer to a VkDebugUtilsLabelEXT structure specifying parameters of the label region to open. </param>
     public static readonly delegate*<
         VkQueue /*queue*/,
         VkDebugUtilsLabelEXT* /*pLabelInfo*/,
@@ -113,9 +103,9 @@ public static unsafe class VkExtDebugUtils
 
     /// <summary>
     ///     vkQueueEndDebugUtilsLabelEXT - Close a queue debug label region -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueEndDebugUtilsLabelEXT.html </a>
     /// </summary>
-    /// <param name="queue">queue is the queue in which a debug label region should be closed.</param>
+    /// <param name="queue"> queue is the queue in which a debug label region should be closed. </param>
     public static readonly delegate*<
         VkQueue /*queue*/,
         void> vkQueueEndDebugUtilsLabelEXT = null;
@@ -127,11 +117,8 @@ public static unsafe class VkExtDebugUtils
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueInsertDebugUtilsLabelEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="queue">queue is the queue into which a debug label will be inserted.</param>
-    /// <param name="pLabelInfo">
-    ///     pLabelInfo is a pointer to a VkDebugUtilsLabelEXT structure specifying parameters of the label
-    ///     to insert.
-    /// </param>
+    /// <param name="queue"> queue is the queue into which a debug label will be inserted. </param>
+    /// <param name="pLabelInfo"> pLabelInfo is a pointer to a VkDebugUtilsLabelEXT structure specifying parameters of the label to insert. </param>
     public static readonly delegate*<
         VkQueue /*queue*/,
         VkDebugUtilsLabelEXT* /*pLabelInfo*/,
@@ -139,13 +126,10 @@ public static unsafe class VkExtDebugUtils
 
     /// <summary>
     ///     vkCmdBeginDebugUtilsLabelEXT - Open a command buffer debug label region -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginDebugUtilsLabelEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginDebugUtilsLabelEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginDebugUtilsLabelEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginDebugUtilsLabelEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="pLabelInfo">
-    ///     pLabelInfo is a pointer to a VkDebugUtilsLabelEXT structure specifying parameters of the label
-    ///     region to open.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="pLabelInfo"> pLabelInfo is a pointer to a VkDebugUtilsLabelEXT structure specifying parameters of the label region to open. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkDebugUtilsLabelEXT* /*pLabelInfo*/,
@@ -153,22 +137,19 @@ public static unsafe class VkExtDebugUtils
 
     /// <summary>
     ///     vkCmdEndDebugUtilsLabelEXT - Close a command buffer label region -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndDebugUtilsLabelEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndDebugUtilsLabelEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndDebugUtilsLabelEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndDebugUtilsLabelEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         void> vkCmdEndDebugUtilsLabelEXT = null;
 
     /// <summary>
     ///     vkCmdInsertDebugUtilsLabelEXT - Insert a label into a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdInsertDebugUtilsLabelEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdInsertDebugUtilsLabelEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdInsertDebugUtilsLabelEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdInsertDebugUtilsLabelEXT.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="pLabelInfo">
-    ///     VUID-vkCmdInsertDebugUtilsLabelEXT-pLabelInfo-parameter pLabelInfo must be a valid pointer to
-    ///     a valid VkDebugUtilsLabelEXT structure
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="pLabelInfo"> VUID-vkCmdInsertDebugUtilsLabelEXT-pLabelInfo-parameter pLabelInfo must be a valid pointer to a valid VkDebugUtilsLabelEXT structure </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkDebugUtilsLabelEXT* /*pLabelInfo*/,
@@ -176,25 +157,19 @@ public static unsafe class VkExtDebugUtils
 
     /// <summary>
     ///     vkCreateDebugUtilsMessengerEXT - Create a debug messenger object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDebugUtilsMessengerEXT.html </a>
     /// </summary>
-    /// <param name="instance">instance is the instance the messenger will be used with.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkDebugUtilsMessengerCreateInfoEXT structure containing the
-    ///     callback pointer, as well as defining conditions under which this messenger will trigger the callback.
-    /// </param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
-    /// <param name="pMessenger">
-    ///     pMessenger is a pointer to a VkDebugUtilsMessengerEXT handle in which the created object is
-    ///     returned.
-    /// </param>
+    /// <param name="instance"> instance is the instance the messenger will be used with. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkDebugUtilsMessengerCreateInfoEXT structure containing the callback pointer, as well as defining conditions under which this messenger will trigger the callback. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
+    /// <param name="pMessenger"> pMessenger is a pointer to a VkDebugUtilsMessengerEXT handle in which the created object is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -212,13 +187,9 @@ public static unsafe class VkExtDebugUtils
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyDebugUtilsMessengerEXT.html
     ///     </a>
     /// </summary>
-    /// <param name="instance">instance is the instance where the callback was created.</param>
-    /// <param name="messenger">
-    ///     messenger is the VkDebugUtilsMessengerEXT object to destroy. messenger is an externally
-    ///     synchronized object and must not be used on more than one thread at a time. This means that
-    ///     vkDestroyDebugUtilsMessengerEXT must not be called when a callback is active.
-    /// </param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
+    /// <param name="instance"> instance is the instance where the callback was created. </param>
+    /// <param name="messenger"> messenger is the VkDebugUtilsMessengerEXT object to destroy. messenger is an externally synchronized object and must not be used on more than one thread at a time. This means that vkDestroyDebugUtilsMessengerEXT must not be called when a callback is active. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
     public static readonly delegate*<
         VkInstance /*instance*/,
         VkDebugUtilsMessengerEXT /*messenger*/,
@@ -227,21 +198,12 @@ public static unsafe class VkExtDebugUtils
 
     /// <summary>
     ///     vkSubmitDebugUtilsMessageEXT - Inject a message into a debug stream -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSubmitDebugUtilsMessageEXT.html </a>
     /// </summary>
-    /// <param name="instance">instance is the debug stream&#8217;s VkInstance.</param>
-    /// <param name="messageSeverity">
-    ///     messageSeverity is a VkDebugUtilsMessageSeverityFlagBitsEXTvalue specifying the severity
-    ///     of this event/message.
-    /// </param>
-    /// <param name="messageTypes">
-    ///     messageTypes is a bitmask of VkDebugUtilsMessageTypeFlagBitsEXT specifying which type of
-    ///     event(s) to identify with this message.
-    /// </param>
-    /// <param name="pCallbackData">
-    ///     pCallbackData contains all the callback related data in the
-    ///     VkDebugUtilsMessengerCallbackDataEXT structure.
-    /// </param>
+    /// <param name="instance"> instance is the debug stream&#8217;s VkInstance. </param>
+    /// <param name="messageSeverity"> messageSeverity is a VkDebugUtilsMessageSeverityFlagBitsEXTvalue specifying the severity of this event/message. </param>
+    /// <param name="messageTypes"> messageTypes is a bitmask of VkDebugUtilsMessageTypeFlagBitsEXT specifying which type of event(s) to identify with this message. </param>
+    /// <param name="pCallbackData"> pCallbackData contains all the callback related data in the VkDebugUtilsMessengerCallbackDataEXT structure. </param>
     public static readonly delegate*<
         VkInstance /*instance*/,
         VkDebugUtilsMessageSeverityFlagBitsEXT /*messageSeverity*/,
@@ -255,28 +217,28 @@ public static unsafe class VkExtDebugUtils
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkSetDebugUtilsObjectNameEXT</description>
+    ///             <description> vkSetDebugUtilsObjectNameEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkSetDebugUtilsObjectTagEXT</description>
+    ///             <description> vkSetDebugUtilsObjectTagEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkQueueBeginDebugUtilsLabelEXT</description>
+    ///             <description> vkQueueBeginDebugUtilsLabelEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkQueueEndDebugUtilsLabelEXT</description>
+    ///             <description> vkQueueEndDebugUtilsLabelEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkQueueInsertDebugUtilsLabelEXT</description>
+    ///             <description> vkQueueInsertDebugUtilsLabelEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdBeginDebugUtilsLabelEXT</description>
+    ///             <description> vkCmdBeginDebugUtilsLabelEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdEndDebugUtilsLabelEXT</description>
+    ///             <description> vkCmdEndDebugUtilsLabelEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdInsertDebugUtilsLabelEXT</description>
+    ///             <description> vkCmdInsertDebugUtilsLabelEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -335,13 +297,13 @@ public static unsafe class VkExtDebugUtils
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateDebugUtilsMessengerEXT</description>
+    ///             <description> vkCreateDebugUtilsMessengerEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyDebugUtilsMessengerEXT</description>
+    ///             <description> vkDestroyDebugUtilsMessengerEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkSubmitDebugUtilsMessageEXT</description>
+    ///             <description> vkSubmitDebugUtilsMessageEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

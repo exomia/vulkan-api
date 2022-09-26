@@ -13,9 +13,9 @@ global using static Exomia.Vulkan.Api.Core.VulkanVideoCodecH264stdEncodeDefines;
 // ReSharper disable ShiftExpressionZeroLeftOperand
 namespace Exomia.Vulkan.Api.Core;
 
-/// <summary>The VulkanVideoCodecH264stdEncodeDefines class.</summary>
+/// <summary> The VulkanVideoCodecH264stdEncodeDefines class. </summary>
 public static class VulkanVideoCodecH264stdEncodeDefines
 {
-    /// <summary>The VK_STD_VULKAN_VIDEO_CODEC_H264_ENCODE_API_VERSION_0_9_7.</summary>
+    /// <summary> The VK_STD_VULKAN_VIDEO_CODEC_H264_ENCODE_API_VERSION_0_9_7. </summary>
     public const uint VK_STD_VULKAN_VIDEO_CODEC_H264_ENCODE_API_VERSION_0_9_7 = (0 << 22) | (9 << 12) | 7;
 }

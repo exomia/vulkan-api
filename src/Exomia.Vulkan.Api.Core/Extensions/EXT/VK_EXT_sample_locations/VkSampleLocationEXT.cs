@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSampleLocationEXT - Structure specifying the coordinates of a sample location -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampleLocationEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampleLocationEXT.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampleLocationEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampleLocationEXT.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkSampleLocationEXT
 {
-    /// <summary>x is the horizontal coordinate of the sample&#8217;s location.</summary>
+    /// <summary> x is the horizontal coordinate of the sample&#8217;s location. </summary>
     public float x;
 
-    /// <summary>y is the vertical coordinate of the sample&#8217;s location.</summary>
+    /// <summary> y is the vertical coordinate of the sample&#8217;s location. </summary>
     public float y;
 }

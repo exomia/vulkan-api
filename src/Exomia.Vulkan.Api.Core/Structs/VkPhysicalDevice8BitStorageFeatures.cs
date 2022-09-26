@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,32 +34,18 @@ public unsafe struct VkPhysicalDevice8BitStorageFeatures
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     storageBuffer8BitAccess indicates whether objects in the     StorageBuffer, ShaderRecordBufferKHR,     or
-    ///     PhysicalStorageBuffer    storage class with the Block decoration can have 8-bit integer     members.     If this
-    ///     feature is not enabled, 8-bit integer members must not be used     in such objects.     This also indicates whether
-    ///     shader modules can declare the     StorageBuffer8BitAccess capability.
-    /// </summary>
+    /// <summary> storageBuffer8BitAccess indicates whether objects in the     StorageBuffer, ShaderRecordBufferKHR,     or PhysicalStorageBuffer    storage class with the Block decoration can have 8-bit integer     members.     If this feature is not enabled, 8-bit integer members must not be used     in such objects.     This also indicates whether shader modules can declare the     StorageBuffer8BitAccess capability. </summary>
     public VkBool32 storageBuffer8BitAccess;
 
-    /// <summary>
-    ///     uniformAndStorageBuffer8BitAccess indicates whether objects in the Uniform storage class with the Block
-    ///     decoration can have 8-bit integer members. If this feature is not enabled, 8-bit integer members must not be used
-    ///     in such objects. This also indicates whether shader modules can declare the UniformAndStorageBuffer8BitAccess
-    ///     capability.
-    /// </summary>
+    /// <summary> uniformAndStorageBuffer8BitAccess indicates whether objects in the Uniform storage class with the Block decoration can have 8-bit integer members. If this feature is not enabled, 8-bit integer members must not be used in such objects. This also indicates whether shader modules can declare the UniformAndStorageBuffer8BitAccess capability. </summary>
     public VkBool32 uniformAndStorageBuffer8BitAccess;
 
-    /// <summary>
-    ///     storagePushConstant8 indicates whether objects in the PushConstant storage class can have 8-bit integer
-    ///     members. If this feature is not enabled, 8-bit integer members must not be used in such objects. This also
-    ///     indicates whether shader modules can declare the StoragePushConstant8 capability.
-    /// </summary>
+    /// <summary> storagePushConstant8 indicates whether objects in the PushConstant storage class can have 8-bit integer members. If this feature is not enabled, 8-bit integer members must not be used in such objects. This also indicates whether shader modules can declare the StoragePushConstant8 capability. </summary>
     public VkBool32 storagePushConstant8;
 }

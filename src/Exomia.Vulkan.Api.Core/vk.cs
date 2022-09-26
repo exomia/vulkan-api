@@ -27,12 +27,12 @@ public static partial class Vk
 
     /// <summary>
     ///     VK_LUID_SIZE_KHR - Length of a universally unique device or driver build identifier -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LUID_SIZE_KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LUID_SIZE_KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LUID_SIZE_KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LUID_SIZE_KHR.html </a>
     /// </summary>
     public const uint VK_LUID_SIZE_KHR = VK_LUID_SIZE;
 
     /// <summary> Gets a vk function. </summary>
-    /// <param name="vkInstance">           The vk instance. </param>
+    /// <param name="vkInstance"> The vk instance. </param>
     /// <param name="vkFunctionNameUtf8Nt"> Name of the vk function in an UTF8-NT style. </param>
     /// <returns> The vk function; otherwise throws exception. </returns>
     /// <exception cref="EntryPointNotFoundException"> Thrown when an Entry Point Not Found error condition occurs. </exception>
@@ -48,7 +48,7 @@ public static partial class Vk
     }
 
     /// <summary> Gets a vk function. </summary>
-    /// <param name="vkDevice">             The vk device. </param>
+    /// <param name="vkDevice"> The vk device. </param>
     /// <param name="vkFunctionNameUtf8Nt"> Name of the vk function in an UTF8-NT style. </param>
     /// <returns> The vk function; otherwise throws exception. </returns>
     /// <exception cref="EntryPointNotFoundException"> Thrown when an Entry Point Not Found error condition occurs. </exception>

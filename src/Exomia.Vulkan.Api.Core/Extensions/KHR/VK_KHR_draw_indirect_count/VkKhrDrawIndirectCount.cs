@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrDrawIndirectCount;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_draw_indirect_count - device extension (nr. 170) - author 'KHR' [platform '' | contact 'Piers Daniell
-///     @pdaniell-nv']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_draw_indirect_count.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_draw_indirect_count.html</a>
+///     VK_KHR_draw_indirect_count - device extension (nr. 170) - author 'KHR' [platform '' | contact 'Piers Daniell @pdaniell-nv']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_draw_indirect_count.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_draw_indirect_count.html </a>
 /// </summary>
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_draw_indirect_count.html#_deprecation_state")]
 public static unsafe class VkKhrDrawIndirectCount
@@ -32,16 +32,13 @@ public static unsafe class VkKhrDrawIndirectCount
     /// <summary> The extension name. </summary>
     public const string VK_KHR_DRAW_INDIRECT_COUNT_EXTENSION_NAME = "VK_KHR_draw_indirect_count";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_DRAW_INDIRECT_COUNT_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_DRAW_INDIRECT_COUNT_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_DRAW_INDIRECT_COUNT_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_DRAW_INDIRECT_COUNT_EXTENSION_NAME_UTF8_NT =
@@ -50,7 +47,7 @@ public static unsafe class VkKhrDrawIndirectCount
     /// vkCmdDrawIndirectCountKHR alias for vkCmdDrawIndirectCount
     /// <summary>
     ///     vkCmdDrawIndirectCount - Draw primitives with indirect parameters and draw count -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectCountKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectCountKHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectCountKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectCountKHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -86,10 +83,10 @@ public static unsafe class VkKhrDrawIndirectCount
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdDrawIndirectCountKHR</description>
+    ///             <description> vkCmdDrawIndirectCountKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdDrawIndexedIndirectCountKHR</description>
+    ///             <description> vkCmdDrawIndexedIndirectCountKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

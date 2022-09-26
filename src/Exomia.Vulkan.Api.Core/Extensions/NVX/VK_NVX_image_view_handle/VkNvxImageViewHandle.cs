@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkNvxImageViewHandle;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NVX_image_view_handle - device extension (nr. 31) - author 'NVX' [platform '' | contact 'Eric Werness
-///     @ewerness-nv']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_image_view_handle.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_image_view_handle.html</a>
+///     VK_NVX_image_view_handle - device extension (nr. 31) - author 'NVX' [platform '' | contact 'Eric Werness @ewerness-nv']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_image_view_handle.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_image_view_handle.html </a>
 /// </summary>
 public static unsafe class VkNvxImageViewHandle
 {
@@ -31,26 +31,23 @@ public static unsafe class VkNvxImageViewHandle
     /// <summary> The extension name. </summary>
     public const string VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME = "VK_NVX_image_view_handle";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME_UTF8_NT = "\u4b56\u4e5f\u5856\u495f\u414d\u4547\u565f\u4549\u5f57\u4148\u444e\u454c\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
     ///     vkGetImageViewHandleNVX - Get the handle for an image view for a specific descriptor type -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewHandleNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewHandleNVX.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewHandleNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewHandleNVX.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the image view.</param>
-    /// <param name="pInfo">pInfo describes the image view to query and type of handle.</param>
+    /// <param name="device"> device is the logical device that owns the image view. </param>
+    /// <param name="pInfo"> pInfo describes the image view to query and type of handle. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkImageViewHandleInfoNVX* /*pInfo*/,
@@ -58,18 +55,18 @@ public static unsafe class VkNvxImageViewHandle
 
     /// <summary>
     ///     vkGetImageViewAddressNVX - Get the device address of an image view -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewAddressNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewAddressNVX.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewAddressNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewAddressNVX.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the image view.</param>
-    /// <param name="imageView">imageView is a handle to the image view.</param>
-    /// <param name="pProperties">pProperties contains the device address and size when the call returns.</param>
+    /// <param name="device"> device is the logical device that owns the image view. </param>
+    /// <param name="imageView"> imageView is a handle to the image view. </param>
+    /// <param name="pProperties"> pProperties contains the device address and size when the call returns. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_UNKNOWN</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_UNKNOWN </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -85,10 +82,10 @@ public static unsafe class VkNvxImageViewHandle
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetImageViewHandleNVX</description>
+    ///             <description> vkGetImageViewHandleNVX </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetImageViewAddressNVX</description>
+    ///             <description> vkGetImageViewAddressNVX </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -15,36 +15,26 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSemaphoreType - Specifies the type of a semaphore object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreType.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreType.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreType.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreType.html </a>
 /// </summary>
 public enum VkSemaphoreType
 {
-    /// <summary>
-    ///     VK_SEMAPHORE_TYPE_BINARY specifies a binary semaphore type that has a boolean payload indicating whether the
-    ///     semaphore is currently signaled or unsignaled. When created, the semaphore is in the unsignaled state.
-    /// </summary>
+    /// <summary> VK_SEMAPHORE_TYPE_BINARY specifies a binary semaphore type that has a boolean payload indicating whether the semaphore is currently signaled or unsignaled. When created, the semaphore is in the unsignaled state. </summary>
     VK_SEMAPHORE_TYPE_BINARY = 0,
 
     /// <summary>
-    ///     VK_SEMAPHORE_TYPE_TIMELINE specifies a timeline semaphore type that has a strictly increasing 64-bit unsigned
-    ///     integer payload indicating whether the semaphore is signaled with respect to a particular reference value. When
-    ///     created, the semaphore payload has the value given by the initialValue field of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfo.html">VkSemaphoreTypeCreateInfo</a>
+    ///     VK_SEMAPHORE_TYPE_TIMELINE specifies a timeline semaphore type that has a strictly increasing 64-bit unsigned integer payload indicating whether the semaphore is signaled with respect to a particular reference value. When created, the semaphore payload has the value given by the initialValue field of
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfo.html"> VkSemaphoreTypeCreateInfo </a>
     ///     .
     /// </summary>
     VK_SEMAPHORE_TYPE_TIMELINE = 1,
 
-    /// <summary>
-    ///     VK_SEMAPHORE_TYPE_BINARY specifies a binary semaphore type that has a boolean payload indicating whether the
-    ///     semaphore is currently signaled or unsignaled. When created, the semaphore is in the unsignaled state.
-    /// </summary>
+    /// <summary> VK_SEMAPHORE_TYPE_BINARY specifies a binary semaphore type that has a boolean payload indicating whether the semaphore is currently signaled or unsignaled. When created, the semaphore is in the unsignaled state. </summary>
     VK_SEMAPHORE_TYPE_BINARY_KHR = VK_SEMAPHORE_TYPE_BINARY,
 
     /// <summary>
-    ///     VK_SEMAPHORE_TYPE_TIMELINE specifies a timeline semaphore type that has a strictly increasing 64-bit unsigned
-    ///     integer payload indicating whether the semaphore is signaled with respect to a particular reference value. When
-    ///     created, the semaphore payload has the value given by the initialValue field of
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfo.html">VkSemaphoreTypeCreateInfo</a>
+    ///     VK_SEMAPHORE_TYPE_TIMELINE specifies a timeline semaphore type that has a strictly increasing 64-bit unsigned integer payload indicating whether the semaphore is signaled with respect to a particular reference value. When created, the semaphore payload has the value given by the initialValue field of
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfo.html"> VkSemaphoreTypeCreateInfo </a>
     ///     .
     /// </summary>
     VK_SEMAPHORE_TYPE_TIMELINE_KHR = VK_SEMAPHORE_TYPE_TIMELINE

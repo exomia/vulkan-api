@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkGoogleDisplayTiming;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_GOOGLE_display_timing - device extension (nr. 93) - author 'GOOGLE' [platform '' | contact 'Ian Elliott
-///     @ianelliottus']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_display_timing.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_display_timing.html</a>
+///     VK_GOOGLE_display_timing - device extension (nr. 93) - author 'GOOGLE' [platform '' | contact 'Ian Elliott @ianelliottus']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_display_timing.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_display_timing.html </a>
 /// </summary>
 [VkRequires("VK_KHR_swapchain")]
 public static unsafe class VkGoogleDisplayTiming
@@ -32,16 +32,13 @@ public static unsafe class VkGoogleDisplayTiming
     /// <summary> The extension name. </summary>
     public const string VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME = "VK_GOOGLE_display_timing";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME_UTF8_NT = "\u4b56\u475f\u4f4f\u4c47\u5f45\u4944\u5053\u414c\u5f59\u4954\u494d\u474e\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
@@ -53,20 +50,17 @@ public static unsafe class VkGoogleDisplayTiming
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device associated with swapchain.</param>
-    /// <param name="swapchain">swapchain is the swapchain to obtain the refresh duration for.</param>
-    /// <param name="pDisplayTimingProperties">
-    ///     pDisplayTimingProperties is a pointer to a VkRefreshCycleDurationGOOGLE
-    ///     structure.
-    /// </param>
+    /// <param name="device"> device is the device associated with swapchain. </param>
+    /// <param name="swapchain"> swapchain is the swapchain to obtain the refresh duration for. </param>
+    /// <param name="pDisplayTimingProperties"> pDisplayTimingProperties is a pointer to a VkRefreshCycleDurationGOOGLE structure. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -83,24 +77,18 @@ public static unsafe class VkGoogleDisplayTiming
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device associated with swapchain.</param>
-    /// <param name="swapchain">swapchain is the swapchain to obtain presentation timing information duration for.</param>
-    /// <param name="pPresentationTimingCount">
-    ///     pPresentationTimingCount is a pointer to an integer related to the number of
-    ///     VkPastPresentationTimingGOOGLE structures to query, as described below.
-    /// </param>
-    /// <param name="pPresentationTimings">
-    ///     pPresentationTimings is either NULL or a pointer to an array of
-    ///     VkPastPresentationTimingGOOGLE structures.
-    /// </param>
+    /// <param name="device"> device is the device associated with swapchain. </param>
+    /// <param name="swapchain"> swapchain is the swapchain to obtain presentation timing information duration for. </param>
+    /// <param name="pPresentationTimingCount"> pPresentationTimingCount is a pointer to an integer related to the number of VkPastPresentationTimingGOOGLE structures to query, as described below. </param>
+    /// <param name="pPresentationTimings"> pPresentationTimings is either NULL or a pointer to an array of VkPastPresentationTimingGOOGLE structures. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS,VK_INCOMPLETE </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_DEVICE_LOST,VK_ERROR_OUT_OF_DATE_KHR,VK_ERROR_SURFACE_LOST_KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -117,10 +105,10 @@ public static unsafe class VkGoogleDisplayTiming
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetRefreshCycleDurationGOOGLE</description>
+    ///             <description> vkGetRefreshCycleDurationGOOGLE </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPastPresentationTimingGOOGLE</description>
+    ///             <description> vkGetPastPresentationTimingGOOGLE </description>
     ///         </item>
     ///     </list>
     /// </remarks>

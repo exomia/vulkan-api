@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkNvClipSpaceWScaling;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_clip_space_w_scaling - device extension (nr. 88) - author 'NV' [platform '' | contact 'Eric Werness
-///     @ewerness-nv']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_clip_space_w_scaling.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_clip_space_w_scaling.html</a>
+///     VK_NV_clip_space_w_scaling - device extension (nr. 88) - author 'NV' [platform '' | contact 'Eric Werness @ewerness-nv']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_clip_space_w_scaling.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_clip_space_w_scaling.html </a>
 /// </summary>
 public static unsafe class VkNvClipSpaceWScaling
 {
@@ -31,16 +31,13 @@ public static unsafe class VkNvClipSpaceWScaling
     /// <summary> The extension name. </summary>
     public const string VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME = "VK_NV_clip_space_w_scaling";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME_UTF8_NT =
@@ -48,18 +45,12 @@ public static unsafe class VkNvClipSpaceWScaling
 
     /// <summary>
     ///     vkCmdSetViewportWScalingNV - Set the viewport W scaling dynamically for a command buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWScalingNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWScalingNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWScalingNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWScalingNV.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="firstViewport">
-    ///     firstViewport is the index of the first viewport whose parameters are updated by the
-    ///     command.
-    /// </param>
-    /// <param name="viewportCount">viewportCount is the number of viewports whose parameters are updated by the command.</param>
-    /// <param name="pViewportWScalings">
-    ///     pViewportWScalings is a pointer to an array of VkViewportWScalingNV structures
-    ///     specifying viewport parameters.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command will be recorded. </param>
+    /// <param name="firstViewport"> firstViewport is the index of the first viewport whose parameters are updated by the command. </param>
+    /// <param name="viewportCount"> viewportCount is the number of viewports whose parameters are updated by the command. </param>
+    /// <param name="pViewportWScalings"> pViewportWScalings is a pointer to an array of VkViewportWScalingNV structures specifying viewport parameters. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*firstViewport*/,
@@ -73,7 +64,7 @@ public static unsafe class VkNvClipSpaceWScaling
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetViewportWScalingNV</description>
+    ///             <description> vkCmdSetViewportWScalingNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

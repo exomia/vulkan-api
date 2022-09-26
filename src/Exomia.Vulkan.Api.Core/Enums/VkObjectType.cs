@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkObjectType - Specify an enumeration to track object handle types -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkObjectType.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkObjectType.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkObjectType.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkObjectType.html </a>
 /// </summary>
 public enum VkObjectType
 {
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>Unknown/Undefined Handle</description>
+    ///             <term> Vulkan Handle Type </term><description> Unknown/Undefined Handle </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -31,7 +31,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkInstance</description>
+    ///             <term> Vulkan Handle Type </term><description> VkInstance </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -40,7 +40,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkPhysicalDevice</description>
+    ///             <term> Vulkan Handle Type </term><description> VkPhysicalDevice </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -49,7 +49,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDevice</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDevice </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -58,7 +58,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkQueue</description>
+    ///             <term> Vulkan Handle Type </term><description> VkQueue </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -67,7 +67,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkSemaphore</description>
+    ///             <term> Vulkan Handle Type </term><description> VkSemaphore </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -76,7 +76,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkCommandBuffer</description>
+    ///             <term> Vulkan Handle Type </term><description> VkCommandBuffer </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -85,7 +85,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkFence</description>
+    ///             <term> Vulkan Handle Type </term><description> VkFence </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -94,7 +94,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDeviceMemory</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDeviceMemory </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -103,7 +103,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkBuffer</description>
+    ///             <term> Vulkan Handle Type </term><description> VkBuffer </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -112,7 +112,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkImage</description>
+    ///             <term> Vulkan Handle Type </term><description> VkImage </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -121,7 +121,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkEvent</description>
+    ///             <term> Vulkan Handle Type </term><description> VkEvent </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -130,7 +130,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkQueryPool</description>
+    ///             <term> Vulkan Handle Type </term><description> VkQueryPool </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -139,7 +139,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkBufferView</description>
+    ///             <term> Vulkan Handle Type </term><description> VkBufferView </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -148,7 +148,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkImageView</description>
+    ///             <term> Vulkan Handle Type </term><description> VkImageView </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -157,7 +157,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkShaderModule</description>
+    ///             <term> Vulkan Handle Type </term><description> VkShaderModule </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -166,7 +166,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkPipelineCache</description>
+    ///             <term> Vulkan Handle Type </term><description> VkPipelineCache </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -175,7 +175,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkPipelineLayout</description>
+    ///             <term> Vulkan Handle Type </term><description> VkPipelineLayout </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -184,7 +184,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkRenderPass</description>
+    ///             <term> Vulkan Handle Type </term><description> VkRenderPass </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -193,7 +193,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkPipeline</description>
+    ///             <term> Vulkan Handle Type </term><description> VkPipeline </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -202,7 +202,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDescriptorSetLayout</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDescriptorSetLayout </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -211,7 +211,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkSampler</description>
+    ///             <term> Vulkan Handle Type </term><description> VkSampler </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -220,7 +220,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDescriptorPool</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDescriptorPool </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -229,7 +229,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDescriptorSet</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDescriptorSet </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -238,7 +238,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkFramebuffer</description>
+    ///             <term> Vulkan Handle Type </term><description> VkFramebuffer </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -247,7 +247,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkCommandPool</description>
+    ///             <term> Vulkan Handle Type </term><description> VkCommandPool </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -256,7 +256,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkSamplerYcbcrConversion</description>
+    ///             <term> Vulkan Handle Type </term><description> VkSamplerYcbcrConversion </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -265,7 +265,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDescriptorUpdateTemplate</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDescriptorUpdateTemplate </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -274,7 +274,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkPrivateDataSlot</description>
+    ///             <term> Vulkan Handle Type </term><description> VkPrivateDataSlot </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -283,7 +283,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkSurfaceKHR</description>
+    ///             <term> Vulkan Handle Type </term><description> VkSurfaceKHR </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -292,7 +292,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkSwapchainKHR</description>
+    ///             <term> Vulkan Handle Type </term><description> VkSwapchainKHR </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -301,7 +301,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDisplayKHR</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDisplayKHR </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -310,7 +310,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDisplayModeKHR</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDisplayModeKHR </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -319,7 +319,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDebugReportCallbackEXT</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDebugReportCallbackEXT </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -327,32 +327,32 @@ public enum VkObjectType
 
     /// <summary>
     ///     VK_OBJECT_TYPE_VIDEO_SESSION_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType </a>
     /// </summary>
     VK_OBJECT_TYPE_VIDEO_SESSION_KHR = 1000023000,
 
     /// <summary>
     ///     VK_OBJECT_TYPE_VIDEO_SESSION_PARAMETERS_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType </a>
     /// </summary>
     VK_OBJECT_TYPE_VIDEO_SESSION_PARAMETERS_KHR = 1000023001,
 
     /// <summary>
     ///     VK_OBJECT_TYPE_CU_MODULE_NVX<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType </a>
     /// </summary>
     VK_OBJECT_TYPE_CU_MODULE_NVX = 1000029000,
 
     /// <summary>
     ///     VK_OBJECT_TYPE_CU_FUNCTION_NVX<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType </a>
     /// </summary>
     VK_OBJECT_TYPE_CU_FUNCTION_NVX = 1000029001,
 
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDebugUtilsMessengerEXT</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDebugUtilsMessengerEXT </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -361,7 +361,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkAccelerationStructureKHR</description>
+    ///             <term> Vulkan Handle Type </term><description> VkAccelerationStructureKHR </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -370,7 +370,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkValidationCacheEXT</description>
+    ///             <term> Vulkan Handle Type </term><description> VkValidationCacheEXT </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -379,7 +379,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkAccelerationStructureNV</description>
+    ///             <term> Vulkan Handle Type </term><description> VkAccelerationStructureNV </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -388,7 +388,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkPerformanceConfigurationINTEL</description>
+    ///             <term> Vulkan Handle Type </term><description> VkPerformanceConfigurationINTEL </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -397,7 +397,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDeferredOperationKHR</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDeferredOperationKHR </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -406,7 +406,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkIndirectCommandsLayoutNV</description>
+    ///             <term> Vulkan Handle Type </term><description> VkIndirectCommandsLayoutNV </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -414,14 +414,14 @@ public enum VkObjectType
 
     /// <summary>
     ///     VK_OBJECT_TYPE_BUFFER_COLLECTION_FUCHSIA<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType </a>
     /// </summary>
     VK_OBJECT_TYPE_BUFFER_COLLECTION_FUCHSIA = 1000366000,
 
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkDescriptorUpdateTemplate</description>
+    ///             <term> Vulkan Handle Type </term><description> VkDescriptorUpdateTemplate </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -430,7 +430,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkSamplerYcbcrConversion</description>
+    ///             <term> Vulkan Handle Type </term><description> VkSamplerYcbcrConversion </description>
     ///         </item>
     ///     </list>
     /// </summary>
@@ -439,7 +439,7 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
-    ///             <term>Vulkan Handle Type</term><description>VkPrivateDataSlot</description>
+    ///             <term> Vulkan Handle Type </term><description> VkPrivateDataSlot </description>
     ///         </item>
     ///     </list>
     /// </summary>

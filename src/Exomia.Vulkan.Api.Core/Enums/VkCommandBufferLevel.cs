@@ -15,13 +15,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkCommandBufferLevel - Enumerant specifying a command buffer level -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferLevel.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferLevel.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferLevel.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferLevel.html </a>
 /// </summary>
 public enum VkCommandBufferLevel
 {
-    /// <summary>VK_COMMAND_BUFFER_LEVEL_PRIMARY specifies a primary command buffer.</summary>
+    /// <summary> VK_COMMAND_BUFFER_LEVEL_PRIMARY specifies a primary command buffer. </summary>
     VK_COMMAND_BUFFER_LEVEL_PRIMARY = 0,
 
-    /// <summary>VK_COMMAND_BUFFER_LEVEL_SECONDARY specifies a secondary command buffer.</summary>
+    /// <summary> VK_COMMAND_BUFFER_LEVEL_SECONDARY specifies a secondary command buffer. </summary>
     VK_COMMAND_BUFFER_LEVEL_SECONDARY = 1
 }

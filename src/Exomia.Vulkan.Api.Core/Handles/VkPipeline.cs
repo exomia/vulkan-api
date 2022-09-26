@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkPipeline - Opaque handle to a pipeline object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html </a>
 /// </summary>
 public readonly unsafe struct VkPipeline
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkPipeline
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkPipeline left, VkPipeline right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkPipeline
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkPipeline left, VkPipeline right)

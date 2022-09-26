@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAccelerationStructureGeometryAabbsDataKHR - Structure specifying axis-aligned bounding box geometry in a
-///     bottom-level acceleration structure -
+///     VkAccelerationStructureGeometryAabbsDataKHR - Structure specifying axis-aligned bounding box geometry in a bottom-level acceleration structure -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureGeometryAabbsDataKHR.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureGeometryAabbsDataKHR.html
@@ -27,18 +26,15 @@ public unsafe struct VkAccelerationStructureGeometryAabbsDataKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     data is a device or host address to memory containing VkAabbPositionsKHR structures containing position data
-    ///     for each axis-aligned bounding box in the geometry.
-    /// </summary>
+    /// <summary> data is a device or host address to memory containing VkAabbPositionsKHR structures containing position data for each axis-aligned bounding box in the geometry. </summary>
     public VkDeviceOrHostAddressConstKHR data;
 
-    /// <summary>stride is the stride in bytes between each entry in data. The stride must be a multiple of 8.</summary>
+    /// <summary> stride is the stride in bytes between each entry in data. The stride must be a multiple of 8. </summary>
     public VkDeviceSize stride;
 }

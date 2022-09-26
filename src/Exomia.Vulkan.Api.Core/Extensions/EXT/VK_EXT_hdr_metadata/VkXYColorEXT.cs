@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkXYColorEXT - Specify X,Y chromaticity coordinates -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXYColorEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXYColorEXT.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXYColorEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXYColorEXT.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkXYColorEXT
 {
-    /// <summary>x is the x chromaticity coordinate.</summary>
+    /// <summary> x is the x chromaticity coordinate. </summary>
     public float x;
 
-    /// <summary>y is the y chromaticity coordinate.</summary>
+    /// <summary> y is the y chromaticity coordinate. </summary>
     public float y;
 }

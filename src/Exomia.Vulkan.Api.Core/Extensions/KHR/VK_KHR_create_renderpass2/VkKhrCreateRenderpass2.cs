@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkKhrCreateRenderpass2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_create_renderpass2 - device extension (nr. 110) - author 'KHR' [platform '' | contact 'Tobias Hector
-///     @tobias']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html</a>
+///     VK_KHR_create_renderpass2 - device extension (nr. 110) - author 'KHR' [platform '' | contact 'Tobias Hector @tobias']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html </a>
 /// </summary>
 [VkRequires("VK_KHR_multiview,VK_KHR_maintenance2")]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html#_deprecation_state")]
@@ -33,16 +33,13 @@ public static unsafe class VkKhrCreateRenderpass2
     /// <summary> The extension name. </summary>
     public const string VK_KHR_CREATE_RENDERPASS_2_EXTENSION_NAME = "VK_KHR_create_renderpass2";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_CREATE_RENDERPASS_2_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_CREATE_RENDERPASS_2_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_CREATE_RENDERPASS_2_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_CREATE_RENDERPASS_2_EXTENSION_NAME_UTF8_NT =
@@ -51,7 +48,7 @@ public static unsafe class VkKhrCreateRenderpass2
     /// vkCreateRenderPass2KHR alias for vkCreateRenderPass2
     /// <summary>
     ///     vkCreateRenderPass2 - Create a new render pass object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRenderPass2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRenderPass2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRenderPass2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRenderPass2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkDevice /*device*/,
@@ -63,7 +60,7 @@ public static unsafe class VkKhrCreateRenderpass2
     /// vkCmdBeginRenderPass2KHR alias for vkCmdBeginRenderPass2
     /// <summary>
     ///     vkCmdBeginRenderPass2 - Begin a new render pass -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginRenderPass2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginRenderPass2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginRenderPass2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginRenderPass2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -74,7 +71,7 @@ public static unsafe class VkKhrCreateRenderpass2
     /// vkCmdNextSubpass2KHR alias for vkCmdNextSubpass2
     /// <summary>
     ///     vkCmdNextSubpass2 - Transition to the next subpass of a render pass -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdNextSubpass2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdNextSubpass2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdNextSubpass2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdNextSubpass2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -85,7 +82,7 @@ public static unsafe class VkKhrCreateRenderpass2
     /// vkCmdEndRenderPass2KHR alias for vkCmdEndRenderPass2
     /// <summary>
     ///     vkCmdEndRenderPass2 - End the current render pass -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndRenderPass2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndRenderPass2KHR.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndRenderPass2KHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndRenderPass2KHR.html </a>
     /// </summary>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -98,16 +95,16 @@ public static unsafe class VkKhrCreateRenderpass2
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateRenderPass2KHR</description>
+    ///             <description> vkCreateRenderPass2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdBeginRenderPass2KHR</description>
+    ///             <description> vkCmdBeginRenderPass2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdNextSubpass2KHR</description>
+    ///             <description> vkCmdNextSubpass2KHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdEndRenderPass2KHR</description>
+    ///             <description> vkCmdEndRenderPass2KHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

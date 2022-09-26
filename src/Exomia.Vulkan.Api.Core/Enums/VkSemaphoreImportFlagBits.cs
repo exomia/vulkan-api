@@ -15,30 +15,26 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkSemaphoreImportFlagBits - Bitmask specifying additional parameters of semaphore payload import -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreImportFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreImportFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreImportFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreImportFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkSemaphoreImportFlagBits
 {
     /// <summary>
-    ///     VK_SEMAPHORE_IMPORT_TEMPORARY_BIT specifies that the semaphore payload will be imported only temporarily, as
-    ///     described in
+    ///     VK_SEMAPHORE_IMPORT_TEMPORARY_BIT specifies that the semaphore payload will be imported only temporarily, as described in
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-semaphores-importing">
-    ///         Importing
-    ///         Semaphore Payloads
+    ///         Importing Semaphore Payloads
     ///     </a>
     ///     , regardless of the permanence of handleType.
     /// </summary>
     VK_SEMAPHORE_IMPORT_TEMPORARY_BIT = 0x1,
 
     /// <summary>
-    ///     VK_SEMAPHORE_IMPORT_TEMPORARY_BIT specifies that the semaphore payload will be imported only temporarily, as
-    ///     described in
+    ///     VK_SEMAPHORE_IMPORT_TEMPORARY_BIT specifies that the semaphore payload will be imported only temporarily, as described in
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-semaphores-importing">
-    ///         Importing
-    ///         Semaphore Payloads
+    ///         Importing Semaphore Payloads
     ///     </a>
     ///     , regardless of the permanence of handleType.
     /// </summary>

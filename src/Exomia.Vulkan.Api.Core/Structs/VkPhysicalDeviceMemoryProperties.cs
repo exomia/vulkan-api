@@ -23,28 +23,22 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkPhysicalDeviceMemoryProperties
 {
-    /// <summary>memoryTypeCount is the number of valid elements in the memoryTypes array.</summary>
+    /// <summary> memoryTypeCount is the number of valid elements in the memoryTypes array. </summary>
     public uint memoryTypeCount;
 
-    /// <summary>
-    ///     memoryTypes is an array of VK_MAX_MEMORY_TYPESVkMemoryType structures describing the memory types that can be
-    ///     used to access memory allocated from the heaps specified by memoryHeaps.
-    /// </summary>
+    /// <summary> memoryTypes is an array of VK_MAX_MEMORY_TYPESVkMemoryType structures describing the memory types that can be used to access memory allocated from the heaps specified by memoryHeaps. </summary>
     public VkArray32<VkMemoryType> memoryTypes;
 
-    /// <summary>memoryHeapCount is the number of valid elements in the memoryHeaps array.</summary>
+    /// <summary> memoryHeapCount is the number of valid elements in the memoryHeaps array. </summary>
     public uint memoryHeapCount;
 
-    /// <summary>
-    ///     memoryHeaps is an array of VK_MAX_MEMORY_HEAPSVkMemoryHeap structures describing the memory heaps from which
-    ///     memory can be allocated.
-    /// </summary>
+    /// <summary> memoryHeaps is an array of VK_MAX_MEMORY_HEAPSVkMemoryHeap structures describing the memory heaps from which memory can be allocated. </summary>
     public VkArray16<VkMemoryHeap> memoryHeaps;
 }

@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkPipelineLibraryCreateInfoKHR - Structure specifying pipeline libraries to use when creating a pipeline -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkGraphicsPipelineCreateInfo</description>
+///             <term> structextends </term><description> VkGraphicsPipelineCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,18 +31,15 @@ public unsafe struct VkPipelineLibraryCreateInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_LIBRARY_CREATE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>libraryCount is the number of pipeline libraries in pLibraries.</summary>
+    /// <summary> libraryCount is the number of pipeline libraries in pLibraries. </summary>
     public uint libraryCount;
 
-    /// <summary>
-    ///     pLibraries is a pointer to an array of VkPipeline structures specifying pipeline libraries to use when
-    ///     creating a pipeline.
-    /// </summary>
+    /// <summary> pLibraries is a pointer to an array of VkPipeline structures specifying pipeline libraries to use when creating a pipeline. </summary>
     public VkPipeline* pLibraries;
 }

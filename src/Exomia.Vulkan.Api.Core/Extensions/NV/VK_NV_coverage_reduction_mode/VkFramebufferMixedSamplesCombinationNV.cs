@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -33,30 +33,21 @@ public unsafe struct VkFramebufferMixedSamplesCombinationNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>coverageReductionMode is a VkCoverageReductionModeNV value specifying the coverage reduction mode.</summary>
+    /// <summary> coverageReductionMode is a VkCoverageReductionModeNV value specifying the coverage reduction mode. </summary>
     public VkCoverageReductionModeNV coverageReductionMode;
 
-    /// <summary>
-    ///     rasterizationSamples is a VkSampleCountFlagBits specifying the number of rasterization samples in the
-    ///     supported combination.
-    /// </summary>
+    /// <summary> rasterizationSamples is a VkSampleCountFlagBits specifying the number of rasterization samples in the supported combination. </summary>
     public VkSampleCountFlagBits rasterizationSamples;
 
-    /// <summary>
-    ///     depthStencilSamples specifies the number of samples in the depth stencil attachment in the supported
-    ///     combination. A value of 0 indicates the combination does not have a depth stencil attachment.
-    /// </summary>
+    /// <summary> depthStencilSamples specifies the number of samples in the depth stencil attachment in the supported combination. A value of 0 indicates the combination does not have a depth stencil attachment. </summary>
     public VkSampleCountFlags depthStencilSamples;
 
-    /// <summary>
-    ///     colorSamples specifies the number of color samples in a color attachment in the supported combination. A value
-    ///     of 0 indicates the combination does not have a color attachment.
-    /// </summary>
+    /// <summary> colorSamples specifies the number of color samples in a color attachment in the supported combination. A value of 0 indicates the combination does not have a color attachment. </summary>
     public VkSampleCountFlags colorSamples;
 }

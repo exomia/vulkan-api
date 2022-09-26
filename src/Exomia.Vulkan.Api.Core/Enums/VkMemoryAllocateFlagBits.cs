@@ -15,22 +15,20 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkMemoryAllocateFlagBits - Bitmask specifying flags for a device memory allocation -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkMemoryAllocateFlagBits
 {
     /// <summary>
     ///     VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT specifies that memory will be allocated for the devices in
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html">VkMemoryAllocateFlagsInfo</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html"> VkMemoryAllocateFlagsInfo </a>
     ///     ::deviceMask.
     /// </summary>
     VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT = 0x1,
 
     /// <summary>
-    ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT specifies that the memory can be attached to a buffer object created with the
-    ///     VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT bit set in usage, and that the memory handle can be used to retrieve an
-    ///     opaque address via
+    ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT specifies that the memory can be attached to a buffer object created with the VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT bit set in usage, and that the memory handle can be used to retrieve an opaque address via
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddress.html">
     ///         vkGetDeviceMemoryOpaqueCaptureAddress
@@ -40,8 +38,7 @@ public enum VkMemoryAllocateFlagBits
     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT = 0x2,
 
     /// <summary>
-    ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the memory&#8217;s address can be saved and
-    ///     reused on a subsequent run (e.g. for trace capture and replay), see
+    ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the memory&#8217;s address can be saved and reused on a subsequent run (e.g. for trace capture and replay), see
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfo.html">
     ///         VkBufferOpaqueCaptureAddressCreateInfo
@@ -52,15 +49,13 @@ public enum VkMemoryAllocateFlagBits
 
     /// <summary>
     ///     VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT specifies that memory will be allocated for the devices in
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html">VkMemoryAllocateFlagsInfo</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html"> VkMemoryAllocateFlagsInfo </a>
     ///     ::deviceMask.
     /// </summary>
     VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR = VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT,
 
     /// <summary>
-    ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT specifies that the memory can be attached to a buffer object created with the
-    ///     VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT bit set in usage, and that the memory handle can be used to retrieve an
-    ///     opaque address via
+    ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT specifies that the memory can be attached to a buffer object created with the VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT bit set in usage, and that the memory handle can be used to retrieve an opaque address via
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddress.html">
     ///         vkGetDeviceMemoryOpaqueCaptureAddress
@@ -70,8 +65,7 @@ public enum VkMemoryAllocateFlagBits
     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT_KHR = VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_BIT,
 
     /// <summary>
-    ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the memory&#8217;s address can be saved and
-    ///     reused on a subsequent run (e.g. for trace capture and replay), see
+    ///     VK_MEMORY_ALLOCATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the memory&#8217;s address can be saved and reused on a subsequent run (e.g. for trace capture and replay), see
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfo.html">
     ///         VkBufferOpaqueCaptureAddressCreateInfo

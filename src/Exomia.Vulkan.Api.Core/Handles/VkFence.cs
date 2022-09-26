@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkFence - Opaque handle to a fence object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFence.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFence.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFence.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFence.html </a>
 /// </summary>
 public readonly unsafe struct VkFence
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkFence
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkFence left, VkFence right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkFence
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkFence left, VkFence right)

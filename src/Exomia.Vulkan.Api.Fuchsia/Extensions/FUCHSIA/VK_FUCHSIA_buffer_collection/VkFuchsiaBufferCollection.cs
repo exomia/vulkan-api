@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Fuchsia.VkFuchsiaBufferCollection;
 namespace Exomia.Vulkan.Api.Fuchsia;
 
 /// <summary>
-///     VK_FUCHSIA_buffer_collection - device extension (nr. 367) - author 'FUCHSIA' [platform 'fuchsia' | contact 'John
-///     Rosasco @rosasco']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_buffer_collection.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_buffer_collection.html</a>
+///     VK_FUCHSIA_buffer_collection - device extension (nr. 367) - author 'FUCHSIA' [platform 'fuchsia' | contact 'John Rosasco @rosasco']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_buffer_collection.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_buffer_collection.html </a>
 /// </summary>
 [VkRequires("VK_FUCHSIA_external_memory,VK_KHR_sampler_ycbcr_conversion")]
 public static unsafe class VkFuchsiaBufferCollection
@@ -32,16 +32,13 @@ public static unsafe class VkFuchsiaBufferCollection
     /// <summary> The extension name. </summary>
     public const string VK_FUCHSIA_BUFFER_COLLECTION_EXTENSION_NAME = "VK_FUCHSIA_buffer_collection";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_FUCHSIA_BUFFER_COLLECTION_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_FUCHSIA_BUFFER_COLLECTION_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_FUCHSIA_BUFFER_COLLECTION_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_FUCHSIA_BUFFER_COLLECTION_EXTENSION_NAME_UTF8_NT =
@@ -54,27 +51,18 @@ public static unsafe class VkFuchsiaBufferCollection
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateBufferCollectionFUCHSIA.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that creates the VkBufferCollectionFUCHSIA</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkBufferCollectionCreateInfoFUCHSIA structure containing
-    ///     parameters affecting creation of the buffer collection
-    /// </param>
-    /// <param name="pAllocator">
-    ///     pAllocator is a pointer to a VkAllocationCallbacks structure controlling host memory
-    ///     allocation as described in the Memory Allocation chapter
-    /// </param>
-    /// <param name="pCollection">
-    ///     VUID-vkCreateBufferCollectionFUCHSIA-pCollection-parameter pCollection must be a valid
-    ///     pointer to a VkBufferCollectionFUCHSIA handle
-    /// </param>
+    /// <param name="device"> device is the logical device that creates the VkBufferCollectionFUCHSIA </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkBufferCollectionCreateInfoFUCHSIA structure containing parameters affecting creation of the buffer collection </param>
+    /// <param name="pAllocator"> pAllocator is a pointer to a VkAllocationCallbacks structure controlling host memory allocation as described in the Memory Allocation chapter </param>
+    /// <param name="pCollection"> VUID-vkCreateBufferCollectionFUCHSIA-pCollection-parameter pCollection must be a valid pointer to a VkBufferCollectionFUCHSIA handle </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INVALID_EXTERNAL_HANDLE,VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -92,17 +80,17 @@ public static unsafe class VkFuchsiaBufferCollection
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetBufferCollectionImageConstraintsFUCHSIA.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device</param>
-    /// <param name="collection">collection is the VkBufferCollectionFUCHSIA handle</param>
-    /// <param name="pImageConstraintsInfo">pImageConstraintsInfo is a pointer to a VkImageConstraintsInfoFUCHSIA structure</param>
+    /// <param name="device"> device is the logical device </param>
+    /// <param name="collection"> collection is the VkBufferCollectionFUCHSIA handle </param>
+    /// <param name="pImageConstraintsInfo"> pImageConstraintsInfo is a pointer to a VkImageConstraintsInfoFUCHSIA structure </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_FORMAT_NOT_SUPPORTED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_FORMAT_NOT_SUPPORTED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -119,17 +107,17 @@ public static unsafe class VkFuchsiaBufferCollection
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetBufferCollectionBufferConstraintsFUCHSIA.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device</param>
-    /// <param name="collection">collection is the VkBufferCollectionFUCHSIA handle</param>
-    /// <param name="pBufferConstraintsInfo">pBufferConstraintsInfo is a pointer to a VkBufferConstraintsInfoFUCHSIA structure</param>
+    /// <param name="device"> device is the logical device </param>
+    /// <param name="collection"> collection is the VkBufferCollectionFUCHSIA handle </param>
+    /// <param name="pBufferConstraintsInfo"> pBufferConstraintsInfo is a pointer to a VkBufferConstraintsInfoFUCHSIA structure </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_FORMAT_NOT_SUPPORTED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_FORMAT_NOT_SUPPORTED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -146,12 +134,9 @@ public static unsafe class VkFuchsiaBufferCollection
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyBufferCollectionFUCHSIA.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that creates the VkBufferCollectionFUCHSIA</param>
-    /// <param name="collection">collection is the VkBufferCollectionFUCHSIA handle</param>
-    /// <param name="pAllocator">
-    ///     pAllocator is a pointer to a VkAllocationCallbacks structure controlling host memory
-    ///     allocation as described in the Memory Allocation chapter
-    /// </param>
+    /// <param name="device"> device is the logical device that creates the VkBufferCollectionFUCHSIA </param>
+    /// <param name="collection"> collection is the VkBufferCollectionFUCHSIA handle </param>
+    /// <param name="pAllocator"> pAllocator is a pointer to a VkAllocationCallbacks structure controlling host memory allocation as described in the Memory Allocation chapter </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkBufferCollectionFUCHSIA /*collection*/,
@@ -165,17 +150,17 @@ public static unsafe class VkFuchsiaBufferCollection
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferCollectionPropertiesFUCHSIA.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device handle</param>
-    /// <param name="collection">collection is the VkBufferCollectionFUCHSIA handle</param>
-    /// <param name="pProperties">pProperties is a pointer to the retrieved VkBufferCollectionPropertiesFUCHSIA struct</param>
+    /// <param name="device"> device is the logical device handle </param>
+    /// <param name="collection"> collection is the VkBufferCollectionFUCHSIA handle </param>
+    /// <param name="pProperties"> pProperties is a pointer to the retrieved VkBufferCollectionPropertiesFUCHSIA struct </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -191,19 +176,19 @@ public static unsafe class VkFuchsiaBufferCollection
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateBufferCollectionFUCHSIA</description>
+    ///             <description> vkCreateBufferCollectionFUCHSIA </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkSetBufferCollectionImageConstraintsFUCHSIA</description>
+    ///             <description> vkSetBufferCollectionImageConstraintsFUCHSIA </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkSetBufferCollectionBufferConstraintsFUCHSIA</description>
+    ///             <description> vkSetBufferCollectionBufferConstraintsFUCHSIA </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyBufferCollectionFUCHSIA</description>
+    ///             <description> vkDestroyBufferCollectionFUCHSIA </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetBufferCollectionPropertiesFUCHSIA</description>
+    ///             <description> vkGetBufferCollectionPropertiesFUCHSIA </description>
     ///         </item>
     ///     </list>
     /// </remarks>

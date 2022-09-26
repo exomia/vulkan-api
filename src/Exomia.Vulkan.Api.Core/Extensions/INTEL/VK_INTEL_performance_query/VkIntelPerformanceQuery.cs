@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Core.VkIntelPerformanceQuery;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_INTEL_performance_query - device extension (nr. 211) - author 'INTEL' [platform '' | contact 'Lionel Landwerlin
-///     @llandwerlin']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_INTEL_performance_query.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_INTEL_performance_query.html</a>
+///     VK_INTEL_performance_query - device extension (nr. 211) - author 'INTEL' [platform '' | contact 'Lionel Landwerlin @llandwerlin']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_INTEL_performance_query.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_INTEL_performance_query.html </a>
 /// </summary>
 /// <remarks>
 ///     specialuse: devtools
@@ -35,16 +35,13 @@ public static unsafe class VkIntelPerformanceQuery
     /// <summary> The extension name. </summary>
     public const string VK_INTEL_PERFORMANCE_QUERY_EXTENSION_NAME = "VK_INTEL_performance_query";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_INTEL_PERFORMANCE_QUERY_EXTENSION_NAME" /> represented by an
-    ///     UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_INTEL_PERFORMANCE_QUERY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_INTEL_PERFORMANCE_QUERY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_INTEL_PERFORMANCE_QUERY_EXTENSION_NAME_UTF8_NT =
@@ -57,18 +54,15 @@ public static unsafe class VkIntelPerformanceQuery
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkInitializePerformanceApiINTEL.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device used for the queries.</param>
-    /// <param name="pInitializeInfo">
-    ///     pInitializeInfo is a pointer to a VkInitializePerformanceApiInfoINTEL structure
-    ///     specifying initialization parameters.
-    /// </param>
+    /// <param name="device"> device is the logical device used for the queries. </param>
+    /// <param name="pInitializeInfo"> pInitializeInfo is a pointer to a VkInitializePerformanceApiInfoINTEL structure specifying initialization parameters. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -84,30 +78,24 @@ public static unsafe class VkIntelPerformanceQuery
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkUninitializePerformanceApiINTEL.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device used for the queries.</param>
+    /// <param name="device"> device is the logical device used for the queries. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         void> vkUninitializePerformanceApiINTEL = null;
 
     /// <summary>
     ///     vkCmdSetPerformanceMarkerINTEL - Markers -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPerformanceMarkerINTEL.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPerformanceMarkerINTEL.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPerformanceMarkerINTEL.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPerformanceMarkerINTEL.html </a>
     /// </summary>
-    /// <param name="commandBuffer">
-    ///     VUID-vkCmdSetPerformanceMarkerINTEL-commandBuffer-parameter commandBuffer must be a valid
-    ///     VkCommandBuffer handle
-    /// </param>
-    /// <param name="pMarkerInfo">
-    ///     VUID-vkCmdSetPerformanceMarkerINTEL-pMarkerInfo-parameter pMarkerInfo must be a valid
-    ///     pointer to a valid VkPerformanceMarkerInfoINTEL structure
-    /// </param>
+    /// <param name="commandBuffer"> VUID-vkCmdSetPerformanceMarkerINTEL-commandBuffer-parameter commandBuffer must be a valid VkCommandBuffer handle </param>
+    /// <param name="pMarkerInfo"> VUID-vkCmdSetPerformanceMarkerINTEL-pMarkerInfo-parameter pMarkerInfo must be a valid pointer to a valid VkPerformanceMarkerInfoINTEL structure </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -123,21 +111,15 @@ public static unsafe class VkIntelPerformanceQuery
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPerformanceStreamMarkerINTEL.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">
-    ///     VUID-vkCmdSetPerformanceStreamMarkerINTEL-commandBuffer-parameter commandBuffer must be a
-    ///     valid VkCommandBuffer handle
-    /// </param>
-    /// <param name="pMarkerInfo">
-    ///     VUID-vkCmdSetPerformanceStreamMarkerINTEL-pMarkerInfo-parameter pMarkerInfo must be a valid
-    ///     pointer to a valid VkPerformanceStreamMarkerInfoINTEL structure
-    /// </param>
+    /// <param name="commandBuffer"> VUID-vkCmdSetPerformanceStreamMarkerINTEL-commandBuffer-parameter commandBuffer must be a valid VkCommandBuffer handle </param>
+    /// <param name="pMarkerInfo"> VUID-vkCmdSetPerformanceStreamMarkerINTEL-pMarkerInfo-parameter pMarkerInfo must be a valid pointer to a valid VkPerformanceStreamMarkerInfoINTEL structure </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -153,18 +135,15 @@ public static unsafe class VkIntelPerformanceQuery
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPerformanceOverrideINTEL.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer where the override takes place.</param>
-    /// <param name="pOverrideInfo">
-    ///     pOverrideInfo is a pointer to a VkPerformanceOverrideInfoINTEL structure selecting the
-    ///     parameter to override.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer where the override takes place. </param>
+    /// <param name="pOverrideInfo"> pOverrideInfo is a pointer to a VkPerformanceOverrideInfoINTEL structure selecting the parameter to override. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -180,22 +159,16 @@ public static unsafe class VkIntelPerformanceQuery
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquirePerformanceConfigurationINTEL.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that the performance query commands will be submitted to.</param>
-    /// <param name="pAcquireInfo">
-    ///     pAcquireInfo is a pointer to a VkPerformanceConfigurationAcquireInfoINTEL structure,
-    ///     specifying the performance configuration to acquire.
-    /// </param>
-    /// <param name="pConfiguration">
-    ///     pConfiguration is a pointer to a VkPerformanceConfigurationINTEL handle in which the
-    ///     resulting configuration object is returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that the performance query commands will be submitted to. </param>
+    /// <param name="pAcquireInfo"> pAcquireInfo is a pointer to a VkPerformanceConfigurationAcquireInfoINTEL structure, specifying the performance configuration to acquire. </param>
+    /// <param name="pConfiguration"> pConfiguration is a pointer to a VkPerformanceConfigurationINTEL handle in which the resulting configuration object is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -212,15 +185,15 @@ public static unsafe class VkIntelPerformanceQuery
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkReleasePerformanceConfigurationINTEL.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the device associated to the configuration object to release.</param>
-    /// <param name="configuration">configuration is the configuration object to release.</param>
+    /// <param name="device"> device is the device associated to the configuration object to release. </param>
+    /// <param name="configuration"> configuration is the configuration object to release. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -236,15 +209,15 @@ public static unsafe class VkIntelPerformanceQuery
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueueSetPerformanceConfigurationINTEL.html
     ///     </a>
     /// </summary>
-    /// <param name="queue">queue is the queue on which the configuration will be used.</param>
-    /// <param name="configuration">configuration is the configuration to use.</param>
+    /// <param name="queue"> queue is the queue on which the configuration will be used. </param>
+    /// <param name="configuration"> configuration is the configuration to use. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -255,21 +228,18 @@ public static unsafe class VkIntelPerformanceQuery
 
     /// <summary>
     ///     vkGetPerformanceParameterINTEL - Query performance capabilities of the device -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPerformanceParameterINTEL.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPerformanceParameterINTEL.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPerformanceParameterINTEL.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPerformanceParameterINTEL.html </a>
     /// </summary>
-    /// <param name="device">device is the logical device to query.</param>
-    /// <param name="parameter">parameter is the parameter to query.</param>
-    /// <param name="pValue">
-    ///     pValue is a pointer to a VkPerformanceValueINTEL structure in which the type and value of the
-    ///     parameter are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device to query. </param>
+    /// <param name="parameter"> parameter is the parameter to query. </param>
+    /// <param name="pValue"> pValue is a pointer to a VkPerformanceValueINTEL structure in which the type and value of the parameter are returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_TOO_MANY_OBJECTS,VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -285,31 +255,31 @@ public static unsafe class VkIntelPerformanceQuery
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkInitializePerformanceApiINTEL</description>
+    ///             <description> vkInitializePerformanceApiINTEL </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkUninitializePerformanceApiINTEL</description>
+    ///             <description> vkUninitializePerformanceApiINTEL </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetPerformanceMarkerINTEL</description>
+    ///             <description> vkCmdSetPerformanceMarkerINTEL </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetPerformanceStreamMarkerINTEL</description>
+    ///             <description> vkCmdSetPerformanceStreamMarkerINTEL </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdSetPerformanceOverrideINTEL</description>
+    ///             <description> vkCmdSetPerformanceOverrideINTEL </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkAcquirePerformanceConfigurationINTEL</description>
+    ///             <description> vkAcquirePerformanceConfigurationINTEL </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkReleasePerformanceConfigurationINTEL</description>
+    ///             <description> vkReleasePerformanceConfigurationINTEL </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkQueueSetPerformanceConfigurationINTEL</description>
+    ///             <description> vkQueueSetPerformanceConfigurationINTEL </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetPerformanceParameterINTEL</description>
+    ///             <description> vkGetPerformanceParameterINTEL </description>
     ///         </item>
     ///     </list>
     /// </remarks>

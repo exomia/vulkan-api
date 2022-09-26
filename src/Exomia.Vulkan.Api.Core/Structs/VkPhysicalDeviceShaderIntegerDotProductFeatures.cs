@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceShaderIntegerDotProductFeatures - Structure describing integer dot product features that can be
-///     supported by an implementation -
+///     VkPhysicalDeviceShaderIntegerDotProductFeatures - Structure describing integer dot product features that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderIntegerDotProductFeatures.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderIntegerDotProductFeatures.html
@@ -24,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -35,15 +34,12 @@ public unsafe struct VkPhysicalDeviceShaderIntegerDotProductFeatures
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_FEATURES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     shaderIntegerDotProduct specifies whether shader modules candeclare the DotProductInputAllKHR,
-    ///     DotProductInput4x8BitKHR, DotProductInput4x8BitPackedKHR and DotProductKHR capabilities.
-    /// </summary>
+    /// <summary> shaderIntegerDotProduct specifies whether shader modules candeclare the DotProductInputAllKHR, DotProductInput4x8BitKHR, DotProductInput4x8BitPackedKHR and DotProductKHR capabilities. </summary>
     public VkBool32 shaderIntegerDotProduct;
 }

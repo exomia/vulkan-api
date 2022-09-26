@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkDeviceQueueCreateInfo</description>
+///             <term> structextends </term><description> VkDeviceQueueCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,12 +34,12 @@ public unsafe struct VkDeviceQueueGlobalPriorityCreateInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>globalPriority is the system-wide priority associated to these queues as specified by VkQueueGlobalPriorityEXT</summary>
+    /// <summary> globalPriority is the system-wide priority associated to these queues as specified by VkQueueGlobalPriorityEXT </summary>
     public VkQueueGlobalPriorityKHR globalPriority;
 }

@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkCuModuleCreateInfoNVX - Stub description of VkCuModuleCreateInfoNVX -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleCreateInfoNVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleCreateInfoNVX.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleCreateInfoNVX.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleCreateInfoNVX.html </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkCuModuleCreateInfoNVX
@@ -25,25 +25,25 @@ public unsafe struct VkCuModuleCreateInfoNVX
 
     /// <summary>
     ///     sType<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX </a>
     /// </summary>
     public VkStructureType sType;
 
     /// <summary>
     ///     pNext<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX </a>
     /// </summary>
     public void* pNext;
 
     /// <summary>
     ///     dataSize<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX </a>
     /// </summary>
     public nuint dataSize;
 
     /// <summary>
     ///     pData<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkCuModuleCreateInfoNVX </a>
     /// </summary>
     public void* pData;
 }

@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT - Structure describing shader module identifier properties of
-///     an implementation -
+///     VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT - Structure describing shader module identifier properties of an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -47,14 +46,9 @@ public unsafe struct VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     shaderModuleIdentifierAlgorithmUUID is an array of VK_UUID_SIZE uint8_t values which uniquely represents the
-    ///     algorithm used to compute an identifier in vkGetShaderModuleIdentifierEXT and
-    ///     vkGetShaderModuleCreateInfoIdentifierEXT. Implementations should not change this value in different driver versions
-    ///     if the algorithm used to compute an identifier is the same.
-    /// </summary>
+    /// <summary> shaderModuleIdentifierAlgorithmUUID is an array of VK_UUID_SIZE uint8_t values which uniquely represents the algorithm used to compute an identifier in vkGetShaderModuleIdentifierEXT and vkGetShaderModuleCreateInfoIdentifierEXT. Implementations should not change this value in different driver versions if the algorithm used to compute an identifier is the same. </summary>
     public fixed byte shaderModuleIdentifierAlgorithmUUID[(int)VK_UUID_SIZE];
 }

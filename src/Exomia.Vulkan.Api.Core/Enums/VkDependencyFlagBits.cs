@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDependencyFlagBits - Bitmask specifying how execution and memory dependencies are formed -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDependencyFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDependencyFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDependencyFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDependencyFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkDependencyFlagBits
@@ -44,25 +44,20 @@ public enum VkDependencyFlagBits
     ///     VK_DEPENDENCY_VIEW_LOCAL_BIT specifies that a
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-barriers-subpass-self-dependencies">
-    ///         subpass
-    ///         has more than one view
+    ///         subpass has more than one view
     ///     </a>
     ///     .
     /// </summary>
     VK_DEPENDENCY_VIEW_LOCAL_BIT = 0x2,
 
-    /// <summary>
-    ///     VK_DEPENDENCY_FEEDBACK_LOOP_BIT_EXT specifies that the render pass will write to and read from the same image
-    ///     using the VK_IMAGE_LAYOUT_ATTACHMENT_FEEDBACK_LOOP_OPTIMAL_EXT layout.
-    /// </summary>
+    /// <summary> VK_DEPENDENCY_FEEDBACK_LOOP_BIT_EXT specifies that the render pass will write to and read from the same image using the VK_IMAGE_LAYOUT_ATTACHMENT_FEEDBACK_LOOP_OPTIMAL_EXT layout. </summary>
     VK_DEPENDENCY_FEEDBACK_LOOP_BIT_EXT = 0x8,
 
     /// <summary>
     ///     VK_DEPENDENCY_VIEW_LOCAL_BIT specifies that a
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-pipeline-barriers-subpass-self-dependencies">
-    ///         subpass
-    ///         has more than one view
+    ///         subpass has more than one view
     ///     </a>
     ///     .
     /// </summary>

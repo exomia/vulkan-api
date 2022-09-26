@@ -23,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -37,23 +37,15 @@ public unsafe struct VkPhysicalDeviceMaintenance3Properties
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     maxPerSetDescriptors is a maximum number of descriptors (summed over all descriptor types) in a single
-    ///     descriptor set that is guaranteed to satisfy any implementation-dependent constraints on the size of a descriptor
-    ///     set itself. Applications can query whether a descriptor set that goes beyond this limit is supported using
-    ///     vkGetDescriptorSetLayoutSupport.
-    /// </summary>
+    /// <summary> maxPerSetDescriptors is a maximum number of descriptors (summed over all descriptor types) in a single descriptor set that is guaranteed to satisfy any implementation-dependent constraints on the size of a descriptor set itself. Applications can query whether a descriptor set that goes beyond this limit is supported using vkGetDescriptorSetLayoutSupport. </summary>
     public uint maxPerSetDescriptors;
 
-    /// <summary>
-    ///     maxMemoryAllocationSize is the maximum size of a memory allocation that can be created, even if there is more
-    ///     space available in the heap.
-    /// </summary>
+    /// <summary> maxMemoryAllocationSize is the maximum size of a memory allocation that can be created, even if there is more space available in the heap. </summary>
     public VkDeviceSize maxMemoryAllocationSize;
 }

@@ -15,13 +15,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkValidationCheckEXT - Specify validation checks to disable -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationCheckEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationCheckEXT.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationCheckEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationCheckEXT.html </a>
 /// </summary>
 public enum VkValidationCheckEXT
 {
-    /// <summary>VK_VALIDATION_CHECK_ALL_EXT specifies that all validation checks are disabled.</summary>
+    /// <summary> VK_VALIDATION_CHECK_ALL_EXT specifies that all validation checks are disabled. </summary>
     VK_VALIDATION_CHECK_ALL_EXT = 0,
 
-    /// <summary>VK_VALIDATION_CHECK_SHADERS_EXT specifies that shader validation is disabled.</summary>
+    /// <summary> VK_VALIDATION_CHECK_SHADERS_EXT specifies that shader validation is disabled. </summary>
     VK_VALIDATION_CHECK_SHADERS_EXT = 1
 }

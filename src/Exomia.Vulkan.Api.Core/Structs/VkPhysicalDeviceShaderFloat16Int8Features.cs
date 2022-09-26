@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
+///             <term> structextends </term><description> VkPhysicalDeviceFeatures2,VkDeviceCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,27 +34,15 @@ public unsafe struct VkPhysicalDeviceShaderFloat16Int8Features
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     shaderFloat16 indicates whether 16-bit floats (halfs) are supported in shader code. This also indicates
-    ///     whether shader modules can declare the Float16capability. However, this only enables a subset of the storage
-    ///     classes that SPIR-V allows for the Float16 SPIR-V capability: Declaring and using 16-bit floats in the Private,
-    ///     Workgroup (for non-Block variables), and Function storage classes is enabled, while declaring them in the interface
-    ///     storage classes (e.g., UniformConstant, Uniform, StorageBuffer, Input, Output, and PushConstant) is not enabled.
-    /// </summary>
+    /// <summary> shaderFloat16 indicates whether 16-bit floats (halfs) are supported in shader code. This also indicates whether shader modules can declare the Float16capability. However, this only enables a subset of the storage classes that SPIR-V allows for the Float16 SPIR-V capability: Declaring and using 16-bit floats in the Private, Workgroup (for non-Block variables), and Function storage classes is enabled, while declaring them in the interface storage classes (e.g., UniformConstant, Uniform, StorageBuffer, Input, Output, and PushConstant) is not enabled. </summary>
     public VkBool32 shaderFloat16;
 
-    /// <summary>
-    ///     shaderInt8 indicates whether 8-bit integers (signed and unsigned) are supported in shader code. This also
-    ///     indicates whether shader modules can declare the Int8capability. However, this only enables a subset of the storage
-    ///     classes that SPIR-V allows for the Int8 SPIR-V capability: Declaring and using 8-bit integers in the Private,
-    ///     Workgroup (for non-Block variables), and Function storage classes is enabled, while declaring them in the interface
-    ///     storage classes (e.g., UniformConstant, Uniform, StorageBuffer, Input, Output, and PushConstant) is not enabled.
-    /// </summary>
+    /// <summary> shaderInt8 indicates whether 8-bit integers (signed and unsigned) are supported in shader code. This also indicates whether shader modules can declare the Int8capability. However, this only enables a subset of the storage classes that SPIR-V allows for the Int8 SPIR-V capability: Declaring and using 8-bit integers in the Private, Workgroup (for non-Block variables), and Function storage classes is enabled, while declaring them in the interface storage classes (e.g., UniformConstant, Uniform, StorageBuffer, Input, Output, and PushConstant) is not enabled. </summary>
     public VkBool32 shaderInt8;
 }

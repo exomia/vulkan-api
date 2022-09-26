@@ -26,21 +26,18 @@ public unsafe struct VkAccelerationStructureBuildSizesInfoKHR
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     accelerationStructureSize is the size in bytes required in a VkAccelerationStructureKHR for a build or update
-    ///     operation.
-    /// </summary>
+    /// <summary> accelerationStructureSize is the size in bytes required in a VkAccelerationStructureKHR for a build or update operation. </summary>
     public VkDeviceSize accelerationStructureSize;
 
-    /// <summary>updateScratchSize is the size in bytes required in a scratch buffer for an update operation.</summary>
+    /// <summary> updateScratchSize is the size in bytes required in a scratch buffer for an update operation. </summary>
     public VkDeviceSize updateScratchSize;
 
-    /// <summary>buildScratchSize is the size in bytes required in a scratch buffer for a build operation.</summary>
+    /// <summary> buildScratchSize is the size in bytes required in a scratch buffer for a build operation. </summary>
     public VkDeviceSize buildScratchSize;
 }

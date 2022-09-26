@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkMemoryAllocateFlagsInfo - Structure controlling how many instances of memory will be allocated -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkMemoryAllocateInfo</description>
+///             <term> structextends </term><description> VkMemoryAllocateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,18 +31,15 @@ public unsafe struct VkMemoryAllocateFlagsInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_FLAGS_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is a bitmask of VkMemoryAllocateFlagBits controlling the allocation.</summary>
+    /// <summary> flags is a bitmask of VkMemoryAllocateFlagBits controlling the allocation. </summary>
     public VkMemoryAllocateFlags flags;
 
-    /// <summary>
-    ///     deviceMask is a mask of physical devices in the logical device, indicating that memory must be allocated on
-    ///     each device in the mask, if VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT is set in flags.
-    /// </summary>
+    /// <summary> deviceMask is a mask of physical devices in the logical device, indicating that memory must be allocated on each device in the mask, if VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT is set in flags. </summary>
     public uint deviceMask;
 }

@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkFramebuffer - Opaque handle to a framebuffer object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebuffer.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebuffer.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebuffer.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebuffer.html </a>
 /// </summary>
 public readonly unsafe struct VkFramebuffer
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkFramebuffer
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkFramebuffer left, VkFramebuffer right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkFramebuffer
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkFramebuffer left, VkFramebuffer right)

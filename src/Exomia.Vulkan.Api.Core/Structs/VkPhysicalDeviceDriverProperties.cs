@@ -23,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -37,30 +37,21 @@ public unsafe struct VkPhysicalDeviceDriverProperties
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DRIVER_PROPERTIES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>driverID is a unique identifier for the driver of the physical device.</summary>
+    /// <summary> driverID is a unique identifier for the driver of the physical device. </summary>
     public VkDriverId driverID;
 
-    /// <summary>
-    ///     driverName is an array of VK_MAX_DRIVER_NAME_SIZE charcontaining a null-terminated UTF-8 string which is the
-    ///     name of the driver.
-    /// </summary>
+    /// <summary> driverName is an array of VK_MAX_DRIVER_NAME_SIZE charcontaining a null-terminated UTF-8 string which is the name of the driver. </summary>
     public fixed byte driverName[(int)VK_MAX_DRIVER_NAME_SIZE];
 
-    /// <summary>
-    ///     driverInfo is an array of VK_MAX_DRIVER_INFO_SIZE charcontaining a null-terminated UTF-8 string with
-    ///     additional information about the driver.
-    /// </summary>
+    /// <summary> driverInfo is an array of VK_MAX_DRIVER_INFO_SIZE charcontaining a null-terminated UTF-8 string with additional information about the driver. </summary>
     public fixed byte driverInfo[(int)VK_MAX_DRIVER_INFO_SIZE];
 
-    /// <summary>
-    ///     conformanceVersion is the version of the Vulkan conformance test this driver is conformant against (see
-    ///     VkConformanceVersion).
-    /// </summary>
+    /// <summary> conformanceVersion is the version of the Vulkan conformance test this driver is conformant against (see VkConformanceVersion). </summary>
     public VkConformanceVersion conformanceVersion;
 }

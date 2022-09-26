@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelineMultisampleStateCreateInfo - Structure specifying parameters of a newly created pipeline multisample
-///     state -
+///     VkPipelineMultisampleStateCreateInfo - Structure specifying parameters of a newly created pipeline multisample state -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html
@@ -27,36 +26,30 @@ public unsafe struct VkPipelineMultisampleStateCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary> flags is reserved for future use. </summary>
     public VkPipelineMultisampleStateCreateFlags flags;
 
-    /// <summary>rasterizationSamples is a VkSampleCountFlagBits value specifying the number of samples used in rasterization.</summary>
+    /// <summary> rasterizationSamples is a VkSampleCountFlagBits value specifying the number of samples used in rasterization. </summary>
     public VkSampleCountFlagBits rasterizationSamples;
 
-    /// <summary>sampleShadingEnable can be used to enable Sample Shading.</summary>
+    /// <summary> sampleShadingEnable can be used to enable Sample Shading. </summary>
     public VkBool32 sampleShadingEnable;
 
-    /// <summary>minSampleShading specifies a minimum fraction of sample shading if sampleShadingEnable is set to VK_TRUE.</summary>
+    /// <summary> minSampleShading specifies a minimum fraction of sample shading if sampleShadingEnable is set to VK_TRUE. </summary>
     public float minSampleShading;
 
-    /// <summary>pSampleMask is a pointer to an array of VkSampleMaskvalues used in the sample mask test.</summary>
+    /// <summary> pSampleMask is a pointer to an array of VkSampleMaskvalues used in the sample mask test. </summary>
     public VkSampleMask* pSampleMask;
 
-    /// <summary>
-    ///     alphaToCoverageEnable controls whether a temporary coverage value is generated based on the alpha component of
-    ///     the fragment&#8217;s first color output as specified in the Multisample Coveragesection.
-    /// </summary>
+    /// <summary> alphaToCoverageEnable controls whether a temporary coverage value is generated based on the alpha component of the fragment&#8217;s first color output as specified in the Multisample Coveragesection. </summary>
     public VkBool32 alphaToCoverageEnable;
 
-    /// <summary>
-    ///     alphaToOneEnable controls whether the alpha component of the fragment&#8217;s first color output is replaced
-    ///     with one as described in Multisample Coverage.
-    /// </summary>
+    /// <summary> alphaToOneEnable controls whether the alpha component of the fragment&#8217;s first color output is replaced with one as described in Multisample Coverage. </summary>
     public VkBool32 alphaToOneEnable;
 }

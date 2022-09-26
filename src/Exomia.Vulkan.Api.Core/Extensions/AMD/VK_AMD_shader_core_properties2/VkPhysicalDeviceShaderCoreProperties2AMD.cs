@@ -14,8 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceShaderCoreProperties2AMD - Structure describing shader core properties that can be supported by an
-///     implementation -
+///     VkPhysicalDeviceShaderCoreProperties2AMD - Structure describing shader core properties that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html
@@ -24,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -38,21 +37,15 @@ public unsafe struct VkPhysicalDeviceShaderCoreProperties2AMD
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     shaderCoreFeatures is a bitmask of VkShaderCorePropertiesFlagBitsAMD indicating the set of features supported
-    ///     by the shader core.
-    /// </summary>
+    /// <summary> shaderCoreFeatures is a bitmask of VkShaderCorePropertiesFlagBitsAMD indicating the set of features supported by the shader core. </summary>
     public VkShaderCorePropertiesFlagsAMD shaderCoreFeatures;
 
-    /// <summary>
-    ///     activeComputeUnitCount is an unsigned integer value indicating the number of compute units that have been
-    ///     enabled.
-    /// </summary>
+    /// <summary> activeComputeUnitCount is an unsigned integer value indicating the number of compute units that have been enabled. </summary>
     public uint activeComputeUnitCount;
 }

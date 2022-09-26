@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrSamplerYcbcrConversion;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_sampler_ycbcr_conversion - device extension (nr. 157) - author 'KHR' [platform '' | contact 'Andrew Garrard
-///     @fluppeteer']<br />
+///     VK_KHR_sampler_ycbcr_conversion - device extension (nr. 157) - author 'KHR' [platform '' | contact 'Andrew Garrard @fluppeteer']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_sampler_ycbcr_conversion.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_sampler_ycbcr_conversion.html
@@ -36,16 +36,13 @@ public static unsafe class VkKhrSamplerYcbcrConversion
     /// <summary> The extension name. </summary>
     public const string VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME = "VK_KHR_sampler_ycbcr_conversion";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME_UTF8_NT =
@@ -86,10 +83,10 @@ public static unsafe class VkKhrSamplerYcbcrConversion
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCreateSamplerYcbcrConversionKHR</description>
+    ///             <description> vkCreateSamplerYcbcrConversionKHR </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroySamplerYcbcrConversionKHR</description>
+    ///             <description> vkDestroySamplerYcbcrConversionKHR </description>
     ///         </item>
     ///     </list>
     /// </remarks>

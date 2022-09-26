@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkWriteDescriptorSet</description>
+///             <term> structextends </term><description> VkWriteDescriptorSet </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -34,18 +34,15 @@ public unsafe struct VkWriteDescriptorSetAccelerationStructureNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>accelerationStructureCount is the number of elements in pAccelerationStructures.</summary>
+    /// <summary> accelerationStructureCount is the number of elements in pAccelerationStructures. </summary>
     public uint accelerationStructureCount;
 
-    /// <summary>
-    ///     pAccelerationStructures is a pointer to an array of VkAccelerationStructureNV structures specifying the
-    ///     acceleration structures to update.
-    /// </summary>
+    /// <summary> pAccelerationStructures is a pointer to an array of VkAccelerationStructureNV structures specifying the acceleration structures to update. </summary>
     public VkAccelerationStructureNV* pAccelerationStructures;
 }

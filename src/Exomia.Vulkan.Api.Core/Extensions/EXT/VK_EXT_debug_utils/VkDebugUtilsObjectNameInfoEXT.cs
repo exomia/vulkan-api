@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkDebugUtilsObjectNameInfoEXT - Specify parameters of a name to give to an object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPipelineShaderStageCreateInfo</description>
+///             <term> structextends </term><description> VkPipelineShaderStageCreateInfo </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -31,18 +31,18 @@ public unsafe struct VkDebugUtilsObjectNameInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DEBUG_UTILS_OBJECT_NAME_INFO_EXT;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>objectType is a VkObjectType specifying the type of the object to be named.</summary>
+    /// <summary> objectType is a VkObjectType specifying the type of the object to be named. </summary>
     public VkObjectType objectType;
 
-    /// <summary>objectHandle is the object to be named.</summary>
+    /// <summary> objectHandle is the object to be named. </summary>
     public ulong objectHandle;
 
-    /// <summary>pObjectName is either NULL or a null-terminated UTF-8 string specifying the name to apply to objectHandle.</summary>
+    /// <summary> pObjectName is either NULL or a null-terminated UTF-8 string specifying the name to apply to objectHandle. </summary>
     public byte* pObjectName;
 }

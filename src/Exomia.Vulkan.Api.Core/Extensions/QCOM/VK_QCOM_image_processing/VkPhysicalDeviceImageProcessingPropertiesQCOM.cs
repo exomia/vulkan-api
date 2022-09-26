@@ -23,10 +23,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPhysicalDeviceProperties2</description>
+///             <term> structextends </term><description> VkPhysicalDeviceProperties2 </description>
 ///         </item>
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -37,33 +37,21 @@ public unsafe struct VkPhysicalDeviceImageProcessingPropertiesQCOM
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_PROCESSING_PROPERTIES_QCOM;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary> sType is the type of this structure. </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     maxWeightFilterPhases is the maximum value that can be specified for
-    ///     VkImageViewSampleWeightCreateInfoQCOM::numPhases. in weight image samplingoperations.
-    /// </summary>
+    /// <summary> maxWeightFilterPhases is the maximum value that can be specified for VkImageViewSampleWeightCreateInfoQCOM::numPhases. in weight image samplingoperations. </summary>
     public uint maxWeightFilterPhases;
 
-    /// <summary>
-    ///     maxWeightFilterDimension is a VkExtent2D describing the largest dimensions (width and height) that can be
-    ///     specified for VkImageViewSampleWeightCreateInfoQCOM::filterSize.
-    /// </summary>
+    /// <summary> maxWeightFilterDimension is a VkExtent2D describing the largest dimensions (width and height) that can be specified for VkImageViewSampleWeightCreateInfoQCOM::filterSize. </summary>
     public VkExtent2D maxWeightFilterDimension;
 
-    /// <summary>
-    ///     maxBlockMatchRegion is a VkExtent2D describing the largest dimensions (width and height) that can be specified
-    ///     for blockSize in block matching operations.
-    /// </summary>
+    /// <summary> maxBlockMatchRegion is a VkExtent2D describing the largest dimensions (width and height) that can be specified for blockSize in block matching operations. </summary>
     public VkExtent2D maxBlockMatchRegion;
 
-    /// <summary>
-    ///     maxBoxFilterBlockSize is a VkExtent2D describing the the maximum dimensions (width and height) that can be
-    ///     specified for blocksize in box filter sampling operations.
-    /// </summary>
+    /// <summary> maxBoxFilterBlockSize is a VkExtent2D describing the the maximum dimensions (width and height) that can be specified for blocksize in box filter sampling operations. </summary>
     public VkExtent2D maxBoxFilterBlockSize;
 }

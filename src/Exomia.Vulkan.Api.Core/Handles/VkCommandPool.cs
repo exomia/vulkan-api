@@ -14,7 +14,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkCommandPool - Opaque handle to a command pool object -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandPool.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandPool.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandPool.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandPool.html </a>
 /// </summary>
 public readonly unsafe struct VkCommandPool
 {
@@ -58,7 +58,7 @@ public readonly unsafe struct VkCommandPool
     }
 
     /// <summary> Equality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator ==(VkCommandPool left, VkCommandPool right)
@@ -67,7 +67,7 @@ public readonly unsafe struct VkCommandPool
     }
 
     /// <summary> Inequality operator. </summary>
-    /// <param name="left">  The left. </param>
+    /// <param name="left"> The left. </param>
     /// <param name="right"> The right. </param>
     /// <returns> The result of the operation. </returns>
     public static bool operator !=(VkCommandPool left, VkCommandPool right)

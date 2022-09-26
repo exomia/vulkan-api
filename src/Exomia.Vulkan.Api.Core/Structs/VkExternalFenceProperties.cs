@@ -15,12 +15,12 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkExternalFenceProperties - Structure describing supported external fence handle features -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceProperties.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceProperties.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceProperties.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceProperties.html </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term> returnedonly </term><description> true </description>
 ///         </item>
 ///     </list>
 /// </remarks>
@@ -32,25 +32,19 @@ public unsafe struct VkExternalFenceProperties
 
     /// <summary>
     ///     sType<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceProperties">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceProperties</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceProperties"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceProperties </a>
     /// </summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    /// <summary> pNext is NULL or a pointer to a structure extending this structure. </summary>
     public void* pNext;
 
-    /// <summary>
-    ///     exportFromImportedHandleTypes is a bitmask of VkExternalFenceHandleTypeFlagBits indicating which types of
-    ///     imported handle handleType can be exported from.
-    /// </summary>
+    /// <summary> exportFromImportedHandleTypes is a bitmask of VkExternalFenceHandleTypeFlagBits indicating which types of imported handle handleType can be exported from. </summary>
     public VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes;
 
-    /// <summary>
-    ///     compatibleHandleTypes is a bitmask of VkExternalFenceHandleTypeFlagBits specifying handle types which can be
-    ///     specified at the same time as handleType when creating a fence.
-    /// </summary>
+    /// <summary> compatibleHandleTypes is a bitmask of VkExternalFenceHandleTypeFlagBits specifying handle types which can be specified at the same time as handleType when creating a fence. </summary>
     public VkExternalFenceHandleTypeFlags compatibleHandleTypes;
 
-    /// <summary>externalFenceFeatures is a bitmask of VkExternalFenceFeatureFlagBits indicating the features of handleType.</summary>
+    /// <summary> externalFenceFeatures is a bitmask of VkExternalFenceFeatureFlagBits indicating the features of handleType. </summary>
     public VkExternalFenceFeatureFlags externalFenceFeatures;
 }

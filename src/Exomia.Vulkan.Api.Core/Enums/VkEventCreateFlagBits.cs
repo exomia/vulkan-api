@@ -15,14 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkEventCreateFlagBits - Event creation flag bits -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEventCreateFlagBits.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEventCreateFlagBits.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEventCreateFlagBits.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEventCreateFlagBits.html </a>
 /// </summary>
 [Flags]
 public enum VkEventCreateFlagBits
 {
-    /// <summary>VK_EVENT_CREATE_DEVICE_ONLY_BIT specifies that host event commands will not be used with this event.</summary>
+    /// <summary> VK_EVENT_CREATE_DEVICE_ONLY_BIT specifies that host event commands will not be used with this event. </summary>
     VK_EVENT_CREATE_DEVICE_ONLY_BIT = 0x1,
 
-    /// <summary>VK_EVENT_CREATE_DEVICE_ONLY_BIT specifies that host event commands will not be used with this event.</summary>
+    /// <summary> VK_EVENT_CREATE_DEVICE_ONLY_BIT specifies that host event commands will not be used with this event. </summary>
     VK_EVENT_CREATE_DEVICE_ONLY_BIT_KHR = VK_EVENT_CREATE_DEVICE_ONLY_BIT
 }

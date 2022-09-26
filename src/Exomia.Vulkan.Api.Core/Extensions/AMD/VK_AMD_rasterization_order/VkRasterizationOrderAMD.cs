@@ -15,26 +15,20 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkRasterizationOrderAMD - Specify rasterization order for a graphics pipeline -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRasterizationOrderAMD.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRasterizationOrderAMD.html</a>
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRasterizationOrderAMD.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRasterizationOrderAMD.html </a>
 /// </summary>
 public enum VkRasterizationOrderAMD
 {
     /// <summary>
     ///     VK_RASTERIZATION_ORDER_STRICT_AMD specifies that operations for each primitive in a subpass must occur in
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-primitive-order">
-    ///         primitive
-    ///         order
-    ///     </a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-primitive-order"> primitive order </a>
     ///     .
     /// </summary>
     VK_RASTERIZATION_ORDER_STRICT_AMD = 0,
 
     /// <summary>
     ///     VK_RASTERIZATION_ORDER_RELAXED_AMD specifies that operations for each primitive in a subpass may not occur in
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-primitive-order">
-    ///         primitive
-    ///         order
-    ///     </a>
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#drawing-primitive-order"> primitive order </a>
     ///     .
     /// </summary>
     VK_RASTERIZATION_ORDER_RELAXED_AMD = 1

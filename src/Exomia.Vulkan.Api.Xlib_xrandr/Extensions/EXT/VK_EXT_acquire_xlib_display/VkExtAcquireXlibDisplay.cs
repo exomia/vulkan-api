@@ -19,9 +19,9 @@ global using static Exomia.Vulkan.Api.Xlib_xrandr.VkExtAcquireXlibDisplay;
 namespace Exomia.Vulkan.Api.Xlib_xrandr;
 
 /// <summary>
-///     VK_EXT_acquire_xlib_display - instance extension (nr. 90) - author 'NV' [platform 'xlib_xrandr' | contact 'James
-///     Jones @cubanismo']<br />
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_xlib_display.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_xlib_display.html</a>
+///     VK_EXT_acquire_xlib_display - instance extension (nr. 90) - author 'NV' [platform 'xlib_xrandr' | contact 'James Jones @cubanismo']
+///     <br />
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_xlib_display.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_xlib_display.html </a>
 /// </summary>
 [VkRequires("VK_EXT_direct_mode_display")]
 public static unsafe class VkExtAcquireXlibDisplay
@@ -32,16 +32,13 @@ public static unsafe class VkExtAcquireXlibDisplay
     /// <summary> The extension name. </summary>
     public const string VK_EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME = "VK_EXT_acquire_xlib_display";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME" /> represented by
-    ///     an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME_UTF8_NT =
@@ -49,19 +46,19 @@ public static unsafe class VkExtAcquireXlibDisplay
 
     /// <summary>
     ///     vkAcquireXlibDisplayEXT - Acquire access to a VkDisplayKHR using Xlib -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireXlibDisplayEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireXlibDisplayEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireXlibDisplayEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireXlibDisplayEXT.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice The physical device the display is on.</param>
-    /// <param name="dpy">dpy A connection to the X11 server that currently owns display.</param>
-    /// <param name="display">display The display the caller wishes to control in Vulkan.</param>
+    /// <param name="physicalDevice"> physicalDevice The physical device the display is on. </param>
+    /// <param name="dpy"> dpy A connection to the X11 server that currently owns display. </param>
+    /// <param name="display"> display The display the caller wishes to control in Vulkan. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_INITIALIZATION_FAILED </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -73,19 +70,19 @@ public static unsafe class VkExtAcquireXlibDisplay
 
     /// <summary>
     ///     vkGetRandROutputDisplayEXT - Query the VkDisplayKHR corresponding to an X11 RandR Output -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRandROutputDisplayEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRandROutputDisplayEXT.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRandROutputDisplayEXT.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRandROutputDisplayEXT.html </a>
     /// </summary>
-    /// <param name="physicalDevice">physicalDevice The physical device to query the display handle on.</param>
-    /// <param name="dpy">dpy A connection to the X11 server from which rrOutput was queried.</param>
-    /// <param name="rrOutput">rrOutput An X11 RandR output ID.</param>
-    /// <param name="pDisplay">pDisplay The corresponding VkDisplayKHR handle will be returned here.</param>
+    /// <param name="physicalDevice"> physicalDevice The physical device to query the display handle on. </param>
+    /// <param name="dpy"> dpy A connection to the X11 server from which rrOutput was queried. </param>
+    /// <param name="rrOutput"> rrOutput An X11 RandR output ID. </param>
+    /// <param name="pDisplay"> pDisplay The corresponding VkDisplayKHR handle will be returned here. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
+    ///             <term> errorcodes </term><description> VK_ERROR_OUT_OF_HOST_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -102,10 +99,10 @@ public static unsafe class VkExtAcquireXlibDisplay
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkAcquireXlibDisplayEXT</description>
+    ///             <description> vkAcquireXlibDisplayEXT </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkGetRandROutputDisplayEXT</description>
+    ///             <description> vkGetRandROutputDisplayEXT </description>
     ///         </item>
     ///     </list>
     /// </remarks>

@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkNvDeviceGeneratedCommands;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_NV_device_generated_commands - device extension (nr. 278) - author 'NV' [platform '' | contact 'Christoph
-///     Kubisch @pixeljetstream']<br />
+///     VK_NV_device_generated_commands - device extension (nr. 278) - author 'NV' [platform '' | contact 'Christoph Kubisch @pixeljetstream']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_device_generated_commands.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_device_generated_commands.html
@@ -35,16 +35,13 @@ public static unsafe class VkNvDeviceGeneratedCommands
     /// <summary> The extension name. </summary>
     public const string VK_NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME = "VK_NV_device_generated_commands";
 
-    /// <summary>
-    ///     An UTF8 null terminated version of <see cref="VK_NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME" /> represented
-    ///     by an UTF16 string.
-    /// </summary>
+    /// <summary> An UTF8 null terminated version of <see cref="VK_NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME" /> represented by an UTF16 string. </summary>
     /// <remarks>
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_NV_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME_UTF8_NT =
@@ -57,15 +54,9 @@ public static unsafe class VkNvDeviceGeneratedCommands
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the buffer.</param>
-    /// <param name="pInfo">
-    ///     pInfo is a pointer to a VkGeneratedCommandsMemoryRequirementsInfoNV structure containing parameters
-    ///     required for the memory requirements query.
-    /// </param>
-    /// <param name="pMemoryRequirements">
-    ///     pMemoryRequirements is a pointer to a VkMemoryRequirements2structure in which the
-    ///     memory requirements of the buffer object are returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that owns the buffer. </param>
+    /// <param name="pInfo"> pInfo is a pointer to a VkGeneratedCommandsMemoryRequirementsInfoNV structure containing parameters required for the memory requirements query. </param>
+    /// <param name="pMemoryRequirements"> pMemoryRequirements is a pointer to a VkMemoryRequirements2structure in which the memory requirements of the buffer object are returned. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkGeneratedCommandsMemoryRequirementsInfoNV* /*pInfo*/,
@@ -79,11 +70,8 @@ public static unsafe class VkNvDeviceGeneratedCommands
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer which does the preprocessing.</param>
-    /// <param name="pGeneratedCommandsInfo">
-    ///     pGeneratedCommandsInfo is a pointer to a VkGeneratedCommandsInfoNV structure
-    ///     containing parameters affecting the preprocessing step.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer which does the preprocessing. </param>
+    /// <param name="pGeneratedCommandsInfo"> pGeneratedCommandsInfo is a pointer to a VkGeneratedCommandsInfoNV structure containing parameters affecting the preprocessing step. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkGeneratedCommandsInfoNV* /*pGeneratedCommandsInfo*/,
@@ -96,15 +84,9 @@ public static unsafe class VkNvDeviceGeneratedCommands
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command is recorded.</param>
-    /// <param name="isPreprocessed">
-    ///     isPreprocessed represents whether the input data has already been preprocessed on the
-    ///     device. If it is VK_FALSE this command will implicitly trigger the preprocessing step, otherwise not.
-    /// </param>
-    /// <param name="pGeneratedCommandsInfo">
-    ///     pGeneratedCommandsInfo is a pointer to a VkGeneratedCommandsInfoNV structure
-    ///     containing parameters affecting the generation of commands.
-    /// </param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer into which the command is recorded. </param>
+    /// <param name="isPreprocessed"> isPreprocessed represents whether the input data has already been preprocessed on the device. If it is VK_FALSE this command will implicitly trigger the preprocessing step, otherwise not. </param>
+    /// <param name="pGeneratedCommandsInfo"> pGeneratedCommandsInfo is a pointer to a VkGeneratedCommandsInfoNV structure containing parameters affecting the generation of commands. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkBool32 /*isPreprocessed*/,
@@ -113,15 +95,12 @@ public static unsafe class VkNvDeviceGeneratedCommands
 
     /// <summary>
     ///     vkCmdBindPipelineShaderGroupNV - Bind a pipeline object -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html</a>
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html"> https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html </a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer that the pipeline will be bound to.</param>
-    /// <param name="pipelineBindPoint">
-    ///     pipelineBindPoint is a VkPipelineBindPoint value specifying the bind point to which the
-    ///     pipeline will be bound.
-    /// </param>
-    /// <param name="pipeline">pipeline is the pipeline to be bound.</param>
-    /// <param name="groupIndex">groupIndex is the shader group to be bound.</param>
+    /// <param name="commandBuffer"> commandBuffer is the command buffer that the pipeline will be bound to. </param>
+    /// <param name="pipelineBindPoint"> pipelineBindPoint is a VkPipelineBindPoint value specifying the bind point to which the pipeline will be bound. </param>
+    /// <param name="pipeline"> pipeline is the pipeline to be bound. </param>
+    /// <param name="groupIndex"> groupIndex is the shader group to be bound. </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkPipelineBindPoint /*pipelineBindPoint*/,
@@ -136,23 +115,18 @@ public static unsafe class VkNvDeviceGeneratedCommands
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateIndirectCommandsLayoutNV.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that creates the indirect command layout.</param>
-    /// <param name="pCreateInfo">
-    ///     pCreateInfo is a pointer to a VkIndirectCommandsLayoutCreateInfoNV structure containing
-    ///     parameters affecting creation of the indirect command layout.
-    /// </param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
-    /// <param name="pIndirectCommandsLayout">
-    ///     pIndirectCommandsLayout is a pointer to a VkIndirectCommandsLayoutNV handle in
-    ///     which the resulting indirect command layout is returned.
-    /// </param>
+    /// <param name="device"> device is the logical device that creates the indirect command layout. </param>
+    /// <param name="pCreateInfo"> pCreateInfo is a pointer to a VkIndirectCommandsLayoutCreateInfoNV structure containing parameters affecting creation of the indirect command layout. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
+    /// <param name="pIndirectCommandsLayout"> pIndirectCommandsLayout is a pointer to a VkIndirectCommandsLayoutNV handle in which the resulting indirect command layout is returned. </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term> successcodes </term><description> VK_SUCCESS </description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term> errorcodes </term>
+    ///             <description> VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY </description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -170,9 +144,9 @@ public static unsafe class VkNvDeviceGeneratedCommands
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that destroys the layout.</param>
-    /// <param name="indirectCommandsLayout">indirectCommandsLayout is the layout to destroy.</param>
-    /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
+    /// <param name="device"> device is the logical device that destroys the layout. </param>
+    /// <param name="indirectCommandsLayout"> indirectCommandsLayout is the layout to destroy. </param>
+    /// <param name="pAllocator"> pAllocator controls host memory allocation as described in the Memory Allocation chapter. </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkIndirectCommandsLayoutNV /*indirectCommandsLayout*/,
@@ -185,22 +159,22 @@ public static unsafe class VkNvDeviceGeneratedCommands
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkGetGeneratedCommandsMemoryRequirementsNV</description>
+    ///             <description> vkGetGeneratedCommandsMemoryRequirementsNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdPreprocessGeneratedCommandsNV</description>
+    ///             <description> vkCmdPreprocessGeneratedCommandsNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdExecuteGeneratedCommandsNV</description>
+    ///             <description> vkCmdExecuteGeneratedCommandsNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCmdBindPipelineShaderGroupNV</description>
+    ///             <description> vkCmdBindPipelineShaderGroupNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkCreateIndirectCommandsLayoutNV</description>
+    ///             <description> vkCreateIndirectCommandsLayoutNV </description>
     ///         </item>
     ///         <item>
-    ///             <description>vkDestroyIndirectCommandsLayoutNV</description>
+    ///             <description> vkDestroyIndirectCommandsLayoutNV </description>
     ///         </item>
     ///     </list>
     /// </remarks>

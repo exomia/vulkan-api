@@ -43,8 +43,8 @@ public static class VkKhrFragmentShaderBarycentric
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_KHR_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_KHR_FRAGMENT_SHADER_BARYCENTRIC_EXTENSION_NAME_UTF8_NT =

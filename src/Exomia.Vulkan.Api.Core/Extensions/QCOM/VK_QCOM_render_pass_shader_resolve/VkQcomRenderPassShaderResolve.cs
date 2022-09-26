@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkQcomRenderPassShaderResolve;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_QCOM_render_pass_shader_resolve - device extension (nr. 172) - author 'QCOM' [platform '' | contact 'Bill
-///     Licea-Kane @wwlk']<br />
+///     VK_QCOM_render_pass_shader_resolve - device extension (nr. 172) - author 'QCOM' [platform '' | contact 'Bill Licea-Kane @wwlk']
+///     <br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_render_pass_shader_resolve.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_render_pass_shader_resolve.html
@@ -42,8 +42,8 @@ public static class VkQcomRenderPassShaderResolve
     ///     Example usage:<br />
     ///     <br />
     ///     fixed(char* ptr = VK_QCOM_RENDER_PASS_SHADER_RESOLVE_EXTENSION_NAME_UTF8_NT) {<br />
-    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for
-    ///     unmanaged code.<br />
+    ///     sbyte* utf8NtPtr = (sbyte*)ptr; // utf8NtPtr - can now be passed and used directly as a utf8_nt string for unmanaged code.
+    ///     <br />
     ///     }
     /// </remarks>
     public const string VK_QCOM_RENDER_PASS_SHADER_RESOLVE_EXTENSION_NAME_UTF8_NT =
