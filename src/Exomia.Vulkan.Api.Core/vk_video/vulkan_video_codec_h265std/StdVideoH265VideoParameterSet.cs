@@ -25,13 +25,21 @@ public unsafe struct StdVideoH265VideoParameterSet
 
     public byte vps_max_sub_layers_minus1;
 
+    public byte reserved1;
+
+    public byte reserved2;
+
     public uint vps_num_units_in_tick;
 
     public uint vps_time_scale;
 
     public uint vps_num_ticks_poc_diff_one_minus1;
 
+    public uint reserved3;
+
     public StdVideoH265DecPicBufMgr* pDecPicBufMgr;
 
     public StdVideoH265HrdParameters* pHrdParameters;
+
+    public StdVideoH265ProfileTierLevel* pProfileTierLevel;
 }

@@ -43,5 +43,11 @@ public enum VkDebugUtilsMessageTypeFlagBitsEXT
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentDescription.html">VkAttachmentDescription</a>
     ///     ::loadOp to VK_ATTACHMENT_LOAD_OP_CLEAR would have worked.
     /// </summary>
-    VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT = 0x4
+    VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT = 0x4,
+
+    /// <summary>
+    ///     VK_DEBUG_UTILS_MESSAGE_TYPE_DEVICE_ADDRESS_BINDING_BIT_EXTspecifies that the implementation has modified the
+    ///     set of GPU-visible virtual addresses associated with a Vulkan object.
+    /// </summary>
+    VK_DEBUG_UTILS_MESSAGE_TYPE_DEVICE_ADDRESS_BINDING_BIT_EXT = 0x8
 }

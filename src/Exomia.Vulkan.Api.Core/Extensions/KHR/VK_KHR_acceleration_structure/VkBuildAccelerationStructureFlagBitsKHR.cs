@@ -76,22 +76,22 @@ public enum VkBuildAccelerationStructureFlagBitsKHR
     VK_BUILD_ACCELERATION_STRUCTURE_MOTION_BIT_NV = 0x20,
 
     /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_6_BIT_NV<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBuildAccelerationStructureFlagBitsKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBuildAccelerationStructureFlagBitsKHR
-    ///     </a>
+    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_OPACITY_MICROMAP_UPDATE_EXTindicates that the opacity micromaps
+    ///     associated with the specified acceleration structure may change with an acceleration structure update.
     /// </summary>
-    VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_6_BIT_NV = 0x40,
+    VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_OPACITY_MICROMAP_UPDATE_EXT = 0x40,
 
     /// <summary>
-    ///     VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_7_BIT_NV<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBuildAccelerationStructureFlagBitsKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBuildAccelerationStructureFlagBitsKHR
-    ///     </a>
+    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_DISABLE_OPACITY_MICROMAPS_EXTindicates that the specified acceleration
+    ///     structure may be referenced in an instance with VK_GEOMETRY_INSTANCE_DISABLE_OPACITY_MICROMAPS_EXT set.
     /// </summary>
-    VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_7_BIT_NV = 0x80,
+    VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_DISABLE_OPACITY_MICROMAPS_EXT = 0x80,
+
+    /// <summary>
+    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_OPACITY_MICROMAP_DATA_UPDATE_EXTindicates that the data of the opacity
+    ///     micromaps associated with the specified acceleration structure may change with an acceleration structure update.
+    /// </summary>
+    VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_OPACITY_MICROMAP_DATA_UPDATE_EXT = 0x100,
 
     /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_RESERVED_BIT_9_NV<br />

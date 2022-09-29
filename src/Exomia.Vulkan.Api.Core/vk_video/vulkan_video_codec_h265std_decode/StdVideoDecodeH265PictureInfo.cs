@@ -27,13 +27,13 @@ public unsafe struct StdVideoDecodeH265PictureInfo
 
     public byte pps_pic_parameter_set_id;
 
-    public byte num_short_term_ref_pic_sets;
+    public byte NumDeltaPocsOfRefRpsIdx;
 
     public int PicOrderCntVal;
 
     public ushort NumBitsForSTRefPicSetInSlice;
 
-    public byte NumDeltaPocsOfRefRpsIdx;
+    public ushort reserved;
 
     public fixed byte RefPicSetStCurrBefore[(int)STD_VIDEO_DECODE_H265_REF_PIC_SET_LIST_SIZE];
 

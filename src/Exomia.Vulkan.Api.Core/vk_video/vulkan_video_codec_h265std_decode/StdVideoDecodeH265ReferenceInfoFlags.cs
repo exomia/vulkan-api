@@ -32,10 +32,4 @@ public struct StdVideoDecodeH265ReferenceInfoFlags
         get { return (uint)((_bitfield1 >> 1) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFD) | (((uint)value & 0x00000001) << 1); }
     }
-
-    public uint is_non_existing
-    {
-        get { return (uint)((_bitfield1 >> 2) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFFFFB) | (((uint)value & 0x00000001) << 2); }
-    }
 }

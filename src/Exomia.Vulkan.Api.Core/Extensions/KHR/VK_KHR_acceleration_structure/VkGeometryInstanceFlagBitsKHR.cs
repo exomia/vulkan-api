@@ -49,22 +49,22 @@ public enum VkGeometryInstanceFlagBitsKHR
     VK_GEOMETRY_INSTANCE_FORCE_NO_OPAQUE_BIT_KHR = 0x8,
 
     /// <summary>
-    ///     VK_GEOMETRY_INSTANCE_RESERVED_4_BIT_NV<br />
+    ///     VK_GEOMETRY_INSTANCE_FORCE_OPACITY_MICROMAP_2_STATE_EXT<br />
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkGeometryInstanceFlagBitsKHR">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkGeometryInstanceFlagBitsKHR
     ///     </a>
     /// </summary>
-    VK_GEOMETRY_INSTANCE_RESERVED_4_BIT_NV = 0x10,
+    VK_GEOMETRY_INSTANCE_FORCE_OPACITY_MICROMAP_2_STATE_EXT = 0x10,
 
     /// <summary>
-    ///     VK_GEOMETRY_INSTANCE_RESERVED_5_BIT_NV<br />
+    ///     VK_GEOMETRY_INSTANCE_DISABLE_OPACITY_MICROMAPS_EXT<br />
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkGeometryInstanceFlagBitsKHR">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkGeometryInstanceFlagBitsKHR
     ///     </a>
     /// </summary>
-    VK_GEOMETRY_INSTANCE_RESERVED_5_BIT_NV = 0x20,
+    VK_GEOMETRY_INSTANCE_DISABLE_OPACITY_MICROMAPS_EXT = 0x20,
 
     /// <summary>
     ///     VK_GEOMETRY_INSTANCE_TRIANGLE_FLIP_FACING_BIT_KHR indicates that the

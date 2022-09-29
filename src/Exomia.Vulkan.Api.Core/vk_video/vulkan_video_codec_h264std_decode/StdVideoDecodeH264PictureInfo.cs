@@ -25,7 +25,9 @@ public unsafe struct StdVideoDecodeH264PictureInfo
 
     public byte pic_parameter_set_id;
 
-    public ushort reserved;
+    public byte reserved1;
+
+    public byte reserved2;
 
     public ushort frame_num;
 

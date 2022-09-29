@@ -17,11 +17,9 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct StdVideoDecodeH264Mvc
+public unsafe struct StdVideoH265LongTermRefPicsSps
 {
-    public uint viewId0;
+    public uint used_by_curr_pic_lt_sps_flag;
 
-    public uint mvcElementCount;
-
-    public StdVideoDecodeH264MvcElement* pMvcElements;
+    public fixed uint lt_ref_pic_poc_lsb_sps[(int)STD_VIDEO_H265_MAX_LONG_TERM_REF_PICS_SPS];
 }

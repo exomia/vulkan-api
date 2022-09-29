@@ -189,7 +189,7 @@ public struct StdVideoH265PpsFlags
         set { _bitfield1 = (_bitfield1 & 0xF7FFFFFF) | (((uint)value & 0x00000001) << 27); }
     }
 
-    public uint pps_palette_predictor_initializer_present_flag
+    public uint pps_palette_predictor_initializers_present_flag
     {
         get { return (uint)((_bitfield1 >> 28) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xEFFFFFFF) | (((uint)value & 0x00000001) << 28); }

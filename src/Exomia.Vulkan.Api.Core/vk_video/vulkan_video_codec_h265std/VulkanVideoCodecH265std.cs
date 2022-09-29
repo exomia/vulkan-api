@@ -22,7 +22,7 @@ public static class VulkanVideoCodecH265std
 {
     public const int STD_VIDEO_H265_CPB_CNT_LIST_SIZE = 32;
 
-    public const int STD_VIDEO_H265_SUBLAYERS_MINUS1_LIST_SIZE = 7;
+    public const int STD_VIDEO_H265_SUBLAYERS_LIST_SIZE = 7;
 
     public const int STD_VIDEO_H265_SCALING_LIST_4X4_NUM_LISTS = 6;
 
@@ -53,4 +53,14 @@ public static class VulkanVideoCodecH265std
     public const int STD_VIDEO_H265_MAX_NUM_LIST_REF = 15;
 
     public const int STD_VIDEO_H265_MAX_CHROMA_PLANES = 2;
+
+    public const int STD_VIDEO_H265_MAX_SHORT_TERM_REF_PIC_SETS = 64;
+
+    public const int STD_VIDEO_H265_MAX_DPB_SIZE = 16;
+
+    public const int STD_VIDEO_H265_MAX_LONG_TERM_REF_PICS_SPS = 32;
+
+    public const int STD_VIDEO_H265_MAX_LONG_TERM_PICS = 16;
+
+    public const int STD_VIDEO_H265_MAX_DELTA_POC = 48;
 }

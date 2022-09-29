@@ -19,9 +19,9 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct StdVideoH265DecPicBufMgr
 {
-    public fixed uint max_latency_increase_plus1[(int)STD_VIDEO_H265_SUBLAYERS_MINUS1_LIST_SIZE];
+    public fixed uint max_latency_increase_plus1[(int)STD_VIDEO_H265_SUBLAYERS_LIST_SIZE];
 
-    public fixed byte max_dec_pic_buffering_minus1[(int)STD_VIDEO_H265_SUBLAYERS_MINUS1_LIST_SIZE];
+    public fixed byte max_dec_pic_buffering_minus1[(int)STD_VIDEO_H265_SUBLAYERS_LIST_SIZE];
 
-    public fixed byte max_num_reorder_pics[(int)STD_VIDEO_H265_SUBLAYERS_MINUS1_LIST_SIZE];
+    public fixed byte max_num_reorder_pics[(int)STD_VIDEO_H265_SUBLAYERS_LIST_SIZE];
 }

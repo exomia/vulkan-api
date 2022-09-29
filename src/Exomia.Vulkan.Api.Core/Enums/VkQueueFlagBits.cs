@@ -70,9 +70,6 @@ public enum VkQueueFlagBits
     /// </summary>
     VK_QUEUE_RESERVED_7_BIT_QCOM = 0x80,
 
-    /// <summary>
-    ///     VK_QUEUE_RESERVED_8_BIT_NV<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueueFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueueFlagBits</a>
-    /// </summary>
-    VK_QUEUE_RESERVED_8_BIT_NV = 0x100
+    /// <summary>VK_QUEUE_OPTICAL_FLOW_BIT_NV specifies that queues in this queue family support optical flow operations.</summary>
+    VK_QUEUE_OPTICAL_FLOW_BIT_NV = 0x100
 }
