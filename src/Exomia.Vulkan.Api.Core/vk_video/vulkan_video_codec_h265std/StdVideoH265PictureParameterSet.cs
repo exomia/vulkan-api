@@ -25,6 +25,8 @@ public unsafe struct StdVideoH265PictureParameterSet
 
     public byte pps_seq_parameter_set_id;
 
+    public byte sps_video_parameter_set_id;
+
     public byte num_extra_slice_header_bits;
 
     public byte num_ref_idx_l0_default_active_minus1;
@@ -39,21 +41,11 @@ public unsafe struct StdVideoH265PictureParameterSet
 
     public sbyte pps_cr_qp_offset;
 
-    public byte num_tile_columns_minus1;
-
-    public byte num_tile_rows_minus1;
-
-    public fixed ushort column_width_minus1[(int)STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_COLS_LIST_SIZE];
-
-    public fixed ushort row_height_minus1[(int)STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_ROWS_LIST_SIZE];
-
     public sbyte pps_beta_offset_div2;
 
     public sbyte pps_tc_offset_div2;
 
     public byte log2_parallel_merge_level_minus2;
-
-    public StdVideoH265ScalingLists* pScalingLists;
 
     public byte log2_max_transform_skip_block_size_minus2;
 
@@ -73,13 +65,29 @@ public unsafe struct StdVideoH265PictureParameterSet
 
     public sbyte pps_act_cb_qp_offset_plus5;
 
-    public sbyte pps_act_cr_qp_offset_plus5;
+    public sbyte pps_act_cr_qp_offset_plus3;
 
-    public byte pps_num_palette_predictor_initializer;
+    public byte pps_num_palette_predictor_initializers;
 
     public byte luma_bit_depth_entry_minus8;
 
     public byte chroma_bit_depth_entry_minus8;
+
+    public byte num_tile_columns_minus1;
+
+    public byte num_tile_rows_minus1;
+
+    public byte reserved1;
+
+    public byte reserved2;
+
+    public fixed ushort column_width_minus1[(int)STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_COLS_LIST_SIZE];
+
+    public fixed ushort row_height_minus1[(int)STD_VIDEO_H265_CHROMA_QP_OFFSET_TILE_ROWS_LIST_SIZE];
+
+    public uint reserved3;
+
+    public StdVideoH265ScalingLists* pScalingLists;
 
     public StdVideoH265PredictorPaletteEntries* pPredictorPaletteEntries;
 }

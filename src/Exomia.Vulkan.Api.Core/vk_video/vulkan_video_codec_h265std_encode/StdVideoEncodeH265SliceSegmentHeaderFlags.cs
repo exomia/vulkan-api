@@ -87,21 +87,33 @@ public struct StdVideoEncodeH265SliceSegmentHeaderFlags
         set { _bitfield1 = (_bitfield1 & 0xFFFFFBFF) | (((uint)value & 0x00000001) << 10); }
     }
 
-    public uint slice_deblocking_filter_disable_flag
+    public uint cu_chroma_qp_offset_enabled_flag
     {
         get { return (uint)((_bitfield1 >> 11) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFF7FF) | (((uint)value & 0x00000001) << 11); }
     }
 
-    public uint collocated_from_l0_flag
+    public uint deblocking_filter_override_flag
     {
         get { return (uint)((_bitfield1 >> 12) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFEFFF) | (((uint)value & 0x00000001) << 12); }
     }
 
-    public uint slice_loop_filter_across_slices_enabled_flag
+    public uint slice_deblocking_filter_disabled_flag
     {
         get { return (uint)((_bitfield1 >> 13) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFDFFF) | (((uint)value & 0x00000001) << 13); }
+    }
+
+    public uint collocated_from_l0_flag
+    {
+        get { return (uint)((_bitfield1 >> 14) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFFBFFF) | (((uint)value & 0x00000001) << 14); }
+    }
+
+    public uint slice_loop_filter_across_slices_enabled_flag
+    {
+        get { return (uint)((_bitfield1 >> 15) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFF7FFF) | (((uint)value & 0x00000001) << 15); }
     }
 }

@@ -1989,6 +1989,12 @@ public enum VkFormat
     VK_FORMAT_ASTC_6x6x6_SFLOAT_BLOCK_EXT = 1000288029,
 
     /// <summary>
+    ///     VK_FORMAT_R16G16_S10_5_NV specifies a two-component, fixed-point format where most significant bit specifies
+    ///     the sign bit, next 10 bits specify the integer value and last 5 bits represent the fractional value.
+    /// </summary>
+    VK_FORMAT_R16G16_S10_5_NV = 1000464000,
+
+    /// <summary>
     ///     VK_FORMAT_ASTC_4x4_SFLOAT_BLOCK specifies a four-component, ASTC compressed format where each 128-bit
     ///     compressed texel block encodes a 4×4 rectangle of signed floating-point RGBA texel data.
     /// </summary>

@@ -17,25 +17,19 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public struct StdVideoDecodeH264MvcElementFlags
+public struct StdVideoH265ShortTermRefPicSetFlags
 {
     private uint _bitfield1;
 
-    public uint non_idr
+    public uint inter_ref_pic_set_prediction_flag
     {
         get { return (uint)((_bitfield1 >> 0) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFE) | (((uint)value & 0x00000001) << 0); }
     }
 
-    public uint anchor_pic
+    public uint delta_rps_sign
     {
         get { return (uint)((_bitfield1 >> 1) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFD) | (((uint)value & 0x00000001) << 1); }
-    }
-
-    public uint inter_view
-    {
-        get { return (uint)((_bitfield1 >> 2) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFFFFB) | (((uint)value & 0x00000001) << 2); }
     }
 }

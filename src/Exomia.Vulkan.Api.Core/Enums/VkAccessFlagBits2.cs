@@ -441,28 +441,37 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_SHADER_BINDING_TABLE_READ_BIT_KHR = 0x10000000000,
 
     /// <summary>
-    ///     VK_ACCESS_2_RESERVED_44_BIT_NV<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
+    ///     VK_ACCESS_2_MICROMAP_READ_BIT_EXT specifies read access to a micromap object. Such access occurs in the
+    ///     VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT and VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR pipeline
+    ///     stages.
     /// </summary>
-    VK_ACCESS_2_RESERVED_44_BIT_NV = 0x100000000000,
+    VK_ACCESS_2_MICROMAP_READ_BIT_EXT = 0x100000000000,
 
     /// <summary>
-    ///     VK_ACCESS_2_RESERVED_45_BIT_NV<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
+    ///     VK_ACCESS_2_MICROMAP_WRITE_BIT_EXT specifies write access to a micromap object. Such access occurs in the
+    ///     VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT pipeline stage.
     /// </summary>
-    VK_ACCESS_2_RESERVED_45_BIT_NV = 0x200000000000,
+    VK_ACCESS_2_MICROMAP_WRITE_BIT_EXT = 0x200000000000,
 
     /// <summary>
-    ///     VK_ACCESS_2_RESERVED_42_BIT_NV<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
+    ///     VK_ACCESS_2_OPTICAL_FLOW_READ_BIT_NV specifies read access to an image or buffer resource as part of a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#opticalflow-operations">
+    ///         optical
+    ///         flow operation
+    ///     </a>
+    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_OPTICAL_FLOW_BIT_NVpipeline stage.
     /// </summary>
-    VK_ACCESS_2_RESERVED_42_BIT_NV = 0x40000000000,
+    VK_ACCESS_2_OPTICAL_FLOW_READ_BIT_NV = 0x40000000000,
 
     /// <summary>
-    ///     VK_ACCESS_2_RESERVED_43_BIT_NV<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
+    ///     VK_ACCESS_2_OPTICAL_FLOW_WRITE_BIT_NV specifies write access to an image or buffer resource as part of a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#opticalflow-operations">
+    ///         optical
+    ///         flow operation
+    ///     </a>
+    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_OPTICAL_FLOW_BIT_NVpipeline stage.
     /// </summary>
-    VK_ACCESS_2_RESERVED_43_BIT_NV = 0x80000000000,
+    VK_ACCESS_2_OPTICAL_FLOW_WRITE_BIT_NV = 0x80000000000,
 
     /// <summary>VK_ACCESS_2_NONE specifies no accesses.</summary>
     VK_ACCESS_2_NONE_KHR = VK_ACCESS_2_NONE,

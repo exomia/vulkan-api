@@ -19,11 +19,11 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct StdVideoH264ScalingLists
 {
-    public byte scaling_list_present_mask;
+    public ushort scaling_list_present_mask;
 
-    public byte use_default_scaling_matrix_mask;
+    public ushort use_default_scaling_matrix_mask;
 
     public VkArray6<VkArray16<byte>> ScalingList4x4;
 
-    public VkArray2<VkArray64<byte>> ScalingList8x8;
+    public VkArray6<VkArray64<byte>> ScalingList8x8;
 }

@@ -39,11 +39,13 @@ public unsafe struct StdVideoH265HrdParameters
 
     public byte dpb_output_delay_length_minus1;
 
-    public fixed byte cpb_cnt_minus1[(int)STD_VIDEO_H265_SUBLAYERS_MINUS1_LIST_SIZE];
+    public fixed byte cpb_cnt_minus1[(int)STD_VIDEO_H265_SUBLAYERS_LIST_SIZE];
 
-    public fixed ushort elemental_duration_in_tc_minus1[(int)STD_VIDEO_H265_SUBLAYERS_MINUS1_LIST_SIZE];
+    public fixed ushort elemental_duration_in_tc_minus1[(int)STD_VIDEO_H265_SUBLAYERS_LIST_SIZE];
 
-    public VkArray7<StdVideoH265SubLayerHrdParameters>* pSubLayerHrdParametersNal;
+    public VkArray3<ushort> reserved;
 
-    public VkArray7<StdVideoH265SubLayerHrdParameters>* pSubLayerHrdParametersVcl;
+    public StdVideoH265SubLayerHrdParameters* pSubLayerHrdParametersNal;
+
+    public StdVideoH265SubLayerHrdParameters* pSubLayerHrdParametersVcl;
 }

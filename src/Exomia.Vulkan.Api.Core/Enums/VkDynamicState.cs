@@ -547,6 +547,438 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_COLOR_WRITE_ENABLE_EXT = 1000381000,
 
     /// <summary>
+    ///     VK_DYNAMIC_STATE_TESSELLATION_DOMAIN_ORIGIN_EXT specifies that the domainOrigin state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfo.html">
+    ///         VkPipelineTessellationDomainOriginStateCreateInfo
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetTessellationDomainOriginEXT.html">
+    ///         vkCmdSetTessellationDomainOriginEXT
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_TESSELLATION_DOMAIN_ORIGIN_EXT = 1000455002,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_DEPTH_CLAMP_ENABLE_EXT specifies that the depthClampEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
+    ///         VkPipelineRasterizationStateCreateInfo
+    ///     </a>
+    ///     will be ignored and mustbe set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthClampEnableEXT.html">vkCmdSetDepthClampEnableEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_DEPTH_CLAMP_ENABLE_EXT = 1000455003,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_POLYGON_MODE_EXT specifies that the polygonMode state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
+    ///         VkPipelineRasterizationStateCreateInfo
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPolygonModeEXT.html">vkCmdSetPolygonModeEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_POLYGON_MODE_EXT = 1000455004,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_RASTERIZATION_SAMPLES_EXT specifies that the rasterizationSamples state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html">
+    ///         VkPipelineMultisampleStateCreateInfo
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRasterizationSamplesEXT.html">
+    ///         vkCmdSetRasterizationSamplesEXT
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_RASTERIZATION_SAMPLES_EXT = 1000455005,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_SAMPLE_MASK_EXT specifies that the pSampleMask state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html">
+    ///         VkPipelineMultisampleStateCreateInfo
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetSampleMaskEXT.html">vkCmdSetSampleMaskEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_SAMPLE_MASK_EXT = 1000455006,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_ALPHA_TO_COVERAGE_ENABLE_EXT specifies that the alphaToCoverageEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html">
+    ///         VkPipelineMultisampleStateCreateInfo
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetAlphaToCoverageEnableEXT.html">
+    ///         vkCmdSetAlphaToCoverageEnableEXT
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_ALPHA_TO_COVERAGE_ENABLE_EXT = 1000455007,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_ALPHA_TO_ONE_ENABLE_EXT specifies that the alphaToOneEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html">
+    ///         VkPipelineMultisampleStateCreateInfo
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetAlphaToOneEnableEXT.html">vkCmdSetAlphaToOneEnableEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_ALPHA_TO_ONE_ENABLE_EXT = 1000455008,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_LOGIC_OP_ENABLE_EXT specifies that the logicOpEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendStateCreateInfo.html">
+    ///         VkPipelineColorBlendStateCreateInfo
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLogicOpEnableEXT.html">vkCmdSetLogicOpEnableEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_LOGIC_OP_ENABLE_EXT = 1000455009,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COLOR_BLEND_ENABLE_EXT specifies that the blendEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendAttachmentState.html">
+    ///         VkPipelineColorBlendAttachmentState
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetColorBlendEnableEXT.html">vkCmdSetColorBlendEnableEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COLOR_BLEND_ENABLE_EXT = 1000455010,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COLOR_BLEND_EQUATION_EXT specifies that the srcColorBlendFactor, dstColorBlendFactor,
+    ///     colorBlendOp, srcAlphaBlendFactor, dstAlphaBlendFactor, and alphaBlendOp states in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendAttachmentState.html">
+    ///         VkPipelineColorBlendAttachmentState
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetColorBlendEquationEXT.html">vkCmdSetColorBlendEquationEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COLOR_BLEND_EQUATION_EXT = 1000455011,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT specifies that the colorWriteMask state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendAttachmentState.html">
+    ///         VkPipelineColorBlendAttachmentState
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetColorWriteMaskEXT.html">vkCmdSetColorWriteMaskEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT = 1000455012,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_RASTERIZATION_STREAM_EXT specifies that the rasterizationStream state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html">
+    ///         VkPipelineRasterizationStateStreamCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRasterizationStreamEXT.html">vkCmdSetRasterizationStreamEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_RASTERIZATION_STREAM_EXT = 1000455013,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_CONSERVATIVE_RASTERIZATION_MODE_EXT specifies that the conservativeRasterizationMode state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationConservativeStateCreateInfoEXT.html">
+    ///         VkPipelineRasterizationConservativeStateCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetConservativeRasterizationModeEXT.html">
+    ///         vkCmdSetConservativeRasterizationModeEXT
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_CONSERVATIVE_RASTERIZATION_MODE_EXT = 1000455014,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_EXTRA_PRIMITIVE_OVERESTIMATION_SIZE_EXT specifies that the extraPrimitiveOverestimationSize state
+    ///     in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationConservativeStateCreateInfoEXT.html">
+    ///         VkPipelineRasterizationConservativeStateCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExtraPrimitiveOverestimationSizeEXT.html">
+    ///         vkCmdSetExtraPrimitiveOverestimationSizeEXT
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_EXTRA_PRIMITIVE_OVERESTIMATION_SIZE_EXT = 1000455015,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_DEPTH_CLIP_ENABLE_EXT specifies that the depthClipEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDepthClipEnableFeaturesEXT.html">
+    ///         VkPhysicalDeviceDepthClipEnableFeaturesEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthClipEnableEXT.html">vkCmdSetDepthClipEnableEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_DEPTH_CLIP_ENABLE_EXT = 1000455016,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_SAMPLE_LOCATIONS_ENABLE_EXT specifies that the sampleLocationsEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineSampleLocationsStateCreateInfoEXT.html">
+    ///         VkPipelineSampleLocationsStateCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetSampleLocationsEnableEXT.html">
+    ///         vkCmdSetSampleLocationsEnableEXT
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_SAMPLE_LOCATIONS_ENABLE_EXT = 1000455017,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COLOR_BLEND_ADVANCED_EXT specifies that the colorBlendOp state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendAttachmentState.html">
+    ///         VkPipelineColorBlendAttachmentState
+    ///     </a>
+    ///     , and srcPremultiplied, dstPremultiplied, and blendOverlap states in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendAdvancedStateCreateInfoEXT.html">
+    ///         VkPipelineColorBlendAdvancedStateCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetColorBlendAdvancedEXT.html">vkCmdSetColorBlendAdvancedEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COLOR_BLEND_ADVANCED_EXT = 1000455018,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_PROVOKING_VERTEX_MODE_EXT specifies that the provokingVertexMode state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationProvokingVertexStateCreateInfoEXT.html">
+    ///         VkPipelineRasterizationProvokingVertexStateCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetProvokingVertexModeEXT.html">vkCmdSetProvokingVertexModeEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_PROVOKING_VERTEX_MODE_EXT = 1000455019,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_LINE_RASTERIZATION_MODE_EXT specifies that the lineRasterizationMode state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html">
+    ///         VkPipelineRasterizationLineStateCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineRasterizationModeEXT.html">
+    ///         vkCmdSetLineRasterizationModeEXT
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_LINE_RASTERIZATION_MODE_EXT = 1000455020,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_LINE_STIPPLE_ENABLE_EXT specifies that the stippledLineEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html">
+    ///         VkPipelineRasterizationLineStateCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEnableEXT.html">vkCmdSetLineStippleEnableEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_LINE_STIPPLE_ENABLE_EXT = 1000455021,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_DEPTH_CLIP_NEGATIVE_ONE_TO_ONE_EXT specifies that the negativeOneToOne state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportDepthClipControlCreateInfoEXT.html">
+    ///         VkPipelineViewportDepthClipControlCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthClipNegativeOneToOneEXT.html">
+    ///         vkCmdSetDepthClipNegativeOneToOneEXT
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_DEPTH_CLIP_NEGATIVE_ONE_TO_ONE_EXT = 1000455022,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_VIEWPORT_W_SCALING_ENABLE_NV specifies that the viewportWScalingEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html">
+    ///         VkPipelineViewportWScalingStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportWScalingEnableNV.html">
+    ///         vkCmdSetViewportWScalingEnableNV
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_VIEWPORT_W_SCALING_ENABLE_NV = 1000455023,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_VIEWPORT_SWIZZLE_NV specifies that the viewportCount, and pViewportSwizzles states in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportSwizzleStateCreateInfoNV.html">
+    ///         VkPipelineViewportSwizzleStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetViewportSwizzleNV.html">vkCmdSetViewportSwizzleNV</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_VIEWPORT_SWIZZLE_NV = 1000455024,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COVERAGE_TO_COLOR_ENABLE_NV specifies that the coverageToColorEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html">
+    ///         VkPipelineCoverageToColorStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCoverageToColorEnableNV.html">
+    ///         vkCmdSetCoverageToColorEnableNV
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COVERAGE_TO_COLOR_ENABLE_NV = 1000455025,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COVERAGE_TO_COLOR_LOCATION_NV specifies that the coverageToColorLocation state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html">
+    ///         VkPipelineCoverageToColorStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCoverageToColorLocationNV.html">
+    ///         vkCmdSetCoverageToColorLocationNV
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COVERAGE_TO_COLOR_LOCATION_NV = 1000455026,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COVERAGE_MODULATION_MODE_NV specifies that the coverageModulationMode state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html">
+    ///         VkPipelineCoverageModulationStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCoverageModulationModeNV.html">
+    ///         vkCmdSetCoverageModulationModeNV
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COVERAGE_MODULATION_MODE_NV = 1000455027,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COVERAGE_MODULATION_TABLE_ENABLE_NV specifies that the coverageModulationTableEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html">
+    ///         VkPipelineCoverageModulationStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCoverageModulationTableEnableNV.html">
+    ///         vkCmdSetCoverageModulationTableEnableNV
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COVERAGE_MODULATION_TABLE_ENABLE_NV = 1000455028,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COVERAGE_MODULATION_TABLE_NV specifies that the coverageModulationTableCount, and
+    ///     pCoverageModulationTablestates in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html">
+    ///         VkPipelineCoverageModulationStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCoverageModulationTableNV.html">
+    ///         vkCmdSetCoverageModulationTableNV
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COVERAGE_MODULATION_TABLE_NV = 1000455029,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_SHADING_RATE_IMAGE_ENABLE_NV specifies that the shadingRateImageEnable state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportShadingRateImageStateCreateInfoNV.html">
+    ///         VkPipelineViewportShadingRateImageStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetShadingRateImageEnableNV.html">
+    ///         vkCmdSetShadingRateImageEnableNV
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_SHADING_RATE_IMAGE_ENABLE_NV = 1000455030,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_REPRESENTATIVE_FRAGMENT_TEST_ENABLE_NV specifies that the representativeFragmentTestEnable state
+    ///     in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRepresentativeFragmentTestStateCreateInfoNV.html">
+    ///         VkPipelineRepresentativeFragmentTestStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRepresentativeFragmentTestEnableNV.html">
+    ///         vkCmdSetRepresentativeFragmentTestEnableNV
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_REPRESENTATIVE_FRAGMENT_TEST_ENABLE_NV = 1000455031,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_COVERAGE_REDUCTION_MODE_NV specifies that the coverageReductionMode state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageReductionStateCreateInfoNV.html">
+    ///         VkPipelineCoverageReductionStateCreateInfoNV
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCoverageReductionModeNV.html">
+    ///         vkCmdSetCoverageReductionModeNV
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_COVERAGE_REDUCTION_MODE_NV = 1000455032,
+
+    /// <summary>
     ///     VK_DYNAMIC_STATE_CULL_MODE specifies that the cullMode state in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">

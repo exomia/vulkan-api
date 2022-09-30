@@ -323,16 +323,20 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_COPY_BIT_KHR = 0x10000000,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_RESERVED_30_BIT_NV<br />
+    ///     VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
     /// </summary>
-    VK_PIPELINE_STAGE_2_RESERVED_30_BIT_NV = 0x40000000,
+    VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT = 0x40000000,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_RESERVED_29_BIT_NV<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
+    ///     VK_PIPELINE_STAGE_2_OPTICAL_FLOW_BIT_NV specifies the stage of the pipeline where
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#opticalflow-operations">
+    ///         optical
+    ///         flow operation
+    ///     </a>
+    ///     are performed.
     /// </summary>
-    VK_PIPELINE_STAGE_2_RESERVED_29_BIT_NV = 0x20000000,
+    VK_PIPELINE_STAGE_2_OPTICAL_FLOW_BIT_NV = 0x20000000,
 
     /// <summary>VK_PIPELINE_STAGE_2_NONE specifies no stages of execution.</summary>
     VK_PIPELINE_STAGE_2_NONE_KHR = VK_PIPELINE_STAGE_2_NONE,

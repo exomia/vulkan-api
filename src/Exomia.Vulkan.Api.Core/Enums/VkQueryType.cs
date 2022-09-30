@@ -193,5 +193,17 @@ public enum VkQueryType
     ///     </a>
     ///     .
     /// </summary>
-    VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SIZE_KHR = 1000386001
+    VK_QUERY_TYPE_ACCELERATION_STRUCTURE_SIZE_KHR = 1000386001,
+
+    /// <summary>
+    ///     VK_QUERY_TYPE_MICROMAP_SERIALIZATION_SIZE_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueryType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueryType</a>
+    /// </summary>
+    VK_QUERY_TYPE_MICROMAP_SERIALIZATION_SIZE_EXT = 1000396000,
+
+    /// <summary>
+    ///     VK_QUERY_TYPE_MICROMAP_COMPACTED_SIZE_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueryType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueryType</a>
+    /// </summary>
+    VK_QUERY_TYPE_MICROMAP_COMPACTED_SIZE_EXT = 1000396001
 }

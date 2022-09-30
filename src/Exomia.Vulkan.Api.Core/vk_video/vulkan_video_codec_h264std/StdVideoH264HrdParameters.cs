@@ -25,6 +25,8 @@ public unsafe struct StdVideoH264HrdParameters
 
     public byte cpb_size_scale;
 
+    public byte reserved1;
+
     public fixed uint bit_rate_value_minus1[(int)STD_VIDEO_H264_CPB_CNT_LIST_SIZE];
 
     public fixed uint cpb_size_value_minus1[(int)STD_VIDEO_H264_CPB_CNT_LIST_SIZE];
