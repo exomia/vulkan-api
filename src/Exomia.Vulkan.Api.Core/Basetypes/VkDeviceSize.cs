@@ -87,7 +87,7 @@ public readonly unsafe struct VkDeviceSize
     public static implicit operator VkDeviceSize(int size)
     {
         VkDeviceSize value;
-        *(ulong*)&value = size;
+        *(long*)&value = size;
         return value;
     }
 
@@ -98,7 +98,7 @@ public readonly unsafe struct VkDeviceSize
     public static implicit operator VkDeviceSize(long size)
     {
         VkDeviceSize value;
-        *(ulong*)&value = size;
+        *(long*)&value = size;
         return value;
     }
 
