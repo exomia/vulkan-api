@@ -24,7 +24,7 @@ public enum VkPipelineRobustnessImageBehaviorEXT
 {
     /// <summary>
     ///     VK_PIPELINE_ROBUSTNESS_IMAGE_BEHAVIOR_DEVICE_DEFAULT_EXT specifies that this pipeline stage follows the
-    ///     robustness behavior of the logical device that created this pipeline
+    ///     behavior of robustness features that are enabled on the device that created this pipeline
     /// </summary>
     VK_PIPELINE_ROBUSTNESS_IMAGE_BEHAVIOR_DEVICE_DEFAULT_EXT = 0,
 

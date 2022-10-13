@@ -734,8 +734,8 @@ public enum VkDynamicState
     /// <summary>
     ///     VK_DYNAMIC_STATE_DEPTH_CLIP_ENABLE_EXT specifies that the depthClipEnable state in
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDepthClipEnableFeaturesEXT.html">
-    ///         VkPhysicalDeviceDepthClipEnableFeaturesEXT
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationDepthClipStateCreateInfoEXT.html">
+    ///         VkPipelineRasterizationDepthClipStateCreateInfoEXT
     ///     </a>
     ///     will be ignored and must be set dynamically with
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthClipEnableEXT.html">vkCmdSetDepthClipEnableEXT</a>
