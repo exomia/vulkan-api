@@ -58,6 +58,17 @@ public readonly unsafe struct VkDeviceSize
         return _size.ToString();
     }
 
+    /// <summary> Implicit cast that converts the given uint to a VkDeviceSize. </summary>
+    /// <param name="size"> The size. </param>
+    /// <returns> The result of the operation. </returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static implicit operator VkDeviceSize(uint size)
+    {
+        VkDeviceSize value;
+        *(ulong*)&value = size;
+        return value;
+    }
+
     /// <summary> Implicit cast that converts the given ulong to a VkDeviceSize. </summary>
     /// <param name="size"> The size. </param>
     /// <returns> The result of the operation. </returns>
@@ -69,11 +80,22 @@ public readonly unsafe struct VkDeviceSize
         return value;
     }
 
-    /// <summary> Explicit cast that converts the given long to a VkDeviceSize. </summary>
+    /// <summary> Implicit cast that converts the given int to a VkDeviceSize. </summary>
     /// <param name="size"> The size. </param>
     /// <returns> The result of the operation. </returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static explicit operator VkDeviceSize(long size)
+    public static implicit operator VkDeviceSize(int size)
+    {
+        VkDeviceSize value;
+        *(long*)&value = size;
+        return value;
+    }
+
+    /// <summary> Implicit cast that converts the given long to a VkDeviceSize. </summary>
+    /// <param name="size"> The size. </param>
+    /// <returns> The result of the operation. </returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static implicit operator VkDeviceSize(long size)
     {
         VkDeviceSize value;
         *(long*)&value = size;

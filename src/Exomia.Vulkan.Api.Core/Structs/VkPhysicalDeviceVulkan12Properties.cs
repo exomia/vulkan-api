@@ -231,7 +231,7 @@ public unsafe struct VkPhysicalDeviceVulkan12Properties
     public VkBool32 shaderInputAttachmentArrayNonUniformIndexingNative;
 
     /// <summary>
-    ///     robustBufferAccessUpdateAfterBind is a boolean value indicating whether robustBufferAccess canbe enabled in a
+    ///     robustBufferAccessUpdateAfterBind is a boolean value indicating whether robustBufferAccess canbe enabled on a
     ///     device simultaneously with descriptorBindingUniformBufferUpdateAfterBind,
     ///     descriptorBindingStorageBufferUpdateAfterBind, descriptorBindingUniformTexelBufferUpdateAfterBind, and/or
     ///     descriptorBindingStorageTexelBufferUpdateAfterBind. If this is VK_FALSE, then either robustBufferAccess must be
