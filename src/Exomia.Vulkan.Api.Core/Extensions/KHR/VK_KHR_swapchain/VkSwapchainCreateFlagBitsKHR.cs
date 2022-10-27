@@ -44,6 +44,15 @@ public enum VkSwapchainCreateFlagBitsKHR
     VK_SWAPCHAIN_CREATE_MUTABLE_FORMAT_BIT_KHR = 0x4,
 
     /// <summary>
+    ///     VK_SWAPCHAIN_CREATE_RESERVED_4_BIT_EXT<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainCreateFlagBitsKHR">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainCreateFlagBitsKHR
+    ///     </a>
+    /// </summary>
+    VK_SWAPCHAIN_CREATE_RESERVED_4_BIT_EXT = 0x10,
+
+    /// <summary>
     ///     VK_SWAPCHAIN_CREATE_RESERVED_3_BIT_SEC<br />
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainCreateFlagBitsKHR">

@@ -44,6 +44,12 @@ public unsafe struct VkPhysicalDeviceShaderCoreBuiltinsPropertiesARM
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
+    /// <summary>
+    ///     shaderCoreMask is a bitfield where each bit set represents the presence of a shader core whose ID is the bit
+    ///     position. The highest ID for any shader core on the device is the position of the most significant bit set.
+    /// </summary>
+    public ulong shaderCoreMask;
+
     /// <summary> shaderCoreCount is the number of shader cores on the device.</summary>
     public uint shaderCoreCount;
 

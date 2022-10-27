@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkArmShaderCoreBuiltins
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_ARM_SHADER_CORE_BUILTINS_SPEC_VERSION = 1;
+    public const uint VK_ARM_SHADER_CORE_BUILTINS_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_ARM_SHADER_CORE_BUILTINS_EXTENSION_NAME = "VK_ARM_shader_core_builtins";

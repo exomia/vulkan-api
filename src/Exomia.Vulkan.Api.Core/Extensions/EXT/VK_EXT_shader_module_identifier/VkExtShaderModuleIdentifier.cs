@@ -50,6 +50,13 @@ public static unsafe class VkExtShaderModuleIdentifier
     public const string VK_EXT_SHADER_MODULE_IDENTIFIER_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u455f\u5458\u535f\u4148\u4544\u5f52\u4f4d\u5544\u454c\u495f\u4544\u544e\u4649\u4549\u5f52\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
+    /// <summary>
+    ///     VK_MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT - Maximum length of a shader module identifier -
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT.html">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT.html
+    ///     </a>
+    /// </summary>
     public const uint VK_MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT = 32;
 
     /// <summary>

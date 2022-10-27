@@ -56,7 +56,10 @@ public static unsafe class VkNvExternalMemoryRdma
     ///     pMemoryGetRemoteAddressInfo is a pointer to a VkMemoryGetRemoteAddressInfoNV
     ///     structure containing parameters of the export operation.
     /// </param>
-    /// <param name="pAddress">pAddress will return the address representing the payload of the device memory object.</param>
+    /// <param name="pAddress">
+    ///     pAddress is a pointer to a VkRemoteAddressNV value in which an address representing the payload
+    ///     of the device memory object is returned.
+    /// </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
