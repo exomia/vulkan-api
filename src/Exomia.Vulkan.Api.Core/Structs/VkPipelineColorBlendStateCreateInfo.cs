@@ -50,7 +50,8 @@ public unsafe struct VkPipelineColorBlendStateCreateInfo
 
     /// <summary>
     ///     pAttachments is a pointer to an array of VkPipelineColorBlendAttachmentState structures defining blend state
-    ///     for each color attachment.
+    ///     for each color attachment. It is ignored if the pipeline is created with VK_DYNAMIC_STATE_COLOR_BLEND_ENABLE_EXT,
+    ///     VK_DYNAMIC_STATE_COLOR_BLEND_EQUATION_EXT, and VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT dynamic states set.
     /// </summary>
     public VkPipelineColorBlendAttachmentState* pAttachments;
 

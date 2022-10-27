@@ -36,7 +36,13 @@ public unsafe struct VkPipelineMultisampleStateCreateInfo
     /// <summary>flags is reserved for future use.</summary>
     public VkPipelineMultisampleStateCreateFlags flags;
 
-    /// <summary>rasterizationSamples is a VkSampleCountFlagBits value specifying the number of samples used in rasterization.</summary>
+    /// <summary>
+    ///     rasterizationSamples is a VkSampleCountFlagBits value specifying the number of samples used in rasterization.
+    ///     This value is ignored for the purposes of setting the number of samples used in rasterization if the pipeline is
+    ///     created with the VK_DYNAMIC_STATE_RASTERIZATION_SAMPLES_EXT dynamic state set, but if
+    ///     VK_DYNAMIC_STATE_SAMPLE_MASK_EXT dynamic state is not set, it is still used to define the size of the pSampleMask
+    ///     array as described below.
+    /// </summary>
     public VkSampleCountFlagBits rasterizationSamples;
 
     /// <summary>sampleShadingEnable can be used to enable Sample Shading.</summary>
