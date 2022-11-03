@@ -1,0 +1,1 @@
+global using VkMemoryDecompressionMethodFlagsNV = Exomia.Vulkan.Api.Core.VkMemoryDecompressionMethodFlagBitsNV;

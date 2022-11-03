@@ -37,7 +37,7 @@ public unsafe struct VkRenderPassCreationFeedbackCreateInfoEXT
     /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
 
-    /// <summary>pNext is NULL or a pointer to an extension-specific structure.</summary>
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
     /// <summary>

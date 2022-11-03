@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceLinearColorAttachmentFeaturesNV - Structure describing whether 'glossary-linear-color-attachment,
-///     Linear Color Attachment' rendering is supported by the implementation -
+///     VkPhysicalDeviceCopyMemoryIndirectFeaturesNV - Structure describing indirect copy features supported by an
+///     implementation -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLinearColorAttachmentFeaturesNV.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLinearColorAttachmentFeaturesNV.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCopyMemoryIndirectFeaturesNV.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCopyMemoryIndirectFeaturesNV.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -30,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPhysicalDeviceFeatures2,VkDeviceCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV
+public unsafe struct VkPhysicalDeviceCopyMemoryIndirectFeaturesNV
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_COPY_MEMORY_INDIRECT_FEATURES_NV;
 
     /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
@@ -41,6 +41,6 @@ public unsafe struct VkPhysicalDeviceLinearColorAttachmentFeaturesNV
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary> linearColorAttachment indicates whether the implementation supports renderable Linear Color Attachment</summary>
-    public VkBool32 linearColorAttachment;
+    /// <summary> indirectCopy indicates whether indirect copies are supported.</summary>
+    public VkBool32 indirectCopy;
 }
