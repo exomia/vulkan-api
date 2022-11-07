@@ -356,12 +356,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_LINEAR_COLOR_ATTACHMENT_BIT_NV specifies that    the format is supported as a renderable
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#glossary">
-    ///         Linear Color
-    ///         Attachment
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#glossary-linear-color-attachment">
+    ///         Linear
+    ///         Color Attachment
     ///     </a>
-    ///     .    This bit will be set for renderable color formats in the    linearTilingFeatures. This must
-    ///     not be set in the optimalTilingFeatures or bufferFeatures members.
+    ///     .    This bit will be set for renderable color formats in the    linearTilingFeatures. This
+    ///     must not be set in the optimalTilingFeatures or bufferFeatures members.
     /// </summary>
     VK_FORMAT_FEATURE_2_LINEAR_COLOR_ATTACHMENT_BIT_NV = 0x4000000000,
 
