@@ -45,8 +45,8 @@ public unsafe struct VkPhysicalDeviceMemoryDecompressionPropertiesNV
     public void* pNext;
 
     /// <summary>
-    ///     decompressionMethods specifies the list of all the memory decompression methods supported by the
-    ///     implementation as a bitmask of VkMemoryDecompressionMethodFlagBitsNV.
+    ///     decompressionMethods is a bitmask of VkMemoryDecompressionMethodFlagBitsNV specifying memory decompression
+    ///     methods supported by the implementation.
     /// </summary>
     public VkMemoryDecompressionMethodFlagsNV decompressionMethods;
 

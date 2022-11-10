@@ -323,8 +323,8 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_COPY_BIT_KHR = 0x10000000,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
+    ///     VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT specifies the execution of
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#micromap">micromap commands</a>.
     /// </summary>
     VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT = 0x40000000,
 
