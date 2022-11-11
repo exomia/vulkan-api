@@ -33,8 +33,8 @@ public struct VkDecompressMemoryRegionNV
     public VkDeviceSize decompressedSize;
 
     /// <summary>
-    ///     decompressionMethod is a single bit value from VkMemoryDecompressionMethodFlagBitsNV which specifies the
-    ///     decompression method used to decompress data.
+    ///     decompressionMethod is a bitmask of VkMemoryDecompressionMethodFlagBitsNV with a single bit set specifying the
+    ///     method used to decompress data.
     /// </summary>
     public VkMemoryDecompressionMethodFlagsNV decompressionMethod;
 }

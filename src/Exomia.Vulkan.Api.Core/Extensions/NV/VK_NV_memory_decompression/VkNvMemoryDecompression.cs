@@ -52,10 +52,10 @@ public static unsafe class VkNvMemoryDecompression
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDecompressMemoryNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDecompressMemoryNV.html</a>
     /// </summary>
     /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="decompressRegionCount">decompressRegionCount is the number of decompressions to execute.</param>
+    /// <param name="decompressRegionCount">decompressRegionCount is the number of memory regions to decompress.</param>
     /// <param name="pDecompressMemoryRegions">
-    ///     pDecompressMemoryRegions is a pointer to an array of size decompressRegionCount
-    ///     of VkDecompressMemoryRegionNVstructures used to specify the decompression parameters.
+    ///     pDecompressMemoryRegions is a pointer to an array of decompressRegionCount
+    ///     VkDecompressMemoryRegionNV structures specifying decompression parameters.
     /// </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,

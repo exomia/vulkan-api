@@ -24,8 +24,8 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkMemoryDecompressionMethodFlagBitsNV : ulong
 {
     /// <summary>
-    ///     VK_MEMORY_DECOMPRESSION_METHOD_GDEFLATE_1_0_BIT_NV specifies that GDEFLATE 1.0 algorithm is used to decompress
-    ///     data.
+    ///     VK_MEMORY_DECOMPRESSION_METHOD_GDEFLATE_1_0_BIT_NV specifies that the GDeflate 1.0 algorithm is used to
+    ///     decompress data.
     /// </summary>
     VK_MEMORY_DECOMPRESSION_METHOD_GDEFLATE_1_0_BIT_NV = 0x1
 }
