@@ -419,10 +419,14 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT = 0x80000,
 
     /// <summary>
-    ///     VK_ACCESS_2_RESERVED_41_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
+    ///     VK_ACCESS_2_DESCRIPTOR_BUFFER_READ_BIT_EXT specifies read access to a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorbuffers">
+    ///         descriptor
+    ///         buffer
+    ///     </a>
+    ///     in any shader pipeline stage.
     /// </summary>
-    VK_ACCESS_2_RESERVED_41_BIT_AMD = 0x20000000000,
+    VK_ACCESS_2_DESCRIPTOR_BUFFER_READ_BIT_EXT = 0x20000000000,
 
     /// <summary>
     ///     VK_ACCESS_2_INVOCATION_MASK_READ_BIT_HUAWEI specifies read access to a invocation mask image in the

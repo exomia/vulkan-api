@@ -329,6 +329,12 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT = 0x40000000,
 
     /// <summary>
+    ///     VK_PIPELINE_STAGE_2_RESEVED_41_BIT_HUAWEI<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
+    /// </summary>
+    VK_PIPELINE_STAGE_2_RESEVED_41_BIT_HUAWEI = 0x20000000000,
+
+    /// <summary>
     ///     VK_PIPELINE_STAGE_2_OPTICAL_FLOW_BIT_NV specifies the stage of the pipeline where
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#opticalflow-operations">
     ///         optical

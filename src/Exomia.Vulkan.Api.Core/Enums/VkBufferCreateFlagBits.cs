@@ -51,10 +51,15 @@ public enum VkBufferCreateFlagBits
     VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT = 0x10,
 
     /// <summary>
-    ///     VK_BUFFER_CREATE_RESERVED_5_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferCreateFlagBits</a>
+    ///     VK_BUFFER_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXTspecifies that the buffer can be used with descriptor
+    ///     buffers when capturing and replaying (e.g. for trace capture and replay), see
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOpaqueCaptureDescriptorDataCreateInfoEXT.html">
+    ///         VkOpaqueCaptureDescriptorDataCreateInfoEXT
+    ///     </a>
+    ///     for more detail.
     /// </summary>
-    VK_BUFFER_CREATE_RESERVED_5_BIT_AMD = 0x20,
+    VK_BUFFER_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXT = 0x20,
 
     /// <summary>
     ///     VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the buffer&#8217;s address can be saved and

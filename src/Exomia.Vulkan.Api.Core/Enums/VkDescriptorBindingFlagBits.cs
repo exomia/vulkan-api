@@ -73,8 +73,13 @@ public enum VkDescriptorBindingFlagBits
     ///     last binding in the descriptor set     layout (i.e. the binding with the largest value of binding).     For the
     ///     purposes of counting against limits such as     maxDescriptorSet* and maxPerStageDescriptor*, the full value     of
     ///     descriptorCount is     counted, except for descriptor bindings with a descriptor type of
-    ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.     In this case, descriptorCount specifies the upper bound on the
-    ///     byte size of the binding; thus it counts against the
+    ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK, when
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html">
+    ///         VkDescriptorSetLayoutCreateInfo
+    ///     </a>
+    ///     ::flags does not contain     VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT.     In this case,
+    ///     descriptorCount specifies the upper bound on the     byte size of the binding; thus it counts against the
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformBlockSize">
     ///         <code>maxInlineUniformBlockSize</code>
@@ -147,8 +152,13 @@ public enum VkDescriptorBindingFlagBits
     ///     last binding in the descriptor set     layout (i.e. the binding with the largest value of binding).     For the
     ///     purposes of counting against limits such as     maxDescriptorSet* and maxPerStageDescriptor*, the full value     of
     ///     descriptorCount is     counted, except for descriptor bindings with a descriptor type of
-    ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK.     In this case, descriptorCount specifies the upper bound on the
-    ///     byte size of the binding; thus it counts against the
+    ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK, when
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html">
+    ///         VkDescriptorSetLayoutCreateInfo
+    ///     </a>
+    ///     ::flags does not contain     VK_DESCRIPTOR_SET_LAYOUT_CREATE_DESCRIPTOR_BUFFER_BIT_EXT.     In this case,
+    ///     descriptorCount specifies the upper bound on the     byte size of the binding; thus it counts against the
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#limits-maxInlineUniformBlockSize">
     ///         <code>maxInlineUniformBlockSize</code>

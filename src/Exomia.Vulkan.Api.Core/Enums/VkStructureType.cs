@@ -3548,6 +3548,84 @@ public enum VkStructureType
     VK_STRUCTURE_TYPE_CHECKPOINT_DATA_2_NV = 1000314009,
 
     /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_BUFFER_PROPERTIES_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_BUFFER_PROPERTIES_EXT = 1000316000,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_BUFFER_DENSITY_MAP_PROPERTIES_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_BUFFER_DENSITY_MAP_PROPERTIES_EXT = 1000316001,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_BUFFER_FEATURES_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_BUFFER_FEATURES_EXT = 1000316002,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_DESCRIPTOR_ADDRESS_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_DESCRIPTOR_ADDRESS_INFO_EXT = 1000316003,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_DESCRIPTOR_GET_INFO_EXT = 1000316004,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_BUFFER_CAPTURE_DESCRIPTOR_DATA_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_BUFFER_CAPTURE_DESCRIPTOR_DATA_INFO_EXT = 1000316005,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_IMAGE_CAPTURE_DESCRIPTOR_DATA_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_IMAGE_CAPTURE_DESCRIPTOR_DATA_INFO_EXT = 1000316006,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_IMAGE_VIEW_CAPTURE_DESCRIPTOR_DATA_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_IMAGE_VIEW_CAPTURE_DESCRIPTOR_DATA_INFO_EXT = 1000316007,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_SAMPLER_CAPTURE_DESCRIPTOR_DATA_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_SAMPLER_CAPTURE_DESCRIPTOR_DATA_INFO_EXT = 1000316008,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_OPAQUE_CAPTURE_DESCRIPTOR_DATA_CREATE_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_OPAQUE_CAPTURE_DESCRIPTOR_DATA_CREATE_INFO_EXT = 1000316010,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_DESCRIPTOR_BUFFER_BINDING_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_DESCRIPTOR_BUFFER_BINDING_INFO_EXT = 1000316011,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_DESCRIPTOR_BUFFER_BINDING_PUSH_DESCRIPTOR_BUFFER_HANDLE_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_DESCRIPTOR_BUFFER_BINDING_PUSH_DESCRIPTOR_BUFFER_HANDLE_EXT = 1000316012,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_ACCELERATION_STRUCTURE_CAPTURE_DESCRIPTOR_DATA_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_ACCELERATION_STRUCTURE_CAPTURE_DESCRIPTOR_DATA_INFO_EXT = 1000316009,
+
+    /// <summary>
     ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_FEATURES_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
