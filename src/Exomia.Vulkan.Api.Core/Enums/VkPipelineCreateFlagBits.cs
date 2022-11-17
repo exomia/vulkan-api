@@ -180,10 +180,16 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_LIBRARY_BIT_KHR = 0x800,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_RESERVED_29_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
+    ///     VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT specifies that a pipeline will be used with
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorbuffers">
+    ///         descriptor
+    ///         buffers
+    ///     </a>
+    ///     , rather than
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets">descriptor sets</a>
+    ///     .
     /// </summary>
-    VK_PIPELINE_CREATE_RESERVED_29_AMD = 0x20000000,
+    VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT = 0x20000000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_EXTspecifies that pipeline libraries should retain

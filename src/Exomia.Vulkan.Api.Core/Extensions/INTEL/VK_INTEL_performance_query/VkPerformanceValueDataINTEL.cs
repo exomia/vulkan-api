@@ -32,7 +32,7 @@ public unsafe struct VkPerformanceValueDataINTEL
     [FieldOffset(0)]
     public float valueFloat;
 
-    /// <summary>data.valueBool represents Bool32 data.</summary>
+    /// <summary>data.valueBool represents VkBool32 data.</summary>
     [FieldOffset(0)]
     public VkBool32 valueBool;
 

@@ -27,10 +27,15 @@ public enum VkImageViewCreateFlagBits
     VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DYNAMIC_BIT_EXT = 0x1,
 
     /// <summary>
-    ///     VK_IMAGE_VIEW_CREATE_RESERVED_2_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageViewCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageViewCreateFlagBits</a>
+    ///     VK_IMAGE_VIEW_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXTspecifies that the image view can be used with
+    ///     descriptor buffers when capturing and replaying (e.g. for trace capture and replay), see
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOpaqueCaptureDescriptorDataCreateInfoEXT.html">
+    ///         VkOpaqueCaptureDescriptorDataCreateInfoEXT
+    ///     </a>
+    ///     for more detail.
     /// </summary>
-    VK_IMAGE_VIEW_CREATE_RESERVED_2_BIT_AMD = 0x4,
+    VK_IMAGE_VIEW_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXT = 0x4,
 
     /// <summary>
     ///     VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DEFERRED_BIT_EXTspecifies that the fragment density map will be read

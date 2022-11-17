@@ -218,16 +218,23 @@ public enum VkBufferUsageFlagBits
     VK_BUFFER_USAGE_VIDEO_ENCODE_SRC_BIT_KHR = 0x10000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_RESERVED_21_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
+    ///     VK_BUFFER_USAGE_SAMPLER_DESCRIPTOR_BUFFER_BIT_EXT specifies that the buffer is suitable to contain sampler and
+    ///     combined image sampler descriptors when bound as a descriptor buffer. Buffers containing combined image sampler
+    ///     descriptors must also specify VK_BUFFER_USAGE_RESOURCE_DESCRIPTOR_BUFFER_BIT_EXT.
     /// </summary>
-    VK_BUFFER_USAGE_RESERVED_21_BIT_AMD = 0x200000,
+    VK_BUFFER_USAGE_SAMPLER_DESCRIPTOR_BUFFER_BIT_EXT = 0x200000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_RESERVED_22_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
+    ///     VK_BUFFER_USAGE_RESOURCE_DESCRIPTOR_BUFFER_BIT_EXT specifies that the buffer is suitable to contain resource
+    ///     descriptors when bound as a descriptor buffer.
     /// </summary>
-    VK_BUFFER_USAGE_RESERVED_22_BIT_AMD = 0x400000,
+    VK_BUFFER_USAGE_RESOURCE_DESCRIPTOR_BUFFER_BIT_EXT = 0x400000,
+
+    /// <summary>
+    ///     VK_BUFFER_USAGE_PUSH_DESCRIPTORS_DESCRIPTOR_BUFFER_BIT_EXTspecifies that the buffer, when bound, can be used
+    ///     by the implementation to support push descriptors when using descriptor buffers.
+    /// </summary>
+    VK_BUFFER_USAGE_PUSH_DESCRIPTORS_DESCRIPTOR_BUFFER_BIT_EXT = 0x4000000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_MICROMAP_BUILD_INPUT_READ_ONLY_BIT_EXT<br />

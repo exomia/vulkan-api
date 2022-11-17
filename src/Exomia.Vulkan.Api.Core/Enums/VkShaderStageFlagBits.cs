@@ -81,6 +81,12 @@ public enum VkShaderStageFlagBits
     VK_SHADER_STAGE_SUBPASS_SHADING_BIT_HUAWEI = 0x4000,
 
     /// <summary>
+    ///     VK_SHADER_STAGE_RESERVED_19_BIT_HUAWEI<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits</a>
+    /// </summary>
+    VK_SHADER_STAGE_RESERVED_19_BIT_HUAWEI = 0x80000,
+
+    /// <summary>
     ///     VK_SHADER_STAGE_EXT_483_RESERVE_15<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits</a>
     /// </summary>

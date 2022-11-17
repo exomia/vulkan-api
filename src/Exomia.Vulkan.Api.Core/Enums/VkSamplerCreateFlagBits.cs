@@ -33,10 +33,15 @@ public enum VkSamplerCreateFlagBits
     VK_SAMPLER_CREATE_SUBSAMPLED_COARSE_RECONSTRUCTION_BIT_EXT = 0x2,
 
     /// <summary>
-    ///     VK_SAMPLER_CREATE_RESERVED_3_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSamplerCreateFlagBits</a>
+    ///     VK_SAMPLER_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXTspecifies that the sampler can be used with descriptor
+    ///     buffers when capturing and replaying (e.g. for trace capture and replay), see
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOpaqueCaptureDescriptorDataCreateInfoEXT.html">
+    ///         VkOpaqueCaptureDescriptorDataCreateInfoEXT
+    ///     </a>
+    ///     for more detail.
     /// </summary>
-    VK_SAMPLER_CREATE_RESERVED_3_BIT_AMD = 0x8,
+    VK_SAMPLER_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXT = 0x8,
 
     /// <summary>
     ///     VK_SAMPLER_CREATE_NON_SEAMLESS_CUBE_MAP_BIT_EXT specifies that

@@ -31,13 +31,15 @@ public enum VkAccelerationStructureCreateFlagBitsKHR
     VK_ACCELERATION_STRUCTURE_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT_KHR = 0x1,
 
     /// <summary>
-    ///     VK_ACCELERATION_STRUCTURE_CREATE_RESERVED_3_BIT_AMD<br />
+    ///     VK_ACCELERATION_STRUCTURE_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXTspecifies that the acceleration structure
+    ///     can be used with descriptor buffers when capturing and replaying (e.g. for trace capture and replay), see
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccelerationStructureCreateFlagBitsKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccelerationStructureCreateFlagBitsKHR
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOpaqueCaptureDescriptorDataCreateInfoEXT.html">
+    ///         VkOpaqueCaptureDescriptorDataCreateInfoEXT
     ///     </a>
+    ///     for more detail.
     /// </summary>
-    VK_ACCELERATION_STRUCTURE_CREATE_RESERVED_3_BIT_AMD = 0x8,
+    VK_ACCELERATION_STRUCTURE_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXT = 0x8,
 
     /// <summary>
     ///     VK_ACCELERATION_STRUCTURE_CREATE_MOTION_BIT_NV<br />

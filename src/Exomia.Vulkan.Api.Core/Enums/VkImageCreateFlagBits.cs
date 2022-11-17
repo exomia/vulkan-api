@@ -175,10 +175,15 @@ public enum VkImageCreateFlagBits
     VK_IMAGE_CREATE_RESERVED_19_BIT_EXT = 0x80000,
 
     /// <summary>
-    ///     VK_IMAGE_CREATE_RESERVED_16_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits</a>
+    ///     VK_IMAGE_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXT specifies that the image can be used with descriptor
+    ///     buffers when capturing and replaying (e.g. for trace capture and replay), see
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOpaqueCaptureDescriptorDataCreateInfoEXT.html">
+    ///         VkOpaqueCaptureDescriptorDataCreateInfoEXT
+    ///     </a>
+    ///     for more detail.
     /// </summary>
-    VK_IMAGE_CREATE_RESERVED_16_BIT_AMD = 0x10000,
+    VK_IMAGE_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXT = 0x10000,
 
     /// <summary>
     ///     VK_IMAGE_CREATE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_BIT_EXTspecifies that an image can be used with
