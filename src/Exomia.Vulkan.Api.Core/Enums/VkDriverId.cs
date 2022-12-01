@@ -158,6 +158,12 @@ public enum VkDriverId
     VK_DRIVER_ID_MESA_DOZEN = 23,
 
     /// <summary>
+    ///     VK_DRIVER_ID_MESA_NVK<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId</a>
+    /// </summary>
+    VK_DRIVER_ID_MESA_NVK = 24,
+
+    /// <summary>
     ///     VK_DRIVER_ID_AMD_PROPRIETARY_KHR<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId</a>
     /// </summary>

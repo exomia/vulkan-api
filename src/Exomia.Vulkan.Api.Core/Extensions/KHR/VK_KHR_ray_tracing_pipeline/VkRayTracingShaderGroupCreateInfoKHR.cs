@@ -65,7 +65,8 @@ public unsafe struct VkRayTracingShaderGroupCreateInfoKHR
     public uint intersectionShader;
 
     /// <summary>
-    ///     pShaderGroupCaptureReplayHandle is NULL or a pointer to replay information for this shader group. Ignored if
+    ///     pShaderGroupCaptureReplayHandle is NULL or a pointer to replay information for this shader group queried from
+    ///     vkGetRayTracingCaptureReplayShaderGroupHandlesKHR, as described in Ray Tracing Capture Replay. Ignored if
     ///     VkPhysicalDeviceRayTracingPipelineFeaturesKHR::rayTracingPipelineShaderGroupHandleCaptureReplayis VK_FALSE.
     /// </summary>
     public void* pShaderGroupCaptureReplayHandle;
