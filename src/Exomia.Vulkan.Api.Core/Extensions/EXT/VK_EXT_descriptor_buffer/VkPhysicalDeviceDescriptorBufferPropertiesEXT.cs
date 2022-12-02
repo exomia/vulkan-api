@@ -150,25 +150,25 @@ public unsafe struct VkPhysicalDeviceDescriptorBufferPropertiesEXT
 
     /// <summary>
     ///     uniformTexelBufferDescriptorSize indicates the size in bytes of a VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER
-    ///     descriptor if the robust buffer access feature is not enabled.
+    ///     descriptor if the robustBufferAccess feature is not enabled.
     /// </summary>
     public nuint uniformTexelBufferDescriptorSize;
 
     /// <summary>
     ///     robustUniformTexelBufferDescriptorSize indicates the size in bytes of a
-    ///     VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER descriptor if the robust buffer access feature is enabled.
+    ///     VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER descriptor if the robustBufferAccess feature is enabled.
     /// </summary>
     public nuint robustUniformTexelBufferDescriptorSize;
 
     /// <summary>
     ///     storageTexelBufferDescriptorSize indicates the size in bytes of a VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER
-    ///     descriptor if the robust buffer access feature is not enabled.
+    ///     descriptor if the robustBufferAccess feature is not enabled.
     /// </summary>
     public nuint storageTexelBufferDescriptorSize;
 
     /// <summary>
     ///     robustStorageTexelBufferDescriptorSize indicates the size in bytes of a
-    ///     VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER descriptor if the robust buffer access feature is enabled.
+    ///     VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER descriptor if the robustBufferAccess feature is enabled.
     /// </summary>
     public nuint robustStorageTexelBufferDescriptorSize;
 
@@ -177,7 +177,7 @@ public unsafe struct VkPhysicalDeviceDescriptorBufferPropertiesEXT
 
     /// <summary>
     ///     robustUniformBufferDescriptorSize indicates the size in bytes of a VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER
-    ///     descriptor if the robust buffer access feature is enabled.
+    ///     descriptor if the robustBufferAccess feature is enabled.
     /// </summary>
     public nuint robustUniformBufferDescriptorSize;
 
@@ -186,7 +186,7 @@ public unsafe struct VkPhysicalDeviceDescriptorBufferPropertiesEXT
 
     /// <summary>
     ///     robustStorageBufferDescriptorSize indicates the size in bytes of a VK_DESCRIPTOR_TYPE_STORAGE_BUFFER
-    ///     descriptor if the robust buffer access feature is enabled.
+    ///     descriptor if the robustBufferAccess feature is enabled.
     /// </summary>
     public nuint robustStorageBufferDescriptorSize;
 

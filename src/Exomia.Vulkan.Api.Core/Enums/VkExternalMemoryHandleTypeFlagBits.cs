@@ -84,8 +84,9 @@ public enum VkExternalMemoryHandleTypeFlagBits
     VK_EXTERNAL_MEMORY_HANDLE_TYPE_DMA_BUF_BIT_EXT = 0x200,
 
     /// <summary>
-    ///     VK_EXTERNAL_MEMORY_HANDLE_TYPE_ANDROID_HARDWARE_BUFFER_BIT_ANDROIDspecifies an AHardwareBuffer object defined by
-    ///     the Android NDK. See
+    ///     VK_EXTERNAL_MEMORY_HANDLE_TYPE_ANDROID_HARDWARE_BUFFER_BIT_ANDROIDspecifies an
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/AHardwareBuffer.html">AHardwareBuffer</a>
+    ///     object defined by the Android NDK. See
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#memory-external-android-hardware-buffer">
     ///         Android
