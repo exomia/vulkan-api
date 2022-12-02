@@ -167,8 +167,8 @@ public static unsafe class VkKhrRayTracingPipeline
         VkResult> vkGetRayTracingShaderGroupHandlesKHR = null;
 
     /// <summary>
-    ///     vkGetRayTracingCaptureReplayShaderGroupHandlesKHR - Query ray tracing capture replay pipeline shader group handles
-    ///     -
+    ///     vkGetRayTracingCaptureReplayShaderGroupHandlesKHR - Query opaque capture replay data for pipeline shader group
+    ///     handles -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRayTracingCaptureReplayShaderGroupHandlesKHR.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRayTracingCaptureReplayShaderGroupHandlesKHR.html
