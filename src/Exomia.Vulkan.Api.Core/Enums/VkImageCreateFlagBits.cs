@@ -196,8 +196,8 @@ public enum VkImageCreateFlagBits
     VK_IMAGE_CREATE_MULTISAMPLED_RENDER_TO_SINGLE_SAMPLED_BIT_EXT = 0x40000,
 
     /// <summary>
-    ///     VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageCreateFlagBits</a>
+    ///     VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT specifies that the image can be used to create a VkImageView of
+    ///     type VK_IMAGE_VIEW_TYPE_2D.
     /// </summary>
     VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT = 0x20000,
 

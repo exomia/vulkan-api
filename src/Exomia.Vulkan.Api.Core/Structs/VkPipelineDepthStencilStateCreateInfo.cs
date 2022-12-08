@@ -60,10 +60,10 @@ public unsafe struct VkPipelineDepthStencilStateCreateInfo
     /// <summary>stencilTestEnable controls whether stencil testing is enabled.</summary>
     public VkBool32 stencilTestEnable;
 
-    /// <summary>front and back control the parameters of the stencil test.</summary>
+    /// <summary>front and back are VkStencilOpState values controlling the corresponding parameters of the stencil test.</summary>
     public VkStencilOpState front;
 
-    /// <summary>front and back control the parameters of the stencil test.</summary>
+    /// <summary>front and back are VkStencilOpState values controlling the corresponding parameters of the stencil test.</summary>
     public VkStencilOpState back;
 
     /// <summary>minDepthBounds is the minimum depth bound used in the depth bounds test.</summary>

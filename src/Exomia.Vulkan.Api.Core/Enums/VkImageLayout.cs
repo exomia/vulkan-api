@@ -146,14 +146,7 @@ public enum VkImageLayout
     /// </summary>
     VK_IMAGE_LAYOUT_ATTACHMENT_OPTIMAL = 1000314001,
 
-    /// <summary>
-    ///     VK_IMAGE_LAYOUT_PRESENT_SRC_KHR must only be used for presenting a presentable image for display. A swapchain
-    ///     &#8217;s image must be transitioned to this layout before calling
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueuePresentKHR.html">vkQueuePresentKHR</a>
-    ///     , and must be transitioned away from this layout after calling
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImageKHR.html">vkAcquireNextImageKHR</a>
-    ///     .
-    /// </summary>
+    /// <summary>VK_IMAGE_LAYOUT_PRESENT_SRC_KHR must only be used for presenting a presentable image for display.</summary>
     VK_IMAGE_LAYOUT_PRESENT_SRC_KHR = 1000001002,
 
     /// <summary>

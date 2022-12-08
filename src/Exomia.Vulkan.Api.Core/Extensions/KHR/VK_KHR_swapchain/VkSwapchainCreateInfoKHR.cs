@@ -55,7 +55,8 @@ public unsafe struct VkSwapchainCreateInfoKHR
     ///     extent does not match the surface&#8217;s currentExtent as returned by
     ///     vkGetPhysicalDeviceSurfaceCapabilitiesKHR.NoteOn some platforms, it is normal that maxImageExtent may become (0,
     ///     0), for example when the window is minimized. In such a case, it is not possible to create a swapchain due to the
-    ///     Valid Usage requirements.
+    ///     Valid Usage requirements , unless scaling is selected through VkSwapchainPresentScalingCreateInfoEXT, if supported
+    ///     .
     /// </summary>
     public VkExtent2D imageExtent;
 

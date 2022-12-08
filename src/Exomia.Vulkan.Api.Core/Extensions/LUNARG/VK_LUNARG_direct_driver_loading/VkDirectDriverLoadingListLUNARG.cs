@@ -34,48 +34,18 @@ public unsafe struct VkDirectDriverLoadingListLUNARG
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DIRECT_DRIVER_LOADING_LIST_LUNARG;
 
-    /// <summary>
-    ///     sType<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG
-    ///     </a>
-    /// </summary>
+    /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
 
-    /// <summary>
-    ///     pNext<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG
-    ///     </a>
-    /// </summary>
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     mode<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG
-    ///     </a>
-    /// </summary>
+    /// <summary>mode controls the mode in which to load the provided drivers.</summary>
     public VkDirectDriverLoadingModeLUNARG mode;
 
-    /// <summary>
-    ///     driverCount<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG
-    ///     </a>
-    /// </summary>
+    /// <summary>driverCount is the number of driver manifest paths.</summary>
     public uint driverCount;
 
-    /// <summary>
-    ///     pDrivers<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingListLUNARG
-    ///     </a>
-    /// </summary>
+    /// <summary>pDrivers is a pointer to an array of driverCountVkDirectDriverLoadingInfoLUNARG structures.</summary>
     public VkDirectDriverLoadingInfoLUNARG* pDrivers;
 }
