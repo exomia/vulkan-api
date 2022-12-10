@@ -27,39 +27,18 @@ public unsafe struct VkDirectDriverLoadingInfoLUNARG
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DIRECT_DRIVER_LOADING_INFO_LUNARG;
 
-    /// <summary>
-    ///     sType<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingInfoLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingInfoLUNARG
-    ///     </a>
-    /// </summary>
+    /// <summary>sType is the type of this structure.</summary>
     public VkStructureType sType;
 
-    /// <summary>
-    ///     pNext<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingInfoLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingInfoLUNARG
-    ///     </a>
-    /// </summary>
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     flags<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingInfoLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingInfoLUNARG
-    ///     </a>
-    /// </summary>
+    /// <summary>flags is reserved for future use.</summary>
     public VkDirectDriverLoadingFlagsLUNARG flags;
 
     /// <summary>
-    ///     pfnGetInstanceProcAddr<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingInfoLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingInfoLUNARG
-    ///     </a>
+    ///     pfnGetInstanceProcAddr is a PFN_vkGetInstanceProcAddrLUNARGpointer to the driver vkGetInstanceProcAddr
+    ///     function.
     /// </summary>
     public delegate*<VkInstance /*instance*/, byte* /*pName*/, delegate*<void>> pfnGetInstanceProcAddr;
 }

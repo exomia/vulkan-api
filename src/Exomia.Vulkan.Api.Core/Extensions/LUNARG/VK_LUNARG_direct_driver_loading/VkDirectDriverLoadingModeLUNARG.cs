@@ -23,20 +23,14 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkDirectDriverLoadingModeLUNARG
 {
     /// <summary>
-    ///     VK_DIRECT_DRIVER_LOADING_MODE_EXCLUSIVE_LUNARG<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingModeLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingModeLUNARG
-    ///     </a>
+    ///     VK_DIRECT_DRIVER_LOADING_MODE_EXCLUSIVE_LUNARG specifies that the provided drivers are used instead of the
+    ///     system-loaded drivers.
     /// </summary>
     VK_DIRECT_DRIVER_LOADING_MODE_EXCLUSIVE_LUNARG = 0,
 
     /// <summary>
-    ///     VK_DIRECT_DRIVER_LOADING_MODE_INCLUSIVE_LUNARG<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingModeLUNARG">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDirectDriverLoadingModeLUNARG
-    ///     </a>
+    ///     VK_DIRECT_DRIVER_LOADING_MODE_INCLUSIVE_LUNARG specifies that the provided drivers are used in addition to the
+    ///     system-loaded drivers.
     /// </summary>
     VK_DIRECT_DRIVER_LOADING_MODE_INCLUSIVE_LUNARG = 1
 }
