@@ -215,22 +215,22 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT = 0x4000000000,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_VIDEO_DECODE_BIT_KHR specifies the stage of the pipeline where
+    ///     VK_PIPELINE_STAGE_2_VIDEO_DECODE_BIT_KHR specifies the execution of
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
-    ///         decode operation
+    ///         decode operations
     ///     </a>
-    ///     are performed.
+    ///     .
     /// </summary>
     VK_PIPELINE_STAGE_2_VIDEO_DECODE_BIT_KHR = 0x4000000,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_VIDEO_ENCODE_BIT_KHR specifies the stage of the pipeline where
+    ///     VK_PIPELINE_STAGE_2_VIDEO_ENCODE_BIT_KHR specifies the execution of
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
-    ///         encode operation
+    ///         encode operations
     ///     </a>
-    ///     are performed.
+    ///     .
     /// </summary>
     VK_PIPELINE_STAGE_2_VIDEO_ENCODE_BIT_KHR = 0x8000000,
 

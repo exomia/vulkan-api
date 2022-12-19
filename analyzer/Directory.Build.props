@@ -1,4 +1,4 @@
-<!--EXTERNAL_PROPERTIES: VersionSuffix;MSBuildThisFileDirectory-->
+<!--EXTERNAL_PROPERTIES: MSBuildThisFileDirectory-->
 <Project>
   <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
 

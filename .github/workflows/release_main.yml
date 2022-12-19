@@ -40,9 +40,9 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps: 
     - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v2   
+    - uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
     - run: |
         dotnet build Exomia.Vulkan.Api.Core.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-core-build:
@@ -68,9 +68,9 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v2   
+    - uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
     - run: |  
         dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Debug --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
@@ -88,9 +88,9 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v2   
+    - uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
     - run: |  
         dotnet pack Exomia.Vulkan.Api.Core.sln --configuration Release --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
@@ -133,9 +133,9 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps: 
     - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v2   
+    - uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
     - run: |
         dotnet build Exomia.Vulkan.Api.Platforms.sln --configuration ${{ matrix.configurations }} --force --nologo -p:Platform="${{ matrix.platforms }}"
   check-platforms-build:
@@ -161,9 +161,9 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v2   
+    - uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
     - run: |  
         dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Debug --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'
@@ -181,9 +181,9 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v2   
+    - uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
     - run: |  
         dotnet pack Exomia.Vulkan.Api.Platforms.sln --configuration Release --force --nologo --output ~/.packages -p:Platform="${{ matrix.platforms }}"
     - name: 'publish ${{ github.repository }} to github'

@@ -68,12 +68,17 @@ public enum VkImageUsageFlagBits
     VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT = 0x80,
 
     /// <summary>
-    ///     VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR specifies that
+    ///     VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR specifies that the image can be used as a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#decode-output-picture">
+    ///         decode
+    ///         output picture
+    ///     </a>
+    ///     in a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
-    ///         decode operations
+    ///         decode operation
     ///     </a>
-    ///     can use the image as an output picture for video decode operations.
+    ///     .
     /// </summary>
     VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR = 0x400,
 
@@ -81,41 +86,22 @@ public enum VkImageUsageFlagBits
     VK_IMAGE_USAGE_VIDEO_DECODE_SRC_BIT_KHR = 0x800,
 
     /// <summary>
-    ///     VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR specifies that
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
-    ///         video
-    ///         decode operations
+    ///     VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR specifies that the image can be used as an output
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reconstructed-picture">
+    ///         reconstructed
+    ///         picture
     ///     </a>
-    ///     can use the image as a
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-picture-resources">
-    ///         DPB
-    ///         Video Picture Resource
-    ///     </a>
-    ///     , representing a
+    ///     or an input
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
     ///         reference
     ///         picture
     ///     </a>
-    ///     . If an implementation requires separate allocations for DPB and decode output, indicating this by
-    ///     returning VK_ERROR_FORMAT_NOT_SUPPORTEDto any
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html">
-    ///         vkGetPhysicalDeviceVideoFormatPropertiesKHR
+    ///     in a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///         video
+    ///         decode operation
     ///     </a>
-    ///     call with both VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR and VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR usage bits, then
-    ///     VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR must not be combined with any other VK_IMAGE_USAGE_* flags. Otherwise,
-    ///     VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR must be combined with VK_IMAGE_USAGE_VIDEO_DECODE_DST_BIT_KHR, if the DPB
-    ///     image is required to coincide with the decoded output picture. In the case where DPB coincides with the decoded
-    ///     output picture, image resources can be used as
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
-    ///         reference
-    ///         pictures
-    ///     </a>
-    ///     only after acting as targets for video decode operations, where its image view must be set to both
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeInfoKHR.html">VkVideoDecodeInfoKHR</a>
-    ///     ::pSetupReferenceSlot-&gt;pPictureResource-&gt;imageViewBindingand
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeInfoKHR.html">VkVideoDecodeInfoKHR</a>
-    ///     ::dstPictureResource.imageViewBinding.
+    ///     .
     /// </summary>
     VK_IMAGE_USAGE_VIDEO_DECODE_DPB_BIT_KHR = 0x1000,
 
@@ -170,33 +156,33 @@ public enum VkImageUsageFlagBits
     /// <summary>
     ///     VK_IMAGE_USAGE_VIDEO_ENCODE_SRC_BIT_KHR specifies that the image can be used as an
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-input-picture">
-    ///         input
-    ///         picture
+    ///         encode
+    ///         input picture
     ///     </a>
-    ///     for
+    ///     in a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
-    ///         encode operations
+    ///         encode operation
     ///     </a>
     ///     .
     /// </summary>
     VK_IMAGE_USAGE_VIDEO_ENCODE_SRC_BIT_KHR = 0x4000,
 
     /// <summary>
-    ///     VK_IMAGE_USAGE_VIDEO_ENCODE_DPB_BIT_KHR specifies that
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
-    ///         video
-    ///         encode operations
-    ///     </a>
-    ///     can use the image as an output to hold a
+    ///     VK_IMAGE_USAGE_VIDEO_ENCODE_DPB_BIT_KHR specifies that the image can be used as an output
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reconstructed-picture">
     ///         reconstructed
     ///         picture
     ///     </a>
-    ///     that can subsequently act as an input
+    ///     or an input
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
     ///         reference
     ///         picture
+    ///     </a>
+    ///     in a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///         video
+    ///         encode operation
     ///     </a>
     ///     .
     /// </summary>

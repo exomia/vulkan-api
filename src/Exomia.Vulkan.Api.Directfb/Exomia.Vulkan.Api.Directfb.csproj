@@ -1,4 +1,4 @@
-<!--EXTERNAL_PROPERTIES: Version;VersionSuffix;PackageTags-->
+<!--EXTERNAL_PROPERTIES: Version;PackageTags-->
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageTags>$(PackageTags) directfb</PackageTags>

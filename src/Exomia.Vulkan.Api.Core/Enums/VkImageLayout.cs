@@ -150,7 +150,12 @@ public enum VkImageLayout
     VK_IMAGE_LAYOUT_PRESENT_SRC_KHR = 1000001002,
 
     /// <summary>
-    ///     VK_IMAGE_LAYOUT_VIDEO_DECODE_DST_KHR must only be used as a decode output image of a
+    ///     VK_IMAGE_LAYOUT_VIDEO_DECODE_DST_KHR must only be used as a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#decode-output-picture">
+    ///         decode
+    ///         output picture
+    ///     </a>
+    ///     in a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operation
@@ -164,7 +169,17 @@ public enum VkImageLayout
     VK_IMAGE_LAYOUT_VIDEO_DECODE_SRC_KHR = 1000024001,
 
     /// <summary>
-    ///     VK_IMAGE_LAYOUT_VIDEO_DECODE_DPB_KHR must only be used as a decode source or destination image of a
+    ///     VK_IMAGE_LAYOUT_VIDEO_DECODE_DPB_KHR must only be used as an output
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reconstructed-picture">
+    ///         reconstructed
+    ///         picture
+    ///     </a>
+    ///     or an input
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
+    ///         reference
+    ///         picture
+    ///     </a>
+    ///     in a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operation
@@ -208,7 +223,12 @@ public enum VkImageLayout
     VK_IMAGE_LAYOUT_VIDEO_ENCODE_DST_KHR = 1000299000,
 
     /// <summary>
-    ///     VK_IMAGE_LAYOUT_VIDEO_ENCODE_SRC_KHR must only be used as a encode source image of a
+    ///     VK_IMAGE_LAYOUT_VIDEO_ENCODE_SRC_KHR must only be used as an
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-input-picture">
+    ///         encode
+    ///         input picture
+    ///     </a>
+    ///     in a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operation
@@ -219,7 +239,17 @@ public enum VkImageLayout
     VK_IMAGE_LAYOUT_VIDEO_ENCODE_SRC_KHR = 1000299001,
 
     /// <summary>
-    ///     VK_IMAGE_LAYOUT_VIDEO_ENCODE_DPB_KHR must only be used as a encode source or destination image of a
+    ///     VK_IMAGE_LAYOUT_VIDEO_ENCODE_DPB_KHR must only be used as an output
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reconstructed-picture">
+    ///         reconstructed
+    ///         picture
+    ///     </a>
+    ///     or an input
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
+    ///         reference
+    ///         picture
+    ///     </a>
+    ///     in a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operation

@@ -265,21 +265,37 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_SAMPLED_IMAGE_DEPTH_COMPARISON_BIT = 0x200000000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_VIDEO_DECODE_OUTPUT_BIT_KHR specifies that an image view with this format can be used as an
-    ///     output for
+    ///     VK_FORMAT_FEATURE_2_VIDEO_DECODE_OUTPUT_BIT_KHR specifies that an image view with this format can be used as a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#decode-output-picture">
+    ///         decode
+    ///         output picture
+    ///     </a>
+    ///     in
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operations
     ///     </a>
+    ///     .
     /// </summary>
     VK_FORMAT_FEATURE_2_VIDEO_DECODE_OUTPUT_BIT_KHR = 0x2000000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_VIDEO_DECODE_DPB_BIT_KHR specifies that an image view with this format can be used as a DPB for
+    ///     VK_FORMAT_FEATURE_2_VIDEO_DECODE_DPB_BIT_KHR specifies that an image view with this format can be used as an output
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reconstructed-picture">
+    ///         reconstructed
+    ///         picture
+    ///     </a>
+    ///     or an input
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
+    ///         reference
+    ///         picture
+    ///     </a>
+    ///     in
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operations
     ///     </a>
+    ///     .
     /// </summary>
     VK_FORMAT_FEATURE_2_VIDEO_DECODE_DPB_BIT_KHR = 0x4000000,
 
@@ -337,20 +353,36 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_INPUT_BIT_KHR specifies that an image view with this format can be used as an
-    ///     input to
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-input-picture">
+    ///         encode
+    ///         input picture
+    ///     </a>
+    ///     in
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operations
     ///     </a>
+    ///     .
     /// </summary>
     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_INPUT_BIT_KHR = 0x8000000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_DPB_BIT_KHR specifies that an image view with this format can be used as a DPB for
+    ///     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_DPB_BIT_KHR specifies that an image view with this format can be used as an output
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reconstructed-picture">
+    ///         reconstructed
+    ///         picture
+    ///     </a>
+    ///     or an input
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#reference-picture">
+    ///         reference
+    ///         picture
+    ///     </a>
+    ///     in
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operations
     ///     </a>
+    ///     .
     /// </summary>
     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_DPB_BIT_KHR = 0x10000000,
 

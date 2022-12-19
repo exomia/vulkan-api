@@ -107,7 +107,8 @@ public enum VkBufferUsageFlagBits
     VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT = 0x20000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_VIDEO_DECODE_SRC_BIT_KHR specifies that the buffer can be used as the source bitstream buffer in a
+    ///     VK_BUFFER_USAGE_VIDEO_DECODE_SRC_BIT_KHR specifies that the buffer can be used as the source video bitstream buffer
+    ///     in a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
     ///         video
     ///         decode operation
@@ -116,15 +117,7 @@ public enum VkBufferUsageFlagBits
     /// </summary>
     VK_BUFFER_USAGE_VIDEO_DECODE_SRC_BIT_KHR = 0x2000,
 
-    /// <summary>
-    ///     VK_BUFFER_USAGE_VIDEO_DECODE_DST_BIT_KHR specifies that the buffer can be used as the destination status buffer in
-    ///     a
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
-    ///         video
-    ///         decode operation
-    ///     </a>
-    ///     .
-    /// </summary>
+    /// <summary>VK_BUFFER_USAGE_VIDEO_DECODE_DST_BIT_KHR is reserved for future use.</summary>
     VK_BUFFER_USAGE_VIDEO_DECODE_DST_BIT_KHR = 0x4000,
 
     /// <summary>
@@ -201,8 +194,8 @@ public enum VkBufferUsageFlagBits
     VK_BUFFER_USAGE_RESERVED_18_BIT_QCOM = 0x40000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_VIDEO_ENCODE_DST_BIT_KHR specifies that the buffer can be used as the destination bitstream buffer
-    ///     in a
+    ///     VK_BUFFER_USAGE_VIDEO_ENCODE_DST_BIT_KHR specifies that the buffer can be used as the destination video bitstream
+    ///     buffer in a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
     ///         video
     ///         encode operation
@@ -211,10 +204,7 @@ public enum VkBufferUsageFlagBits
     /// </summary>
     VK_BUFFER_USAGE_VIDEO_ENCODE_DST_BIT_KHR = 0x8000,
 
-    /// <summary>
-    ///     VK_BUFFER_USAGE_VIDEO_ENCODE_SRC_BIT_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
-    /// </summary>
+    /// <summary>VK_BUFFER_USAGE_VIDEO_ENCODE_SRC_BIT_KHR is reserved for future use.</summary>
     VK_BUFFER_USAGE_VIDEO_ENCODE_SRC_BIT_KHR = 0x10000,
 
     /// <summary>
