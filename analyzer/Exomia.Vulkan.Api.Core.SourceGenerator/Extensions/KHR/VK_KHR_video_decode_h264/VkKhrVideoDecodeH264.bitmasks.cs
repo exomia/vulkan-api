@@ -1,0 +1,1 @@
+global using VkVideoDecodeH264PictureLayoutFlagsKHR = Exomia.Vulkan.Api.Core.VkVideoDecodeH264PictureLayoutFlagBitsKHR;

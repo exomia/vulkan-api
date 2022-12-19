@@ -52,7 +52,14 @@ public enum VkQueueFlagBits
     /// </summary>
     VK_QUEUE_PROTECTED_BIT = 0x10,
 
-    /// <summary>VK_QUEUE_VIDEO_DECODE_BIT_KHR specifies that queues in this queue family support Video Decode operations.</summary>
+    /// <summary>
+    ///     VK_QUEUE_VIDEO_DECODE_BIT_KHR specifies that queues in this queue family support
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-decode-operations">
+    ///         video
+    ///         decode operations
+    ///     </a>
+    ///     .
+    /// </summary>
     VK_QUEUE_VIDEO_DECODE_BIT_KHR = 0x20,
 
     /// <summary>
@@ -61,7 +68,14 @@ public enum VkQueueFlagBits
     /// </summary>
     VK_QUEUE_RESERVED_9_BIT_EXT = 0x200,
 
-    /// <summary>VK_QUEUE_VIDEO_ENCODE_BIT_KHR specifies that queues in this queue family support Video Encode operations.</summary>
+    /// <summary>
+    ///     VK_QUEUE_VIDEO_ENCODE_BIT_KHR specifies that queues in this queue family support
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///         video
+    ///         encode operations
+    ///     </a>
+    ///     .
+    /// </summary>
     VK_QUEUE_VIDEO_ENCODE_BIT_KHR = 0x40,
 
     /// <summary>

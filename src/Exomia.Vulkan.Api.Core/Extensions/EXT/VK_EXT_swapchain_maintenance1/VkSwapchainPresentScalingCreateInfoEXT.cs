@@ -41,24 +41,21 @@ public unsafe struct VkSwapchainPresentScalingCreateInfoEXT
     public void* pNext;
 
     /// <summary>
-    ///     scalingBehavior<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainPresentScalingCreateInfoEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainPresentScalingCreateInfoEXT
-    ///     </a>
+    ///     scalingBehavior is 0 or the scaling method to use when the dimensions of the surface and swapchain images
+    ///     differ.
     /// </summary>
     public VkPresentScalingFlagsEXT scalingBehavior;
 
     /// <summary>
     ///     presentGravityX is 0 or the x-axis direction in which swapchain image pixels gravitate relative to the surface
-    ///     when presentScalingdoes not result in a one-to-one pixel mapping between the scaled swapchain image and the
+    ///     when scalingBehavior does not result in a one-to-one pixel mapping between the scaled swapchain image and the
     ///     surface.
     /// </summary>
     public VkPresentGravityFlagsEXT presentGravityX;
 
     /// <summary>
     ///     presentGravityY is 0 or the y-axis direction in which swapchain image pixels gravitate relative to the surface
-    ///     when presentScalingdoes not result in a one-to-one pixel mapping between the scaled swapchain image and the
+    ///     when scalingBehavior does not result in a one-to-one pixel mapping between the scaled swapchain image and the
     ///     surface.
     /// </summary>
     public VkPresentGravityFlagsEXT presentGravityY;

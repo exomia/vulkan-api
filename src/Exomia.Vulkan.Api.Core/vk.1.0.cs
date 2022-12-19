@@ -40,8 +40,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateInstance")]
+    public static unsafe partial VkResult vkCreateInstance(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateInstance")]
     public static extern unsafe VkResult vkCreateInstance(
+#endif
         VkInstanceCreateInfo*  pCreateInfo,
         VkAllocationCallbacks* pAllocator,
         VkInstance*            pInstance);
@@ -54,8 +59,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyInstance")]
+    public static unsafe partial void vkDestroyInstance(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyInstance")]
     public static extern unsafe void vkDestroyInstance(
+#endif
         VkInstance             instance,
         VkAllocationCallbacks* pAllocator);
 
@@ -82,8 +92,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkEnumeratePhysicalDevices")]
+    public static unsafe partial VkResult vkEnumeratePhysicalDevices(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkEnumeratePhysicalDevices")]
     public static extern unsafe VkResult vkEnumeratePhysicalDevices(
+#endif
         VkInstance        instance,
         uint*             pPhysicalDeviceCount,
         VkPhysicalDevice* pPhysicalDevices);
@@ -100,8 +115,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceFeatures")]
+    public static unsafe partial void vkGetPhysicalDeviceFeatures(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceFeatures")]
     public static extern unsafe void vkGetPhysicalDeviceFeatures(
+#endif
         VkPhysicalDevice          physicalDevice,
         VkPhysicalDeviceFeatures* pFeatures);
 
@@ -120,8 +140,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceFormatProperties")]
+    public static unsafe partial void vkGetPhysicalDeviceFormatProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceFormatProperties")]
     public static extern unsafe void vkGetPhysicalDeviceFormatProperties(
+#endif
         VkPhysicalDevice    physicalDevice,
         VkFormat            format,
         VkFormatProperties* pFormatProperties);
@@ -171,8 +196,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceImageFormatProperties")]
+    public static unsafe partial VkResult vkGetPhysicalDeviceImageFormatProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceImageFormatProperties")]
     public static extern unsafe VkResult vkGetPhysicalDeviceImageFormatProperties(
+#endif
         VkPhysicalDevice         physicalDevice,
         VkFormat                 format,
         VkImageType              type,
@@ -192,8 +222,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceProperties")]
+    public static unsafe partial void vkGetPhysicalDeviceProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceProperties")]
     public static extern unsafe void vkGetPhysicalDeviceProperties(
+#endif
         VkPhysicalDevice            physicalDevice,
         VkPhysicalDeviceProperties* pProperties);
 
@@ -215,8 +250,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceQueueFamilyProperties")]
+    public static unsafe partial void vkGetPhysicalDeviceQueueFamilyProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceQueueFamilyProperties")]
     public static extern unsafe void vkGetPhysicalDeviceQueueFamilyProperties(
+#endif
         VkPhysicalDevice         physicalDevice,
         uint*                    pQueueFamilyPropertyCount,
         VkQueueFamilyProperties* pQueueFamilyProperties);
@@ -235,8 +275,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceMemoryProperties")]
+    public static unsafe partial void vkGetPhysicalDeviceMemoryProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceMemoryProperties")]
     public static extern unsafe void vkGetPhysicalDeviceMemoryProperties(
+#endif
         VkPhysicalDevice                  physicalDevice,
         VkPhysicalDeviceMemoryProperties* pMemoryProperties);
 
@@ -251,8 +296,13 @@ public static partial class Vk
     /// <param name="pName">pName is the name of the command to obtain.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetInstanceProcAddr")]
+    public static unsafe partial delegate*<void> vkGetInstanceProcAddr(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetInstanceProcAddr")]
     public static extern unsafe delegate*<void> vkGetInstanceProcAddr(
+#endif
         VkInstance instance,
         byte*      pName);
 
@@ -264,8 +314,13 @@ public static partial class Vk
     /// <param name="pName"> VUID-vkGetDeviceProcAddr-pName-parameter pName must be a null-terminated UTF-8 string</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetDeviceProcAddr")]
+    public static unsafe partial delegate*<void> vkGetDeviceProcAddr(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetDeviceProcAddr")]
     public static extern unsafe delegate*<void> vkGetDeviceProcAddr(
+#endif
         VkDevice device,
         byte*    pName);
 
@@ -296,8 +351,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateDevice")]
+    public static unsafe partial VkResult vkCreateDevice(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateDevice")]
     public static extern unsafe VkResult vkCreateDevice(
+#endif
         VkPhysicalDevice       physicalDevice,
         VkDeviceCreateInfo*    pCreateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -311,8 +371,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyDevice")]
+    public static unsafe partial void vkDestroyDevice(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyDevice")]
     public static extern unsafe void vkDestroyDevice(
+#endif
         VkDevice               device,
         VkAllocationCallbacks* pAllocator);
 
@@ -345,8 +410,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkEnumerateInstanceExtensionProperties")]
+    public static unsafe partial VkResult vkEnumerateInstanceExtensionProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkEnumerateInstanceExtensionProperties")]
     public static extern unsafe VkResult vkEnumerateInstanceExtensionProperties(
+#endif
         byte*                  pLayerName,
         uint*                  pPropertyCount,
         VkExtensionProperties* pProperties);
@@ -382,8 +452,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkEnumerateDeviceExtensionProperties")]
+    public static unsafe partial VkResult vkEnumerateDeviceExtensionProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkEnumerateDeviceExtensionProperties")]
     public static extern unsafe VkResult vkEnumerateDeviceExtensionProperties(
+#endif
         VkPhysicalDevice       physicalDevice,
         byte*                  pLayerName,
         uint*                  pPropertyCount,
@@ -413,8 +488,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkEnumerateInstanceLayerProperties")]
+    public static unsafe partial VkResult vkEnumerateInstanceLayerProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkEnumerateInstanceLayerProperties")]
     public static extern unsafe VkResult vkEnumerateInstanceLayerProperties(
+#endif
         uint*              pPropertyCount,
         VkLayerProperties* pProperties);
 
@@ -443,8 +523,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkEnumerateDeviceLayerProperties")]
+    public static unsafe partial VkResult vkEnumerateDeviceLayerProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkEnumerateDeviceLayerProperties")]
     public static extern unsafe VkResult vkEnumerateDeviceLayerProperties(
+#endif
         VkPhysicalDevice   physicalDevice,
         uint*              pPropertyCount,
         VkLayerProperties* pProperties);
@@ -462,8 +547,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetDeviceQueue")]
+    public static unsafe partial void vkGetDeviceQueue(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetDeviceQueue")]
     public static extern unsafe void vkGetDeviceQueue(
+#endif
         VkDevice device,
         uint     queueFamilyIndex,
         uint     queueIndex,
@@ -496,8 +586,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkQueueSubmit")]
+    public static unsafe partial VkResult vkQueueSubmit(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkQueueSubmit")]
     public static extern unsafe VkResult vkQueueSubmit(
+#endif
         VkQueue       queue,
         uint          submitCount,
         VkSubmitInfo* pSubmits,
@@ -521,8 +616,14 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkQueueWaitIdle")]
+    public static unsafe partial VkResult vkQueueWaitIdle(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkQueueWaitIdle")]
-    public static extern VkResult vkQueueWaitIdle(VkQueue queue);
+    public static extern VkResult vkQueueWaitIdle(
+#endif
+        VkQueue queue);
 
     /// <summary>
     ///     vkDeviceWaitIdle - Wait for a device to become idle -
@@ -542,8 +643,14 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDeviceWaitIdle")]
+    public static unsafe partial VkResult vkDeviceWaitIdle(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDeviceWaitIdle")]
-    public static extern VkResult vkDeviceWaitIdle(VkDevice device);
+    public static extern VkResult vkDeviceWaitIdle(
+#endif
+        VkDevice device);
 
     /// <summary>
     ///     vkAllocateMemory - Allocate device memory -
@@ -573,8 +680,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkAllocateMemory")]
+    public static unsafe partial VkResult vkAllocateMemory(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkAllocateMemory")]
     public static extern unsafe VkResult vkAllocateMemory(
+#endif
         VkDevice               device,
         VkMemoryAllocateInfo*  pAllocateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -589,8 +701,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkFreeMemory")]
+    public static unsafe partial void vkFreeMemory(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkFreeMemory")]
     public static extern unsafe void vkFreeMemory(
+#endif
         VkDevice               device,
         VkDeviceMemory         memory,
         VkAllocationCallbacks* pAllocator);
@@ -625,8 +742,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkMapMemory")]
+    public static unsafe partial VkResult vkMapMemory(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkMapMemory")]
     public static extern unsafe VkResult vkMapMemory(
+#endif
         VkDevice         device,
         VkDeviceMemory   memory,
         VkDeviceSize     offset,
@@ -642,8 +764,13 @@ public static partial class Vk
     /// <param name="memory">memory is the memory object to be unmapped.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkUnmapMemory")]
+    public static unsafe partial void vkUnmapMemory(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkUnmapMemory")]
     public static extern void vkUnmapMemory(
+#endif
         VkDevice       device,
         VkDeviceMemory memory);
 
@@ -669,8 +796,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkFlushMappedMemoryRanges")]
+    public static unsafe partial VkResult vkFlushMappedMemoryRanges(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkFlushMappedMemoryRanges")]
     public static extern unsafe VkResult vkFlushMappedMemoryRanges(
+#endif
         VkDevice             device,
         uint                 memoryRangeCount,
         VkMappedMemoryRange* pMemoryRanges);
@@ -697,8 +829,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkInvalidateMappedMemoryRanges")]
+    public static unsafe partial VkResult vkInvalidateMappedMemoryRanges(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkInvalidateMappedMemoryRanges")]
     public static extern unsafe VkResult vkInvalidateMappedMemoryRanges(
+#endif
         VkDevice             device,
         uint                 memoryRangeCount,
         VkMappedMemoryRange* pMemoryRanges);
@@ -715,8 +852,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetDeviceMemoryCommitment")]
+    public static unsafe partial void vkGetDeviceMemoryCommitment(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetDeviceMemoryCommitment")]
     public static extern unsafe void vkGetDeviceMemoryCommitment(
+#endif
         VkDevice       device,
         VkDeviceMemory memory,
         VkDeviceSize*  pCommittedMemoryInBytes);
@@ -746,8 +888,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkBindBufferMemory")]
+    public static unsafe partial VkResult vkBindBufferMemory(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkBindBufferMemory")]
     public static extern VkResult vkBindBufferMemory(
+#endif
         VkDevice       device,
         VkBuffer       buffer,
         VkDeviceMemory memory,
@@ -777,8 +924,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkBindImageMemory")]
+    public static unsafe partial VkResult vkBindImageMemory(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkBindImageMemory")]
     public static extern VkResult vkBindImageMemory(
+#endif
         VkDevice       device,
         VkImage        image,
         VkDeviceMemory memory,
@@ -796,8 +948,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetBufferMemoryRequirements")]
+    public static unsafe partial void vkGetBufferMemoryRequirements(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetBufferMemoryRequirements")]
     public static extern unsafe void vkGetBufferMemoryRequirements(
+#endif
         VkDevice              device,
         VkBuffer              buffer,
         VkMemoryRequirements* pMemoryRequirements);
@@ -814,8 +971,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetImageMemoryRequirements")]
+    public static unsafe partial void vkGetImageMemoryRequirements(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetImageMemoryRequirements")]
     public static extern unsafe void vkGetImageMemoryRequirements(
+#endif
         VkDevice              device,
         VkImage               image,
         VkMemoryRequirements* pMemoryRequirements);
@@ -839,8 +1001,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetImageSparseMemoryRequirements")]
+    public static unsafe partial void vkGetImageSparseMemoryRequirements(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetImageSparseMemoryRequirements")]
     public static extern unsafe void vkGetImageSparseMemoryRequirements(
+#endif
         VkDevice                         device,
         VkImage                          image,
         uint*                            pSparseMemoryRequirementCount,
@@ -872,8 +1039,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceSparseImageFormatProperties")]
+    public static unsafe partial void vkGetPhysicalDeviceSparseImageFormatProperties(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetPhysicalDeviceSparseImageFormatProperties")]
     public static extern unsafe void vkGetPhysicalDeviceSparseImageFormatProperties(
+#endif
         VkPhysicalDevice               physicalDevice,
         VkFormat                       format,
         VkImageType                    type,
@@ -910,8 +1082,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkQueueBindSparse")]
+    public static unsafe partial VkResult vkQueueBindSparse(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkQueueBindSparse")]
     public static extern unsafe VkResult vkQueueBindSparse(
+#endif
         VkQueue           queue,
         uint              bindInfoCount,
         VkBindSparseInfo* pBindInfo,
@@ -940,8 +1117,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateFence")]
+    public static unsafe partial VkResult vkCreateFence(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateFence")]
     public static extern unsafe VkResult vkCreateFence(
+#endif
         VkDevice               device,
         VkFenceCreateInfo*     pCreateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -956,8 +1138,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyFence")]
+    public static unsafe partial void vkDestroyFence(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyFence")]
     public static extern unsafe void vkDestroyFence(
+#endif
         VkDevice               device,
         VkFence                fence,
         VkAllocationCallbacks* pAllocator);
@@ -981,8 +1168,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkResetFences")]
+    public static unsafe partial VkResult vkResetFences(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkResetFences")]
     public static extern unsafe VkResult vkResetFences(
+#endif
         VkDevice device,
         uint     fenceCount,
         VkFence* pFences);
@@ -1006,8 +1198,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetFenceStatus")]
+    public static unsafe partial VkResult vkGetFenceStatus(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetFenceStatus")]
     public static extern VkResult vkGetFenceStatus(
+#endif
         VkDevice device,
         VkFence  fence);
 
@@ -1041,8 +1238,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkWaitForFences")]
+    public static unsafe partial VkResult vkWaitForFences(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkWaitForFences")]
     public static extern unsafe VkResult vkWaitForFences(
+#endif
         VkDevice device,
         uint     fenceCount,
         VkFence* pFences,
@@ -1072,8 +1274,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateSemaphore")]
+    public static unsafe partial VkResult vkCreateSemaphore(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateSemaphore")]
     public static extern unsafe VkResult vkCreateSemaphore(
+#endif
         VkDevice               device,
         VkSemaphoreCreateInfo* pCreateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -1088,8 +1295,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroySemaphore")]
+    public static unsafe partial void vkDestroySemaphore(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroySemaphore")]
     public static extern unsafe void vkDestroySemaphore(
+#endif
         VkDevice               device,
         VkSemaphore            semaphore,
         VkAllocationCallbacks* pAllocator);
@@ -1117,8 +1329,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateEvent")]
+    public static unsafe partial VkResult vkCreateEvent(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateEvent")]
     public static extern unsafe VkResult vkCreateEvent(
+#endif
         VkDevice               device,
         VkEventCreateInfo*     pCreateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -1133,8 +1350,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyEvent")]
+    public static unsafe partial void vkDestroyEvent(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyEvent")]
     public static extern unsafe void vkDestroyEvent(
+#endif
         VkDevice               device,
         VkEvent                @event,
         VkAllocationCallbacks* pAllocator);
@@ -1158,8 +1380,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetEventStatus")]
+    public static unsafe partial VkResult vkGetEventStatus(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetEventStatus")]
     public static extern VkResult vkGetEventStatus(
+#endif
         VkDevice device,
         VkEvent  @event);
 
@@ -1181,8 +1408,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkSetEvent")]
+    public static unsafe partial VkResult vkSetEvent(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkSetEvent")]
     public static extern VkResult vkSetEvent(
+#endif
         VkDevice device,
         VkEvent  @event);
 
@@ -1204,8 +1436,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkResetEvent")]
+    public static unsafe partial VkResult vkResetEvent(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkResetEvent")]
     public static extern VkResult vkResetEvent(
+#endif
         VkDevice device,
         VkEvent  @event);
 
@@ -1235,8 +1472,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateQueryPool")]
+    public static unsafe partial VkResult vkCreateQueryPool(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateQueryPool")]
     public static extern unsafe VkResult vkCreateQueryPool(
+#endif
         VkDevice               device,
         VkQueryPoolCreateInfo* pCreateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -1251,8 +1493,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyQueryPool")]
+    public static unsafe partial void vkDestroyQueryPool(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyQueryPool")]
     public static extern unsafe void vkDestroyQueryPool(
+#endif
         VkDevice               device,
         VkQueryPool            queryPool,
         VkAllocationCallbacks* pAllocator);
@@ -1282,8 +1529,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetQueryPoolResults")]
+    public static unsafe partial VkResult vkGetQueryPoolResults(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetQueryPoolResults")]
     public static extern unsafe VkResult vkGetQueryPoolResults(
+#endif
         VkDevice           device,
         VkQueryPool        queryPool,
         uint               firstQuery,
@@ -1317,8 +1569,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateBuffer")]
+    public static unsafe partial VkResult vkCreateBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateBuffer")]
     public static extern unsafe VkResult vkCreateBuffer(
+#endif
         VkDevice               device,
         VkBufferCreateInfo*    pCreateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -1333,8 +1590,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyBuffer")]
+    public static unsafe partial void vkDestroyBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyBuffer")]
     public static extern unsafe void vkDestroyBuffer(
+#endif
         VkDevice               device,
         VkBuffer               buffer,
         VkAllocationCallbacks* pAllocator);
@@ -1362,8 +1624,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateBufferView")]
+    public static unsafe partial VkResult vkCreateBufferView(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateBufferView")]
     public static extern unsafe VkResult vkCreateBufferView(
+#endif
         VkDevice                device,
         VkBufferViewCreateInfo* pCreateInfo,
         VkAllocationCallbacks*  pAllocator,
@@ -1378,8 +1645,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyBufferView")]
+    public static unsafe partial void vkDestroyBufferView(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyBufferView")]
     public static extern unsafe void vkDestroyBufferView(
+#endif
         VkDevice               device,
         VkBufferView           bufferView,
         VkAllocationCallbacks* pAllocator);
@@ -1408,8 +1680,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateImage")]
+    public static unsafe partial VkResult vkCreateImage(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateImage")]
     public static extern unsafe VkResult vkCreateImage(
+#endif
         VkDevice               device,
         VkImageCreateInfo*     pCreateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -1424,8 +1701,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyImage")]
+    public static unsafe partial void vkDestroyImage(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyImage")]
     public static extern unsafe void vkDestroyImage(
+#endif
         VkDevice               device,
         VkImage                image,
         VkAllocationCallbacks* pAllocator);
@@ -1443,8 +1725,13 @@ public static partial class Vk
     /// <param name="pLayout">pLayout is a pointer to a VkSubresourceLayout structure in which the layout is returned.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetImageSubresourceLayout")]
+    public static unsafe partial void vkGetImageSubresourceLayout(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetImageSubresourceLayout")]
     public static extern unsafe void vkGetImageSubresourceLayout(
+#endif
         VkDevice             device,
         VkImage              image,
         VkImageSubresource*  pSubresource,
@@ -1474,8 +1761,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateImageView")]
+    public static unsafe partial VkResult vkCreateImageView(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateImageView")]
     public static extern unsafe VkResult vkCreateImageView(
+#endif
         VkDevice               device,
         VkImageViewCreateInfo* pCreateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -1490,8 +1782,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyImageView")]
+    public static unsafe partial void vkDestroyImageView(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyImageView")]
     public static extern unsafe void vkDestroyImageView(
+#endif
         VkDevice               device,
         VkImageView            imageView,
         VkAllocationCallbacks* pAllocator);
@@ -1520,8 +1817,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateShaderModule")]
+    public static unsafe partial VkResult vkCreateShaderModule(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateShaderModule")]
     public static extern unsafe VkResult vkCreateShaderModule(
+#endif
         VkDevice                  device,
         VkShaderModuleCreateInfo* pCreateInfo,
         VkAllocationCallbacks*    pAllocator,
@@ -1536,8 +1838,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyShaderModule")]
+    public static unsafe partial void vkDestroyShaderModule(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyShaderModule")]
     public static extern unsafe void vkDestroyShaderModule(
+#endif
         VkDevice               device,
         VkShaderModule         shaderModule,
         VkAllocationCallbacks* pAllocator);
@@ -1568,8 +1875,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreatePipelineCache")]
+    public static unsafe partial VkResult vkCreatePipelineCache(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreatePipelineCache")]
     public static extern unsafe VkResult vkCreatePipelineCache(
+#endif
         VkDevice                   device,
         VkPipelineCacheCreateInfo* pCreateInfo,
         VkAllocationCallbacks*     pAllocator,
@@ -1584,8 +1896,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyPipelineCache")]
+    public static unsafe partial void vkDestroyPipelineCache(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyPipelineCache")]
     public static extern unsafe void vkDestroyPipelineCache(
+#endif
         VkDevice               device,
         VkPipelineCache        pipelineCache,
         VkAllocationCallbacks* pAllocator);
@@ -1613,8 +1930,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetPipelineCacheData")]
+    public static unsafe partial VkResult vkGetPipelineCacheData(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetPipelineCacheData")]
     public static extern unsafe VkResult vkGetPipelineCacheData(
+#endif
         VkDevice        device,
         VkPipelineCache pipelineCache,
         nuint*          pDataSize,
@@ -1643,8 +1965,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkMergePipelineCaches")]
+    public static unsafe partial VkResult vkMergePipelineCaches(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkMergePipelineCaches")]
     public static extern unsafe VkResult vkMergePipelineCaches(
+#endif
         VkDevice         device,
         VkPipelineCache  dstCache,
         uint             srcCacheCount,
@@ -1680,8 +2007,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateGraphicsPipelines")]
+    public static unsafe partial VkResult vkCreateGraphicsPipelines(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateGraphicsPipelines")]
     public static extern unsafe VkResult vkCreateGraphicsPipelines(
+#endif
         VkDevice                      device,
         VkPipelineCache               pipelineCache,
         uint                          createInfoCount,
@@ -1721,8 +2053,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateComputePipelines")]
+    public static unsafe partial VkResult vkCreateComputePipelines(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateComputePipelines")]
     public static extern unsafe VkResult vkCreateComputePipelines(
+#endif
         VkDevice                     device,
         VkPipelineCache              pipelineCache,
         uint                         createInfoCount,
@@ -1739,8 +2076,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyPipeline")]
+    public static unsafe partial void vkDestroyPipeline(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyPipeline")]
     public static extern unsafe void vkDestroyPipeline(
+#endif
         VkDevice               device,
         VkPipeline             pipeline,
         VkAllocationCallbacks* pAllocator);
@@ -1771,8 +2113,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreatePipelineLayout")]
+    public static unsafe partial VkResult vkCreatePipelineLayout(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreatePipelineLayout")]
     public static extern unsafe VkResult vkCreatePipelineLayout(
+#endif
         VkDevice                    device,
         VkPipelineLayoutCreateInfo* pCreateInfo,
         VkAllocationCallbacks*      pAllocator,
@@ -1787,8 +2134,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyPipelineLayout")]
+    public static unsafe partial void vkDestroyPipelineLayout(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyPipelineLayout")]
     public static extern unsafe void vkDestroyPipelineLayout(
+#endif
         VkDevice               device,
         VkPipelineLayout       pipelineLayout,
         VkAllocationCallbacks* pAllocator);
@@ -1817,8 +2169,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateSampler")]
+    public static unsafe partial VkResult vkCreateSampler(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateSampler")]
     public static extern unsafe VkResult vkCreateSampler(
+#endif
         VkDevice               device,
         VkSamplerCreateInfo*   pCreateInfo,
         VkAllocationCallbacks* pAllocator,
@@ -1833,8 +2190,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroySampler")]
+    public static unsafe partial void vkDestroySampler(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroySampler")]
     public static extern unsafe void vkDestroySampler(
+#endif
         VkDevice               device,
         VkSampler              sampler,
         VkAllocationCallbacks* pAllocator);
@@ -1865,8 +2227,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateDescriptorSetLayout")]
+    public static unsafe partial VkResult vkCreateDescriptorSetLayout(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateDescriptorSetLayout")]
     public static extern unsafe VkResult vkCreateDescriptorSetLayout(
+#endif
         VkDevice                         device,
         VkDescriptorSetLayoutCreateInfo* pCreateInfo,
         VkAllocationCallbacks*           pAllocator,
@@ -1881,8 +2248,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyDescriptorSetLayout")]
+    public static unsafe partial void vkDestroyDescriptorSetLayout(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyDescriptorSetLayout")]
     public static extern unsafe void vkDestroyDescriptorSetLayout(
+#endif
         VkDevice               device,
         VkDescriptorSetLayout  descriptorSetLayout,
         VkAllocationCallbacks* pAllocator);
@@ -1914,8 +2286,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateDescriptorPool")]
+    public static unsafe partial VkResult vkCreateDescriptorPool(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateDescriptorPool")]
     public static extern unsafe VkResult vkCreateDescriptorPool(
+#endif
         VkDevice                    device,
         VkDescriptorPoolCreateInfo* pCreateInfo,
         VkAllocationCallbacks*      pAllocator,
@@ -1930,8 +2307,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyDescriptorPool")]
+    public static unsafe partial void vkDestroyDescriptorPool(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyDescriptorPool")]
     public static extern unsafe void vkDestroyDescriptorPool(
+#endif
         VkDevice               device,
         VkDescriptorPool       descriptorPool,
         VkAllocationCallbacks* pAllocator);
@@ -1952,8 +2334,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkResetDescriptorPool")]
+    public static unsafe partial VkResult vkResetDescriptorPool(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkResetDescriptorPool")]
     public static extern VkResult vkResetDescriptorPool(
+#endif
         VkDevice                   device,
         VkDescriptorPool           descriptorPool,
         VkDescriptorPoolResetFlags flags);
@@ -1984,8 +2371,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkAllocateDescriptorSets")]
+    public static unsafe partial VkResult vkAllocateDescriptorSets(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkAllocateDescriptorSets")]
     public static extern unsafe VkResult vkAllocateDescriptorSets(
+#endif
         VkDevice                     device,
         VkDescriptorSetAllocateInfo* pAllocateInfo,
         VkDescriptorSet*             pDescriptorSets);
@@ -2007,8 +2399,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkFreeDescriptorSets")]
+    public static unsafe partial VkResult vkFreeDescriptorSets(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkFreeDescriptorSets")]
     public static extern unsafe VkResult vkFreeDescriptorSets(
+#endif
         VkDevice         device,
         VkDescriptorPool descriptorPool,
         uint             descriptorSetCount,
@@ -2031,8 +2428,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkUpdateDescriptorSets")]
+    public static unsafe partial void vkUpdateDescriptorSets(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkUpdateDescriptorSets")]
     public static extern unsafe void vkUpdateDescriptorSets(
+#endif
         VkDevice              device,
         uint                  descriptorWriteCount,
         VkWriteDescriptorSet* pDescriptorWrites,
@@ -2065,8 +2467,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateFramebuffer")]
+    public static unsafe partial VkResult vkCreateFramebuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateFramebuffer")]
     public static extern unsafe VkResult vkCreateFramebuffer(
+#endif
         VkDevice                 device,
         VkFramebufferCreateInfo* pCreateInfo,
         VkAllocationCallbacks*   pAllocator,
@@ -2081,8 +2488,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyFramebuffer")]
+    public static unsafe partial void vkDestroyFramebuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyFramebuffer")]
     public static extern unsafe void vkDestroyFramebuffer(
+#endif
         VkDevice               device,
         VkFramebuffer          framebuffer,
         VkAllocationCallbacks* pAllocator);
@@ -2113,8 +2525,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateRenderPass")]
+    public static unsafe partial VkResult vkCreateRenderPass(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateRenderPass")]
     public static extern unsafe VkResult vkCreateRenderPass(
+#endif
         VkDevice                device,
         VkRenderPassCreateInfo* pCreateInfo,
         VkAllocationCallbacks*  pAllocator,
@@ -2129,8 +2546,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyRenderPass")]
+    public static unsafe partial void vkDestroyRenderPass(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyRenderPass")]
     public static extern unsafe void vkDestroyRenderPass(
+#endif
         VkDevice               device,
         VkRenderPass           renderPass,
         VkAllocationCallbacks* pAllocator);
@@ -2144,8 +2566,13 @@ public static partial class Vk
     /// <param name="pGranularity">pGranularity is a pointer to a VkExtent2D structure in which the granularity is returned.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkGetRenderAreaGranularity")]
+    public static unsafe partial void vkGetRenderAreaGranularity(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkGetRenderAreaGranularity")]
     public static extern unsafe void vkGetRenderAreaGranularity(
+#endif
         VkDevice     device,
         VkRenderPass renderPass,
         VkExtent2D*  pGranularity);
@@ -2173,8 +2600,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCreateCommandPool")]
+    public static unsafe partial VkResult vkCreateCommandPool(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCreateCommandPool")]
     public static extern unsafe VkResult vkCreateCommandPool(
+#endif
         VkDevice                 device,
         VkCommandPoolCreateInfo* pCreateInfo,
         VkAllocationCallbacks*   pAllocator,
@@ -2189,8 +2621,13 @@ public static partial class Vk
     /// <param name="pAllocator">pAllocator controls host memory allocation as described in the Memory Allocation chapter.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkDestroyCommandPool")]
+    public static unsafe partial void vkDestroyCommandPool(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkDestroyCommandPool")]
     public static extern unsafe void vkDestroyCommandPool(
+#endif
         VkDevice               device,
         VkCommandPool          commandPool,
         VkAllocationCallbacks* pAllocator);
@@ -2214,8 +2651,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkResetCommandPool")]
+    public static unsafe partial VkResult vkResetCommandPool(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkResetCommandPool")]
     public static extern VkResult vkResetCommandPool(
+#endif
         VkDevice                device,
         VkCommandPool           commandPool,
         VkCommandPoolResetFlags flags);
@@ -2246,8 +2688,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkAllocateCommandBuffers")]
+    public static unsafe partial VkResult vkAllocateCommandBuffers(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkAllocateCommandBuffers")]
     public static extern unsafe VkResult vkAllocateCommandBuffers(
+#endif
         VkDevice                     device,
         VkCommandBufferAllocateInfo* pAllocateInfo,
         VkCommandBuffer*             pCommandBuffers);
@@ -2262,8 +2709,13 @@ public static partial class Vk
     /// <param name="pCommandBuffers">pCommandBuffers is a pointer to an array of handles of command buffers to free.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkFreeCommandBuffers")]
+    public static unsafe partial void vkFreeCommandBuffers(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkFreeCommandBuffers")]
     public static extern unsafe void vkFreeCommandBuffers(
+#endif
         VkDevice         device,
         VkCommandPool    commandPool,
         uint             commandBufferCount,
@@ -2293,8 +2745,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkBeginCommandBuffer")]
+    public static unsafe partial VkResult vkBeginCommandBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkBeginCommandBuffer")]
     public static extern unsafe VkResult vkBeginCommandBuffer(
+#endif
         VkCommandBuffer           commandBuffer,
         VkCommandBufferBeginInfo* pBeginInfo);
 
@@ -2315,8 +2772,14 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkEndCommandBuffer")]
+    public static unsafe partial VkResult vkEndCommandBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkEndCommandBuffer")]
-    public static extern VkResult vkEndCommandBuffer(VkCommandBuffer commandBuffer);
+    public static extern VkResult vkEndCommandBuffer(
+#endif
+        VkCommandBuffer commandBuffer);
 
     /// <summary>
     ///     vkResetCommandBuffer - Reset a command buffer to the initial state -
@@ -2339,8 +2802,13 @@ public static partial class Vk
     /// </remarks>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkResetCommandBuffer")]
+    public static unsafe partial VkResult vkResetCommandBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkResetCommandBuffer")]
     public static extern VkResult vkResetCommandBuffer(
+#endif
         VkCommandBuffer           commandBuffer,
         VkCommandBufferResetFlags flags);
 
@@ -2356,8 +2824,13 @@ public static partial class Vk
     /// <param name="pipeline">pipeline is the pipeline to be bound.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdBindPipeline")]
+    public static unsafe partial void vkCmdBindPipeline(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBindPipeline")]
     public static extern void vkCmdBindPipeline(
+#endif
         VkCommandBuffer     commandBuffer,
         VkPipelineBindPoint pipelineBindPoint,
         VkPipeline          pipeline);
@@ -2375,8 +2848,13 @@ public static partial class Vk
     /// <param name="pViewports">pViewports is a pointer to an array of VkViewport structures specifying viewport parameters.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetViewport")]
+    public static unsafe partial void vkCmdSetViewport(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetViewport")]
     public static extern unsafe void vkCmdSetViewport(
+#endif
         VkCommandBuffer commandBuffer,
         uint            firstViewport,
         uint            viewportCount,
@@ -2392,8 +2870,13 @@ public static partial class Vk
     /// <param name="pScissors">pScissors is a pointer to an array of VkRect2D structures defining scissor rectangles.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetScissor")]
+    public static unsafe partial void vkCmdSetScissor(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetScissor")]
     public static extern unsafe void vkCmdSetScissor(
+#endif
         VkCommandBuffer commandBuffer,
         uint            firstScissor,
         uint            scissorCount,
@@ -2407,8 +2890,13 @@ public static partial class Vk
     /// <param name="lineWidth">lineWidth is the width of rasterized line segments.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetLineWidth")]
+    public static unsafe partial void vkCmdSetLineWidth(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetLineWidth")]
     public static extern void vkCmdSetLineWidth(
+#endif
         VkCommandBuffer commandBuffer,
         float           lineWidth);
 
@@ -2428,8 +2916,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthBias")]
+    public static unsafe partial void vkCmdSetDepthBias(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthBias")]
     public static extern void vkCmdSetDepthBias(
+#endif
         VkCommandBuffer commandBuffer,
         float           depthBiasConstantFactor,
         float           depthBiasClamp,
@@ -2446,8 +2939,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetBlendConstants")]
+    public static unsafe partial void vkCmdSetBlendConstants(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetBlendConstants")]
     public static extern unsafe void vkCmdSetBlendConstants(
+#endif
         VkCommandBuffer   commandBuffer,
         VkBlendConstants* blendConstants);
 
@@ -2460,8 +2958,13 @@ public static partial class Vk
     /// <param name="maxDepthBounds">maxDepthBounds is the maximum depth bound.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthBounds")]
+    public static unsafe partial void vkCmdSetDepthBounds(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetDepthBounds")]
     public static extern void vkCmdSetDepthBounds(
+#endif
         VkCommandBuffer commandBuffer,
         float           minDepthBounds,
         float           maxDepthBounds);
@@ -2478,8 +2981,13 @@ public static partial class Vk
     /// <param name="compareMask">compareMask is the new value to use as the stencil compare mask.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetStencilCompareMask")]
+    public static unsafe partial void vkCmdSetStencilCompareMask(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetStencilCompareMask")]
     public static extern void vkCmdSetStencilCompareMask(
+#endif
         VkCommandBuffer    commandBuffer,
         VkStencilFaceFlags faceMask,
         uint               compareMask);
@@ -2496,8 +3004,13 @@ public static partial class Vk
     /// <param name="writeMask">writeMask is the new value to use as the stencil write mask.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetStencilWriteMask")]
+    public static unsafe partial void vkCmdSetStencilWriteMask(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetStencilWriteMask")]
     public static extern void vkCmdSetStencilWriteMask(
+#endif
         VkCommandBuffer    commandBuffer,
         VkStencilFaceFlags faceMask,
         uint               writeMask);
@@ -2514,8 +3027,13 @@ public static partial class Vk
     /// <param name="reference">reference is the new value to use as the stencil reference value.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetStencilReference")]
+    public static unsafe partial void vkCmdSetStencilReference(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetStencilReference")]
     public static extern void vkCmdSetStencilReference(
+#endif
         VkCommandBuffer    commandBuffer,
         VkStencilFaceFlags faceMask,
         uint               reference);
@@ -2541,8 +3059,13 @@ public static partial class Vk
     /// <param name="pDynamicOffsets">pDynamicOffsets is a pointer to an array of uint32_t values specifying dynamic offsets.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdBindDescriptorSets")]
+    public static unsafe partial void vkCmdBindDescriptorSets(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBindDescriptorSets")]
     public static extern unsafe void vkCmdBindDescriptorSets(
+#endif
         VkCommandBuffer     commandBuffer,
         VkPipelineBindPoint pipelineBindPoint,
         VkPipelineLayout    layout,
@@ -2562,8 +3085,13 @@ public static partial class Vk
     /// <param name="indexType">indexType is a VkIndexType value specifying the size of the indices.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdBindIndexBuffer")]
+    public static unsafe partial void vkCmdBindIndexBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBindIndexBuffer")]
     public static extern void vkCmdBindIndexBuffer(
+#endif
         VkCommandBuffer commandBuffer,
         VkBuffer        buffer,
         VkDeviceSize    offset,
@@ -2583,8 +3111,13 @@ public static partial class Vk
     /// <param name="pOffsets">pOffsets is a pointer to an array of buffer offsets.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdBindVertexBuffers")]
+    public static unsafe partial void vkCmdBindVertexBuffers(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBindVertexBuffers")]
     public static extern unsafe void vkCmdBindVertexBuffers(
+#endif
         VkCommandBuffer commandBuffer,
         uint            firstBinding,
         uint            bindingCount,
@@ -2602,8 +3135,13 @@ public static partial class Vk
     /// <param name="firstInstance">firstInstance is the instance ID of the first instance to draw.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdDraw")]
+    public static unsafe partial void vkCmdDraw(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdDraw")]
     public static extern void vkCmdDraw(
+#endif
         VkCommandBuffer commandBuffer,
         uint            vertexCount,
         uint            instanceCount,
@@ -2622,8 +3160,13 @@ public static partial class Vk
     /// <param name="firstInstance">firstInstance is the instance ID of the first instance to draw.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdDrawIndexed")]
+    public static unsafe partial void vkCmdDrawIndexed(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdDrawIndexed")]
     public static extern void vkCmdDrawIndexed(
+#endif
         VkCommandBuffer commandBuffer,
         uint            indexCount,
         uint            instanceCount,
@@ -2642,8 +3185,13 @@ public static partial class Vk
     /// <param name="stride">stride is the byte stride between successive sets of draw parameters.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdDrawIndirect")]
+    public static unsafe partial void vkCmdDrawIndirect(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdDrawIndirect")]
     public static extern void vkCmdDrawIndirect(
+#endif
         VkCommandBuffer commandBuffer,
         VkBuffer        buffer,
         VkDeviceSize    offset,
@@ -2661,8 +3209,13 @@ public static partial class Vk
     /// <param name="stride">stride is the byte stride between successive sets of draw parameters.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdDrawIndexedIndirect")]
+    public static unsafe partial void vkCmdDrawIndexedIndirect(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdDrawIndexedIndirect")]
     public static extern void vkCmdDrawIndexedIndirect(
+#endif
         VkCommandBuffer commandBuffer,
         VkBuffer        buffer,
         VkDeviceSize    offset,
@@ -2679,8 +3232,13 @@ public static partial class Vk
     /// <param name="groupCountZ">groupCountZ is the number of local workgroups to dispatch in the Z dimension.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdDispatch")]
+    public static unsafe partial void vkCmdDispatch(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdDispatch")]
     public static extern void vkCmdDispatch(
+#endif
         VkCommandBuffer commandBuffer,
         uint            groupCountX,
         uint            groupCountY,
@@ -2695,8 +3253,13 @@ public static partial class Vk
     /// <param name="offset">offset is the byte offset into buffer where parameters begin.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdDispatchIndirect")]
+    public static unsafe partial void vkCmdDispatchIndirect(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdDispatchIndirect")]
     public static extern void vkCmdDispatchIndirect(
+#endif
         VkCommandBuffer commandBuffer,
         VkBuffer        buffer,
         VkDeviceSize    offset);
@@ -2712,8 +3275,13 @@ public static partial class Vk
     /// <param name="pRegions">pRegions is a pointer to an array of VkBufferCopy structures specifying the regions to copy.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdCopyBuffer")]
+    public static unsafe partial void vkCmdCopyBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdCopyBuffer")]
     public static extern unsafe void vkCmdCopyBuffer(
+#endif
         VkCommandBuffer commandBuffer,
         VkBuffer        srcBuffer,
         VkBuffer        dstBuffer,
@@ -2733,8 +3301,13 @@ public static partial class Vk
     /// <param name="pRegions">pRegions is a pointer to an array of VkImageCopy structures specifying the regions to copy.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdCopyImage")]
+    public static unsafe partial void vkCmdCopyImage(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdCopyImage")]
     public static extern unsafe void vkCmdCopyImage(
+#endif
         VkCommandBuffer commandBuffer,
         VkImage         srcImage,
         VkImageLayout   srcImageLayout,
@@ -2757,8 +3330,13 @@ public static partial class Vk
     /// <param name="filter">filter is a VkFilter specifying the filter to apply if the blits require scaling.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdBlitImage")]
+    public static unsafe partial void vkCmdBlitImage(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBlitImage")]
     public static extern unsafe void vkCmdBlitImage(
+#endif
         VkCommandBuffer commandBuffer,
         VkImage         srcImage,
         VkImageLayout   srcImageLayout,
@@ -2780,8 +3358,13 @@ public static partial class Vk
     /// <param name="pRegions">pRegions is a pointer to an array of VkBufferImageCopystructures specifying the regions to copy.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdCopyBufferToImage")]
+    public static unsafe partial void vkCmdCopyBufferToImage(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdCopyBufferToImage")]
     public static extern unsafe void vkCmdCopyBufferToImage(
+#endif
         VkCommandBuffer    commandBuffer,
         VkBuffer           srcBuffer,
         VkImage            dstImage,
@@ -2801,8 +3384,13 @@ public static partial class Vk
     /// <param name="pRegions">pRegions is a pointer to an array of VkBufferImageCopystructures specifying the regions to copy.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdCopyImageToBuffer")]
+    public static unsafe partial void vkCmdCopyImageToBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdCopyImageToBuffer")]
     public static extern unsafe void vkCmdCopyImageToBuffer(
+#endif
         VkCommandBuffer    commandBuffer,
         VkImage            srcImage,
         VkImageLayout      srcImageLayout,
@@ -2824,8 +3412,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdUpdateBuffer")]
+    public static unsafe partial void vkCmdUpdateBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdUpdateBuffer")]
     public static extern unsafe void vkCmdUpdateBuffer(
+#endif
         VkCommandBuffer commandBuffer,
         VkBuffer        dstBuffer,
         VkDeviceSize    dstOffset,
@@ -2853,8 +3446,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdFillBuffer")]
+    public static unsafe partial void vkCmdFillBuffer(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdFillBuffer")]
     public static extern void vkCmdFillBuffer(
+#endif
         VkCommandBuffer commandBuffer,
         VkBuffer        dstBuffer,
         VkDeviceSize    dstOffset,
@@ -2883,8 +3481,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdClearColorImage")]
+    public static unsafe partial void vkCmdClearColorImage(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdClearColorImage")]
     public static extern unsafe void vkCmdClearColorImage(
+#endif
         VkCommandBuffer          commandBuffer,
         VkImage                  image,
         VkImageLayout            imageLayout,
@@ -2914,8 +3517,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdClearDepthStencilImage")]
+    public static unsafe partial void vkCmdClearDepthStencilImage(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdClearDepthStencilImage")]
     public static extern unsafe void vkCmdClearDepthStencilImage(
+#endif
         VkCommandBuffer           commandBuffer,
         VkImage                   image,
         VkImageLayout             imageLayout,
@@ -2940,8 +3548,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdClearAttachments")]
+    public static unsafe partial void vkCmdClearAttachments(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdClearAttachments")]
     public static extern unsafe void vkCmdClearAttachments(
+#endif
         VkCommandBuffer    commandBuffer,
         uint               attachmentCount,
         VkClearAttachment* pAttachments,
@@ -2961,8 +3574,13 @@ public static partial class Vk
     /// <param name="pRegions">pRegions is a pointer to an array of VkImageResolvestructures specifying the regions to resolve.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdResolveImage")]
+    public static unsafe partial void vkCmdResolveImage(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdResolveImage")]
     public static extern unsafe void vkCmdResolveImage(
+#endif
         VkCommandBuffer commandBuffer,
         VkImage         srcImage,
         VkImageLayout   srcImageLayout,
@@ -2980,8 +3598,13 @@ public static partial class Vk
     /// <param name="stageMask">stageMask specifies the source stage mask used to determine the first synchronization scope.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdSetEvent")]
+    public static unsafe partial void vkCmdSetEvent(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdSetEvent")]
     public static extern void vkCmdSetEvent(
+#endif
         VkCommandBuffer      commandBuffer,
         VkEvent              @event,
         VkPipelineStageFlags stageMask);
@@ -2998,8 +3621,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdResetEvent")]
+    public static unsafe partial void vkCmdResetEvent(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdResetEvent")]
     public static extern void vkCmdResetEvent(
+#endif
         VkCommandBuffer      commandBuffer,
         VkEvent              @event,
         VkPipelineStageFlags stageMask);
@@ -3021,8 +3649,13 @@ public static partial class Vk
     /// <param name="pImageMemoryBarriers">pImageMemoryBarriers is a pointer to an array of VkImageMemoryBarrier structures.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdWaitEvents")]
+    public static unsafe partial void vkCmdWaitEvents(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdWaitEvents")]
     public static extern unsafe void vkCmdWaitEvents(
+#endif
         VkCommandBuffer        commandBuffer,
         uint                   eventCount,
         VkEvent*               pEvents,
@@ -3054,8 +3687,13 @@ public static partial class Vk
     /// <param name="pImageMemoryBarriers">pImageMemoryBarriers is a pointer to an array of VkImageMemoryBarrier structures.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdPipelineBarrier")]
+    public static unsafe partial void vkCmdPipelineBarrier(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdPipelineBarrier")]
     public static extern unsafe void vkCmdPipelineBarrier(
+#endif
         VkCommandBuffer        commandBuffer,
         VkPipelineStageFlags   srcStageMask,
         VkPipelineStageFlags   dstStageMask,
@@ -3080,8 +3718,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdBeginQuery")]
+    public static unsafe partial void vkCmdBeginQuery(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBeginQuery")]
     public static extern void vkCmdBeginQuery(
+#endif
         VkCommandBuffer     commandBuffer,
         VkQueryPool         queryPool,
         uint                query,
@@ -3096,8 +3739,13 @@ public static partial class Vk
     /// <param name="query">query is the query index within the query pool where the result is stored.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdEndQuery")]
+    public static unsafe partial void vkCmdEndQuery(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdEndQuery")]
     public static extern void vkCmdEndQuery(
+#endif
         VkCommandBuffer commandBuffer,
         VkQueryPool     queryPool,
         uint            query);
@@ -3112,8 +3760,13 @@ public static partial class Vk
     /// <param name="queryCount">queryCount is the number of queries to reset.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdResetQueryPool")]
+    public static unsafe partial void vkCmdResetQueryPool(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdResetQueryPool")]
     public static extern void vkCmdResetQueryPool(
+#endif
         VkCommandBuffer commandBuffer,
         VkQueryPool     queryPool,
         uint            firstQuery,
@@ -3129,8 +3782,13 @@ public static partial class Vk
     /// <param name="query">query is the query within the query pool that will contain the timestamp.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdWriteTimestamp")]
+    public static unsafe partial void vkCmdWriteTimestamp(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdWriteTimestamp")]
     public static extern void vkCmdWriteTimestamp(
+#endif
         VkCommandBuffer         commandBuffer,
         VkPipelineStageFlagBits pipelineStage,
         VkQueryPool             queryPool,
@@ -3156,8 +3814,13 @@ public static partial class Vk
     /// <param name="flags">flags is a bitmask of VkQueryResultFlagBits specifying how and when results are returned.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdCopyQueryPoolResults")]
+    public static unsafe partial void vkCmdCopyQueryPoolResults(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdCopyQueryPoolResults")]
     public static extern void vkCmdCopyQueryPoolResults(
+#endif
         VkCommandBuffer    commandBuffer,
         VkQueryPool        queryPool,
         uint               firstQuery,
@@ -3182,8 +3845,13 @@ public static partial class Vk
     /// <param name="pValues">pValues is a pointer to an array of size bytes containing the new push constant values.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdPushConstants")]
+    public static unsafe partial void vkCmdPushConstants(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdPushConstants")]
     public static extern unsafe void vkCmdPushConstants(
+#endif
         VkCommandBuffer    commandBuffer,
         VkPipelineLayout   layout,
         VkShaderStageFlags stageFlags,
@@ -3206,8 +3874,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdBeginRenderPass")]
+    public static unsafe partial void vkCmdBeginRenderPass(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdBeginRenderPass")]
     public static extern unsafe void vkCmdBeginRenderPass(
+#endif
         VkCommandBuffer        commandBuffer,
         VkRenderPassBeginInfo* pRenderPassBegin,
         VkSubpassContents      contents);
@@ -3223,8 +3896,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdNextSubpass")]
+    public static unsafe partial void vkCmdNextSubpass(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdNextSubpass")]
     public static extern void vkCmdNextSubpass(
+#endif
         VkCommandBuffer   commandBuffer,
         VkSubpassContents contents);
 
@@ -3235,8 +3913,14 @@ public static partial class Vk
     /// <param name="commandBuffer">commandBuffer is the command buffer in which to end the current render pass instance.</param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdEndRenderPass")]
+    public static unsafe partial void vkCmdEndRenderPass(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdEndRenderPass")]
-    public static extern void vkCmdEndRenderPass(VkCommandBuffer commandBuffer);
+    public static extern void vkCmdEndRenderPass(
+#endif
+        VkCommandBuffer commandBuffer);
 
     /// <summary>
     ///     vkCmdExecuteCommands - Execute a secondary command buffer from a primary command buffer -
@@ -3253,8 +3937,13 @@ public static partial class Vk
     /// </param>
     [VkVersion("1.0")]
     [SuppressUnmanagedCodeSecurity]
+#if NET7_0_OR_GREATER
+    [LibraryImport(VK_IMPORT, EntryPoint = "vkCmdExecuteCommands")]
+    public static unsafe partial void vkCmdExecuteCommands(
+#else
     [DllImport(VK_IMPORT, EntryPoint = "vkCmdExecuteCommands")]
     public static extern unsafe void vkCmdExecuteCommands(
+#endif
         VkCommandBuffer  commandBuffer,
         uint             commandBufferCount,
         VkCommandBuffer* pCommandBuffers);

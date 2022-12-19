@@ -1,7 +1,7 @@
-<!--EXTERNAL_PROPERTIES: VersionSuffix;MSBuildThisFileDirectory-->
+<!--EXTERNAL_PROPERTIES: MSBuildThisFileDirectory-->
 <Project>
   <PropertyGroup>
-    <LangVersion>10.0</LangVersion>
+    <LangVersion>11.0</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DocumentationFile></DocumentationFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>

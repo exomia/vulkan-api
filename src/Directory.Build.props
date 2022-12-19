@@ -3,19 +3,19 @@
   <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0</TargetFrameworks>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup>
-    <Description>Low-level library for C#/.Net 6 to access the Vulkan API.</Description>
+    <Description>Open source and cross platform low-level .NET bindings to access the Vulkan API.</Description>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageProjectUrl>https://github.com/exomia/vulkan-api</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <PackageTags>exomia vulkan net6.0 csharp game engine 2d 3d</PackageTags>
+    <PackageTags>exomia vulkan vulkan-api csharp dotnet net6 net7 bindings binding</PackageTags>
     <PackageOutputPath>.</PackageOutputPath>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIconUrl>https://avatars0.githubusercontent.com/u/37782223</PackageIconUrl>

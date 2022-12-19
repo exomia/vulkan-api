@@ -1,7 +1,9 @@
 ## Information
 
-The exomia/vulkan-api repository contains C#/.Net 6 libraries providing low-level and cross-platform bindings to access the [Vulkan](https://www.khronos.org/vulkan/) API.  
+The exomia/vulkan-api repository contains .NET bindings providing low-level and cross-platform access to the [Vulkan](https://www.khronos.org/vulkan/) API.  
 The bindings and documentation are generated using the [KhronosGroup/Vulkan-Docs](https://github.com/KhronosGroup/Vulkan-Docs) repository.
+
+It is meant to be as close as possible to the original Vulkan API written in C. [see example](#example)
 
 ![](https://img.shields.io/github/issues-pr/exomia/vulkan-api.svg)
 ![](https://img.shields.io/github/issues/exomia/vulkan-api.svg)
@@ -19,6 +21,89 @@ The bindings and documentation are generated using the [KhronosGroup/Vulkan-Docs
 - All extensions including vk_video
 - Raw low level bindings using unsafe C# code
 - cross platform
+
+## Example
+
+With **Exomia.Vulkan.Api** you can create a Vulkan instance like this:
+
+### C#
+```csharp
+using Exomia.Vulkan.Api.Core;
+using static Exomia.Vulkan.Api.Core.Vk;
+
+// ...
+
+VkApplicationInfo applicationInfo;
+applicationInfo.sType              = VkApplicationInfo.STYPE;
+applicationInfo.pNext              = null;
+applicationInfo.pApplicationName   = Allocator.AllocateNtString("my app"); // "Allocator" not included in the Exomia.Vulkan.Api
+applicationInfo.applicationVersion = new VkVersion(0, 1, 0, 0);
+applicationInfo.pEngineName        = Allocator.AllocateNtString("my engine"); // "Allocator" not included in the Exomia.Vulkan.Api
+applicationInfo.engineVersion      = new VkVersion(0, 1, 0, 0);
+applicationInfo.apiVersion         = VkVersion.VulkanApiVersion13;
+
+VkInstanceCreateInfo instanceCreateInfo;
+instanceCreateInfo.sType                   = VkInstanceCreateInfo.STYPE;
+instanceCreateInfo.pNext                   = pNext;
+instanceCreateInfo.flags                   = 0;
+instanceCreateInfo.pApplicationInfo        = &applicationInfo;
+instanceCreateInfo.enabledLayerCount       = 0u;
+instanceCreateInfo.ppEnabledLayerNames     = null;
+instanceCreateInfo.enabledExtensionCount   = 0u;
+instanceCreateInfo.ppEnabledExtensionNames = null;
+
+VkInstance instance;
+VkResult result = vkCreateInstance(&instanceCreateInfo, null, &instance);
+```
+
+### C/C++ comparison
+```cpp
+VkApplicationInfo applicationInfo = {};
+applicationInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+applicationInfo.pApplicationName = "my app";
+applicationInfo.applicationVersion = VK_MAKE_VERSION(0, 1, 0, 0);
+applicationInfo.pEngineName = "my engine";
+applicationInfo.engineVersion = VK_MAKE_VERSION(0, 1, 0, 0);
+applicationInfo.apiVersion = VK_API_VERSION_1_3;
+
+VkInstanceCreateInfo instanceCreateInfo = {};
+instanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+instanceCreateInfo.pApplicationInfo = &applicationInfo;
+instanceCreateInfo.enabledLayerCount = 0;
+instanceCreateInfo.enabledExtensionCount = 0;
+
+VkInstance instance;
+VkResult result = vkCreateInstance(&instanceCreateInfo, nullptr, &instance)
+```
+
+### Extensions
+
+loading extensions is also possible:
+
+```csharp
+// <extension name>.Load(instance[, device]);
+VkExtDebugUtils.Load(instance);
+```
+
+after loading the extension functions can be used:
+
+```csharp
+using static Exomia.Vulkan.Api.Core.VkExtDebugUtils;
+
+// ...
+
+VkDebugUtilsMessengerCreateInfoEXT debugUtilsMessengerCreateInfoExt;
+debugUtilsMessengerCreateInfoExt.sType = VkDebugUtilsMessengerCreateInfoEXT.STYPE;
+debugUtilsMessengerCreateInfoExt.pNext = null;
+debugUtilsMessengerCreateInfoExt.flags = 0u;
+
+// ...
+
+VkDebugUtilsMessengerEXT debugUtilsMessengerExt;
+VkResult result = vkCreateDebugUtilsMessengerEXT(instance, &debugUtilsMessengerCreateInfoExt, null, &debugUtilsMessengerExt);
+
+// ...
+```
 
 ## Installing
 
