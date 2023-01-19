@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2022, exomia
+// Copyright (c) 2018-2023, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -4206,6 +4206,18 @@ public enum VkStructureType
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
     VK_STRUCTURE_TYPE_ACCELERATION_STRUCTURE_TRIANGLES_OPACITY_MICROMAP_EXT = 1000396009,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_CLUSTER_CULLING_SHADER_FEATURES_HUAWEI<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_CLUSTER_CULLING_SHADER_FEATURES_HUAWEI = 1000404000,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_CLUSTER_CULLING_SHADER_PROPERTIES_HUAWEI<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_CLUSTER_CULLING_SHADER_PROPERTIES_HUAWEI = 1000404001,
 
     /// <summary>
     ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_BORDER_COLOR_SWIZZLE_FEATURES_EXT<br />

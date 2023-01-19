@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2022, exomia
+// Copyright (c) 2018-2023, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -243,7 +243,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///         storage
     ///         images
     ///     </a>
-    ///     for read operations without specifying a format.
+    ///     or
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
+    ///         storage
+    ///         texel buffers
+    ///     </a>
+    ///     respectively for read operations without specifying a format.
     /// </summary>
     VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT = 0x80000000,
 
@@ -254,7 +260,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///         storage
     ///         images
     ///     </a>
-    ///     for write operations without specifying a format.
+    ///     or
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
+    ///         storage
+    ///         texel buffers
+    ///     </a>
+    ///     respectively for write operations without specifying a format.
     /// </summary>
     VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT = 0x100000000,
 
@@ -705,7 +717,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///         storage
     ///         images
     ///     </a>
-    ///     for read operations without specifying a format.
+    ///     or
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
+    ///         storage
+    ///         texel buffers
+    ///     </a>
+    ///     respectively for read operations without specifying a format.
     /// </summary>
     VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT_KHR = VK_FORMAT_FEATURE_2_STORAGE_READ_WITHOUT_FORMAT_BIT,
 
@@ -716,7 +734,13 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///         storage
     ///         images
     ///     </a>
-    ///     for write operations without specifying a format.
+    ///     or
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storagetexelbuffer">
+    ///         storage
+    ///         texel buffers
+    ///     </a>
+    ///     respectively for write operations without specifying a format.
     /// </summary>
     VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT_KHR = VK_FORMAT_FEATURE_2_STORAGE_WRITE_WITHOUT_FORMAT_BIT,
 

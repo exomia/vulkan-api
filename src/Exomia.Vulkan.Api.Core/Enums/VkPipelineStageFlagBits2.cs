@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2022, exomia
+// Copyright (c) 2018-2023, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -147,6 +147,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_SHADING_RATE_IMAGE_BIT_NV<br />
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT<br />
     ///     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI<br />
+    ///     VK_PIPELINE_STAGE_2_CLUSTER_CULLING_SHADER_BIT_HUAWEI<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT = 0x8000,
 
@@ -211,6 +212,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT<br />
     ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT<br />
     ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_CLUSTER_CULLING_SHADER_BIT_HUAWEI<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT = 0x4000000000,
 
@@ -328,11 +330,8 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// </summary>
     VK_PIPELINE_STAGE_2_MICROMAP_BUILD_BIT_EXT = 0x40000000,
 
-    /// <summary>
-    ///     VK_PIPELINE_STAGE_2_RESEVED_41_BIT_HUAWEI<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineStageFlagBits2</a>
-    /// </summary>
-    VK_PIPELINE_STAGE_2_RESEVED_41_BIT_HUAWEI = 0x20000000000,
+    /// <summary>VK_PIPELINE_STAGE_2_CLUSTER_CULLING_SHADER_BIT_HUAWEI specifies the cluster culling shader stage.</summary>
+    VK_PIPELINE_STAGE_2_CLUSTER_CULLING_SHADER_BIT_HUAWEI = 0x20000000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_OPTICAL_FLOW_BIT_NV specifies the stage of the pipeline where
@@ -487,6 +486,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_SHADING_RATE_IMAGE_BIT_NV<br />
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT<br />
     ///     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI<br />
+    ///     VK_PIPELINE_STAGE_2_CLUSTER_CULLING_SHADER_BIT_HUAWEI<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT_KHR = VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT,
 
@@ -551,6 +551,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_GEOMETRY_SHADER_BIT<br />
     ///     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT<br />
     ///     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_CLUSTER_CULLING_SHADER_BIT_HUAWEI<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT_KHR = VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT,
 

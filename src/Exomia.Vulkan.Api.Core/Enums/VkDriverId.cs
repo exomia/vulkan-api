@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2022, exomia
+// Copyright (c) 2018-2023, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -162,6 +162,12 @@ public enum VkDriverId
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId</a>
     /// </summary>
     VK_DRIVER_ID_MESA_NVK = 24,
+
+    /// <summary>
+    ///     VK_DRIVER_ID_IMAGINATION_OPEN_SOURCE_MESA<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId</a>
+    /// </summary>
+    VK_DRIVER_ID_IMAGINATION_OPEN_SOURCE_MESA = 25,
 
     /// <summary>
     ///     VK_DRIVER_ID_AMD_PROPRIETARY_KHR<br />

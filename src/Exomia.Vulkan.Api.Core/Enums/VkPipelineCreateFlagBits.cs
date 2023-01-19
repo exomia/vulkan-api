@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2022, exomia
+// Copyright (c) 2018-2023, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -70,13 +70,13 @@ public enum VkPipelineCreateFlagBits
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that the pipeline will be used
-    ///     with a fragment shading rate attachment.
+    ///     with a fragment shading rate attachment and dynamic rendering.
     /// </summary>
     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x200000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXTspecifies that the pipeline will be used
-    ///     with a fragment density map attachment.
+    ///     with a fragment density map attachment and dynamic rendering.
     /// </summary>
     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 0x400000,
 
@@ -254,13 +254,13 @@ public enum VkPipelineCreateFlagBits
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that the pipeline will be used
-    ///     with a fragment shading rate attachment.
+    ///     with a fragment shading rate attachment and dynamic rendering.
     /// </summary>
     VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXTspecifies that the pipeline will be used
-    ///     with a fragment density map attachment.
+    ///     with a fragment density map attachment and dynamic rendering.
     /// </summary>
     VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT,
 
