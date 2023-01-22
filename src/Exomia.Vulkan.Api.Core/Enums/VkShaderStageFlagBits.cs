@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2022, exomia
+// Copyright (c) 2018-2023, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -80,11 +80,8 @@ public enum VkShaderStageFlagBits
     /// </summary>
     VK_SHADER_STAGE_SUBPASS_SHADING_BIT_HUAWEI = 0x4000,
 
-    /// <summary>
-    ///     VK_SHADER_STAGE_RESERVED_19_BIT_HUAWEI<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkShaderStageFlagBits</a>
-    /// </summary>
-    VK_SHADER_STAGE_RESERVED_19_BIT_HUAWEI = 0x80000,
+    /// <summary>VK_SHADER_STAGE_CLUSTER_CULLING_BIT_HUAWEI specifies the cluster culling stage.</summary>
+    VK_SHADER_STAGE_CLUSTER_CULLING_BIT_HUAWEI = 0x80000,
 
     /// <summary>
     ///     VK_SHADER_STAGE_EXT_483_RESERVE_15<br />

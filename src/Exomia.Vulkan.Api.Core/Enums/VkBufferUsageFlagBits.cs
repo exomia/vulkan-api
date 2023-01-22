@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2022, exomia
+// Copyright (c) 2018-2023, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -91,7 +91,9 @@ public enum VkBufferUsageFlagBits
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawMeshTasksIndirectCountNV.html">
     ///         vkCmdDrawMeshTasksIndirectCountNV
     ///     </a>
-    ///     , vkCmdDrawMeshTasksIndirectEXT, vkCmdDrawMeshTasksIndirectCountEXT, or
+    ///     , vkCmdDrawMeshTasksIndirectEXT, vkCmdDrawMeshTasksIndirectCountEXT,
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawClusterIndirectHUAWEI.html">vkCmdDrawClusterIndirectHUAWEI</a>
+    ///     , or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDispatchIndirect.html">vkCmdDispatchIndirect</a>
     ///     . It is also suitable for passing as the buffer member of VkIndirectCommandsStreamNV, or sequencesCountBuffer or
     ///     sequencesIndexBuffer or preprocessedBuffer member of VkGeneratedCommandsInfoNV

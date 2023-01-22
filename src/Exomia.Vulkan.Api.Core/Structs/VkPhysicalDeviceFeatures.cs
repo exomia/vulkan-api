@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2022, exomia
+// Copyright (c) 2018-2023, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -348,16 +348,16 @@ public struct VkPhysicalDeviceFeatures
     public VkBool32 shaderStorageImageMultisample;
 
     /// <summary>
-    ///     shaderStorageImageReadWithoutFormat specifies whether storage images require a format qualifier to be
-    ///     specified when reading. shaderStorageImageReadWithoutFormat applies only to formats listed in the storage without
-    ///     formatlist.
+    ///     shaderStorageImageReadWithoutFormat specifies whether storage images and storage texel buffers require a
+    ///     format qualifier to be specified when reading. shaderStorageImageReadWithoutFormat applies only to formats listed
+    ///     in the storage without formatlist.
     /// </summary>
     public VkBool32 shaderStorageImageReadWithoutFormat;
 
     /// <summary>
-    ///     shaderStorageImageWriteWithoutFormat specifies whether storage images require a format qualifier to be
-    ///     specified when writing. shaderStorageImageWriteWithoutFormat applies only to formats listed in the storage without
-    ///     format list.
+    ///     shaderStorageImageWriteWithoutFormat specifies whether storage images and storage texel buffers require a
+    ///     format qualifier to be specified when writing. shaderStorageImageWriteWithoutFormat applies only to formats listed
+    ///     in the storage without format list.
     /// </summary>
     public VkBool32 shaderStorageImageWriteWithoutFormat;
 

@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2022, exomia
+// Copyright (c) 2018-2023, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -151,5 +151,14 @@ public enum VkQueryPipelineStatisticFlagBits
     ///     count the number of mesh shader invocations. The counter&#8217;s value is incremented every time the mesh shader is
     ///     invoked.
     /// </summary>
-    VK_QUERY_PIPELINE_STATISTIC_MESH_SHADER_INVOCATIONS_BIT_EXT = 0x1000
+    VK_QUERY_PIPELINE_STATISTIC_MESH_SHADER_INVOCATIONS_BIT_EXT = 0x1000,
+
+    /// <summary>
+    ///     VK_QUERY_PIPELINE_STATISTIC_CLUSTER_CULLING_SHADER_INVOCATIONS_BIT_HUAWEI<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueryPipelineStatisticFlagBits">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkQueryPipelineStatisticFlagBits
+    ///     </a>
+    /// </summary>
+    VK_QUERY_PIPELINE_STATISTIC_CLUSTER_CULLING_SHADER_INVOCATIONS_BIT_HUAWEI = 0x2000
 }
