@@ -45,8 +45,8 @@ public unsafe struct VkPhysicalDevicePushDescriptorPropertiesKHR
     public void* pNext;
 
     /// <summary>
-    ///     maxPushDescriptors is the maximum number of descriptors that can be used in a descriptor set created with
-    ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR set.
+    ///     maxPushDescriptors is the maximum number of descriptors that can be used in a descriptor set layout created
+    ///     with VK_DESCRIPTOR_SET_LAYOUT_CREATE_PUSH_DESCRIPTOR_BIT_KHR set.
     /// </summary>
     public uint maxPushDescriptors;
 }
