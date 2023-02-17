@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @chadversary']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_dma_buf.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_dma_buf.html</a>
 /// </summary>
-[VkRequires("VK_KHR_external_memory_fd")]
 public static class VkExtExternalMemoryDmaBuf
 {
     /// <summary> The spec version. </summary>

@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @drakos-amd']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_host.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_host.html</a>
 /// </summary>
-[VkRequires("VK_KHR_external_memory")]
 public static unsafe class VkExtExternalMemoryHost
 {
     /// <summary> The spec version. </summary>

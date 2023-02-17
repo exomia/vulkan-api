@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Metal;
 ///     @kvark']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_metal_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_metal_surface.html</a>
 /// </summary>
-[VkRequires("VK_KHR_surface")]
 public static unsafe class VkExtMetalSurface
 {
     /// <summary> The spec version. </summary>

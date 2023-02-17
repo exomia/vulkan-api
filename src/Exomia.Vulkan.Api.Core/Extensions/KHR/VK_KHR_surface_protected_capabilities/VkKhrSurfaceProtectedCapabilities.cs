@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_surface_protected_capabilities.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_get_surface_capabilities2")]
 public static class VkKhrSurfaceProtectedCapabilities
 {
     /// <summary> The spec version. </summary>

@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @mkeshavanv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_properties.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_properties.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkExtPipelineProperties
 {
     /// <summary> The spec version. </summary>

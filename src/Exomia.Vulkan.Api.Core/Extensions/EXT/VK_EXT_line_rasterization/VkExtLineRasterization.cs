@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: cadsupport
 /// </remarks>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 [VkSpecialuse("cadsupport")]
 public static unsafe class VkExtLineRasterization
 {

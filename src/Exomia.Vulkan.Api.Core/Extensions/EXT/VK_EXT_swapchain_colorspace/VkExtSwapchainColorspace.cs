@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     Goeltzenleuchter @courtney-g']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_swapchain_colorspace.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_swapchain_colorspace.html</a>
 /// </summary>
-[VkRequires("VK_KHR_surface")]
 public static class VkExtSwapchainColorspace
 {
     /// <summary> The spec version. </summary>

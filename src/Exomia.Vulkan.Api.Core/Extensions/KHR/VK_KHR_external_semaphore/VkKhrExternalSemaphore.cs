@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @cubanismo']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_semaphore.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_semaphore.html</a>
 /// </summary>
-[VkRequires("VK_KHR_external_semaphore_capabilities")]
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_semaphore.html#_deprecation_state")]
 public static class VkKhrExternalSemaphore
 {

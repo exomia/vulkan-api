@@ -19,11 +19,10 @@ global using static Exomia.Vulkan.Api.Core.VkExtShaderAtomicFloat2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_shader_atomic_float2 - device extension (nr. 274) - author 'EXT' [platform '' | contact 'Jason Ekstrand
-///     @jekstrand']<br />
+///     VK_EXT_shader_atomic_float2 - device extension (nr. 274) - author 'EXT' [platform '' | contact 'Faith Ekstrand
+///     @gfxstrand']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_atomic_float2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_atomic_float2.html</a>
 /// </summary>
-[VkRequires("VK_EXT_shader_atomic_float")]
 public static class VkExtShaderAtomicFloat2
 {
     /// <summary> The spec version. </summary>

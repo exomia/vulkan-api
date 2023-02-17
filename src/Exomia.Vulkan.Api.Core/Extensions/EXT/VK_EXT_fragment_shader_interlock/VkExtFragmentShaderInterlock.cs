@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_fragment_shader_interlock.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 public static class VkExtFragmentShaderInterlock
 {
     /// <summary> The spec version. </summary>

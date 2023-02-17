@@ -53,7 +53,7 @@ public static unsafe class VkExtDebugUtils
     ///     vkSetDebugUtilsObjectNameEXT - Give a user-friendly name to an object -
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html</a>
     /// </summary>
-    /// <param name="device">device is the device that created the object.</param>
+    /// <param name="device">device is the device that is associated with the named object passed in via objectHandle.</param>
     /// <param name="pNameInfo">
     ///     pNameInfo is a pointer to a VkDebugUtilsObjectNameInfoEXTstructure specifying parameters of the
     ///     name to set on the object.

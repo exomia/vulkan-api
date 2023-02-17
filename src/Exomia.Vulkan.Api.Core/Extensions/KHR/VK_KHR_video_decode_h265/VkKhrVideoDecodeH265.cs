@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_video_decode_h265.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_video_decode_h265.html</a>
 /// </summary>
-[VkRequires("VK_KHR_video_decode_queue")]
 public static class VkKhrVideoDecodeH265
 {
     /// <summary> The spec version. </summary>

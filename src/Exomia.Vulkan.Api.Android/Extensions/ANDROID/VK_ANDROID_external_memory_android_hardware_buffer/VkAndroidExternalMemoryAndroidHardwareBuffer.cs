@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Android;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ANDROID_external_memory_android_hardware_buffer.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_sampler_ycbcr_conversion,VK_KHR_external_memory,VK_EXT_queue_family_foreign,VK_KHR_dedicated_allocation")]
 public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
 {
     /// <summary> The spec version. </summary>

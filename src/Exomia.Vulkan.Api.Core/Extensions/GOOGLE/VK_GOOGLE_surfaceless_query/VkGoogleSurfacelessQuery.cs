@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: glemulation
 /// </remarks>
-[VkRequires("VK_KHR_surface")]
 [VkSpecialuse("glemulation")]
 public static class VkGoogleSurfacelessQuery
 {

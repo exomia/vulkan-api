@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @llandwerlin']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_format_feature_flags2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_format_feature_flags2.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_format_feature_flags2.html#_deprecation_state")]
 public static class VkKhrFormatFeatureFlags2
 {

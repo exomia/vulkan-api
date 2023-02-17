@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrPipelineExecutableProperties;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_pipeline_executable_properties - device extension (nr. 270) - author 'KHR' [platform '' | contact 'Jason
-///     Ekstrand @jekstrand']<br />
+///     VK_KHR_pipeline_executable_properties - device extension (nr. 270) - author 'KHR' [platform '' | contact 'Faith
+///     Ekstrand @gfxstrand']<br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_pipeline_executable_properties.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_pipeline_executable_properties.html
@@ -29,7 +29,6 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: devtools
 /// </remarks>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 [VkSpecialuse("devtools")]
 public static unsafe class VkKhrPipelineExecutableProperties
 {

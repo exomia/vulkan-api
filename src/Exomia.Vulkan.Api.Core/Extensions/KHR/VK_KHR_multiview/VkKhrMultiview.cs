@@ -22,7 +22,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_KHR_multiview - device extension (nr. 54) - author 'KHR' [platform '' | contact 'Jeff Bolz @jeffbolznv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_multiview.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_multiview.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_multiview.html#_deprecation_state")]
 public static class VkKhrMultiview
 {

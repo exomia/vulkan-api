@@ -29,7 +29,6 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: glemulation
 /// </remarks>
-[VkRequires("VK_EXT_transform_feedback")]
 [VkSpecialuse("glemulation")]
 public static class VkExtPrimitivesGeneratedQuery
 {

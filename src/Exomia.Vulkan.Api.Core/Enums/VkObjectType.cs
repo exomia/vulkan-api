@@ -434,6 +434,12 @@ public enum VkObjectType
     VK_OBJECT_TYPE_OPTICAL_FLOW_SESSION_NV = 1000464000,
 
     /// <summary>
+    ///     VK_OBJECT_TYPE_SEMAPHORE_SCI_SYNC_POOL_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    /// </summary>
+    VK_OBJECT_TYPE_SEMAPHORE_SCI_SYNC_POOL_NV = 1000489000,
+
+    /// <summary>
     ///     <list type="table">
     ///         <item>
     ///             <term>Vulkan Handle Type</term><description>VkDescriptorUpdateTemplate</description>

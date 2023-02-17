@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_fragment_density_map_offset.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2,VK_EXT_fragment_density_map")]
 public static class VkQcomFragmentDensityMapOffset
 {
     /// <summary> The spec version. </summary>
