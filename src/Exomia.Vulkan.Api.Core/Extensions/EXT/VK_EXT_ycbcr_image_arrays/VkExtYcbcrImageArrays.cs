@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @pdaniell-nv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_ycbcr_image_arrays.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_ycbcr_image_arrays.html</a>
 /// </summary>
-[VkRequires("VK_KHR_sampler_ycbcr_conversion")]
 public static class VkExtYcbcrImageArrays
 {
     /// <summary> The spec version. </summary>

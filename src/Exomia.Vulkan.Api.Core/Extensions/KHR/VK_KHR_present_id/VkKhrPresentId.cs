@@ -22,7 +22,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_KHR_present_id - device extension (nr. 295) - author 'KHR' [platform '' | contact 'Keith Packard @keithp']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_present_id.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_present_id.html</a>
 /// </summary>
-[VkRequires("VK_KHR_swapchain")]
 public static class VkKhrPresentId
 {
     /// <summary> The spec version. </summary>

@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @chengtianww']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_headless_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_headless_surface.html</a>
 /// </summary>
-[VkRequires("VK_KHR_surface")]
 public static unsafe class VkExtHeadlessSurface
 {
     /// <summary> The spec version. </summary>

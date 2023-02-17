@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrGetMemoryRequirements2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_get_memory_requirements2 - device extension (nr. 147) - author 'KHR' [platform '' | contact 'Jason Ekstrand
-///     @jekstrand']<br />
+///     VK_KHR_get_memory_requirements2 - device extension (nr. 147) - author 'KHR' [platform '' | contact 'Faith Ekstrand
+///     @gfxstrand']<br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_memory_requirements2.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_memory_requirements2.html

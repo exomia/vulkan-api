@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_protected_access.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 public static class VkExtPipelineProtectedAccess
 {
     /// <summary> The spec version. </summary>

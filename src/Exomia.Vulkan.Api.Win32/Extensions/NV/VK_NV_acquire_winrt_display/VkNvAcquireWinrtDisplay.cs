@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Win32;
 ///     @jjuliano']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_acquire_winrt_display.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_acquire_winrt_display.html</a>
 /// </summary>
-[VkRequires("VK_EXT_direct_mode_display")]
 public static unsafe class VkNvAcquireWinrtDisplay
 {
     /// <summary> The spec version. </summary>

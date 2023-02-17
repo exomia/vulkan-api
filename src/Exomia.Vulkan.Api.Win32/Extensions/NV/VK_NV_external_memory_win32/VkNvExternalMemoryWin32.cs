@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Win32;
 ///     @cubanismo']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_win32.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_win32.html</a>
 /// </summary>
-[VkRequires("VK_NV_external_memory")]
 [Obsolete("deprecated by VK_KHR_external_memory_win32", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_win32.html#_deprecation_state")]
 public static unsafe class VkNvExternalMemoryWin32
 {

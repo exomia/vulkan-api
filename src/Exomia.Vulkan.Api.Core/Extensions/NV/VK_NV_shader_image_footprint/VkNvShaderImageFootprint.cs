@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @nvpbrown']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_image_footprint.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_image_footprint.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 public static class VkNvShaderImageFootprint
 {
     /// <summary> The spec version. </summary>

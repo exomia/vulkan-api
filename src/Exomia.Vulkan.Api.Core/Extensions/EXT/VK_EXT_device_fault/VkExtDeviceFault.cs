@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     gitlab:@r_potter']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_device_fault.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_device_fault.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkExtDeviceFault
 {
     /// <summary> The spec version. </summary>

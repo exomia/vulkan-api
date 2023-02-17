@@ -1,0 +1,33 @@
+<!--EXTERNAL_PROPERTIES: Version;PackageTags-->
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageTags>$(PackageTags) sci</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference
+            Include="..\..\analyzer\Exomia.Vulkan.Api.Sci.SourceGenerator\Exomia.Vulkan.Api.Sci.SourceGenerator.csproj"
+            OutputItemType="Analyzer"
+            PrivateAssets="all"
+            ReferenceOutputAssembly="false" />
+        <None
+            Include="..\..\analyzer\Exomia.Vulkan.Api.Sci.SourceGenerator\bin\netstandard2.0\Exomia.Vulkan.Api.Sci.SourceGenerator.dll"
+            Pack="true"
+            Visible="false"
+            PackagePath="analyzers\dotnet\cs" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(Platform)'=='AnyCPU'">
+        <PackageReference
+            Include="Exomia.Vulkan.Api.Core"
+            Version="$(Version)"
+            PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(Platform)'!='AnyCPU'">
+        <PackageReference
+            Include="Exomia.Vulkan.Api.Core.$(Platform)"
+            Version="$(Version)"
+            PrivateAssets="all" />
+    </ItemGroup>
+</Project>

@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_display_swapchain.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_display_swapchain.html</a>
 /// </summary>
-[VkRequires("VK_KHR_swapchain,VK_KHR_display")]
 public static unsafe class VkKhrDisplaySwapchain
 {
     /// <summary> The spec version. </summary>
@@ -56,6 +55,10 @@ public static unsafe class VkKhrDisplaySwapchain
     ///     pCreateInfos is a pointer to an array of VkSwapchainCreateInfoKHR structures specifying the
     ///     parameters of the created swapchains.
     /// </param>
+    /// <param name="pCreateInfos">
+    ///     pCreateInfos is a pointer to an array of VkSwapchainCreateInfoKHR structures specifying the
+    ///     parameters of the created swapchains.
+    /// </param>
     /// <param name="pAllocator">
     ///     pAllocator is the allocator used for host memory allocated for the swapchain objects when
     ///     there is no more specific allocator available (see Memory Allocation).
@@ -79,6 +82,7 @@ public static unsafe class VkKhrDisplaySwapchain
         VkDevice /*device*/,
         uint /*swapchainCount*/,
         VkSwapchainCreateInfoKHR* /*pCreateInfos*/,
+        VkSwapchainCreateInfoKHR* /*pCreateInfos*/,
         VkAllocationCallbacks* /*pAllocator*/,
         VkSwapchainKHR* /*pSwapchains*/,
         VkResult> vkCreateSharedSwapchainsKHR = null;
@@ -95,9 +99,10 @@ public static unsafe class VkKhrDisplaySwapchain
     /// </remarks>
     public static void Load(VkDevice device)
     {
-        fixed (delegate*<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>* pvkCreateSharedSwapchainsKHR = &vkCreateSharedSwapchainsKHR)
+        fixed (delegate*<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>* pvkCreateSharedSwapchainsKHR =
+            &vkCreateSharedSwapchainsKHR)
         {
-            *pvkCreateSharedSwapchainsKHR = (delegate*<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>)GetVkFunction(
+            *pvkCreateSharedSwapchainsKHR = (delegate*<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>)GetVkFunction(
                 device, "\u6b76\u7243\u6165\u6574\u6853\u7261\u6465\u7753\u7061\u6863\u6961\u736e\u484b\u0052");
         }
     }

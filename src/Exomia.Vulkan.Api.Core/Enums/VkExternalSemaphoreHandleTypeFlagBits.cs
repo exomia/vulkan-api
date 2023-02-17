@@ -74,13 +74,13 @@ public enum VkExternalSemaphoreHandleTypeFlagBits
     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_ZIRCON_EVENT_BIT_FUCHSIA = 0x80,
 
     /// <summary>
-    ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_5_BIT_NV<br />
+    ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SCI_SYNC_OBJ_BIT_NV<br />
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalSemaphoreHandleTypeFlagBits">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalSemaphoreHandleTypeFlagBits
     ///     </a>
     /// </summary>
-    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_RESERVED_5_BIT_NV = 0x20,
+    VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SCI_SYNC_OBJ_BIT_NV = 0x20,
 
     /// <summary>
     ///     VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_D3D12_FENCE_BIT specifies an NT handle returned by

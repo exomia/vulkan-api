@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @pixeljetstream']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_mesh_shader.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_mesh_shader.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2,VK_KHR_spirv_1_4")]
 public static unsafe class VkExtMeshShader
 {
     /// <summary> The spec version. </summary>

@@ -61,6 +61,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exomia.Vulkan.Api.Screen", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exomia.Vulkan.Api.Screen.SourceGenerator", "analyzer\Exomia.Vulkan.Api.Screen.SourceGenerator\Exomia.Vulkan.Api.Screen.SourceGenerator.csproj", "{56A83660-135D-400A-9BA4-AD71F656A1B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exomia.Vulkan.Api.Sci", "src\Exomia.Vulkan.Api.Sci\Exomia.Vulkan.Api.Sci.csproj", "{A47CAC4F-8C91-4657-9138-4658DDD71328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exomia.Vulkan.Api.Sci.SourceGenerator", "analyzer\Exomia.Vulkan.Api.Sci.SourceGenerator\Exomia.Vulkan.Api.Sci.SourceGenerator.csproj", "{04B2F877-C088-4C54-B359-9197E2B37335}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -293,6 +297,22 @@ Global
 		{56A83660-135D-400A-9BA4-AD71F656A1B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{56A83660-135D-400A-9BA4-AD71F656A1B7}.Release|x64.ActiveCfg = Release|x64
 		{56A83660-135D-400A-9BA4-AD71F656A1B7}.Release|x64.Build.0 = Release|x64
+		{A47CAC4F-8C91-4657-9138-4658DDD71328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47CAC4F-8C91-4657-9138-4658DDD71328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47CAC4F-8C91-4657-9138-4658DDD71328}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A47CAC4F-8C91-4657-9138-4658DDD71328}.Debug|x64.Build.0 = Debug|Any CPU
+		{A47CAC4F-8C91-4657-9138-4658DDD71328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47CAC4F-8C91-4657-9138-4658DDD71328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47CAC4F-8C91-4657-9138-4658DDD71328}.Release|x64.ActiveCfg = Release|Any CPU
+		{A47CAC4F-8C91-4657-9138-4658DDD71328}.Release|x64.Build.0 = Release|Any CPU
+		{04B2F877-C088-4C54-B359-9197E2B37335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B2F877-C088-4C54-B359-9197E2B37335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B2F877-C088-4C54-B359-9197E2B37335}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{04B2F877-C088-4C54-B359-9197E2B37335}.Debug|x64.Build.0 = Debug|Any CPU
+		{04B2F877-C088-4C54-B359-9197E2B37335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B2F877-C088-4C54-B359-9197E2B37335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04B2F877-C088-4C54-B359-9197E2B37335}.Release|x64.ActiveCfg = Release|Any CPU
+		{04B2F877-C088-4C54-B359-9197E2B37335}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -312,5 +332,6 @@ Global
 		{8867FFDB-5DCF-4ADD-AF30-F94D26074E5C} = {304DF17B-8E8C-4C6D-9BE2-D80F81CC0784}
 		{A7889500-FA11-4A10-96D9-DD9BEE65E8E7} = {304DF17B-8E8C-4C6D-9BE2-D80F81CC0784}
 		{56A83660-135D-400A-9BA4-AD71F656A1B7} = {304DF17B-8E8C-4C6D-9BE2-D80F81CC0784}
+		{04B2F877-C088-4C54-B359-9197E2B37335} = {304DF17B-8E8C-4C6D-9BE2-D80F81CC0784}
 	EndGlobalSection
 EndGlobal

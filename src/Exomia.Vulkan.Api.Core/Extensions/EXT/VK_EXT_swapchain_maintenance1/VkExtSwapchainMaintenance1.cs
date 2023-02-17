@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @syoussefi']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_swapchain_maintenance1.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_swapchain_maintenance1.html</a>
 /// </summary>
-[VkRequires("VK_KHR_swapchain,VK_EXT_surface_maintenance1,VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkExtSwapchainMaintenance1
 {
     /// <summary> The spec version. </summary>

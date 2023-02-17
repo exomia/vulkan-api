@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: glemulation,d3demulation
 /// </remarks>
-[VkRequires("VK_EXT_custom_border_color")]
 [VkSpecialuse("glemulation,d3demulation")]
 public static class VkExtBorderColorSwizzle
 {

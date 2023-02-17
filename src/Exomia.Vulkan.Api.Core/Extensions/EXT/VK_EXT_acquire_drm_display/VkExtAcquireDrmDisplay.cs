@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     sir@cmpwn.com']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_drm_display.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_acquire_drm_display.html</a>
 /// </summary>
-[VkRequires("VK_EXT_direct_mode_display")]
 public static unsafe class VkExtAcquireDrmDisplay
 {
     /// <summary> The spec version. </summary>

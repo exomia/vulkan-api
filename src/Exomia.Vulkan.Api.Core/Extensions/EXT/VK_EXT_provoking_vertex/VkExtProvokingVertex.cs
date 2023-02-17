@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: glemulation
 /// </remarks>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 [VkSpecialuse("glemulation")]
 public static class VkExtProvokingVertex
 {

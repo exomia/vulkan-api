@@ -44,7 +44,7 @@ applicationInfo.apiVersion         = VkVersion.VulkanApiVersion13;
 
 VkInstanceCreateInfo instanceCreateInfo;
 instanceCreateInfo.sType                   = VkInstanceCreateInfo.STYPE;
-instanceCreateInfo.pNext                   = pNext;
+instanceCreateInfo.pNext                   = null;
 instanceCreateInfo.flags                   = 0;
 instanceCreateInfo.pApplicationInfo        = &applicationInfo;
 instanceCreateInfo.enabledLayerCount       = 0u;
@@ -138,6 +138,7 @@ PM> Install-Package Exomia.Vulkan.Api.<Platform>
 | Metal | Metal on CoreAnimation on Apple platforms |
 | Fuchsia | Fuchsia |
 | Ggp | Google Games Platform |
+| Sci | NVIDIA SCI |
 | Screen | QNX Screen Graphics Subsystem |
 
 

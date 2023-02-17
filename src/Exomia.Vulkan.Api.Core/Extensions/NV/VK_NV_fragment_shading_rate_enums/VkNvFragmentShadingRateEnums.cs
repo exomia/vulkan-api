@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_fragment_shading_rate_enums.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_fragment_shading_rate")]
 public static unsafe class VkNvFragmentShadingRateEnums
 {
     /// <summary> The spec version. </summary>

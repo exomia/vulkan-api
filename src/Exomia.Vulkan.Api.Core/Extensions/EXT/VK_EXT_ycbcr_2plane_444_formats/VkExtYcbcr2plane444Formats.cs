@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_ycbcr_2plane_444_formats.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_sampler_ycbcr_conversion")]
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_ycbcr_2plane_444_formats.html#_deprecation_state")]
 public static class VkExtYcbcr2plane444Formats
 {

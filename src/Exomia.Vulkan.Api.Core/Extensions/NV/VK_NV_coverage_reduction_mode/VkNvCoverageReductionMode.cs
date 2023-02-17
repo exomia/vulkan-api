@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @kthangudu']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_coverage_reduction_mode.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_coverage_reduction_mode.html</a>
 /// </summary>
-[VkRequires("VK_NV_framebuffer_mixed_samples")]
 public static unsafe class VkNvCoverageReductionMode
 {
     /// <summary> The spec version. </summary>

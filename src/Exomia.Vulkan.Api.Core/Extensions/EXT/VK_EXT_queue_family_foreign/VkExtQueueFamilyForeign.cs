@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @chadversary']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_queue_family_foreign.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_queue_family_foreign.html</a>
 /// </summary>
-[VkRequires("VK_KHR_external_memory")]
 public static class VkExtQueueFamilyForeign
 {
     /// <summary> The spec version. </summary>

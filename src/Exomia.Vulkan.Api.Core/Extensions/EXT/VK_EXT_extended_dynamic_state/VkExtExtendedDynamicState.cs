@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @pdaniell-nv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_extended_dynamic_state.html#_deprecation_state")]
 public static unsafe class VkExtExtendedDynamicState
 {

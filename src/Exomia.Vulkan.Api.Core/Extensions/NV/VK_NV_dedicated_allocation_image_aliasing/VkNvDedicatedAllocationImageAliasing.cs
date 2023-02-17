@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_dedicated_allocation_image_aliasing.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_dedicated_allocation")]
 public static class VkNvDedicatedAllocationImageAliasing
 {
     /// <summary> The spec version. </summary>

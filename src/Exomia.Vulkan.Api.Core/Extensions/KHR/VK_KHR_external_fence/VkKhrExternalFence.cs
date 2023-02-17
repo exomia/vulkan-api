@@ -23,7 +23,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence.html</a>
 /// </summary>
-[VkRequires("VK_KHR_external_fence_capabilities")]
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence.html#_deprecation_state")]
 public static class VkKhrExternalFence
 {

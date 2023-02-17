@@ -26,7 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_multisampled_render_to_single_sampled.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_create_renderpass2,VK_KHR_depth_stencil_resolve")]
 public static class VkExtMultisampledRenderToSingleSampled
 {
     /// <summary> The spec version. </summary>
