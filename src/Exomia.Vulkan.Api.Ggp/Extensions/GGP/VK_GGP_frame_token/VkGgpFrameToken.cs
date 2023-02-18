@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Ggp;
 ///     @jfroy']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GGP_frame_token.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GGP_frame_token.html</a>
 /// </summary>
-[VkRequires("VK_KHR_swapchain,VK_GGP_stream_descriptor_surface")]
+[VkDepends("VK_KHR_swapchain+VK_GGP_stream_descriptor_surface")]
 public static class VkGgpFrameToken
 {
     /// <summary> The spec version. </summary>

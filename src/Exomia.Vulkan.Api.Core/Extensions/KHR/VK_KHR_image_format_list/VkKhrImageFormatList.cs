@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrImageFormatList;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_image_format_list - device extension (nr. 148) - author 'KHR' [platform '' | contact 'Jason Ekstrand
-///     @jekstrand']<br />
+///     VK_KHR_image_format_list - device extension (nr. 148) - author 'KHR' [platform '' | contact 'Faith Ekstrand
+///     @gfxstrand']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_image_format_list.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_image_format_list.html</a>
 /// </summary>
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_image_format_list.html#_deprecation_state")]

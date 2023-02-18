@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @kevinpetit']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_shader_core_builtins.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_shader_core_builtins.html</a>
 /// </summary>
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static class VkArmShaderCoreBuiltins
 {
     /// <summary> The spec version. </summary>

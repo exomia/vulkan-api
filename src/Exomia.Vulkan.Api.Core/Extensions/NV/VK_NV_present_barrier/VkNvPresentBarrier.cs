@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_NV_present_barrier - device extension (nr. 293) - author 'NV' [platform '' | contact 'Liya Li @liyli']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_present_barrier.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_present_barrier.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2,VK_KHR_surface,VK_KHR_get_surface_capabilities2,VK_KHR_swapchain")]
+[VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_surface+VK_KHR_get_surface_capabilities2+VK_KHR_swapchain")]
 public static class VkNvPresentBarrier
 {
     /// <summary> The spec version. </summary>

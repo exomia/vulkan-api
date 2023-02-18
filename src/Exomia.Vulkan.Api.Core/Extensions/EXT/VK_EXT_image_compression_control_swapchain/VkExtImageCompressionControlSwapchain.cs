@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_compression_control_swapchain.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_EXT_image_compression_control")]
+[VkDepends("VK_EXT_image_compression_control")]
 public static class VkExtImageCompressionControlSwapchain
 {
     /// <summary> The spec version. </summary>

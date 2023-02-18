@@ -43,11 +43,5 @@ public enum VkImageViewCreateFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEndCommandBuffer.html">vkEndCommandBuffer</a>
     ///     for the primary command buffer that the render pass is recorded into
     /// </summary>
-    VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DEFERRED_BIT_EXT = 0x2,
-
-    /// <summary>
-    ///     VK_IMAGE_VIEW_CREATE_RESERVED_3_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageViewCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkImageViewCreateFlagBits</a>
-    /// </summary>
-    VK_IMAGE_VIEW_CREATE_RESERVED_3_BIT_EXT = 0x8
+    VK_IMAGE_VIEW_CREATE_FRAGMENT_DENSITY_MAP_DEFERRED_BIT_EXT = 0x2
 }

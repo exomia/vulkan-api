@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Win32;
 ///     @critsec']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence_win32.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence_win32.html</a>
 /// </summary>
-[VkRequires("VK_KHR_external_fence")]
+[VkDepends("VK_KHR_external_fence")]
 public static unsafe class VkKhrExternalFenceWin32
 {
     /// <summary> The spec version. </summary>

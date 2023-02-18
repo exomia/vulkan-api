@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @syoussefi']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_surface_maintenance1.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_surface_maintenance1.html</a>
 /// </summary>
-[VkRequires("VK_KHR_surface,VK_KHR_get_surface_capabilities2")]
+[VkDepends("VK_KHR_surface+VK_KHR_get_surface_capabilities2")]
 public static class VkExtSurfaceMaintenance1
 {
     /// <summary> The spec version. </summary>

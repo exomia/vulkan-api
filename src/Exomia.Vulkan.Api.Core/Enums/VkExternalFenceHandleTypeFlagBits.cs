@@ -58,22 +58,22 @@ public enum VkExternalFenceHandleTypeFlagBits
     VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT = 0x8,
 
     /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_4_BIT_NV<br />
+    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_SCI_SYNC_OBJ_BIT_NV<br />
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceHandleTypeFlagBits">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceHandleTypeFlagBits
     ///     </a>
     /// </summary>
-    VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_4_BIT_NV = 0x10,
+    VK_EXTERNAL_FENCE_HANDLE_TYPE_SCI_SYNC_OBJ_BIT_NV = 0x10,
 
     /// <summary>
-    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_5_BIT_NV<br />
+    ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_SCI_SYNC_FENCE_BIT_NV<br />
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceHandleTypeFlagBits">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkExternalFenceHandleTypeFlagBits
     ///     </a>
     /// </summary>
-    VK_EXTERNAL_FENCE_HANDLE_TYPE_RESERVED_5_BIT_NV = 0x20,
+    VK_EXTERNAL_FENCE_HANDLE_TYPE_SCI_SYNC_FENCE_BIT_NV = 0x20,
 
     /// <summary>
     ///     VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT specifies a POSIX file descriptor handle that has only limited

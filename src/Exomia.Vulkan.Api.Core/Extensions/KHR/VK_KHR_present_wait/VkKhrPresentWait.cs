@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_present_wait.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_present_wait.html</a>
 /// </summary>
-[VkRequires("VK_KHR_swapchain,VK_KHR_present_id")]
+[VkDepends("VK_KHR_swapchain+VK_KHR_present_id")]
 public static unsafe class VkKhrPresentWait
 {
     /// <summary> The spec version. </summary>

@@ -377,17 +377,44 @@ public enum VkDynamicState
     ///     </a>
     ///     will be ignored and must be set dynamically with
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEXT.html">vkCmdSetDiscardRectangleEXT</a>
-    ///     before any draw or clear commands. The
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDiscardRectangleModeEXT.html">VkDiscardRectangleModeEXT</a>
-    ///     and the number of active discard rectangles is still specified by the discardRectangleMode and
-    ///     discardRectangleCount members of
+    ///     before any draw or clear commands.
+    /// </summary>
+    VK_DYNAMIC_STATE_DISCARD_RECTANGLE_EXT = 1000099000,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_DISCARD_RECTANGLE_ENABLE_EXT specifies that the presence of the
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDiscardRectangleStateCreateInfoEXT.html">
     ///         VkPipelineDiscardRectangleStateCreateInfoEXT
     ///     </a>
-    ///     .
+    ///     structure in the
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsPipelineCreateInfo.html">VkGraphicsPipelineCreateInfo</a>
+    ///     chain with a discardRectangleCount greater than zero does not implicitly enable discard rectangles and they must be
+    ///     enabled dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEnableEXT.html">
+    ///         vkCmdSetDiscardRectangleEnableEXT
+    ///     </a>
+    ///     before any draw commands. This is available on implementations that support at least specVersion 2 of the
+    ///     VK_EXT_discard_rectanglesextension.
     /// </summary>
-    VK_DYNAMIC_STATE_DISCARD_RECTANGLE_EXT = 1000099000,
+    VK_DYNAMIC_STATE_DISCARD_RECTANGLE_ENABLE_EXT = 1000099001,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_DISCARD_RECTANGLE_MODE_EXT specifies that the discardRectangleMode state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDiscardRectangleStateCreateInfoEXT.html">
+    ///         VkPipelineDiscardRectangleStateCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleModeEXT.html">
+    ///         vkCmdSetDiscardRectangleModeEXT
+    ///     </a>
+    ///     before any draw commands. This is available on implementations that support at least specVersion 2 of the
+    ///     VK_EXT_discard_rectanglesextension.
+    /// </summary>
+    VK_DYNAMIC_STATE_DISCARD_RECTANGLE_MODE_EXT = 1000099002,
 
     /// <summary>
     ///     VK_DYNAMIC_STATE_SAMPLE_LOCATIONS_EXT specifies that the sampleLocationsInfo state in
@@ -446,6 +473,23 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_VIEWPORT_COARSE_SAMPLE_ORDER_NV = 1000164006,
 
     /// <summary>
+    ///     VK_DYNAMIC_STATE_EXCLUSIVE_SCISSOR_ENABLE_NV specifies that the the exclusive scissors must be explicitly enabled
+    ///     with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorEnableNV.html">
+    ///         vkCmdSetExclusiveScissorEnableNV
+    ///     </a>
+    ///     and the exclusiveScissorCount value in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html">
+    ///         VkPipelineViewportExclusiveScissorStateCreateInfoNV
+    ///     </a>
+    ///     will not implicitly enable them. This is available on implementations that support at least specVersion 2 of the
+    ///     VK_NV_scissor_exclusive extension.
+    /// </summary>
+    VK_DYNAMIC_STATE_EXCLUSIVE_SCISSOR_ENABLE_NV = 1000205000,
+
+    /// <summary>
     ///     VK_DYNAMIC_STATE_EXCLUSIVE_SCISSOR_NV specifies that the pExclusiveScissors state in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html">
@@ -453,13 +497,7 @@ public enum VkDynamicState
     ///     </a>
     ///     will be ignored and must be set dynamically with
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorNV.html">vkCmdSetExclusiveScissorNV</a>
-    ///     before any drawing commands. The number of exclusive scissor rectangles used by a pipeline is still specified by
-    ///     the exclusiveScissorCount member of
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html">
-    ///         VkPipelineViewportExclusiveScissorStateCreateInfoNV
-    ///     </a>
-    ///     .
+    ///     before any drawing commands.
     /// </summary>
     VK_DYNAMIC_STATE_EXCLUSIVE_SCISSOR_NV = 1000205001,
 
