@@ -11,7 +11,7 @@
 namespace Exomia.Vulkan.Api.Core.Attributes;
 
 /// <summary> Attribute for special use. </summary>
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
 public sealed class VkSpecialuseAttribute : Attribute
 {
     /// <summary> Gets the value. </summary>

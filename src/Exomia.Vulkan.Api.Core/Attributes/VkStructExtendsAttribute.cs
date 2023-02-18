@@ -11,7 +11,7 @@
 namespace Exomia.Vulkan.Api.Core.Attributes;
 
 /// <summary> Attribute for struct extends. </summary>
-[AttributeUsage(AttributeTargets.Struct, AllowMultiple = true)]
+[AttributeUsage(AttributeTargets.Struct, AllowMultiple = false)]
 public sealed class VkStructExtendsAttribute : Attribute
 {
     /// <summary> Gets the value. </summary>

@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_representative_fragment_test.html
 ///     </a>
 /// </summary>
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static class VkNvRepresentativeFragmentTest
 {
     /// <summary> The spec version. </summary>

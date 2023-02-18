@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @tobski']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_descriptor_buffer.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_descriptor_buffer.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2,VK_KHR_buffer_device_address,VK_KHR_synchronization2,VK_EXT_descriptor_indexing")]
+[VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_buffer_device_address+VK_KHR_synchronization2+VK_EXT_descriptor_indexing")]
 public static unsafe class VkExtDescriptorBuffer
 {
     /// <summary> The spec version. </summary>

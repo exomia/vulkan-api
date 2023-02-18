@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shared_presentable_image.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_swapchain,VK_KHR_get_physical_device_properties2,VK_KHR_get_surface_capabilities2")]
+[VkDepends("VK_KHR_swapchain+VK_KHR_get_physical_device_properties2+VK_KHR_get_surface_capabilities2")]
 public static unsafe class VkKhrSharedPresentableImage
 {
     /// <summary> The spec version. </summary>

@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_ray_tracing_maintenance1.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_acceleration_structure")]
+[VkDepends("VK_KHR_acceleration_structure")]
 public static unsafe class VkKhrRayTracingMaintenance1
 {
     /// <summary> The spec version. </summary>

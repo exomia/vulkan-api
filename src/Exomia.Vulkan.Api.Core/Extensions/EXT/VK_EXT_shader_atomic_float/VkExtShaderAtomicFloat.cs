@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @vkushwaha-nv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_atomic_float.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_atomic_float.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static class VkExtShaderAtomicFloat
 {
     /// <summary> The spec version. </summary>

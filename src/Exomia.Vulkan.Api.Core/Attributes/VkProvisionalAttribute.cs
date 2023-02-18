@@ -11,7 +11,7 @@
 namespace Exomia.Vulkan.Api.Core.Attributes;
 
 /// <summary> Attribute for provisional. </summary>
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
 public sealed class VkProvisionalAttribute : Attribute
 {
     /// <summary> Gets the value. </summary>
