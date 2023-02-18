@@ -43,15 +43,6 @@ public enum VkPipelineCacheCreateFlagBits
     VK_PIPELINE_CACHE_CREATE_RESERVED_1_BIT_EXT = 0x2,
 
     /// <summary>
-    ///     VK_PIPELINE_CACHE_CREATE_RESERVED_2_BIT_KHR<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCacheCreateFlagBits">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCacheCreateFlagBits
-    ///     </a>
-    /// </summary>
-    VK_PIPELINE_CACHE_CREATE_RESERVED_2_BIT_KHR = 0x4,
-
-    /// <summary>
     ///     VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT specifies that all commands that modify the created
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCache.html">VkPipelineCache</a>
     ///     will be
@@ -62,14 +53,5 @@ public enum VkPipelineCacheCreateFlagBits
     ///     . When set, the implementation may skip any unnecessary processing needed to support
     ///     simultaneous modification from multiple threads where allowed.
     /// </summary>
-    VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT_EXT = VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT,
-
-    /// <summary>
-    ///     VK_PIPELINE_CACHE_CREATE_RESERVED_1_BIT_KHR<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCacheCreateFlagBits">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCacheCreateFlagBits
-    ///     </a>
-    /// </summary>
-    VK_PIPELINE_CACHE_CREATE_RESERVED_1_BIT_KHR = VK_PIPELINE_CACHE_CREATE_RESERVED_1_BIT_EXT
+    VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT_EXT = VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT
 }

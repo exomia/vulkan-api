@@ -13,7 +13,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <content>
-///     VK_VERSION_1_0.constants - vulkan
+///     VK_VERSION_1_0.constants - vulkan,vulkansc
 /// </content>
 public static partial class Vk
 {

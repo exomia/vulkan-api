@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @ianelliottus']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_display_timing.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_display_timing.html</a>
 /// </summary>
-[VkRequires("VK_KHR_swapchain")]
+[VkDepends("VK_KHR_swapchain")]
 public static unsafe class VkGoogleDisplayTiming
 {
     /// <summary> The spec version. </summary>

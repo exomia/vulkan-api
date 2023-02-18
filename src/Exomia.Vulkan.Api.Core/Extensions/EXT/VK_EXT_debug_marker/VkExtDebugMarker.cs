@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: debugging
 /// </remarks>
-[VkRequires("VK_EXT_debug_report")]
+[VkDepends("VK_EXT_debug_report")]
 [VkSpecialuse("debugging")]
 [Obsolete("promoted to VK_EXT_debug_utils", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_debug_marker.html#_deprecation_state")]
 public static unsafe class VkExtDebugMarker

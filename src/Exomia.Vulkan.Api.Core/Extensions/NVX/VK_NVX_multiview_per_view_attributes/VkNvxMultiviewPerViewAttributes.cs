@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_multiview_per_view_attributes.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_multiview")]
+[VkDepends("VK_KHR_multiview")]
 public static class VkNvxMultiviewPerViewAttributes
 {
     /// <summary> The spec version. </summary>

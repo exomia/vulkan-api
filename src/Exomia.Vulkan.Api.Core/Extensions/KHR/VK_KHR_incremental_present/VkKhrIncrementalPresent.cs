@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @ianelliottus']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_incremental_present.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_incremental_present.html</a>
 /// </summary>
-[VkRequires("VK_KHR_swapchain")]
+[VkDepends("VK_KHR_swapchain")]
 public static class VkKhrIncrementalPresent
 {
     /// <summary> The spec version. </summary>

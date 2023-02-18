@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_library_group_handles.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_ray_tracing_pipeline,VK_KHR_pipeline_library")]
+[VkDepends("VK_KHR_ray_tracing_pipeline+VK_KHR_pipeline_library")]
 public static class VkExtPipelineLibraryGroupHandles
 {
     /// <summary> The spec version. </summary>

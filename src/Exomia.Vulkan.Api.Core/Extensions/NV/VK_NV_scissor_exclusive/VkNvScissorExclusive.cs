@@ -23,11 +23,11 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_scissor_exclusive.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_scissor_exclusive.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkNvScissorExclusive
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_NV_SCISSOR_EXCLUSIVE_SPEC_VERSION = 1;
+    public const uint VK_NV_SCISSOR_EXCLUSIVE_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME = "VK_NV_scissor_exclusive";
@@ -45,6 +45,33 @@ public static unsafe class VkNvScissorExclusive
     ///     }
     /// </remarks>
     public const string VK_NV_SCISSOR_EXCLUSIVE_EXTENSION_NAME_UTF8_NT = "\u4b56\u4e5f\u5f56\u4353\u5349\u4f53\u5f52\u5845\u4c43\u5355\u5649\u5f45\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
+
+    /// <summary>
+    ///     vkCmdSetExclusiveScissorEnableNV - Dynamically enable each exclusive scissor for a command buffer -
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorEnableNV.html">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorEnableNV.html
+    ///     </a>
+    /// </summary>
+    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
+    /// <param name="firstExclusiveScissor">
+    ///     firstExclusiveScissor is the index of the first exclusive scissor rectangle whose
+    ///     state is updated by the command.
+    /// </param>
+    /// <param name="exclusiveScissorCount">
+    ///     exclusiveScissorCount is the number of exclusive scissor rectangles updated by the
+    ///     command.
+    /// </param>
+    /// <param name="pExclusiveScissorEnables">
+    ///     pExclusiveScissorEnables is a pointer to an array of VkBool32 values defining
+    ///     whether the exclusive scissor is enabled.
+    /// </param>
+    public static readonly delegate*<
+        VkCommandBuffer /*commandBuffer*/,
+        uint /*firstExclusiveScissor*/,
+        uint /*exclusiveScissorCount*/,
+        VkBool32* /*pExclusiveScissorEnables*/,
+        void> vkCmdSetExclusiveScissorEnableNV = null;
 
     /// <summary>
     ///     vkCmdSetExclusiveScissorNV - Set exclusive scissor rectangles dynamically for a command buffer -
@@ -76,12 +103,21 @@ public static unsafe class VkNvScissorExclusive
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
+    ///             <description>vkCmdSetExclusiveScissorEnableNV</description>
+    ///         </item>
+    ///         <item>
     ///             <description>vkCmdSetExclusiveScissorNV</description>
     ///         </item>
     ///     </list>
     /// </remarks>
     public static void Load(VkDevice device)
     {
+        fixed (delegate*<VkCommandBuffer, uint, uint, VkBool32*, void>* pvkCmdSetExclusiveScissorEnableNV = &vkCmdSetExclusiveScissorEnableNV)
+        {
+            *pvkCmdSetExclusiveScissorEnableNV = (delegate*<VkCommandBuffer, uint, uint, VkBool32*, void>)GetVkFunction(
+                device, "\u6b76\u6d43\u5364\u7465\u7845\u6c63\u7375\u7669\u5365\u6963\u7373\u726f\u6e45\u6261\u656c\u564e\u0000");
+        }
+
         fixed (delegate*<VkCommandBuffer, uint, uint, VkRect2D*, void>* pvkCmdSetExclusiveScissorNV = &vkCmdSetExclusiveScissorNV)
         {
             *pvkCmdSetExclusiveScissorNV = (delegate*<VkCommandBuffer, uint, uint, VkRect2D*, void>)GetVkFunction(

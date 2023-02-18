@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Win32;
 ///     @cubanismo']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_full_screen_exclusive.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_full_screen_exclusive.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2,VK_KHR_surface,VK_KHR_get_surface_capabilities2,VK_KHR_swapchain")]
+[VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_surface+VK_KHR_get_surface_capabilities2+VK_KHR_swapchain")]
 public static unsafe class VkExtFullScreenExclusive
 {
     /// <summary> The spec version. </summary>

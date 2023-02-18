@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_early_and_late_fragment_tests.html
 ///     </a>
 /// </summary>
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static class VkAmdShaderEarlyAndLateFragmentTests
 {
     /// <summary> The spec version. </summary>

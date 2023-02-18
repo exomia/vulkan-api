@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Fuchsia;
 ///     Rosasco @rosasco']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_semaphore.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_semaphore.html</a>
 /// </summary>
-[VkRequires("VK_KHR_external_semaphore_capabilities,VK_KHR_external_semaphore")]
+[VkDepends("VK_KHR_external_semaphore_capabilities+VK_KHR_external_semaphore")]
 public static unsafe class VkFuchsiaExternalSemaphore
 {
     /// <summary> The spec version. </summary>

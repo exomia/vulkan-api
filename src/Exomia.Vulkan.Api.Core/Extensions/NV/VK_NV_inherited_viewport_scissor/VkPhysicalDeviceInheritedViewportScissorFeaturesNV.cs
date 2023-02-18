@@ -44,7 +44,8 @@ public unsafe struct VkPhysicalDeviceInheritedViewportScissorFeaturesNV
     /// <summary>
     ///     inheritedViewportScissor2Dindicates whether secondary command buffers can inherit most of the dynamic state
     ///     affected by VK_DYNAMIC_STATE_VIEWPORT_WITH_COUNT, VK_DYNAMIC_STATE_SCISSOR_WITH_COUNT,
-    ///     VK_DYNAMIC_STATE_DISCARD_RECTANGLE_EXT, VK_DYNAMIC_STATE_VIEWPORT or VK_DYNAMIC_STATE_SCISSOR, from a primary
+    ///     VK_DYNAMIC_STATE_DISCARD_RECTANGLE_EXT, VK_DYNAMIC_STATE_DISCARD_RECTANGLE_ENABLE_EXT,
+    ///     VK_DYNAMIC_STATE_DISCARD_RECTANGLE_MODE_EXT, VK_DYNAMIC_STATE_VIEWPORT or VK_DYNAMIC_STATE_SCISSOR, from a primary
     ///     command buffer.
     /// </summary>
     public VkBool32 inheritedViewportScissor2D;

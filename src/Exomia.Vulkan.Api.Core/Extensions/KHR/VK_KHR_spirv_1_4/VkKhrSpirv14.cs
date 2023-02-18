@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_KHR_spirv_1_4 - device extension (nr. 237) - author 'KHR' [platform '' | contact 'Jesse Hall @critsec']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_spirv_1_4.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_spirv_1_4.html</a>
 /// </summary>
-[VkRequires("VK_KHR_shader_float_controls")]
+[VkDepends("VK_VERSION_1_1+VK_KHR_shader_float_controls")]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_spirv_1_4.html#_deprecation_state")]
 public static class VkKhrSpirv14
 {

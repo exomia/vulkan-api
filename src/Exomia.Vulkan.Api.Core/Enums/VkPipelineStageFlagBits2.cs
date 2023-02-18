@@ -281,6 +281,11 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///         acceleration
     ///         structure commands
     ///     </a>
+    ///     or
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
+    ///         acceleration
+    ///         structure copy commands
+    ///     </a>
     ///     .
     /// </summary>
     VK_PIPELINE_STAGE_2_ACCELERATION_STRUCTURE_BUILD_BIT_KHR = 0x2000000,
@@ -579,6 +584,11 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure">
     ///         acceleration
     ///         structure commands
+    ///     </a>
+    ///     or
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-copying">
+    ///         acceleration
+    ///         structure copy commands
     ///     </a>
     ///     .
     /// </summary>
