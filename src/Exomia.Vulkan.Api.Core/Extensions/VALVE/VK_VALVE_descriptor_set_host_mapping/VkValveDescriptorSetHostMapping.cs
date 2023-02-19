@@ -29,6 +29,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: d3demulation
 /// </remarks>
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 [VkSpecialuse("d3demulation")]
 public static unsafe class VkValveDescriptorSetHostMapping
 {

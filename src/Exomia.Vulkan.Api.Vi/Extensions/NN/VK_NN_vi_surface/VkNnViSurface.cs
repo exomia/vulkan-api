@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Vi;
 ///     gitlab:@mheyer']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NN_vi_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NN_vi_surface.html</a>
 /// </summary>
-[VkRequires("VK_KHR_surface")]
+[VkDepends("VK_KHR_surface")]
 public static unsafe class VkNnViSurface
 {
     /// <summary> The spec version. </summary>

@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @PanGao-h']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_invocation_mask.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_invocation_mask.html</a>
 /// </summary>
-[VkRequires("VK_KHR_ray_tracing_pipeline,VK_KHR_synchronization2")]
+[VkDepends("VK_KHR_ray_tracing_pipeline+VK_KHR_synchronization2")]
 public static unsafe class VkHuaweiInvocationMask
 {
     /// <summary> The spec version. </summary>

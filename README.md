@@ -44,7 +44,7 @@ applicationInfo.apiVersion         = VkVersion.VulkanApiVersion13;
 
 VkInstanceCreateInfo instanceCreateInfo;
 instanceCreateInfo.sType                   = VkInstanceCreateInfo.STYPE;
-instanceCreateInfo.pNext                   = pNext;
+instanceCreateInfo.pNext                   = null;
 instanceCreateInfo.flags                   = 0;
 instanceCreateInfo.pApplicationInfo        = &applicationInfo;
 instanceCreateInfo.enabledLayerCount       = 0u;

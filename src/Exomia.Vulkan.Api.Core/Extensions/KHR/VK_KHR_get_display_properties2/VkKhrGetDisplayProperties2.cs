@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @cubanismo']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_display_properties2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_get_display_properties2.html</a>
 /// </summary>
-[VkRequires("VK_KHR_display")]
+[VkDepends("VK_KHR_display")]
 public static unsafe class VkKhrGetDisplayProperties2
 {
     /// <summary> The spec version. </summary>

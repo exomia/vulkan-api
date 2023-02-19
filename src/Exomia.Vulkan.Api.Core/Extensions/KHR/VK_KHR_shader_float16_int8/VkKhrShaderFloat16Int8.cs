@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @alegal-arm']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_float16_int8.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_float16_int8.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_float16_int8.html#_deprecation_state")]
 public static class VkKhrShaderFloat16Int8
 {

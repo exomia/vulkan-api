@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Macos;
 ///     @billhollings']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MVK_macos_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MVK_macos_surface.html</a>
 /// </summary>
-[VkRequires("VK_KHR_surface")]
+[VkDepends("VK_KHR_surface")]
 [Obsolete("deprecated by VK_EXT_metal_surface", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MVK_macos_surface.html#_deprecation_state")]
 public static unsafe class VkMvkMacosSurface
 {

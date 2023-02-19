@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_compression_control.html
 ///     </a>
 /// </summary>
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkExtImageCompressionControl
 {
     /// <summary> The spec version. </summary>

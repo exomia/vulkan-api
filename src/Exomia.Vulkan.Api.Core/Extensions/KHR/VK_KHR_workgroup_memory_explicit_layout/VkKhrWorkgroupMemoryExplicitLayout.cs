@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_workgroup_memory_explicit_layout.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static class VkKhrWorkgroupMemoryExplicitLayout
 {
     /// <summary> The spec version. </summary>

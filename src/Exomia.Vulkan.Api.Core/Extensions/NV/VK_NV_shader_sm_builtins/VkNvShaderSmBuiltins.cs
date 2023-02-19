@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_sm_builtins.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_shader_sm_builtins.html</a>
 /// </summary>
+[VkDepends("VK_VERSION_1_1")]
 public static class VkNvShaderSmBuiltins
 {
     /// <summary> The spec version. </summary>

@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_inherited_viewport_scissor.html
 ///     </a>
 /// </summary>
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static class VkNvInheritedViewportScissor
 {
     /// <summary> The spec version. </summary>

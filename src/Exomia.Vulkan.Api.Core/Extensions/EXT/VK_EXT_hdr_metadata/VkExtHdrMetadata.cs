@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     Goeltzenleuchter @courtney-g']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_hdr_metadata.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_hdr_metadata.html</a>
 /// </summary>
-[VkRequires("VK_KHR_swapchain")]
+[VkDepends("VK_KHR_swapchain")]
 public static unsafe class VkExtHdrMetadata
 {
     /// <summary> The spec version. </summary>

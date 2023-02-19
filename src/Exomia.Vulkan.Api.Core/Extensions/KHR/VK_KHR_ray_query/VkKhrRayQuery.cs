@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_KHR_ray_query - device extension (nr. 349) - author 'KHR' [platform '' | contact 'Daniel Koch @dgkoch']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_ray_query.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_ray_query.html</a>
 /// </summary>
-[VkRequires("VK_KHR_spirv_1_4,VK_KHR_acceleration_structure")]
+[VkDepends("VK_KHR_spirv_1_4+VK_KHR_acceleration_structure")]
 public static class VkKhrRayQuery
 {
     /// <summary> The spec version. </summary>

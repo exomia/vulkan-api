@@ -23,11 +23,11 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @pdaniell-nv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_discard_rectangles.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_discard_rectangles.html</a>
 /// </summary>
-[VkRequires("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static unsafe class VkExtDiscardRectangles
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION = 1;
+    public const uint VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME = "VK_EXT_discard_rectangles";
@@ -71,6 +71,37 @@ public static unsafe class VkExtDiscardRectangles
         VkRect2D* /*pDiscardRectangles*/,
         void> vkCmdSetDiscardRectangleEXT = null;
 
+    /// <summary>
+    ///     vkCmdSetDiscardRectangleEnableEXT - Enable discard rectangles dynamically for a command buffer -
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEnableEXT.html">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleEnableEXT.html
+    ///     </a>
+    /// </summary>
+    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
+    /// <param name="discardRectangleEnable">discardRectangleEnable specifies whether discard rectangles are enabled or not.</param>
+    public static readonly delegate*<
+        VkCommandBuffer /*commandBuffer*/,
+        VkBool32 /*discardRectangleEnable*/,
+        void> vkCmdSetDiscardRectangleEnableEXT = null;
+
+    /// <summary>
+    ///     vkCmdSetDiscardRectangleModeEXT - Sets the discard rectangle mode dynamically for a command buffer -
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleModeEXT.html">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDiscardRectangleModeEXT.html
+    ///     </a>
+    /// </summary>
+    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
+    /// <param name="discardRectangleMode">
+    ///     discardRectangleMode specifies the discard rectangle mode for all discard
+    ///     rectangles, either inclusive or exclusive.
+    /// </param>
+    public static readonly delegate*<
+        VkCommandBuffer /*commandBuffer*/,
+        VkDiscardRectangleModeEXT /*discardRectangleMode*/,
+        void> vkCmdSetDiscardRectangleModeEXT = null;
+
     /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks>
@@ -78,6 +109,12 @@ public static unsafe class VkExtDiscardRectangles
     ///     <list type="bullet">
     ///         <item>
     ///             <description>vkCmdSetDiscardRectangleEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetDiscardRectangleEnableEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetDiscardRectangleModeEXT</description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -87,6 +124,18 @@ public static unsafe class VkExtDiscardRectangles
         {
             *pvkCmdSetDiscardRectangleEXT = (delegate*<VkCommandBuffer, uint, uint, VkRect2D*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6944\u6373\u7261\u5264\u6365\u6174\u676e\u656c\u5845\u0054");
+        }
+
+        fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetDiscardRectangleEnableEXT = &vkCmdSetDiscardRectangleEnableEXT)
+        {
+            *pvkCmdSetDiscardRectangleEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)GetVkFunction(
+                device, "\u6b76\u6d43\u5364\u7465\u6944\u6373\u7261\u5264\u6365\u6174\u676e\u656c\u6e45\u6261\u656c\u5845\u0054");
+        }
+
+        fixed (delegate*<VkCommandBuffer, VkDiscardRectangleModeEXT, void>* pvkCmdSetDiscardRectangleModeEXT = &vkCmdSetDiscardRectangleModeEXT)
+        {
+            *pvkCmdSetDiscardRectangleModeEXT = (delegate*<VkCommandBuffer, VkDiscardRectangleModeEXT, void>)GetVkFunction(
+                device, "\u6b76\u6d43\u5364\u7465\u6944\u6373\u7261\u5264\u6365\u6174\u676e\u656c\u6f4d\u6564\u5845\u0054");
         }
     }
 }

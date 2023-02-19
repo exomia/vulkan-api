@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @souravpNV']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_linear_color_attachment.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_linear_color_attachment.html</a>
 /// </summary>
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static class VkNvLinearColorAttachment
 {
     /// <summary> The spec version. </summary>

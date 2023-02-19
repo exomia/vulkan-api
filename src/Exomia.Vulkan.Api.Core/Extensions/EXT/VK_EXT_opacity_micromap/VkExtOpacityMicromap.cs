@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @pixeljetstream, Eric Werness']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_opacity_micromap.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_opacity_micromap.html</a>
 /// </summary>
-[VkRequires("VK_KHR_acceleration_structure,VK_KHR_synchronization2")]
+[VkDepends("VK_KHR_acceleration_structure+VK_KHR_synchronization2")]
 public static unsafe class VkExtOpacityMicromap
 {
     /// <summary> The spec version. </summary>

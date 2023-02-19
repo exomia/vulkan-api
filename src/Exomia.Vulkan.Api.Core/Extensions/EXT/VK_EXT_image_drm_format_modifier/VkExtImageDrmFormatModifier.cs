@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_drm_format_modifier.html
 ///     </a>
 /// </summary>
-[VkRequires("VK_KHR_bind_memory2,VK_KHR_get_physical_device_properties2,VK_KHR_image_format_list,VK_KHR_sampler_ycbcr_conversion")]
+[VkDepends("VK_KHR_bind_memory2+VK_KHR_get_physical_device_properties2+VK_KHR_image_format_list+VK_KHR_sampler_ycbcr_conversion")]
 public static unsafe class VkExtImageDrmFormatModifier
 {
     /// <summary> The spec version. </summary>

@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @liam-middlebrook']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_robustness2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_robustness2.html</a>
 /// </summary>
+[VkDepends("VK_KHR_get_physical_device_properties2")]
 public static class VkExtRobustness2
 {
     /// <summary> The spec version. </summary>
