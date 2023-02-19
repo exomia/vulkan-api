@@ -9,7 +9,7 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
-        platforms: [Any CPU, x64]
+        platforms: [AnyCPU, x64]
     name: 'build core in ${{ matrix.configurations }} on ${{ matrix.os }} for ${{ matrix.platforms }}'
     runs-on: ${{ matrix.os }}
     env:
@@ -28,7 +28,7 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest]
         configurations: [Debug, Release]
-        platforms: [Any CPU, x64]
+        platforms: [AnyCPU, x64]
     name: 'build platform in ${{ matrix.configurations }} on ${{ matrix.os }} for ${{ matrix.platforms }}'
     runs-on: ${{ matrix.os }}
     env:
