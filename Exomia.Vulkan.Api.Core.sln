@@ -11,26 +11,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exomia.Vulkan.Api.Core.Sour
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
+		Debug|AnyCPU = Debug|AnyCPU
 		Debug|x64 = Debug|x64
-		Release|Any CPU = Release|Any CPU
+		Release|AnyCPU = Release|AnyCPU
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{424B96AE-8306-40B8-87C8-CA8676D31213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{424B96AE-8306-40B8-87C8-CA8676D31213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{424B96AE-8306-40B8-87C8-CA8676D31213}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{424B96AE-8306-40B8-87C8-CA8676D31213}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
 		{424B96AE-8306-40B8-87C8-CA8676D31213}.Debug|x64.ActiveCfg = Debug|x64
 		{424B96AE-8306-40B8-87C8-CA8676D31213}.Debug|x64.Build.0 = Debug|x64
-		{424B96AE-8306-40B8-87C8-CA8676D31213}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{424B96AE-8306-40B8-87C8-CA8676D31213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{424B96AE-8306-40B8-87C8-CA8676D31213}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{424B96AE-8306-40B8-87C8-CA8676D31213}.Release|AnyCPU.Build.0 = Release|AnyCPU
 		{424B96AE-8306-40B8-87C8-CA8676D31213}.Release|x64.ActiveCfg = Release|x64
 		{424B96AE-8306-40B8-87C8-CA8676D31213}.Release|x64.Build.0 = Release|x64
-		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
 		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|x64.ActiveCfg = Debug|x64
 		{F425B50B-790E-4D5A-A889-ECB83D523485}.Debug|x64.Build.0 = Debug|x64
-		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|AnyCPU.Build.0 = Release|AnyCPU
 		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|x64.ActiveCfg = Release|x64
 		{F425B50B-790E-4D5A-A889-ECB83D523485}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
