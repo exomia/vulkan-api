@@ -80,30 +80,29 @@ public static partial class Vk
 
                 if (OperatingSystem.IsWindows())
                 {
-                    return NativeLibrary.Load("vulkan-1.dll", assembly, searchPath);
-                }
-
-                if (OperatingSystem.IsLinux())
-                {
-                    if (NativeLibrary.TryLoad("libvulkan.so.1", assembly, searchPath, out IntPtr handle))
+                    if (NativeLibrary.TryLoad("vulkan-1.dll", assembly, searchPath, out IntPtr handle))
                     {
                         return handle;
                     }
-                    return NativeLibrary.Load("libvulkan.so", assembly, searchPath);
                 }
-
-                if (OperatingSystem.IsAndroid() || OperatingSystem.IsFreeBSD())
+                else if (OperatingSystem.IsLinux() || OperatingSystem.IsAndroid() || OperatingSystem.IsFreeBSD())
                 {
-                    return NativeLibrary.Load("libvulkan.so", assembly, searchPath);
-                }
-
-                if (OperatingSystem.IsIOS())
-                {
-                    if (NativeLibrary.TryLoad("libvulkan.dylib.1", assembly, searchPath, out IntPtr handle))
+                    if (NativeLibrary.TryLoad("libvulkan.so.1", assembly, searchPath, out IntPtr handle) ||
+                        NativeLibrary.TryLoad("libvulkan.so",   assembly, searchPath, out handle))
                     {
                         return handle;
                     }
-                    return NativeLibrary.Load("libvulkan.dylib", assembly, searchPath);
+                }
+                else if (OperatingSystem.IsIOS() || OperatingSystem.IsMacOS() || OperatingSystem.IsMacCatalyst())
+                {
+                    if (NativeLibrary.TryLoad("libvulkan.dylib",     assembly, searchPath, out IntPtr handle) ||
+                        NativeLibrary.TryLoad("libvulkan.dylib.1",   assembly, searchPath, out handle)        ||
+                        NativeLibrary.TryLoad("libvulkan.1.dylib",   assembly, searchPath, out handle)        ||
+                        NativeLibrary.TryLoad("libMoltenVK.dylib.1", assembly, searchPath, out handle)        ||
+                        NativeLibrary.TryLoad("libMoltenVK.dylib",   assembly, searchPath, out handle))
+                    {
+                        return handle;
+                    }
                 }
 
                 throw new NotSupportedException(

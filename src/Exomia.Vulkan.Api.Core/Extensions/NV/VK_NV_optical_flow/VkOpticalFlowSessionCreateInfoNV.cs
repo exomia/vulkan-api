@@ -59,7 +59,7 @@ public unsafe struct VkOpticalFlowSessionCreateInfoNV
     public VkOpticalFlowGridSizeFlagsNV outputGridSize;
 
     /// <summary>
-    ///     hintGridSize is one exactly bit of VkOpticalFlowGridSizeFlagsNV specifying the grid size of of the hint flow
+    ///     hintGridSize is one exactly bit of VkOpticalFlowGridSizeFlagsNV specifying the grid size of the hint flow
     ///     vector maps to be bound to this optical flow session. The size of the hint maps is determined by
     ///     VkOpticalFlowSessionCreateInfoNV::width and VkOpticalFlowSessionCreateInfoNV::height divided by
     ///     VkOpticalFlowSessionCreateInfoNV::hintGridSize.
