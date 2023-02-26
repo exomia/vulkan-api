@@ -17,7 +17,7 @@ It is meant to be as close as possible to the original Vulkan API written in C. 
 ## Features
 
 - Vulkan 1.0, 1.1, 1.2, 1.3
-- All platforms except provisional
+- All platforms except provisional, sci
 - All extensions including vk_video
 - Raw low level bindings using unsafe C# code
 - cross platform
@@ -78,7 +78,7 @@ VkResult result = vkCreateInstance(&instanceCreateInfo, nullptr, &instance)
 
 ### Extensions
 
-loading extensions is also possible:
+loading extensions is also possible (do not forget to enable them first):
 
 ```csharp
 // <extension name>.Load(instance[, device]);
@@ -143,6 +143,8 @@ PM> Install-Package Exomia.Vulkan.Api.<Platform>
 
 > see Exomia.Vulkan.Api packages on [nuget](https://www.nuget.org/packages?q=Exomia.Vulkan.Api)
 
+## Changelog
+can be found [here](CHANGELOG.md)
 
 ## Building
 

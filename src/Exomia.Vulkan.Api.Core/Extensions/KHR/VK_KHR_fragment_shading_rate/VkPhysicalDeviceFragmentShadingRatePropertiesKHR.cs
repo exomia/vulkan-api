@@ -137,7 +137,7 @@ public unsafe struct VkPhysicalDeviceFragmentShadingRatePropertiesKHR
     public VkBool32 fragmentShadingRateWithShaderDepthStencilWrites;
 
     /// <summary>
-    ///     fragmentShadingRateWithSampleMask specifies whether the the implementation supports setting valid bits of
+    ///     fragmentShadingRateWithSampleMask specifies whether the implementation supports setting valid bits of
     ///     VkPipelineMultisampleStateCreateInfo::pSampleMask to 0 for multi-pixel fragments. If this value is VK_FALSE,
     ///     zeroing valid bits in the sample mask will clamp the fragment shading rate to (1,1).
     /// </summary>

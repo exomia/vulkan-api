@@ -349,10 +349,7 @@ public unsafe struct VkPhysicalDeviceVulkan12Features
     /// </summary>
     public VkBool32 bufferDeviceAddressMultiDevice;
 
-    /// <summary>
-    ///     vulkanMemoryModelindicates whether the Vulkan Memory Model is supported, as defined in Vulkan Memory Model.
-    ///     This also indicates whether shader modules can declare the VulkanMemoryModel capability.
-    /// </summary>
+    /// <summary> vulkanMemoryModelindicates whether shader modules can declare the VulkanMemoryModelcapability.</summary>
     public VkBool32 vulkanMemoryModel;
 
     /// <summary>

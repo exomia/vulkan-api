@@ -62,7 +62,7 @@ public unsafe struct VkPhysicalDeviceImageProcessingPropertiesQCOM
     public VkExtent2D maxBlockMatchRegion;
 
     /// <summary>
-    ///     maxBoxFilterBlockSize is a VkExtent2D describing the the maximum dimensions (width and height) that can be
+    ///     maxBoxFilterBlockSize is a VkExtent2D describing the maximum dimensions (width and height) that can be
     ///     specified for blocksize in box filter sampling operations.
     /// </summary>
     public VkExtent2D maxBoxFilterBlockSize;

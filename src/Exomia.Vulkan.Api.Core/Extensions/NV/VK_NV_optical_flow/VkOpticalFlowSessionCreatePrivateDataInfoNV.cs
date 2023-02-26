@@ -47,7 +47,7 @@ public unsafe struct VkOpticalFlowSessionCreatePrivateDataInfoNV
     public uint id;
 
     /// <summary>
-    ///     size is is the size of data in bytes which is passed at a memory location specified in
+    ///     size is the size of data in bytes which is passed at a memory location specified in
     ///     VkOpticalFlowSessionCreatePrivateDataInfoNV::pPrivateData.
     /// </summary>
     public uint size;
