@@ -139,7 +139,7 @@ public static unsafe class VkKhrVideoQueue
     ///         </item>
     ///         <item>
     ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_VIDEO_STD_VERSION_NOT_SUPPORTED_KHR</description>
+    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_VIDEO_STD_VERSION_NOT_SUPPORTED_KHR,VK_ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR</description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -251,7 +251,7 @@ public static unsafe class VkKhrVideoQueue
     ///         </item>
     ///         <item>
     ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED</description>
+    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR</description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -281,7 +281,8 @@ public static unsafe class VkKhrVideoQueue
     ///             <term>successcodes</term><description>VK_SUCCESS</description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY</description>
+    ///             <term>errorcodes</term>
+    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR</description>
     ///         </item>
     ///     </list>
     /// </remarks>

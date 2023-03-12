@@ -17,19 +17,29 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct StdVideoEncodeH264RefMemMgmtCtrlOperations
+public unsafe struct StdVideoEncodeH264ReferenceListsInfo
 {
-    public StdVideoEncodeH264RefMgmtFlags flags;
+    public StdVideoEncodeH264ReferenceListsInfoFlags flags;
+
+    public byte refPicList0EntryCount;
+
+    public byte refPicList1EntryCount;
 
     public byte refList0ModOpCount;
 
-    public StdVideoEncodeH264RefListModEntry* pRefList0ModOperations;
-
     public byte refList1ModOpCount;
 
-    public StdVideoEncodeH264RefListModEntry* pRefList1ModOperations;
-
     public byte refPicMarkingOpCount;
+
+    public fixed byte reserved1[7];
+
+    public byte* pRefPicList0Entries;
+
+    public byte* pRefPicList1Entries;
+
+    public StdVideoEncodeH264RefListModEntry* pRefList0ModOperations;
+
+    public StdVideoEncodeH264RefListModEntry* pRefList1ModOperations;
 
     public StdVideoEncodeH264RefPicMarkingEntry* pRefPicMarkingOperations;
 }

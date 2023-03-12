@@ -21,11 +21,5 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkDeviceQueueCreateFlagBits
 {
     /// <summary>VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT specifies that the device queue is a protected-capable queue.</summary>
-    VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT = 0x1,
-
-    /// <summary>
-    ///     VK_DEVICE_QUEUE_CREATE_RESERVED_1_BIT_QCOM<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDeviceQueueCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDeviceQueueCreateFlagBits</a>
-    /// </summary>
-    VK_DEVICE_QUEUE_CREATE_RESERVED_1_BIT_QCOM = 0x2
+    VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT = 0x1
 }

@@ -94,12 +94,6 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT = 0x8,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_RESERVED_4_BIT_QCOM<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBindingFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBindingFlagBits</a>
-    /// </summary>
-    VK_DESCRIPTOR_BINDING_RESERVED_4_BIT_QCOM = 0x10,
-
-    /// <summary>
     ///     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT indicates that if descriptors in this binding are updated between when
     ///     the descriptor set is bound in a command buffer and when that command buffer is submitted to a queue, then the
     ///     submission will use the most recently set descriptors for this binding and the updates do not invalidate the

@@ -51,14 +51,5 @@ public enum VkSwapchainCreateFlagBitsKHR
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImage2KHR.html">vkAcquireNextImage2KHR</a>
     ///     for the first time.
     /// </summary>
-    VK_SWAPCHAIN_CREATE_DEFERRED_MEMORY_ALLOCATION_BIT_EXT = 0x8,
-
-    /// <summary>
-    ///     VK_SWAPCHAIN_CREATE_RESERVED_4_BIT_EXT<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainCreateFlagBitsKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainCreateFlagBitsKHR
-    ///     </a>
-    /// </summary>
-    VK_SWAPCHAIN_CREATE_RESERVED_4_BIT_EXT = 0x10
+    VK_SWAPCHAIN_CREATE_DEFERRED_MEMORY_ALLOCATION_BIT_EXT = 0x8
 }

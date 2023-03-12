@@ -229,12 +229,6 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_RAY_TRACING_OPACITY_MICROMAP_BIT_EXT = 0x1000000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_RESERVED_BIT_28_NV<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
-    /// </summary>
-    VK_PIPELINE_CREATE_RESERVED_BIT_28_NV = 0x10000000,
-
-    /// <summary>
     ///     VK_PIPELINE_CREATE_NO_PROTECTED_ACCESS_BIT_EXT specifies that the pipeline must not be bound to a protected
     ///     command buffer.
     /// </summary>

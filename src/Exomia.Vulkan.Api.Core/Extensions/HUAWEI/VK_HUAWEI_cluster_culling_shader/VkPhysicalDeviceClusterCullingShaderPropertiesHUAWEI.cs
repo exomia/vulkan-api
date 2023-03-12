@@ -66,4 +66,10 @@ public unsafe struct VkPhysicalDeviceClusterCullingShaderPropertiesHUAWEI
     ///     emit.
     /// </summary>
     public uint maxOutputClusterCount;
+
+    /// <summary>
+    ///     indirectBufferOffsetAlignment indicates the alignment for cluster drawing command buffer stride.
+    ///     vkCmdDrawClusterIndirectHUAWEI::offset must be a multiple of this value.
+    /// </summary>
+    public VkDeviceSize indirectBufferOffsetAlignment;
 }

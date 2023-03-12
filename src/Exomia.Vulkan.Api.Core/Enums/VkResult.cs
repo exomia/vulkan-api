@@ -234,6 +234,14 @@ public enum VkResult
     VK_OPERATION_NOT_DEFERRED_KHR = 1000268003,
 
     /// <summary>
+    ///     VK_ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR The specified Video Std parameters do not adhere to the syntactic or
+    ///     semantic requirements of the used video compression standard, or values derived from parameters according to the
+    ///     rules defined by the used video compression standard do not adhere to the capabilities of the video compression
+    ///     standard or the implementation.
+    /// </summary>
+    VK_ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR = -1000299000,
+
+    /// <summary>
     ///     VK_ERROR_COMPRESSION_EXHAUSTED_EXT An image creation failed because internal resources required for
     ///     compression are exhausted. This must only be returned when fixed-rate compression is requested.
     /// </summary>

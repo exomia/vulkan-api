@@ -39,5 +39,9 @@ public unsafe struct StdVideoEncodeH264SliceHeader
 
     public sbyte slice_beta_offset_div2;
 
+    public ushort reserved1;
+
+    public uint reserved2;
+
     public StdVideoEncodeH264WeightTable* pWeightTable;
 }

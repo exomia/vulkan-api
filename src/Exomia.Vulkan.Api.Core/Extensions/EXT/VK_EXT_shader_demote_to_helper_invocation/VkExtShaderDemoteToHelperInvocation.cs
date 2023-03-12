@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_demote_to_helper_invocation.html
 ///     </a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_demote_to_helper_invocation.html#_deprecation_state")]
 public static class VkExtShaderDemoteToHelperInvocation
 {

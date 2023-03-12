@@ -21,6 +21,8 @@ public struct StdVideoEncodeH265ReferenceInfo
 {
     public StdVideoEncodeH265ReferenceInfoFlags flags;
 
+    public StdVideoH265PictureType PictureType;
+
     public int PicOrderCntVal;
 
     public byte TemporalId;

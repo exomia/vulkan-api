@@ -87,8 +87,15 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT = 0x200,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT specifies the stage of the pipeline after blending where the final
-    ///     color values are output from the pipeline. This stage also includes
+    ///     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT specifies the stage of the pipeline where final color values are
+    ///     output from the pipeline. This stage includes
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blending">blending</a>
+    ///     ,
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-logicop">
+    ///         logic
+    ///         operations
+    ///     </a>
+    ///     ,
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load and store operations
@@ -415,8 +422,15 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT_KHR = VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT specifies the stage of the pipeline after blending where the final
-    ///     color values are output from the pipeline. This stage also includes
+    ///     VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT specifies the stage of the pipeline where final color values are
+    ///     output from the pipeline. This stage includes
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blending">blending</a>
+    ///     ,
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-logicop">
+    ///         logic
+    ///         operations
+    ///     </a>
+    ///     ,
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load and store operations

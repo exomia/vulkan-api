@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_blend_operation_advanced.html
 ///     </a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 public static class VkExtBlendOperationAdvanced
 {
     /// <summary> The spec version. </summary>

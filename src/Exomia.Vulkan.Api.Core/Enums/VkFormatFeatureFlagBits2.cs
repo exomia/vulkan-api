@@ -352,18 +352,6 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x40000000,
 
     /// <summary>
-    ///     VK_FORMAT_FEATURE_2_RESERVED_44_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
-    /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_44_BIT_EXT = 0x100000000000,
-
-    /// <summary>
-    ///     VK_FORMAT_FEATURE_2_RESERVED_45_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
-    /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_45_BIT_EXT = 0x200000000000,
-
-    /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_INPUT_BIT_KHR specifies that an image view with this format can be used as an
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-input-picture">
     ///         encode
@@ -456,12 +444,6 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///     operations.
     /// </summary>
     VK_FORMAT_FEATURE_2_BOX_FILTER_SAMPLED_BIT_QCOM = 0x2000000000,
-
-    /// <summary>
-    ///     VK_FORMAT_FEATURE_2_RESERVED_39_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkFormatFeatureFlagBits2</a>
-    /// </summary>
-    VK_FORMAT_FEATURE_2_RESERVED_39_BIT_EXT = 0x8000000000,
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_OPTICAL_FLOW_IMAGE_BIT_NV specifies that an image view with this format can be used as an input

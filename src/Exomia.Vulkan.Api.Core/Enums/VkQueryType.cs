@@ -135,15 +135,14 @@ public enum VkQueryType
     VK_QUERY_TYPE_PERFORMANCE_QUERY_INTEL = 1000210000,
 
     /// <summary>
-    ///     VK_QUERY_TYPE_VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR specifies a
-    ///     <a
-    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-video-encode-bitstream-buffer-range">
+    ///     VK_QUERY_TYPE_VIDEO_ENCODE_FEEDBACK_KHR specifies a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#queries-video-encode-feedback">
     ///         video
-    ///         encode bitstream range query
+    ///         encode feedback query
     ///     </a>
     ///     .
     /// </summary>
-    VK_QUERY_TYPE_VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR = 1000299000,
+    VK_QUERY_TYPE_VIDEO_ENCODE_FEEDBACK_KHR = 1000299000,
 
     /// <summary>
     ///     VK_QUERY_TYPE_MESH_PRIMITIVES_GENERATED_EXT specifies a
