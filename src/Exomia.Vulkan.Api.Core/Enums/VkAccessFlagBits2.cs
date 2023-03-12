@@ -81,20 +81,20 @@ public enum VkAccessFlagBits2 : ulong
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">color attachment</a>
     ///     , such as via
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blending">blending</a>
-    ///     ,
+    ///     (other than
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blend-advanced">
+    ///         advanced
+    ///         blend operations
+    ///     </a>
+    ///     ),
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-logicop">
     ///         logic
     ///         operations
     ///     </a>
-    ///     , or via certain
+    ///     , or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
-    ///     </a>
-    ///     . It does not include
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blend-advanced">
-    ///         advanced
-    ///         blend operations
     ///     </a>
     ///     . Such access occurs in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage.
     /// </summary>
@@ -125,7 +125,7 @@ public enum VkAccessFlagBits2 : ulong
     ///         depth or
     ///         stencil operations
     ///     </a>
-    ///     or via certain
+    ///     or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
@@ -146,7 +146,7 @@ public enum VkAccessFlagBits2 : ulong
     ///         depth or
     ///         stencil operations
     ///     </a>
-    ///     or via certain
+    ///     or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load and store operations
@@ -286,12 +286,6 @@ public enum VkAccessFlagBits2 : ulong
     ///     . Such access occurs in the VK_PIPELINE_STAGE_2_VIDEO_DECODE_BIT_KHRpipeline stage.
     /// </summary>
     VK_ACCESS_2_VIDEO_DECODE_WRITE_BIT_KHR = 0x1000000000,
-
-    /// <summary>
-    ///     VK_ACCESS_2_RESERVED_46_BIT_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccessFlagBits2</a>
-    /// </summary>
-    VK_ACCESS_2_RESERVED_46_BIT_EXT = 0x400000000000,
 
     /// <summary>
     ///     VK_ACCESS_2_VIDEO_ENCODE_READ_BIT_KHR specifies read access to an image or buffer resource in a
@@ -538,20 +532,20 @@ public enum VkAccessFlagBits2 : ulong
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">color attachment</a>
     ///     , such as via
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blending">blending</a>
-    ///     ,
+    ///     (other than
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blend-advanced">
+    ///         advanced
+    ///         blend operations
+    ///     </a>
+    ///     ),
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-logicop">
     ///         logic
     ///         operations
     ///     </a>
-    ///     , or via certain
+    ///     , or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
-    ///     </a>
-    ///     . It does not include
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blend-advanced">
-    ///         advanced
-    ///         blend operations
     ///     </a>
     ///     . Such access occurs in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage.
     /// </summary>
@@ -582,7 +576,7 @@ public enum VkAccessFlagBits2 : ulong
     ///         depth or
     ///         stencil operations
     ///     </a>
-    ///     or via certain
+    ///     or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
@@ -603,7 +597,7 @@ public enum VkAccessFlagBits2 : ulong
     ///         depth or
     ///         stencil operations
     ///     </a>
-    ///     or via certain
+    ///     or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load and store operations

@@ -51,5 +51,9 @@ public static class VkExtImageSlicedViewOf3d
     public const string VK_EXT_IMAGE_SLICED_VIEW_OF_3D_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u455f\u5458\u495f\u414d\u4547\u535f\u494c\u4543\u5f44\u4956\u5745\u4f5f\u5f46\u4433\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
+    /// <summary>
+    ///     VK_REMAINING_3D_SLICES_EXT - Sentinel for all remaining 3D slices -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_REMAINING_3D_SLICES_EXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_REMAINING_3D_SLICES_EXT.html</a>
+    /// </summary>
     public const uint VK_REMAINING_3D_SLICES_EXT = (~0U);
 }

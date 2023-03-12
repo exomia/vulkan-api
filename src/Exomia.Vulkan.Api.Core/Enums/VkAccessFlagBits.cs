@@ -146,7 +146,7 @@ public enum VkAccessFlagBits
     ///         logic
     ///         operations
     ///     </a>
-    ///     , or via certain
+    ///     , or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
@@ -185,7 +185,7 @@ public enum VkAccessFlagBits
     ///         depth or
     ///         stencil operations
     ///     </a>
-    ///     or via certain
+    ///     or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
@@ -206,7 +206,7 @@ public enum VkAccessFlagBits
     ///         depth or
     ///         stencil operations
     ///     </a>
-    ///     or via certain
+    ///     or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load and store operations

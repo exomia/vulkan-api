@@ -53,5 +53,11 @@ public enum VkVendorId
     ///     VK_VENDOR_ID_POCL<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVendorId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVendorId</a>
     /// </summary>
-    VK_VENDOR_ID_POCL = 0x10006
+    VK_VENDOR_ID_POCL = 0x10006,
+
+    /// <summary>
+    ///     VK_VENDOR_ID_MOBILEYE<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVendorId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVendorId</a>
+    /// </summary>
+    VK_VENDOR_ID_MOBILEYE = 0x10007
 }

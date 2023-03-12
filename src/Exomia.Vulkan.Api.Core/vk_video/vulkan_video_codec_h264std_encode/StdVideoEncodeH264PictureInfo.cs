@@ -25,6 +25,8 @@ public struct StdVideoEncodeH264PictureInfo
 
     public byte pic_parameter_set_id;
 
+    public ushort reserved1;
+
     public StdVideoH264PictureType pictureType;
 
     public uint frame_num;

@@ -29,7 +29,7 @@ public struct StdVideoEncodeH265PictureInfo
 
     public byte pps_pic_parameter_set_id;
 
-    public int PicOrderCntVal;
-
     public byte TemporalId;
+
+    public int PicOrderCntVal;
 }

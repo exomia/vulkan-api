@@ -17,15 +17,19 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct StdVideoEncodeH265ReferenceModifications
+public struct StdVideoEncodeH264ReferenceListsInfoFlags
 {
-    public StdVideoEncodeH265ReferenceModificationFlags flags;
+    private uint _bitfield1;
 
-    public byte referenceList0ModificationsCount;
+    public uint ref_pic_list_modification_flag_l0
+    {
+        get { return (uint)((_bitfield1 >> 0) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFFFFFE) | (((uint)value & 0x00000001) << 0); }
+    }
 
-    public byte* pReferenceList0Modifications;
-
-    public byte referenceList1ModificationsCount;
-
-    public byte* pReferenceList1Modifications;
+    public uint ref_pic_list_modification_flag_l1
+    {
+        get { return (uint)((_bitfield1 >> 1) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFFFFFD) | (((uint)value & 0x00000001) << 1); }
+    }
 }

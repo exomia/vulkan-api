@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @pdaniell-nv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_discard_rectangles.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_discard_rectangles.html</a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 public static unsafe class VkExtDiscardRectangles
 {
     /// <summary> The spec version. </summary>

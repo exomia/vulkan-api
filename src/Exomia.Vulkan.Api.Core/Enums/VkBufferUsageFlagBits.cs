@@ -155,12 +155,6 @@ public enum VkBufferUsageFlagBits
     VK_BUFFER_USAGE_CONDITIONAL_RENDERING_BIT_EXT = 0x200,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_RESERVED_25_BIT_AMD<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
-    /// </summary>
-    VK_BUFFER_USAGE_RESERVED_25_BIT_AMD = 0x2000000,
-
-    /// <summary>
     ///     VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHRspecifies that the buffer is suitable for use
     ///     as a read-only input to an
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#acceleration-structure-building">
@@ -188,12 +182,6 @@ public enum VkBufferUsageFlagBits
     ///     .
     /// </summary>
     VK_BUFFER_USAGE_SHADER_BINDING_TABLE_BIT_KHR = 0x400,
-
-    /// <summary>
-    ///     VK_BUFFER_USAGE_RESERVED_18_BIT_QCOM<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits</a>
-    /// </summary>
-    VK_BUFFER_USAGE_RESERVED_18_BIT_QCOM = 0x40000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_VIDEO_ENCODE_DST_BIT_KHR specifies that the buffer can be used as the destination video bitstream

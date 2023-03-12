@@ -16,6 +16,6 @@ namespace Exomia.Vulkan.Api.Core;
 /// <summary>The VulkanVideoCodecH264stdEncodeDefines class.</summary>
 public static class VulkanVideoCodecH264stdEncodeDefines
 {
-    /// <summary>The VK_STD_VULKAN_VIDEO_CODEC_H264_ENCODE_API_VERSION_0_9_8.</summary>
-    public const uint VK_STD_VULKAN_VIDEO_CODEC_H264_ENCODE_API_VERSION_0_9_8 = (0 << 22) | (9 << 12) | 8;
+    /// <summary>The VK_STD_VULKAN_VIDEO_CODEC_H264_ENCODE_API_VERSION_0_9_9.</summary>
+    public const uint VK_STD_VULKAN_VIDEO_CODEC_H264_ENCODE_API_VERSION_0_9_9 = (0 << 22) | (9 << 12) | 9;
 }

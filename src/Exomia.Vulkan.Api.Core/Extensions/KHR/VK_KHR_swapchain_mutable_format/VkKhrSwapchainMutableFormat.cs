@@ -20,13 +20,13 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VK_KHR_swapchain_mutable_format - device extension (nr. 201) - author 'KHR' [platform '' | contact 'Daniel Rakos
-///     @drakos-arm']<br />
+///     @drakos-amd']<br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_swapchain_mutable_format.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_swapchain_mutable_format.html
 ///     </a>
 /// </summary>
-[VkDepends("VK_KHR_swapchain+VK_KHR_maintenance2+VK_KHR_image_format_list")]
+[VkDepends("VK_KHR_swapchain+(VK_KHR_maintenance2,VK_VERSION_1_1)+(VK_KHR_image_format_list,VK_VERSION_1_2)")]
 public static class VkKhrSwapchainMutableFormat
 {
     /// <summary> The spec version. </summary>

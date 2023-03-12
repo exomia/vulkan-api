@@ -21,15 +21,6 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkPipelineLayoutCreateFlagBits
 {
     /// <summary>
-    ///     VK_PIPELINE_LAYOUT_CREATE_RESERVED_0_BIT_AMD<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineLayoutCreateFlagBits">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineLayoutCreateFlagBits
-    ///     </a>
-    /// </summary>
-    VK_PIPELINE_LAYOUT_CREATE_RESERVED_0_BIT_AMD = 0x1,
-
-    /// <summary>
     ///     VK_PIPELINE_LAYOUT_CREATE_INDEPENDENT_SETS_BIT_EXT specifies that implementations must ensure that the
     ///     properties and/or absence of a particular descriptor set do not influence any other properties of the pipeline
     ///     layout. This allows pipelines libraries linked without VK_PIPELINE_CREATE_LINK_TIME_OPTIMIZATION_BIT_EXT to be

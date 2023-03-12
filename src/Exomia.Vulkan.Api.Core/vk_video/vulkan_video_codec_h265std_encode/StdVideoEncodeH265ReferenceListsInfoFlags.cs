@@ -17,7 +17,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public struct StdVideoEncodeH265ReferenceModificationFlags
+public struct StdVideoEncodeH265ReferenceListsInfoFlags
 {
     private uint _bitfield1;
 
