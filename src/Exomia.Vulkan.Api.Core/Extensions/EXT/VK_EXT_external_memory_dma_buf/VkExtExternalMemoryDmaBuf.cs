@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkExtExternalMemoryDmaBuf;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_EXT_external_memory_dma_buf - device extension (nr. 126) - author 'EXT' [platform '' | contact 'Chad Versace
-///     @chadversary']<br />
+///     VK_EXT_external_memory_dma_buf - device extension (nr. 126) - author 'EXT' [platform '' | contact 'Lina Versace
+///     @versalinyaa']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_dma_buf.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_dma_buf.html</a>
 /// </summary>
 [VkDepends("VK_KHR_external_memory_fd")]
