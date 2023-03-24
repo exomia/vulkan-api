@@ -229,6 +229,12 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_RAY_TRACING_OPACITY_MICROMAP_BIT_EXT = 0x1000000,
 
     /// <summary>
+    ///     VK_PIPELINE_CREATE_RAY_TRACING_DISPLACEMENT_MICROMAP_BIT_NVspecifies that the pipeline can be used with
+    ///     aceleration structures which reference a displacement micromap array.
+    /// </summary>
+    VK_PIPELINE_CREATE_RAY_TRACING_DISPLACEMENT_MICROMAP_BIT_NV = 0x10000000,
+
+    /// <summary>
     ///     VK_PIPELINE_CREATE_NO_PROTECTED_ACCESS_BIT_EXT specifies that the pipeline must not be bound to a protected
     ///     command buffer.
     /// </summary>

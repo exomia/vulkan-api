@@ -19,6 +19,12 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkMicromapTypeEXT
 {
-    /// <summary>VK_MICROMAP_TYPE_OPACITY_MICROMAP_EXT is a micromap containing data to control the opacity of a triangle</summary>
-    VK_MICROMAP_TYPE_OPACITY_MICROMAP_EXT = 0
+    /// <summary>VK_MICROMAP_TYPE_OPACITY_MICROMAP_EXT is a micromap containing data to control the opacity of a triangle.</summary>
+    VK_MICROMAP_TYPE_OPACITY_MICROMAP_EXT = 0,
+
+    /// <summary>
+    ///     VK_MICROMAP_TYPE_DISPLACEMENT_MICROMAP_NV is a micromap containing data to control the displacement of
+    ///     subtriangles within a triangle.
+    /// </summary>
+    VK_MICROMAP_TYPE_DISPLACEMENT_MICROMAP_NV = 1000397000
 }

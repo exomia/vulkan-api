@@ -94,6 +94,12 @@ public enum VkBuildAccelerationStructureFlagBitsKHR
     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_OPACITY_MICROMAP_DATA_UPDATE_EXT = 0x100,
 
     /// <summary>
+    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_DISPLACEMENT_MICROMAP_UPDATE_NVindicates that the displacement micromaps
+    ///     associated with the specified acceleration structure may change with an acceleration structure update.
+    /// </summary>
+    VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_DISPLACEMENT_MICROMAP_UPDATE_NV = 0x200,
+
+    /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR indicates     that the specified acceleration structure can be
     ///     updated with     a mode of VK_BUILD_ACCELERATION_STRUCTURE_MODE_UPDATE_KHR in
     ///     <a
