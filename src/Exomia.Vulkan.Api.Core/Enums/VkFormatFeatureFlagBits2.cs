@@ -78,7 +78,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT specifies that an image view can be used as a framebuffer color
-    ///     attachment that supports blending and as an input attachment.
+    ///     attachment that supports blending.
     /// </summary>
     VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT = 0x100,
 
@@ -533,7 +533,7 @@ public enum VkFormatFeatureFlagBits2 : ulong
 
     /// <summary>
     ///     VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT specifies that an image view can be used as a framebuffer color
-    ///     attachment that supports blending and as an input attachment.
+    ///     attachment that supports blending.
     /// </summary>
     VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT_KHR = VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT,
 

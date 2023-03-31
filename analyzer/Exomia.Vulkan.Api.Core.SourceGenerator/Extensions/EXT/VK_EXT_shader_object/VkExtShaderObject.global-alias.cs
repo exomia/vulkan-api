@@ -1,0 +1,1 @@
+global using VkShaderRequiredSubgroupSizeCreateInfoEXT = Exomia.Vulkan.Api.Core.VkPipelineShaderStageRequiredSubgroupSizeCreateInfo;

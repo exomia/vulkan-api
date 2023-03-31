@@ -247,6 +247,9 @@ public enum VkResult
     /// </summary>
     VK_ERROR_COMPRESSION_EXHAUSTED_EXT = -1000338000,
 
+    /// <summary>VK_ERROR_INCOMPATIBLE_SHADER_BINARY_EXT The provided binary shader code is not compatible with this device.</summary>
+    VK_ERROR_INCOMPATIBLE_SHADER_BINARY_EXT = 1000482000,
+
     /// <summary>
     ///     VK_ERROR_OUT_OF_POOL_MEMORY A pool memory allocation has failed. This must only be returned if no attempt to
     ///     allocate host or device memory was made to accommodate the new allocation. If the failure was definitely due to

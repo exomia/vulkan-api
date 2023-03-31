@@ -24,14 +24,14 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkPipelineShaderStageCreateInfo</description>
+///             <term>structextends</term><description>VkPipelineShaderStageCreateInfo,VkShaderCreateInfoEXT</description>
 ///         </item>
 ///         <item>
 ///             <term>returnedonly</term><description>true</description>
 ///         </item>
 ///     </list>
 /// </remarks>
-[VkStructExtends("VkPipelineShaderStageCreateInfo")]
+[VkStructExtends("VkPipelineShaderStageCreateInfo,VkShaderCreateInfoEXT")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkPipelineShaderStageRequiredSubgroupSizeCreateInfo
 {
