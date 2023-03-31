@@ -91,12 +91,18 @@ public enum VkAccessFlagBits2 : ulong
     ///         logic
     ///         operations
     ///     </a>
-    ///     , or certain
+    ///     , or via certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
     ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage.
+    ///     or
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader-tileimage-reads">
+    ///         fragment
+    ///         shader tile image reads
+    ///     </a>
+    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline
+    ///     stage.
     /// </summary>
     VK_ACCESS_2_COLOR_ATTACHMENT_READ_BIT = 0x80,
 
@@ -136,23 +142,23 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_READ_BIT = 0x200,
 
     /// <summary>
-    ///     VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT specifies write access to a
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">
-    ///         depth/stencil
-    ///         attachment
-    ///     </a>
-    ///     , via
+    ///     VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT specifies write
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-ds-state">
     ///         depth or
     ///         stencil operations
     ///     </a>
-    ///     or certain
+    ///     in the VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT_KHR or
+    ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT_KHR pipeline stages or via certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
-    ///         load and store operations
+    ///         load operations
     ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT or
-    ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT pipeline stages.
+    ///     or
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader-tileimage-reads">
+    ///         fragment
+    ///         shader tile image reads
+    ///     </a>
+    ///     in the VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT_KHR pipeline stage.
     /// </summary>
     VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT = 0x400,
 
@@ -542,12 +548,18 @@ public enum VkAccessFlagBits2 : ulong
     ///         logic
     ///         operations
     ///     </a>
-    ///     , or certain
+    ///     , or via certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
     ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage.
+    ///     or
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader-tileimage-reads">
+    ///         fragment
+    ///         shader tile image reads
+    ///     </a>
+    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline
+    ///     stage.
     /// </summary>
     VK_ACCESS_2_COLOR_ATTACHMENT_READ_BIT_KHR = VK_ACCESS_2_COLOR_ATTACHMENT_READ_BIT,
 
@@ -587,23 +599,23 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_READ_BIT_KHR = VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_READ_BIT,
 
     /// <summary>
-    ///     VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT specifies write access to a
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">
-    ///         depth/stencil
-    ///         attachment
-    ///     </a>
-    ///     , via
+    ///     VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT specifies write
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-ds-state">
     ///         depth or
     ///         stencil operations
     ///     </a>
-    ///     or certain
+    ///     in the VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT_KHR or
+    ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT_KHR pipeline stages or via certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
-    ///         load and store operations
+    ///         load operations
     ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT or
-    ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT pipeline stages.
+    ///     or
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader-tileimage-reads">
+    ///         fragment
+    ///         shader tile image reads
+    ///     </a>
+    ///     in the VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT_KHR pipeline stage.
     /// </summary>
     VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT_KHR = VK_ACCESS_2_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT,
 
