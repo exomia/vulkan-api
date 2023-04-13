@@ -21,12 +21,11 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkShaderCreateFlagBitsEXT
 {
     /// <summary>
-    ///     VK_SHADER_CREATE_LINK_STAGE_BIT_EXT specifies that this stage is linked to all other stages being created in
-    ///     the same
+    ///     VK_SHADER_CREATE_LINK_STAGE_BIT_EXT specifies that a shader is linked to all other shaders created in the same
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateShadersEXT.html">vkCreateShadersEXT</a>
     ///     call whose
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderCreateInfoEXT.html">VkShaderCreateInfoEXT</a>
-    ///     structures have the VK_SHADER_CREATE_LINK_STAGE_BIT_EXT flag set in flags.
+    ///     structures' flags include VK_SHADER_CREATE_LINK_STAGE_BIT_EXT.
     /// </summary>
     VK_SHADER_CREATE_LINK_STAGE_BIT_EXT = 0x1,
 
@@ -36,19 +35,19 @@ public enum VkShaderCreateFlagBitsEXT
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-builtin-variables-sgs">
     ///         <code>SubgroupSize</code>
     ///     </a>
-    ///     mayvary in the shader stage.
+    ///     mayvary in a compute shader.
     /// </summary>
     VK_SHADER_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT_EXT = 0x2,
 
     /// <summary>
     ///     VK_SHADER_CREATE_REQUIRE_FULL_SUBGROUPS_BIT_EXT specifies that the subgroup sizes must be launched with all
-    ///     invocations active in the compute stage.
+    ///     invocations active in a compute shader.
     /// </summary>
     VK_SHADER_CREATE_REQUIRE_FULL_SUBGROUPS_BIT_EXT = 0x4,
 
     /// <summary>
-    ///     VK_SHADER_CREATE_NO_TASK_SHADER_BIT_EXT specifies that the mesh shader being created must only be used without
-    ///     a task shader. Otherwise, the mesh shader being created must only be used with a task shader.
+    ///     VK_SHADER_CREATE_NO_TASK_SHADER_BIT_EXT specifies that a mesh shader must only be used without a task shader.
+    ///     Otherwise, the mesh shader must only be used with a task shader.
     /// </summary>
     VK_SHADER_CREATE_NO_TASK_SHADER_BIT_EXT = 0x8,
 
@@ -60,13 +59,13 @@ public enum VkShaderCreateFlagBitsEXT
     VK_SHADER_CREATE_DISPATCH_BASE_BIT_EXT = 0x10,
 
     /// <summary>
-    ///     VK_SHADER_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_EXTspecifies that the fragment shader can be used with a
+    ///     VK_SHADER_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_EXTspecifies that a fragment shader can be used with a
     ///     fragment shading rate attachment.
     /// </summary>
     VK_SHADER_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_EXT = 0x20,
 
     /// <summary>
-    ///     VK_SHADER_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT specifies that the fragment shader can be used with a
+    ///     VK_SHADER_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT specifies that a fragment shader can be used with a
     ///     fragment density map attachment.
     /// </summary>
     VK_SHADER_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 0x40
