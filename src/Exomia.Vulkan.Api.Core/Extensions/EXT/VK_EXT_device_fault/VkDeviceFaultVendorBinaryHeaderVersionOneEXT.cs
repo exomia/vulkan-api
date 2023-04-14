@@ -68,4 +68,13 @@ public unsafe struct VkDeviceFaultVendorBinaryHeaderVersionOneEXT
     ///     creation.
     /// </summary>
     public uint engineNameOffset;
+
+    /// <summary>
+    ///     engineVersion must be zero or the value specified by VkApplicationInfo::engineVersion during instance
+    ///     creation.
+    /// </summary>
+    public VkVersion engineVersion;
+
+    /// <summary>apiVersion must be zero or the value specified by VkApplicationInfo::apiVersion during instance creation.</summary>
+    public VkVersion apiVersion;
 }

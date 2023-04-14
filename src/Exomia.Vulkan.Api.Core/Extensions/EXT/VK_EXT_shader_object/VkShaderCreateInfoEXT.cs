@@ -29,15 +29,15 @@ public unsafe struct VkShaderCreateInfoEXT
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>flags is a bitmask of VkShaderCreateFlagsEXT describing additional parameters of the shader.</summary>
+    /// <summary>flags is a bitmask of VkShaderCreateFlagBitsEXT describing additional parameters of the shader.</summary>
     public VkShaderCreateFlagsEXT flags;
 
     /// <summary>stage is a VkShaderStageFlagBits value specifying a single shader stage.</summary>
     public VkShaderStageFlagBits stage;
 
     /// <summary>
-    ///     nextStage is a bitmask of VkShaderStageFlags specifying zero or more logically later stages which may be used
-    ///     as a logically next bound stage when drawing with the shader bound.
+    ///     nextStage is a bitmask of VkShaderStageFlagBits specifying zero or stages which may be used as a logically
+    ///     next bound stage when drawing with the shader bound.
     /// </summary>
     public VkShaderStageFlags nextStage;
 

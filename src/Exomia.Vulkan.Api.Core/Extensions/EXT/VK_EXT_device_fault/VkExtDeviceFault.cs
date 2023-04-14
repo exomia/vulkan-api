@@ -27,7 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static unsafe class VkExtDeviceFault
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_EXT_DEVICE_FAULT_SPEC_VERSION = 1;
+    public const uint VK_EXT_DEVICE_FAULT_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_EXT_DEVICE_FAULT_EXTENSION_NAME = "VK_EXT_device_fault";
