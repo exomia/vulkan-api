@@ -346,8 +346,12 @@ public enum VkFormatFeatureFlagBits2 : ulong
     ///         fragment
     ///         shading rate attachment
     ///     </a>
-    ///     . An implementation must not set this feature for formats with numeric type other
-    ///     than *UINT, or set it as a buffer feature.
+    ///     . An implementation must not set this feature for formats with a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#formats-numericformat">
+    ///         numeric
+    ///         format
+    ///     </a>
+    ///     other than UINT, or set it as a buffer feature.
     /// </summary>
     VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x40000000,
 

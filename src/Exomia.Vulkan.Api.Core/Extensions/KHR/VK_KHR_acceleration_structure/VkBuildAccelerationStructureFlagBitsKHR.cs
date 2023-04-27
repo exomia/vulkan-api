@@ -100,6 +100,12 @@ public enum VkBuildAccelerationStructureFlagBitsKHR
     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_DISPLACEMENT_MICROMAP_UPDATE_NV = 0x200,
 
     /// <summary>
+    ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_DATA_ACCESS_KHR indicates that the specified acceleration structure can
+    ///     be used when fetching the vertex positions of a hit triangle.
+    /// </summary>
+    VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_DATA_ACCESS_KHR = 0x800,
+
+    /// <summary>
     ///     VK_BUILD_ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT_KHR indicates     that the specified acceleration structure can be
     ///     updated with     a mode of VK_BUILD_ACCELERATION_STRUCTURE_MODE_UPDATE_KHR in
     ///     <a
