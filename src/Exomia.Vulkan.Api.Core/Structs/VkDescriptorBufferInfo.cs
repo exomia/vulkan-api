@@ -31,7 +31,10 @@ public struct VkDescriptorBufferInfo
 
     /// <summary>
     ///     range is the size in bytes that is used for this descriptor update, or VK_WHOLE_SIZE to use the range from
-    ///     offset to the end of the buffer.
+    ///     offset to the end of the buffer.NoteWhen setting range to VK_WHOLE_SIZE, the effective range must not be larger
+    ///     than the maximum range for the descriptor type (maxUniformBufferRange or maxStorageBufferRange). This means that
+    ///     VK_WHOLE_SIZE is not typically useful in the common case where uniform buffer descriptors are suballocated from a
+    ///     buffer that is much larger than maxUniformBufferRange.
     /// </summary>
     public VkDeviceSize range;
 }

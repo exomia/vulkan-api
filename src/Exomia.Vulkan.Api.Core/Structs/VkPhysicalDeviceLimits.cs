@@ -432,14 +432,7 @@ public struct VkPhysicalDeviceLimits
     /// <summary>
     ///     maxComputeSharedMemorySizeis the maximum total storage size, in bytes, available for variables declared with
     ///     the Workgroup storage class in shader modules (or with the shared storage qualifier in GLSL) in the compute shader
-    ///     stage. When variables declared with the Workgroup storage class are explicitly laid out (hence they are also
-    ///     decorated with Block), the amount of storage consumed is the size of the largest Block variable, not counting any
-    ///     padding at the end. The amount of storage consumed by the non-Block variables declared with the Workgroup storage
-    ///     class is implementation-dependent. However, the amount of storage consumed may not exceed the largest block size
-    ///     that would be obtained if all active non-Block variables declared with Workgroup storage class were assigned
-    ///     offsets in an arbitrary order by successively taking the smallest valid offset according to the Standard Storage
-    ///     Buffer Layout rules, and with Boolean values considered as 32-bit integer values for the purpose of this
-    ///     calculation. (This is equivalent to using the GLSL std430 layout rules.)
+    ///     stage.
     /// </summary>
     public uint maxComputeSharedMemorySize;
 
