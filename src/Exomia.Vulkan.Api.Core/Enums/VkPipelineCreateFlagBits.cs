@@ -212,13 +212,15 @@ public enum VkPipelineCreateFlagBits
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_COLOR_ATTACHMENT_FEEDBACK_LOOP_BIT_EXTspecifies that the pipeline may be used with an
-    ///     attachment feedback loop including color attachments.
+    ///     attachment feedback loop including color attachments. It is ignored if
+    ///     VK_DYNAMIC_STATE_ATTACHMENT_FEEDBACK_LOOP_ENABLE_EXT is set in pDynamicStates.
     /// </summary>
     VK_PIPELINE_CREATE_COLOR_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT = 0x2000000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_DEPTH_STENCIL_ATTACHMENT_FEEDBACK_LOOP_BIT_EXTspecifies that the pipeline may be used with
-    ///     an attachment feedback loop including depth-stencil attachments.
+    ///     an attachment feedback loop including depth-stencil attachments. It is ignored if
+    ///     VK_DYNAMIC_STATE_ATTACHMENT_FEEDBACK_LOOP_ENABLE_EXT is set in pDynamicStates.
     /// </summary>
     VK_PIPELINE_CREATE_DEPTH_STENCIL_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT = 0x4000000,
 
