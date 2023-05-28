@@ -60,9 +60,9 @@ public unsafe struct VkVideoDecodeInfoKHR
     public uint referenceSlotCount;
 
     /// <summary>
-    ///     pReferenceSlots is a pointer to an array of VkVideoReferenceSlotInfoKHR structures describing the DPB slots
-    ///     and corresponding reference picture resources to use in this video decode operation (the set of active reference
-    ///     pictures).
+    ///     pReferenceSlots is NULL or a pointer to an array of VkVideoReferenceSlotInfoKHR structures describing the DPB
+    ///     slots and corresponding reference picture resources to use in this video decode operation (the set of active
+    ///     reference pictures).
     /// </summary>
     public VkVideoReferenceSlotInfoKHR* pReferenceSlots;
 }
