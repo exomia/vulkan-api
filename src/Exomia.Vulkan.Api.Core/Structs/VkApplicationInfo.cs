@@ -57,8 +57,8 @@ public unsafe struct VkApplicationInfo
     ///     apiVersion must be the highest version of Vulkan that the application is designed to use, encoded as described
     ///     in
     ///     https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#extendingvulkan-coreversions-versionnumbers.
-    ///     The patch version number specified in apiVersion is ignored when creating an instance object. Only the major and
-    ///     minor versions of the instance must match those requested in apiVersion.
+    ///     The patch version number specified in apiVersion is ignored when creating an instance object. The variant version
+    ///     of the instance must match that requested in apiVersion.
     /// </summary>
     public VkVersion apiVersion;
 }

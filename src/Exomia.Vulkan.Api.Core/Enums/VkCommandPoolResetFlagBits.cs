@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkCommandPoolResetFlagBits
 {
     /// <summary>
-    ///     VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT specifies that resetting a command pool recycles all of the
+    ///     VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BITspecifies that resetting a command pool recycles all of the
     ///     resources from the command pool back to the system.
     /// </summary>
     VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT = 0x1
