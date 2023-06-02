@@ -19,6 +19,13 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkPipelineCacheHeaderVersion
 {
-    /// <summary>VK_PIPELINE_CACHE_HEADER_VERSION_ONE specifies version one of the pipeline cache.</summary>
+    /// <summary>
+    ///     VK_PIPELINE_CACHE_HEADER_VERSION_ONE specifies version one of the pipeline cache, described by
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCacheHeaderVersionOne.html">
+    ///         VkPipelineCacheHeaderVersionOne
+    ///     </a>
+    ///     .
+    /// </summary>
     VK_PIPELINE_CACHE_HEADER_VERSION_ONE = 1
 }

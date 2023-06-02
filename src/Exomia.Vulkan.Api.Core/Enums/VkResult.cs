@@ -151,8 +151,8 @@ public enum VkResult
     VK_ERROR_INCOMPATIBLE_DISPLAY_KHR = -1000003001,
 
     /// <summary>
-    ///     VK_ERROR_VALIDATION_FAILED_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkResult">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkResult</a>
+    ///     VK_ERROR_VALIDATION_FAILED_EXTA command failed because invalid usage was detected by the implementation or a
+    ///     validation-layer.
     /// </summary>
     VK_ERROR_VALIDATION_FAILED_EXT = -1000011001,
 

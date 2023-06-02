@@ -41,9 +41,9 @@ public unsafe struct VkComputePipelineCreateInfo
     /// </summary>
     public VkPipelineLayout layout;
 
-    /// <summary>basePipelineHandle is a pipeline to derive from</summary>
+    /// <summary>basePipelineHandle is a pipeline to derive from.</summary>
     public VkPipeline basePipelineHandle;
 
-    /// <summary>basePipelineIndex is an index into the pCreateInfosparameter to use as a pipeline to derive from</summary>
+    /// <summary>basePipelineIndex is an index into the pCreateInfosparameter to use as a pipeline to derive from.</summary>
     public int basePipelineIndex;
 }
