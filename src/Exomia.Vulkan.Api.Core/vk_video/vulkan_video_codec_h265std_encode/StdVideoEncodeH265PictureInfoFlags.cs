@@ -21,7 +21,7 @@ public struct StdVideoEncodeH265PictureInfoFlags
 {
     private uint _bitfield1;
 
-    public uint is_reference_flag
+    public uint is_reference
     {
         get { return (uint)((_bitfield1 >> 0) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFE) | (((uint)value & 0x00000001) << 0); }
@@ -33,7 +33,7 @@ public struct StdVideoEncodeH265PictureInfoFlags
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFD) | (((uint)value & 0x00000001) << 1); }
     }
 
-    public uint long_term_flag
+    public uint used_for_long_term_reference
     {
         get { return (uint)((_bitfield1 >> 2) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFB) | (((uint)value & 0x00000001) << 2); }
@@ -49,5 +49,35 @@ public struct StdVideoEncodeH265PictureInfoFlags
     {
         get { return (uint)((_bitfield1 >> 4) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFEF) | (((uint)value & 0x00000001) << 4); }
+    }
+
+    public uint pic_output_flag
+    {
+        get { return (uint)((_bitfield1 >> 5) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFFFFDF) | (((uint)value & 0x00000001) << 5); }
+    }
+
+    public uint no_output_of_prior_pics_flag
+    {
+        get { return (uint)((_bitfield1 >> 6) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFFFFBF) | (((uint)value & 0x00000001) << 6); }
+    }
+
+    public uint short_term_ref_pic_set_sps_flag
+    {
+        get { return (uint)((_bitfield1 >> 7) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFFFF7F) | (((uint)value & 0x00000001) << 7); }
+    }
+
+    public uint slice_temporal_mvp_enabled_flag
+    {
+        get { return (uint)((_bitfield1 >> 8) & 0x00000001); }
+        set { _bitfield1 = (_bitfield1 & 0xFFFFFEFF) | (((uint)value & 0x00000001) << 8); }
+    }
+
+    public uint reserved
+    {
+        get { return (uint)((_bitfield1 >> 9) & 0x007FFFFF); }
+        set { _bitfield1 = (_bitfield1 & 0x000001FF) | (((uint)value & 0x007FFFFF) << 9); }
     }
 }

@@ -41,13 +41,13 @@ public enum VkVideoCodingControlFlagBitsKHR
     VK_VIDEO_CODING_CONTROL_ENCODE_RATE_CONTROL_BIT_KHR = 0x2,
 
     /// <summary>
-    ///     VK_VIDEO_CODING_CONTROL_ENCODE_RATE_CONTROL_LAYER_BIT_KHRindicates that the coding control parameters include video
-    ///     encode rate control layer parameters (see
+    ///     VK_VIDEO_CODING_CONTROL_ENCODE_QUALITY_LEVEL_BIT_KHR indicates that the coding control parameters include
+    ///     video encode quality level parameters (see
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeRateControlLayerInfoKHR.html">
-    ///         VkVideoEncodeRateControlLayerInfoKHR
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeQualityLevelInfoKHR.html">
+    ///         VkVideoEncodeQualityLevelInfoKHR
     ///     </a>
     ///     ).
     /// </summary>
-    VK_VIDEO_CODING_CONTROL_ENCODE_RATE_CONTROL_LAYER_BIT_KHR = 0x4
+    VK_VIDEO_CODING_CONTROL_ENCODE_QUALITY_LEVEL_BIT_KHR = 0x4
 }

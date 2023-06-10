@@ -21,7 +21,7 @@ public struct StdVideoEncodeH264ReferenceInfo
 {
     public StdVideoEncodeH264ReferenceInfoFlags flags;
 
-    public StdVideoH264PictureType pictureType;
+    public StdVideoH264PictureType primary_pic_type;
 
     public uint FrameNum;
 
@@ -30,4 +30,6 @@ public struct StdVideoEncodeH264ReferenceInfo
     public ushort long_term_pic_num;
 
     public ushort long_term_frame_idx;
+
+    public byte temporal_id;
 }

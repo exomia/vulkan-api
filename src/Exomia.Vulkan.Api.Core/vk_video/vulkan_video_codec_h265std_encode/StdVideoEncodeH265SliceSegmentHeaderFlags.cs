@@ -27,93 +27,75 @@ public struct StdVideoEncodeH265SliceSegmentHeaderFlags
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFE) | (((uint)value & 0x00000001) << 0); }
     }
 
-    public uint no_output_of_prior_pics_flag
+    public uint dependent_slice_segment_flag
     {
         get { return (uint)((_bitfield1 >> 1) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFD) | (((uint)value & 0x00000001) << 1); }
     }
 
-    public uint dependent_slice_segment_flag
+    public uint slice_sao_luma_flag
     {
         get { return (uint)((_bitfield1 >> 2) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFB) | (((uint)value & 0x00000001) << 2); }
     }
 
-    public uint pic_output_flag
+    public uint slice_sao_chroma_flag
     {
         get { return (uint)((_bitfield1 >> 3) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFF7) | (((uint)value & 0x00000001) << 3); }
     }
 
-    public uint short_term_ref_pic_set_sps_flag
+    public uint num_ref_idx_active_override_flag
     {
         get { return (uint)((_bitfield1 >> 4) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFEF) | (((uint)value & 0x00000001) << 4); }
     }
 
-    public uint slice_temporal_mvp_enable_flag
+    public uint mvd_l1_zero_flag
     {
         get { return (uint)((_bitfield1 >> 5) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFDF) | (((uint)value & 0x00000001) << 5); }
     }
 
-    public uint slice_sao_luma_flag
+    public uint cabac_init_flag
     {
         get { return (uint)((_bitfield1 >> 6) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFBF) | (((uint)value & 0x00000001) << 6); }
     }
 
-    public uint slice_sao_chroma_flag
+    public uint cu_chroma_qp_offset_enabled_flag
     {
         get { return (uint)((_bitfield1 >> 7) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFF7F) | (((uint)value & 0x00000001) << 7); }
     }
 
-    public uint num_ref_idx_active_override_flag
+    public uint deblocking_filter_override_flag
     {
         get { return (uint)((_bitfield1 >> 8) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFEFF) | (((uint)value & 0x00000001) << 8); }
     }
 
-    public uint mvd_l1_zero_flag
+    public uint slice_deblocking_filter_disabled_flag
     {
         get { return (uint)((_bitfield1 >> 9) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFDFF) | (((uint)value & 0x00000001) << 9); }
     }
 
-    public uint cabac_init_flag
+    public uint collocated_from_l0_flag
     {
         get { return (uint)((_bitfield1 >> 10) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFBFF) | (((uint)value & 0x00000001) << 10); }
     }
 
-    public uint cu_chroma_qp_offset_enabled_flag
+    public uint slice_loop_filter_across_slices_enabled_flag
     {
         get { return (uint)((_bitfield1 >> 11) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFF7FF) | (((uint)value & 0x00000001) << 11); }
     }
 
-    public uint deblocking_filter_override_flag
+    public uint reserved
     {
-        get { return (uint)((_bitfield1 >> 12) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFEFFF) | (((uint)value & 0x00000001) << 12); }
-    }
-
-    public uint slice_deblocking_filter_disabled_flag
-    {
-        get { return (uint)((_bitfield1 >> 13) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFDFFF) | (((uint)value & 0x00000001) << 13); }
-    }
-
-    public uint collocated_from_l0_flag
-    {
-        get { return (uint)((_bitfield1 >> 14) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFBFFF) | (((uint)value & 0x00000001) << 14); }
-    }
-
-    public uint slice_loop_filter_across_slices_enabled_flag
-    {
-        get { return (uint)((_bitfield1 >> 15) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFF7FFF) | (((uint)value & 0x00000001) << 15); }
+        get { return (uint)((_bitfield1 >> 12) & 0x000FFFFF); }
+        set { _bitfield1 = (_bitfield1 & 0x00000FFF) | (((uint)value & 0x000FFFFF) << 12); }
     }
 }

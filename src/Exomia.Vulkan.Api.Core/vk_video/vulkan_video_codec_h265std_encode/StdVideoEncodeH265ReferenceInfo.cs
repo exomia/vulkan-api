@@ -21,7 +21,7 @@ public struct StdVideoEncodeH265ReferenceInfo
 {
     public StdVideoEncodeH265ReferenceInfoFlags flags;
 
-    public StdVideoH265PictureType PictureType;
+    public StdVideoH265PictureType pic_type;
 
     public int PicOrderCntVal;
 

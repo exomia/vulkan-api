@@ -33,21 +33,9 @@ public struct StdVideoEncodeH264SliceHeaderFlags
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFD) | (((uint)value & 0x00000001) << 1); }
     }
 
-    public uint no_output_of_prior_pics_flag
+    public uint reserved
     {
-        get { return (uint)((_bitfield1 >> 2) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFFFFB) | (((uint)value & 0x00000001) << 2); }
-    }
-
-    public uint adaptive_ref_pic_marking_mode_flag
-    {
-        get { return (uint)((_bitfield1 >> 3) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFFFF7) | (((uint)value & 0x00000001) << 3); }
-    }
-
-    public uint no_prior_references_available_flag
-    {
-        get { return (uint)((_bitfield1 >> 4) & 0x00000001); }
-        set { _bitfield1 = (_bitfield1 & 0xFFFFFFEF) | (((uint)value & 0x00000001) << 4); }
+        get { return (uint)((_bitfield1 >> 2) & 0x3FFFFFFF); }
+        set { _bitfield1 = (_bitfield1 & 0x00000003) | (((uint)value & 0x3FFFFFFF) << 2); }
     }
 }
