@@ -25,13 +25,7 @@ public unsafe struct StdVideoEncodeH265SliceSegmentHeader
 
     public uint slice_segment_address;
 
-    public byte short_term_ref_pic_set_idx;
-
     public byte collocated_ref_idx;
-
-    public byte num_ref_idx_l0_active_minus1;
-
-    public byte num_ref_idx_l1_active_minus1;
 
     public byte MaxNumMergeCand;
 
@@ -49,9 +43,7 @@ public unsafe struct StdVideoEncodeH265SliceSegmentHeader
 
     public sbyte slice_act_cr_qp_offset;
 
-    public StdVideoH265ShortTermRefPicSet* pShortTermRefPicSet;
-
-    public StdVideoEncodeH265SliceSegmentLongTermRefPics* pLongTermRefPics;
+    public VkArray3<byte> reserved1;
 
     public StdVideoEncodeH265WeightTable* pWeightTable;
 }

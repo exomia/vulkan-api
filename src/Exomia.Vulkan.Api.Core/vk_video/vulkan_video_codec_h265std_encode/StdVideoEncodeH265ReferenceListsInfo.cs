@@ -25,13 +25,11 @@ public unsafe struct StdVideoEncodeH265ReferenceListsInfo
 
     public byte num_ref_idx_l1_active_minus1;
 
-    public ushort reserved1;
+    public fixed byte RefPicList0[1];
 
-    public byte* pRefPicList0Entries;
+    public fixed byte RefPicList1[1];
 
-    public byte* pRefPicList1Entries;
+    public fixed byte list_entry_l0[1];
 
-    public byte* pRefList0Modifications;
-
-    public byte* pRefList1Modifications;
+    public fixed byte list_entry_l1[1];
 }

@@ -27,5 +27,14 @@ public enum VkVideoSessionCreateFlagBitsKHR
     ///     VK_VIDEO_SESSION_CREATE_PROTECTED_CONTENT_BIT_KHR specifies that the video session uses protected video
     ///     content.
     /// </summary>
-    VK_VIDEO_SESSION_CREATE_PROTECTED_CONTENT_BIT_KHR = 0x1
+    VK_VIDEO_SESSION_CREATE_PROTECTED_CONTENT_BIT_KHR = 0x1,
+
+    /// <summary>
+    ///     VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_PARAMETER_OPTIMIZATIONS_BIT_KHRspecifies that the implementation is
+    ///     allowed to override video session parameters and other codec-specific encoding parameters to optimize video encode
+    ///     operations based on the specific use case defined by the
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-profiles">video profile</a>
+    ///     and the used video encode quality level.
+    /// </summary>
+    VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_PARAMETER_OPTIMIZATIONS_BIT_KHR = 0x2
 }

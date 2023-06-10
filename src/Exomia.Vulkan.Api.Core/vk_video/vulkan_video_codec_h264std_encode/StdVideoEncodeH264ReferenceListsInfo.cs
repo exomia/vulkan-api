@@ -21,9 +21,13 @@ public unsafe struct StdVideoEncodeH264ReferenceListsInfo
 {
     public StdVideoEncodeH264ReferenceListsInfoFlags flags;
 
-    public byte refPicList0EntryCount;
+    public byte num_ref_idx_l0_active_minus1;
 
-    public byte refPicList1EntryCount;
+    public byte num_ref_idx_l1_active_minus1;
+
+    public fixed byte RefPicList0[1];
+
+    public fixed byte RefPicList1[1];
 
     public byte refList0ModOpCount;
 
@@ -32,10 +36,6 @@ public unsafe struct StdVideoEncodeH264ReferenceListsInfo
     public byte refPicMarkingOpCount;
 
     public fixed byte reserved1[7];
-
-    public byte* pRefPicList0Entries;
-
-    public byte* pRefPicList1Entries;
 
     public StdVideoEncodeH264RefListModEntry* pRefList0ModOperations;
 

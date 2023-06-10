@@ -32,4 +32,10 @@ public struct StdVideoEncodeH264ReferenceListsInfoFlags
         get { return (uint)((_bitfield1 >> 1) & 0x00000001); }
         set { _bitfield1 = (_bitfield1 & 0xFFFFFFFD) | (((uint)value & 0x00000001) << 1); }
     }
+
+    public uint reserved
+    {
+        get { return (uint)((_bitfield1 >> 2) & 0x3FFFFFFF); }
+        set { _bitfield1 = (_bitfield1 & 0x00000003) | (((uint)value & 0x3FFFFFFF) << 2); }
+    }
 }

@@ -25,23 +25,15 @@ public unsafe struct StdVideoEncodeH264SliceHeader
 
     public StdVideoH264SliceType slice_type;
 
-    public ushort idr_pic_id;
-
-    public byte num_ref_idx_l0_active_minus1;
-
-    public byte num_ref_idx_l1_active_minus1;
-
-    public StdVideoH264CabacInitIdc cabac_init_idc;
-
-    public StdVideoH264DisableDeblockingFilterIdc disable_deblocking_filter_idc;
-
     public sbyte slice_alpha_c0_offset_div2;
 
     public sbyte slice_beta_offset_div2;
 
     public ushort reserved1;
 
-    public uint reserved2;
+    public StdVideoH264CabacInitIdc cabac_init_idc;
+
+    public StdVideoH264DisableDeblockingFilterIdc disable_deblocking_filter_idc;
 
     public StdVideoEncodeH264WeightTable* pWeightTable;
 }
