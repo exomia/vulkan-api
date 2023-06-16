@@ -120,6 +120,17 @@ public enum VkExternalMemoryHandleTypeFlagBits
     VK_EXTERNAL_MEMORY_HANDLE_TYPE_RDMA_ADDRESS_BIT_NV = 0x1000,
 
     /// <summary>
+    ///     VK_EXTERNAL_MEMORY_HANDLE_TYPE_SCREEN_BUFFER_BIT_QNX specifies a _screen_buffer object defined by the QNX SDP. See
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#memory-external-qnx-screen-buffer">
+    ///         QNX
+    ///         Screen Buffer
+    ///     </a>
+    ///     for more details of this handle type.
+    /// </summary>
+    VK_EXTERNAL_MEMORY_HANDLE_TYPE_SCREEN_BUFFER_BIT_QNX = 0x4000,
+
+    /// <summary>
     ///     VK_EXTERNAL_MEMORY_HANDLE_TYPE_OPAQUE_FD_BIT specifies a POSIX file descriptor handle that has only limited
     ///     valid usage outside of Vulkan and other compatible APIs. It must be compatible with the POSIX system calls dup,
     ///     dup2, close, and the non-standard system call dup3. Additionally, it must be transportable over a socket using an

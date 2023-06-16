@@ -16,3 +16,6 @@ public struct _screen_context { }
 
 /// <summary> A screen window. </summary>
 public struct _screen_window { }
+
+/// <summary> A screen buffer. </summary>
+public struct _screen_buffer { }

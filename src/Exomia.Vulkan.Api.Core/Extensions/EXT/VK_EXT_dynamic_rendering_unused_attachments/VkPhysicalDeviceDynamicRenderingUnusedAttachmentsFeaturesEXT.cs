@@ -53,8 +53,9 @@ public unsafe struct VkPhysicalDeviceDynamicRenderingUnusedAttachmentsFeaturesEX
     ///     is allowed with a non-VK_NULL_HANDLEVkRenderingInfo::pDepthAttachment. Also a
     ///     VkPipelineRenderingCreateInfo::stencilAttachmentFormat other than VK_FORMAT_UNDEFINED is allowed with a
     ///     VK_NULL_HANDLEVkRenderingInfo::pStencilAttachment, or a VkPipelineRenderingCreateInfo::stencilAttachmentFormat of
-    ///     VK_FORMAT_UNDEFINED is allowed with a non-VK_NULL_HANDLEVkRenderingInfo::pStencilAttachment. In these cases any
-    ///     writes to these attachments are discarded.
+    ///     VK_FORMAT_UNDEFINED is allowed with a non-VK_NULL_HANDLEVkRenderingInfo::pStencilAttachment. Any writes to a
+    ///     VkRenderingInfo::pColorAttachments, VkRenderingInfo::pDepthAttachment, or VkRenderingInfo::pStencilAttachment with
+    ///     VK_NULL_HANDLE are discarded.
     /// </summary>
     public VkBool32 dynamicRenderingUnusedAttachments;
 }

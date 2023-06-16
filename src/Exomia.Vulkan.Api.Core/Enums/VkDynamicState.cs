@@ -68,20 +68,31 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_LINE_WIDTH = 2,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_DEPTH_BIAS specifies that the depthBiasConstantFactor, depthBiasClamp and depthBiasSlopeFactor
-    ///     states in
+    ///     VK_DYNAMIC_STATE_DEPTH_BIAS specifies that any instance of
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDepthBiasRepresentationInfoEXT.html">
+    ///         VkDepthBiasRepresentationInfoEXT
+    ///     </a>
+    ///     included in the pNext chain of
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
-    ///     will be ignored and mustbe set dynamically with
+    ///     as well as the depthBiasConstantFactor, depthBiasClamp and depthBiasSlopeFactor states in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
+    ///         VkPipelineRasterizationStateCreateInfo
+    ///     </a>
+    ///     will be ignored and mustbe set dynamically with either
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBias.html">vkCmdSetDepthBias</a>
-    ///     before any draws are performed with depthBiasEnable in
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
-    ///         VkPipelineRasterizationStateCreateInfo
+    ///     or
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBias2EXT.html">vkCmdSetDepthBias2EXT</a>
+    ///     before any draws are performed with
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#primsrast-depthbias-enable">
+    ///         depth
+    ///         bias enabled
     ///     </a>
-    ///     set to VK_TRUE.
+    ///     .
     /// </summary>
     VK_DYNAMIC_STATE_DEPTH_BIAS = 3,
 
