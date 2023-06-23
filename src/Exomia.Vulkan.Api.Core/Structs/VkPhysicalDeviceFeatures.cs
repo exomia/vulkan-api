@@ -32,57 +32,59 @@ public struct VkPhysicalDeviceFeatures
     ///     range. This includes accesses performed via variable pointers where the buffer descriptor being accessed cannot be
     ///     statically determined. Uninitialized pointers and pointers equal to OpConstantNull are treated as pointing to a
     ///     zero-sized object, so all accesses through such pointers are considered to be out of bounds. Buffer accesses
-    ///     through buffer device addresses are not bounds-checked. If the cooperativeMatrixRobustBufferAccess feature is not
-    ///     enabled, then accesses using OpCooperativeMatrixLoadNV and OpCooperativeMatrixStoreNV may not be
-    ///     bounds-checked.NoteIf a SPIR-V OpLoad instruction loads a structure and the tail end of the structure is out of
-    ///     bounds, then all members of the structure are considered out of bounds even if the members at the end are not
-    ///     statically used.If robustBufferAccess2 is not enabled and any buffer access is determined to be out of bounds, then
-    ///     any other access of the same type (load, store, or atomic) to the same buffer that accesses an address less than 16
-    ///     bytes away from the out of bounds address may also be considered out of bounds.If the access is a load that reads
-    ///     from the same memory locations as a prior store in the same shader invocation, with no other intervening accesses
-    ///     to the same memory locations in that shader invocation, then the result of the load may be the value stored by the
-    ///     store instruction, even if the access is out of bounds. If the load is Volatile, then an out of bounds load must
-    ///     return the appropriate out of bounds value.Accesses to descriptors written with a VK_NULL_HANDLE resource or view
-    ///     are not considered to be out of bounds. Instead, each type of descriptor access defines a specific behavior for
-    ///     accesses to a null descriptor.Out-of-bounds buffer loads will return any of the following values:If the access is
-    ///     to a uniform buffer and robustBufferAccess2 is enabled, loads of offsets between the end of the descriptor range
-    ///     and the end of the descriptor range rounded up to a multiple of robustUniformBufferAccessSizeAlignment bytes must
+    ///     through buffer device addresses are not bounds-checked.If the
+    ///     VkPhysicalDeviceCooperativeMatrixFeaturesNV::cooperativeMatrixRobustBufferAccessfeature is not enabled, then
+    ///     accesses using OpCooperativeMatrixLoadNV and OpCooperativeMatrixStoreNVmay not be bounds-checked.If the
+    ///     VkPhysicalDeviceCooperativeMatrixFeaturesKHR::cooperativeMatrixRobustBufferAccessfeature is not enabled, then
+    ///     accesses using OpCooperativeMatrixLoadKHR and OpCooperativeMatrixStoreKHRmay not be bounds-checked.NoteIf a SPIR-V
+    ///     OpLoad instruction loads a structure and the tail end of the structure is out of bounds, then all members of the
+    ///     structure are considered out of bounds even if the members at the end are not statically used.If
+    ///     robustBufferAccess2 is not enabled and any buffer access is determined to be out of bounds, then any other access
+    ///     of the same type (load, store, or atomic) to the same buffer that accesses an address less than 16 bytes away from
+    ///     the out of bounds address may also be considered out of bounds.If the access is a load that reads from the same
+    ///     memory locations as a prior store in the same shader invocation, with no other intervening accesses to the same
+    ///     memory locations in that shader invocation, then the result of the load may be the value stored by the store
+    ///     instruction, even if the access is out of bounds. If the load is Volatile, then an out of bounds load must return
+    ///     the appropriate out of bounds value.Accesses to descriptors written with a VK_NULL_HANDLE resource or view are not
+    ///     considered to be out of bounds. Instead, each type of descriptor access defines a specific behavior for accesses to
+    ///     a null descriptor.Out-of-bounds buffer loads will return any of the following values:If the access is to a uniform
+    ///     buffer and robustBufferAccess2 is enabled, loads of offsets between the end of the descriptor range and the end of
+    ///     the descriptor range rounded up to a multiple of robustUniformBufferAccessSizeAlignment bytes must return either
+    ///     zero values or the contents of the memory at the offset being loaded. Loads of offsets past the descriptor range
+    ///     rounded up to a multiple of robustUniformBufferAccessSizeAlignment bytes must return zero values.If the access is
+    ///     to a storage buffer and robustBufferAccess2 is enabled, loads of offsets between the end of the descriptor range
+    ///     and the end of the descriptor range rounded up to a multiple of robustStorageBufferAccessSizeAlignment bytes must
     ///     return either zero values or the contents of the memory at the offset being loaded. Loads of offsets past the
-    ///     descriptor range rounded up to a multiple of robustUniformBufferAccessSizeAlignment bytes must return zero
-    ///     values.If the access is to a storage buffer and robustBufferAccess2 is enabled, loads of offsets between the end of
-    ///     the descriptor range and the end of the descriptor range rounded up to a multiple of
-    ///     robustStorageBufferAccessSizeAlignment bytes must return either zero values or the contents of the memory at the
-    ///     offset being loaded. Loads of offsets past the descriptor range rounded up to a multiple of
-    ///     robustStorageBufferAccessSizeAlignment bytes must return zero values. Similarly, stores to addresses between the
-    ///     end of the descriptor range and the end of the descriptor range rounded up to a multiple of
-    ///     robustStorageBufferAccessSizeAlignment bytes may be discarded.Non-atomic accesses to storage buffers that are a
-    ///     multiple of 32 bits may be decomposed into 32-bit accesses that are individually bounds-checked.If the access is to
-    ///     an index buffer and robustBufferAccess2 is enabled, zero values must be returned.If the access is to a uniform
-    ///     texel buffer or storage texel buffer and robustBufferAccess2 is enabled, zero values must be returned, and then
-    ///     Conversion to RGBA is applied based on the buffer view&#8217;s format.Values from anywhere within the memory
-    ///     range(s) bound to the buffer (possibly including bytes of memory past the end of the buffer, up to the end of the
-    ///     bound range).Zero values, or (0,0,0,x) vectors for vector reads where x is a valid value represented in the type of
-    ///     the vector components and maybe any of:0, 1, or the maximum representable positive integer value, for signed or
-    ///     unsigned integer components0.0 or 1.0, for floating-point componentsOut-of-bounds writes may modify values within
-    ///     the memory range(s) bound to the buffer, but must not modify any other memory.If robustBufferAccess2 is enabled,
-    ///     out of bounds writes must not modify any memory.Out-of-bounds atomics may modify values within the memory range(s)
-    ///     bound to the buffer, but must not modify any other memory, and return an undefined value.If robustBufferAccess2 is
-    ///     enabled, out of bounds atomics must not modify any memory, and return an undefined value.If robustBufferAccess2 is
-    ///     disabled, vertex input attributes are considered out of bounds if the offset of the attribute in the bound vertex
-    ///     buffer range plus the size of the attribute is greater than either:vertexBufferRangeSize, if bindingStride == 0;
-    ///     or(vertexBufferRangeSize - (vertexBufferRangeSize % bindingStride))where vertexBufferRangeSize is the byte size of
-    ///     the memory range bound to the vertex buffer binding and bindingStride is the byte stride of the corresponding
-    ///     vertex input binding. Further, if any vertex input attribute using a specific vertex input binding is out of
-    ///     bounds, then all vertex input attributes using that vertex input binding for that vertex shader invocation are
-    ///     considered out of bounds.If a vertex input attribute is out of bounds, it will be assigned one of the following
-    ///     values:Values from anywhere within the memory range(s) bound to the buffer, converted according to the format of
-    ///     the attribute.Zero values, format converted according to the format of the attribute.Zero values, or (0,0,0,x)
-    ///     vectors, as described above.If robustBufferAccess2 is enabled, vertex input attributes are considered out of bounds
-    ///     if the offset of the attribute in the bound vertex buffer range plus the size of the attribute is greater than the
-    ///     byte size of the memory range bound to the vertex buffer binding.If a vertex input attribute is out of bounds, the
-    ///     raw data extracted are zero values, and missing G, B, or A components are filled with (0,0,1).If robustBufferAccess
-    ///     is not enabled, applications must not perform out of bounds accesses except under the conditions enabled by the
-    ///     pipelineRobustness feature .
+    ///     descriptor range rounded up to a multiple of robustStorageBufferAccessSizeAlignment bytes must return zero values.
+    ///     Similarly, stores to addresses between the end of the descriptor range and the end of the descriptor range rounded
+    ///     up to a multiple of robustStorageBufferAccessSizeAlignment bytes may be discarded.Non-atomic accesses to storage
+    ///     buffers that are a multiple of 32 bits may be decomposed into 32-bit accesses that are individually
+    ///     bounds-checked.If the access is to an index buffer and robustBufferAccess2 is enabled, zero values must be
+    ///     returned.If the access is to a uniform texel buffer or storage texel buffer and robustBufferAccess2 is enabled,
+    ///     zero values must be returned, and then Conversion to RGBA is applied based on the buffer view&#8217;s format.Values
+    ///     from anywhere within the memory range(s) bound to the buffer (possibly including bytes of memory past the end of
+    ///     the buffer, up to the end of the bound range).Zero values, or (0,0,0,x) vectors for vector reads where x is a valid
+    ///     value represented in the type of the vector components and maybe any of:0, 1, or the maximum representable positive
+    ///     integer value, for signed or unsigned integer components0.0 or 1.0, for floating-point componentsOut-of-bounds
+    ///     writes may modify values within the memory range(s) bound to the buffer, but must not modify any other memory.If
+    ///     robustBufferAccess2 is enabled, out of bounds writes must not modify any memory.Out-of-bounds atomics may modify
+    ///     values within the memory range(s) bound to the buffer, but must not modify any other memory, and return an
+    ///     undefined value.If robustBufferAccess2 is enabled, out of bounds atomics must not modify any memory, and return an
+    ///     undefined value.If robustBufferAccess2 is disabled, vertex input attributes are considered out of bounds if the
+    ///     offset of the attribute in the bound vertex buffer range plus the size of the attribute is greater than
+    ///     either:vertexBufferRangeSize, if bindingStride == 0; or(vertexBufferRangeSize - (vertexBufferRangeSize %
+    ///     bindingStride))where vertexBufferRangeSize is the byte size of the memory range bound to the vertex buffer binding
+    ///     and bindingStride is the byte stride of the corresponding vertex input binding. Further, if any vertex input
+    ///     attribute using a specific vertex input binding is out of bounds, then all vertex input attributes using that
+    ///     vertex input binding for that vertex shader invocation are considered out of bounds.If a vertex input attribute is
+    ///     out of bounds, it will be assigned one of the following values:Values from anywhere within the memory range(s)
+    ///     bound to the buffer, converted according to the format of the attribute.Zero values, format converted according to
+    ///     the format of the attribute.Zero values, or (0,0,0,x) vectors, as described above.If robustBufferAccess2 is
+    ///     enabled, vertex input attributes are considered out of bounds if the offset of the attribute in the bound vertex
+    ///     buffer range plus the size of the attribute is greater than the byte size of the memory range bound to the vertex
+    ///     buffer binding.If a vertex input attribute is out of bounds, the raw data extracted are zero values, and missing G,
+    ///     B, or A components are filled with (0,0,1).If robustBufferAccess is not enabled, applications must not perform out
+    ///     of bounds accesses except under the conditions enabled by the pipelineRobustness feature .
     /// </summary>
     public VkBool32 robustBufferAccess;
 
