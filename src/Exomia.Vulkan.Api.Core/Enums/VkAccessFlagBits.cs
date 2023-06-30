@@ -57,7 +57,7 @@ public enum VkAccessFlagBits
     ///     VK_ACCESS_INPUT_ATTACHMENT_READ_BIT specifies read access to an
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">input attachment</a>
     ///     within a render pass during subpass shading or fragment shading. Such access occurs in the
-    ///     VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI or VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT pipeline stage.
+    ///     VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI or VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT pipeline stage.
     /// </summary>
     VK_ACCESS_INPUT_ATTACHMENT_READ_BIT = 0x10,
 
@@ -141,22 +141,27 @@ public enum VkAccessFlagBits
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">color attachment</a>
     ///     , such as via
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blending">blending</a>
-    ///     ,
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-logicop">
-    ///         logic
-    ///         operations
-    ///     </a>
-    ///     , or certain
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         load operations
-    ///     </a>
-    ///     . It does not include
+    ///     (other than
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-blend-advanced">
     ///         advanced
     ///         blend operations
     ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage.
+    ///     ),
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#framebuffer-logicop">
+    ///         logic
+    ///         operations
+    ///     </a>
+    ///     or certain
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
+    ///         subpass
+    ///         load operations
+    ///     </a>
+    ///     in the VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage or via
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader-tileimage-reads">
+    ///         fragment
+    ///         shader tile image reads
+    ///     </a>
+    ///     in the VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT pipeline stage.
     /// </summary>
     VK_ACCESS_COLOR_ATTACHMENT_READ_BIT = 0x80,
 

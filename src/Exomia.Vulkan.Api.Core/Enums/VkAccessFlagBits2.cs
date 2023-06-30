@@ -60,7 +60,7 @@ public enum VkAccessFlagBits2 : ulong
     ///     VK_ACCESS_2_INPUT_ATTACHMENT_READ_BIT specifies read access to an
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">input attachment</a>
     ///     within a render pass during subpass shading or fragment shading. Such access occurs in the
-    ///     VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI or VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT pipeline stage.
+    ///     VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI or VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT pipeline stage.
     /// </summary>
     VK_ACCESS_2_INPUT_ATTACHMENT_READ_BIT = 0x10,
 
@@ -91,18 +91,17 @@ public enum VkAccessFlagBits2 : ulong
     ///         logic
     ///         operations
     ///     </a>
-    ///     , or via certain
+    ///     or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
     ///     </a>
-    ///     or
+    ///     in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage or via
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader-tileimage-reads">
     ///         fragment
     ///         shader tile image reads
     ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline
-    ///     stage.
+    ///     in the VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT pipeline stage.
     /// </summary>
     VK_ACCESS_2_COLOR_ATTACHMENT_READ_BIT = 0x80,
 
@@ -517,7 +516,7 @@ public enum VkAccessFlagBits2 : ulong
     ///     VK_ACCESS_2_INPUT_ATTACHMENT_READ_BIT specifies read access to an
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">input attachment</a>
     ///     within a render pass during subpass shading or fragment shading. Such access occurs in the
-    ///     VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI or VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT pipeline stage.
+    ///     VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI or VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT pipeline stage.
     /// </summary>
     VK_ACCESS_2_INPUT_ATTACHMENT_READ_BIT_KHR = VK_ACCESS_2_INPUT_ATTACHMENT_READ_BIT,
 
@@ -548,18 +547,17 @@ public enum VkAccessFlagBits2 : ulong
     ///         logic
     ///         operations
     ///     </a>
-    ///     , or via certain
+    ///     or certain
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
     ///         subpass
     ///         load operations
     ///     </a>
-    ///     or
+    ///     in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage or via
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader-tileimage-reads">
     ///         fragment
     ///         shader tile image reads
     ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_COLOR_ATTACHMENT_OUTPUT_BIT pipeline
-    ///     stage.
+    ///     in the VK_PIPELINE_STAGE_2_FRAGMENT_SHADER_BIT pipeline stage.
     /// </summary>
     VK_ACCESS_2_COLOR_ATTACHMENT_READ_BIT_KHR = VK_ACCESS_2_COLOR_ATTACHMENT_READ_BIT,
 

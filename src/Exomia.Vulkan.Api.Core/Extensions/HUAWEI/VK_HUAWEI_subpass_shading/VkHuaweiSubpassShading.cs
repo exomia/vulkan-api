@@ -27,7 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static unsafe class VkHuaweiSubpassShading
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION = 2;
+    public const uint VK_HUAWEI_SUBPASS_SHADING_SPEC_VERSION = 3;
 
     /// <summary> The extension name. </summary>
     public const string VK_HUAWEI_SUBPASS_SHADING_EXTENSION_NAME = "VK_HUAWEI_subpass_shading";
