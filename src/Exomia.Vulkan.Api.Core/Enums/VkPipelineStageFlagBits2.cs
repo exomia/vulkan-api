@@ -153,6 +153,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_BIT_EXT<br />
     ///     VK_PIPELINE_STAGE_2_SHADING_RATE_IMAGE_BIT_NV<br />
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI<br />
     ///     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI<br />
     ///     VK_PIPELINE_STAGE_2_CLUSTER_CULLING_SHADER_BIT_HUAWEI<br />
     /// </summary>
@@ -317,8 +318,8 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT specifies the mesh shader stage.</summary>
     VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT = 0x100000,
 
-    /// <summary>VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI specifies the subpass shading shader stage.</summary>
-    VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI = 0x8000000000,
+    /// <summary>VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI specifies the subpass shading shader stage.</summary>
+    VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI = 0x8000000000,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI specifies the stage of the pipeline where the invocation mask
@@ -504,6 +505,7 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_TRANSFORM_FEEDBACK_BIT_EXT<br />
     ///     VK_PIPELINE_STAGE_2_SHADING_RATE_IMAGE_BIT_NV<br />
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_DENSITY_PROCESS_BIT_EXT<br />
+    ///     VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI<br />
     ///     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI<br />
     ///     VK_PIPELINE_STAGE_2_CLUSTER_CULLING_SHADER_BIT_HUAWEI<br />
     /// </summary>
@@ -612,5 +614,8 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_NV = VK_PIPELINE_STAGE_2_TASK_SHADER_BIT_EXT,
 
     /// <summary>VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT specifies the mesh shader stage.</summary>
-    VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV = VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT
+    VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_NV = VK_PIPELINE_STAGE_2_MESH_SHADER_BIT_EXT,
+
+    /// <summary>VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI specifies the subpass shading shader stage.</summary>
+    VK_PIPELINE_STAGE_2_SUBPASS_SHADING_BIT_HUAWEI = VK_PIPELINE_STAGE_2_SUBPASS_SHADER_BIT_HUAWEI
 }

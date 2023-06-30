@@ -30,18 +30,18 @@ public enum VkShaderCreateFlagBitsEXT
     VK_SHADER_CREATE_LINK_STAGE_BIT_EXT = 0x1,
 
     /// <summary>
-    ///     VK_SHADER_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT_EXT specifies that the
+    ///     VK_SHADER_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT_EXT specifies     that the
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-builtin-variables-sgs">
     ///         <code>SubgroupSize</code>
     ///     </a>
-    ///     mayvary in a compute shader.
+    ///     may    vary in a task, mesh, or     compute shader.
     /// </summary>
     VK_SHADER_CREATE_ALLOW_VARYING_SUBGROUP_SIZE_BIT_EXT = 0x2,
 
     /// <summary>
-    ///     VK_SHADER_CREATE_REQUIRE_FULL_SUBGROUPS_BIT_EXT specifies that the subgroup sizes must be launched with all
-    ///     invocations active in a compute shader.
+    ///     VK_SHADER_CREATE_REQUIRE_FULL_SUBGROUPS_BIT_EXT specifies that the     subgroup sizes must be launched with
+    ///     all invocations active in a task, mesh, or     compute shader.
     /// </summary>
     VK_SHADER_CREATE_REQUIRE_FULL_SUBGROUPS_BIT_EXT = 0x4,
 
