@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAttachmentStoreOp - Specify how contents of an attachment are treated at the end of a subpass -
+///     VkAttachmentStoreOp - Specify how contents of an attachment are stored to memory at the end of a subpass -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentStoreOp.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentStoreOp.html</a>
 /// </summary>
 public enum VkAttachmentStoreOp
@@ -37,29 +37,29 @@ public enum VkAttachmentStoreOp
 
     /// <summary>
     ///     VK_ATTACHMENT_STORE_OP_NONE specifies the contents within the render area are not accessed by the store
-    ///     operation. However, if the attachment was written to during the render pass, the contents of the attachment will be
-    ///     undefined inside the render area.
+    ///     operation as long as no values are written to the attachment during the render pass. If values are written during
+    ///     the render pass, this behaves identically to VK_ATTACHMENT_STORE_OP_DONT_CARE and with matching access semantics.
     /// </summary>
     VK_ATTACHMENT_STORE_OP_NONE = 1000301000,
 
     /// <summary>
     ///     VK_ATTACHMENT_STORE_OP_NONE specifies the contents within the render area are not accessed by the store
-    ///     operation. However, if the attachment was written to during the render pass, the contents of the attachment will be
-    ///     undefined inside the render area.
+    ///     operation as long as no values are written to the attachment during the render pass. If values are written during
+    ///     the render pass, this behaves identically to VK_ATTACHMENT_STORE_OP_DONT_CARE and with matching access semantics.
     /// </summary>
     VK_ATTACHMENT_STORE_OP_NONE_KHR = VK_ATTACHMENT_STORE_OP_NONE,
 
     /// <summary>
     ///     VK_ATTACHMENT_STORE_OP_NONE specifies the contents within the render area are not accessed by the store
-    ///     operation. However, if the attachment was written to during the render pass, the contents of the attachment will be
-    ///     undefined inside the render area.
+    ///     operation as long as no values are written to the attachment during the render pass. If values are written during
+    ///     the render pass, this behaves identically to VK_ATTACHMENT_STORE_OP_DONT_CARE and with matching access semantics.
     /// </summary>
     VK_ATTACHMENT_STORE_OP_NONE_QCOM = VK_ATTACHMENT_STORE_OP_NONE,
 
     /// <summary>
     ///     VK_ATTACHMENT_STORE_OP_NONE specifies the contents within the render area are not accessed by the store
-    ///     operation. However, if the attachment was written to during the render pass, the contents of the attachment will be
-    ///     undefined inside the render area.
+    ///     operation as long as no values are written to the attachment during the render pass. If values are written during
+    ///     the render pass, this behaves identically to VK_ATTACHMENT_STORE_OP_DONT_CARE and with matching access semantics.
     /// </summary>
     VK_ATTACHMENT_STORE_OP_NONE_EXT = VK_ATTACHMENT_STORE_OP_NONE
 }

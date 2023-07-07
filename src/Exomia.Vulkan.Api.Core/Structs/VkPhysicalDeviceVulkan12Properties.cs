@@ -38,7 +38,7 @@ public unsafe struct VkPhysicalDeviceVulkan12Properties
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
@@ -240,9 +240,9 @@ public unsafe struct VkPhysicalDeviceVulkan12Properties
     public VkBool32 robustBufferAccessUpdateAfterBind;
 
     /// <summary>
-    ///     quadDivergentImplicitLod is a boolean value indicating whether implicit level of detail calculations for image
-    ///     operations have well-defined results when the image and/or sampler objects used for the instruction are not uniform
-    ///     within a quad. See Derivative Image Operations.
+    ///     quadDivergentImplicitLod is a boolean value indicating whether implicit LOD calculations for image operations
+    ///     have well-defined results when the image and/or sampler objects used for the instruction are not uniform within a
+    ///     quad. See Derivative Image Operations.
     /// </summary>
     public VkBool32 quadDivergentImplicitLod;
 

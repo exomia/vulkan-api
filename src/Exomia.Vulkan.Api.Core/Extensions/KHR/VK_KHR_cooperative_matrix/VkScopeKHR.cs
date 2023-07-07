@@ -29,5 +29,17 @@ public enum VkScopeKHR
     VK_SCOPE_SUBGROUP_KHR = 3,
 
     /// <summary>VK_SCOPE_QUEUE_FAMILY_KHR corresponds to SPIR-V QueueFamilyscope.</summary>
-    VK_SCOPE_QUEUE_FAMILY_KHR = 5
+    VK_SCOPE_QUEUE_FAMILY_KHR = 5,
+
+    /// <summary>VK_SCOPE_DEVICE_KHR corresponds to SPIR-V Device scope.</summary>
+    VK_SCOPE_DEVICE_NV = VK_SCOPE_DEVICE_KHR,
+
+    /// <summary>VK_SCOPE_WORKGROUP_KHR corresponds to SPIR-V Workgroup scope.</summary>
+    VK_SCOPE_WORKGROUP_NV = VK_SCOPE_WORKGROUP_KHR,
+
+    /// <summary>VK_SCOPE_SUBGROUP_KHR corresponds to SPIR-V Subgroup scope.</summary>
+    VK_SCOPE_SUBGROUP_NV = VK_SCOPE_SUBGROUP_KHR,
+
+    /// <summary>VK_SCOPE_QUEUE_FAMILY_KHR corresponds to SPIR-V QueueFamilyscope.</summary>
+    VK_SCOPE_QUEUE_FAMILY_NV = VK_SCOPE_QUEUE_FAMILY_KHR
 }
