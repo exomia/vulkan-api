@@ -38,7 +38,7 @@ public unsafe struct VkPhysicalDeviceShaderCorePropertiesAMD
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
@@ -84,7 +84,7 @@ public unsafe struct VkPhysicalDeviceShaderCorePropertiesAMD
     public uint wavefrontSize;
 
     /// <summary>
-    ///     sgprsPerSimd is an unsigned integer value indicating the number of physical Scalar General Purpose Registers
+    ///     sgprsPerSimd is an unsigned integer value indicating the number of physical Scalar General-Purpose Registers
     ///     (SGPRs) per SIMD.
     /// </summary>
     public uint sgprsPerSimd;
@@ -102,7 +102,7 @@ public unsafe struct VkPhysicalDeviceShaderCorePropertiesAMD
     public uint sgprAllocationGranularity;
 
     /// <summary>
-    ///     vgprsPerSimd is an unsigned integer value indicating the number of physical Vector General Purpose Registers
+    ///     vgprsPerSimd is an unsigned integer value indicating the number of physical Vector General-Purpose Registers
     ///     (VGPRs) per SIMD.
     /// </summary>
     public uint vgprsPerSimd;

@@ -14,14 +14,14 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAttachmentLoadOp - Specify how contents of an attachment are treated at the beginning of a subpass -
+///     VkAttachmentLoadOp - Specify how contents of an attachment are initialized at the beginning of a subpass -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentLoadOp.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentLoadOp.html</a>
 /// </summary>
 public enum VkAttachmentLoadOp
 {
     /// <summary>
     ///     VK_ATTACHMENT_LOAD_OP_LOAD specifies that the previous contents of the image within the render area will be
-    ///     preserved. For attachments with a depth/stencil format, this uses the access type
+    ///     preserved as the initial values. For attachments with a depth/stencil format, this uses the access type
     ///     VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_READ_BIT. For attachments with a color format, this uses the access type
     ///     VK_ACCESS_COLOR_ATTACHMENT_READ_BIT.
     /// </summary>
@@ -44,9 +44,8 @@ public enum VkAttachmentLoadOp
     VK_ATTACHMENT_LOAD_OP_DONT_CARE = 2,
 
     /// <summary>
-    ///     VK_ATTACHMENT_LOAD_OP_NONE_EXT specifies that the previous contents of the image within the render area will
-    ///     be preserved, but the contents of the attachment will be undefined inside the render pass. No access type is used
-    ///     as the image is not accessed.
+    ///     VK_ATTACHMENT_LOAD_OP_NONE_EXT specifies that the previous contents of the image will be undefined inside the
+    ///     render pass. No access type is used as the image is not accessed.
     /// </summary>
     VK_ATTACHMENT_LOAD_OP_NONE_EXT = 1000400000
 }

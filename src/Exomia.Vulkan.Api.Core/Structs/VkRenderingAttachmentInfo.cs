@@ -23,7 +23,7 @@ public unsafe struct VkRenderingAttachmentInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_RENDERING_ATTACHMENT_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
@@ -47,16 +47,10 @@ public unsafe struct VkRenderingAttachmentInfo
     /// <summary>resolveImageLayout is the layout that resolveImageView will be in during rendering.</summary>
     public VkImageLayout resolveImageLayout;
 
-    /// <summary>
-    ///     loadOp is a VkAttachmentLoadOp value specifying how the contents of imageView are treated at the start of the
-    ///     render pass instance.
-    /// </summary>
+    /// <summary>loadOp is a VkAttachmentLoadOp value defining the load operation for the attachment.</summary>
     public VkAttachmentLoadOp loadOp;
 
-    /// <summary>
-    ///     storeOp is a VkAttachmentStoreOp value specifying how the contents of imageView are treated at the end of the
-    ///     render pass instance.
-    /// </summary>
+    /// <summary>storeOp is a VkAttachmentStoreOp value defining the store operation for the attachment.</summary>
     public VkAttachmentStoreOp storeOp;
 
     /// <summary>

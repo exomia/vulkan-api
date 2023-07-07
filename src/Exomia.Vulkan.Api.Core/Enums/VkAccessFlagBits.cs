@@ -152,9 +152,9 @@ public enum VkAccessFlagBits
     ///         operations
     ///     </a>
     ///     or certain
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         load operations
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-operations">
+    ///         render
+    ///         pass load operations
     ///     </a>
     ///     in the VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage or via
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader-tileimage-reads">
@@ -169,13 +169,11 @@ public enum VkAccessFlagBits
     ///     VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT specifies write access to a
     ///     <a href="#renderpass">color, resolve, or depth/stencil resolve attachment</a>during a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass">render pass</a> or
-    ///     via certain
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         load and store operations
-    ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT pipeline
-    ///     stage.
+    ///     via certain render pass
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-operations">load</a>
+    ///     and
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-store-operations">store</a>
+    ///     operations. Such access occurs in the VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT pipeline stage.
     /// </summary>
     VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT = 0x100,
 
@@ -191,12 +189,17 @@ public enum VkAccessFlagBits
     ///         stencil operations
     ///     </a>
     ///     or certain
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         load operations
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-operations">
+    ///         render
+    ///         pass load operations
     ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT or
-    ///     VK_PIPELINE_STAGE_LATE_FRAGMENT_TESTS_BIT pipeline stages.
+    ///     in the VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT or
+    ///     VK_PIPELINE_STAGE_LATE_FRAGMENT_TESTS_BIT pipeline stages or via
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-shader-tileimage-reads">
+    ///         fragment
+    ///         shader tile image reads
+    ///     </a>
+    ///     in the VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT pipeline stage.
     /// </summary>
     VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_READ_BIT = 0x200,
 
@@ -211,12 +214,11 @@ public enum VkAccessFlagBits
     ///         depth or
     ///         stencil operations
     ///     </a>
-    ///     or certain
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         load and store operations
-    ///     </a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT or
+    ///     or certain render pass
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-operations">load</a>
+    ///     and
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-store-operations">store</a>
+    ///     operations. Such access occurs in the VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT or
     ///     VK_PIPELINE_STAGE_LATE_FRAGMENT_TESTS_BIT pipeline stages.
     /// </summary>
     VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT = 0x400,

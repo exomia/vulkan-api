@@ -35,7 +35,7 @@ public unsafe struct VkDescriptorSetVariableDescriptorCountAllocateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>

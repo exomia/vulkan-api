@@ -23,7 +23,7 @@ public unsafe struct VkSamplerCreateInfo
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
 
-    /// <summary>sType is the type of this structure.</summary>
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
@@ -51,8 +51,8 @@ public unsafe struct VkSamplerCreateInfo
     public VkSamplerAddressMode addressModeW;
 
     /// <summary>
-    ///     mipLodBias is the bias to be added to mipmap LOD (level-of-detail) calculation and bias provided by image
-    ///     sampling functions in SPIR-V, as described in the Level-of-Detail Operationsection.
+    ///     mipLodBias is the bias to be added to mipmap LOD calculation and bias provided by image sampling functions in
+    ///     SPIR-V, as described in the LOD Operation section.
     /// </summary>
     public float mipLodBias;
 

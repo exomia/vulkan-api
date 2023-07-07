@@ -30,7 +30,7 @@ public static partial class Vk
     public const uint VK_FALSE = 0;
 
     /// <summary>
-    ///     VK_LOD_CLAMP_NONE - Maximum level of detail unclamped access sentinel -
+    ///     VK_LOD_CLAMP_NONE - Maximum LOD unclamped access sentinel -
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LOD_CLAMP_NONE.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_LOD_CLAMP_NONE.html</a>
     /// </summary>
     public const float VK_LOD_CLAMP_NONE = 1000.0F;

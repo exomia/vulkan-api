@@ -67,9 +67,9 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where early fragment tests (depth
     ///     and stencil tests before fragment shading) are performed. This stage also includes
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         load operations
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-operations">
+    ///         render
+    ///         pass load operations
     ///     </a>
     ///     for framebuffer attachments with a depth/stencil format.
     /// </summary>
@@ -78,9 +78,9 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where late fragment tests (depth
     ///     and stencil tests after fragment shading) are performed. This stage also includes
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         store operations
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-store-operations">
+    ///         render
+    ///         pass store operations
     ///     </a>
     ///     for framebuffer attachments with a depth/stencil format.
     /// </summary>
@@ -95,13 +95,16 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///         logic
     ///         operations
     ///     </a>
-    ///     ,
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         load and store operations
+    ///     , render pass
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-operations">load</a>
+    ///     and
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-store-operations">store</a>
+    ///     operations for color attachments,
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-resolve-operations">
+    ///         render
+    ///         pass multisample resolve operations
     ///     </a>
-    ///     , multisample resolve operations for framebuffer attachments with a color or
-    ///     depth/stencil format, and
+    ///     , and
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdClearAttachments.html">vkCmdClearAttachments</a>
     ///     .
     /// </summary>
@@ -403,9 +406,9 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_EARLY_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where early fragment tests (depth
     ///     and stencil tests before fragment shading) are performed. This stage also includes
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         load operations
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-operations">
+    ///         render
+    ///         pass load operations
     ///     </a>
     ///     for framebuffer attachments with a depth/stencil format.
     /// </summary>
@@ -414,9 +417,9 @@ public enum VkPipelineStageFlagBits2 : ulong
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_LATE_FRAGMENT_TESTS_BIT specifies the stage of the pipeline where late fragment tests (depth
     ///     and stencil tests after fragment shading) are performed. This stage also includes
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         store operations
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-store-operations">
+    ///         render
+    ///         pass store operations
     ///     </a>
     ///     for framebuffer attachments with a depth/stencil format.
     /// </summary>
@@ -431,13 +434,16 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///         logic
     ///         operations
     ///     </a>
-    ///     ,
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-store-ops">
-    ///         subpass
-    ///         load and store operations
+    ///     , render pass
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-load-operations">load</a>
+    ///     and
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-store-operations">store</a>
+    ///     operations for color attachments,
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#renderpass-resolve-operations">
+    ///         render
+    ///         pass multisample resolve operations
     ///     </a>
-    ///     , multisample resolve operations for framebuffer attachments with a color or
-    ///     depth/stencil format, and
+    ///     , and
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdClearAttachments.html">vkCmdClearAttachments</a>
     ///     .
     /// </summary>

@@ -125,12 +125,12 @@ public static unsafe class VkExtShaderObject
     /// <param name="commandBuffer">commandBuffer is the command buffer that the shader object will be bound to.</param>
     /// <param name="stageCount">stageCount is the length of the pStages and pShadersarrays.</param>
     /// <param name="pStages">
-    ///     pStages is an array of VkShaderStageFlagBits values specifying one stage per array index that is
-    ///     affected by the corresponding value in the pShaders array.
+    ///     pStages is a pointer to an array of VkShaderStageFlagBitsvalues specifying one stage per array
+    ///     index that is affected by the corresponding value in the pShaders array.
     /// </param>
     /// <param name="pShaders">
-    ///     pShaders is an array of VkShaderEXT handles and/or VK_NULL_HANDLE values describing the shader
-    ///     binding operations to be performed on each stage in pStages.
+    ///     pShaders is a pointer to an array of VkShaderEXT handles and/or VK_NULL_HANDLE values describing
+    ///     the shader binding operations to be performed on each stage in pStages.
     /// </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,

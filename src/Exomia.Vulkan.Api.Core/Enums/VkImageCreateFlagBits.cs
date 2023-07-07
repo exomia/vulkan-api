@@ -203,7 +203,7 @@ public enum VkImageCreateFlagBits
     ///         fragment
     ///         density map offsets
     ///     </a>
-    ///     . In a renderpass with non-zero offsets, fragment density map attachments, input
+    ///     . In a render pass with non-zero offsets, fragment density map attachments, input
     ///     attachments, color attachments, depth/stencil attachment, resolve attachments, and preserve attachments must be
     ///     created with VK_IMAGE_CREATE_FRAGMENT_DENSITY_MAP_OFFSET_BIT_QCOM.
     /// </summary>
