@@ -132,6 +132,12 @@ public enum VkImageUsageFlagBits
     /// </summary>
     VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x100,
 
+    /// <summary>
+    ///     VK_IMAGE_USAGE_HOST_TRANSFER_BIT_EXT specifies that the image canbe used with host copy commands and host
+    ///     layout transitions.
+    /// </summary>
+    VK_IMAGE_USAGE_HOST_TRANSFER_BIT_EXT = 0x400000,
+
     /// <summary>VK_IMAGE_USAGE_VIDEO_ENCODE_DST_BIT_KHR is reserved for future use.</summary>
     VK_IMAGE_USAGE_VIDEO_ENCODE_DST_BIT_KHR = 0x2000,
 

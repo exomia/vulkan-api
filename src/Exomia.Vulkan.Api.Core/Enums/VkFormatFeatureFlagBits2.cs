@@ -356,6 +356,12 @@ public enum VkFormatFeatureFlagBits2 : ulong
     VK_FORMAT_FEATURE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x40000000,
 
     /// <summary>
+    ///     VK_FORMAT_FEATURE_2_HOST_IMAGE_TRANSFER_BIT_EXT specifies that an image can be created with
+    ///     VK_IMAGE_USAGE_HOST_TRANSFER_BIT_EXT.
+    /// </summary>
+    VK_FORMAT_FEATURE_2_HOST_IMAGE_TRANSFER_BIT_EXT = 0x400000000000,
+
+    /// <summary>
     ///     VK_FORMAT_FEATURE_2_VIDEO_ENCODE_INPUT_BIT_KHR specifies that an image view with this format can be used as an
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-input-picture">
     ///         encode
