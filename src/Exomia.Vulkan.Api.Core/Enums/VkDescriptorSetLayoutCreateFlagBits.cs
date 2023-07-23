@@ -60,6 +60,18 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     VK_DESCRIPTOR_SET_LAYOUT_CREATE_EMBEDDED_IMMUTABLE_SAMPLERS_BIT_EXT = 0x20,
 
     /// <summary>
+    ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_INDIRECT_BINDABLE_BIT_NV specifies that descriptor sets using this layout allows
+    ///     them to be bound with compute pipelines that are created with VK_PIPELINE_CREATE_INDIRECT_BINDABLE_BIT_NV flag set
+    ///     to be used in
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands">
+    ///         Device-Generated
+    ///         Commands
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_INDIRECT_BINDABLE_BIT_NV = 0x80,
+
+    /// <summary>
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_EXT specifies that descriptor sets using this layout must
     ///     be allocated from a descriptor pool created with the VK_DESCRIPTOR_POOL_CREATE_HOST_ONLY_BIT_EXT bit set.
     ///     Descriptor set layouts created with this bit have no expressible limit for maximum number of descriptors per-stage.

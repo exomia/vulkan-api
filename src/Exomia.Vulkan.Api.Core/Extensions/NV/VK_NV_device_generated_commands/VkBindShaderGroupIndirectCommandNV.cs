@@ -24,12 +24,6 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct VkBindShaderGroupIndirectCommandNV
 {
-    /// <summary>
-    ///     groupIndex<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBindShaderGroupIndirectCommandNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBindShaderGroupIndirectCommandNV
-    ///     </a>
-    /// </summary>
+    /// <summary>groupIndex specifies which shader group of the current bound graphics pipeline is used.</summary>
     public uint groupIndex;
 }

@@ -48,6 +48,8 @@ public enum VkIndirectCommandsLayoutUsageFlagBitsNV
     /// <summary>
     ///     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_UNORDERED_SEQUENCES_BIT_NVspecifies that the processing of sequences can
     ///     happen at an implementation-dependent order, which is not: guaranteed to be coherent using the same input data.
+    ///     This flag is ignored when the pipelineBindPoint is VK_PIPELINE_BIND_POINT_COMPUTE as it is implied that the
+    ///     dispatch sequence is always unordered.
     /// </summary>
     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_UNORDERED_SEQUENCES_BIT_NV = 0x4
 }
