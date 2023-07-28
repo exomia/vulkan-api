@@ -25,6 +25,16 @@ public enum VkPipelineBindPoint
     /// <summary>VK_PIPELINE_BIND_POINT_COMPUTE specifies binding as a compute pipeline.</summary>
     VK_PIPELINE_BIND_POINT_COMPUTE = 1,
 
+    /// <summary>
+    ///     VK_PIPELINE_BIND_POINT_EXECUTION_GRAPH_AMDX specifies binding as an
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#executiongraphs">
+    ///         execution graph
+    ///         pipeline
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_PIPELINE_BIND_POINT_EXECUTION_GRAPH_AMDX = 1000134000,
+
     /// <summary>VK_PIPELINE_BIND_POINT_RAY_TRACING_KHR specifies binding as a ray tracing pipeline.</summary>
     VK_PIPELINE_BIND_POINT_RAY_TRACING_KHR = 1000165000,
 

@@ -40,6 +40,9 @@ public unsafe struct VkPhysicalDeviceIndexTypeUint8FeaturesEXT
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary> indexTypeUint8 indicates that VK_INDEX_TYPE_UINT8_EXT can be used with vkCmdBindIndexBuffer.</summary>
+    /// <summary>
+    ///     indexTypeUint8 indicates that     VK_INDEX_TYPE_UINT8_EXT can be used with vkCmdBindIndexBuffer2KHR and
+    ///     vkCmdBindIndexBuffer.
+    /// </summary>
     public VkBool32 indexTypeUint8;
 }

@@ -24,14 +24,14 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <list type="table">
 ///         <item>
 ///             <term>structextends</term>
-///             <description>VkImageFormatProperties2,VkSurfaceFormat2KHR,VkSubresourceLayout2EXT</description>
+///             <description>VkImageFormatProperties2,VkSurfaceFormat2KHR,VkSubresourceLayout2KHR</description>
 ///         </item>
 ///         <item>
 ///             <term>returnedonly</term><description>true</description>
 ///         </item>
 ///     </list>
 /// </remarks>
-[VkStructExtends("VkImageFormatProperties2,VkSurfaceFormat2KHR,VkSubresourceLayout2EXT")]
+[VkStructExtends("VkImageFormatProperties2,VkSurfaceFormat2KHR,VkSubresourceLayout2KHR")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkImageCompressionPropertiesEXT
 {

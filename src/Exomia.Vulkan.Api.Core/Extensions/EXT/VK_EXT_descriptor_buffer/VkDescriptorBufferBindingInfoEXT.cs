@@ -26,39 +26,18 @@ public unsafe struct VkDescriptorBufferBindingInfoEXT
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_DESCRIPTOR_BUFFER_BINDING_INFO_EXT;
 
-    /// <summary>
-    ///     sType<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBufferBindingInfoEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBufferBindingInfoEXT
-    ///     </a>
-    /// </summary>
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
-    /// <summary>
-    ///     pNext<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBufferBindingInfoEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBufferBindingInfoEXT
-    ///     </a>
-    /// </summary>
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     address<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBufferBindingInfoEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBufferBindingInfoEXT
-    ///     </a>
-    /// </summary>
+    /// <summary>address is a VkDeviceAddress specifying the device address defining the descriptor buffer to be bound.</summary>
     public VkDeviceAddress address;
 
     /// <summary>
-    ///     usage<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBufferBindingInfoEXT">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDescriptorBufferBindingInfoEXT
-    ///     </a>
+    ///     usage is a bitmask of VkBufferUsageFlagBits specifying the VkBufferCreateInfo::usage for the buffer from which
+    ///     address was queried.
     /// </summary>
     public VkBufferUsageFlags usage;
 }

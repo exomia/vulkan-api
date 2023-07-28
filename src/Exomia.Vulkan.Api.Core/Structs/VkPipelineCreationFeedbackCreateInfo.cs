@@ -24,11 +24,11 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <list type="table">
 ///         <item>
 ///             <term>structextends</term>
-///             <description>VkGraphicsPipelineCreateInfo,VkComputePipelineCreateInfo,VkRayTracingPipelineCreateInfoNV,VkRayTracingPipelineCreateInfoKHR</description>
+///             <description>VkGraphicsPipelineCreateInfo,VkComputePipelineCreateInfo,VkRayTracingPipelineCreateInfoNV,VkRayTracingPipelineCreateInfoKHR,VkExecutionGraphPipelineCreateInfoAMDX</description>
 ///         </item>
 ///     </list>
 /// </remarks>
-[VkStructExtends("VkGraphicsPipelineCreateInfo,VkComputePipelineCreateInfo,VkRayTracingPipelineCreateInfoNV,VkRayTracingPipelineCreateInfoKHR")]
+[VkStructExtends("VkGraphicsPipelineCreateInfo,VkComputePipelineCreateInfo,VkRayTracingPipelineCreateInfoNV,VkRayTracingPipelineCreateInfoKHR,VkExecutionGraphPipelineCreateInfoAMDX")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkPipelineCreationFeedbackCreateInfo
 {
