@@ -14,14 +14,14 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkImageSubresource2EXT - Structure specifying an image subresource -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSubresource2EXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSubresource2EXT.html</a>
+///     VkImageSubresource2KHR - Structure specifying an image subresource -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSubresource2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSubresource2KHR.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkImageSubresource2EXT
+public unsafe struct VkImageSubresource2KHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_SUBRESOURCE_2_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_IMAGE_SUBRESOURCE_2_KHR;
 
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;

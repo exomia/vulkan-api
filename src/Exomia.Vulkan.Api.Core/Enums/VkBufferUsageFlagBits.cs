@@ -64,7 +64,10 @@ public enum VkBufferUsageFlagBits
     VK_BUFFER_USAGE_STORAGE_BUFFER_BIT = 0x20,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_INDEX_BUFFER_BIT specifies that the buffer is suitable for passing as the buffer parameter to
+    ///     VK_BUFFER_USAGE_INDEX_BUFFER_BIT specifies that the buffer is     suitable for passing as the buffer parameter
+    ///     to
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindIndexBuffer2KHR.html">vkCmdBindIndexBuffer2KHR</a>
+    ///     and
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindIndexBuffer.html">vkCmdBindIndexBuffer</a>
     ///     .
     /// </summary>
@@ -153,6 +156,16 @@ public enum VkBufferUsageFlagBits
     ///     .
     /// </summary>
     VK_BUFFER_USAGE_CONDITIONAL_RENDERING_BIT_EXT = 0x200,
+
+    /// <summary>
+    ///     VK_BUFFER_USAGE_EXECUTION_GRAPH_SCRATCH_BIT_AMDX specifies that the buffer can be used for as scratch memory for
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#executiongraphs">
+    ///         execution graph
+    ///         dispatch
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_BUFFER_USAGE_EXECUTION_GRAPH_SCRATCH_BIT_AMDX = 0x2000000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_BIT_KHRspecifies that the buffer is suitable for use

@@ -28,10 +28,12 @@ public enum VkAccessFlagBits
     VK_ACCESS_INDIRECT_COMMAND_READ_BIT = 0x1,
 
     /// <summary>
-    ///     VK_ACCESS_INDEX_READ_BIT specifies read access to an index buffer as part of an indexed drawing command, bound
-    ///     by
+    ///     VK_ACCESS_INDEX_READ_BIT specifies read access to an index buffer     as part of an indexed drawing command,
+    ///     bound by
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindIndexBuffer2KHR.html">vkCmdBindIndexBuffer2KHR</a>
+    ///     and
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindIndexBuffer.html">vkCmdBindIndexBuffer</a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_VERTEX_INPUT_BITpipeline stage.
+    ///     .     Such access occurs in the VK_PIPELINE_STAGE_VERTEX_INPUT_BIT    pipeline stage.
     /// </summary>
     VK_ACCESS_INDEX_READ_BIT = 0x2,
 

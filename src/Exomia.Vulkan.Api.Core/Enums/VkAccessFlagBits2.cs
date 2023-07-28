@@ -31,10 +31,12 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_INDIRECT_COMMAND_READ_BIT = 0x1,
 
     /// <summary>
-    ///     VK_ACCESS_2_INDEX_READ_BIT specifies read access to an index buffer as part of an indexed drawing command,
+    ///     VK_ACCESS_2_INDEX_READ_BIT specifies read access to an index     buffer as part of an indexed drawing command,
     ///     bound by
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindIndexBuffer2KHR.html">vkCmdBindIndexBuffer2KHR</a>
+    ///     and
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindIndexBuffer.html">vkCmdBindIndexBuffer</a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_INDEX_INPUT_BITpipeline stage.
+    ///     .     Such access occurs in the VK_PIPELINE_STAGE_2_INDEX_INPUT_BIT    pipeline stage.
     /// </summary>
     VK_ACCESS_2_INDEX_READ_BIT = 0x2,
 
@@ -496,10 +498,12 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_INDIRECT_COMMAND_READ_BIT_KHR = VK_ACCESS_2_INDIRECT_COMMAND_READ_BIT,
 
     /// <summary>
-    ///     VK_ACCESS_2_INDEX_READ_BIT specifies read access to an index buffer as part of an indexed drawing command,
+    ///     VK_ACCESS_2_INDEX_READ_BIT specifies read access to an index     buffer as part of an indexed drawing command,
     ///     bound by
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindIndexBuffer2KHR.html">vkCmdBindIndexBuffer2KHR</a>
+    ///     and
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindIndexBuffer.html">vkCmdBindIndexBuffer</a>
-    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_INDEX_INPUT_BITpipeline stage.
+    ///     .     Such access occurs in the VK_PIPELINE_STAGE_2_INDEX_INPUT_BIT    pipeline stage.
     /// </summary>
     VK_ACCESS_2_INDEX_READ_BIT_KHR = VK_ACCESS_2_INDEX_READ_BIT,
 

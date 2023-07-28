@@ -14,8 +14,8 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkSubresourceLayout2EXT - Structure specifying subresource layout -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout2EXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout2EXT.html</a>
+///     VkSubresourceLayout2KHR - Structure specifying subresource layout -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout2KHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout2KHR.html</a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
@@ -25,10 +25,10 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </list>
 /// </remarks>
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkSubresourceLayout2EXT
+public unsafe struct VkSubresourceLayout2KHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SUBRESOURCE_LAYOUT_2_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SUBRESOURCE_LAYOUT_2_KHR;
 
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;

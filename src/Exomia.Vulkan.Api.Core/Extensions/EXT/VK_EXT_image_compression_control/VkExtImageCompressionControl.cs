@@ -50,25 +50,19 @@ public static unsafe class VkExtImageCompressionControl
     public const string VK_EXT_IMAGE_COMPRESSION_CONTROL_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u455f\u5458\u495f\u414d\u4547\u435f\u4d4f\u5250\u5345\u4953\u4e4f\u435f\u4e4f\u5254\u4c4f\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
+    /// vkGetImageSubresourceLayout2EXT alias for vkGetImageSubresourceLayout2KHR
     /// <summary>
-    ///     vkGetImageSubresourceLayout2EXT - Retrieve information about an image subresource -
+    ///     vkGetImageSubresourceLayout2KHR - Retrieve information about an image subresource -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageSubresourceLayout2EXT.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageSubresourceLayout2EXT.html
     ///     </a>
     /// </summary>
-    /// <param name="device">device is the logical device that owns the image.</param>
-    /// <param name="image">image is the image whose layout is being queried.</param>
-    /// <param name="pSubresource">
-    ///     pSubresource is a pointer to a VkImageSubresource2EXTstructure selecting a specific image
-    ///     for the image subresource.
-    /// </param>
-    /// <param name="pLayout">pLayout is a pointer to a VkSubresourceLayout2EXT structure in which the layout is returned.</param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkImage /*image*/,
-        VkImageSubresource2EXT* /*pSubresource*/,
-        VkSubresourceLayout2EXT* /*pLayout*/,
+        VkImageSubresource2KHR* /*pSubresource*/,
+        VkSubresourceLayout2KHR* /*pLayout*/,
         void> vkGetImageSubresourceLayout2EXT = null;
 
     /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
@@ -83,9 +77,9 @@ public static unsafe class VkExtImageCompressionControl
     /// </remarks>
     public static void Load(VkDevice device)
     {
-        fixed (delegate*<VkDevice, VkImage, VkImageSubresource2EXT*, VkSubresourceLayout2EXT*, void>* pvkGetImageSubresourceLayout2EXT = &vkGetImageSubresourceLayout2EXT)
+        fixed (delegate*<VkDevice, VkImage, VkImageSubresource2KHR*, VkSubresourceLayout2KHR*, void>* pvkGetImageSubresourceLayout2EXT = &vkGetImageSubresourceLayout2EXT)
         {
-            *pvkGetImageSubresourceLayout2EXT = (delegate*<VkDevice, VkImage, VkImageSubresource2EXT*, VkSubresourceLayout2EXT*, void>)GetVkFunction(
+            *pvkGetImageSubresourceLayout2EXT = (delegate*<VkDevice, VkImage, VkImageSubresource2KHR*, VkSubresourceLayout2KHR*, void>)GetVkFunction(
                 device, "\u6b76\u6547\u4974\u616d\u6567\u7553\u7262\u7365\u756f\u6372\u4c65\u7961\u756f\u3274\u5845\u0054");
         }
     }

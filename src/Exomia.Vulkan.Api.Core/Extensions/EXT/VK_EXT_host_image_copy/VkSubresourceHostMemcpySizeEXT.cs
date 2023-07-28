@@ -21,14 +21,14 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkSubresourceLayout2EXT</description>
+///             <term>structextends</term><description>VkSubresourceLayout2KHR</description>
 ///         </item>
 ///         <item>
 ///             <term>returnedonly</term><description>true</description>
 ///         </item>
 ///     </list>
 /// </remarks>
-[VkStructExtends("VkSubresourceLayout2EXT")]
+[VkStructExtends("VkSubresourceLayout2KHR")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkSubresourceHostMemcpySizeEXT
 {

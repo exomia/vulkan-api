@@ -1815,6 +1815,19 @@ public enum VkFormat
     VK_FORMAT_R16G16_S10_5_NV = 1000464000,
 
     /// <summary>
+    ///     VK_FORMAT_A1B5G5R5_UNORM_PACK16_KHR specifies a four-component, 16-bit packed unsigned normalized format that
+    ///     has a 1-bit A component in bit 15, a 5-bit B component in bits 10..14, a 5-bit G component in bits 5..9, and a
+    ///     5-bit R component in bits 0..4.
+    /// </summary>
+    VK_FORMAT_A1B5G5R5_UNORM_PACK16_KHR = 1000470000,
+
+    /// <summary>
+    ///     VK_FORMAT_A8_UNORM_KHR specifies a one-component, 8-bit unsigned normalized format that has a single 8-bit A
+    ///     component.
+    /// </summary>
+    VK_FORMAT_A8_UNORM_KHR = 1000470001,
+
+    /// <summary>
     ///     VK_FORMAT_ASTC_4x4_SFLOAT_BLOCK specifies a four-component, ASTC compressed format where each 128-bit
     ///     compressed texel block encodes a 4×4 rectangle of signed floating-point RGBA texel data.
     /// </summary>
