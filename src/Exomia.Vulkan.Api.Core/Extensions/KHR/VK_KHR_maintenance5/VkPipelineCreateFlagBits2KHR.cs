@@ -39,15 +39,6 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_DERIVATIVE_BIT_KHR = 0x4,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_RESERVED_BIT_28_NV<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits2KHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits2KHR
-    ///     </a>
-    /// </summary>
-    VK_PIPELINE_CREATE_2_RESERVED_BIT_28_NV = 0x10000000,
-
-    /// <summary>
     ///     VK_PIPELINE_CREATE_2_VIEW_INDEX_FROM_DEVICE_INDEX_BIT_KHRspecifies that any shader input variables decorated
     ///     as ViewIndexwill be assigned values as if they were decorated as DeviceIndex.
     /// </summary>
@@ -61,12 +52,12 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_DISPATCH_BASE_BIT_KHR = 0x10,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_DEFER_COMPILE_BIT_KHR specifies that a pipeline is created with all shaders in the
+    ///     VK_PIPELINE_CREATE_2_DEFER_COMPILE_BIT_NV specifies that a pipeline is created with all shaders in the
     ///     deferred state. Before using the pipeline the application must call
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCompileDeferredNV.html">vkCompileDeferredNV</a>
     ///     exactly once on each shader in the pipeline before using the pipeline.
     /// </summary>
-    VK_PIPELINE_CREATE_2_DEFER_COMPILE_BIT_KHR = 0x20,
+    VK_PIPELINE_CREATE_2_DEFER_COMPILE_BIT_NV = 0x20,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_2_CAPTURE_STATISTICS_BIT_KHR specifies that the shader compiler should capture statistics for
@@ -117,18 +108,18 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_EARLY_RETURN_ON_FAILURE_BIT_KHR = 0x200,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_LINK_TIME_OPTIMIZATION_BIT_KHR specifies that pipeline libraries being linked into this
+    ///     VK_PIPELINE_CREATE_2_LINK_TIME_OPTIMIZATION_BIT_EXT specifies that pipeline libraries being linked into this
     ///     library should have link time optimizations applied. If this bit is omitted, implementations should instead perform
     ///     linking as rapidly as possible.
     /// </summary>
-    VK_PIPELINE_CREATE_2_LINK_TIME_OPTIMIZATION_BIT_KHR = 0x400,
+    VK_PIPELINE_CREATE_2_LINK_TIME_OPTIMIZATION_BIT_EXT = 0x400,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_KHRspecifies that pipeline libraries should retain
+    ///     VK_PIPELINE_CREATE_2_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_EXTspecifies that pipeline libraries should retain
     ///     any information necessary to later perform an optimal link with
-    ///     VK_PIPELINE_CREATE_2_LINK_TIME_OPTIMIZATION_BIT_KHR.
+    ///     VK_PIPELINE_CREATE_2_LINK_TIME_OPTIMIZATION_BIT_EXT.
     /// </summary>
-    VK_PIPELINE_CREATE_2_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_KHR = 0x800000,
+    VK_PIPELINE_CREATE_2_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_EXT = 0x800000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_2_LIBRARY_BIT_KHR specifies that the pipeline     cannot be used directly, and instead
@@ -185,20 +176,20 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_BIT_KHR = 0x80000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_INDIRECT_BINDABLE_BIT_KHR specifies that the pipeline can be used in combination with
+    ///     VK_PIPELINE_CREATE_2_INDIRECT_BINDABLE_BIT_NV specifies that the pipeline can be used in combination with
     ///     <a class="bare"
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands">
     ///         https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands
     ///     </a>
     ///     .
     /// </summary>
-    VK_PIPELINE_CREATE_2_INDIRECT_BINDABLE_BIT_KHR = 0x40000,
+    VK_PIPELINE_CREATE_2_INDIRECT_BINDABLE_BIT_NV = 0x40000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_ALLOW_MOTION_BIT_KHR specifies that the pipeline is allowed to use
+    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_ALLOW_MOTION_BIT_NV specifies that the pipeline is allowed to use
     ///     OpTraceRayMotionNV.
     /// </summary>
-    VK_PIPELINE_CREATE_2_RAY_TRACING_ALLOW_MOTION_BIT_KHR = 0x100000,
+    VK_PIPELINE_CREATE_2_RAY_TRACING_ALLOW_MOTION_BIT_NV = 0x100000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_2_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that the pipeline will be
@@ -207,43 +198,49 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x200000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_KHRspecifies that the pipeline will be used
+    ///     VK_PIPELINE_CREATE_2_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXTspecifies that the pipeline will be used
     ///     with a fragment density map attachment.
     /// </summary>
-    VK_PIPELINE_CREATE_2_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_KHR = 0x400000,
+    VK_PIPELINE_CREATE_2_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 0x400000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_OPACITY_MICROMAP_BIT_KHRspecifies that the pipeline can be used with
+    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_OPACITY_MICROMAP_BIT_EXTspecifies that the pipeline can be used with
     ///     acceleration structures which reference an opacity micromap array.
     /// </summary>
-    VK_PIPELINE_CREATE_2_RAY_TRACING_OPACITY_MICROMAP_BIT_KHR = 0x1000000,
+    VK_PIPELINE_CREATE_2_RAY_TRACING_OPACITY_MICROMAP_BIT_EXT = 0x1000000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_COLOR_ATTACHMENT_FEEDBACK_LOOP_BIT_KHRspecifies that the pipeline may be used with an
+    ///     VK_PIPELINE_CREATE_2_COLOR_ATTACHMENT_FEEDBACK_LOOP_BIT_EXTspecifies that the pipeline may be used with an
     ///     attachment feedback loop including color attachments.
     /// </summary>
-    VK_PIPELINE_CREATE_2_COLOR_ATTACHMENT_FEEDBACK_LOOP_BIT_KHR = 0x2000000,
+    VK_PIPELINE_CREATE_2_COLOR_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT = 0x2000000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_DEPTH_STENCIL_ATTACHMENT_FEEDBACK_LOOP_BIT_KHRspecifies that the pipeline may be used
+    ///     VK_PIPELINE_CREATE_2_DEPTH_STENCIL_ATTACHMENT_FEEDBACK_LOOP_BIT_EXTspecifies that the pipeline may be used
     ///     with an attachment feedback loop including depth-stencil attachments.
     /// </summary>
-    VK_PIPELINE_CREATE_2_DEPTH_STENCIL_ATTACHMENT_FEEDBACK_LOOP_BIT_KHR = 0x4000000,
+    VK_PIPELINE_CREATE_2_DEPTH_STENCIL_ATTACHMENT_FEEDBACK_LOOP_BIT_EXT = 0x4000000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_NO_PROTECTED_ACCESS_BIT_KHR specifies that the pipeline must not be bound to a protected
+    ///     VK_PIPELINE_CREATE_2_NO_PROTECTED_ACCESS_BIT_EXT specifies that the pipeline must not be bound to a protected
     ///     command buffer.
     /// </summary>
-    VK_PIPELINE_CREATE_2_NO_PROTECTED_ACCESS_BIT_KHR = 0x8000000,
+    VK_PIPELINE_CREATE_2_NO_PROTECTED_ACCESS_BIT_EXT = 0x8000000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_PROTECTED_ACCESS_ONLY_BIT_KHR specifies that the pipeline must not be bound to an
+    ///     VK_PIPELINE_CREATE_2_PROTECTED_ACCESS_ONLY_BIT_EXT specifies that the pipeline must not be bound to an
     ///     unprotected command buffer.
     /// </summary>
-    VK_PIPELINE_CREATE_2_PROTECTED_ACCESS_ONLY_BIT_KHR = 0x40000000,
+    VK_PIPELINE_CREATE_2_PROTECTED_ACCESS_ONLY_BIT_EXT = 0x40000000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_DESCRIPTOR_BUFFER_BIT_KHR specifies that a pipeline will be used with
+    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_DISPLACEMENT_MICROMAP_BIT_NVspecifies that the pipeline can be used with
+    ///     aceleration structures which reference a displacement micromap array.
+    /// </summary>
+    VK_PIPELINE_CREATE_2_RAY_TRACING_DISPLACEMENT_MICROMAP_BIT_NV = 0x10000000,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_2_DESCRIPTOR_BUFFER_BIT_EXT specifies that a pipeline will be used with
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorbuffers">
     ///         descriptor
     ///         buffers
@@ -252,5 +249,5 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets">descriptor sets</a>
     ///     .
     /// </summary>
-    VK_PIPELINE_CREATE_2_DESCRIPTOR_BUFFER_BIT_KHR = 0x20000000
+    VK_PIPELINE_CREATE_2_DESCRIPTOR_BUFFER_BIT_EXT = 0x20000000
 }

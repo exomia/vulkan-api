@@ -114,7 +114,7 @@ public enum VkBufferUsageFlagBits2KHR : ulong
     VK_BUFFER_USAGE_2_EXECUTION_GRAPH_SCRATCH_BIT_AMDX = 0x2000000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_2_CONDITIONAL_RENDERING_BIT_KHR specifies that the buffer is suitable for passing as the
+    ///     VK_BUFFER_USAGE_2_CONDITIONAL_RENDERING_BIT_EXT specifies that the buffer is suitable for passing as the
     ///     buffer parameter to
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginConditionalRenderingEXT.html">
@@ -122,7 +122,7 @@ public enum VkBufferUsageFlagBits2KHR : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_2_CONDITIONAL_RENDERING_BIT_KHR = 0x200,
+    VK_BUFFER_USAGE_2_CONDITIONAL_RENDERING_BIT_EXT = 0x200,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_2_SHADER_BINDING_TABLE_BIT_KHR specifies that the buffer is suitable for use as a
@@ -135,7 +135,7 @@ public enum VkBufferUsageFlagBits2KHR : ulong
     VK_BUFFER_USAGE_2_SHADER_BINDING_TABLE_BIT_KHR = 0x400,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_BUFFER_BIT_KHR specifies that the buffer is suitable for using for binding as
+    ///     VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_BUFFER_BIT_EXT specifies that the buffer is suitable for using for binding as
     ///     a transform feedback buffer with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html">
@@ -143,17 +143,17 @@ public enum VkBufferUsageFlagBits2KHR : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_BUFFER_BIT_KHR = 0x800,
+    VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_BUFFER_BIT_EXT = 0x800,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_COUNTER_BUFFER_BIT_KHRspecifies that the buffer is suitable for using as
+    ///     VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_COUNTER_BUFFER_BIT_EXTspecifies that the buffer is suitable for using as
     ///     a counter buffer with
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html">vkCmdBeginTransformFeedbackEXT</a>
     ///     and
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndTransformFeedbackEXT.html">vkCmdEndTransformFeedbackEXT</a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_COUNTER_BUFFER_BIT_KHR = 0x1000,
+    VK_BUFFER_USAGE_2_TRANSFORM_FEEDBACK_COUNTER_BUFFER_BIT_EXT = 0x1000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_2_VIDEO_DECODE_SRC_BIT_KHR specifies that the buffer can be used as the source video bitstream
@@ -211,35 +211,35 @@ public enum VkBufferUsageFlagBits2KHR : ulong
     VK_BUFFER_USAGE_2_ACCELERATION_STRUCTURE_STORAGE_BIT_KHR = 0x100000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_2_SAMPLER_DESCRIPTOR_BUFFER_BIT_KHR specifies that the buffer is suitable to contain sampler
+    ///     VK_BUFFER_USAGE_2_SAMPLER_DESCRIPTOR_BUFFER_BIT_EXT specifies that the buffer is suitable to contain sampler
     ///     and combined image sampler descriptors when bound as a descriptor buffer. Buffers containing combined image sampler
-    ///     descriptors must also specify VK_BUFFER_USAGE_2_RESOURCE_DESCRIPTOR_BUFFER_BIT_KHR.
+    ///     descriptors must also specify VK_BUFFER_USAGE_2_RESOURCE_DESCRIPTOR_BUFFER_BIT_EXT.
     /// </summary>
-    VK_BUFFER_USAGE_2_SAMPLER_DESCRIPTOR_BUFFER_BIT_KHR = 0x200000,
+    VK_BUFFER_USAGE_2_SAMPLER_DESCRIPTOR_BUFFER_BIT_EXT = 0x200000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_2_RESOURCE_DESCRIPTOR_BUFFER_BIT_KHR specifies that the buffer is suitable to contain resource
+    ///     VK_BUFFER_USAGE_2_RESOURCE_DESCRIPTOR_BUFFER_BIT_EXT specifies that the buffer is suitable to contain resource
     ///     descriptors when bound as a descriptor buffer.
     /// </summary>
-    VK_BUFFER_USAGE_2_RESOURCE_DESCRIPTOR_BUFFER_BIT_KHR = 0x400000,
+    VK_BUFFER_USAGE_2_RESOURCE_DESCRIPTOR_BUFFER_BIT_EXT = 0x400000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_2_PUSH_DESCRIPTORS_DESCRIPTOR_BUFFER_BIT_KHRspecifies that the buffer, when bound, can be used
+    ///     VK_BUFFER_USAGE_2_PUSH_DESCRIPTORS_DESCRIPTOR_BUFFER_BIT_EXTspecifies that the buffer, when bound, can be used
     ///     by the implementation to support push descriptors when using descriptor buffers.
     /// </summary>
-    VK_BUFFER_USAGE_2_PUSH_DESCRIPTORS_DESCRIPTOR_BUFFER_BIT_KHR = 0x4000000,
+    VK_BUFFER_USAGE_2_PUSH_DESCRIPTORS_DESCRIPTOR_BUFFER_BIT_EXT = 0x4000000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_2_MICROMAP_BUILD_INPUT_READ_ONLY_BIT_KHR<br />
+    ///     VK_BUFFER_USAGE_2_MICROMAP_BUILD_INPUT_READ_ONLY_BIT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits2KHR">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits2KHR</a>
     /// </summary>
-    VK_BUFFER_USAGE_2_MICROMAP_BUILD_INPUT_READ_ONLY_BIT_KHR = 0x800000,
+    VK_BUFFER_USAGE_2_MICROMAP_BUILD_INPUT_READ_ONLY_BIT_EXT = 0x800000,
 
     /// <summary>
-    ///     VK_BUFFER_USAGE_2_MICROMAP_STORAGE_BIT_KHR<br />
+    ///     VK_BUFFER_USAGE_2_MICROMAP_STORAGE_BIT_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits2KHR">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits2KHR</a>
     /// </summary>
-    VK_BUFFER_USAGE_2_MICROMAP_STORAGE_BIT_KHR = 0x1000000,
+    VK_BUFFER_USAGE_2_MICROMAP_STORAGE_BIT_EXT = 0x1000000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_2_SHADER_BINDING_TABLE_BIT_KHR specifies that the buffer is suitable for use as a
@@ -249,5 +249,5 @@ public enum VkBufferUsageFlagBits2KHR : ulong
     ///     </a>
     ///     .
     /// </summary>
-    VK_BUFFER_USAGE_2_RAY_TRACING_BIT_KHR = VK_BUFFER_USAGE_2_SHADER_BINDING_TABLE_BIT_KHR
+    VK_BUFFER_USAGE_2_RAY_TRACING_BIT_NV = VK_BUFFER_USAGE_2_SHADER_BINDING_TABLE_BIT_KHR
 }

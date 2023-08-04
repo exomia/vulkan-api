@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VkPhysicalDeviceDeviceGeneratedCommandsComputeFeaturesNV - Structure describing the device-generated compute
-///     features that can: be supported by an implementation -
+///     features that can be supported by an implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsComputeFeaturesNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsComputeFeaturesNV.html
