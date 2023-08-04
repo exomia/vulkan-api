@@ -50,6 +50,22 @@ public static unsafe class VkNvDeviceGeneratedCommandsCompute
     public const string VK_NV_DEVICE_GENERATED_COMMANDS_COMPUTE_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u4e5f\u5f56\u4544\u4956\u4543\u475f\u4e45\u5245\u5441\u4445\u435f\u4d4f\u414d\u444e\u5f53\u4f43\u504d\u5455\u5f45\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
+    /// <summary>
+    ///     vkGetPipelineIndirectMemoryRequirementsNV - Get the memory requirements for the compute indirect pipeline -
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineIndirectMemoryRequirementsNV.html">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineIndirectMemoryRequirementsNV.html
+    ///     </a>
+    /// </summary>
+    /// <param name="device">device is the logical device that owns the buffer.</param>
+    /// <param name="pCreateInfo">
+    ///     pCreateInfo is a VkComputePipelineCreateInfo structure specifying the creation parameters of
+    ///     the compute pipeline whose memory requirements are being queried.
+    /// </param>
+    /// <param name="pMemoryRequirements">
+    ///     pMemoryRequirements is a pointer to a VkMemoryRequirements2structure in which the
+    ///     requested pipeline&#8217;s memory requirements are returned.
+    /// </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkComputePipelineCreateInfo* /*pCreateInfo*/,
@@ -57,7 +73,7 @@ public static unsafe class VkNvDeviceGeneratedCommandsCompute
         void> vkGetPipelineIndirectMemoryRequirementsNV = null;
 
     /// <summary>
-    ///     vkCmdUpdatePipelineIndirectBufferNV - update the indirect compute pipeline metadata -
+    ///     vkCmdUpdatePipelineIndirectBufferNV - Update the indirect compute pipeline's metadata -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdUpdatePipelineIndirectBufferNV.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdUpdatePipelineIndirectBufferNV.html
@@ -76,7 +92,7 @@ public static unsafe class VkNvDeviceGeneratedCommandsCompute
         void> vkCmdUpdatePipelineIndirectBufferNV = null;
 
     /// <summary>
-    ///     vkGetPipelineIndirectDeviceAddressNV - Get pipeline -
+    ///     vkGetPipelineIndirectDeviceAddressNV - Get pipeline's 64-bit device address -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineIndirectDeviceAddressNV.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineIndirectDeviceAddressNV.html

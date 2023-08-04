@@ -14,7 +14,8 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkComputePipelineIndirectBufferInfoNV - Structure describing the device address where pipeline -
+///     VkComputePipelineIndirectBufferInfoNV - Structure describing the device address where pipeline's metadata will be
+///     saved -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkComputePipelineIndirectBufferInfoNV.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkComputePipelineIndirectBufferInfoNV.html

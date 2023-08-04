@@ -41,6 +41,6 @@ public unsafe struct VkBufferUsageFlags2CreateInfoKHR
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>usage is a bitmask of VkBufferUsageFlagBits2KHR specifying how a pipeline will be generated.</summary>
+    /// <summary>usage is a bitmask of VkBufferUsageFlagBits2KHR specifying allowed usages of the buffer.</summary>
     public VkBufferUsageFlags2KHR usage;
 }
