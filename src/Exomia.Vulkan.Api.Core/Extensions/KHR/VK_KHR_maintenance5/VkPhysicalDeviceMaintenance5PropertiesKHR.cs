@@ -59,7 +59,7 @@ public unsafe struct VkPhysicalDeviceMaintenance5PropertiesKHR
 
     /// <summary>
     ///     depthStencilSwizzleOneSupport is a boolean indicating that depth/stencil texturing operations with
-    ///     enum:VK_COMPONENT_SWIZZLE_ONE have defined behavior.
+    ///     VK_COMPONENT_SWIZZLE_ONEhave defined behavior.
     /// </summary>
     public VkBool32 depthStencilSwizzleOneSupport;
 
@@ -70,14 +70,14 @@ public unsafe struct VkPhysicalDeviceMaintenance5PropertiesKHR
     public VkBool32 polygonModePointSize;
 
     /// <summary>
-    ///     [[{anchor-prefix}fragops]]nonStrictSinglePixelWideLinesUseParallelogramis a boolean value indicating whether
-    ///     non-strict lines with a width of 1.0 are rasterized as parallelograms or using Bresenham&#8217;s algorithm.
+    ///     nonStrictSinglePixelWideLinesUseParallelogram is a boolean value indicating whether non-strict lines with a
+    ///     width of 1.0 are rasterized as parallelograms or using Bresenham&#8217;s algorithm.
     /// </summary>
     public VkBool32 nonStrictSinglePixelWideLinesUseParallelogram;
 
     /// <summary>
-    ///     [[{anchor-prefix}fragops]]nonStrictWideLinesUseParallelogram is a boolean value indicating whether non-strict
-    ///     lines with a width greater than 1.0 are rasterized as parallelograms or using Bresenham&#8217;s algorithm.
+    ///     nonStrictWideLinesUseParallelogram is a boolean value indicating whether non-strict lines with a width greater
+    ///     than 1.0 are rasterized as parallelograms or using Bresenham&#8217;s algorithm.
     /// </summary>
     public VkBool32 nonStrictWideLinesUseParallelogram;
 }

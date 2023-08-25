@@ -44,6 +44,17 @@ public enum VkSamplerReductionMode
     VK_SAMPLER_REDUCTION_MODE_MAX = 2,
 
     /// <summary>
+    ///     VK_SAMPLER_REDUCTION_MODE_WEIGHTED_AVERAGE_RANGECLAMP_QCOMspecifies values are combined as described by
+    ///     VK_SAMPLER_REDUCTION_MODE_WEIGHTED_AVERAGE, followed by a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#textures-texel-range-clamp">
+    ///         texel
+    ///         range clamp
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_SAMPLER_REDUCTION_MODE_WEIGHTED_AVERAGE_RANGECLAMP_QCOM = 1000521000,
+
+    /// <summary>
     ///     VK_SAMPLER_REDUCTION_MODE_WEIGHTED_AVERAGE specifies that texel values are combined by computing a weighted average
     ///     of values in the footprint, using weights as specified in
     ///     <a

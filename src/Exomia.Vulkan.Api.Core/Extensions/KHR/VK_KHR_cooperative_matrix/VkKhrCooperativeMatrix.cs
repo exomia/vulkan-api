@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkKhrCooperativeMatrix;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_cooperative_matrix - device extension (nr. 507) - author 'KHR' [platform '' | contact 'Kevin Petit
-///     @kevinpetit']<br />
+///     VK_KHR_cooperative_matrix - device extension (nr. 507) - author 'KHR' [platform '' | contact 'Kevin Petit @kpet']
+///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_cooperative_matrix.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_cooperative_matrix.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2")]

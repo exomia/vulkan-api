@@ -20,7 +20,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VK_KHR_shader_integer_dot_product - device extension (nr. 281) - author 'KHR' [platform '' | contact 'Kevin Petit
-///     @kevinpetit']<br />
+///     @kpet']<br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_integer_dot_product.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_integer_dot_product.html
