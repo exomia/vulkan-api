@@ -65,11 +65,6 @@ public enum VkAccessFlagBits
 
     /// <summary>
     ///     VK_ACCESS_SHADER_READ_BIT specifies read access to a
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformbuffer">
-    ///         uniform
-    ///         buffer
-    ///     </a>
-    ///     ,
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-uniformtexelbuffer">
     ///         uniform
@@ -365,8 +360,7 @@ public enum VkAccessFlagBits
     VK_ACCESS_COMMAND_PREPROCESS_READ_BIT_NV = 0x20000,
 
     /// <summary>
-    ///     VK_ACCESS_COMMAND_PREPROCESS_WRITE_BIT_NV specifies writes to the target command buffer:VkBuffer preprocess
-    ///     outputs in
+    ///     VK_ACCESS_COMMAND_PREPROCESS_WRITE_BIT_NV specifies writes to the target command buffer preprocess outputs in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html">
     ///         vkCmdPreprocessGeneratedCommandsNV

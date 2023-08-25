@@ -1,0 +1,45 @@
+#region License
+
+// Copyright (c) 2018-2023, exomia
+// All rights reserved.
+// 
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree.
+
+#endregion
+
+// ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
+// ReSharper disable once CheckNamespace
+namespace Exomia.Vulkan.Api.Core;
+
+/// <summary>
+///     VkBlitImageCubicWeightsInfoQCOM - Structure specifying image blit cubic weight info -
+///     <a
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBlitImageCubicWeightsInfoQCOM.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBlitImageCubicWeightsInfoQCOM.html
+///     </a>
+/// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>structextends</term><description>VkBlitImageInfo2</description>
+///         </item>
+///     </list>
+/// </remarks>
+[VkStructExtends("VkBlitImageInfo2")]
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct VkBlitImageCubicWeightsInfoQCOM
+{
+    /// <summary> The stype of this structure. </summary>
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_BLIT_IMAGE_CUBIC_WEIGHTS_INFO_QCOM;
+
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
+    public VkStructureType sType;
+
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
+    public void* pNext;
+
+    /// <summary>cubicWeights is a VkCubicFilterWeightsQCOM value controlling cubic filter weights for the blit.</summary>
+    public VkCubicFilterWeightsQCOM cubicWeights;
+}

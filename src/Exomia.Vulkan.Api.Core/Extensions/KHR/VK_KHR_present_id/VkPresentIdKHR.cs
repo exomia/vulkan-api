@@ -41,7 +41,7 @@ public unsafe struct VkPresentIdKHR
     public uint swapchainCount;
 
     /// <summary>
-    ///     pPresentIds is NULL or a pointer to an array of uint64_t with swapchainCount entries. If not NULL, each
+    ///     pPresentIds is NULL or a pointer to an array of uint64_twith swapchainCount entries. If not NULL, each
     ///     non-zero value in pPresentIds specifies the present id to be associated with the presentation of the swapchain with
     ///     the same index in the vkQueuePresentKHR call.
     /// </summary>

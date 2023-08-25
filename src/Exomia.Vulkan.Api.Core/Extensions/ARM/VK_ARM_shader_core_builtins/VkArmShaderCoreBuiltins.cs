@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkArmShaderCoreBuiltins;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_ARM_shader_core_builtins - device extension (nr. 498) - author 'ARM' [platform '' | contact 'Kevin Petit
-///     @kevinpetit']<br />
+///     VK_ARM_shader_core_builtins - device extension (nr. 498) - author 'ARM' [platform '' | contact 'Kevin Petit @kpet']
+///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_shader_core_builtins.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_shader_core_builtins.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2")]

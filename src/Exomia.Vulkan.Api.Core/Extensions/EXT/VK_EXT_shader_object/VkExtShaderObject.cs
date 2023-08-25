@@ -422,7 +422,7 @@ public static unsafe class VkExtShaderObject
     /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
     /// <param name="samples">samples specifies the number of sample bits in the pSampleMask.</param>
     /// <param name="pSampleMask">
-    ///     pSampleMask is a pointer to an array of VkSampleMask values, where the array size is based on
+    ///     pSampleMask is a pointer to an array of VkSampleMaskvalues, where the array size is based on
     ///     the samples parameter.
     /// </param>
     public static readonly delegate*<
