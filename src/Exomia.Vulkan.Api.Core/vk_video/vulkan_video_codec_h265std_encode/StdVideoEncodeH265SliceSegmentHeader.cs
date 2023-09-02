@@ -43,7 +43,9 @@ public unsafe struct StdVideoEncodeH265SliceSegmentHeader
 
     public sbyte slice_act_cr_qp_offset;
 
-    public VkArray3<byte> reserved1;
+    public sbyte slice_qp_delta;
+
+    public ushort reserved1;
 
     public StdVideoEncodeH265WeightTable* pWeightTable;
 }

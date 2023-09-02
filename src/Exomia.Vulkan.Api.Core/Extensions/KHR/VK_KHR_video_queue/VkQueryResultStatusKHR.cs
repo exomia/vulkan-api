@@ -29,5 +29,12 @@ public enum VkQueryResultStatusKHR
     ///     VK_QUERY_RESULT_STATUS_COMPLETE_KHR specifies that operations completed successfully and the query result is
     ///     available.
     /// </summary>
-    VK_QUERY_RESULT_STATUS_COMPLETE_KHR = 1
+    VK_QUERY_RESULT_STATUS_COMPLETE_KHR = 1,
+
+    /// <summary>
+    ///     VK_QUERY_RESULT_STATUS_INSUFFICIENT_BITSTREAM_BUFFER_RANGE_KHRindicates that a video encode operation did not
+    ///     complete successfully due to the destination video bitstream buffer range not being sufficiently large to fit the
+    ///     encoded bitstream data.
+    /// </summary>
+    VK_QUERY_RESULT_STATUS_INSUFFICIENT_BITSTREAM_BUFFER_RANGE_KHR = -1000299000
 }

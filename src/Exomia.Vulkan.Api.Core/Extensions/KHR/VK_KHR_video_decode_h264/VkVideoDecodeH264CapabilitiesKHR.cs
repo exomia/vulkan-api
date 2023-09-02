@@ -44,8 +44,9 @@ public unsafe struct VkVideoDecodeH264CapabilitiesKHR
     public void* pNext;
 
     /// <summary>
-    ///     maxLevelIdc is a StdVideoH264LevelIdc value specifying the maximum H.264 level supported by the profile, as
-    ///     defined in section A.3 of the ITU-T H.264 Specification.
+    ///     maxLevelIdc is a StdVideoH264LevelIdc value specifying the maximum H.264 level supported by the profile, where
+    ///     enum constant STD_VIDEO_H264_LEVEL_IDC_&lt;major&gt;_&lt;minor&gt; identifies H.264 level &lt;major&gt;.&lt;minor
+    ///     &gt; as defined in section A.3 of the ITU-T H.264 Specification.
     /// </summary>
     public StdVideoH264LevelIdc maxLevelIdc;
 
