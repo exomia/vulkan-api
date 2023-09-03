@@ -44,10 +44,7 @@ public unsafe struct VkPresentInfoKHR
     /// <summary>swapchainCount is the number of swapchains being presented to by this command.</summary>
     public uint swapchainCount;
 
-    /// <summary>
-    ///     pSwapchains is a pointer to an array of VkSwapchainKHRobjects with swapchainCount entries. A given swapchain
-    ///     must not appear in this list more than once.
-    /// </summary>
+    /// <summary>pSwapchains is a pointer to an array of VkSwapchainKHRobjects with swapchainCount entries.</summary>
     public VkSwapchainKHR* pSwapchains;
 
     /// <summary>

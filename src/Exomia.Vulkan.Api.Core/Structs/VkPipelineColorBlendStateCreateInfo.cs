@@ -45,14 +45,19 @@ public unsafe struct VkPipelineColorBlendStateCreateInfo
     /// <summary>logicOp selects which logical operation to apply.</summary>
     public VkLogicOp logicOp;
 
-    /// <summary>attachmentCount is the number of VkPipelineColorBlendAttachmentState elements in pAttachments.</summary>
+    /// <summary>
+    ///     attachmentCount is the number of VkPipelineColorBlendAttachmentState elements in pAttachments. It is ignored
+    ///     if the pipeline is created with VK_DYNAMIC_STATE_COLOR_BLEND_ENABLE_EXT, VK_DYNAMIC_STATE_COLOR_BLEND_EQUATION_EXT,
+    ///     and VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT dynamic states set, and either VK_DYNAMIC_STATE_COLOR_BLEND_ADVANCED_EXT
+    ///     set or advancedBlendCoherentOperationsis not enabled on the device.
+    /// </summary>
     public uint attachmentCount;
 
     /// <summary>
     ///     pAttachments is a pointer to an array of VkPipelineColorBlendAttachmentState structures defining blend state
-    ///     for each color attachment. It is ignored if the pipeline is created with VK_DYNAMIC_STATE_COLOR_BLEND_ADVANCED_EXT,
-    ///     VK_DYNAMIC_STATE_COLOR_BLEND_ENABLE_EXT, VK_DYNAMIC_STATE_COLOR_BLEND_EQUATION_EXT, and
-    ///     VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT dynamic states set.
+    ///     for each color attachment. It is ignored if the pipeline is created with VK_DYNAMIC_STATE_COLOR_BLEND_ENABLE_EXT,
+    ///     VK_DYNAMIC_STATE_COLOR_BLEND_EQUATION_EXT, and VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT dynamic states set, and either
+    ///     VK_DYNAMIC_STATE_COLOR_BLEND_ADVANCED_EXT set or advancedBlendCoherentOperationsis not enabled on the device.
     /// </summary>
     public VkPipelineColorBlendAttachmentState* pAttachments;
 

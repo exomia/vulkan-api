@@ -62,6 +62,29 @@ public enum VkDescriptorPoolCreateFlagBits
     VK_DESCRIPTOR_POOL_CREATE_HOST_ONLY_BIT_EXT = 0x4,
 
     /// <summary>
+    ///     VK_DESCRIPTOR_POOL_CREATE_ALLOW_OVERALLOCATION_SETS_BIT_NVspecifies that the implementation should allow the
+    ///     application to allocate more than
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolCreateInfo.html">VkDescriptorPoolCreateInfo</a>
+    ///     ::maxSetsdescriptor set objects from the descriptor pool as available resources allow. The implementation may use
+    ///     the maxSets value to allocate the initial available sets, but using zero is permitted.
+    /// </summary>
+    VK_DESCRIPTOR_POOL_CREATE_ALLOW_OVERALLOCATION_SETS_BIT_NV = 0x8,
+
+    /// <summary>
+    ///     VK_DESCRIPTOR_POOL_CREATE_ALLOW_OVERALLOCATION_POOLS_BIT_NVspecifies that the implementation should allow the
+    ///     application to allocate more descriptors from the pool than was specified by the
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolSize.html">VkDescriptorPoolSize</a>
+    ///     ::descriptorCount for any descriptor type as specified by
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolCreateInfo.html">VkDescriptorPoolCreateInfo</a>
+    ///     ::poolSizeCount and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolCreateInfo.html">VkDescriptorPoolCreateInfo</a>
+    ///     ::pPoolSizes, as available resources allow. The implementation may use the descriptorCount for each descriptor type
+    ///     to allocate the initial pool, but the application is allowed to set the poolSizeCount to zero, or any of the
+    ///     descriptorCount values in the pPoolSizes array to zero.
+    /// </summary>
+    VK_DESCRIPTOR_POOL_CREATE_ALLOW_OVERALLOCATION_POOLS_BIT_NV = 0x10,
+
+    /// <summary>
     ///     VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT specifies that descriptor sets allocated from this pool can
     ///     include bindings with the VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT bit set. It is valid to allocate descriptor
     ///     sets that have bindings that do not set the VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT bit from a pool that has

@@ -63,4 +63,6 @@ public static class VulkanVideoCodecH265std
     public const int STD_VIDEO_H265_MAX_LONG_TERM_PICS = 16;
 
     public const int STD_VIDEO_H265_MAX_DELTA_POC = 48;
+
+    public const int STD_VIDEO_H265_NO_REFERENCE_PICTURE = 0xFF;
 }

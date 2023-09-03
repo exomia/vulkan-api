@@ -17,7 +17,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct StdVideoEncodeH265SliceSegmentLongTermRefPics
+public unsafe struct StdVideoEncodeH265LongTermRefPics
 {
     public byte num_long_term_sps;
 

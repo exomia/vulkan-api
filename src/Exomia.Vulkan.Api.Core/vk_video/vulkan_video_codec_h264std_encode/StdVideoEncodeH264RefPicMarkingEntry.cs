@@ -19,7 +19,7 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct StdVideoEncodeH264RefPicMarkingEntry
 {
-    public StdVideoH264MemMgmtControlOp operation;
+    public StdVideoH264MemMgmtControlOp memory_management_control_operation;
 
     public ushort difference_of_pic_nums_minus1;
 

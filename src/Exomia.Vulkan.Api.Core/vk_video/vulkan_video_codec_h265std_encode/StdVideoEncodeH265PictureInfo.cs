@@ -41,5 +41,5 @@ public unsafe struct StdVideoEncodeH265PictureInfo
 
     public StdVideoH265ShortTermRefPicSet* pShortTermRefPicSet;
 
-    public StdVideoEncodeH265SliceSegmentLongTermRefPics* pLongTermRefPics;
+    public StdVideoEncodeH265LongTermRefPics* pLongTermRefPics;
 }

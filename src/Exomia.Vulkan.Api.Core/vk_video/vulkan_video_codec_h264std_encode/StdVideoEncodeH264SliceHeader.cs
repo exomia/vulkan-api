@@ -29,7 +29,9 @@ public unsafe struct StdVideoEncodeH264SliceHeader
 
     public sbyte slice_beta_offset_div2;
 
-    public ushort reserved1;
+    public sbyte slice_qp_delta;
+
+    public byte reserved1;
 
     public StdVideoH264CabacInitIdc cabac_init_idc;
 

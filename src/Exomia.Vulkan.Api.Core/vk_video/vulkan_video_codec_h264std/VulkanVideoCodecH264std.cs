@@ -33,4 +33,6 @@ public static class VulkanVideoCodecH264std
     public const int STD_VIDEO_H264_MAX_NUM_LIST_REF = 32;
 
     public const int STD_VIDEO_H264_MAX_CHROMA_PLANES = 2;
+
+    public const int STD_VIDEO_H264_NO_REFERENCE_PICTURE = 0xFF;
 }
