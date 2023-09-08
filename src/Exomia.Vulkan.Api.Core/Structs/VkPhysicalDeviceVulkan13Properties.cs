@@ -76,9 +76,11 @@ public unsafe struct VkPhysicalDeviceVulkan13Properties
     public uint maxInlineUniformBlockSize;
 
     /// <summary>
-    ///     maxPerStageDescriptorUpdateAfterBindInlineUniformBlocksis similar to maxPerStageDescriptorInlineUniformBlocks
-    ///     but counts descriptor bindings from descriptor sets created with or without the
-    ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set.
+    ///     maxPerStageDescriptorInlineUniformBlocks is the maximum number of inline uniform block bindings that can be
+    ///     accessible to a single shader stage in a pipeline layout. Descriptor bindings with a descriptor type of
+    ///     VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK count against this limit. Only descriptor bindings in descriptor set
+    ///     layouts created without the VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BIT bit set count against this
+    ///     limit.
     /// </summary>
     public uint maxPerStageDescriptorInlineUniformBlocks;
 
