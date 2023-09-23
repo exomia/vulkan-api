@@ -51,9 +51,10 @@ public unsafe struct VkPhysicalDeviceFragmentShaderBarycentricPropertiesKHR
     public void* pNext;
 
     /// <summary>
-    ///     triStripVertexOrderIndependentOfProvokingVertex indicates that the implementation does not change its vertex
-    ///     numbering for triangle strip primitives when the provoking vertex modeis VK_PROVOKING_VERTEX_MODE_LAST_VERTEX_EXT,
-    ///     as shown in the last vertex table.
+    ///     When the provoking vertex mode is VK_PROVOKING_VERTEX_MODE_LAST_VERTEX_EXT, and the primitive order is odd in
+    ///     a triangle strip, the ordering of vertices is defined in last vertex table.
+    ///     triStripVertexOrderIndependentOfProvokingVertex equal to VK_TRUE indicates that the implementation ignores this and
+    ///     uses the vertex order defined by VK_PROVOKING_VERTEX_MODE_FIRST_VERTEX_EXT instead.
     /// </summary>
     public VkBool32 triStripVertexOrderIndependentOfProvokingVertex;
 }
