@@ -56,8 +56,8 @@ public static unsafe class VkExtMultiDraw
     ///     pVertexInfo is a pointer to an array of VkMultiDrawInfoEXTwith vertex information to be
     ///     drawn.
     /// </param>
-    /// <param name="instanceCount">instanceCount is the number of instances to draw.</param>
-    /// <param name="firstInstance">firstInstance is the instance ID of the first instance to draw.</param>
+    /// <param name="instanceCount">instanceCount is the number of instances per draw.</param>
+    /// <param name="firstInstance">firstInstance is the instance ID of the first instance in each draw.</param>
     /// <param name="stride">stride is the byte stride between consecutive elements of pVertexInfo.</param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
@@ -78,8 +78,8 @@ public static unsafe class VkExtMultiDraw
     ///     pIndexInfo is a pointer to an array of VkMultiDrawIndexedInfoEXT with index information to be
     ///     drawn.
     /// </param>
-    /// <param name="instanceCount">instanceCount is the number of instances to draw.</param>
-    /// <param name="firstInstance">firstInstance is the instance ID of the first instance to draw.</param>
+    /// <param name="instanceCount">instanceCount is the number of instances per draw.</param>
+    /// <param name="firstInstance">firstInstance is the instance ID of the first instance in each draw.</param>
     /// <param name="stride">stride is the byte stride between consecutive elements of pIndexInfo.</param>
     /// <param name="pVertexOffset">
     ///     pVertexOffset is NULL or a pointer to the value added to the vertex index before indexing

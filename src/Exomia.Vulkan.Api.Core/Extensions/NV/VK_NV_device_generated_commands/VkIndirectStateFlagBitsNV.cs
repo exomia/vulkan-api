@@ -23,7 +23,7 @@ public enum VkIndirectStateFlagBitsNV
     /// <summary>
     ///     VK_INDIRECT_STATE_FLAG_FRONTFACE_BIT_NV allows to toggle the
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFrontFace.html">VkFrontFace</a>
-    ///     rasterization state for subsequent draw operations.
+    ///     rasterization state for subsequent drawing commands.
     /// </summary>
     VK_INDIRECT_STATE_FLAG_FRONTFACE_BIT_NV = 0x1
 }
