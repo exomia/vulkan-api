@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_create_renderpass2+VK_KHR_depth_stencil_resolve")]
+[VkDeviceExt]
 public static class VkExtMultisampledRenderToSingleSampled
 {
     /// <summary> The spec version. </summary>

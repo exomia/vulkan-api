@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_present_id.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_present_id.html</a>
 /// </summary>
 [VkDepends("VK_KHR_swapchain+VK_KHR_get_physical_device_properties2")]
+[VkDeviceExt]
 public static class VkKhrPresentId
 {
     /// <summary> The spec version. </summary>

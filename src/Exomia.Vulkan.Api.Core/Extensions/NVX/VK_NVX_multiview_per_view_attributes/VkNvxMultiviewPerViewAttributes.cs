@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_multiview")]
+[VkDeviceExt]
 public static class VkNvxMultiviewPerViewAttributes
 {
     /// <summary> The spec version. </summary>

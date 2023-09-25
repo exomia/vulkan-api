@@ -31,6 +31,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkDepends("VK_EXT_transform_feedback")]
 [VkSpecialuse("glemulation")]
+[VkDeviceExt]
 public static class VkExtPrimitivesGeneratedQuery
 {
     /// <summary> The spec version. </summary>

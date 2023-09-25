@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_atomic_float2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_atomic_float2.html</a>
 /// </summary>
 [VkDepends("VK_EXT_shader_atomic_float")]
+[VkDeviceExt]
 public static class VkExtShaderAtomicFloat2
 {
     /// <summary> The spec version. </summary>

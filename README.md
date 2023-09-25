@@ -138,6 +138,8 @@ PM> Install-Package Exomia.Vulkan.Api.<Platform>
 | Metal | Metal on CoreAnimation on Apple platforms |
 | Fuchsia | Fuchsia |
 | Ggp | Google Games Platform |
+| Sci | NVIDIA SCI |
+| Provisional | Enable declarations for beta/provisional extensions |
 | Screen | QNX Screen Graphics Subsystem |
 
 

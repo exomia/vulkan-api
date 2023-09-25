@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_trinary_minmax.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_trinary_minmax.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkAmdShaderTrinaryMinmax
 {
     /// <summary> The spec version. </summary>

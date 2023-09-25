@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_capabilities.html
 ///     </a>
 /// </summary>
+[VkInstanceExt]
 [Obsolete(
     "deprecated by VK_KHR_external_memory_capabilities", false,
     UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_capabilities.html#_deprecation_state")]

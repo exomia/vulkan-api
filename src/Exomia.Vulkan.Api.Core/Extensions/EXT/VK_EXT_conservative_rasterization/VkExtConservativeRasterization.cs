@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
+[VkDeviceExt]
 public static class VkExtConservativeRasterization
 {
     /// <summary> The spec version. </summary>

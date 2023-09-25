@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_optical_flow.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_optical_flow.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_format_feature_flags2+VK_KHR_synchronization2")]
+[VkDeviceExt]
 public static unsafe class VkNvOpticalFlow
 {
     /// <summary> The spec version. </summary>

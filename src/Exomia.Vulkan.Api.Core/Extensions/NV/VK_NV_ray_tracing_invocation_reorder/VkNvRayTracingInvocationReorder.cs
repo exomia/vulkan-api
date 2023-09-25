@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_ray_tracing_pipeline")]
+[VkDeviceExt]
 public static class VkNvRayTracingInvocationReorder
 {
     /// <summary> The spec version. </summary>

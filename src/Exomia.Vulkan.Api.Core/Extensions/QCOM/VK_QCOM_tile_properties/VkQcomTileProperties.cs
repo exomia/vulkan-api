@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_tile_properties.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_tile_properties.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDeviceExt]
 public static unsafe class VkQcomTileProperties
 {
     /// <summary> The spec version. </summary>

@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Ggp;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_surface")]
+[VkInstanceExt]
 public static unsafe class VkGgpStreamDescriptorSurface
 {
     /// <summary> The spec version. </summary>

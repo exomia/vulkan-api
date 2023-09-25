@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Fuchsia;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_imagepipe_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_imagepipe_surface.html</a>
 /// </summary>
 [VkDepends("VK_KHR_surface")]
+[VkInstanceExt]
 public static unsafe class VkFuchsiaImagepipeSurface
 {
     /// <summary> The spec version. </summary>

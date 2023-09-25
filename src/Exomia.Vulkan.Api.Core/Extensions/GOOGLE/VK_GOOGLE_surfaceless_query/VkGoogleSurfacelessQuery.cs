@@ -28,6 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkDepends("VK_KHR_surface")]
 [VkSpecialuse("glemulation")]
+[VkInstanceExt]
 public static class VkGoogleSurfacelessQuery
 {
     /// <summary> The spec version. </summary>

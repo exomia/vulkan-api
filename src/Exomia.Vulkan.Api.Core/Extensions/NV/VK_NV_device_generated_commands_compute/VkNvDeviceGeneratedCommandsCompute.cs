@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_NV_device_generated_commands")]
+[VkDeviceExt]
 public static unsafe class VkNvDeviceGeneratedCommandsCompute
 {
     /// <summary> The spec version. </summary>

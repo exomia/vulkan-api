@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_semaphore_fd.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_semaphore_fd.html</a>
 /// </summary>
 [VkDepends("VK_KHR_external_semaphore,VK_VERSION_1_1")]
+[VkDeviceExt]
 public static unsafe class VkKhrExternalSemaphoreFd
 {
     /// <summary> The spec version. </summary>

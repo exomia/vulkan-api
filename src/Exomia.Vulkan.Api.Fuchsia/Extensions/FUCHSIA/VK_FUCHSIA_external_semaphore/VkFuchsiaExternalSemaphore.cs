@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Fuchsia;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_semaphore.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_semaphore.html</a>
 /// </summary>
 [VkDepends("VK_KHR_external_semaphore_capabilities+VK_KHR_external_semaphore")]
+[VkDeviceExt]
 public static unsafe class VkFuchsiaExternalSemaphore
 {
     /// <summary> The spec version. </summary>

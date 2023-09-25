@@ -28,6 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkDepends("VK_KHR_maintenance1+VK_KHR_get_physical_device_properties2")]
 [VkSpecialuse("d3demulation")]
+[VkDeviceExt]
 public static class VkExtImageSlicedViewOf3d
 {
     /// <summary> The spec version. </summary>

@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_display_control.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_display_control.html</a>
 /// </summary>
 [VkDepends("VK_EXT_display_surface_counter+VK_KHR_swapchain")]
+[VkDeviceExt]
 public static unsafe class VkExtDisplayControl
 {
     /// <summary> The spec version. </summary>

@@ -30,6 +30,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     specialuse: devtools
 /// </remarks>
 [VkSpecialuse("devtools")]
+[VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_creation_feedback.html#_deprecation_state")]
 public static class VkExtPipelineCreationFeedback
 {

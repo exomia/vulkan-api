@@ -22,6 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_NV_viewport_array2 - device extension (nr. 97) - author 'NV' [platform '' | contact 'Daniel Koch @dgkoch']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_viewport_array2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_viewport_array2.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkNvViewportArray2
 {
     /// <summary> The spec version. </summary>

@@ -1,0 +1,5 @@
+global using VkVideoEncodeH265CapabilityFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH265CapabilityFlagBitsEXT;
+global using VkVideoEncodeH265StdFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH265StdFlagBitsEXT;
+global using VkVideoEncodeH265CtbSizeFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH265CtbSizeFlagBitsEXT;
+global using VkVideoEncodeH265TransformBlockSizeFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH265TransformBlockSizeFlagBitsEXT;
+global using VkVideoEncodeH265RateControlFlagsEXT = Exomia.Vulkan.Api.Provisional.VkVideoEncodeH265RateControlFlagBitsEXT;

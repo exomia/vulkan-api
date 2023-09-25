@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Description>Source generator including bitmasks and global-aliases for Exomia.Vulkan.Api.Provisional.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="**\*.global-alias.cs" />
+        <EmbeddedResource Include="**\*.global-alias.cs">
+            <LogicalName>%(FileName)%(Extension)</LogicalName>
+        </EmbeddedResource>
+        <Compile Remove="**\*.bitmasks.cs" />
+        <EmbeddedResource Include="**\*.bitmasks.cs">
+            <LogicalName>%(FileName)%(Extension)</LogicalName>
+        </EmbeddedResource>
+    </ItemGroup>
+</Project>

@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_filter_cubic_clamp.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_filter_cubic_clamp.html</a>
 /// </summary>
 [VkDepends("(VK_EXT_filter_cubic)+(VK_VERSION_1_2,VK_EXT_sampler_filter_minmax)")]
+[VkDeviceExt]
 public static class VkQcomFilterCubicClamp
 {
     /// <summary> The spec version. </summary>
