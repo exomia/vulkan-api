@@ -36,12 +36,12 @@ public unsafe struct VkRenderingAttachmentInfo
     public VkImageLayout imageLayout;
 
     /// <summary>
-    ///     resolveMode is a VkResolveModeFlagBits value defining how multisampled data written to imageView will be
-    ///     resolved.
+    ///     resolveMode is a VkResolveModeFlagBits value defining how data written to imageView will be resolved into
+    ///     resolveImageView.
     /// </summary>
     public VkResolveModeFlagBits resolveMode;
 
-    /// <summary>resolveImageView is an image view used to write resolved multisample data at the end of rendering.</summary>
+    /// <summary>resolveImageView is an image view used to write resolved data at the end of rendering.</summary>
     public VkImageView resolveImageView;
 
     /// <summary>resolveImageLayout is the layout that resolveImageView will be in during rendering.</summary>

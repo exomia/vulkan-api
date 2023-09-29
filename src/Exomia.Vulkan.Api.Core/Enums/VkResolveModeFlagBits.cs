@@ -41,6 +41,27 @@ public enum VkResolveModeFlagBits
     /// <summary>VK_RESOLVE_MODE_MAX_BIT indicates that result of the resolve operation is the maximum of the sample values.</summary>
     VK_RESOLVE_MODE_MAX_BIT = 0x8,
 
+    /// <summary>
+    ///     VK_RESOLVE_MODE_EXTERNAL_FORMAT_DOWNSAMPLE_ANDROID indicates that rather than a multisample resolve, a single
+    ///     sampled color attachment will be downsampled into a Y′CBCR format image specified by an external Android format.
+    ///     Unlike other resolve modes, implementations can resolve multiple times during rendering, or even bypass writing to
+    ///     the color attachment altogether, as long as the final value is resolved to the resolve attachment. Values in the G,
+    ///     B, and R channels of the color attachment will be written to the Y, CB, and CRchannels of the external format
+    ///     image, respectively. Chroma values are calculated as if sampling with a linear filter from the color attachment at
+    ///     full rate, at the location the chroma values sit according to
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalFormatResolvePropertiesANDROID.html">
+    ///         VkPhysicalDeviceExternalFormatResolvePropertiesANDROID
+    ///     </a>
+    ///     ::chromaOffsetX,
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalFormatResolvePropertiesANDROID.html">
+    ///         VkPhysicalDeviceExternalFormatResolvePropertiesANDROID
+    ///     </a>
+    ///     ::chromaOffsetY, and the chroma sample rate of the resolved image.
+    /// </summary>
+    VK_RESOLVE_MODE_EXTERNAL_FORMAT_DOWNSAMPLE_ANDROID = 0x10,
+
     /// <summary>VK_RESOLVE_MODE_NONE indicates that no resolve operation is done.</summary>
     VK_RESOLVE_MODE_NONE_KHR = VK_RESOLVE_MODE_NONE,
 
