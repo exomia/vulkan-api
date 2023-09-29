@@ -20,11 +20,12 @@ namespace Exomia.Vulkan.Api.Android;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkImageCreateInfo,VkSamplerYcbcrConversionCreateInfo</description>
+///             <term>structextends</term>
+///             <description>VkImageCreateInfo,VkSamplerYcbcrConversionCreateInfo,VkAttachmentDescription2,VkGraphicsPipelineCreateInfo,VkCommandBufferInheritanceInfo</description>
 ///         </item>
 ///     </list>
 /// </remarks>
-[VkStructExtends("VkImageCreateInfo,VkSamplerYcbcrConversionCreateInfo")]
+[VkStructExtends("VkImageCreateInfo,VkSamplerYcbcrConversionCreateInfo,VkAttachmentDescription2,VkGraphicsPipelineCreateInfo,VkCommandBufferInheritanceInfo")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkExternalFormatANDROID
 {
