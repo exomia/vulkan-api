@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Win32;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_external_semaphore")]
+[VkDeviceExt]
 public static unsafe class VkKhrExternalSemaphoreWin32
 {
     /// <summary> The spec version. </summary>

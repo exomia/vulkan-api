@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_fragment_coverage_to_color.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 public static class VkNvFragmentCoverageToColor
 {
     /// <summary> The spec version. </summary>

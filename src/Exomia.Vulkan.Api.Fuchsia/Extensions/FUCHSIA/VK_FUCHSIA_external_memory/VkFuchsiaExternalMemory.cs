@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Fuchsia;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_memory.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_memory.html</a>
 /// </summary>
 [VkDepends("VK_KHR_external_memory_capabilities+VK_KHR_external_memory")]
+[VkDeviceExt]
 public static unsafe class VkFuchsiaExternalMemory
 {
     /// <summary> The spec version. </summary>

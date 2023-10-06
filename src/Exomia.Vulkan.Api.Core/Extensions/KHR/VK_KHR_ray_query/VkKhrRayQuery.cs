@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_ray_query.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_ray_query.html</a>
 /// </summary>
 [VkDepends("VK_KHR_spirv_1_4+VK_KHR_acceleration_structure")]
+[VkDeviceExt]
 public static class VkKhrRayQuery
 {
     /// <summary> The spec version. </summary>

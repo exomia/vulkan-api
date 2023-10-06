@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_swapchain+VK_KHR_get_surface_capabilities2+(VK_KHR_get_physical_device_properties2,VK_VERSION_1_1)")]
+[VkDeviceExt]
 public static unsafe class VkKhrSharedPresentableImage
 {
     /// <summary> The spec version. </summary>

@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_image_load_store_lod.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 public static class VkAmdShaderImageLoadStoreLod
 {
     /// <summary> The spec version. </summary>

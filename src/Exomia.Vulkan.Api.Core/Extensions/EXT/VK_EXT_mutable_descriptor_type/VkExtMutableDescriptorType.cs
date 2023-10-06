@@ -28,6 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkDepends("VK_KHR_maintenance3")]
 [VkSpecialuse("d3demulation")]
+[VkDeviceExt]
 public static class VkExtMutableDescriptorType
 {
     /// <summary> The spec version. </summary>

@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @michaelworcester']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance2.html</a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance2.html#_deprecation_state")]
 public static class VkKhrMaintenance2
 {

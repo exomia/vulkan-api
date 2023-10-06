@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @ewerness-nv,Liam Middlebrook @liam-middlebrook']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_binary_import.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NVX_binary_import.html</a>
 /// </summary>
+[VkDeviceExt]
 public static unsafe class VkNvxBinaryImport
 {
     /// <summary> The spec version. </summary>

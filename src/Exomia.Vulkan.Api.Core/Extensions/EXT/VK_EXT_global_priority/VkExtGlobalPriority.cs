@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @lostgoat']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_global_priority.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_global_priority.html</a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("promoted to VK_KHR_global_priority", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_global_priority.html#_deprecation_state")]
 public static class VkExtGlobalPriority
 {

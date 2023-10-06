@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_IMG_filter_cubic.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_IMG_filter_cubic.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkImgFilterCubic
 {
     /// <summary> The spec version. </summary>

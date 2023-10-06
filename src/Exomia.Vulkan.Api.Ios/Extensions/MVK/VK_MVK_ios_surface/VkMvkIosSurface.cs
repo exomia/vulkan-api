@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Ios;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MVK_ios_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MVK_ios_surface.html</a>
 /// </summary>
 [VkDepends("VK_KHR_surface")]
+[VkInstanceExt]
 [Obsolete("deprecated by VK_EXT_metal_surface", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MVK_ios_surface.html#_deprecation_state")]
 public static unsafe class VkMvkIosSurface
 {

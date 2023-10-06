@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_tile_image.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_tile_image.html</a>
 /// </summary>
 [VkDepends("VK_VERSION_1_3")]
+[VkDeviceExt]
 public static class VkExtShaderTileImage
 {
     /// <summary> The spec version. </summary>

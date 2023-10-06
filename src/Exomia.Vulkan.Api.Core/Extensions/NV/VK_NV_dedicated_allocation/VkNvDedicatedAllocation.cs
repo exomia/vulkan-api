@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @jeffbolznv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_dedicated_allocation.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_dedicated_allocation.html</a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("deprecated by VK_KHR_dedicated_allocation", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_dedicated_allocation.html#_deprecation_state")]
 public static class VkNvDedicatedAllocation
 {

@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDeviceExt]
 [Obsolete(
     "promoted to VK_EXT_rasterization_order_attachment_access", false,
     UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_rasterization_order_attachment_access.html#_deprecation_state")]

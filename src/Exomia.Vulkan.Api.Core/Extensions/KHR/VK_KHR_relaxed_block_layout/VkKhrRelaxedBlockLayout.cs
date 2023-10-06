@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @johnkslang']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_relaxed_block_layout.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_relaxed_block_layout.html</a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_relaxed_block_layout.html#_deprecation_state")]
 public static class VkKhrRelaxedBlockLayout
 {

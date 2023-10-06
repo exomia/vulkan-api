@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     specialuse: debugging
 /// </remarks>
 [VkSpecialuse("debugging")]
+[VkInstanceExt]
 public static class VkExtValidationFeatures
 {
     /// <summary> The spec version. </summary>

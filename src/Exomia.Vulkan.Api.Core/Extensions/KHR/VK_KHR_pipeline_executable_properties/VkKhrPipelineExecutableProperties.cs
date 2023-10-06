@@ -31,6 +31,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkDepends("VK_KHR_get_physical_device_properties2")]
 [VkSpecialuse("devtools")]
+[VkDeviceExt]
 public static unsafe class VkKhrPipelineExecutableProperties
 {
     /// <summary> The spec version. </summary>

@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_VERSION_1_1")]
+[VkDeviceExt]
 public static class VkKhrShaderSubgroupUniformControlFlow
 {
     /// <summary> The spec version. </summary>

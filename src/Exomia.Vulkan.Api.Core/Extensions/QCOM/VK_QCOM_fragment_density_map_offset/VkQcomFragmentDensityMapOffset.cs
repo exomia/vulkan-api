@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2+VK_EXT_fragment_density_map")]
+[VkDeviceExt]
 public static class VkQcomFragmentDensityMapOffset
 {
     /// <summary> The spec version. </summary>

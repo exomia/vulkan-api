@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_VERSION_1_1+VK_KHR_get_surface_capabilities2")]
+[VkInstanceExt]
 public static class VkKhrSurfaceProtectedCapabilities
 {
     /// <summary> The spec version. </summary>

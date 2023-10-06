@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_core_properties2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_core_properties2.html</a>
 /// </summary>
 [VkDepends("VK_AMD_shader_core_properties")]
+[VkDeviceExt]
 public static class VkAmdShaderCoreProperties2
 {
     /// <summary> The spec version. </summary>

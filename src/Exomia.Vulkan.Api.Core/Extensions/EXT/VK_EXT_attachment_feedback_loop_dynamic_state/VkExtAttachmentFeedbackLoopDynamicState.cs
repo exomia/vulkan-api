@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2+VK_EXT_attachment_feedback_loop_layout")]
+[VkDeviceExt]
 public static unsafe class VkExtAttachmentFeedbackLoopDynamicState
 {
     /// <summary> The spec version. </summary>

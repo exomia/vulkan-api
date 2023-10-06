@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("((VK_KHR_bind_memory2+VK_KHR_get_physical_device_properties2+VK_KHR_sampler_ycbcr_conversion),VK_VERSION_1_1)+(VK_KHR_image_format_list,VK_VERSION_1_2)")]
+[VkDeviceExt]
 public static unsafe class VkExtImageDrmFormatModifier
 {
     /// <summary> The spec version. </summary>

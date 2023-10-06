@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Metal;
 ///     @billhollings']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_metal_objects.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_metal_objects.html</a>
 /// </summary>
+[VkDeviceExt]
 public static unsafe class VkExtMetalObjects
 {
     /// <summary> The spec version. </summary>

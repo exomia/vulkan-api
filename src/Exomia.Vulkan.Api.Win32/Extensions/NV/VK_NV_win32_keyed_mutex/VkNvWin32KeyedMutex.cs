@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Win32;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_win32_keyed_mutex.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_win32_keyed_mutex.html</a>
 /// </summary>
 [VkDepends("VK_NV_external_memory_win32")]
+[VkDeviceExt]
 [Obsolete("promoted to VK_KHR_win32_keyed_mutex", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_win32_keyed_mutex.html#_deprecation_state")]
 public static class VkNvWin32KeyedMutex
 {

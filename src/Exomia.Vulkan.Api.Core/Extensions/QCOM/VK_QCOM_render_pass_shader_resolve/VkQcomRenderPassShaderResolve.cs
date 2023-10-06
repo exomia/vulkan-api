@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_render_pass_shader_resolve.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 public static class VkQcomRenderPassShaderResolve
 {
     /// <summary> The spec version. </summary>
