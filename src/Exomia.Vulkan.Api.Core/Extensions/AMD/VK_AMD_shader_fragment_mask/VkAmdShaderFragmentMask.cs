@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @AaronHaganAMD']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_fragment_mask.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_fragment_mask.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkAmdShaderFragmentMask
 {
     /// <summary> The spec version. </summary>

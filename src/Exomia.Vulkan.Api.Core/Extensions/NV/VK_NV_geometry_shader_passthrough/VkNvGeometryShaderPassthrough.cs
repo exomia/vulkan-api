@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_geometry_shader_passthrough.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 public static class VkNvGeometryShaderPassthrough
 {
     /// <summary> The spec version. </summary>

@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Screen;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QNX_screen_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QNX_screen_surface.html</a>
 /// </summary>
 [VkDepends("VK_KHR_surface")]
+[VkInstanceExt]
 public static unsafe class VkQnxScreenSurface
 {
     /// <summary> The spec version. </summary>

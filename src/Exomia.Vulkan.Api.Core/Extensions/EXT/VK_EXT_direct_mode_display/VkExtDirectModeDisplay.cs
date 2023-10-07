@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_direct_mode_display.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_direct_mode_display.html</a>
 /// </summary>
 [VkDepends("VK_KHR_display")]
+[VkInstanceExt]
 public static unsafe class VkExtDirectModeDisplay
 {
     /// <summary> The spec version. </summary>

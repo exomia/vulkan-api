@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @ewerness-nv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_clip_space_w_scaling.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_clip_space_w_scaling.html</a>
 /// </summary>
+[VkDeviceExt]
 public static unsafe class VkNvClipSpaceWScaling
 {
     /// <summary> The spec version. </summary>

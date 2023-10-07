@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @syoussefi']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_load_store_op_none.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_load_store_op_none.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkExtLoadStoreOpNone
 {
     /// <summary> The spec version. </summary>

@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_EXT_memory_priority")]
+[VkDeviceExt]
 public static unsafe class VkExtPageableDeviceLocalMemory
 {
     /// <summary> The spec version. </summary>

@@ -326,14 +326,20 @@ public enum VkObjectType
     VK_OBJECT_TYPE_DEBUG_REPORT_CALLBACK_EXT = 1000011000,
 
     /// <summary>
-    ///     VK_OBJECT_TYPE_VIDEO_SESSION_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <list type="table">
+    ///         <item>
+    ///             <term>Vulkan Handle Type</term><description>VkVideoSessionKHR</description>
+    ///         </item>
+    ///     </list>
     /// </summary>
     VK_OBJECT_TYPE_VIDEO_SESSION_KHR = 1000023000,
 
     /// <summary>
-    ///     VK_OBJECT_TYPE_VIDEO_SESSION_PARAMETERS_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <list type="table">
+    ///         <item>
+    ///             <term>Vulkan Handle Type</term><description>VkVideoSessionParametersKHR</description>
+    ///         </item>
+    ///     </list>
     /// </summary>
     VK_OBJECT_TYPE_VIDEO_SESSION_PARAMETERS_KHR = 1000023001,
 
@@ -413,14 +419,20 @@ public enum VkObjectType
     VK_OBJECT_TYPE_INDIRECT_COMMANDS_LAYOUT_NV = 1000277000,
 
     /// <summary>
-    ///     VK_OBJECT_TYPE_BUFFER_COLLECTION_FUCHSIA<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <list type="table">
+    ///         <item>
+    ///             <term>Vulkan Handle Type</term><description>VkBufferCollectionFUCHSIA</description>
+    ///         </item>
+    ///     </list>
     /// </summary>
     VK_OBJECT_TYPE_BUFFER_COLLECTION_FUCHSIA = 1000366000,
 
     /// <summary>
-    ///     VK_OBJECT_TYPE_MICROMAP_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <list type="table">
+    ///         <item>
+    ///             <term>Vulkan Handle Type</term><description>VkMicromapEXT</description>
+    ///         </item>
+    ///     </list>
     /// </summary>
     VK_OBJECT_TYPE_MICROMAP_EXT = 1000396000,
 
@@ -434,8 +446,11 @@ public enum VkObjectType
     VK_OBJECT_TYPE_OPTICAL_FLOW_SESSION_NV = 1000464000,
 
     /// <summary>
-    ///     VK_OBJECT_TYPE_SHADER_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkObjectType</a>
+    ///     <list type="table">
+    ///         <item>
+    ///             <term>Vulkan Handle Type</term><description>VkShaderEXT</description>
+    ///         </item>
+    ///     </list>
     /// </summary>
     VK_OBJECT_TYPE_SHADER_EXT = 1000482000,
 

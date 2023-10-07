@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @pdaniell-nv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_viewport_swizzle.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_viewport_swizzle.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkNvViewportSwizzle
 {
     /// <summary> The spec version. </summary>

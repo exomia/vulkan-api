@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_present_barrier.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_present_barrier.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_surface+VK_KHR_get_surface_capabilities2+VK_KHR_swapchain")]
+[VkDeviceExt]
 public static class VkNvPresentBarrier
 {
     /// <summary> The spec version. </summary>

@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_ray_tracing_pipeline+VK_KHR_pipeline_library")]
+[VkDeviceExt]
 public static class VkExtPipelineLibraryGroupHandles
 {
     /// <summary> The spec version. </summary>

@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     Giessen @charles-lunarg']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_portability_enumeration.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_portability_enumeration.html</a>
 /// </summary>
+[VkInstanceExt]
 public static class VkKhrPortabilityEnumeration
 {
     /// <summary> The spec version. </summary>

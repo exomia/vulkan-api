@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_pipeline_library")]
+[VkDeviceExt]
 public static class VkExtGraphicsPipelineLibrary
 {
     /// <summary> The spec version. </summary>

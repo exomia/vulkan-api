@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_acceleration_structure")]
+[VkDeviceExt]
 public static class VkKhrRayTracingPositionFetch
 {
     /// <summary> The spec version. </summary>

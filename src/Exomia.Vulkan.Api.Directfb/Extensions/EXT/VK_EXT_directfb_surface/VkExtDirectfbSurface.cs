@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Directfb;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_directfb_surface.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_directfb_surface.html</a>
 /// </summary>
 [VkDepends("VK_KHR_surface")]
+[VkInstanceExt]
 public static unsafe class VkExtDirectfbSurface
 {
     /// <summary> The spec version. </summary>

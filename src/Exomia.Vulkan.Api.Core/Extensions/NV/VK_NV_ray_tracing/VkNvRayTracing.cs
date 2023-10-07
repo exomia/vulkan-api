@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_ray_tracing.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_ray_tracing.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_get_memory_requirements2")]
+[VkDeviceExt]
 public static unsafe class VkNvRayTracing
 {
     /// <summary> The spec version. </summary>

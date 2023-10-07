@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     specialuse: debugging
 /// </remarks>
 [VkSpecialuse("debugging")]
+[VkInstanceExt]
 [Obsolete("deprecated by VK_EXT_validation_features", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_validation_flags.html#_deprecation_state")]
 public static class VkExtValidationFlags
 {

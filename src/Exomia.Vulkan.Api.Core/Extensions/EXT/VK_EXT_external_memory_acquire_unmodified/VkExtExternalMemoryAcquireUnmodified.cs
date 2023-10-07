@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_external_memory")]
+[VkDeviceExt]
 public static class VkExtExternalMemoryAcquireUnmodified
 {
     /// <summary> The spec version. </summary>

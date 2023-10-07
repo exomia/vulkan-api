@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_rgba10x6_formats.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_rgba10x6_formats.html</a>
 /// </summary>
 [VkDepends("VK_KHR_sampler_ycbcr_conversion")]
+[VkDeviceExt]
 public static class VkExtRgba10x6Formats
 {
     /// <summary> The spec version. </summary>

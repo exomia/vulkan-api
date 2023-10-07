@@ -22,6 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_AMD_gpu_shader_int16 - device extension (nr. 133) - author 'AMD' [platform '' | contact 'Qun Lin @linqun']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_gpu_shader_int16.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_gpu_shader_int16.html</a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("deprecated by VK_KHR_shader_float16_int8", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_gpu_shader_int16.html#_deprecation_state")]
 public static class VkAmdGpuShaderInt16
 {

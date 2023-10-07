@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     specialuse: devtools
 /// </remarks>
 [VkSpecialuse("devtools")]
+[VkDeviceExt]
 public static unsafe class VkIntelPerformanceQuery
 {
     /// <summary> The spec version. </summary>

@@ -110,7 +110,10 @@ public struct VkPhysicalDeviceLimits
     /// <summary>
     ///     sparseAddressSpaceSize is the total amount of address space available, in bytes, for sparse memory resources.
     ///     This is an upper bound on the sum of the sizes of all sparse resources, regardless of whether any memory is bound
-    ///     to them.
+    ///     to them. If the extendedSparseAddressSpace feature is enabled, then the difference between
+    ///     extendedSparseAddressSpaceSize and sparseAddressSpaceSizecan also be used, by VkImage created with the usage member
+    ///     of VkImageCreateInfo only containing bits in extendedSparseImageUsageFlags and VkBuffer created with the usage
+    ///     member of VkBufferCreateInfo only containing bits in extendedSparseBufferUsageFlags.
     /// </summary>
     public VkDeviceSize sparseAddressSpaceSize;
 

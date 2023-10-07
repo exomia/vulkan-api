@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_host_image_copy.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_host_image_copy.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_copy_commands2+VK_KHR_format_feature_flags2")]
+[VkDeviceExt]
 public static unsafe class VkExtHostImageCopy
 {
     /// <summary> The spec version. </summary>

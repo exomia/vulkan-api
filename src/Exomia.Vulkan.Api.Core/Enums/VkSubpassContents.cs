@@ -35,5 +35,13 @@ public enum VkSubpassContents
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndRenderPass.html">vkCmdEndRenderPass</a>
     ///     .
     /// </summary>
-    VK_SUBPASS_CONTENTS_SECONDARY_COMMAND_BUFFERS = 1
+    VK_SUBPASS_CONTENTS_SECONDARY_COMMAND_BUFFERS = 1,
+
+    /// <summary>
+    ///     VK_SUBPASS_CONTENTS_INLINE_AND_SECONDARY_COMMAND_BUFFERS_EXTspecifies that the contents of the subpass can be
+    ///     recorded both inline and in secondary command buffers executed from this command buffer with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdExecuteCommands.html">vkCmdExecuteCommands</a>
+    ///     .
+    /// </summary>
+    VK_SUBPASS_CONTENTS_INLINE_AND_SECONDARY_COMMAND_BUFFERS_EXT = 1000451000
 }

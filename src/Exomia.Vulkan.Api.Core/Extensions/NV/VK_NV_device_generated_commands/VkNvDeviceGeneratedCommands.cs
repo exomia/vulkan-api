@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_VERSION_1_1+VK_KHR_buffer_device_address")]
+[VkDeviceExt]
 public static unsafe class VkNvDeviceGeneratedCommands
 {
     /// <summary> The spec version. </summary>

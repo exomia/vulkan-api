@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_host.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_host.html</a>
 /// </summary>
 [VkDepends("VK_KHR_external_memory,VK_VERSION_1_1")]
+[VkDeviceExt]
 public static unsafe class VkExtExternalMemoryHost
 {
     /// <summary> The spec version. </summary>

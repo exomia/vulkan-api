@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_sample_mask_override_coverage.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 public static class VkNvSampleMaskOverrideCoverage
 {
     /// <summary> The spec version. </summary>

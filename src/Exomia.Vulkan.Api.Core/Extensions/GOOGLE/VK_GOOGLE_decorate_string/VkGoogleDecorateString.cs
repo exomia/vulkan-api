@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @chaoticbob']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_decorate_string.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_decorate_string.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkGoogleDecorateString
 {
     /// <summary> The spec version. </summary>

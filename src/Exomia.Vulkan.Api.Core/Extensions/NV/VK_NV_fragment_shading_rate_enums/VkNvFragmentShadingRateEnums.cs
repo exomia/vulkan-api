@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_fragment_shading_rate")]
+[VkDeviceExt]
 public static unsafe class VkNvFragmentShadingRateEnums
 {
     /// <summary> The spec version. </summary>

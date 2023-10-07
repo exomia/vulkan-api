@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @jamesfitzpatrick']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_frame_boundary.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_frame_boundary.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkExtFrameBoundary
 {
     /// <summary> The spec version. </summary>

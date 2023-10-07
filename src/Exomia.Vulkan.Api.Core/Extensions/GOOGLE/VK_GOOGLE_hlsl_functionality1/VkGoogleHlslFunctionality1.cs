@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @chaoticbob']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_hlsl_functionality1.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_GOOGLE_hlsl_functionality1.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkGoogleHlslFunctionality1
 {
     /// <summary> The spec version. </summary>

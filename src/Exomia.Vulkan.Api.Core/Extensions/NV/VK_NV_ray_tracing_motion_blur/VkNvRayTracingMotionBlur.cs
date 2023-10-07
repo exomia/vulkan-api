@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_ray_tracing_motion_blur.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_ray_tracing_motion_blur.html</a>
 /// </summary>
 [VkDepends("VK_KHR_ray_tracing_pipeline")]
+[VkDeviceExt]
 public static class VkNvRayTracingMotionBlur
 {
     /// <summary> The spec version. </summary>

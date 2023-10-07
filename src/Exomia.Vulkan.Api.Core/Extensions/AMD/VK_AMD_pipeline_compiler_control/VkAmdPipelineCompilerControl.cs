@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_pipeline_compiler_control.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 public static class VkAmdPipelineCompilerControl
 {
     /// <summary> The spec version. </summary>
