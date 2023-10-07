@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDeviceExt]
 public static class VkKhrFragmentShaderBarycentric
 {
     /// <summary> The spec version. </summary>

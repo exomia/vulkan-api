@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_buffer_device_address.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_buffer_device_address.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDeviceExt]
 [Obsolete(
     "deprecated by VK_KHR_buffer_device_address", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_buffer_device_address.html#_deprecation_state")]
 public static unsafe class VkExtBufferDeviceAddress

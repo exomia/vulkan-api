@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_image_processing.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_image_processing.html</a>
 /// </summary>
 [VkDepends("VK_KHR_format_feature_flags2")]
+[VkDeviceExt]
 public static class VkQcomImageProcessing
 {
     /// <summary> The spec version. </summary>

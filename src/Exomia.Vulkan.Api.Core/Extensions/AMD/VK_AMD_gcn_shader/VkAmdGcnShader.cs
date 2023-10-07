@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @dominikwitczakamd']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_gcn_shader.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_gcn_shader.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkAmdGcnShader
 {
     /// <summary> The spec version. </summary>

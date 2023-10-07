@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_multi_draw.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_multi_draw.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDeviceExt]
 public static unsafe class VkExtMultiDraw
 {
     /// <summary> The spec version. </summary>

@@ -28,6 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 [VkSpecialuse("glemulation,d3demulation")]
+[VkDeviceExt]
 public static class VkExtCustomBorderColor
 {
     /// <summary> The spec version. </summary>

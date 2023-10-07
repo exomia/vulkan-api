@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @dominikwitczakamd']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_ballot.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_shader_ballot.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkAmdShaderBallot
 {
     /// <summary> The spec version. </summary>

@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_copy_memory_indirect.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_copy_memory_indirect.html</a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_buffer_device_address")]
+[VkDeviceExt]
 public static unsafe class VkNvCopyMemoryIndirect
 {
     /// <summary> The spec version. </summary>

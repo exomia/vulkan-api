@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_low_latency2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_low_latency2.html</a>
 /// </summary>
+[VkDeviceExt]
 public static unsafe class VkNvLowLatency2
 {
     /// <summary> The spec version. </summary>
@@ -101,7 +102,7 @@ public static unsafe class VkNvLowLatency2
     /// </param>
     public static readonly delegate*<
         VkQueue /*queue*/,
-        VkOutOfBandQueueTypeInfoNV /*pQueueTypeInfo*/,
+        VkOutOfBandQueueTypeInfoNV* /*pQueueTypeInfo*/,
         void> vkQueueNotifyOutOfBandNV = null;
 
     /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
@@ -150,9 +151,9 @@ public static unsafe class VkNvLowLatency2
                 (delegate*<VkDevice, VkSwapchainKHR, uint*, VkGetLatencyMarkerInfoNV*, void>)GetVkFunction(device, "\u6b76\u6547\u4c74\u7461\u6e65\u7963\u6954\u696d\u676e\u4e73\u0056");
         }
 
-        fixed (delegate*<VkQueue, VkOutOfBandQueueTypeInfoNV, void>* pvkQueueNotifyOutOfBandNV = &vkQueueNotifyOutOfBandNV)
+        fixed (delegate*<VkQueue, VkOutOfBandQueueTypeInfoNV*, void>* pvkQueueNotifyOutOfBandNV = &vkQueueNotifyOutOfBandNV)
         {
-            *pvkQueueNotifyOutOfBandNV = (delegate*<VkQueue, VkOutOfBandQueueTypeInfoNV, void>)GetVkFunction(device, "\u6b76\u7551\u7565\u4e65\u746f\u6669\u4f79\u7475\u664f\u6142\u646e\u564e\u0000");
+            *pvkQueueNotifyOutOfBandNV = (delegate*<VkQueue, VkOutOfBandQueueTypeInfoNV*, void>)GetVkFunction(device, "\u6b76\u7551\u7565\u4e65\u746f\u6669\u4f79\u7475\u664f\u6142\u646e\u564e\u0000");
         }
     }
 }

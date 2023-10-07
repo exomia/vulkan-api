@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_shader_core_properties.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_shader_core_properties.html</a>
 /// </summary>
 [VkDepends("VK_VERSION_1_1")]
+[VkDeviceExt]
 public static class VkArmShaderCoreProperties
 {
     /// <summary> The spec version. </summary>

@@ -31,6 +31,7 @@ namespace Exomia.Vulkan.Api.Android;
 /// </remarks>
 [VkDepends("VK_ANDROID_external_memory_android_hardware_buffer")]
 [VkSpecialuse("glemulation")]
+[VkDeviceExt]
 public static class VkAndroidExternalFormatResolve
 {
     /// <summary> The spec version. </summary>

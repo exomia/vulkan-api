@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @drakos-amd']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_separate_stencil_usage.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_separate_stencil_usage.html</a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_separate_stencil_usage.html#_deprecation_state")]
 public static class VkExtSeparateStencilUsage
 {

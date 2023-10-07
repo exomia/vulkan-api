@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_EXT_image_compression_control")]
+[VkDeviceExt]
 public static class VkExtImageCompressionControlSwapchain
 {
     /// <summary> The spec version. </summary>

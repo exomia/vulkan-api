@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Android;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_sampler_ycbcr_conversion+VK_KHR_external_memory+VK_EXT_queue_family_foreign+VK_KHR_dedicated_allocation")]
+[VkDeviceExt]
 public static unsafe class VkAndroidExternalMemoryAndroidHardwareBuffer
 {
     /// <summary> The spec version. </summary>

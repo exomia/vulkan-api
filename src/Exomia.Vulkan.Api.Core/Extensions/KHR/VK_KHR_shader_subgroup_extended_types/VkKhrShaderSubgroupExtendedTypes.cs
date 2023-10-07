@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_VERSION_1_1")]
+[VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_shader_subgroup_extended_types.html#_deprecation_state")]
 public static class VkKhrShaderSubgroupExtendedTypes
 {

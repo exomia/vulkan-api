@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @pixeljetstream']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_pipeline_library.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_pipeline_library.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkKhrPipelineLibrary
 {
     /// <summary> The spec version. </summary>

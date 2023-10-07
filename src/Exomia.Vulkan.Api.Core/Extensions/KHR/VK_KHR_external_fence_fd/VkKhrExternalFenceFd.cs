@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence_fd.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_fence_fd.html</a>
 /// </summary>
 [VkDepends("VK_KHR_external_fence,VK_VERSION_1_1")]
+[VkDeviceExt]
 public static unsafe class VkKhrExternalFenceFd
 {
     /// <summary> The spec version. </summary>

@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_negative_viewport_height.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("obsoleted by VK_KHR_maintenance1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_negative_viewport_height.html#_deprecation_state")]
 public static class VkAmdNegativeViewportHeight
 {

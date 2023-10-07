@@ -22,6 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_IMG_format_pvrtc - device extension (nr. 55) - author 'IMG' [platform '' | contact 'Stuart Smith']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_IMG_format_pvrtc.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_IMG_format_pvrtc.html</a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("deprecated by ", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_IMG_format_pvrtc.html#_deprecation_state")]
 public static class VkImgFormatPvrtc
 {

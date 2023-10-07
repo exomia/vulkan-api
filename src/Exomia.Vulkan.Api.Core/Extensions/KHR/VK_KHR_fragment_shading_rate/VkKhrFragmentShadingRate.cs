@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_fragment_shading_rate.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_fragment_shading_rate.html</a>
 /// </summary>
 [VkDepends("(VK_KHR_create_renderpass2,VK_VERSION_1_2)+(VK_KHR_get_physical_device_properties2,VK_VERSION_1_1)")]
+[VkDeviceExt]
 public static unsafe class VkKhrFragmentShadingRate
 {
     /// <summary> The spec version. </summary>

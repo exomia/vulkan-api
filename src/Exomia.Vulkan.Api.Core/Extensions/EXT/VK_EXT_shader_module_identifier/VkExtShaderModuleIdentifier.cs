@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2+VK_EXT_pipeline_creation_cache_control")]
+[VkDeviceExt]
 public static unsafe class VkExtShaderModuleIdentifier
 {
     /// <summary> The spec version. </summary>

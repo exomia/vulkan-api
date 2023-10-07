@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_glsl_shader.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_glsl_shader.html</a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("deprecated by ", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_glsl_shader.html#_deprecation_state")]
 public static class VkNvGlslShader
 {

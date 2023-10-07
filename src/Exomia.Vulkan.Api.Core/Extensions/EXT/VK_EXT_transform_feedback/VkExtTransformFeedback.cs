@@ -28,6 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkDepends("VK_KHR_get_physical_device_properties2")]
 [VkSpecialuse("glemulation,d3demulation,devtools")]
+[VkDeviceExt]
 public static unsafe class VkExtTransformFeedback
 {
     /// <summary> The spec version. </summary>

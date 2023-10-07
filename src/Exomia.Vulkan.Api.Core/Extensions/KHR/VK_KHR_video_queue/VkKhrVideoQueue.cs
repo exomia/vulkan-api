@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_video_queue.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_video_queue.html</a>
 /// </summary>
 [VkDepends("VK_VERSION_1_1+VK_KHR_synchronization2")]
+[VkDeviceExt]
 public static unsafe class VkKhrVideoQueue
 {
     /// <summary> The spec version. </summary>

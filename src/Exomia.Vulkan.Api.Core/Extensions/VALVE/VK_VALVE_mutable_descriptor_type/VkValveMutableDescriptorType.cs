@@ -31,6 +31,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkDepends("VK_KHR_maintenance3")]
 [VkSpecialuse("d3demulation")]
+[VkDeviceExt]
 [Obsolete(
     "promoted to VK_EXT_mutable_descriptor_type", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_VALVE_mutable_descriptor_type.html#_deprecation_state")]
 public static class VkValveMutableDescriptorType

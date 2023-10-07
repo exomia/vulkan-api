@@ -27,6 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [VkDepends("VK_KHR_swapchain+(VK_KHR_maintenance2,VK_VERSION_1_1)+(VK_KHR_image_format_list,VK_VERSION_1_2)")]
+[VkDeviceExt]
 public static class VkKhrSwapchainMutableFormat
 {
     /// <summary> The spec version. </summary>

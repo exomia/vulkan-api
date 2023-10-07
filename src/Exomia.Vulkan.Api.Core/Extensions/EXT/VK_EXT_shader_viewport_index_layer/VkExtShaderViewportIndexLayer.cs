@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_viewport_index_layer.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_viewport_index_layer.html#_deprecation_state")]
 public static class VkExtShaderViewportIndexLayer
 {

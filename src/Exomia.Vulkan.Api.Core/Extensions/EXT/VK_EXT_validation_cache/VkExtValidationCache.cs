@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @cdwfs']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_validation_cache.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_validation_cache.html</a>
 /// </summary>
+[VkDeviceExt]
 public static unsafe class VkExtValidationCache
 {
     /// <summary> The spec version. </summary>

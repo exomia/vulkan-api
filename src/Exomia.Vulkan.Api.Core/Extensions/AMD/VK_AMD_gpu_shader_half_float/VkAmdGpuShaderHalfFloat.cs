@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @dominikwitczakamd']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_gpu_shader_half_float.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_gpu_shader_half_float.html</a>
 /// </summary>
+[VkDeviceExt]
 [Obsolete("deprecated by VK_KHR_shader_float16_int8", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_gpu_shader_half_float.html#_deprecation_state")]
 public static class VkAmdGpuShaderHalfFloat
 {

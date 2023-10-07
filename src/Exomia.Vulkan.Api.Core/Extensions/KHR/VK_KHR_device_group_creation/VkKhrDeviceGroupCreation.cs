@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @jeffbolznv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_device_group_creation.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_device_group_creation.html</a>
 /// </summary>
+[VkInstanceExt]
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_device_group_creation.html#_deprecation_state")]
 public static unsafe class VkKhrDeviceGroupCreation
 {

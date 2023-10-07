@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html</a>
 /// </summary>
 [VkDepends("VK_KHR_multiview+VK_KHR_maintenance2")]
+[VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_create_renderpass2.html#_deprecation_state")]
 public static unsafe class VkKhrCreateRenderpass2
 {

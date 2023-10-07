@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_acceleration_structure.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_acceleration_structure.html</a>
 /// </summary>
 [VkDepends("VK_VERSION_1_1+VK_EXT_descriptor_indexing+VK_KHR_buffer_device_address+VK_KHR_deferred_host_operations")]
+[VkDeviceExt]
 public static unsafe class VkKhrAccelerationStructure
 {
     /// <summary> The spec version. </summary>

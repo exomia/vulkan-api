@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Win32;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_memory_win32.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_external_memory_win32.html</a>
 /// </summary>
 [VkDepends("VK_KHR_external_memory")]
+[VkDeviceExt]
 public static unsafe class VkKhrExternalMemoryWin32
 {
     /// <summary> The spec version. </summary>

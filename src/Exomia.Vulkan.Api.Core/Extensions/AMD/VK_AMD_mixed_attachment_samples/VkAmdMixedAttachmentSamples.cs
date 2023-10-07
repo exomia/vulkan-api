@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_mixed_attachment_samples.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 public static class VkAmdMixedAttachmentSamples
 {
     /// <summary> The spec version. </summary>

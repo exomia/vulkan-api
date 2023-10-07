@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @drakos-amd']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_rasterization_order.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_rasterization_order.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkAmdRasterizationOrder
 {
     /// <summary> The spec version. </summary>

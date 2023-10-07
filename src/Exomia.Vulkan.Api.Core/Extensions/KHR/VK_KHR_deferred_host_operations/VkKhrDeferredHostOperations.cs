@@ -26,6 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_deferred_host_operations.html
 ///     </a>
 /// </summary>
+[VkDeviceExt]
 public static unsafe class VkKhrDeferredHostOperations
 {
     /// <summary> The spec version. </summary>

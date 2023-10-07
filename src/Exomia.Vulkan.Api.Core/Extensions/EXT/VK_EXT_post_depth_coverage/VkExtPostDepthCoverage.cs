@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_post_depth_coverage.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_post_depth_coverage.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkExtPostDepthCoverage
 {
     /// <summary> The spec version. </summary>

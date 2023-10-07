@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_imageless_framebuffer.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_imageless_framebuffer.html</a>
 /// </summary>
 [VkDepends("VK_KHR_maintenance2+VK_KHR_image_format_list+VK_KHR_get_physical_device_properties2")]
+[VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_imageless_framebuffer.html#_deprecation_state")]
 public static class VkKhrImagelessFramebuffer
 {

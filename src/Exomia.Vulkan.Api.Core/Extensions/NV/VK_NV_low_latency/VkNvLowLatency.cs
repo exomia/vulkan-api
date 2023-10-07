@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_low_latency.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_low_latency.html</a>
 /// </summary>
+[VkDeviceExt]
 public static class VkNvLowLatency
 {
     /// <summary> The spec version. </summary>
