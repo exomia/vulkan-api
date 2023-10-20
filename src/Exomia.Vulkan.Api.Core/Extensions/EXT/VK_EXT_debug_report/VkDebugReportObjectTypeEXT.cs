@@ -344,6 +344,18 @@ public enum VkDebugReportObjectTypeEXT
     VK_DEBUG_REPORT_OBJECT_TYPE_ACCELERATION_STRUCTURE_NV_EXT = 1000165000,
 
     /// <summary>
+    ///     VK_DEBUG_REPORT_OBJECT_TYPE_CUDA_MODULE_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDebugReportObjectTypeEXT">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDebugReportObjectTypeEXT</a>
+    /// </summary>
+    VK_DEBUG_REPORT_OBJECT_TYPE_CUDA_MODULE_NV = 1000307000,
+
+    /// <summary>
+    ///     VK_DEBUG_REPORT_OBJECT_TYPE_CUDA_FUNCTION_NV<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDebugReportObjectTypeEXT">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDebugReportObjectTypeEXT</a>
+    /// </summary>
+    VK_DEBUG_REPORT_OBJECT_TYPE_CUDA_FUNCTION_NV = 1000307001,
+
+    /// <summary>
     ///     VK_DEBUG_REPORT_OBJECT_TYPE_BUFFER_COLLECTION_FUCHSIA_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDebugReportObjectTypeEXT">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDebugReportObjectTypeEXT</a>
     /// </summary>
