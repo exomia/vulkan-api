@@ -20,10 +20,10 @@ namespace Exomia.Vulkan.Api.Core;
 [StructLayout(LayoutKind.Sequential)]
 public struct VkCopyMemoryIndirectCommandNV
 {
-    /// <summary>srcAddress is the starting address of the source host or device memory to copy from.</summary>
+    /// <summary>srcAddress is the starting address of the source device memory to copy from.</summary>
     public VkDeviceAddress srcAddress;
 
-    /// <summary>dstAddress is the starting address of the destination host or device memory to copy to.</summary>
+    /// <summary>dstAddress is the starting address of the destination device memory to copy to.</summary>
     public VkDeviceAddress dstAddress;
 
     /// <summary>size is the size of the copy in bytes.</summary>

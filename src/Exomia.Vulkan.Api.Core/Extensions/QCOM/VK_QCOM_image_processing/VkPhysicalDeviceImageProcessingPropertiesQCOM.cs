@@ -45,7 +45,7 @@ public unsafe struct VkPhysicalDeviceImageProcessingPropertiesQCOM
 
     /// <summary>
     ///     maxWeightFilterPhases is the maximum value that can be specified for
-    ///     VkImageViewSampleWeightCreateInfoQCOM::numPhases. in weight image samplingoperations.
+    ///     VkImageViewSampleWeightCreateInfoQCOM::numPhases in weight image sampling operations.
     /// </summary>
     public uint maxWeightFilterPhases;
 
@@ -56,8 +56,8 @@ public unsafe struct VkPhysicalDeviceImageProcessingPropertiesQCOM
     public VkExtent2D maxWeightFilterDimension;
 
     /// <summary>
-    ///     maxBlockMatchRegion is a VkExtent2D describing the largest dimensions (width and height) that can be specified
-    ///     for blockSize in block matching operations.
+    ///     maxBlockMatchRegion is a VkExtent2D describing the largest dimensions (width and height) that can be
+    ///     specified for blockSize in block matching operations.
     /// </summary>
     public VkExtent2D maxBlockMatchRegion;
 

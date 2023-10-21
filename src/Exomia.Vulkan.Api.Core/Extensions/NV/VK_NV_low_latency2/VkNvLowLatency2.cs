@@ -72,18 +72,65 @@ public static unsafe class VkNvLowLatency2
         VkLatencySleepModeInfoNV* /*pSleepModeInfo*/,
         VkResult> vkSetLatencySleepModeNV = null;
 
+    /// <summary>
+    ///     vkLatencySleepNV - Trigger low latency mode Sleep -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkLatencySleepNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkLatencySleepNV.html</a>
+    /// </summary>
+    /// <param name="device">device is the device associated with swapchain.</param>
+    /// <param name="swapchain">
+    ///     swapchain is the swapchain to delay associated CPU work based on VkLatencySubmissionPresentIdNV
+    ///     submissions.
+    /// </param>
+    /// <param name="pSleepInfo">
+    ///     pSleepInfo is a pointer to a VkLatencySleepInfoNV structure specifying the parameters of the
+    ///     latency sleep.
+    /// </param>
+    /// <remarks>
+    ///     <list type="table">
+    ///         <item>
+    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///         </item>
+    ///         <item>
+    ///             <term>errorcodes</term><description>VK_ERROR_UNKNOWN</description>
+    ///         </item>
+    ///     </list>
+    /// </remarks>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkSwapchainKHR /*swapchain*/,
         VkLatencySleepInfoNV* /*pSleepInfo*/,
         VkResult> vkLatencySleepNV = null;
 
+    /// <summary>
+    ///     vkSetLatencyMarkerNV - Pass in marker for timing info -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetLatencyMarkerNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetLatencyMarkerNV.html</a>
+    /// </summary>
+    /// <param name="device">device is the device associated with swapchain.</param>
+    /// <param name="swapchain">swapchain is the swapchain to capture timestamps on.</param>
+    /// <param name="pLatencyMarkerInfo">
+    ///     VUID-vkSetLatencyMarkerNV-pLatencyMarkerInfo-parameter pLatencyMarkerInfo must be a
+    ///     valid pointer to a valid VkSetLatencyMarkerInfoNV structure
+    /// </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkSwapchainKHR /*swapchain*/,
         VkSetLatencyMarkerInfoNV* /*pLatencyMarkerInfo*/,
         void> vkSetLatencyMarkerNV = null;
 
+    /// <summary>
+    ///     vkGetLatencyTimingsNV - Get latency marker results -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetLatencyTimingsNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetLatencyTimingsNV.html</a>
+    /// </summary>
+    /// <param name="device">device is the device associated with swapchain.</param>
+    /// <param name="swapchain">swapchain is the swapchain to return data from.</param>
+    /// <param name="pTimingCount">
+    ///     pTimingCount is a pointer to an integer related to the number of of previous frames of
+    ///     latency data available or queried, as described below.
+    /// </param>
+    /// <param name="pLatencyMarkerInfo">
+    ///     VUID-vkGetLatencyTimingsNV-pLatencyMarkerInfo-parameter pLatencyMarkerInfo must be a
+    ///     valid pointer to a VkGetLatencyMarkerInfoNV structure
+    /// </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkSwapchainKHR /*swapchain*/,

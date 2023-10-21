@@ -44,8 +44,8 @@ public unsafe struct VkPhysicalDeviceImageProcessing2PropertiesQCOM
     public void* pNext;
 
     /// <summary>
-    ///     maxBlockMatchWindow is a VkExtent2D describing the largest dimensions (width and height) that can be specified
-    ///     for the block match window.
+    ///     maxBlockMatchWindow is a VkExtent2D describing the largest dimensions (width and height) that can be
+    ///     specified for the block match window.
     /// </summary>
     public VkExtent2D maxBlockMatchWindow;
 }

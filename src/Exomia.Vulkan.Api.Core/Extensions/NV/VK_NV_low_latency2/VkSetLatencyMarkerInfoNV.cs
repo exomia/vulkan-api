@@ -14,8 +14,8 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkSetLatencyMarkerInfoNV -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSetLatencyMarkerInfoNV">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSetLatencyMarkerInfoNV</a>
+///     VkSetLatencyMarkerInfoNV - Structure specifying the parameters of vkSetLatencyMarkerNV -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSetLatencyMarkerInfoNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSetLatencyMarkerInfoNV.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkSetLatencyMarkerInfoNV
@@ -23,11 +23,18 @@ public unsafe struct VkSetLatencyMarkerInfoNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_SET_LATENCY_MARKER_INFO_NV;
 
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
+    /// <summary>
+    ///     presentId is an application provided value that is used to associate the timestamp with a vkQueuePresentKHR
+    ///     command using VkPresentIdKHR::pPresentIds for a given present.
+    /// </summary>
     public ulong presentID;
 
+    /// <summary>marker is the type of timestamp to be recorded.</summary>
     public VkLatencyMarkerNV marker;
 }

@@ -14,8 +14,8 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkGetLatencyMarkerInfoNV -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkGetLatencyMarkerInfoNV">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkGetLatencyMarkerInfoNV</a>
+///     VkGetLatencyMarkerInfoNV - Structure specifying the parameters of vkGetLatencyTimingsNV -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGetLatencyMarkerInfoNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGetLatencyMarkerInfoNV.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkGetLatencyMarkerInfoNV
@@ -23,9 +23,12 @@ public unsafe struct VkGetLatencyMarkerInfoNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_GET_LATENCY_MARKER_INFO_NV;
 
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
+    /// <summary>pNext is either NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
+    /// <summary>pTimings is either NULL or a pointer to an array of VkLatencyTimingsFrameReportNV structures.</summary>
     public VkLatencyTimingsFrameReportNV* pTimings;
 }
