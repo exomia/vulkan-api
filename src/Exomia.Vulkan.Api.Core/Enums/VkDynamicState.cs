@@ -68,22 +68,22 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_LINE_WIDTH = 2,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_DEPTH_BIAS specifies that any instance of
+    ///     VK_DYNAMIC_STATE_DEPTH_BIAS specifies that     any instance of
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDepthBiasRepresentationInfoEXT.html">
     ///         VkDepthBiasRepresentationInfoEXT
     ///     </a>
-    ///     included in the pNext chain of
+    ///     included in the     pNext chain of
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
-    ///     as well as the depthBiasConstantFactor, depthBiasClamp and depthBiasSlopeFactor states in
+    ///     as     well as     the depthBiasConstantFactor, depthBiasClamp and     depthBiasSlopeFactor states in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
-    ///     will be ignored and mustbe set dynamically with either
+    ///     will be ignored and must    be set dynamically with either
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBias.html">vkCmdSetDepthBias</a>
     ///     or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBias2EXT.html">vkCmdSetDepthBias2EXT</a>

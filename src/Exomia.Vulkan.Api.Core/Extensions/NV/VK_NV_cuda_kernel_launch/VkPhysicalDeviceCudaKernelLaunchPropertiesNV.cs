@@ -52,6 +52,6 @@ public unsafe struct VkPhysicalDeviceCudaKernelLaunchPropertiesNV
     /// <summary> computeCapabilityMinor indicates the minor version number of the compute code.</summary>
     public uint computeCapabilityMinor;
 
-    /// <summary> computeCapabilityMajor indicates the minor version number of the compute code.</summary>
+    /// <summary> computeCapabilityMajor indicates the major version number of the compute code.</summary>
     public uint computeCapabilityMajor;
 }
