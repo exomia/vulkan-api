@@ -99,10 +99,10 @@ public static unsafe class VkNvDeviceGeneratedCommandsCompute
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPipelineIndirectDeviceAddressNV.html
     ///     </a>
     /// </summary>
-    /// <param name="device"> VUID-vkGetPipelineIndirectDeviceAddressNV-device-parameter device must be a valid VkDevice handle</param>
+    /// <param name="device">device is the logical device on which the pipeline was created.</param>
     /// <param name="pInfo">
-    ///     VUID-vkGetPipelineIndirectDeviceAddressNV-pInfo-parameter pInfo must be a valid pointer to a valid
-    ///     VkPipelineIndirectDeviceAddressInfoNV structure
+    ///     pInfo is a pointer to a VkPipelineIndirectDeviceAddressInfoNV structure specifying the pipeline to
+    ///     retrieve the address for.
     /// </param>
     public static readonly delegate*<
         VkDevice /*device*/,

@@ -27,48 +27,24 @@ public unsafe struct VkComputePipelineIndirectBufferInfoNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_INDIRECT_BUFFER_INFO_NV;
 
-    /// <summary>
-    ///     sType<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV
-    ///     </a>
-    /// </summary>
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
-    /// <summary>
-    ///     pNext<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV
-    ///     </a>
-    /// </summary>
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     deviceAddress<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV
-    ///     </a>
-    /// </summary>
+    /// <summary>deviceAddress is the address where the pipeline&#8217;s metadata will be stored.</summary>
     public VkDeviceAddress deviceAddress;
 
     /// <summary>
-    ///     size<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV
-    ///     </a>
+    ///     size is the size of pipeline&#8217;s metadata that was queried using
+    ///     vkGetPipelineIndirectMemoryRequirementsNV.
     /// </summary>
     public VkDeviceSize size;
 
     /// <summary>
-    ///     pipelineDeviceAddressCaptureReplay<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkComputePipelineIndirectBufferInfoNV
-    ///     </a>
+    ///     pipelineDeviceAddressCaptureReplay is the device address where pipeline&#8217;s metadata was originally saved
+    ///     and can now be used to re-populate deviceAddress for replay.
     /// </summary>
     public VkDeviceAddress pipelineDeviceAddressCaptureReplay;
 }

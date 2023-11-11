@@ -23,6 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_low_latency2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_low_latency2.html</a>
 /// </summary>
+[VkDepends("VK_VERSION_1_2,VK_KHR_timeline_semaphore")]
 [VkDeviceExt]
 public static unsafe class VkNvLowLatency2
 {

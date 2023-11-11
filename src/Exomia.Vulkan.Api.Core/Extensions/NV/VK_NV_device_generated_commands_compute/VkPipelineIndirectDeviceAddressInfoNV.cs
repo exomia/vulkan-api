@@ -26,39 +26,18 @@ public unsafe struct VkPipelineIndirectDeviceAddressInfoNV
     /// <summary> The stype of this structure. </summary>
     public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_INDIRECT_DEVICE_ADDRESS_INFO_NV;
 
-    /// <summary>
-    ///     sType<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineIndirectDeviceAddressInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineIndirectDeviceAddressInfoNV
-    ///     </a>
-    /// </summary>
+    /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
-    /// <summary>
-    ///     pNext<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineIndirectDeviceAddressInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineIndirectDeviceAddressInfoNV
-    ///     </a>
-    /// </summary>
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
     /// <summary>
-    ///     pipelineBindPoint<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineIndirectDeviceAddressInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineIndirectDeviceAddressInfoNV
-    ///     </a>
+    ///     pipelineBindPoint is a VkPipelineBindPoint value specifying the type of pipeline whose device address is being
+    ///     queried.
     /// </summary>
     public VkPipelineBindPoint pipelineBindPoint;
 
-    /// <summary>
-    ///     pipeline<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineIndirectDeviceAddressInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineIndirectDeviceAddressInfoNV
-    ///     </a>
-    /// </summary>
+    /// <summary>pipeline specifies the pipeline whose device address is being queried.</summary>
     public VkPipeline pipeline;
 }
