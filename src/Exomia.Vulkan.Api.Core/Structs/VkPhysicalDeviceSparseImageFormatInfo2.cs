@@ -35,7 +35,7 @@ public unsafe struct VkPhysicalDeviceSparseImageFormatInfo2
     /// <summary>format is the image format.</summary>
     public VkFormat format;
 
-    /// <summary>type is the dimensionality of image.</summary>
+    /// <summary>type is the dimensionality of the image.</summary>
     public VkImageType type;
 
     /// <summary>samples is a VkSampleCountFlagBits value specifying the number of samples per texel.</summary>

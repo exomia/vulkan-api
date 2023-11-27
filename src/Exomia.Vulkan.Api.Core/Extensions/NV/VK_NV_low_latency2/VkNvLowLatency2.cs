@@ -28,7 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static unsafe class VkNvLowLatency2
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_NV_LOW_LATENCY_2_SPEC_VERSION = 1;
+    public const uint VK_NV_LOW_LATENCY_2_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_NV_LOW_LATENCY_2_EXTENSION_NAME = "VK_NV_low_latency2";
@@ -124,10 +124,6 @@ public static unsafe class VkNvLowLatency2
     /// </summary>
     /// <param name="device">device is the device associated with swapchain.</param>
     /// <param name="swapchain">swapchain is the swapchain to return data from.</param>
-    /// <param name="pTimingCount">
-    ///     pTimingCount is a pointer to an integer related to the number of of previous frames of
-    ///     latency data available or queried, as described below.
-    /// </param>
     /// <param name="pLatencyMarkerInfo">
     ///     VUID-vkGetLatencyTimingsNV-pLatencyMarkerInfo-parameter pLatencyMarkerInfo must be a
     ///     valid pointer to a VkGetLatencyMarkerInfoNV structure
@@ -135,7 +131,6 @@ public static unsafe class VkNvLowLatency2
     public static readonly delegate*<
         VkDevice /*device*/,
         VkSwapchainKHR /*swapchain*/,
-        uint* /*pTimingCount*/,
         VkGetLatencyMarkerInfoNV* /*pLatencyMarkerInfo*/,
         void> vkGetLatencyTimingsNV = null;
 
@@ -193,10 +188,9 @@ public static unsafe class VkNvLowLatency2
             *pvkSetLatencyMarkerNV = (delegate*<VkDevice, VkSwapchainKHR, VkSetLatencyMarkerInfoNV*, void>)GetVkFunction(device, "\u6b76\u6553\u4c74\u7461\u6e65\u7963\u614d\u6b72\u7265\u564e\u0000");
         }
 
-        fixed (delegate*<VkDevice, VkSwapchainKHR, uint*, VkGetLatencyMarkerInfoNV*, void>* pvkGetLatencyTimingsNV = &vkGetLatencyTimingsNV)
+        fixed (delegate*<VkDevice, VkSwapchainKHR, VkGetLatencyMarkerInfoNV*, void>* pvkGetLatencyTimingsNV = &vkGetLatencyTimingsNV)
         {
-            *pvkGetLatencyTimingsNV =
-                (delegate*<VkDevice, VkSwapchainKHR, uint*, VkGetLatencyMarkerInfoNV*, void>)GetVkFunction(device, "\u6b76\u6547\u4c74\u7461\u6e65\u7963\u6954\u696d\u676e\u4e73\u0056");
+            *pvkGetLatencyTimingsNV = (delegate*<VkDevice, VkSwapchainKHR, VkGetLatencyMarkerInfoNV*, void>)GetVkFunction(device, "\u6b76\u6547\u4c74\u7461\u6e65\u7963\u6954\u696d\u676e\u4e73\u0056");
         }
 
         fixed (delegate*<VkQueue, VkOutOfBandQueueTypeInfoNV*, void>* pvkQueueNotifyOutOfBandNV = &vkQueueNotifyOutOfBandNV)

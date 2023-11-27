@@ -204,8 +204,8 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 0x400000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_OPACITY_MICROMAP_BIT_EXTspecifies that the pipeline can be used with
-    ///     acceleration structures which reference an opacity micromap array.
+    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_OPACITY_MICROMAP_BIT_EXTspecifies that the ray tracing pipeline can be used
+    ///     with acceleration structures which reference an opacity micromap array.
     /// </summary>
     VK_PIPELINE_CREATE_2_RAY_TRACING_OPACITY_MICROMAP_BIT_EXT = 0x1000000,
 
@@ -234,8 +234,8 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_PROTECTED_ACCESS_ONLY_BIT_EXT = 0x40000000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_DISPLACEMENT_MICROMAP_BIT_NVspecifies that the pipeline can be used with
-    ///     aceleration structures which reference a displacement micromap array.
+    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_DISPLACEMENT_MICROMAP_BIT_NVspecifies that the ray tracing pipeline can be
+    ///     used with acceleration structures which reference a displacement micromap array.
     /// </summary>
     VK_PIPELINE_CREATE_2_RAY_TRACING_DISPLACEMENT_MICROMAP_BIT_NV = 0x10000000,
 
