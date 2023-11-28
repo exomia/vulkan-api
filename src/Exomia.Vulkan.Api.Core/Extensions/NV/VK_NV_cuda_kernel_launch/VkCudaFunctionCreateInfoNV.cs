@@ -26,10 +26,10 @@ public unsafe struct VkCudaFunctionCreateInfoNV
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
 
-    /// <summary>pNext may be NULL or may be a pointer to a structure extending this structure.</summary>
+    /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>module must be the CUDA VkCudaModuleNV module in which the function resides.</summary>
+    /// <summary>module is the CUDA VkCudaModuleNV module in which the function resides.</summary>
     public VkCudaModuleNV module;
 
     /// <summary>pName is a null-terminated UTF-8 string containing the name of the shader entry point for this stage.</summary>

@@ -1025,7 +1025,7 @@ public static partial class Vk
     ///     properties.
     /// </param>
     /// <param name="format">format is the image format.</param>
-    /// <param name="type">type is the dimensionality of image.</param>
+    /// <param name="type">type is the dimensionality of the image.</param>
     /// <param name="samples">samples is a VkSampleCountFlagBits value specifying the number of samples per texel.</param>
     /// <param name="usage">usage is a bitmask describing the intended usage of the image.</param>
     /// <param name="tiling">tiling is the tiling arrangement of the texel blocks in memory.</param>

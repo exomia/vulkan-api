@@ -29,6 +29,12 @@ public unsafe struct VkGetLatencyMarkerInfoNV
     /// <summary>pNext is either NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
+    /// <summary>
+    ///     timingCount is an integer related to the number of of previous frames of latency data available or queried, as
+    ///     described below.
+    /// </summary>
+    public uint timingCount;
+
     /// <summary>pTimings is either NULL or a pointer to an array of VkLatencyTimingsFrameReportNV structures.</summary>
     public VkLatencyTimingsFrameReportNV* pTimings;
 }
