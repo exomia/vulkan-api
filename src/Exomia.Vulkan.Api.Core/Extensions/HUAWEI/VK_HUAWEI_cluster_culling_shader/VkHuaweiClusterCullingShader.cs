@@ -31,7 +31,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static unsafe class VkHuaweiClusterCullingShader
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_HUAWEI_CLUSTER_CULLING_SHADER_SPEC_VERSION = 2;
+    public const uint VK_HUAWEI_CLUSTER_CULLING_SHADER_SPEC_VERSION = 3;
 
     /// <summary> The extension name. </summary>
     public const string VK_HUAWEI_CLUSTER_CULLING_SHADER_EXTENSION_NAME = "VK_HUAWEI_cluster_culling_shader";
