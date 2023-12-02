@@ -28,10 +28,11 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkSpecialuse("debugging")]
 [VkInstanceExt]
+[Obsolete("deprecated by VK_EXT_layer_settings", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_validation_features.html#_deprecation_state")]
 public static class VkExtValidationFeatures
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_EXT_VALIDATION_FEATURES_SPEC_VERSION = 5;
+    public const uint VK_EXT_VALIDATION_FEATURES_SPEC_VERSION = 6;
 
     /// <summary> The extension name. </summary>
     public const string VK_EXT_VALIDATION_FEATURES_EXTENSION_NAME = "VK_EXT_validation_features";
