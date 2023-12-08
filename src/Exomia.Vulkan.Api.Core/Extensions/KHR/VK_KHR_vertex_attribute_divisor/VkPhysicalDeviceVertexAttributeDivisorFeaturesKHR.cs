@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT - Structure describing if fetching of vertex attribute may be
+///     VkPhysicalDeviceVertexAttributeDivisorFeaturesKHR - Structure describing if fetching of vertex attribute may be
 ///     repeated for instanced rendering -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesKHR.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesKHR.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -30,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPhysicalDeviceFeatures2,VkDeviceCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT
+public unsafe struct VkPhysicalDeviceVertexAttributeDivisorFeaturesKHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_KHR;
 
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
@@ -42,7 +42,7 @@ public unsafe struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT
     public void* pNext;
 
     /// <summary>
-    ///     vertexAttributeInstanceRateDivisor specifies whether vertex attribute fetching may be repeated in case of
+    ///     vertexAttributeInstanceRateDivisor specifies whether vertex attribute fetching may be repeated in the case of
     ///     instanced rendering.
     /// </summary>
     public VkBool32 vertexAttributeInstanceRateDivisor;

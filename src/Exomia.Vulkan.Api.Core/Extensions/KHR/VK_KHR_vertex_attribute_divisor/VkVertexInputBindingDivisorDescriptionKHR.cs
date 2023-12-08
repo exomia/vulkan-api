@@ -14,14 +14,14 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkVertexInputBindingDivisorDescriptionEXT - Structure specifying a divisor used in instanced rendering -
+///     VkVertexInputBindingDivisorDescriptionKHR - Structure specifying a divisor used in instanced rendering -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputBindingDivisorDescriptionKHR.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputBindingDivisorDescriptionKHR.html
 ///     </a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
-public struct VkVertexInputBindingDivisorDescriptionEXT
+public struct VkVertexInputBindingDivisorDescriptionKHR
 {
     /// <summary>binding is the binding number for which the divisor is specified.</summary>
     public uint binding;
@@ -31,7 +31,7 @@ public struct VkVertexInputBindingDivisorDescriptionEXT
     ///     instanced rendering is enabled. For example, if the divisor is N, the same vertex attribute will be applied to N
     ///     successive instances before moving on to the next vertex attribute. The maximum value of divisor is
     ///     implementation-dependent and can be queried using
-    ///     VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT::maxVertexAttribDivisor. A value of 0 can be used for the
+    ///     VkPhysicalDeviceVertexAttributeDivisorPropertiesKHR::maxVertexAttribDivisor. A value of 0 can be used for the
     ///     divisor if the vertexAttributeInstanceRateZeroDivisor feature is enabled. In this case, the same vertex attribute
     ///     will be applied to all instances.
     /// </summary>

@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     </a>
 /// </summary>
 [Flags]
-public enum VkPhysicalDeviceSchedulingControlsFlagBitsARM
+public enum VkPhysicalDeviceSchedulingControlsFlagBitsARM : ulong
 {
     /// <summary>
     ///     VK_PHYSICAL_DEVICE_SCHEDULING_CONTROLS_SHADER_CORE_COUNT_ARMindicates that a

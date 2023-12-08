@@ -39,7 +39,7 @@ public unsafe struct VkPipelineRasterizationStateCreateInfo
     /// <summary>
     ///     depthClampEnable controls whether to clamp the fragment&#8217;s depth values as described in Depth Test. If
     ///     the pipeline is not created with VkPipelineRasterizationDepthClipStateCreateInfoEXT present then enabling depth
-    ///     clamp will also disable clipping primitives to the z planes of the frustrum as described in Primitive Clipping.
+    ///     clamp will also disable clipping primitives to the z planes of the frustum as described in Primitive Clipping.
     ///     Otherwise depth clipping is controlled by the state set in VkPipelineRasterizationDepthClipStateCreateInfoEXT.
     /// </summary>
     public VkBool32 depthClampEnable;

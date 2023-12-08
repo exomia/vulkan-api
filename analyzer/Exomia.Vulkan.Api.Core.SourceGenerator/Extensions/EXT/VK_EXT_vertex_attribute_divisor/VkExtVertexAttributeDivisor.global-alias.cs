@@ -1,0 +1,3 @@
+global using VkVertexInputBindingDivisorDescriptionEXT = Exomia.Vulkan.Api.Core.VkVertexInputBindingDivisorDescriptionKHR;
+global using VkPipelineVertexInputDivisorStateCreateInfoEXT = Exomia.Vulkan.Api.Core.VkPipelineVertexInputDivisorStateCreateInfoKHR;
+global using VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT = Exomia.Vulkan.Api.Core.VkPhysicalDeviceVertexAttributeDivisorFeaturesKHR;

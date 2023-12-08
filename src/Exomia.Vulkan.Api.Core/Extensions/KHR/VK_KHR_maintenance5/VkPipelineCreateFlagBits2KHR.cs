@@ -130,14 +130,24 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_LIBRARY_BIT_KHR = 0x800,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_SKIP_TRIANGLES_BIT_KHR specifies that triangle primitives will be skipped
-    ///     during traversal using OpTraceRayKHR.
+    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_SKIP_TRIANGLES_BIT_KHR specifies that triangle primitives will be skipped during
+    ///     traversal using
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#glossary-pipeline-trace-ray">
+    ///         pipeline
+    ///         trace ray
+    ///     </a>
+    ///     instructions.
     /// </summary>
     VK_PIPELINE_CREATE_2_RAY_TRACING_SKIP_TRIANGLES_BIT_KHR = 0x1000,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_SKIP_AABBS_BIT_KHR specifies that AABB primitives will be skipped during
-    ///     traversal using OpTraceRayKHR.
+    ///     VK_PIPELINE_CREATE_2_RAY_TRACING_SKIP_AABBS_BIT_KHR specifies that AABB primitives will be skipped during traversal
+    ///     using
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#glossary-pipeline-trace-ray">
+    ///         pipeline
+    ///         trace ray
+    ///     </a>
+    ///     instructions.
     /// </summary>
     VK_PIPELINE_CREATE_2_RAY_TRACING_SKIP_AABBS_BIT_KHR = 0x2000,
 

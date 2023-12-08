@@ -14,14 +14,14 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkCalibratedTimestampInfoEXT - Structure specifying the input parameters of a calibrated timestamp query -
-///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCalibratedTimestampInfoEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCalibratedTimestampInfoEXT.html</a>
+///     VkCalibratedTimestampInfoKHR - Structure specifying the input parameters of a calibrated timestamp query -
+///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCalibratedTimestampInfoKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCalibratedTimestampInfoKHR.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkCalibratedTimestampInfoEXT
+public unsafe struct VkCalibratedTimestampInfoKHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_KHR;
 
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
@@ -30,8 +30,8 @@ public unsafe struct VkCalibratedTimestampInfoEXT
     public void* pNext;
 
     /// <summary>
-    ///     timeDomain is a VkTimeDomainEXT value specifying the time domain from which the calibrated timestamp value
+    ///     timeDomain is a VkTimeDomainKHR value specifying the time domain from which the calibrated timestamp value
     ///     should be returned.
     /// </summary>
-    public VkTimeDomainEXT timeDomain;
+    public VkTimeDomainKHR timeDomain;
 }
