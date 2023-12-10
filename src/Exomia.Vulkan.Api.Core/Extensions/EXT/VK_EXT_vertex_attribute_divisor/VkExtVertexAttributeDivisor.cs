@@ -28,6 +28,8 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 [VkDeviceExt]
+[Obsolete(
+    "promoted to VK_KHR_vertex_attribute_divisor", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_vertex_attribute_divisor.html#_deprecation_state")]
 public static class VkExtVertexAttributeDivisor
 {
     /// <summary> The spec version. </summary>

@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelineVertexInputDivisorStateCreateInfoEXT - Structure specifying vertex attributes assignment during instanced
+///     VkPipelineVertexInputDivisorStateCreateInfoKHR - Structure specifying vertex attributes assignment during instanced
 ///     rendering -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoKHR.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoKHR.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -30,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPipelineVertexInputStateCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPipelineVertexInputDivisorStateCreateInfoEXT
+public unsafe struct VkPipelineVertexInputDivisorStateCreateInfoKHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_KHR;
 
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
@@ -45,8 +45,8 @@ public unsafe struct VkPipelineVertexInputDivisorStateCreateInfoEXT
     public uint vertexBindingDivisorCount;
 
     /// <summary>
-    ///     pVertexBindingDivisors is a pointer to an array of VkVertexInputBindingDivisorDescriptionEXT structures
+    ///     pVertexBindingDivisors is a pointer to an array of VkVertexInputBindingDivisorDescriptionKHR structures
     ///     specifying the divisor value for each binding.
     /// </summary>
-    public VkVertexInputBindingDivisorDescriptionEXT* pVertexBindingDivisors;
+    public VkVertexInputBindingDivisorDescriptionKHR* pVertexBindingDivisors;
 }

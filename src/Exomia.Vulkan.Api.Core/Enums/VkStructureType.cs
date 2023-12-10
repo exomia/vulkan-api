@@ -2804,12 +2804,6 @@ public enum VkStructureType
     VK_STRUCTURE_TYPE_PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD = 1000183000,
 
     /// <summary>
-    ///     VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
-    /// </summary>
-    VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_EXT = 1000184000,
-
-    /// <summary>
     ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
@@ -2880,18 +2874,6 @@ public enum VkStructureType
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT = 1000190000,
-
-    /// <summary>
-    ///     VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
-    /// </summary>
-    VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT = 1000190001,
-
-    /// <summary>
-    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
-    /// </summary>
-    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT = 1000190002,
 
     /// <summary>
     ///     VK_STRUCTURE_TYPE_PRESENT_FRAME_TOKEN_GGP<br />
@@ -5150,6 +5132,24 @@ public enum VkStructureType
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_ATTACHMENT_FEEDBACK_LOOP_DYNAMIC_STATE_FEATURES_EXT = 1000524000,
 
     /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_KHR<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_KHR = 1000525000,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_KHR<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_KHR = 1000190001,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_KHR<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_KHR = 1000190002,
+
+    /// <summary>
     ///     VK_STRUCTURE_TYPE_SCREEN_BUFFER_PROPERTIES_QNX<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
@@ -5184,6 +5184,12 @@ public enum VkStructureType
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LAYERED_DRIVER_PROPERTIES_MSFT = 1000530000,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_KHR<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_KHR = 1000184000,
 
     /// <summary>
     ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_POOL_OVERALLOCATION_FEATURES_NV<br />
@@ -5790,6 +5796,24 @@ public enum VkStructureType
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
     /// </summary>
     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES_KHR = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_EXT = VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_KHR,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_KHR,
+
+    /// <summary>
+    ///     VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkStructureType</a>
+    /// </summary>
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_KHR,
 
     /// <summary>
     ///     VK_STRUCTURE_TYPE_PIPELINE_CREATION_FEEDBACK_CREATE_INFO_EXT<br />
