@@ -28,7 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static unsafe class VkKhrVideoDecodeQueue
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION = 7;
+    public const uint VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION = 8;
 
     /// <summary> The extension name. </summary>
     public const string VK_KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME = "VK_KHR_video_decode_queue";

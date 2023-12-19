@@ -42,7 +42,7 @@ public unsafe struct VkVideoDecodeH265ProfileInfoKHR
 
     /// <summary>
     ///     stdProfileIdc is a StdVideoH265ProfileIdc value specifying the H.265 codec profile IDC, as defined in section
-    ///     A3 of the ITU-T H.265 Specification.
+    ///     A.3 of the ITU-T H.265 Specification.
     /// </summary>
     public StdVideoH265ProfileIdc stdProfileIdc;
 }

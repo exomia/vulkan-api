@@ -82,6 +82,12 @@ public enum VkDescriptorSetLayoutCreateFlagBits
     VK_DESCRIPTOR_SET_LAYOUT_CREATE_HOST_ONLY_POOL_BIT_EXT = 0x4,
 
     /// <summary>
+    ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_PER_STAGE_BIT_NV specifies that binding numbers in descriptor sets using this
+    ///     layout may represent different resources and/or types of resources in each stage.
+    /// </summary>
+    VK_DESCRIPTOR_SET_LAYOUT_CREATE_PER_STAGE_BIT_NV = 0x40,
+
+    /// <summary>
     ///     VK_DESCRIPTOR_SET_LAYOUT_CREATE_UPDATE_AFTER_BIND_POOL_BITspecifies that descriptor sets using this layout
     ///     must be allocated from a descriptor pool created with the VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT bit set.
     ///     Descriptor set layouts created with this bit set have alternate limits for the maximum number of descriptors

@@ -1,0 +1,3 @@
+global using VkVideoEncodeH264CapabilityFlagsKHR = Exomia.Vulkan.Api.Core.VkVideoEncodeH264CapabilityFlagBitsKHR;
+global using VkVideoEncodeH264StdFlagsKHR = Exomia.Vulkan.Api.Core.VkVideoEncodeH264StdFlagBitsKHR;
+global using VkVideoEncodeH264RateControlFlagsKHR = Exomia.Vulkan.Api.Core.VkVideoEncodeH264RateControlFlagBitsKHR;

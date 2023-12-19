@@ -210,6 +210,21 @@ public enum VkImageCreateFlagBits
     VK_IMAGE_CREATE_FRAGMENT_DENSITY_MAP_OFFSET_BIT_QCOM = 0x8000,
 
     /// <summary>
+    ///     VK_IMAGE_CREATE_VIDEO_PROFILE_INDEPENDENT_BIT_KHR specifies that the image can be used in
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-coding">
+    ///         video coding
+    ///         operations
+    ///     </a>
+    ///     without having to specify at image creation time the set of video profiles the image will be used
+    ///     with, except for images used only as
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#dpb">DPB</a> pictures, as long
+    ///     as the image is otherwise
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-profile-compatibility">compatible</a>
+    ///     with the video profile in question.
+    /// </summary>
+    VK_IMAGE_CREATE_VIDEO_PROFILE_INDEPENDENT_BIT_KHR = 0x100000,
+
+    /// <summary>
     ///     VK_IMAGE_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT specifies that the image can be used with a non-zero value of
     ///     the splitInstanceBindRegionCount member of a
     ///     <a

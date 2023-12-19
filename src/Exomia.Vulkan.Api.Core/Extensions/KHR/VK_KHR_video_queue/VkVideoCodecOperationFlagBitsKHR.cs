@@ -26,15 +26,43 @@ public enum VkVideoCodecOperationFlagBitsKHR
     /// <summary>VK_VIDEO_CODEC_OPERATION_NONE_KHR indicates no support for any video codec operations.</summary>
     VK_VIDEO_CODEC_OPERATION_NONE_KHR = 0,
 
-    /// <summary>VK_VIDEO_CODEC_OPERATION_ENCODE_H264_BIT_EXT specifies support for H.264 video encode operations.</summary>
-    VK_VIDEO_CODEC_OPERATION_ENCODE_H264_BIT_EXT = 0x10000,
+    /// <summary>
+    ///     VK_VIDEO_CODEC_OPERATION_ENCODE_H264_BIT_KHR specifies support for
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-h264">
+    ///         H.264 encode
+    ///         operations
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_VIDEO_CODEC_OPERATION_ENCODE_H264_BIT_KHR = 0x10000,
 
-    /// <summary>VK_VIDEO_CODEC_OPERATION_ENCODE_H265_BIT_EXT specifies support for H.265 video encode operations.</summary>
-    VK_VIDEO_CODEC_OPERATION_ENCODE_H265_BIT_EXT = 0x20000,
+    /// <summary>
+    ///     VK_VIDEO_CODEC_OPERATION_ENCODE_H265_BIT_KHR specifies support for
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-h265">
+    ///         H.265 encode
+    ///         operations
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_VIDEO_CODEC_OPERATION_ENCODE_H265_BIT_KHR = 0x20000,
 
-    /// <summary>VK_VIDEO_CODEC_OPERATION_DECODE_H264_BIT_KHR specifies support for H.264 video decode operations.</summary>
+    /// <summary>
+    ///     VK_VIDEO_CODEC_OPERATION_DECODE_H264_BIT_KHR specifies support for
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#decode-h264">
+    ///         H.264 decode
+    ///         operations
+    ///     </a>
+    ///     .
+    /// </summary>
     VK_VIDEO_CODEC_OPERATION_DECODE_H264_BIT_KHR = 0x1,
 
-    /// <summary>VK_VIDEO_CODEC_OPERATION_DECODE_H265_BIT_KHR specifies support for H.265 video decode operations.</summary>
+    /// <summary>
+    ///     VK_VIDEO_CODEC_OPERATION_DECODE_H265_BIT_KHR specifies support for
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#decode-h265">
+    ///         H.265 decode
+    ///         operations
+    ///     </a>
+    ///     .
+    /// </summary>
     VK_VIDEO_CODEC_OPERATION_DECODE_H265_BIT_KHR = 0x2
 }

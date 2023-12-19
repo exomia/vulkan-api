@@ -51,8 +51,8 @@ public unsafe struct VkVideoDecodeInfoKHR
     public VkVideoPictureResourceInfoKHR dstPictureResource;
 
     /// <summary>
-    ///     pSetupReferenceSlot is NULL or a pointer to a VkVideoReferenceSlotInfoKHR structure describing the DPB slot to
-    ///     activate and the video picture resource to use as the reconstructed picture to activate the DPB slot with.
+    ///     pSetupReferenceSlot is NULL or a pointer to a VkVideoReferenceSlotInfoKHR structure specifying the
+    ///     reconstructed picture information.
     /// </summary>
     public VkVideoReferenceSlotInfoKHR* pSetupReferenceSlot;
 
