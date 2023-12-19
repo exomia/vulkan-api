@@ -62,6 +62,17 @@ public enum VkBufferCreateFlagBits
     VK_BUFFER_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXT = 0x20,
 
     /// <summary>
+    ///     VK_BUFFER_CREATE_VIDEO_PROFILE_INDEPENDENT_BIT_KHR specifies that the buffer can be used in
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-coding">
+    ///         video coding
+    ///         operations
+    ///     </a>
+    ///     without having to specify at buffer creation time the set of video profiles the buffer will be
+    ///     used with.
+    /// </summary>
+    VK_BUFFER_CREATE_VIDEO_PROFILE_INDEPENDENT_BIT_KHR = 0x40,
+
+    /// <summary>
     ///     VK_BUFFER_CREATE_DEVICE_ADDRESS_CAPTURE_REPLAY_BIT specifies that the buffer&#8217;s address can be saved and
     ///     reused on a subsequent run (e.g. for trace capture and replay), see
     ///     <a

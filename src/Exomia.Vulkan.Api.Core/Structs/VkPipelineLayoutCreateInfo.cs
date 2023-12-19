@@ -17,6 +17,16 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VkPipelineLayoutCreateInfo - Structure specifying the parameters of a newly created pipeline layout object -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLayoutCreateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLayoutCreateInfo.html</a>
 /// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>structextends</term>
+///             <description>VkBindDescriptorSetsInfoKHR,VkPushConstantsInfoKHR,VkPushDescriptorSetInfoKHR,VkPushDescriptorSetWithTemplateInfoKHR,VkSetDescriptorBufferOffsetsInfoEXT,VkBindDescriptorBufferEmbeddedSamplersInfoEXT</description>
+///         </item>
+///     </list>
+/// </remarks>
+[VkStructExtends(
+    "VkBindDescriptorSetsInfoKHR,VkPushConstantsInfoKHR,VkPushDescriptorSetInfoKHR,VkPushDescriptorSetWithTemplateInfoKHR,VkSetDescriptorBufferOffsetsInfoEXT,VkBindDescriptorBufferEmbeddedSamplersInfoEXT")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkPipelineLayoutCreateInfo
 {

@@ -83,7 +83,7 @@ public enum VkDynamicState
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html">
     ///         VkPipelineRasterizationStateCreateInfo
     ///     </a>
-    ///     will be ignored and must    be set dynamically with either
+    ///     will be ignored and must    be set dynamically with
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBias.html">vkCmdSetDepthBias</a>
     ///     or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBias2EXT.html">vkCmdSetDepthBias2EXT</a>

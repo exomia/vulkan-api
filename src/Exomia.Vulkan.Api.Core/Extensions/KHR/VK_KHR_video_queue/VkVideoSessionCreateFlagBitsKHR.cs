@@ -30,11 +30,22 @@ public enum VkVideoSessionCreateFlagBitsKHR
     VK_VIDEO_SESSION_CREATE_PROTECTED_CONTENT_BIT_KHR = 0x1,
 
     /// <summary>
-    ///     VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_PARAMETER_OPTIMIZATIONS_BIT_KHRspecifies that the implementation is
-    ///     allowed to override video session parameters and other codec-specific encoding parameters to optimize video encode
-    ///     operations based on the specific use case defined by the
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-profiles">video profile</a>
-    ///     and the used video encode quality level.
+    ///     VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_PARAMETER_OPTIMIZATIONS_BIT_KHR<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVideoSessionCreateFlagBitsKHR">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVideoSessionCreateFlagBitsKHR
+    ///     </a>
     /// </summary>
-    VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_PARAMETER_OPTIMIZATIONS_BIT_KHR = 0x2
+    VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_PARAMETER_OPTIMIZATIONS_BIT_KHR = 0x2,
+
+    /// <summary>
+    ///     VK_VIDEO_SESSION_CREATE_INLINE_QUERIES_BIT_KHR specifies that queries within video coding scopes using the created
+    ///     video session are
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-inline-queries">
+    ///         executed
+    ///         inline
+    ///     </a>
+    ///     with video coding operations.
+    /// </summary>
+    VK_VIDEO_SESSION_CREATE_INLINE_QUERIES_BIT_KHR = 0x4
 }

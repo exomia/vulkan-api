@@ -19,14 +19,14 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkQueryResultStatusKHR
 {
-    /// <summary>VK_QUERY_RESULT_STATUS_ERROR_KHR specifies that operations did not complete successfully.</summary>
+    /// <summary>VK_QUERY_RESULT_STATUS_ERROR_KHR indicates that operations did not complete successfully.</summary>
     VK_QUERY_RESULT_STATUS_ERROR_KHR = -1,
 
-    /// <summary>VK_QUERY_RESULT_STATUS_NOT_READY_KHR specifies that the query result is not yet available.</summary>
+    /// <summary>VK_QUERY_RESULT_STATUS_NOT_READY_KHR indicates that the query result is not yet available.</summary>
     VK_QUERY_RESULT_STATUS_NOT_READY_KHR = 0,
 
     /// <summary>
-    ///     VK_QUERY_RESULT_STATUS_COMPLETE_KHR specifies that operations completed successfully and the query result is
+    ///     VK_QUERY_RESULT_STATUS_COMPLETE_KHR indicates that operations completed successfully and the query result is
     ///     available.
     /// </summary>
     VK_QUERY_RESULT_STATUS_COMPLETE_KHR = 1,

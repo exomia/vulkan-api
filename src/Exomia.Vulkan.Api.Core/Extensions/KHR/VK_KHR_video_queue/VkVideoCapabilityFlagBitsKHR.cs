@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkVideoCapabilityFlagBitsKHR
 {
     /// <summary>
-    ///     VK_VIDEO_CAPABILITY_PROTECTED_CONTENT_BIT_KHR specifies that video sessions support producing and consuming
+    ///     VK_VIDEO_CAPABILITY_PROTECTED_CONTENT_BIT_KHR indicates that video sessions support producing and consuming
     ///     protected content.
     /// </summary>
     VK_VIDEO_CAPABILITY_PROTECTED_CONTENT_BIT_KHR = 0x1,

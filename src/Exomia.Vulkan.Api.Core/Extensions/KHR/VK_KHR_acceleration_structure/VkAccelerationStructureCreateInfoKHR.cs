@@ -59,7 +59,8 @@ public unsafe struct VkAccelerationStructureCreateInfoKHR
 
     /// <summary>
     ///     deviceAddress is the device address requested for the acceleration structure if the
-    ///     accelerationStructureCaptureReplay feature is being used.
+    ///     accelerationStructureCaptureReplay feature is being used. If deviceAddress is zero, no specific address is
+    ///     requested.
     /// </summary>
     public VkDeviceAddress deviceAddress;
 }
