@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -484,8 +484,7 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_VIEWPORT_COARSE_SAMPLE_ORDER_NV = 1000164006,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_EXCLUSIVE_SCISSOR_ENABLE_NV specifies that the the exclusive scissors must be explicitly enabled
-    ///     with
+    ///     VK_DYNAMIC_STATE_EXCLUSIVE_SCISSOR_ENABLE_NV specifies that the exclusive scissors must be explicitly enabled with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorEnableNV.html">
     ///         vkCmdSetExclusiveScissorEnableNV

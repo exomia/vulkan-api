@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -40,8 +40,8 @@ public unsafe struct VkDeviceImageMemoryRequirements
 
     /// <summary>
     ///     planeAspect is a VkImageAspectFlagBits value specifying the aspect corresponding to the image plane to query.
-    ///     This parameter is ignored unless pCreateInfo::tiling is VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT, or
-    ///     pCreateInfo::flags has VK_IMAGE_CREATE_DISJOINT_BITset.
+    ///     This parameter is ignored unless pCreateInfo-&gt;tiling is VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT, or pCreateInfo-
+    ///     &gt;flags has VK_IMAGE_CREATE_DISJOINT_BIT set.
     /// </summary>
     public VkImageAspectFlagBits planeAspect;
 }

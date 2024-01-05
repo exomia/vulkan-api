@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -51,7 +51,7 @@ public enum VkVideoEncodeH264StdFlagBitsKHR
 
     /// <summary>
     ///     VK_VIDEO_ENCODE_H264_STD_CHROMA_QP_INDEX_OFFSET_BIT_KHR indicates whether the implementation supports using
-    ///     the the application-provided value for StdVideoH264PictureParameterSet::chroma_qp_index_offset in the
+    ///     the application-provided value for StdVideoH264PictureParameterSet::chroma_qp_index_offset in the
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-h264-pps">PPS</a> when
     ///     that value is non-zero.
     /// </summary>
