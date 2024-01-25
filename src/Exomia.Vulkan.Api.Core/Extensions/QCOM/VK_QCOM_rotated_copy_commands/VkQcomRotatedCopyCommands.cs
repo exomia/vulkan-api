@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -19,16 +19,16 @@ global using static Exomia.Vulkan.Api.Core.VkQcomRotatedCopyCommands;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_QCOM_rotated_copy_commands - device extension (nr. 334) - author 'QCOM' [platform '' | contact 'Jeff Leger
-///     @jackohound']<br />
+///     VK_QCOM_rotated_copy_commands - device extension (nr. 334) - author 'QCOM' [platform '' | contact 'Matthew Netsch
+///     @mnetsch']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_rotated_copy_commands.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_rotated_copy_commands.html</a>
 /// </summary>
-[VkDepends("VK_KHR_swapchain+VK_KHR_copy_commands2")]
+[VkDepends("VK_KHR_copy_commands2")]
 [VkDeviceExt]
 public static class VkQcomRotatedCopyCommands
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION = 1;
+    public const uint VK_QCOM_ROTATED_COPY_COMMANDS_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME = "VK_QCOM_rotated_copy_commands";

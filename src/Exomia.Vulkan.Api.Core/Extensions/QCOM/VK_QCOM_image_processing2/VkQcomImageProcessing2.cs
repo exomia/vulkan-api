@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkQcomImageProcessing2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_QCOM_image_processing2 - device extension (nr. 519) - author 'QCOM' [platform '' | contact 'Jeff Leger
-///     @jackohound']<br />
+///     VK_QCOM_image_processing2 - device extension (nr. 519) - author 'QCOM' [platform '' | contact 'Matthew Netsch
+///     @mnetsch']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_image_processing2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_image_processing2.html</a>
 /// </summary>
 [VkDepends("VK_QCOM_image_processing")]

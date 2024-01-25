@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_KHR_maintenance6 - device extension (nr. 546) - author 'KHR' [platform '' | contact 'Jon Leech @oddhack']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance6.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance6.html</a>
 /// </summary>
-[VkDepends("VK_VERSION_1_0")]
+[VkDepends("VK_VERSION_1_1")]
 [VkDeviceExt]
 public static unsafe class VkKhrMaintenance6
 {

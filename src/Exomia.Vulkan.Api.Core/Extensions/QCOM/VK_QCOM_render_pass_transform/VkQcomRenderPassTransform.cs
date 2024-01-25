@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -19,16 +19,15 @@ global using static Exomia.Vulkan.Api.Core.VkQcomRenderPassTransform;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_QCOM_render_pass_transform - device extension (nr. 283) - author 'QCOM' [platform '' | contact 'Jeff Leger
-///     @jackohound']<br />
+///     VK_QCOM_render_pass_transform - device extension (nr. 283) - author 'QCOM' [platform '' | contact 'Matthew Netsch
+///     @mnetsch']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_render_pass_transform.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_render_pass_transform.html</a>
 /// </summary>
-[VkDepends("VK_KHR_swapchain+VK_KHR_surface")]
 [VkDeviceExt]
 public static class VkQcomRenderPassTransform
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION = 3;
+    public const uint VK_QCOM_RENDER_PASS_TRANSFORM_SPEC_VERSION = 4;
 
     /// <summary> The extension name. </summary>
     public const string VK_QCOM_RENDER_PASS_TRANSFORM_EXTENSION_NAME = "VK_QCOM_render_pass_transform";
