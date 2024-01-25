@@ -14,24 +14,25 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelinePropertiesIdentifierEXT - Structure used to retrieve pipeline properties -
+///     VkPhysicalDeviceIndexTypeUint8FeaturesKHR - Structure describing whether uint8 index type can be used -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelinePropertiesIdentifierEXT.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelinePropertiesIdentifierEXT.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesKHR.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesKHR.html
 ///     </a>
 /// </summary>
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>returnedonly</term><description>true</description>
+///             <term>structextends</term><description>VkPhysicalDeviceFeatures2,VkDeviceCreateInfo</description>
 ///         </item>
 ///     </list>
 /// </remarks>
+[VkStructExtends("VkPhysicalDeviceFeatures2,VkDeviceCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPipelinePropertiesIdentifierEXT
+public unsafe struct VkPhysicalDeviceIndexTypeUint8FeaturesKHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_PROPERTIES_IDENTIFIER_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_KHR;
 
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
@@ -40,8 +41,8 @@ public unsafe struct VkPipelinePropertiesIdentifierEXT
     public void* pNext;
 
     /// <summary>
-    ///     pipelineIdentifier is an array of VK_UUID_SIZE uint8_tvalues into which the pipeline identifier will be
-    ///     written.
+    ///     indexTypeUint8 indicates that     VK_INDEX_TYPE_UINT8_KHR can be used with vkCmdBindIndexBuffer2KHR and
+    ///     vkCmdBindIndexBuffer.
     /// </summary>
-    public fixed byte pipelineIdentifier[(int)VK_UUID_SIZE];
+    public VkBool32 indexTypeUint8;
 }

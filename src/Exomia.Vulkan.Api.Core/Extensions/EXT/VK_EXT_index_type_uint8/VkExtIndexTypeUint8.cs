@@ -25,6 +25,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 [VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 [VkDeviceExt]
+[Obsolete("promoted to VK_KHR_index_type_uint8", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_index_type_uint8.html#_deprecation_state")]
 public static class VkExtIndexTypeUint8
 {
     /// <summary> The spec version. </summary>

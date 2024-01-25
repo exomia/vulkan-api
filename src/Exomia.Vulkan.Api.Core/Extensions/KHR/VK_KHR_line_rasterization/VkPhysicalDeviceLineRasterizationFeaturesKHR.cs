@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceLineRasterizationFeaturesEXT - Structure describing the line rasterization features that can be
+///     VkPhysicalDeviceLineRasterizationFeaturesKHR - Structure describing the line rasterization features that can be
 ///     supported by an implementation -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesKHR.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesKHR.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -30,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPhysicalDeviceFeatures2,VkDeviceCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPhysicalDeviceLineRasterizationFeaturesEXT
+public unsafe struct VkPhysicalDeviceLineRasterizationFeaturesKHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_KHR;
 
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
@@ -52,19 +52,19 @@ public unsafe struct VkPhysicalDeviceLineRasterizationFeaturesEXT
 
     /// <summary>
     ///     stippledRectangularLinesindicates whether the implementation supports stippled line rasterization with
-    ///     VK_LINE_RASTERIZATION_MODE_RECTANGULAR_EXT lines.
+    ///     VK_LINE_RASTERIZATION_MODE_RECTANGULAR_KHR lines.
     /// </summary>
     public VkBool32 stippledRectangularLines;
 
     /// <summary>
     ///     stippledBresenhamLinesindicates whether the implementation supports stippled line rasterization with
-    ///     VK_LINE_RASTERIZATION_MODE_BRESENHAM_EXT lines.
+    ///     VK_LINE_RASTERIZATION_MODE_BRESENHAM_KHR lines.
     /// </summary>
     public VkBool32 stippledBresenhamLines;
 
     /// <summary>
     ///     stippledSmoothLines indicates whether the implementation supports stippled line rasterization with
-    ///     VK_LINE_RASTERIZATION_MODE_RECTANGULAR_SMOOTH_EXT lines.
+    ///     VK_LINE_RASTERIZATION_MODE_RECTANGULAR_SMOOTH_KHR lines.
     /// </summary>
     public VkBool32 stippledSmoothLines;
 }

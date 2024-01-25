@@ -24,6 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_load_store_op_none.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_load_store_op_none.html</a>
 /// </summary>
 [VkDeviceExt]
+[Obsolete("promoted to VK_KHR_load_store_op_none", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_load_store_op_none.html#_deprecation_state")]
 public static class VkExtLoadStoreOpNone
 {
     /// <summary> The spec version. </summary>
