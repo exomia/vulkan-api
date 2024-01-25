@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -36,9 +36,9 @@ public unsafe struct VkDebugUtilsMessengerCallbackDataEXT
     public VkDebugUtilsMessengerCallbackDataFlagsEXT flags;
 
     /// <summary>
-    ///     pMessageIdName is a null-terminated string that identifies the particular message ID that is associated with
-    ///     the provided message. If the message corresponds to a validation layer message, then this string may contain the
-    ///     portion of the Vulkan specification that is believed to have been violated.
+    ///     pMessageIdName is NULL or a null-terminated UTF-8 string that identifies the particular message ID that is
+    ///     associated with the provided message. If the message corresponds to a validation layer message, then this string
+    ///     may contain the portion of the Vulkan specification that is believed to have been violated.
     /// </summary>
     public byte* pMessageIdName;
 
@@ -48,7 +48,10 @@ public unsafe struct VkDebugUtilsMessengerCallbackDataEXT
     /// </summary>
     public int messageIdNumber;
 
-    /// <summary>pMessage is a null-terminated string detailing the trigger conditions.</summary>
+    /// <summary>
+    ///     pMessage is NULL if messageTypes is equal to VK_DEBUG_UTILS_MESSAGE_TYPE_DEVICE_ADDRESS_BINDING_BIT_EXT, or a
+    ///     null-terminated UTF-8 string detailing the trigger conditions.
+    /// </summary>
     public byte* pMessage;
 
     /// <summary>queueLabelCount is a count of items contained in the pQueueLabels array.</summary>

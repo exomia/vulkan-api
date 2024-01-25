@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -44,7 +44,7 @@ public unsafe struct VkPipelineInputAssemblyStateCreateInfo
     ///     of primitives.     This enable only applies to indexed draws (vkCmdDrawIndexed,     vkCmdDrawMultiIndexedEXT,
     ///     and vkCmdDrawIndexedIndirect), and the special index value is     either 0xFFFFFFFF when the indexType parameter of
     ///     vkCmdBindIndexBuffer2KHR or     vkCmdBindIndexBuffer is equal to VK_INDEX_TYPE_UINT32,     0xFF when indexType is
-    ///     equal to VK_INDEX_TYPE_UINT8_EXT,     or 0xFFFF when indexType is equal to VK_INDEX_TYPE_UINT16.     Primitive
+    ///     equal to VK_INDEX_TYPE_UINT8_KHR,     or 0xFFFF when indexType is equal to VK_INDEX_TYPE_UINT16.     Primitive
     ///     restart is not allowed for &#8220;list&#8221; topologies, unless one of     the features
     ///     primitiveTopologyPatchListRestart (for     VK_PRIMITIVE_TOPOLOGY_PATCH_LIST) or     primitiveTopologyListRestart
     ///     (for all other list topologies) is     enabled.

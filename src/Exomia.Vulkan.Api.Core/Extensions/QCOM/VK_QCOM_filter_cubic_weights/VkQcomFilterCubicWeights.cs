@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -19,8 +19,8 @@ global using static Exomia.Vulkan.Api.Core.VkQcomFilterCubicWeights;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_QCOM_filter_cubic_weights - device extension (nr. 520) - author 'QCOM' [platform '' | contact 'Jeff Leger
-///     @jackohound']<br />
+///     VK_QCOM_filter_cubic_weights - device extension (nr. 520) - author 'QCOM' [platform '' | contact 'Matthew Netsch
+///     @mnetsch']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_filter_cubic_weights.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_filter_cubic_weights.html</a>
 /// </summary>
 [VkDepends("VK_EXT_filter_cubic")]

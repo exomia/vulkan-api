@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -119,7 +119,7 @@ public static unsafe class VkExtDebugReport
     /// <param name="location">location is an application defined value.</param>
     /// <param name="messageCode">messageCode is an application defined value.</param>
     /// <param name="pLayerPrefix">pLayerPrefix is the abbreviation of the component making this event/message.</param>
-    /// <param name="pMessage">pMessage is a null-terminated string detailing the trigger conditions.</param>
+    /// <param name="pMessage">pMessage is a null-terminated UTF-8 string detailing the trigger conditions.</param>
     public static readonly delegate*<
         VkInstance /*instance*/,
         VkDebugReportFlagsEXT /*flags*/,

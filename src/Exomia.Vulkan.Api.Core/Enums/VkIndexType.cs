@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -28,9 +28,12 @@ public enum VkIndexType
     /// <summary>VK_INDEX_TYPE_NONE_KHR specifies that no indices are provided.</summary>
     VK_INDEX_TYPE_NONE_KHR = 1000165000,
 
-    /// <summary>VK_INDEX_TYPE_UINT8_EXT specifies that indices are 8-bit unsigned integer values.</summary>
-    VK_INDEX_TYPE_UINT8_EXT = 1000265000,
+    /// <summary>VK_INDEX_TYPE_UINT8_KHR specifies that indices are 8-bit unsigned integer values.</summary>
+    VK_INDEX_TYPE_UINT8_KHR = 1000265000,
 
     /// <summary>VK_INDEX_TYPE_NONE_KHR specifies that no indices are provided.</summary>
-    VK_INDEX_TYPE_NONE_NV = VK_INDEX_TYPE_NONE_KHR
+    VK_INDEX_TYPE_NONE_NV = VK_INDEX_TYPE_NONE_KHR,
+
+    /// <summary>VK_INDEX_TYPE_UINT8_KHR specifies that indices are 8-bit unsigned integer values.</summary>
+    VK_INDEX_TYPE_UINT8_EXT = VK_INDEX_TYPE_UINT8_KHR
 }

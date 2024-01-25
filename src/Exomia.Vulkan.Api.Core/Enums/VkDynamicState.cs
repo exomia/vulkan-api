@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -484,8 +484,7 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_VIEWPORT_COARSE_SAMPLE_ORDER_NV = 1000164006,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_EXCLUSIVE_SCISSOR_ENABLE_NV specifies that the the exclusive scissors must be explicitly enabled
-    ///     with
+    ///     VK_DYNAMIC_STATE_EXCLUSIVE_SCISSOR_ENABLE_NV specifies that the exclusive scissors must be explicitly enabled with
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorEnableNV.html">
     ///         vkCmdSetExclusiveScissorEnableNV
@@ -535,23 +534,6 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_FRAGMENT_SHADING_RATE_KHR = 1000226000,
 
     /// <summary>
-    ///     VK_DYNAMIC_STATE_LINE_STIPPLE_EXT specifies that the lineStippleFactor and lineStipplePattern state in
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html">
-    ///         VkPipelineRasterizationLineStateCreateInfoEXT
-    ///     </a>
-    ///     will be ignored and must be set dynamically with
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html">vkCmdSetLineStippleEXT</a>
-    ///     before any draws are performed with a pipeline state with
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html">
-    ///         VkPipelineRasterizationLineStateCreateInfoEXT
-    ///     </a>
-    ///     member stippledLineEnable set to VK_TRUE.
-    /// </summary>
-    VK_DYNAMIC_STATE_LINE_STIPPLE_EXT = 1000259000,
-
-    /// <summary>
     ///     VK_DYNAMIC_STATE_VERTEX_INPUT_EXT specifies that the pVertexInputState state will be ignored and must be set
     ///     dynamically with
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetVertexInputEXT.html">vkCmdSetVertexInputEXT</a>
@@ -594,21 +576,6 @@ public enum VkDynamicState
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_COLOR_WRITE_ENABLE_EXT = 1000381000,
-
-    /// <summary>
-    ///     VK_DYNAMIC_STATE_TESSELLATION_DOMAIN_ORIGIN_EXT specifies that the domainOrigin state in
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfo.html">
-    ///         VkPipelineTessellationDomainOriginStateCreateInfo
-    ///     </a>
-    ///     will be ignored and must be set dynamically with
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetTessellationDomainOriginEXT.html">
-    ///         vkCmdSetTessellationDomainOriginEXT
-    ///     </a>
-    ///     before any draw call.
-    /// </summary>
-    VK_DYNAMIC_STATE_TESSELLATION_DOMAIN_ORIGIN_EXT = 1000455002,
 
     /// <summary>
     ///     VK_DYNAMIC_STATE_DEPTH_CLAMP_ENABLE_EXT specifies that the depthClampEnable state in
@@ -738,6 +705,21 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT = 1000455012,
 
     /// <summary>
+    ///     VK_DYNAMIC_STATE_TESSELLATION_DOMAIN_ORIGIN_EXT specifies that the domainOrigin state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfo.html">
+    ///         VkPipelineTessellationDomainOriginStateCreateInfo
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetTessellationDomainOriginEXT.html">
+    ///         vkCmdSetTessellationDomainOriginEXT
+    ///     </a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_TESSELLATION_DOMAIN_ORIGIN_EXT = 1000455002,
+
+    /// <summary>
     ///     VK_DYNAMIC_STATE_RASTERIZATION_STREAM_EXT specifies that the rasterizationStream state in
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html">
@@ -839,8 +821,8 @@ public enum VkDynamicState
     /// <summary>
     ///     VK_DYNAMIC_STATE_LINE_RASTERIZATION_MODE_EXT specifies that the lineRasterizationMode state in
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html">
-    ///         VkPipelineRasterizationLineStateCreateInfoEXT
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoKHR.html">
+    ///         VkPipelineRasterizationLineStateCreateInfoKHR
     ///     </a>
     ///     will be ignored and must be set dynamically with
     ///     <a
@@ -854,8 +836,8 @@ public enum VkDynamicState
     /// <summary>
     ///     VK_DYNAMIC_STATE_LINE_STIPPLE_ENABLE_EXT specifies that the stippledLineEnable state in
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html">
-    ///         VkPipelineRasterizationLineStateCreateInfoEXT
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoKHR.html">
+    ///         VkPipelineRasterizationLineStateCreateInfoKHR
     ///     </a>
     ///     will be ignored and must be set dynamically with
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEnableEXT.html">vkCmdSetLineStippleEnableEXT</a>
@@ -1039,6 +1021,18 @@ public enum VkDynamicState
     ///     before any draw call.
     /// </summary>
     VK_DYNAMIC_STATE_ATTACHMENT_FEEDBACK_LOOP_ENABLE_EXT = 1000524000,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_LINE_STIPPLE_KHR<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDynamicState">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDynamicState</a>
+    /// </summary>
+    VK_DYNAMIC_STATE_LINE_STIPPLE_KHR = 1000259000,
+
+    /// <summary>
+    ///     VK_DYNAMIC_STATE_LINE_STIPPLE_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDynamicState">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDynamicState</a>
+    /// </summary>
+    VK_DYNAMIC_STATE_LINE_STIPPLE_EXT = VK_DYNAMIC_STATE_LINE_STIPPLE_KHR,
 
     /// <summary>
     ///     VK_DYNAMIC_STATE_CULL_MODE specifies that the cullMode state in

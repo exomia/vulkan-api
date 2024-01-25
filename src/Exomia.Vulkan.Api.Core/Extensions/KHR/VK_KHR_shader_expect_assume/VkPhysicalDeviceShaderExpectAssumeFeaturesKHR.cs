@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -14,10 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceIndexTypeUint8FeaturesEXT - Structure describing whether uint8 index type can be used -
+///     VkPhysicalDeviceShaderExpectAssumeFeaturesKHR - Structure describing shader expect assume features that can be
+///     supported by an implementation -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesEXT.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesEXT.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderExpectAssumeFeaturesKHR.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderExpectAssumeFeaturesKHR.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -29,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPhysicalDeviceFeatures2,VkDeviceCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPhysicalDeviceIndexTypeUint8FeaturesEXT
+public unsafe struct VkPhysicalDeviceShaderExpectAssumeFeaturesKHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_EXPECT_ASSUME_FEATURES_KHR;
 
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
@@ -40,9 +41,6 @@ public unsafe struct VkPhysicalDeviceIndexTypeUint8FeaturesEXT
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     indexTypeUint8 indicates that     VK_INDEX_TYPE_UINT8_EXT can be used with vkCmdBindIndexBuffer2KHR and
-    ///     vkCmdBindIndexBuffer.
-    /// </summary>
-    public VkBool32 indexTypeUint8;
+    /// <summary> shaderExpectAssume specifies whether shader modules can declare the ExpectAssumeKHR capability.</summary>
+    public VkBool32 shaderExpectAssume;
 }

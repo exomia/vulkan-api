@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -14,11 +14,11 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPipelineRasterizationLineStateCreateInfoEXT - Structure specifying parameters of a newly created pipeline line
+///     VkPipelineRasterizationLineStateCreateInfoKHR - Structure specifying parameters of a newly created pipeline line
 ///     rasterization state -
 ///     <a
-///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html">
-///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html
+///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoKHR.html">
+///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoKHR.html
 ///     </a>
 /// </summary>
 /// <remarks>
@@ -30,10 +30,10 @@ namespace Exomia.Vulkan.Api.Core;
 /// </remarks>
 [VkStructExtends("VkPipelineRasterizationStateCreateInfo")]
 [StructLayout(LayoutKind.Sequential)]
-public unsafe struct VkPipelineRasterizationLineStateCreateInfoEXT
+public unsafe struct VkPipelineRasterizationLineStateCreateInfoKHR
 {
     /// <summary> The stype of this structure. </summary>
-    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT;
+    public const VkStructureType STYPE = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_KHR;
 
     /// <summary>sType is a VkStructureType value identifying this structure.</summary>
     public VkStructureType sType;
@@ -41,8 +41,8 @@ public unsafe struct VkPipelineRasterizationLineStateCreateInfoEXT
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>lineRasterizationMode is a VkLineRasterizationModeEXT value selecting the style of line rasterization.</summary>
-    public VkLineRasterizationModeEXT lineRasterizationMode;
+    /// <summary>lineRasterizationMode is a VkLineRasterizationModeKHR value selecting the style of line rasterization.</summary>
+    public VkLineRasterizationModeKHR lineRasterizationMode;
 
     /// <summary>stippledLineEnable enables stippled line rasterization.</summary>
     public VkBool32 stippledLineEnable;

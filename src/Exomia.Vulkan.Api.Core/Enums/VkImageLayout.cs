@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -218,6 +218,14 @@ public enum VkImageLayout
     ///     VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR usage     bit enabled.
     /// </summary>
     VK_IMAGE_LAYOUT_FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR = 1000164003,
+
+    /// <summary>
+    ///     VK_IMAGE_LAYOUT_RENDERING_LOCAL_READ_KHR must only be used as either a storage image, or a color or
+    ///     depth/stencil attachment and an input attachment. This layout is valid only for image subresources of images
+    ///     created with either VK_IMAGE_USAGE_STORAGE_BIT, or both VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT and either of
+    ///     VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT or VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT.
+    /// </summary>
+    VK_IMAGE_LAYOUT_RENDERING_LOCAL_READ_KHR = 1000232000,
 
     /// <summary>VK_IMAGE_LAYOUT_VIDEO_ENCODE_DST_KHR is reserved for future use.</summary>
     VK_IMAGE_LAYOUT_VIDEO_ENCODE_DST_KHR = 1000299000,

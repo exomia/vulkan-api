@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -47,21 +47,6 @@ public static unsafe class VkExtExtendedDynamicState3
     /// </remarks>
     public const string VK_EXT_EXTENDED_DYNAMIC_STATE_3_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u455f\u5458\u455f\u5458\u4e45\u4544\u5f44\u5944\u414e\u494d\u5f43\u5453\u5441\u5f45\u5f33\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
-
-    /// <summary>
-    ///     vkCmdSetTessellationDomainOriginEXT - Specify the origin of the tessellation domain space dynamically for a command
-    ///     buffer -
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetTessellationDomainOriginEXT.html">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetTessellationDomainOriginEXT.html
-    ///     </a>
-    /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="domainOrigin">domainOrigin specifies the origin of the tessellation domain space.</param>
-    public static readonly delegate*<
-        VkCommandBuffer /*commandBuffer*/,
-        VkTessellationDomainOrigin /*domainOrigin*/,
-        void> vkCmdSetTessellationDomainOriginEXT = null;
 
     /// <summary>
     ///     vkCmdSetDepthClampEnableEXT - Specify dynamically whether depth clamping is enabled in the command buffer -
@@ -213,6 +198,21 @@ public static unsafe class VkExtExtendedDynamicState3
         uint /*attachmentCount*/,
         VkColorComponentFlags* /*pColorWriteMasks*/,
         void> vkCmdSetColorWriteMaskEXT = null;
+
+    /// <summary>
+    ///     vkCmdSetTessellationDomainOriginEXT - Specify the origin of the tessellation domain space dynamically for a command
+    ///     buffer -
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetTessellationDomainOriginEXT.html">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetTessellationDomainOriginEXT.html
+    ///     </a>
+    /// </summary>
+    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
+    /// <param name="domainOrigin">domainOrigin specifies the origin of the tessellation domain space.</param>
+    public static readonly delegate*<
+        VkCommandBuffer /*commandBuffer*/,
+        VkTessellationDomainOrigin /*domainOrigin*/,
+        void> vkCmdSetTessellationDomainOriginEXT = null;
 
     /// <summary>
     ///     vkCmdSetRasterizationStreamEXT - Specify the rasterization stream dynamically for a command buffer -
@@ -531,9 +531,6 @@ public static unsafe class VkExtExtendedDynamicState3
     ///     This load method makes the following function pointers available:<br />
     ///     <list type="bullet">
     ///         <item>
-    ///             <description>vkCmdSetTessellationDomainOriginEXT</description>
-    ///         </item>
-    ///         <item>
     ///             <description>vkCmdSetDepthClampEnableEXT</description>
     ///         </item>
     ///         <item>
@@ -562,6 +559,9 @@ public static unsafe class VkExtExtendedDynamicState3
     ///         </item>
     ///         <item>
     ///             <description>vkCmdSetColorWriteMaskEXT</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetTessellationDomainOriginEXT</description>
     ///         </item>
     ///         <item>
     ///             <description>vkCmdSetRasterizationStreamEXT</description>
@@ -627,12 +627,6 @@ public static unsafe class VkExtExtendedDynamicState3
     /// </remarks>
     public static void Load(VkDevice device)
     {
-        fixed (delegate*<VkCommandBuffer, VkTessellationDomainOrigin, void>* pvkCmdSetTessellationDomainOriginEXT = &vkCmdSetTessellationDomainOriginEXT)
-        {
-            *pvkCmdSetTessellationDomainOriginEXT = (delegate*<VkCommandBuffer, VkTessellationDomainOrigin, void>)GetVkFunction(
-                device, "\u6b76\u6d43\u5364\u7465\u6554\u7373\u6c65\u616c\u6974\u6e6f\u6f44\u616d\u6e69\u724f\u6769\u6e69\u5845\u0054");
-        }
-
         fixed (delegate*<VkCommandBuffer, VkBool32, void>* pvkCmdSetDepthClampEnableEXT = &vkCmdSetDepthClampEnableEXT)
         {
             *pvkCmdSetDepthClampEnableEXT = (delegate*<VkCommandBuffer, VkBool32, void>)GetVkFunction(device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4368\u616c\u706d\u6e45\u6261\u656c\u5845\u0054");
@@ -687,6 +681,12 @@ public static unsafe class VkExtExtendedDynamicState3
         {
             *pvkCmdSetColorWriteMaskEXT = (delegate*<VkCommandBuffer, uint, uint, VkColorComponentFlags*, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6f43\u6f6c\u5772\u6972\u6574\u614d\u6b73\u5845\u0054");
+        }
+
+        fixed (delegate*<VkCommandBuffer, VkTessellationDomainOrigin, void>* pvkCmdSetTessellationDomainOriginEXT = &vkCmdSetTessellationDomainOriginEXT)
+        {
+            *pvkCmdSetTessellationDomainOriginEXT = (delegate*<VkCommandBuffer, VkTessellationDomainOrigin, void>)GetVkFunction(
+                device, "\u6b76\u6d43\u5364\u7465\u6554\u7373\u6c65\u616c\u6974\u6e6f\u6f44\u616d\u6e69\u724f\u6769\u6e69\u5845\u0054");
         }
 
         fixed (delegate*<VkCommandBuffer, uint, void>* pvkCmdSetRasterizationStreamEXT = &vkCmdSetRasterizationStreamEXT)

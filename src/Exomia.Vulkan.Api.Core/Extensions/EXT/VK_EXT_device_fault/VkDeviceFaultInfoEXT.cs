@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -17,6 +17,13 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VkDeviceFaultInfoEXT - Structure specifying device fault information -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceFaultInfoEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceFaultInfoEXT.html</a>
 /// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>returnedonly</term><description>true</description>
+///         </item>
+///     </list>
+/// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkDeviceFaultInfoEXT
 {

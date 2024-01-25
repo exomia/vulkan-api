@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (c) 2018-2023, exomia
+// Copyright (c) 2018-2024, exomia
 // All rights reserved.
 // 
 // This source code is licensed under the BSD-style license found in the
@@ -742,8 +742,8 @@ public struct VkPhysicalDeviceLimits
 
     /// <summary>
     ///     maxCombinedClipAndCullDistances is the maximum combined number of clip and cull distances that can be used in
-    ///     a single shader stage. The sum of the sizes of any pair of arrays declared with the ClipDistance and CullDistance
-    ///     built-in decoration used by a single shader stage in a shader module must be less than or equal to this limit.
+    ///     a single shader stage. The sum of the sizes of all arrays declared with the ClipDistanceand CullDistance built-in
+    ///     decoration used by a single shader stage in a shader module must be less than or equal to this limit.
     /// </summary>
     public uint maxCombinedClipAndCullDistances;
 
