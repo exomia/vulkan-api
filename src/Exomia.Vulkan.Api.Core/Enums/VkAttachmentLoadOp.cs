@@ -44,8 +44,14 @@ public enum VkAttachmentLoadOp
     VK_ATTACHMENT_LOAD_OP_DONT_CARE = 2,
 
     /// <summary>
-    ///     VK_ATTACHMENT_LOAD_OP_NONE_EXT specifies that the previous contents of the image will be undefined inside the
+    ///     VK_ATTACHMENT_LOAD_OP_NONE_KHR specifies that the previous contents of the image will be undefined inside the
     ///     render pass. No access type is used as the image is not accessed.
     /// </summary>
-    VK_ATTACHMENT_LOAD_OP_NONE_EXT = 1000400000
+    VK_ATTACHMENT_LOAD_OP_NONE_KHR = 1000400000,
+
+    /// <summary>
+    ///     VK_ATTACHMENT_LOAD_OP_NONE_KHR specifies that the previous contents of the image will be undefined inside the
+    ///     render pass. No access type is used as the image is not accessed.
+    /// </summary>
+    VK_ATTACHMENT_LOAD_OP_NONE_EXT = VK_ATTACHMENT_LOAD_OP_NONE_KHR
 }

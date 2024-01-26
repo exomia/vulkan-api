@@ -52,13 +52,11 @@ public static unsafe class VkExtLineRasterization
     public const string VK_EXT_LINE_RASTERIZATION_EXTENSION_NAME_UTF8_NT =
         "\u4b56\u455f\u5458\u4c5f\u4e49\u5f45\u4152\u5453\u5245\u5a49\u5441\u4f49\u5f4e\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
+    /// vkCmdSetLineStippleEXT alias for vkCmdSetLineStippleKHR
     /// <summary>
-    ///     vkCmdSetLineStippleEXT - Set line stipple dynamically for a command buffer -
+    ///     vkCmdSetLineStippleKHR - Set line stipple dynamically for a command buffer -
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html</a>
     /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="lineStippleFactor">lineStippleFactor is the repeat factor used in stippled line rasterization.</param>
-    /// <param name="lineStipplePattern">lineStipplePattern is the bit pattern used in stippled line rasterization.</param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         uint /*lineStippleFactor*/,

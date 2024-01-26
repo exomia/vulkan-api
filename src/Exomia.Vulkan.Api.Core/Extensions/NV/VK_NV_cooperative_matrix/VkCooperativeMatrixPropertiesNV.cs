@@ -20,6 +20,13 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCooperativeMatrixPropertiesNV.html
 ///     </a>
 /// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>returnedonly</term><description>true</description>
+///         </item>
+///     </list>
+/// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkCooperativeMatrixPropertiesNV
 {
