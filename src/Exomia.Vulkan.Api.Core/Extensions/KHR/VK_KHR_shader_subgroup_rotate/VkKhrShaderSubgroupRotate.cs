@@ -27,7 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkKhrShaderSubgroupRotate
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_KHR_SHADER_SUBGROUP_ROTATE_SPEC_VERSION = 1;
+    public const uint VK_KHR_SHADER_SUBGROUP_ROTATE_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_KHR_SHADER_SUBGROUP_ROTATE_EXTENSION_NAME = "VK_KHR_shader_subgroup_rotate";
