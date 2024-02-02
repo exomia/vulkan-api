@@ -29,6 +29,7 @@ namespace Exomia.Vulkan.Api.Core;
 [VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 [VkSpecialuse("cadsupport")]
 [VkDeviceExt]
+[Obsolete("promoted to VK_KHR_line_rasterization", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_line_rasterization.html#_deprecation_state")]
 public static unsafe class VkExtLineRasterization
 {
     /// <summary> The spec version. </summary>

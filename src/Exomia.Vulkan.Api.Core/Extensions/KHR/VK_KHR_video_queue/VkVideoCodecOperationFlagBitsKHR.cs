@@ -64,5 +64,15 @@ public enum VkVideoCodecOperationFlagBitsKHR
     ///     </a>
     ///     .
     /// </summary>
-    VK_VIDEO_CODEC_OPERATION_DECODE_H265_BIT_KHR = 0x2
+    VK_VIDEO_CODEC_OPERATION_DECODE_H265_BIT_KHR = 0x2,
+
+    /// <summary>
+    ///     VK_VIDEO_CODEC_OPERATION_DECODE_AV1_BIT_KHR specifies support for
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#decode-av1">
+    ///         AV1 decode
+    ///         operations
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_VIDEO_CODEC_OPERATION_DECODE_AV1_BIT_KHR = 0x4
 }

@@ -72,5 +72,17 @@ public enum VkSubgroupFeatureFlagBits
     ///     VK_SUBGROUP_FEATURE_PARTITIONED_BIT_NV<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubgroupFeatureFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubgroupFeatureFlagBits</a>
     /// </summary>
-    VK_SUBGROUP_FEATURE_PARTITIONED_BIT_NV = 0x100
+    VK_SUBGROUP_FEATURE_PARTITIONED_BIT_NV = 0x100,
+
+    /// <summary>
+    ///     VK_SUBGROUP_FEATURE_ROTATE_BIT_KHR<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubgroupFeatureFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubgroupFeatureFlagBits</a>
+    /// </summary>
+    VK_SUBGROUP_FEATURE_ROTATE_BIT_KHR = 0x200,
+
+    /// <summary>
+    ///     VK_SUBGROUP_FEATURE_ROTATE_CLUSTERED_BIT_KHR<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubgroupFeatureFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSubgroupFeatureFlagBits</a>
+    /// </summary>
+    VK_SUBGROUP_FEATURE_ROTATE_CLUSTERED_BIT_KHR = 0x400
 }
