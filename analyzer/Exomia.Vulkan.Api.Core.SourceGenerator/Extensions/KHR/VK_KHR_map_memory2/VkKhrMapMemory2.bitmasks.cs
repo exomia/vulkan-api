@@ -1,1 +1,1 @@
-global using VkMemoryUnmapFlagsKHR = Exomia.Vulkan.Api.Core.FutureUse32;
+global using VkMemoryUnmapFlagsKHR = Exomia.Vulkan.Api.Core.VkMemoryUnmapFlagBitsKHR;

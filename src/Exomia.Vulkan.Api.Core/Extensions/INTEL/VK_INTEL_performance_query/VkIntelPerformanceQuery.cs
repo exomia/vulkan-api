@@ -124,13 +124,10 @@ public static unsafe class VkIntelPerformanceQuery
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPerformanceStreamMarkerINTEL.html
     ///     </a>
     /// </summary>
-    /// <param name="commandBuffer">
-    ///     VUID-vkCmdSetPerformanceStreamMarkerINTEL-commandBuffer-parameter commandBuffer must be a
-    ///     valid VkCommandBuffer handle
-    /// </param>
+    /// <param name="commandBuffer">commandBuffer is a VkCommandBuffer into which a stream marker is added.</param>
     /// <param name="pMarkerInfo">
-    ///     VUID-vkCmdSetPerformanceStreamMarkerINTEL-pMarkerInfo-parameter pMarkerInfo must be a valid
-    ///     pointer to a valid VkPerformanceStreamMarkerInfoINTEL structure
+    ///     pMarkerInfo is a pointer to a VkPerformanceStreamMarkerInfoINTEL structure describing the
+    ///     marker to insert.
     /// </param>
     /// <remarks>
     ///     <list type="table">

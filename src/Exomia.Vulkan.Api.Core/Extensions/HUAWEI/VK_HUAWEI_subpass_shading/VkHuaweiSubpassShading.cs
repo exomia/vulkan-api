@@ -66,7 +66,7 @@ public static unsafe class VkHuaweiSubpassShading
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPLETE</description>
+    ///             <term>successcodes</term><description>VK_SUCCESS</description>
     ///         </item>
     ///         <item>
     ///             <term>errorcodes</term>

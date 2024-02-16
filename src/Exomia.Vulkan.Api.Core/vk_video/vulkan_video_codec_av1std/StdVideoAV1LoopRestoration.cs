@@ -17,9 +17,9 @@
 namespace Exomia.Vulkan.Api.Core;
 
 [StructLayout(LayoutKind.Sequential)]
-public struct StdVideoAV1LoopRestoration
+public unsafe struct StdVideoAV1LoopRestoration
 {
     public VkArray3<StdVideoAV1FrameRestorationType> FrameRestorationType;
 
-    public VkArray3<ushort> LoopRestorationSize;
+    public fixed ushort LoopRestorationSize[(int)STD_VIDEO_AV1_MAX_NUM_PLANES];
 }

@@ -247,8 +247,8 @@ public enum VkResult
     /// </summary>
     VK_ERROR_COMPRESSION_EXHAUSTED_EXT = -1000338000,
 
-    /// <summary>VK_ERROR_INCOMPATIBLE_SHADER_BINARY_EXT The provided binary shader code is not compatible with this device.</summary>
-    VK_ERROR_INCOMPATIBLE_SHADER_BINARY_EXT = 1000482000,
+    /// <summary>VK_INCOMPATIBLE_SHADER_BINARY_EXT The provided binary shader code is not compatible with this device.</summary>
+    VK_INCOMPATIBLE_SHADER_BINARY_EXT = 1000482000,
 
     /// <summary>
     ///     VK_ERROR_OUT_OF_POOL_MEMORY A pool memory allocation has failed. This must only be returned if no attempt to
@@ -293,5 +293,8 @@ public enum VkResult
     ///     VK_PIPELINE_COMPILE_REQUIRED A requested pipeline creation would have required compilation, but the
     ///     application requested compilation to not be performed.
     /// </summary>
-    VK_ERROR_PIPELINE_COMPILE_REQUIRED_EXT = VK_PIPELINE_COMPILE_REQUIRED
+    VK_ERROR_PIPELINE_COMPILE_REQUIRED_EXT = VK_PIPELINE_COMPILE_REQUIRED,
+
+    /// <summary>VK_INCOMPATIBLE_SHADER_BINARY_EXT The provided binary shader code is not compatible with this device.</summary>
+    VK_ERROR_INCOMPATIBLE_SHADER_BINARY_EXT = VK_INCOMPATIBLE_SHADER_BINARY_EXT
 }

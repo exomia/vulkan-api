@@ -17,6 +17,13 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VkPerformanceValueINTEL - Container for value and types of parameters that can be queried -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceValueINTEL.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceValueINTEL.html</a>
 /// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>returnedonly</term><description>true</description>
+///         </item>
+///     </list>
+/// </remarks>
 [StructLayout(LayoutKind.Sequential)]
 public struct VkPerformanceValueINTEL
 {

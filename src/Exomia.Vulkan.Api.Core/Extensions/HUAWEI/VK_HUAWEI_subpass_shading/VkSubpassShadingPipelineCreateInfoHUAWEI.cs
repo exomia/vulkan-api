@@ -26,9 +26,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         <item>
 ///             <term>structextends</term><description>VkComputePipelineCreateInfo</description>
 ///         </item>
-///         <item>
-///             <term>returnedonly</term><description>true</description>
-///         </item>
 ///     </list>
 /// </remarks>
 [VkStructExtends("VkComputePipelineCreateInfo")]
