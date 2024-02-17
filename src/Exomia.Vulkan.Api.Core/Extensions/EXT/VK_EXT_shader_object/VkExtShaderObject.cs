@@ -62,11 +62,11 @@ public static unsafe class VkExtShaderObject
     /// <remarks>
     ///     <list type="table">
     ///         <item>
-    ///             <term>successcodes</term><description>VK_SUCCESS</description>
+    ///             <term>successcodes</term><description>VK_SUCCESS,VK_INCOMPATIBLE_SHADER_BINARY_EXT</description>
     ///         </item>
     ///         <item>
     ///             <term>errorcodes</term>
-    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED,VK_ERROR_INCOMPATIBLE_SHADER_BINARY_EXT</description>
+    ///             <description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_OUT_OF_DEVICE_MEMORY,VK_ERROR_INITIALIZATION_FAILED</description>
     ///         </item>
     ///     </list>
     /// </remarks>

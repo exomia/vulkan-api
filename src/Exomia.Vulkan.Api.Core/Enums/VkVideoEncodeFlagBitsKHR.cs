@@ -8,18 +8,10 @@
 
 #endregion
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-// ReSharper disable IdentifierTypo
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
 namespace Exomia.Vulkan.Api.Core;
 
-[StructLayout(LayoutKind.Sequential)]
-public unsafe struct StdVideoAV1LoopRestoration
-{
-    public VkArray3<StdVideoAV1FrameRestorationType> FrameRestorationType;
-
-    public fixed ushort LoopRestorationSize[(int)STD_VIDEO_AV1_MAX_NUM_PLANES];
-}
+[Flags]
+public enum VkVideoEncodeFlagBitsKHR { }

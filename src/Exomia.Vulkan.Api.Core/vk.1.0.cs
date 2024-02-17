@@ -723,7 +723,10 @@ public static partial class Vk
     ///     size is the size of the memory range to map, or VK_WHOLE_SIZE to map from offset to the end of the
     ///     allocation.
     /// </param>
-    /// <param name="flags">flags is reserved for future use.</param>
+    /// <param name="flags">
+    ///     flags is a bitmask of VkMemoryMapFlagBits specifying additional parameters of the memory map
+    ///     operation.
+    /// </param>
     /// <param name="ppData">
     ///     ppData is a pointer to a void* variable in which a host-accessible pointer to the beginning of the
     ///     mapped range is returned. This pointer minus offset must be aligned to at least

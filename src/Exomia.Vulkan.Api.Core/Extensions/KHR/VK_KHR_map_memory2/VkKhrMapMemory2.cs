@@ -91,6 +91,9 @@ public static unsafe class VkKhrMapMemory2
     ///         <item>
     ///             <term>successcodes</term><description>VK_SUCCESS</description>
     ///         </item>
+    ///         <item>
+    ///             <term>errorcodes</term><description>VK_ERROR_MEMORY_MAP_FAILED</description>
+    ///         </item>
     ///     </list>
     /// </remarks>
     public static readonly delegate*<

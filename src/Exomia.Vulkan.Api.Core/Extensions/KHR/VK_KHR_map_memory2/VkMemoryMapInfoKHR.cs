@@ -29,7 +29,7 @@ public unsafe struct VkMemoryMapInfoKHR
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary>flags is a bitmask of VkMemoryMapFlagBits specifying additional parameters of the memory map operation.</summary>
     public VkMemoryMapFlags flags;
 
     /// <summary>memory is the VkDeviceMemory object to be mapped.</summary>

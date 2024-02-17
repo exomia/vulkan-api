@@ -39,8 +39,8 @@ public unsafe struct VkLatencySleepModeInfoNV
     public VkBool32 lowLatencyBoost;
 
     /// <summary>
-    ///     minimumIntervalUs<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkLatencySleepModeInfoNV">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkLatencySleepModeInfoNV</a>
+    ///     minimumIntervalUs is the microseconds between vkQueuePresentKHR calls for a given swapchain that
+    ///     vkLatencySleepNV will enforce.
     /// </summary>
     public uint minimumIntervalUs;
 }
