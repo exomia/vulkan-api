@@ -16,7 +16,7 @@ It is meant to be as close as possible to the original Vulkan API written in C. 
 
 ## Features
 
-- Vulkan 1.0, 1.1, 1.2, 1.3
+- Vulkan 1.0, 1.1, 1.2, 1.3, 0.0
 - All platforms except provisional, sci
 - All extensions including vk_video
 - Raw low level bindings using unsafe C# code

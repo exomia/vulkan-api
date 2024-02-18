@@ -45,7 +45,7 @@ public unsafe struct VkPhysicalDeviceDynamicRenderingUnusedAttachmentsFeaturesEX
     ///     dynamicRenderingUnusedAttachments indicates that the implementation supports binding graphics pipelines within
     ///     a render pass instance where any pipeline VkPipelineRenderingCreateInfo::pColorAttachmentFormatselement with a
     ///     format other than VK_FORMAT_UNDEFINED is allowed with a corresponding VkRenderingInfo::pColorAttachmentselement
-    ///     with a imageView equal to VK_NULL_HANDLE, or any pipeline
+    ///     with an imageView equal to VK_NULL_HANDLE, or any pipeline
     ///     VkPipelineRenderingCreateInfo::pColorAttachmentFormatselement with a VK_FORMAT_UNDEFINED format is allowed with a
     ///     corresponding VkRenderingInfo::pColorAttachments element with a non-VK_NULL_HANDLE imageView. Also a
     ///     VkPipelineRenderingCreateInfo::depthAttachmentFormatother than VK_FORMAT_UNDEFINED is allowed with a VK_NULL_HANDLE
