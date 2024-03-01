@@ -56,8 +56,9 @@ public unsafe struct VkGeneratedCommandsInfoNV
     /// <summary>
     ///     preprocessBuffer is the VkBuffer that is used for preprocessing the input data for execution. If this
     ///     structure is used with vkCmdExecuteGeneratedCommandsNVwith its isPreprocessed set to VK_TRUE, then the
-    ///     preprocessing step is skipped and data is only read from this buffer. The contents and the layout of this buffer is
-    ///     opaque to applications and must not be modified or copied to another buffer for reuse.
+    ///     preprocessing step is skipped and data in this buffer will not be modified. The contents and the layout of this
+    ///     buffer are opaque to applications and must not be modified outside functions related to device-generated commands
+    ///     or copied to another buffer for reuse.
     /// </summary>
     public VkBuffer preprocessBuffer;
 
