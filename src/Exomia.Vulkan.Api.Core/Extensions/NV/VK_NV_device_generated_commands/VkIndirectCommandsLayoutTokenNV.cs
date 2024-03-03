@@ -32,7 +32,7 @@ public unsafe struct VkIndirectCommandsLayoutTokenNV
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>tokenType specifies the token command type.</summary>
+    /// <summary>tokenType is a VkIndirectCommandsTokenTypeNV specifying the token command type.</summary>
     public VkIndirectCommandsTokenTypeNV tokenType;
 
     /// <summary>stream is the index of the input stream containing the token argument data.</summary>
@@ -62,7 +62,10 @@ public unsafe struct VkIndirectCommandsLayoutTokenNV
     /// <summary>pushconstantSize is the size used for the push constant command.</summary>
     public uint pushconstantSize;
 
-    /// <summary>indirectStateFlags are the active states for the state flag command.</summary>
+    /// <summary>
+    ///     indirectStateFlags is a VkIndirectStateFlagsNV bitfield indicating the active states for the state flag
+    ///     command.
+    /// </summary>
     public VkIndirectStateFlagsNV indirectStateFlags;
 
     /// <summary>

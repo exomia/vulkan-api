@@ -59,8 +59,8 @@ public unsafe struct VkPhysicalDeviceDriverProperties
     public fixed byte driverInfo[(int)VK_MAX_DRIVER_INFO_SIZE];
 
     /// <summary>
-    ///     conformanceVersion is the version of the Vulkan conformance test this driver is conformant against (see
-    ///     VkConformanceVersion).
+    ///     conformanceVersion is the latest version of the Vulkan conformance test that the implementor has successfully
+    ///     tested this driver against prior to release (see VkConformanceVersion).
     /// </summary>
     public VkConformanceVersion conformanceVersion;
 }

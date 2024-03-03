@@ -1809,8 +1809,10 @@ public enum VkFormat
     VK_FORMAT_PVRTC2_4BPP_SRGB_BLOCK_IMG = 1000054007,
 
     /// <summary>
-    ///     VK_FORMAT_R16G16_S10_5_NV specifies a two-component, fixed-point format where most significant bit specifies
-    ///     the sign bit, next 10 bits specify the integer value and last 5 bits represent the fractional value.
+    ///     VK_FORMAT_R16G16_S10_5_NV specifies a two-component, 16-bit signed fixed-point format with linear encoding.
+    ///     The components are signed two&#8217;s-complement integers where the most significant bit specifies the sign bit,
+    ///     the next 10 bits specify the integer value, and the last 5 bits represent the fractional value. The signed 16-bit
+    ///     values can be converted to floats in the range [-1024,1023.96875] by dividing the value by 32 (25).
     /// </summary>
     VK_FORMAT_R16G16_S10_5_NV = 1000464000,
 
