@@ -70,7 +70,7 @@ public static unsafe class VkNvxImageViewHandle
     ///             <term>successcodes</term><description>VK_SUCCESS</description>
     ///         </item>
     ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY,VK_ERROR_UNKNOWN</description>
+    ///             <term>errorcodes</term><description>VK_ERROR_OUT_OF_HOST_MEMORY</description>
     ///         </item>
     ///     </list>
     /// </remarks>

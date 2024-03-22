@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     Fredriksen @janharaldfredriksen-arm']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_render_pass_striped.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_ARM_render_pass_striped.html</a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2,VK_KHR_synchronization2")]
+[VkDepends("((VK_KHR_get_physical_device_properties2,VK_VERSION_1_1)+VK_KHR_synchronization2),VK_VERSION_1_3")]
 [VkDeviceExt]
 public static class VkArmRenderPassStriped
 {

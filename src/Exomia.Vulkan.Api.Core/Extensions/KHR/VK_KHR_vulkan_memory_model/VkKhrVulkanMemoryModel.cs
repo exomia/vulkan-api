@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @jeffbolznv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_vulkan_memory_model.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_vulkan_memory_model.html</a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 [VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_vulkan_memory_model.html#_deprecation_state")]
 public static class VkKhrVulkanMemoryModel

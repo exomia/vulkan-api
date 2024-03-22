@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @vkushwaha-nv']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_memory_decompression.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_memory_decompression.html</a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_buffer_device_address")]
+[VkDepends("((VK_KHR_get_physical_device_properties2,VK_VERSION_1_1)+VK_KHR_buffer_device_address),VK_VERSION_1_2")]
 [VkDeviceExt]
 public static unsafe class VkNvMemoryDecompression
 {

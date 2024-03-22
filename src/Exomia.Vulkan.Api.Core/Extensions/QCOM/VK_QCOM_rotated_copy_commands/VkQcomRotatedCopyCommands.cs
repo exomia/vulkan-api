@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @mnetsch']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_rotated_copy_commands.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QCOM_rotated_copy_commands.html</a>
 /// </summary>
-[VkDepends("VK_KHR_copy_commands2")]
+[VkDepends("VK_KHR_copy_commands2,VK_VERSION_1_3")]
 [VkDeviceExt]
 public static class VkQcomRotatedCopyCommands
 {

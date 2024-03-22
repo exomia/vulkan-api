@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_dynamic_rendering_local_read.html
 ///     </a>
 /// </summary>
-[VkDepends("VK_KHR_dynamic_rendering")]
+[VkDepends("VK_KHR_dynamic_rendering,VK_VERSION_1_3")]
 [VkDeviceExt]
 public static unsafe class VkKhrDynamicRenderingLocalRead
 {

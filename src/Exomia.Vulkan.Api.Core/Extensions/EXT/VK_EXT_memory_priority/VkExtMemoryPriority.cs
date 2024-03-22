@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_memory_priority.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_memory_priority.html</a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 [VkDeviceExt]
 public static class VkExtMemoryPriority
 {

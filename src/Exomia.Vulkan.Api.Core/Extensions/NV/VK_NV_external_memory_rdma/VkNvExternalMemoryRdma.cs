@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @crohde']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_rdma.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_external_memory_rdma.html</a>
 /// </summary>
-[VkDepends("VK_KHR_external_memory")]
+[VkDepends("VK_KHR_external_memory,VK_VERSION_1_1")]
 [VkDeviceExt]
 public static unsafe class VkNvExternalMemoryRdma
 {

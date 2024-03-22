@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @PanGao-h']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_subpass_shading.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HUAWEI_subpass_shading.html</a>
 /// </summary>
-[VkDepends("VK_KHR_create_renderpass2+VK_KHR_synchronization2")]
+[VkDepends("((VK_KHR_create_renderpass2,VK_VERSION_1_2)+VK_KHR_synchronization2),VK_VERSION_1_3")]
 [VkDeviceExt]
 public static unsafe class VkHuaweiSubpassShading
 {

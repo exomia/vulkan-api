@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_KHR_maintenance5 - device extension (nr. 471) - author 'KHR' [platform '' | contact 'Stu Smith @stu-s']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance5.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_maintenance5.html</a>
 /// </summary>
-[VkDepends("VK_VERSION_1_1+VK_KHR_dynamic_rendering")]
+[VkDepends("(VK_VERSION_1_1+VK_KHR_dynamic_rendering),VK_VERSION_1_3")]
 [VkDeviceExt]
 public static unsafe class VkKhrMaintenance5
 {
