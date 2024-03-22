@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @aqnuep']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_inline_uniform_block.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_inline_uniform_block.html</a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_maintenance1")]
+[VkDepends("(VK_KHR_get_physical_device_properties2+VK_KHR_maintenance1),VK_VERSION_1_1")]
 [VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_3", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_inline_uniform_block.html#_deprecation_state")]
 public static class VkExtInlineUniformBlock

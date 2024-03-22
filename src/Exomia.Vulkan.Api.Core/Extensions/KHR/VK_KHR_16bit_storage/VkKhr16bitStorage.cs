@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @janharaldfredriksen-arm']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_16bit_storage.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_16bit_storage.html</a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_storage_buffer_storage_class")]
+[VkDepends("(VK_KHR_get_physical_device_properties2+VK_KHR_storage_buffer_storage_class),VK_VERSION_1_1")]
 [VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_1", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_16bit_storage.html#_deprecation_state")]
 public static class VkKhr16bitStorage

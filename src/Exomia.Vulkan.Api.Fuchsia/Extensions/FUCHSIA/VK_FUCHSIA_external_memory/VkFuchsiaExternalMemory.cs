@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Fuchsia;
 ///     Rosasco @rosasco']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_memory.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_FUCHSIA_external_memory.html</a>
 /// </summary>
-[VkDepends("VK_KHR_external_memory_capabilities+VK_KHR_external_memory")]
+[VkDepends("(VK_KHR_external_memory_capabilities+VK_KHR_external_memory),VK_VERSION_1_1")]
 [VkDeviceExt]
 public static unsafe class VkFuchsiaExternalMemory
 {

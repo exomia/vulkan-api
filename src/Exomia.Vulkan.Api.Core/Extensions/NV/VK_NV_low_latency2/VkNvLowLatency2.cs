@@ -91,9 +91,6 @@ public static unsafe class VkNvLowLatency2
     ///         <item>
     ///             <term>successcodes</term><description>VK_SUCCESS</description>
     ///         </item>
-    ///         <item>
-    ///             <term>errorcodes</term><description>VK_ERROR_UNKNOWN</description>
-    ///         </item>
     ///     </list>
     /// </remarks>
     public static readonly delegate*<

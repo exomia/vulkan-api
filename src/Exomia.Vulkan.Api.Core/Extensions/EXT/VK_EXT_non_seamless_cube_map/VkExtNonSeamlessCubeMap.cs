@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: d3demulation,glemulation
 /// </remarks>
-[VkDepends("VK_KHR_get_physical_device_properties2")]
+[VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
 [VkSpecialuse("d3demulation,glemulation")]
 [VkDeviceExt]
 public static class VkExtNonSeamlessCubeMap

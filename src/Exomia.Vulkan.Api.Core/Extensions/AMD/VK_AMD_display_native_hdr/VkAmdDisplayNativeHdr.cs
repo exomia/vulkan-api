@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @anteru']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_display_native_hdr.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_AMD_display_native_hdr.html</a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_get_surface_capabilities2+VK_KHR_swapchain")]
+[VkDepends("(VK_KHR_get_physical_device_properties2,VK_VERSION_1_1)+VK_KHR_get_surface_capabilities2+VK_KHR_swapchain")]
 [VkDeviceExt]
 public static unsafe class VkAmdDisplayNativeHdr
 {

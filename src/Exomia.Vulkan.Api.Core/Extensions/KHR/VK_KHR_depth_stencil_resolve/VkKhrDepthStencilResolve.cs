@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     Fredriksen @janharald']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_depth_stencil_resolve.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_depth_stencil_resolve.html</a>
 /// </summary>
-[VkDepends("VK_KHR_create_renderpass2")]
+[VkDepends("VK_KHR_create_renderpass2,VK_VERSION_1_2")]
 [VkDeviceExt]
 [Obsolete("promoted to VK_VERSION_1_2", false, UrlFormat = "https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_depth_stencil_resolve.html#_deprecation_state")]
 public static class VkKhrDepthStencilResolve

@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     @daniel-story']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_object.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_shader_object.html</a>
 /// </summary>
-[VkDepends("(VK_KHR_get_physical_device_properties2,VK_VERSION_1_1)+(VK_KHR_dynamic_rendering,VK_VERSION_1_3)")]
+[VkDepends("((VK_KHR_get_physical_device_properties2,VK_VERSION_1_1)+VK_KHR_dynamic_rendering),VK_VERSION_1_3")]
 [VkDeviceExt]
 public static unsafe class VkExtShaderObject
 {

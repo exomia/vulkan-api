@@ -26,7 +26,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_device_generated_commands.html
 ///     </a>
 /// </summary>
-[VkDepends("VK_VERSION_1_1+VK_KHR_buffer_device_address")]
+[VkDepends("(VK_VERSION_1_1+VK_KHR_buffer_device_address),VK_VERSION_1_2")]
 [VkDeviceExt]
 public static unsafe class VkNvDeviceGeneratedCommands
 {

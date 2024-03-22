@@ -68,8 +68,8 @@ public unsafe struct VkPhysicalDeviceRayTracingPipelinePropertiesKHR
     public uint maxRayDispatchInvocationCount;
 
     /// <summary>
-    ///     shaderGroupHandleAlignment is the required alignment in bytes for each shader binding table entry. The value
-    ///     must be a power of two.
+    ///     shaderGroupHandleAlignment is the required alignment in bytes for each entry in a shader binding table. The
+    ///     value must be a power of two.
     /// </summary>
     public uint shaderGroupHandleAlignment;
 

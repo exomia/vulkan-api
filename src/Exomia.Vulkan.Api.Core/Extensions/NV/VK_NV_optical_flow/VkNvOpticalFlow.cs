@@ -22,7 +22,7 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VK_NV_optical_flow - device extension (nr. 465) - author 'NV' [platform '' | contact 'Carsten Rohde @crohde']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_optical_flow.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NV_optical_flow.html</a>
 /// </summary>
-[VkDepends("VK_KHR_get_physical_device_properties2+VK_KHR_format_feature_flags2+VK_KHR_synchronization2")]
+[VkDepends("((VK_KHR_get_physical_device_properties2,VK_VERSION_1_1)+VK_KHR_format_feature_flags2+VK_KHR_synchronization2),VK_VERSION_1_3")]
 [VkDeviceExt]
 public static unsafe class VkNvOpticalFlow
 {

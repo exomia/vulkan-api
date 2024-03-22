@@ -29,7 +29,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     specialuse: debugging,devtools
 /// </remarks>
-[VkDepends("VK_KHR_get_physical_device_properties2+VK_EXT_debug_utils")]
+[VkDepends("(VK_KHR_get_physical_device_properties2,VK_VERSION_1_1)+VK_EXT_debug_utils")]
 [VkSpecialuse("debugging,devtools")]
 [VkDeviceExt]
 public static class VkExtDeviceAddressBindingReport
