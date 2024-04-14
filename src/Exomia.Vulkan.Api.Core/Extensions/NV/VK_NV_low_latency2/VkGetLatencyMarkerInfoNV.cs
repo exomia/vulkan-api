@@ -30,7 +30,7 @@ public unsafe struct VkGetLatencyMarkerInfoNV
     public void* pNext;
 
     /// <summary>
-    ///     timingCount is an integer related to the number of of previous frames of latency data available or queried, as
+    ///     timingCount is an integer related to the number of previous frames of latency data available or queried, as
     ///     described below.
     /// </summary>
     public uint timingCount;

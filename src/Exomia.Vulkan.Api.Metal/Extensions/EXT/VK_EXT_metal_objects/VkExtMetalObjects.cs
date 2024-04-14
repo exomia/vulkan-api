@@ -27,7 +27,7 @@ namespace Exomia.Vulkan.Api.Metal;
 public static unsafe class VkExtMetalObjects
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_EXT_METAL_OBJECTS_SPEC_VERSION = 1;
+    public const uint VK_EXT_METAL_OBJECTS_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_EXT_METAL_OBJECTS_EXTENSION_NAME = "VK_EXT_metal_objects";

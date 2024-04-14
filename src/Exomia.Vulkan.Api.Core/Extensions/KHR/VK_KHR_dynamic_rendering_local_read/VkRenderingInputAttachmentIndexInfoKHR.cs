@@ -52,13 +52,13 @@ public unsafe struct VkRenderingInputAttachmentIndexInfoKHR
 
     /// <summary>
     ///     pDepthInputAttachmentIndex is either NULL, or a pointer to a uint32_t value defining the index for the depth
-    ///     attachment to be used an an input attachment.
+    ///     attachment to be used as an input attachment.
     /// </summary>
     public uint* pDepthInputAttachmentIndex;
 
     /// <summary>
     ///     pStencilInputAttachmentIndex is either NULL, or a pointer to a uint32_t value defining the index for the
-    ///     stencil attachment to be used an an input attachment.
+    ///     stencil attachment to be used as an input attachment.
     /// </summary>
     public uint* pStencilInputAttachmentIndex;
 }
