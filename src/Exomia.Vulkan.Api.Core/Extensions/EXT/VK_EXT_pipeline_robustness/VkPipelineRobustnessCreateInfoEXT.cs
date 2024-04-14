@@ -43,22 +43,22 @@ public unsafe struct VkPipelineRobustnessCreateInfoEXT
     public void* pNext;
 
     /// <summary>
-    ///     storageBuffers sets the behaviour of out of bounds accesses made to resources bound
+    ///     storageBuffers sets the behavior of out of bounds accesses made to resources bound
     ///     as:VK_DESCRIPTOR_TYPE_STORAGE_BUFFERVK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFERVK_DESCRIPTOR_TYPE_STORAGE_BUFFER_DYNAMIC
     /// </summary>
     public VkPipelineRobustnessBufferBehaviorEXT storageBuffers;
 
     /// <summary>
-    ///     uniformBuffers describes the behaviour of out of bounds accesses made to resources bound
+    ///     uniformBuffers describes the behavior of out of bounds accesses made to resources bound
     ///     as:VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFERVK_DESCRIPTOR_TYPE_UNIFORM_BUFFERVK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMICVK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK
     /// </summary>
     public VkPipelineRobustnessBufferBehaviorEXT uniformBuffers;
 
-    /// <summary>vertexInputs describes the behaviour of out of bounds accesses made to vertex input attributes</summary>
+    /// <summary>vertexInputs describes the behavior of out of bounds accesses made to vertex input attributes</summary>
     public VkPipelineRobustnessBufferBehaviorEXT vertexInputs;
 
     /// <summary>
-    ///     images describes the behaviour of out of bounds accesses made to resources bound
+    ///     images describes the behavior of out of bounds accesses made to resources bound
     ///     as:VK_DESCRIPTOR_TYPE_SAMPLED_IMAGEVK_DESCRIPTOR_TYPE_STORAGE_IMAGE
     /// </summary>
     public VkPipelineRobustnessImageBehaviorEXT images;

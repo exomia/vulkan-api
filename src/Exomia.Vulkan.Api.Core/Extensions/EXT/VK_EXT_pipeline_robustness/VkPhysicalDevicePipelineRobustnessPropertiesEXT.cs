@@ -45,25 +45,25 @@ public unsafe struct VkPhysicalDevicePipelineRobustnessPropertiesEXT
     public void* pNext;
 
     /// <summary>
-    ///     defaultRobustnessStorageBuffers describes the behaviour of out of bounds accesses made to storage buffers when
+    ///     defaultRobustnessStorageBuffers describes the behavior of out of bounds accesses made to storage buffers when
     ///     no robustness features are enabled
     /// </summary>
     public VkPipelineRobustnessBufferBehaviorEXT defaultRobustnessStorageBuffers;
 
     /// <summary>
-    ///     defaultRobustnessUniformBuffers describes the behaviour of out of bounds accesses made to uniform buffers when
+    ///     defaultRobustnessUniformBuffers describes the behavior of out of bounds accesses made to uniform buffers when
     ///     no robustness features are enabled
     /// </summary>
     public VkPipelineRobustnessBufferBehaviorEXT defaultRobustnessUniformBuffers;
 
     /// <summary>
-    ///     defaultRobustnessVertexInputs describes the behaviour of out of bounds accesses made to vertex input
-    ///     attributes when no robustness features are enabled
+    ///     defaultRobustnessVertexInputs describes the behavior of out of bounds accesses made to vertex input attributes
+    ///     when no robustness features are enabled
     /// </summary>
     public VkPipelineRobustnessBufferBehaviorEXT defaultRobustnessVertexInputs;
 
     /// <summary>
-    ///     defaultRobustnessImages describes the behaviour of out of bounds accesses made to images when no robustness
+    ///     defaultRobustnessImages describes the behavior of out of bounds accesses made to images when no robustness
     ///     features are enabled
     /// </summary>
     public VkPipelineRobustnessImageBehaviorEXT defaultRobustnessImages;

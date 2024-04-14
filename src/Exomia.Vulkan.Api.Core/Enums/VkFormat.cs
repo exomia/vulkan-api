@@ -1809,12 +1809,12 @@ public enum VkFormat
     VK_FORMAT_PVRTC2_4BPP_SRGB_BLOCK_IMG = 1000054007,
 
     /// <summary>
-    ///     VK_FORMAT_R16G16_S10_5_NV specifies a two-component, 16-bit signed fixed-point format with linear encoding.
+    ///     VK_FORMAT_R16G16_SFIXED5_NV specifies a two-component, 16-bit signed fixed-point format with linear encoding.
     ///     The components are signed two&#8217;s-complement integers where the most significant bit specifies the sign bit,
     ///     the next 10 bits specify the integer value, and the last 5 bits represent the fractional value. The signed 16-bit
     ///     values can be converted to floats in the range [-1024,1023.96875] by dividing the value by 32 (25).
     /// </summary>
-    VK_FORMAT_R16G16_S10_5_NV = 1000464000,
+    VK_FORMAT_R16G16_SFIXED5_NV = 1000464000,
 
     /// <summary>
     ///     VK_FORMAT_A1B5G5R5_UNORM_PACK16_KHR specifies a four-component, 16-bit packed unsigned normalized format that
@@ -2370,5 +2370,13 @@ public enum VkFormat
     ///     a 4-bit A component in bits 12..15, a 4-bit B component in bits 8..11, a 4-bit G component in bits 4..7, and a
     ///     4-bit R component in bits 0..3.
     /// </summary>
-    VK_FORMAT_A4B4G4R4_UNORM_PACK16_EXT = VK_FORMAT_A4B4G4R4_UNORM_PACK16
+    VK_FORMAT_A4B4G4R4_UNORM_PACK16_EXT = VK_FORMAT_A4B4G4R4_UNORM_PACK16,
+
+    /// <summary>
+    ///     VK_FORMAT_R16G16_SFIXED5_NV specifies a two-component, 16-bit signed fixed-point format with linear encoding.
+    ///     The components are signed two&#8217;s-complement integers where the most significant bit specifies the sign bit,
+    ///     the next 10 bits specify the integer value, and the last 5 bits represent the fractional value. The signed 16-bit
+    ///     values can be converted to floats in the range [-1024,1023.96875] by dividing the value by 32 (25).
+    /// </summary>
+    VK_FORMAT_R16G16_S10_5_NV = VK_FORMAT_R16G16_SFIXED5_NV
 }
