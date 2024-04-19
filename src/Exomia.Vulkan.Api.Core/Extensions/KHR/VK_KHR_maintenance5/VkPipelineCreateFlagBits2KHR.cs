@@ -39,6 +39,12 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_DERIVATIVE_BIT_KHR = 0x4,
 
     /// <summary>
+    ///     VK_PIPELINE_CREATE_2_ENABLE_LEGACY_DITHERING_BIT_EXT specifies that the pipeline will be used in a render pass
+    ///     that is begun with VK_RENDERING_ENABLE_LEGACY_DITHERING_BIT_EXT.
+    /// </summary>
+    VK_PIPELINE_CREATE_2_ENABLE_LEGACY_DITHERING_BIT_EXT = 0x400000000,
+
+    /// <summary>
     ///     VK_PIPELINE_CREATE_2_VIEW_INDEX_FROM_DEVICE_INDEX_BIT_KHRspecifies that any shader input variables decorated
     ///     as ViewIndexwill be assigned values as if they were decorated as DeviceIndex.
     /// </summary>

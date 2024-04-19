@@ -40,6 +40,6 @@ public unsafe struct VkDeviceQueueGlobalPriorityCreateInfoKHR
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>globalPriority is the system-wide priority associated to these queues as specified by VkQueueGlobalPriorityEXT</summary>
+    /// <summary>globalPriority is the system-wide priority associated to these queues as specified by VkQueueGlobalPriorityKHR</summary>
     public VkQueueGlobalPriorityKHR globalPriority;
 }

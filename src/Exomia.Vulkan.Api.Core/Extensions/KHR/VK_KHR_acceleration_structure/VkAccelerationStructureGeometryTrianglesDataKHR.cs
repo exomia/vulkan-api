@@ -42,7 +42,7 @@ public unsafe struct VkAccelerationStructureGeometryTrianglesDataKHR
     /// <summary>vertexStride is the stride in bytes between each vertex.</summary>
     public VkDeviceSize vertexStride;
 
-    /// <summary>maxVertex is the highest index of a vertex that will be addressed by a build command using this structure.</summary>
+    /// <summary>maxVertex is the number of vertices in vertexData minus one.</summary>
     public uint maxVertex;
 
     /// <summary>indexType is the VkIndexType of each index element.</summary>
