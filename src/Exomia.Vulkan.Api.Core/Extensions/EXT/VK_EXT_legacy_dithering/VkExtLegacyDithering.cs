@@ -32,7 +32,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkExtLegacyDithering
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_EXT_LEGACY_DITHERING_SPEC_VERSION = 1;
+    public const uint VK_EXT_LEGACY_DITHERING_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_EXT_LEGACY_DITHERING_EXTENSION_NAME = "VK_EXT_legacy_dithering";
