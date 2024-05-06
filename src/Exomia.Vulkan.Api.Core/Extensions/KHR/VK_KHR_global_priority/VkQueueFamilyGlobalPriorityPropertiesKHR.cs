@@ -50,7 +50,7 @@ public unsafe struct VkQueueFamilyGlobalPriorityPropertiesKHR
     public uint priorityCount;
 
     /// <summary>
-    ///     priorities is an array of VK_MAX_GLOBAL_PRIORITY_SIZE_EXTVkQueueGlobalPriorityEXT enums representing all
+    ///     priorities is an array of VK_MAX_GLOBAL_PRIORITY_SIZE_KHRVkQueueGlobalPriorityKHR enums representing all
     ///     supported global queue priorities in this queue family. The first priorityCount elements of the array will be
     ///     valid.
     /// </summary>
