@@ -14,7 +14,8 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAttachmentStoreOp - Specify how contents of an attachment are stored to memory at the end of a subpass -
+///     VkAttachmentStoreOp - Specify how contents of an attachment are treated at the end of the subpass where it is
+///     last used -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentStoreOp.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentStoreOp.html</a>
 /// </summary>
 public enum VkAttachmentStoreOp
