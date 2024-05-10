@@ -14,7 +14,8 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkAttachmentLoadOp - Specify how contents of an attachment are initialized at the beginning of a subpass -
+///     VkAttachmentLoadOp - Specify how contents of an attachment are treated at the beginning of the subpass where
+///     it is first used -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentLoadOp.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentLoadOp.html</a>
 /// </summary>
 public enum VkAttachmentLoadOp
