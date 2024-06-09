@@ -20,6 +20,12 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkVendorId
 {
     /// <summary>
+    ///     VK_VENDOR_ID_KHRONOS<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVendorId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVendorId</a>
+    /// </summary>
+    VK_VENDOR_ID_KHRONOS = 0x10000,
+
+    /// <summary>
     ///     VK_VENDOR_ID_VIV<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVendorId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVendorId</a>
     /// </summary>

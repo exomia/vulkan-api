@@ -82,8 +82,8 @@ public unsafe struct VkVideoEncodeH265CapabilitiesKHR
     ///     the reference list L0 for P pictures.NoteAs implementations may override the reference lists,
     ///     maxPPictureL0ReferenceCount does not limit the number of elements that the application can specify in the L0
     ///     reference list for P pictures. However, if maxPPictureL0ReferenceCount is zero, then the use of P pictures is not
-    ///     allowed. In case of H.265 encoding, backward-only predictive pictures can be encoded even if P pictures are not
-    ///     supported, as the ITU-T H.265 Specification supports generalized P &amp; B frames (also known as low delay B
+    ///     allowed. In case of H.265 encoding, pictures can be encoded using only forward prediction even if P pictures are
+    ///     not supported, as the ITU-T H.265 Specification supports generalized P &amp; B frames (also known as low delay B
     ///     frames) whereas B frames can refer to past frames through both the L0 and L1 reference lists.
     /// </summary>
     public uint maxPPictureL0ReferenceCount;
