@@ -13,7 +13,7 @@ It is meant to be as close as possible to the original Vulkan API written in C. 
 ![](https://img.shields.io/github/languages/top/exomia/vulkan-api.svg)
 ![](https://img.shields.io/github/languages/count/exomia/vulkan-api.svg)
 ![](https://img.shields.io/github/license/exomia/vulkan-api.svg)
-
+![](https://img.shields.io/nuget/v/Exomia.Vulkan.Api.Core?logo=nuget)
 ## Features
 
 - Vulkan 1.0, 1.1, 1.2, 1.3, 0.0
