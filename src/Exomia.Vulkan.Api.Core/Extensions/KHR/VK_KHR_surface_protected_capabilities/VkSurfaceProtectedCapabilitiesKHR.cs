@@ -25,6 +25,9 @@ namespace Exomia.Vulkan.Api.Core;
 ///         <item>
 ///             <term>structextends</term><description>VkSurfaceCapabilities2KHR</description>
 ///         </item>
+///         <item>
+///             <term>returnedonly</term><description>true</description>
+///         </item>
 ///     </list>
 /// </remarks>
 [VkStructExtends("VkSurfaceCapabilities2KHR")]

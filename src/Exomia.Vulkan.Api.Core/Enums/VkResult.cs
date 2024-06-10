@@ -203,8 +203,8 @@ public enum VkResult
     VK_ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT = -1000158000,
 
     /// <summary>
-    ///     VK_ERROR_NOT_PERMITTED_KHR<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkResult">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkResult</a>
+    ///     VK_ERROR_NOT_PERMITTED_KHR The driver implementation has denied a request to acquire a priority above the
+    ///     default priority (VK_QUEUE_GLOBAL_PRIORITY_MEDIUM_EXT) because the application does not have sufficient privileges.
     /// </summary>
     VK_ERROR_NOT_PERMITTED_KHR = -1000174001,
 
@@ -264,8 +264,8 @@ public enum VkResult
     VK_ERROR_FRAGMENTATION_EXT = VK_ERROR_FRAGMENTATION,
 
     /// <summary>
-    ///     VK_ERROR_NOT_PERMITTED_EXT<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkResult">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkResult</a>
+    ///     VK_ERROR_NOT_PERMITTED_KHR The driver implementation has denied a request to acquire a priority above the
+    ///     default priority (VK_QUEUE_GLOBAL_PRIORITY_MEDIUM_EXT) because the application does not have sufficient privileges.
     /// </summary>
     VK_ERROR_NOT_PERMITTED_EXT = VK_ERROR_NOT_PERMITTED_KHR,
 

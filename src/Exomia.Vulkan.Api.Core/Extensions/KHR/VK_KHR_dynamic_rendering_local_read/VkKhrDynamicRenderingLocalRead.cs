@@ -76,15 +76,13 @@ public static unsafe class VkKhrDynamicRenderingLocalRead
     ///     </a>
     /// </summary>
     /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pLocationInfo">
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRenderingInputAttachmentIndicesKHR.html">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRenderingInputAttachmentIndicesKHR.html
-    ///     </a>
+    /// <param name="pInputAttachmentIndexInfo">
+    ///     pInputAttachmentIndexInfo is a VkRenderingInputAttachmentIndexInfoKHR structure
+    ///     indicating the new mappings.
     /// </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
-        VkRenderingInputAttachmentIndexInfoKHR* /*pLocationInfo*/,
+        VkRenderingInputAttachmentIndexInfoKHR* /*pInputAttachmentIndexInfo*/,
         void> vkCmdSetRenderingInputAttachmentIndicesKHR = null;
 
     /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
