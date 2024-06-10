@@ -35,11 +35,8 @@ public enum VkMemoryPropertyFlagBits
     VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT = 0x2,
 
     /// <summary>
-    ///     VK_MEMORY_PROPERTY_HOST_COHERENT_BIT bit specifies that the host cache management commands
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkFlushMappedMemoryRanges.html">vkFlushMappedMemoryRanges</a>
-    ///     and
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkInvalidateMappedMemoryRanges.html">vkInvalidateMappedMemoryRanges</a>
-    ///     are not needed to flush host writes to the device or make device writes visible to the host, respectively.
+    ///     VK_MEMORY_PROPERTY_HOST_COHERENT_BIT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkMemoryPropertyFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkMemoryPropertyFlagBits</a>
     /// </summary>
     VK_MEMORY_PROPERTY_HOST_COHERENT_BIT = 0x4,
 

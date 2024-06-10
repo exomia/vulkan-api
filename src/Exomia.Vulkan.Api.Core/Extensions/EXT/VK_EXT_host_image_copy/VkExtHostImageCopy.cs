@@ -101,7 +101,10 @@ public static unsafe class VkExtHostImageCopy
     ///     vkCopyImageToImageEXT - Copy image data using the host -
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCopyImageToImageEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCopyImageToImageEXT.html</a>
     /// </summary>
-    /// <param name="device">device is the device which owns pCopyImageToMemoryInfo-&gt;srcImage.</param>
+    /// <param name="device">
+    ///     device is the device which owns pCopyImageToImageInfo-&gt;srcImage and pCopyImageToImageInfo-&gt;
+    ///     dstImage.
+    /// </param>
     /// <param name="pCopyImageToImageInfo">
     ///     pCopyImageToImageInfo is a pointer to a VkCopyImageToImageInfoEXT structure
     ///     describing the copy parameters.
