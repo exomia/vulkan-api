@@ -170,10 +170,16 @@ public enum VkDriverId
     VK_DRIVER_ID_IMAGINATION_OPEN_SOURCE_MESA = 25,
 
     /// <summary>
-    ///     VK_DRIVER_ID_MESA_AGXV<br />
+    ///     VK_DRIVER_ID_MESA_HONEYKRISP<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId</a>
     /// </summary>
-    VK_DRIVER_ID_MESA_AGXV = 26,
+    VK_DRIVER_ID_MESA_HONEYKRISP = 26,
+
+    /// <summary>
+    ///     VK_DRIVER_ID_RESERVED_27<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDriverId</a>
+    /// </summary>
+    VK_DRIVER_ID_RESERVED_27 = 27,
 
     /// <summary>
     ///     VK_DRIVER_ID_RESERVED_27<br />

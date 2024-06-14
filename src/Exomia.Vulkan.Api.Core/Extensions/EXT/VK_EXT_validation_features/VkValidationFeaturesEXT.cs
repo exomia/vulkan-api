@@ -20,11 +20,12 @@ namespace Exomia.Vulkan.Api.Core;
 /// <remarks>
 ///     <list type="table">
 ///         <item>
-///             <term>structextends</term><description>VkInstanceCreateInfo</description>
+///             <term>structextends</term>
+///             <description>VkInstanceCreateInfo,VkShaderModuleCreateInfo,VkShaderCreateInfoEXT</description>
 ///         </item>
 ///     </list>
 /// </remarks>
-[VkStructExtends("VkInstanceCreateInfo")]
+[VkStructExtends("VkInstanceCreateInfo,VkShaderModuleCreateInfo,VkShaderCreateInfoEXT")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkValidationFeaturesEXT
 {
