@@ -49,8 +49,8 @@ public unsafe struct VkPhysicalDeviceShadingRateImageFeaturesNV
     public VkBool32 shadingRateImage;
 
     /// <summary>
-    ///     shadingRateCoarseSampleOrder indicates that the implementation supports a user-configurable ordering of
-    ///     coverage samples in fragments larger than one pixel.
+    ///     shadingRateCoarseSampleOrder indicates that the implementation supports an application-configurable ordering
+    ///     of coverage samples in fragments larger than one pixel.
     /// </summary>
     public VkBool32 shadingRateCoarseSampleOrder;
 }

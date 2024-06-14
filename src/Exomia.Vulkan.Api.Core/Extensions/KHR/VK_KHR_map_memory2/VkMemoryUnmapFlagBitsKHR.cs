@@ -27,8 +27,8 @@ public enum VkMemoryUnmapFlagBitsKHR
     ///     call completes. Future system memory map operations or calls to
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkMapMemory.html">vkMapMemory</a> or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkMapMemory2KHR.html">vkMapMemory2KHR</a>
-    ///     will not return addresses in that range unless the range has since been unreserved by the client or the mapping is
-    ///     explicitly placed in that range by calling
+    ///     will not return addresses in that range unless the range has since been unreserved by the application or the
+    ///     mapping is explicitly placed in that range by calling
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkMapMemory2KHR.html">vkMapMemory2KHR</a>
     ///     with VK_MEMORY_MAP_PLACED_BIT_EXT, or doing the system memory map equivalent. When VK_MEMORY_UNMAP_RESERVE_BIT_EXT
     ///     is set, the memory unmap operation may fail, in which case the memory object will remain host mapped and

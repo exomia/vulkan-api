@@ -48,7 +48,7 @@ public static unsafe class VkExtHdrMetadata
     public const string VK_EXT_HDR_METADATA_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u485f\u5244\u4d5f\u5445\u4441\u5441\u5f41\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
 
     /// <summary>
-    ///     vkSetHdrMetadataEXT - Set Hdr metadata -
+    ///     vkSetHdrMetadataEXT - Set HDR metadata -
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetHdrMetadataEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetHdrMetadataEXT.html</a>
     /// </summary>
     /// <param name="device">device is the logical device where the swapchain(s) were created.</param>

@@ -51,9 +51,9 @@ public unsafe struct VkPhysicalDeviceSubgroupProperties
     public uint subgroupSize;
 
     /// <summary>
-    ///     supportedStages is a bitfield of VkShaderStageFlagBits describing the shader stages that group operations
-    ///     with subgroup scope are supported in. supportedStages will have the VK_SHADER_STAGE_COMPUTE_BITbit set if any of
-    ///     the physical device&#8217;s queues support VK_QUEUE_COMPUTE_BIT.
+    ///     supportedStages is a bitfield of VkShaderStageFlagBitsdescribing the shader stages that group operations with
+    ///     subgroup scope are supported in. supportedStages will have the VK_SHADER_STAGE_COMPUTE_BITbit set if any of the
+    ///     physical device&#8217;s queues support VK_QUEUE_COMPUTE_BIT.
     /// </summary>
     public VkShaderStageFlags supportedStages;
 

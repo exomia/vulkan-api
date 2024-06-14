@@ -46,13 +46,13 @@ public unsafe struct VkFilterCubicImageViewImageFormatPropertiesEXT
 
     /// <summary>
     ///     filterCubic tells if image format, image type and image view type can be used with cubic filtering. This field
-    ///     is set by the implementation. User-specified value is ignored.
+    ///     is set by the implementation. An application-specified value is ignored.
     /// </summary>
     public VkBool32 filterCubic;
 
     /// <summary>
     ///     filterCubicMinmax tells if image format, image type and image view type can be used with cubic filtering and
-    ///     minmax filtering. This field is set by the implementation. User-specified value is ignored.
+    ///     minmax filtering. This field is set by the implementation. An application-specified value is ignored.
     /// </summary>
     public VkBool32 filterCubicMinmax;
 }

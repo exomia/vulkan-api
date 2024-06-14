@@ -48,14 +48,14 @@ public unsafe struct VkPhysicalDeviceMapMemoryPlacedFeaturesEXT
     public void* pNext;
 
     /// <summary>
-    ///     memoryMapPlaced indicates that the implementation supports placing memory maps at client-specified virtual
-    ///     addresses.
+    ///     memoryMapPlaced indicates that the implementation supports placing memory maps at application-specified
+    ///     virtual addresses.
     /// </summary>
     public VkBool32 memoryMapPlaced;
 
     /// <summary>
     ///     memoryMapRangePlaced indicates that the implementation supports placing memory maps of a subrange of a memory
-    ///     object at client-specified virtual addresses.
+    ///     object at application-specified virtual addresses.
     /// </summary>
     public VkBool32 memoryMapRangePlaced;
 

@@ -50,7 +50,7 @@ public unsafe struct VkGraphicsPipelineCreateInfo
 
     /// <summary>
     ///     pInputAssemblyState is a pointer to a VkPipelineInputAssemblyStateCreateInfo structure which determines input
-    ///     assembly behavior for vertex shading, as described in Drawing Commands. If the VK_EXT_extended_dynamic_state3
+    ///     assembly behavior for vertex shading, as described in Drawing Commands.  If the VK_EXT_extended_dynamic_state3
     ///     extension is enabled, it can be NULL if the pipeline is created with both
     ///     VK_DYNAMIC_STATE_PRIMITIVE_RESTART_ENABLE, and VK_DYNAMIC_STATE_PRIMITIVE_TOPOLOGY dynamic states set and
     ///     dynamicPrimitiveTopologyUnrestricted is VK_TRUE. It is ignored if the pipeline includes a mesh shader stage.
@@ -66,7 +66,7 @@ public unsafe struct VkGraphicsPipelineCreateInfo
 
     /// <summary>
     ///     pViewportState is a pointer to a VkPipelineViewportStateCreateInfo structure defining viewport state used when
-    ///     rasterization is enabled. If the VK_EXT_extended_dynamic_state3 extension is enabled, it can be NULL if the
+    ///     rasterization is enabled.  If the VK_EXT_extended_dynamic_state3 extension is enabled, it can be NULL if the
     ///     pipeline is created with both VK_DYNAMIC_STATE_VIEWPORT_WITH_COUNT, and VK_DYNAMIC_STATE_SCISSOR_WITH_COUNT dynamic
     ///     states set.
     /// </summary>
@@ -74,7 +74,7 @@ public unsafe struct VkGraphicsPipelineCreateInfo
 
     /// <summary>
     ///     pRasterizationState is a pointer to a VkPipelineRasterizationStateCreateInfo structure defining rasterization
-    ///     state. If the VK_EXT_extended_dynamic_state3 extension is enabled, it can be NULL if the pipeline is created with
+    ///     state.  If the VK_EXT_extended_dynamic_state3 extension is enabled, it can be NULL if the pipeline is created with
     ///     all of VK_DYNAMIC_STATE_DEPTH_CLAMP_ENABLE_EXT, VK_DYNAMIC_STATE_RASTERIZER_DISCARD_ENABLE,
     ///     VK_DYNAMIC_STATE_POLYGON_MODE_EXT, VK_DYNAMIC_STATE_CULL_MODE, VK_DYNAMIC_STATE_FRONT_FACE,
     ///     VK_DYNAMIC_STATE_DEPTH_BIAS_ENABLE, VK_DYNAMIC_STATE_DEPTH_BIAS, and VK_DYNAMIC_STATE_LINE_WIDTHdynamic states set.
@@ -83,7 +83,7 @@ public unsafe struct VkGraphicsPipelineCreateInfo
 
     /// <summary>
     ///     pMultisampleState is a pointer to a VkPipelineMultisampleStateCreateInfo structure defining multisample state
-    ///     used when rasterization is enabled. If the VK_EXT_extended_dynamic_state3 extension is enabled, it can be NULL if
+    ///     used when rasterization is enabled.  If the VK_EXT_extended_dynamic_state3 extension is enabled, it can be NULL if
     ///     the pipeline is created with all of VK_DYNAMIC_STATE_RASTERIZATION_SAMPLES_EXT, VK_DYNAMIC_STATE_SAMPLE_MASK_EXT,
     ///     and VK_DYNAMIC_STATE_ALPHA_TO_COVERAGE_ENABLE_EXT dynamic states set, and either alphaToOne is disabled on the
     ///     device or VK_DYNAMIC_STATE_ALPHA_TO_ONE_ENABLE_EXT is set, in which case
@@ -93,7 +93,7 @@ public unsafe struct VkGraphicsPipelineCreateInfo
 
     /// <summary>
     ///     pDepthStencilState is a pointer to a VkPipelineDepthStencilStateCreateInfo structure defining depth/stencil
-    ///     state used when rasterization is enabled for depth or stencil attachments accessed during rendering. If the
+    ///     state used when rasterization is enabled for depth or stencil attachments accessed during rendering.  If the
     ///     VK_EXT_extended_dynamic_state3 extension is enabled, it can be NULL if the pipeline is created with all of
     ///     VK_DYNAMIC_STATE_DEPTH_TEST_ENABLE, VK_DYNAMIC_STATE_DEPTH_WRITE_ENABLE, VK_DYNAMIC_STATE_DEPTH_COMPARE_OP,
     ///     VK_DYNAMIC_STATE_DEPTH_BOUNDS_TEST_ENABLE, VK_DYNAMIC_STATE_STENCIL_TEST_ENABLE, VK_DYNAMIC_STATE_STENCIL_OP, and
@@ -103,7 +103,7 @@ public unsafe struct VkGraphicsPipelineCreateInfo
 
     /// <summary>
     ///     pColorBlendState is a pointer to a VkPipelineColorBlendStateCreateInfo structure defining color blend state
-    ///     used when rasterization is enabled for any color attachments accessed during rendering. If the
+    ///     used when rasterization is enabled for any color attachments accessed during rendering.  If the
     ///     VK_EXT_extended_dynamic_state3 extension is enabled, it can be NULL if the pipeline is created with all of
     ///     VK_DYNAMIC_STATE_LOGIC_OP_ENABLE_EXT, VK_DYNAMIC_STATE_LOGIC_OP_EXT, VK_DYNAMIC_STATE_COLOR_BLEND_ENABLE_EXT,
     ///     VK_DYNAMIC_STATE_COLOR_BLEND_EQUATION_EXT, VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT, and

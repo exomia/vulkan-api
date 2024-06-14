@@ -22,7 +22,7 @@ public unsafe struct VkClearColorValue
 {
     /// <summary>
     ///     float32 are the color clear values when the format of the image or attachment is one of the numeric formats
-    ///     with a numeric type that is floating-point. Floating point values are automatically converted to the format of the
+    ///     with a numeric type that is floating-point. Floating-point values are automatically converted to the format of the
     ///     image, with the clear value being treated as linear if the image is sRGB.
     /// </summary>
     [FieldOffset(0)]

@@ -46,7 +46,7 @@ public unsafe struct VkDeviceQueueCreateInfo
     public uint queueCount;
 
     /// <summary>
-    ///     pQueuePriorities is a pointer to an array of queueCountnormalized floating point values, specifying priorities
+    ///     pQueuePriorities is a pointer to an array of queueCountnormalized floating-point values, specifying priorities
     ///     of work that will be submitted to each created queue. See Queue Priority for more information.
     /// </summary>
     public float* pQueuePriorities;

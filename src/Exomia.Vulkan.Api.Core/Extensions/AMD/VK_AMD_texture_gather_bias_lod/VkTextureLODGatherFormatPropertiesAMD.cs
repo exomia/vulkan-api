@@ -46,8 +46,8 @@ public unsafe struct VkTextureLODGatherFormatPropertiesAMD
 
     /// <summary>
     ///     supportsTextureGatherLODBiasAMD tells if the image format can be used with texture gather bias/LOD functions,
-    ///     as introduced by the VK_AMD_texture_gather_bias_lod extension. This field is set by the implementation.
-    ///     User-specified value is ignored.
+    ///     as introduced by the VK_AMD_texture_gather_bias_lod extension. This field is set by the implementation. An
+    ///     application-specified value is ignored.
     /// </summary>
     public VkBool32 supportsTextureGatherLODBiasAMD;
 }
