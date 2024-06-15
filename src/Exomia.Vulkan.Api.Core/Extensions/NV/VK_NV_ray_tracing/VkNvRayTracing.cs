@@ -350,7 +350,7 @@ public static unsafe class VkNvRayTracing
     /// <param name="device">device is the logical device that owns the acceleration structures.</param>
     /// <param name="accelerationStructure">accelerationStructure is the acceleration structure.</param>
     /// <param name="dataSize">dataSize is the size in bytes of the buffer pointed to by pData.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the results will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the results will be written.</param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>

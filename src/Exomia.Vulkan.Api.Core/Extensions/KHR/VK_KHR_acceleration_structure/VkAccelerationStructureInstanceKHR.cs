@@ -42,7 +42,7 @@ public struct VkAccelerationStructureInstanceKHR
     public ulong accelerationStructureReference;
 
     /// <summary>
-    ///     instanceCustomIndex is a 24-bit user-specified index value accessible to ray shaders in the
+    ///     instanceCustomIndex is a 24-bit application-specified index value accessible to ray shaders in the
     ///     InstanceCustomIndexKHR built-in.
     /// </summary>
     public uint instanceCustomIndex

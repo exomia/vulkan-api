@@ -116,8 +116,8 @@ public static unsafe class VkExtDebugReport
     ///     object is the object where the issue was detected. object can be VK_NULL_HANDLE if there is no
     ///     object associated with the event.
     /// </param>
-    /// <param name="location">location is an application defined value.</param>
-    /// <param name="messageCode">messageCode is an application defined value.</param>
+    /// <param name="location">location is an application-defined value.</param>
+    /// <param name="messageCode">messageCode is an application-defined value.</param>
     /// <param name="pLayerPrefix">pLayerPrefix is the abbreviation of the component making this event/message.</param>
     /// <param name="pMessage">pMessage is a null-terminated UTF-8 string detailing the trigger conditions.</param>
     public static readonly delegate*<

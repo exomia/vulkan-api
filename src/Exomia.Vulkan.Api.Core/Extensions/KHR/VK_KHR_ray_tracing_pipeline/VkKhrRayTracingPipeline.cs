@@ -147,7 +147,7 @@ public static unsafe class VkKhrRayTracingPipeline
     /// </param>
     /// <param name="groupCount">groupCount is the number of shader handles to retrieve.</param>
     /// <param name="dataSize">dataSize is the size in bytes of the buffer pointed to by pData.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the results will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the results will be written.</param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
@@ -183,7 +183,7 @@ public static unsafe class VkKhrRayTracingPipeline
     /// </param>
     /// <param name="groupCount">groupCount is the number of shader handles to retrieve.</param>
     /// <param name="dataSize">dataSize is the size in bytes of the buffer pointed to by pData.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the results will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the results will be written.</param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>

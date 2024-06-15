@@ -236,7 +236,7 @@ public static unsafe class VkExtOpacityMicromap
     /// <param name="pMicromaps">pMicromaps is a pointer to an array of existing previously built micromaps.</param>
     /// <param name="queryType">queryType is a VkQueryType value specifying the property to be queried.</param>
     /// <param name="dataSize">dataSize is the size in bytes of the buffer pointed to by pData.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the results will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the results will be written.</param>
     /// <param name="stride">stride is the stride in bytes between results for individual queries within pData.</param>
     /// <remarks>
     ///     <list type="table">

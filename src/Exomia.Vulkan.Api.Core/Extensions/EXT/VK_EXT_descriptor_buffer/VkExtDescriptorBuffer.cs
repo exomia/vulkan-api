@@ -94,7 +94,10 @@ public static unsafe class VkExtDescriptorBuffer
     ///     parameters of the descriptor to get.
     /// </param>
     /// <param name="dataSize">dataSize is the amount of the descriptor data to get in bytes.</param>
-    /// <param name="pDescriptor">pDescriptor is a pointer to a user-allocated buffer where the descriptor will be written.</param>
+    /// <param name="pDescriptor">
+    ///     pDescriptor is a pointer to an application-allocated buffer where the descriptor will be
+    ///     written.
+    /// </param>
     public static readonly delegate*<
         VkDevice /*device*/,
         VkDescriptorGetInfoEXT* /*pDescriptorInfo*/,
@@ -178,7 +181,7 @@ public static unsafe class VkExtDescriptorBuffer
     /// </summary>
     /// <param name="device">device is the logical device that gets the data.</param>
     /// <param name="pInfo">pInfo is a pointer to a VkBufferCaptureDescriptorDataInfoEXTstructure specifying the buffer.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the data will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the data will be written.</param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
@@ -204,7 +207,7 @@ public static unsafe class VkExtDescriptorBuffer
     /// </summary>
     /// <param name="device">device is the logical device that gets the data.</param>
     /// <param name="pInfo">pInfo is a pointer to a VkImageCaptureDescriptorDataInfoEXTstructure specifying the image.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the data will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the data will be written.</param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
@@ -233,7 +236,7 @@ public static unsafe class VkExtDescriptorBuffer
     ///     pInfo is a pointer to a VkImageViewCaptureDescriptorDataInfoEXT structure specifying the image
     ///     view.
     /// </param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the data will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the data will be written.</param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
@@ -259,7 +262,7 @@ public static unsafe class VkExtDescriptorBuffer
     /// </summary>
     /// <param name="device">device is the logical device that gets the data.</param>
     /// <param name="pInfo">pInfo is a pointer to a VkSamplerCaptureDescriptorDataInfoEXT structure specifying the sampler.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the data will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the data will be written.</param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
@@ -289,7 +292,7 @@ public static unsafe class VkExtDescriptorBuffer
     ///     pInfo is a pointer to a VkAccelerationStructureCaptureDescriptorDataInfoEXT structure specifying
     ///     the acceleration structure.
     /// </param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the data will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the data will be written.</param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>

@@ -77,7 +77,7 @@ public static unsafe class VkExtDebugMarker
         VkResult> vkDebugMarkerSetObjectTagEXT = null;
 
     /// <summary>
-    ///     vkDebugMarkerSetObjectNameEXT - Give a user-friendly name to an object -
+    ///     vkDebugMarkerSetObjectNameEXT - Give an application-defined name to an object -
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html</a>
     /// </summary>
     /// <param name="device">device is the device that created the object.</param>

@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkHdrMetadataEXT - Specify Hdr metadata -
+///     VkHdrMetadataEXT - Specify HDR metadata -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkHdrMetadataEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkHdrMetadataEXT.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]

@@ -41,7 +41,7 @@ public enum VkIndirectCommandsLayoutUsageFlagBitsNV
 
     /// <summary>
     ///     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_INDEXED_SEQUENCES_BIT_NVspecifies that the input data for the sequences is
-    ///     not implicitly indexed from 0..sequencesUsed but a user provided VkBufferencoding the index is provided.
+    ///     not implicitly indexed from 0..sequencesUsed, but an application-provided VkBuffer encoding the index is provided.
     /// </summary>
     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_INDEXED_SEQUENCES_BIT_NV = 0x2,
 

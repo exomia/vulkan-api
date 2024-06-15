@@ -42,8 +42,8 @@ public unsafe struct VkOpaqueCaptureDescriptorDataCreateInfoEXT
     public void* pNext;
 
     /// <summary>
-    ///     opaqueCaptureDescriptorData is a pointer to a user-allocated buffer containing opaque capture data retrieved
-    ///     using vkGetBufferOpaqueCaptureDescriptorDataEXT, vkGetImageOpaqueCaptureDescriptorDataEXT,
+    ///     opaqueCaptureDescriptorData is a pointer to an application-allocated buffer containing opaque capture data
+    ///     retrieved using vkGetBufferOpaqueCaptureDescriptorDataEXT, vkGetImageOpaqueCaptureDescriptorDataEXT,
     ///     vkGetImageViewOpaqueCaptureDescriptorDataEXT, vkGetSamplerOpaqueCaptureDescriptorDataEXT, or
     ///     vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT.
     /// </summary>

@@ -1516,7 +1516,7 @@ public static partial class Vk
     /// <param name="firstQuery">firstQuery is the initial query index.</param>
     /// <param name="queryCount">queryCount is the number of queries to read.</param>
     /// <param name="dataSize">dataSize is the size in bytes of the buffer pointed to by pData.</param>
-    /// <param name="pData">pData is a pointer to a user-allocated buffer where the results will be written</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the results will be written</param>
     /// <param name="stride">stride is the stride in bytes between results for individual queries within pData.</param>
     /// <param name="flags">flags is a bitmask of VkQueryResultFlagBits specifying how and when results are returned.</param>
     /// <remarks>

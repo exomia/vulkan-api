@@ -125,7 +125,10 @@ public static partial class Vk
     ///     privateDataSlot is a handle to a VkPrivateDataSlotspecifying location of private data
     ///     storage.
     /// </param>
-    /// <param name="data">data is user defined data to associate the object with. This data will be stored at privateDataSlot.</param>
+    /// <param name="data">
+    ///     data is application-defined data to associate the object with. This data will be stored at
+    ///     privateDataSlot.
+    /// </param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>
@@ -163,8 +166,8 @@ public static partial class Vk
     ///     pointer storage.
     /// </param>
     /// <param name="pData">
-    ///     pData is a pointer to specify where user data is returned. 0 will be written in the absence of a
-    ///     previous call to vkSetPrivateData using the object specified by objectHandle.
+    ///     pData is a pointer to specify where application-defined data is returned. 0 will be written in the
+    ///     absence of a previous call to vkSetPrivateData using the object specified by objectHandle.
     /// </param>
     [VkVersion("1.3")]
     [SuppressUnmanagedCodeSecurity]

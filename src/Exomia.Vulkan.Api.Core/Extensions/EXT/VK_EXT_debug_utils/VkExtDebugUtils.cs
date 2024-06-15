@@ -51,7 +51,7 @@ public static unsafe class VkExtDebugUtils
     public const string VK_EXT_DEBUG_UTILS_EXTENSION_NAME_UTF8_NT = "\u4b56\u455f\u5458\u445f\u4245\u4755\u555f\u4954\u534c\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
-    ///     vkSetDebugUtilsObjectNameEXT - Give a user-friendly name to an object -
+    ///     vkSetDebugUtilsObjectNameEXT - Give an application-defined name to an object -
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDebugUtilsObjectNameEXT.html</a>
     /// </summary>
     /// <param name="device">device is the device that is associated with the named object passed in via objectHandle.</param>
