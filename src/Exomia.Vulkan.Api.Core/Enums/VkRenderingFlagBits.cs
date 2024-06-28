@@ -42,17 +42,6 @@ public enum VkRenderingFlagBits
     VK_RENDERING_RESUMING_BIT = 0x4,
 
     /// <summary>
-    ///     VK_RENDERING_CONTENTS_INLINE_BIT_EXT specifies that draw calls for the render pass instance can be recorded inline
-    ///     within the current command buffer. When the
-    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#features-nestedCommandBuffer">
-    ///         <code>nestedCommandBuffer</code>
-    ///     </a>
-    ///     feature is enabled this can be combined with the VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT bit to allow
-    ///     draw calls to be recorded both inline and in secondary command buffers.
-    /// </summary>
-    VK_RENDERING_CONTENTS_INLINE_BIT_EXT = 0x10,
-
-    /// <summary>
     ///     VK_RENDERING_ENABLE_LEGACY_DITHERING_BIT_EXT specifies that
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#interfaces-legacy-dithering">
     ///         Legacy
@@ -61,6 +50,14 @@ public enum VkRenderingFlagBits
     ///     is enabled for the render pass instance.
     /// </summary>
     VK_RENDERING_ENABLE_LEGACY_DITHERING_BIT_EXT = 0x8,
+
+    /// <summary>
+    ///     VK_RENDERING_CONTENTS_INLINE_BIT_KHR specifies that draw calls for the render pass instance can be recorded
+    ///     inline within the current command buffer. This can be combined with the
+    ///     VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT bit to allow draw calls to be recorded both inline and in
+    ///     secondary command buffers.
+    /// </summary>
+    VK_RENDERING_CONTENTS_INLINE_BIT_KHR = 0x10,
 
     /// <summary>
     ///     VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT specifies that draw calls for the render pass instance will be
@@ -81,5 +78,13 @@ public enum VkRenderingFlagBits
     ///     VK_RENDERING_RESUMING_BIT specifies that the render pass instance is resuming an earlier suspended render pass
     ///     instance.
     /// </summary>
-    VK_RENDERING_RESUMING_BIT_KHR = VK_RENDERING_RESUMING_BIT
+    VK_RENDERING_RESUMING_BIT_KHR = VK_RENDERING_RESUMING_BIT,
+
+    /// <summary>
+    ///     VK_RENDERING_CONTENTS_INLINE_BIT_KHR specifies that draw calls for the render pass instance can be recorded
+    ///     inline within the current command buffer. This can be combined with the
+    ///     VK_RENDERING_CONTENTS_SECONDARY_COMMAND_BUFFERS_BIT bit to allow draw calls to be recorded both inline and in
+    ///     secondary command buffers.
+    /// </summary>
+    VK_RENDERING_CONTENTS_INLINE_BIT_EXT = VK_RENDERING_CONTENTS_INLINE_BIT_KHR
 }
