@@ -41,12 +41,6 @@ public unsafe struct VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     fragmentDensityMapOffset<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM
-    ///     </a>
-    /// </summary>
+    /// <summary> fragmentDensityMapOffsetspecifies whether the implementation supports fragment density map offsets</summary>
     public VkBool32 fragmentDensityMapOffset;
 }

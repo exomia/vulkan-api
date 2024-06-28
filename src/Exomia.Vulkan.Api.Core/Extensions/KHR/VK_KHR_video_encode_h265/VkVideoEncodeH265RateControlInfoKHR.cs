@@ -60,12 +60,6 @@ public unsafe struct VkVideoEncodeH265RateControlInfoKHR
     /// <summary>consecutiveBFrameCount is the number of consecutive B frames between I and/or P frames within the GOP.</summary>
     public uint consecutiveBFrameCount;
 
-    /// <summary>
-    ///     subLayerCount<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVideoEncodeH265RateControlInfoKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVideoEncodeH265RateControlInfoKHR
-    ///     </a>
-    /// </summary>
+    /// <summary>subLayerCount specifies the number of H.265 sub-layers that the application intends to use.</summary>
     public uint subLayerCount;
 }
