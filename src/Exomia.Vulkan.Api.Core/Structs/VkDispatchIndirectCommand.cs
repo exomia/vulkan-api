@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkDispatchIndirectCommand - Structure specifying a indirect dispatching command -
+///     VkDispatchIndirectCommand - Structure specifying an indirect dispatching command -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDispatchIndirectCommand.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDispatchIndirectCommand.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]

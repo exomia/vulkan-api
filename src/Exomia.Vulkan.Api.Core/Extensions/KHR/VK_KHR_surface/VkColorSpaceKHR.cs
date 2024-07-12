@@ -19,79 +19,83 @@ namespace Exomia.Vulkan.Api.Core;
 /// </summary>
 public enum VkColorSpaceKHR
 {
-    /// <summary>VK_COLOR_SPACE_SRGB_NONLINEAR_KHR specifies support for the sRGB color space.</summary>
+    /// <summary>
+    ///     VK_COLOR_SPACE_SRGB_NONLINEAR_KHR specifies support for the images in sRGB color space, encoded according to
+    ///     the sRGB specification.
+    /// </summary>
     VK_COLOR_SPACE_SRGB_NONLINEAR_KHR = 0,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_DISPLAY_P3_NONLINEAR_EXT specifies support for the Display-P3 color space to be displayed using
-    ///     an sRGB-like EOTF (defined below).
+    ///     VK_COLOR_SPACE_DISPLAY_P3_NONLINEAR_EXT specifies support for the images in Display-P3 color space, encoded
+    ///     using a Display-P3 transfer function.
     /// </summary>
     VK_COLOR_SPACE_DISPLAY_P3_NONLINEAR_EXT = 1000104001,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_EXTENDED_SRGB_LINEAR_EXT specifies support for the extended sRGB color space to be displayed
-    ///     using a linear EOTF.
+    ///     VK_COLOR_SPACE_EXTENDED_SRGB_LINEAR_EXT specifies support for the images in extended sRGB color space, encoded
+    ///     using a linear transfer function.
     /// </summary>
     VK_COLOR_SPACE_EXTENDED_SRGB_LINEAR_EXT = 1000104002,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_DISPLAY_P3_LINEAR_EXT specifies support for the Display-P3 color space to be displayed using a
-    ///     linear EOTF.
+    ///     VK_COLOR_SPACE_DISPLAY_P3_LINEAR_EXT specifies support for the images in Display-P3 color space, encoded using
+    ///     a linear transfer function.
     /// </summary>
     VK_COLOR_SPACE_DISPLAY_P3_LINEAR_EXT = 1000104003,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_DCI_P3_NONLINEAR_EXT specifies support for the DCI-P3 color space to be displayed using the
-    ///     DCI-P3 EOTF. Note that values in such an image are interpreted as XYZ encoded color data by the presentation
-    ///     engine.
+    ///     VK_COLOR_SPACE_DCI_P3_NONLINEAR_EXT specifies support for the images in DCI-P3 color space, encoded according
+    ///     to the DCI-P3 specification. Note that values in such an image are interpreted as XYZ encoded color data by the
+    ///     presentation engine.
     /// </summary>
     VK_COLOR_SPACE_DCI_P3_NONLINEAR_EXT = 1000104004,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_BT709_LINEAR_EXT specifies support for the BT709 color space to be displayed using a linear
-    ///     EOTF.
+    ///     VK_COLOR_SPACE_BT709_LINEAR_EXT specifies support for the images in BT709 color space, encoded using a linear
+    ///     transfer function.
     /// </summary>
     VK_COLOR_SPACE_BT709_LINEAR_EXT = 1000104005,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_BT709_NONLINEAR_EXT specifies support for the BT709 color space to be displayed using the SMPTE
-    ///     170M EOTF.
+    ///     VK_COLOR_SPACE_BT709_NONLINEAR_EXT specifies support for the images in BT709 color space, encoded according to
+    ///     the BT709 specification.
     /// </summary>
     VK_COLOR_SPACE_BT709_NONLINEAR_EXT = 1000104006,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_BT2020_LINEAR_EXT specifies support for the BT2020 color space to be displayed using a linear
-    ///     EOTF.
+    ///     VK_COLOR_SPACE_BT2020_LINEAR_EXT specifies support for the images in BT2020 color space, encoded using a
+    ///     linear transfer function.
     /// </summary>
     VK_COLOR_SPACE_BT2020_LINEAR_EXT = 1000104007,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_HDR10_ST2084_EXT specifies support for the HDR10 (BT2020 color) space to be displayed using the
-    ///     SMPTE ST2084 Perceptual Quantizer (PQ) EOTF.
+    ///     VK_COLOR_SPACE_HDR10_ST2084_EXT specifies support for the images in HDR10 (BT2020) color space, encoded
+    ///     according to SMPTE ST2084 Perceptual Quantizer (PQ) specification.
     /// </summary>
     VK_COLOR_SPACE_HDR10_ST2084_EXT = 1000104008,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_DOLBYVISION_EXT specifies support for the Dolby Vision (BT2020 color space), proprietary
-    ///     encoding, to be displayed using the SMPTE ST2084 EOTF.
+    ///     VK_COLOR_SPACE_DOLBYVISION_EXT specifies support for the images in Dolby Vision (BT2020) color space, encoded
+    ///     according to SMPTE ST2084 Perceptual Quantizer (PQ) specification. The presentation engine is expected to use Dolby
+    ///     &#8217;s proprietary techniques to display the image.
     /// </summary>
     VK_COLOR_SPACE_DOLBYVISION_EXT = 1000104009,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_HDR10_HLG_EXT specifies support for the HDR10 (BT2020 color space) to be displayed using the
-    ///     Hybrid Log Gamma (HLG) EOTF.
+    ///     VK_COLOR_SPACE_HDR10_HLG_EXT specifies support for the images in HDR10 (BT2020) color space, encoded according
+    ///     to the Hybrid Log Gamma (HLG) specification.
     /// </summary>
     VK_COLOR_SPACE_HDR10_HLG_EXT = 1000104010,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_ADOBERGB_LINEAR_EXT specifies support for the AdobeRGB color space to be displayed using a
-    ///     linear EOTF.
+    ///     VK_COLOR_SPACE_ADOBERGB_LINEAR_EXT specifies support for images in Adobe RGB color space, encoded using a
+    ///     linear transfer function.
     /// </summary>
     VK_COLOR_SPACE_ADOBERGB_LINEAR_EXT = 1000104011,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_ADOBERGB_NONLINEAR_EXT specifies support for the AdobeRGB color space to be displayed using the
-    ///     Gamma 2.2 EOTF.
+    ///     VK_COLOR_SPACE_ADOBERGB_NONLINEAR_EXT specifies support for the images in Adobe RGB color space, encoded
+    ///     according to the Adobe RGB specification (approximately Gamma 2.2).
     /// </summary>
     VK_COLOR_SPACE_ADOBERGB_NONLINEAR_EXT = 1000104012,
 
@@ -102,8 +106,8 @@ public enum VkColorSpaceKHR
     VK_COLOR_SPACE_PASS_THROUGH_EXT = 1000104013,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_EXTENDED_SRGB_NONLINEAR_EXT specifies support for the extended sRGB color space to be displayed
-    ///     using an sRGB EOTF.
+    ///     VK_COLOR_SPACE_EXTENDED_SRGB_NONLINEAR_EXT specifies support for the images in extended sRGB color space,
+    ///     encoded according to the scRGB specification.
     /// </summary>
     VK_COLOR_SPACE_EXTENDED_SRGB_NONLINEAR_EXT = 1000104014,
 
@@ -113,12 +117,15 @@ public enum VkColorSpaceKHR
     /// </summary>
     VK_COLOR_SPACE_DISPLAY_NATIVE_AMD = 1000213000,
 
-    /// <summary>VK_COLOR_SPACE_SRGB_NONLINEAR_KHR specifies support for the sRGB color space.</summary>
+    /// <summary>
+    ///     VK_COLOR_SPACE_SRGB_NONLINEAR_KHR specifies support for the images in sRGB color space, encoded according to
+    ///     the sRGB specification.
+    /// </summary>
     VK_COLORSPACE_SRGB_NONLINEAR_KHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_DISPLAY_P3_LINEAR_EXT specifies support for the Display-P3 color space to be displayed using a
-    ///     linear EOTF.
+    ///     VK_COLOR_SPACE_DISPLAY_P3_LINEAR_EXT specifies support for the images in Display-P3 color space, encoded using
+    ///     a linear transfer function.
     /// </summary>
     VK_COLOR_SPACE_DCI_P3_LINEAR_EXT = VK_COLOR_SPACE_DISPLAY_P3_LINEAR_EXT
 }

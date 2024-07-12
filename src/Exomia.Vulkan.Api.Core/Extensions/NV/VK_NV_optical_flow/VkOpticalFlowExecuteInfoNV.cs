@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkOpticalFlowExecuteInfoNV - Structure specifying parameters of a optical flow vector calculation -
+///     VkOpticalFlowExecuteInfoNV - Structure specifying parameters of an optical flow vector calculation -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOpticalFlowExecuteInfoNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOpticalFlowExecuteInfoNV.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]

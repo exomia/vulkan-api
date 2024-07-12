@@ -437,7 +437,7 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_DESCRIPTOR_BUFFER_READ_BIT_EXT = 0x20000000000,
 
     /// <summary>
-    ///     VK_ACCESS_2_INVOCATION_MASK_READ_BIT_HUAWEI specifies read access to a invocation mask image in the
+    ///     VK_ACCESS_2_INVOCATION_MASK_READ_BIT_HUAWEI specifies read access to an invocation mask image in the
     ///     VK_PIPELINE_STAGE_2_INVOCATION_MASK_BIT_HUAWEI pipeline stage.
     /// </summary>
     VK_ACCESS_2_INVOCATION_MASK_READ_BIT_HUAWEI = 0x8000000000,

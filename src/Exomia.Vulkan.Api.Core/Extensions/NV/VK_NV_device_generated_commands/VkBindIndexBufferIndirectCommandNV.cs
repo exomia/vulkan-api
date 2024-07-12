@@ -32,8 +32,8 @@ public struct VkBindIndexBufferIndirectCommandNV
 
     /// <summary>
     ///     indexType is a VkIndexType value specifying how indices are treated. Instead of the Vulkan enum values, a
-    ///     custom uint32_t value can be mapped to an VkIndexType by specifying the
-    ///     VkIndirectCommandsLayoutTokenNV::pIndexTypes and VkIndirectCommandsLayoutTokenNV::pIndexTypeValues arrays.
+    ///     custom uint32_t value can be mapped to VkIndexType by specifying the VkIndirectCommandsLayoutTokenNV::pIndexTypes
+    ///     and VkIndirectCommandsLayoutTokenNV::pIndexTypeValues arrays.
     /// </summary>
     public VkIndexType indexType;
 }

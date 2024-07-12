@@ -31,7 +31,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkQcomFragmentDensityMapOffset
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_QCOM_FRAGMENT_DENSITY_MAP_OFFSET_SPEC_VERSION = 1;
+    public const uint VK_QCOM_FRAGMENT_DENSITY_MAP_OFFSET_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_QCOM_FRAGMENT_DENSITY_MAP_OFFSET_EXTENSION_NAME = "VK_QCOM_fragment_density_map_offset";
