@@ -28,7 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static class VkExtSwapchainColorspace
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_EXT_SWAPCHAIN_COLOR_SPACE_SPEC_VERSION = 4;
+    public const uint VK_EXT_SWAPCHAIN_COLOR_SPACE_SPEC_VERSION = 5;
 
     /// <summary> The extension name. </summary>
     public const string VK_EXT_SWAPCHAIN_COLOR_SPACE_EXTENSION_NAME = "VK_EXT_swapchain_colorspace";

@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkOpticalFlowExecuteFlagBitsNV - Bits specifying flags for a optical flow vector calculation -
+///     VkOpticalFlowExecuteFlagBitsNV - Bits specifying flags for an optical flow vector calculation -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOpticalFlowExecuteFlagBitsNV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOpticalFlowExecuteFlagBitsNV.html</a>
 /// </summary>
 [Flags]

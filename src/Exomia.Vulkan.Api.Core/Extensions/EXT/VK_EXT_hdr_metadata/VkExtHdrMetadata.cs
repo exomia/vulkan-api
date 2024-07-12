@@ -28,7 +28,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static unsafe class VkExtHdrMetadata
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_EXT_HDR_METADATA_SPEC_VERSION = 2;
+    public const uint VK_EXT_HDR_METADATA_SPEC_VERSION = 3;
 
     /// <summary> The extension name. </summary>
     public const string VK_EXT_HDR_METADATA_EXTENSION_NAME = "VK_EXT_hdr_metadata";

@@ -48,7 +48,7 @@ public static unsafe class VkKhrWin32Surface
     public const string VK_KHR_WIN32_SURFACE_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u575f\u4e49\u3233\u535f\u5255\u4146\u4543\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
-    ///     vkCreateWin32SurfaceKHR - Create a VkSurfaceKHR object for an Win32 native window -
+    ///     vkCreateWin32SurfaceKHR - Create a VkSurfaceKHR object for a Win32 native window -
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWin32SurfaceKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWin32SurfaceKHR.html</a>
     /// </summary>
     /// <param name="instance">instance is the instance to associate the surface with.</param>

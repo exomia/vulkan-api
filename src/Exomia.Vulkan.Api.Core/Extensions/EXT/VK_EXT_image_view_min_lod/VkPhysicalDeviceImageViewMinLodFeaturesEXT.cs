@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkPhysicalDeviceImageViewMinLodFeaturesEXT - Structure describing whether clamping the min LOD of a image view is
+///     VkPhysicalDeviceImageViewMinLodFeaturesEXT - Structure describing whether clamping the min LOD of an image view is
 ///     supported by the implementation -
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageViewMinLodFeaturesEXT.html">

@@ -321,7 +321,7 @@ public static unsafe class VkKhrAccelerationStructure
     /// </param>
     /// <param name="queryType">queryType is a VkQueryType value specifying the property to be queried.</param>
     /// <param name="dataSize">dataSize is the size in bytes of the buffer pointed to by pData.</param>
-    /// <param name="pData">pData is a pointer to a application-allocated buffer where the results will be written.</param>
+    /// <param name="pData">pData is a pointer to an application-allocated buffer where the results will be written.</param>
     /// <param name="stride">stride is the stride in bytes between results for individual queries within pData.</param>
     /// <remarks>
     ///     <list type="table">
@@ -392,7 +392,7 @@ public static unsafe class VkKhrAccelerationStructure
         void> vkCmdCopyMemoryToAccelerationStructureKHR = null;
 
     /// <summary>
-    ///     vkGetAccelerationStructureDeviceAddressKHR - Query an address of a acceleration structure -
+    ///     vkGetAccelerationStructureDeviceAddressKHR - Query an address of an acceleration structure -
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureDeviceAddressKHR.html">
     ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureDeviceAddressKHR.html

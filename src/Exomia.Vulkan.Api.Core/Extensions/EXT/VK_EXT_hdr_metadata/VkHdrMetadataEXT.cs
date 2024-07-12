@@ -30,38 +30,41 @@ public unsafe struct VkHdrMetadataEXT
     public void* pNext;
 
     /// <summary>
-    ///     displayPrimaryRed is a VkXYColorEXT structure specifying the reference monitor&#8217;s red primary in
-    ///     chromaticity coordinates
+    ///     displayPrimaryRed is a VkXYColorEXT structure specifying the red primary of the display used to optimize the
+    ///     content
     /// </summary>
     public VkXYColorEXT displayPrimaryRed;
 
     /// <summary>
-    ///     displayPrimaryGreen is a VkXYColorEXT structure specifying the reference monitor&#8217;s green primary in
-    ///     chromaticity coordinates
+    ///     displayPrimaryGreen is a VkXYColorEXT structure specifying the green primary of the display used to optimize
+    ///     the content
     /// </summary>
     public VkXYColorEXT displayPrimaryGreen;
 
     /// <summary>
-    ///     displayPrimaryBlue is a VkXYColorEXT structure specifying the reference monitor&#8217;s blue primary in
-    ///     chromaticity coordinates
+    ///     displayPrimaryBlue is a VkXYColorEXT structure specifying the blue primary of the display used to optimize the
+    ///     content
     /// </summary>
     public VkXYColorEXT displayPrimaryBlue;
 
-    /// <summary>
-    ///     whitePoint is a VkXYColorEXT structure specifying the reference monitor&#8217;s white-point in chromaticity
-    ///     coordinates
-    /// </summary>
+    /// <summary>whitePoint is a VkXYColorEXT structure specifying the white-point of the display used to optimize the content</summary>
     public VkXYColorEXT whitePoint;
 
-    /// <summary>maxLuminance is the maximum luminance of the reference monitor in nits</summary>
+    /// <summary>maxLuminance is the maximum luminance of the display used to optimize the content in nits</summary>
     public float maxLuminance;
 
-    /// <summary>minLuminance is the minimum luminance of the reference monitor in nits</summary>
+    /// <summary>minLuminance is the minimum luminance of the display used to optimize the content in nits</summary>
     public float minLuminance;
 
-    /// <summary>maxContentLightLevel is content&#8217;s maximum luminance in nits</summary>
+    /// <summary>
+    ///     maxContentLightLevel is the value in nits of the desired luminance for the brightest pixels in the displayed
+    ///     image.
+    /// </summary>
     public float maxContentLightLevel;
 
-    /// <summary>maxFrameAverageLightLevel is the maximum frame average light level in nits</summary>
+    /// <summary>
+    ///     maxFrameAverageLightLevel is the value in nits of the average luminance of the frame which has the brightest
+    ///     average luminance anywhere in the content.
+    /// </summary>
     public float maxFrameAverageLightLevel;
 }

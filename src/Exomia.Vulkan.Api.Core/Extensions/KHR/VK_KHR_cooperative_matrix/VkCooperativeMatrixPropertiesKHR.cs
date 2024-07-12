@@ -62,7 +62,8 @@ public unsafe struct VkCooperativeMatrixPropertiesKHR
 
     /// <summary>
     ///     saturatingAccumulation indicates whether the SaturatingAccumulation operand to
-    ///     OpCooperativeMatrixMulAddKHRmust be present.
+    ///     OpCooperativeMatrixMulAddKHRmust be present or not. If it is VK_TRUE, the SaturatingAccumulation operand must be
+    ///     present. If it is VK_FALSE, the SaturatingAccumulation operand mustnot be present.
     /// </summary>
     public VkBool32 saturatingAccumulation;
 

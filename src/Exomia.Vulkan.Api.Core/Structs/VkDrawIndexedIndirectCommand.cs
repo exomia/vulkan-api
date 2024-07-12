@@ -14,7 +14,7 @@
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VkDrawIndexedIndirectCommand - Structure specifying a indexed indirect drawing command -
+///     VkDrawIndexedIndirectCommand - Structure specifying an indexed indirect drawing command -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDrawIndexedIndirectCommand.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDrawIndexedIndirectCommand.html</a>
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
