@@ -39,7 +39,7 @@ public struct VkColorBlendAdvancedEXT
     public VkBlendOverlapEXT blendOverlap;
 
     /// <summary>
-    ///     clampResults specifies the results must be clamped to the [0,1] range before writing to the attachment, which
+    ///     clampResults specifies that results must be clamped to the [0,1] range before writing to the attachment, which
     ///     is useful when the attachment format is not normalized fixed-point.
     /// </summary>
     public VkBool32 clampResults;
