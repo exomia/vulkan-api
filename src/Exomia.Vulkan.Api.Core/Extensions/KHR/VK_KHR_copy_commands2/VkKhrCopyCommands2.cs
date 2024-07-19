@@ -19,7 +19,7 @@ global using static Exomia.Vulkan.Api.Core.VkKhrCopyCommands2;
 namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
-///     VK_KHR_copy_commands2 - device extension (nr. 338) - author 'KHR' [platform '' | contact 'Jeff Leger @jackohound']
+///     VK_KHR_copy_commands2 - device extension (nr. 338) - author 'KHR' [platform '' | contact 'Matthew Netsch @mnetsch']
 ///     <br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_copy_commands2.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_copy_commands2.html</a>
 /// </summary>
