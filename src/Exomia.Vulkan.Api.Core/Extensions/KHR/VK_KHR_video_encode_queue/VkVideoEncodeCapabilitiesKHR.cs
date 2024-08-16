@@ -63,9 +63,9 @@ public unsafe struct VkVideoEncodeCapabilitiesKHR
 
     /// <summary>
     ///     encodeInputPictureGranularity indicates the granularity at which encode input picture data is encoded and
-    ///     mayindicate a texel granularity up to the size of the codec-specific coding block size. This capability does not
-    ///     impose any valid usage constraints on the application, however, depending on the contents of the encode input
-    ///     picture, it may have effects on the encoded bitstream, as described in more detail below.
+    ///     mayindicate a texel granularity up to the size of the largest supported codec-specific coding block. This
+    ///     capability does not impose any valid usage constraints on the application, however, depending on the contents of
+    ///     the encode input picture, it may have effects on the encoded bitstream, as described in more detail below.
     /// </summary>
     public VkExtent2D encodeInputPictureGranularity;
 

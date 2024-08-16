@@ -41,7 +41,7 @@ public unsafe struct VkLayerSettingsCreateInfoEXT
     public uint settingCount;
 
     /// <summary>
-    ///     pSettings is a pointer to an array of settingCountVkLayerSettingEXT values specifying the setting to be
+    ///     pSettings is a pointer to an array of settingCountVkLayerSettingEXT values specifying the settings to be
     ///     configured.
     /// </summary>
     public VkLayerSettingEXT* pSettings;
