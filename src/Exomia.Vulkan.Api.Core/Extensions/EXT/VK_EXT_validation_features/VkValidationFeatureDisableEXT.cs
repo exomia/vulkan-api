@@ -23,8 +23,12 @@ public enum VkValidationFeatureDisableEXT
     VK_VALIDATION_FEATURE_DISABLE_ALL_EXT = 0,
 
     /// <summary>
-    ///     VK_VALIDATION_FEATURE_DISABLE_SHADERS_EXT specifies that shader validation is disabled. This feature is
-    ///     enabled by default.
+    ///     VK_VALIDATION_FEATURE_DISABLE_SHADERS_EXT specifies that shader validation, both runtime and standalone, is
+    ///     disabled. This validation occurs inside
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderCreateInfoEXT.html">VkShaderCreateInfoEXT</a>
+    ///     and
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderModuleCreateInfo.html">VkShaderModuleCreateInfo</a>
+    ///     . This feature is enabled by default.
     /// </summary>
     VK_VALIDATION_FEATURE_DISABLE_SHADERS_EXT = 1,
 
@@ -48,8 +52,7 @@ public enum VkValidationFeatureDisableEXT
 
     /// <summary>
     ///     VK_VALIDATION_FEATURE_DISABLE_CORE_CHECKS_EXT specifies that core validation checks are disabled. This feature
-    ///     is enabled by default. If this feature is disabled, the shader validation and GPU-assisted validation features are
-    ///     also disabled.
+    ///     is enabled by default. If this feature is disabled, VK_VALIDATION_FEATURE_DISABLE_SHADERS_EXT is implied.
     /// </summary>
     VK_VALIDATION_FEATURE_DISABLE_CORE_CHECKS_EXT = 5,
 

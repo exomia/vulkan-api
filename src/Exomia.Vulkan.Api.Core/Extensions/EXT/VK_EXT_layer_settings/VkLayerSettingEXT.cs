@@ -24,20 +24,20 @@ public unsafe struct VkLayerSettingEXT
     public byte* pLayerName;
 
     /// <summary>
-    ///     pSettingName is a pointer to a null-terminated UTF-8 string naming the setting to configure. Unknown
-    ///     pSettingName by the layer are ignored.
+    ///     pSettingName is a pointer to a null-terminated UTF-8 string naming the setting to configure. Values of
+    ///     pSettingName that are unknown to the layer are ignored.
     /// </summary>
     public byte* pSettingName;
 
     /// <summary>type is a VkLayerSettingTypeEXT value specifying the type of the pValues values.</summary>
     public VkLayerSettingTypeEXT type;
 
-    /// <summary>
-    ///     valueCount<br />
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkLayerSettingEXT">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkLayerSettingEXT</a>
-    /// </summary>
+    /// <summary>valueCount is the number of values used to configure the layer setting.</summary>
     public uint valueCount;
 
-    /// <summary>pValues is a pointer to an array of count values of the type indicated by type to configure the layer setting.</summary>
+    /// <summary>
+    ///     pValues is a pointer to an array of valueCount values of the type indicated by type to configure the layer
+    ///     setting.
+    /// </summary>
     public void* pValues;
 }
