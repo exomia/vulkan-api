@@ -54,40 +54,40 @@ public unsafe struct VkPhysicalDeviceDescriptorIndexingProperties
 
     /// <summary>
     ///     shaderUniformBufferArrayNonUniformIndexingNative is a boolean value indicating whether uniform buffer
-    ///     descriptors natively support nonuniform indexing. If this is VK_FALSE, then a single dynamic instance of an
-    ///     instruction that nonuniformly indexes an array of uniform buffers mayexecute multiple times in order to access all
+    ///     descriptors natively support non-uniform indexing. If this is VK_FALSE, then a single dynamic instance of an
+    ///     instruction that non-uniformly indexes an array of uniform buffers mayexecute multiple times in order to access all
     ///     the descriptors.
     /// </summary>
     public VkBool32 shaderUniformBufferArrayNonUniformIndexingNative;
 
     /// <summary>
     ///     shaderSampledImageArrayNonUniformIndexingNative is a boolean value indicating whether sampler and image
-    ///     descriptors natively support nonuniform indexing. If this is VK_FALSE, then a single dynamic instance of an
-    ///     instruction that nonuniformly indexes an array of samplers or images may execute multiple times in order to access
+    ///     descriptors natively support non-uniform indexing. If this is VK_FALSE, then a single dynamic instance of an
+    ///     instruction that non-uniformly indexes an array of samplers or images may execute multiple times in order to access
     ///     all the descriptors.
     /// </summary>
     public VkBool32 shaderSampledImageArrayNonUniformIndexingNative;
 
     /// <summary>
     ///     shaderStorageBufferArrayNonUniformIndexingNative is a boolean value indicating whether storage buffer
-    ///     descriptors natively support nonuniform indexing. If this is VK_FALSE, then a single dynamic instance of an
-    ///     instruction that nonuniformly indexes an array of storage buffers mayexecute multiple times in order to access all
+    ///     descriptors natively support non-uniform indexing. If this is VK_FALSE, then a single dynamic instance of an
+    ///     instruction that non-uniformly indexes an array of storage buffers mayexecute multiple times in order to access all
     ///     the descriptors.
     /// </summary>
     public VkBool32 shaderStorageBufferArrayNonUniformIndexingNative;
 
     /// <summary>
     ///     shaderStorageImageArrayNonUniformIndexingNative is a boolean value indicating whether storage image
-    ///     descriptors natively support nonuniform indexing. If this is VK_FALSE, then a single dynamic instance of an
-    ///     instruction that nonuniformly indexes an array of storage images mayexecute multiple times in order to access all
+    ///     descriptors natively support non-uniform indexing. If this is VK_FALSE, then a single dynamic instance of an
+    ///     instruction that non-uniformly indexes an array of storage images mayexecute multiple times in order to access all
     ///     the descriptors.
     /// </summary>
     public VkBool32 shaderStorageImageArrayNonUniformIndexingNative;
 
     /// <summary>
     ///     shaderInputAttachmentArrayNonUniformIndexingNative is a boolean value indicating whether input attachment
-    ///     descriptors natively support nonuniform indexing. If this is VK_FALSE, then a single dynamic instance of an
-    ///     instruction that nonuniformly indexes an array of input attachments mayexecute multiple times in order to access
+    ///     descriptors natively support non-uniform indexing. If this is VK_FALSE, then a single dynamic instance of an
+    ///     instruction that non-uniformly indexes an array of input attachments may execute multiple times in order to access
     ///     all the descriptors.
     /// </summary>
     public VkBool32 shaderInputAttachmentArrayNonUniformIndexingNative;

@@ -17,6 +17,14 @@ namespace Exomia.Vulkan.Api.Core;
 ///     VkComputePipelineCreateInfo - Structure specifying parameters of a newly created compute pipeline -
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkComputePipelineCreateInfo.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkComputePipelineCreateInfo.html</a>
 /// </summary>
+/// <remarks>
+///     <list type="table">
+///         <item>
+///             <term>structextends</term><description>VkPipelineCreateInfoKHR</description>
+///         </item>
+///     </list>
+/// </remarks>
+[VkStructExtends("VkPipelineCreateInfoKHR")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkComputePipelineCreateInfo
 {
