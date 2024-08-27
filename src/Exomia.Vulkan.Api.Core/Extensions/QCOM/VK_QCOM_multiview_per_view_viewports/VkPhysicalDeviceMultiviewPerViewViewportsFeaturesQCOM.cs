@@ -47,6 +47,6 @@ public unsafe struct VkPhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>multiviewPerViewViewports indicates that the implementation supports multiview per-view viewports.</summary>
+    /// <summary> multiviewPerViewViewportsindicates that the implementation supports multiview per-view viewports.</summary>
     public VkBool32 multiviewPerViewViewports;
 }

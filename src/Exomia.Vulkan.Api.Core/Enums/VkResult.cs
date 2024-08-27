@@ -251,6 +251,15 @@ public enum VkResult
     VK_INCOMPATIBLE_SHADER_BINARY_EXT = 1000482000,
 
     /// <summary>
+    ///     VK_PIPELINE_BINARY_MISSING_KHR The application attempted to create a pipeline binary by querying an internal
+    ///     cache, but the internal cache entry did not exist.
+    /// </summary>
+    VK_PIPELINE_BINARY_MISSING_KHR = 1000483000,
+
+    /// <summary>VK_ERROR_NOT_ENOUGH_SPACE_KHR The application did not provide enough space to return all the required data.</summary>
+    VK_ERROR_NOT_ENOUGH_SPACE_KHR = -1000483000,
+
+    /// <summary>
     ///     VK_ERROR_OUT_OF_POOL_MEMORY A pool memory allocation has failed. This must only be returned if no attempt to
     ///     allocate host or device memory was made to accommodate the new allocation. If the failure was definitely due to
     ///     fragmentation of the pool, VK_ERROR_FRAGMENTED_POOL should be returned instead.
