@@ -117,28 +117,28 @@ public unsafe struct VkPhysicalDeviceVulkan12Features
 
     /// <summary>
     ///     shaderInputAttachmentArrayDynamicIndexing indicates whether arrays of input attachments can be indexed by
-    ///     dynamically uniform integer expressions in shader code. If this feature is not enabled, resources with a descriptor
-    ///     type of VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT must be indexed only by constant integral expressions when aggregated
-    ///     into arrays in shader code. This also indicates whether shader modules can declare the
-    ///     InputAttachmentArrayDynamicIndexing capability.
+    ///     integer expressions that are dynamically uniform within either the subgroup or the invocation group in shader code.
+    ///     If this feature is not enabled, resources with a descriptor type of VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT must be
+    ///     indexed only by constant integral expressions when aggregated into arrays in shader code. This also indicates
+    ///     whether shader modules can declare the InputAttachmentArrayDynamicIndexing capability.
     /// </summary>
     public VkBool32 shaderInputAttachmentArrayDynamicIndexing;
 
     /// <summary>
     ///     shaderUniformTexelBufferArrayDynamicIndexing indicates whether arrays of uniform texel buffers can be indexed
-    ///     by dynamically uniform integer expressions in shader code. If this feature is not enabled, resources with a
-    ///     descriptor type of VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER must be indexed only by constant integral expressions
-    ///     when aggregated into arrays in shader code. This also indicates whether shader modules can declare the
-    ///     UniformTexelBufferArrayDynamicIndexing capability.
+    ///     by integer expressions that are dynamically uniform within either the subgroup or the invocation group in shader
+    ///     code. If this feature is not enabled, resources with a descriptor type of VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER
+    ///     must be indexed only by constant integral expressions when aggregated into arrays in shader code. This also
+    ///     indicates whether shader modules can declare the UniformTexelBufferArrayDynamicIndexing capability.
     /// </summary>
     public VkBool32 shaderUniformTexelBufferArrayDynamicIndexing;
 
     /// <summary>
     ///     shaderStorageTexelBufferArrayDynamicIndexing indicates whether arrays of storage texel buffers can be indexed
-    ///     by dynamically uniform integer expressions in shader code. If this feature is not enabled, resources with a
-    ///     descriptor type of VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER must be indexed only by constant integral expressions
-    ///     when aggregated into arrays in shader code. This also indicates whether shader modules can declare the
-    ///     StorageTexelBufferArrayDynamicIndexing capability.
+    ///     by integer expressions that are dynamically uniform within either the subgroup or the invocation group in shader
+    ///     code. If this feature is not enabled, resources with a descriptor type of VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER
+    ///     must be indexed only by constant integral expressions when aggregated into arrays in shader code. This also
+    ///     indicates whether shader modules can declare the StorageTexelBufferArrayDynamicIndexing capability.
     /// </summary>
     public VkBool32 shaderStorageTexelBufferArrayDynamicIndexing;
 

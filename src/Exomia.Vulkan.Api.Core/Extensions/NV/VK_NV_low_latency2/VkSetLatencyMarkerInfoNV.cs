@@ -30,7 +30,7 @@ public unsafe struct VkSetLatencyMarkerInfoNV
     public void* pNext;
 
     /// <summary>
-    ///     presentId is an application provided value that is used to associate the timestamp with a vkQueuePresentKHR
+    ///     presentID is an application provided value that is used to associate the timestamp with a vkQueuePresentKHR
     ///     command using VkPresentIdKHR::pPresentIds for a given present.
     /// </summary>
     public ulong presentID;

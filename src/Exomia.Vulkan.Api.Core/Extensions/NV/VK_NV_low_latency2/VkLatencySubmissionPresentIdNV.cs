@@ -38,7 +38,7 @@ public unsafe struct VkLatencySubmissionPresentIdNV
     public void* pNext;
 
     /// <summary>
-    ///     presentId is used to associate the vkQueueSubmit with the presentId used for a given vkQueuePresentKHR via
+    ///     presentID is used to associate the vkQueueSubmit with the presentId used for a given vkQueuePresentKHR via
     ///     VkPresentIdKHR::pPresentIds.
     /// </summary>
     public ulong presentID;

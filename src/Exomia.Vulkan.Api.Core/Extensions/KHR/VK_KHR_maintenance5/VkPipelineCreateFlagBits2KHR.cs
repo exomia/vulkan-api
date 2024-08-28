@@ -265,5 +265,22 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets">descriptor sets</a>
     ///     .
     /// </summary>
-    VK_PIPELINE_CREATE_2_DESCRIPTOR_BUFFER_BIT_EXT = 0x20000000
+    VK_PIPELINE_CREATE_2_DESCRIPTOR_BUFFER_BIT_EXT = 0x20000000,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_2_CAPTURE_DATA_BIT_KHR specifies that VkPipelineBinaryKHR objects can be created from the
+    ///     pipeline. If VK_PIPELINE_CREATE_2_CAPTURE_DATA_BIT_KHR is used, implementations should not store pipeline data to
+    ///     an internal cache, if such a cache exists as stated by
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#limits-pipelineBinaryInternalCache">
+    ///         <code>pipelineBinaryInternalCache</code>
+    ///     </a>
+    ///     . If
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#limits-pipelineBinaryPrefersInternalCache">
+    ///         <code>pipelineBinaryPrefersInternalCache</code>
+    ///     </a>
+    ///     is VK_TRUE, applications should not use VK_PIPELINE_CREATE_2_CAPTURE_DATA_BIT_KHR.
+    /// </summary>
+    VK_PIPELINE_CREATE_2_CAPTURE_DATA_BIT_KHR = 0x80000000
 }
