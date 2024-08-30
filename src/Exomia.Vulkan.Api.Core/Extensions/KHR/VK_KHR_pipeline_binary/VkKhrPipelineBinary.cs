@@ -47,6 +47,15 @@ public static unsafe class VkKhrPipelineBinary
     public const string VK_KHR_PIPELINE_BINARY_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u505f\u5049\u4c45\u4e49\u5f45\u4942\u414e\u5952\u455f\u5458\u4e45\u4953\u4e4f\u4e5f\u4d41\u0045";
 
     /// <summary>
+    ///     VK_MAX_PIPELINE_BINARY_KEY_SIZE_KHR - Maximum length of binary key -
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_PIPELINE_BINARY_KEY_SIZE_KHR.html">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_PIPELINE_BINARY_KEY_SIZE_KHR.html
+    ///     </a>
+    /// </summary>
+    public const uint VK_MAX_PIPELINE_BINARY_KEY_SIZE_KHR = 32;
+
+    /// <summary>
     ///     vkCreatePipelineBinariesKHR - Create pipeline binaries from a pipeline or previously retrieved data -
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePipelineBinariesKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreatePipelineBinariesKHR.html</a>
     /// </summary>
