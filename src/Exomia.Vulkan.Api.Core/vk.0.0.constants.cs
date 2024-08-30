@@ -15,7 +15,14 @@ namespace Exomia.Vulkan.Api.Core;
 /// <content>
 ///     VK_VERSION_0_0.constants - vulkan
 /// </content>
-public static partial class Vk
+public static class Vk
 {
+    /// <summary>
+    ///     VK_MAX_PIPELINE_BINARY_KEY_SIZE_KHR - Maximum length of binary key -
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_PIPELINE_BINARY_KEY_SIZE_KHR.html">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_MAX_PIPELINE_BINARY_KEY_SIZE_KHR.html
+    ///     </a>
+    /// </summary>
     public const uint VK_MAX_PIPELINE_BINARY_KEY_SIZE_KHR = 32;
 }

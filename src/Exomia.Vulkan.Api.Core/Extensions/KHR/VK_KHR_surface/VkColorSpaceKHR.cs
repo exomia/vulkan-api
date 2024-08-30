@@ -75,9 +75,8 @@ public enum VkColorSpaceKHR
     VK_COLOR_SPACE_HDR10_ST2084_EXT = 1000104008,
 
     /// <summary>
-    ///     VK_COLOR_SPACE_DOLBYVISION_EXT specifies support for the images in Dolby Vision (BT2020) color space, encoded
-    ///     according to SMPTE ST2084 Perceptual Quantizer (PQ) specification. The presentation engine is expected to use Dolby
-    ///     &#8217;s proprietary techniques to display the image.
+    ///     VK_COLOR_SPACE_DOLBYVISION_EXT<br />
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkColorSpaceKHR">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkColorSpaceKHR</a>
     /// </summary>
     VK_COLOR_SPACE_DOLBYVISION_EXT = 1000104009,
 
