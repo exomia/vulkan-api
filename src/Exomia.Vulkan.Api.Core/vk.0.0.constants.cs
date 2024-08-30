@@ -15,7 +15,7 @@ namespace Exomia.Vulkan.Api.Core;
 /// <content>
 ///     VK_VERSION_0_0.constants - vulkan
 /// </content>
-public static class Vk
+public static partial class Vk
 {
     /// <summary>
     ///     VK_MAX_PIPELINE_BINARY_KEY_SIZE_KHR - Maximum length of binary key -
