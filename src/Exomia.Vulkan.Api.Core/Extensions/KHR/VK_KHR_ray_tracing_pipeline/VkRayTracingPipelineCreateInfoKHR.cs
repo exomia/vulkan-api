@@ -20,14 +20,6 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingPipelineCreateInfoKHR.html
 ///     </a>
 /// </summary>
-/// <remarks>
-///     <list type="table">
-///         <item>
-///             <term>structextends</term><description>VkPipelineCreateInfoKHR</description>
-///         </item>
-///     </list>
-/// </remarks>
-[VkStructExtends("VkPipelineCreateInfoKHR")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkRayTracingPipelineCreateInfoKHR
 {
