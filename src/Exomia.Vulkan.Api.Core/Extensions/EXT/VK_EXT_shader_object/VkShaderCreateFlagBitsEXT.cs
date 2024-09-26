@@ -68,5 +68,15 @@ public enum VkShaderCreateFlagBitsEXT
     ///     VK_SHADER_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT specifies that a fragment shader can be used with a
     ///     fragment density map attachment.
     /// </summary>
-    VK_SHADER_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 0x40
+    VK_SHADER_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 0x40,
+
+    /// <summary>
+    ///     VK_SHADER_CREATE_INDIRECT_BINDABLE_BIT_EXT specifies that the shader can be used in combination with
+    ///     <a class="bare"
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands">
+    ///         https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_SHADER_CREATE_INDIRECT_BINDABLE_BIT_EXT = 0x80
 }

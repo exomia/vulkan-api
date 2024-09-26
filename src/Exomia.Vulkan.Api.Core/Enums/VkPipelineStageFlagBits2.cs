@@ -32,11 +32,16 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_TOP_OF_PIPE_BIT = 0x1,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT specifies the stage of the pipeline where indirect command parameters
-    ///     are consumed. This stage also includes reading commands written by
+    ///     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT specifies the stage of the pipeline where indirect command parameters are
+    ///     consumed. This stage also includes reading commands written by
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html">
     ///         vkCmdPreprocessGeneratedCommandsNV
+    ///     </a>
+    ///     . This stage also includes reading commands written by
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsEXT.html">
+    ///         vkCmdPreprocessGeneratedCommandsEXT
     ///     </a>
     ///     .
     /// </summary>
@@ -371,11 +376,16 @@ public enum VkPipelineStageFlagBits2 : ulong
     VK_PIPELINE_STAGE_2_TOP_OF_PIPE_BIT_KHR = VK_PIPELINE_STAGE_2_TOP_OF_PIPE_BIT,
 
     /// <summary>
-    ///     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT specifies the stage of the pipeline where indirect command parameters
-    ///     are consumed. This stage also includes reading commands written by
+    ///     VK_PIPELINE_STAGE_2_DRAW_INDIRECT_BIT specifies the stage of the pipeline where indirect command parameters are
+    ///     consumed. This stage also includes reading commands written by
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html">
     ///         vkCmdPreprocessGeneratedCommandsNV
+    ///     </a>
+    ///     . This stage also includes reading commands written by
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsEXT.html">
+    ///         vkCmdPreprocessGeneratedCommandsEXT
     ///     </a>
     ///     .
     /// </summary>
@@ -581,6 +591,17 @@ public enum VkPipelineStageFlagBits2 : ulong
     ///     VK_PIPELINE_STAGE_2_CLUSTER_CULLING_SHADER_BIT_HUAWEI<br />
     /// </summary>
     VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT_KHR = VK_PIPELINE_STAGE_2_PRE_RASTERIZATION_SHADERS_BIT,
+
+    /// <summary>
+    ///     VK_PIPELINE_STAGE_2_COMMAND_PREPROCESS_BIT_NV specifies the stage of the pipeline where device-side generation
+    ///     of commands via
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html">
+    ///         vkCmdPreprocessGeneratedCommandsNV
+    ///     </a>
+    ///     is handled.
+    /// </summary>
+    VK_PIPELINE_STAGE_2_COMMAND_PREPROCESS_BIT_EXT = VK_PIPELINE_STAGE_2_COMMAND_PREPROCESS_BIT_NV,
 
     /// <summary>
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR    specifies the stage of the pipeline where the

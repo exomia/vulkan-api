@@ -1029,6 +1029,18 @@ public enum VkDynamicState
     VK_DYNAMIC_STATE_LINE_STIPPLE_KHR = 1000259000,
 
     /// <summary>
+    ///     VK_DYNAMIC_STATE_DEPTH_CLAMP_RANGE_EXT specifies that the depthClampMode and pDepthClampRange state in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportDepthClampControlCreateInfoEXT.html">
+    ///         VkPipelineViewportDepthClampControlCreateInfoEXT
+    ///     </a>
+    ///     will be ignored and must be set dynamically with
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthClampRangeEXT.html">vkCmdSetDepthClampRangeEXT</a>
+    ///     before any draw call.
+    /// </summary>
+    VK_DYNAMIC_STATE_DEPTH_CLAMP_RANGE_EXT = 1000582000,
+
+    /// <summary>
     ///     VK_DYNAMIC_STATE_LINE_STIPPLE_EXT<br />
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDynamicState">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkDynamicState</a>
     /// </summary>

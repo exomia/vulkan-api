@@ -475,6 +475,24 @@ public enum VkObjectType
     /// <summary>
     ///     <list type="table">
     ///         <item>
+    ///             <term>Vulkan Handle Type</term><description>VkIndirectCommandsLayoutEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </summary>
+    VK_OBJECT_TYPE_INDIRECT_COMMANDS_LAYOUT_EXT = 1000572000,
+
+    /// <summary>
+    ///     <list type="table">
+    ///         <item>
+    ///             <term>Vulkan Handle Type</term><description>VkIndirectExecutionSetEXT</description>
+    ///         </item>
+    ///     </list>
+    /// </summary>
+    VK_OBJECT_TYPE_INDIRECT_EXECUTION_SET_EXT = 1000572001,
+
+    /// <summary>
+    ///     <list type="table">
+    ///         <item>
     ///             <term>Vulkan Handle Type</term><description>VkDescriptorUpdateTemplate</description>
     ///         </item>
     ///     </list>

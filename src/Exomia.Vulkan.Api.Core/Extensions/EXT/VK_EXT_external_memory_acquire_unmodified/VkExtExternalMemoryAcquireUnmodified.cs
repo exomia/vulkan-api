@@ -20,7 +20,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VK_EXT_external_memory_acquire_unmodified - device extension (nr. 454) - author 'EXT' [platform '' | contact 'Lina
-///     Versace @versalinyaa']<br />
+///     Versace @linyaa-kiwi']<br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_acquire_unmodified.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_external_memory_acquire_unmodified.html

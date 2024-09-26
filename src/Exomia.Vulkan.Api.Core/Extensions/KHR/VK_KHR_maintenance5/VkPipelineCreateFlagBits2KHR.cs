@@ -282,5 +282,11 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     ///     </a>
     ///     is VK_TRUE, applications should not use VK_PIPELINE_CREATE_2_CAPTURE_DATA_BIT_KHR.
     /// </summary>
-    VK_PIPELINE_CREATE_2_CAPTURE_DATA_BIT_KHR = 0x80000000
+    VK_PIPELINE_CREATE_2_CAPTURE_DATA_BIT_KHR = 0x80000000,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_2_INDIRECT_BINDABLE_BIT_EXT specifies that the pipeline can be used in a
+    ///     VkIndirectExecutionSetEXT.
+    /// </summary>
+    VK_PIPELINE_CREATE_2_INDIRECT_BINDABLE_BIT_EXT = 0x4000000000
 }

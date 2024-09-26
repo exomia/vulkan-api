@@ -20,7 +20,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VK_EXT_image_drm_format_modifier - device extension (nr. 159) - author 'EXT' [platform '' | contact 'Lina Versace
-///     @versalinyaa']<br />
+///     @linyaa-kiwi']<br />
 ///     <a
 ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_drm_format_modifier.html">
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_drm_format_modifier.html

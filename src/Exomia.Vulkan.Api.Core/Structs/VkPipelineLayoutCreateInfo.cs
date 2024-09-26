@@ -21,12 +21,12 @@ namespace Exomia.Vulkan.Api.Core;
 ///     <list type="table">
 ///         <item>
 ///             <term>structextends</term>
-///             <description>VkBindDescriptorSetsInfoKHR,VkPushConstantsInfoKHR,VkPushDescriptorSetInfoKHR,VkPushDescriptorSetWithTemplateInfoKHR,VkSetDescriptorBufferOffsetsInfoEXT,VkBindDescriptorBufferEmbeddedSamplersInfoEXT</description>
+///             <description>VkBindDescriptorSetsInfoKHR,VkPushConstantsInfoKHR,VkPushDescriptorSetInfoKHR,VkPushDescriptorSetWithTemplateInfoKHR,VkSetDescriptorBufferOffsetsInfoEXT,VkBindDescriptorBufferEmbeddedSamplersInfoEXT,VkIndirectCommandsLayoutCreateInfoEXT</description>
 ///         </item>
 ///     </list>
 /// </remarks>
 [VkStructExtends(
-    "VkBindDescriptorSetsInfoKHR,VkPushConstantsInfoKHR,VkPushDescriptorSetInfoKHR,VkPushDescriptorSetWithTemplateInfoKHR,VkSetDescriptorBufferOffsetsInfoEXT,VkBindDescriptorBufferEmbeddedSamplersInfoEXT")]
+    "VkBindDescriptorSetsInfoKHR,VkPushConstantsInfoKHR,VkPushDescriptorSetInfoKHR,VkPushDescriptorSetWithTemplateInfoKHR,VkSetDescriptorBufferOffsetsInfoEXT,VkBindDescriptorBufferEmbeddedSamplersInfoEXT,VkIndirectCommandsLayoutCreateInfoEXT")]
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct VkPipelineLayoutCreateInfo
 {
