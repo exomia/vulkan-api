@@ -842,6 +842,22 @@ public static unsafe class VkExtShaderObject
         VkCoverageReductionModeNV /*coverageReductionMode*/,
         void> vkCmdSetCoverageReductionModeNV = null;
 
+    /// <summary>
+    ///     vkCmdSetDepthClampRangeEXT - Set the viewport depth clamp range dynamically for a command buffer -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthClampRangeEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthClampRangeEXT.html</a>
+    /// </summary>
+    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
+    /// <param name="depthClampMode">depthClampMode determines how the clamp range is determined for each viewport.</param>
+    /// <param name="pDepthClampRange">
+    ///     pDepthClampRange sets the depth clamp range for all viewports if depthClampMode is set
+    ///     to VK_DEPTH_CLAMP_MODE_USER_DEFINED_RANGE_EXT.
+    /// </param>
+    public static readonly delegate*<
+        VkCommandBuffer /*commandBuffer*/,
+        VkDepthClampModeEXT /*depthClampMode*/,
+        VkDepthClampRangeEXT* /*pDepthClampRange*/,
+        void> vkCmdSetDepthClampRangeEXT = null;
+
     /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks>
@@ -1005,6 +1021,9 @@ public static unsafe class VkExtShaderObject
     ///         </item>
     ///         <item>
     ///             <description>vkCmdSetCoverageReductionModeNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdSetDepthClampRangeEXT</description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -1313,6 +1332,12 @@ public static unsafe class VkExtShaderObject
         {
             *pvkCmdSetCoverageReductionModeNV = (delegate*<VkCommandBuffer, VkCoverageReductionModeNV, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5364\u7465\u6f43\u6576\u6172\u6567\u6552\u7564\u7463\u6f69\u4d6e\u646f\u4e65\u0056");
+        }
+
+        fixed (delegate*<VkCommandBuffer, VkDepthClampModeEXT, VkDepthClampRangeEXT*, void>* pvkCmdSetDepthClampRangeEXT = &vkCmdSetDepthClampRangeEXT)
+        {
+            *pvkCmdSetDepthClampRangeEXT = (delegate*<VkCommandBuffer, VkDepthClampModeEXT, VkDepthClampRangeEXT*, void>)GetVkFunction(
+                device, "\u6b76\u6d43\u5364\u7465\u6544\u7470\u4368\u616c\u706d\u6152\u676e\u4565\u5458\u0000");
         }
     }
 }

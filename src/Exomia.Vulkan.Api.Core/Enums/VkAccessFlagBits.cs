@@ -401,5 +401,25 @@ public enum VkAccessFlagBits
     VK_ACCESS_ACCELERATION_STRUCTURE_WRITE_BIT_NV = VK_ACCESS_ACCELERATION_STRUCTURE_WRITE_BIT_KHR,
 
     /// <summary>VK_ACCESS_NONE specifies no accesses.</summary>
-    VK_ACCESS_NONE_KHR = VK_ACCESS_NONE
+    VK_ACCESS_NONE_KHR = VK_ACCESS_NONE,
+
+    /// <summary>
+    ///     VK_ACCESS_COMMAND_PREPROCESS_READ_BIT_NV specifies reads from buffer inputs to
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html">
+    ///         vkCmdPreprocessGeneratedCommandsNV
+    ///     </a>
+    ///     . Such access occurs in the VK_PIPELINE_STAGE_COMMAND_PREPROCESS_BIT_NV pipeline stage.
+    /// </summary>
+    VK_ACCESS_COMMAND_PREPROCESS_READ_BIT_EXT = VK_ACCESS_COMMAND_PREPROCESS_READ_BIT_NV,
+
+    /// <summary>
+    ///     VK_ACCESS_COMMAND_PREPROCESS_WRITE_BIT_NV specifies writes to the target command buffer preprocess outputs in
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html">
+    ///         vkCmdPreprocessGeneratedCommandsNV
+    ///     </a>
+    ///     . Such access occurs in the VK_PIPELINE_STAGE_COMMAND_PREPROCESS_BIT_NV pipeline stage.
+    /// </summary>
+    VK_ACCESS_COMMAND_PREPROCESS_WRITE_BIT_EXT = VK_ACCESS_COMMAND_PREPROCESS_WRITE_BIT_NV
 }

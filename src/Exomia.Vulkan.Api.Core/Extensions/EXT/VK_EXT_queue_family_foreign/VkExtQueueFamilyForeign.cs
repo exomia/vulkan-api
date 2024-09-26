@@ -20,7 +20,7 @@ namespace Exomia.Vulkan.Api.Core;
 
 /// <summary>
 ///     VK_EXT_queue_family_foreign - device extension (nr. 127) - author 'EXT' [platform '' | contact 'Lina Versace
-///     @versalinyaa']<br />
+///     @linyaa-kiwi']<br />
 ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_queue_family_foreign.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_queue_family_foreign.html</a>
 /// </summary>
 [VkDepends("VK_KHR_external_memory,VK_VERSION_1_1")]

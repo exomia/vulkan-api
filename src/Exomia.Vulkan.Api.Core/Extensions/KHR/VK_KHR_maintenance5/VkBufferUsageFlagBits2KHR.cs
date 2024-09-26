@@ -99,7 +99,9 @@ public enum VkBufferUsageFlagBits2KHR : ulong
     ///     , or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDispatchIndirect.html">vkCmdDispatchIndirect</a>
     ///     . It is also suitable for passing as the buffer member of VkIndirectCommandsStreamNV, or sequencesCountBuffer or
-    ///     sequencesIndexBuffer or preprocessedBuffer member of VkGeneratedCommandsInfoNV
+    ///     sequencesIndexBuffer or preprocessedBuffer member of VkGeneratedCommandsInfoNV. It is also suitable for passing as
+    ///     the underlying buffer of either the preprocessAddress or sequenceCountAddress members of
+    ///     VkGeneratedCommandsInfoEXT.
     /// </summary>
     VK_BUFFER_USAGE_2_INDIRECT_BUFFER_BIT_KHR = 0x100,
 
@@ -240,6 +242,16 @@ public enum VkBufferUsageFlagBits2KHR : ulong
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits2KHR">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkBufferUsageFlagBits2KHR</a>
     /// </summary>
     VK_BUFFER_USAGE_2_MICROMAP_STORAGE_BIT_EXT = 0x1000000,
+
+    /// <summary>
+    ///     VK_BUFFER_USAGE_2_PREPROCESS_BUFFER_BIT_EXT specifies that the buffer can be used as a preprocess buffer for
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#device-generated-commands">
+    ///         Device-Generated
+    ///         Commands
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_BUFFER_USAGE_2_PREPROCESS_BUFFER_BIT_EXT = 0x80000000,
 
     /// <summary>
     ///     VK_BUFFER_USAGE_2_SHADER_BINDING_TABLE_BIT_KHR specifies that the buffer is suitable for use as a

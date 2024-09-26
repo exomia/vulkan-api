@@ -36,6 +36,11 @@ public enum VkPipelineStageFlagBits
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html">
     ///         vkCmdExecuteGeneratedCommandsNV
     ///     </a>
+    ///     . This stage also includes reading commands written by
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdExecuteGeneratedCommandsEXT.html">
+    ///         vkCmdExecuteGeneratedCommandsEXT
+    ///     </a>
     ///     .
     /// </summary>
     VK_PIPELINE_STAGE_DRAW_INDIRECT_BIT = 0x2,
@@ -360,5 +365,16 @@ public enum VkPipelineStageFlagBits
     VK_PIPELINE_STAGE_MESH_SHADER_BIT_NV = VK_PIPELINE_STAGE_MESH_SHADER_BIT_EXT,
 
     /// <summary>VK_PIPELINE_STAGE_NONE specifies no stages of execution.</summary>
-    VK_PIPELINE_STAGE_NONE_KHR = VK_PIPELINE_STAGE_NONE
+    VK_PIPELINE_STAGE_NONE_KHR = VK_PIPELINE_STAGE_NONE,
+
+    /// <summary>
+    ///     VK_PIPELINE_STAGE_COMMAND_PREPROCESS_BIT_NV specifies the stage of the pipeline where device-side
+    ///     preprocessing for generated commands via
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html">
+    ///         vkCmdPreprocessGeneratedCommandsNV
+    ///     </a>
+    ///     is handled.
+    /// </summary>
+    VK_PIPELINE_STAGE_COMMAND_PREPROCESS_BIT_EXT = VK_PIPELINE_STAGE_COMMAND_PREPROCESS_BIT_NV
 }

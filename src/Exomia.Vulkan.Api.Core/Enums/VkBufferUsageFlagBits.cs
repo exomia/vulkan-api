@@ -99,7 +99,9 @@ public enum VkBufferUsageFlagBits
     ///     , or
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDispatchIndirect.html">vkCmdDispatchIndirect</a>
     ///     . It is also suitable for passing as the buffer member of VkIndirectCommandsStreamNV, or sequencesCountBuffer or
-    ///     sequencesIndexBuffer or preprocessedBuffer member of VkGeneratedCommandsInfoNV
+    ///     sequencesIndexBuffer or preprocessedBuffer member of VkGeneratedCommandsInfoNV. It is also suitable for passing as
+    ///     the underlying buffer of either the preprocessAddress or sequenceCountAddress members of
+    ///     VkGeneratedCommandsInfoEXT.
     /// </summary>
     VK_BUFFER_USAGE_INDIRECT_BUFFER_BIT = 0x100,
 

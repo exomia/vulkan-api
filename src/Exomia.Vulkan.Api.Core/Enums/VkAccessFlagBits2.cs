@@ -747,6 +747,22 @@ public enum VkAccessFlagBits2 : ulong
     VK_ACCESS_2_SHADER_STORAGE_WRITE_BIT_KHR = VK_ACCESS_2_SHADER_STORAGE_WRITE_BIT,
 
     /// <summary>
+    ///     VK_ACCESS_2_COMMAND_PREPROCESS_READ_BIT_NV specifies reads from buffer inputs to
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html">
+    ///         vkCmdPreprocessGeneratedCommandsNV
+    ///     </a>
+    ///     . Such access occurs in the VK_PIPELINE_STAGE_2_COMMAND_PREPROCESS_BIT_NV pipeline stage.
+    /// </summary>
+    VK_ACCESS_2_COMMAND_PREPROCESS_READ_BIT_EXT = VK_ACCESS_2_COMMAND_PREPROCESS_READ_BIT_NV,
+
+    /// <summary>
+    ///     VK_ACCESS_2_COMMAND_PREPROCESS_WRITE_BIT_NV specifies writes to the target command buffer preprocess outputs.
+    ///     Such access occurs in the VK_PIPELINE_STAGE_2_COMMAND_PREPROCESS_BIT_NV pipeline stage.
+    /// </summary>
+    VK_ACCESS_2_COMMAND_PREPROCESS_WRITE_BIT_EXT = VK_ACCESS_2_COMMAND_PREPROCESS_WRITE_BIT_NV,
+
+    /// <summary>
     ///     VK_ACCESS_2_FRAGMENT_SHADING_RATE_ATTACHMENT_READ_BIT_KHRspecifies read access to a fragment shading rate
     ///     attachment during rasterization. Such access occurs in the
     ///     VK_PIPELINE_STAGE_2_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRpipeline stage.
