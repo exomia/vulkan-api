@@ -76,5 +76,17 @@ public enum VkPresentModeKHR
     ///     presentation request, but this does not guarantee the timing of when it will be updated. This mode may result in
     ///     visible tearing if rendering to the image is not timed correctly.
     /// </summary>
-    VK_PRESENT_MODE_SHARED_CONTINUOUS_REFRESH_KHR = 1000111001
+    VK_PRESENT_MODE_SHARED_CONTINUOUS_REFRESH_KHR = 1000111001,
+
+    /// <summary>
+    ///     VK_PRESENT_MODE_FIFO_LATEST_READY_EXT specifies that the presentation engine waits for the next vertical
+    ///     blanking period to update the current image. Tearing cannot be observed. An internal queue is used to hold pending
+    ///     presentation requests. New requests are appended to the end of the queue. At each vertical blanking period, the
+    ///     presentation engine dequeues all successive requests that are ready to be presented from the beginning of the
+    ///     queue. If using VK_GOOGLE_display_timing to provide a target present time, the presentation engine will check the
+    ///     specified time for each image. If the target present time is less-than or equal-to the current time, the
+    ///     presentation engine will dequeue the image and check the next one. The image of the last dequeued request will be
+    ///     presented. The other dequeued requests will be dropped.
+    /// </summary>
+    VK_PRESENT_MODE_FIFO_LATEST_READY_EXT = 1000361000
 }
