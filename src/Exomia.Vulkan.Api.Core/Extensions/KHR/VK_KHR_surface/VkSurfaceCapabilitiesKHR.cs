@@ -90,10 +90,10 @@ public struct VkSurfaceCapabilitiesKHR
 
     /// <summary>
     ///     supportedUsageFlags is a bitmask of VkImageUsageFlagBitsrepresenting the ways the application can use the
-    ///     presentable images of a swapchain created with VkPresentModeKHR set to VK_PRESENT_MODE_IMMEDIATE_KHR,
-    ///     VK_PRESENT_MODE_MAILBOX_KHR, VK_PRESENT_MODE_FIFO_KHR or VK_PRESENT_MODE_FIFO_RELAXED_KHRfor the surface on the
-    ///     specified device. VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT must be included in the set. Implementations may support
-    ///     additional usages.
+    ///     presentable images of a swapchain created with VkPresentModeKHR set to VK_PRESENT_MODE_FIFO_LATEST_READY_EXT,
+    ///     VK_PRESENT_MODE_IMMEDIATE_KHR, VK_PRESENT_MODE_MAILBOX_KHR, VK_PRESENT_MODE_FIFO_KHR or
+    ///     VK_PRESENT_MODE_FIFO_RELAXED_KHRfor the surface on the specified device. VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT must
+    ///     be included in the set. Implementations may support additional usages.
     /// </summary>
     public VkImageUsageFlags supportedUsageFlags;
 }
