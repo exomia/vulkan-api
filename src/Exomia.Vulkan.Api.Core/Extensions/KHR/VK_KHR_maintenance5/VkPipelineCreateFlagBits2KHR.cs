@@ -39,6 +39,12 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     VK_PIPELINE_CREATE_2_DERIVATIVE_BIT_KHR = 0x4,
 
     /// <summary>
+    ///     VK_PIPELINE_CREATE_2_EXECUTION_GRAPH_BIT_AMDX specifies that the pipeline will be used in an
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#executiongraphs">execution graph</a>
+    /// </summary>
+    VK_PIPELINE_CREATE_2_EXECUTION_GRAPH_BIT_AMDX = 0x100000000,
+
+    /// <summary>
     ///     VK_PIPELINE_CREATE_2_ENABLE_LEGACY_DITHERING_BIT_EXT specifies that the pipeline will be used in a render pass
     ///     that is begun with VK_RENDERING_ENABLE_LEGACY_DITHERING_BIT_EXT.
     /// </summary>
