@@ -41,8 +41,8 @@ public unsafe struct VkVideoEncodeH265SessionCreateInfoKHR
     public void* pNext;
 
     /// <summary>
-    ///     useMaxLevelIdc indicates whether the value of maxLevelIdcshould be used by the implementation. When it is set
-    ///     to VK_FALSE, the implementation ignores the value of maxLevelIdc and uses the value of
+    ///     useMaxLevelIdc indicates whether the value of maxLevelIdcshould be used by the implementation. When it is
+    ///     VK_FALSE, the implementation ignores the value of maxLevelIdc and uses the value of
     ///     VkVideoEncodeH265CapabilitiesKHR::maxLevelIdc, as reported by vkGetPhysicalDeviceVideoCapabilitiesKHR for the video
     ///     profile.
     /// </summary>

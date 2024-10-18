@@ -70,6 +70,23 @@ public static unsafe class VkAmdBufferMarker
         uint /*marker*/,
         void> vkCmdWriteBufferMarkerAMD = null;
 
+    /// <summary>
+    ///     vkCmdWriteBufferMarker2AMD - Execute a pipelined write of a marker value into a buffer -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarker2AMD.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarker2AMD.html</a>
+    /// </summary>
+    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
+    /// <param name="stage">stage specifies the pipeline stage whose completion triggers the marker write.</param>
+    /// <param name="dstBuffer">dstBuffer is the buffer where the marker will be written.</param>
+    /// <param name="dstOffset">dstOffset is the byte offset into the buffer where the marker will be written.</param>
+    /// <param name="marker">marker is the 32-bit value of the marker.</param>
+    public static readonly delegate*<
+        VkCommandBuffer /*commandBuffer*/,
+        VkPipelineStageFlags2 /*stage*/,
+        VkBuffer /*dstBuffer*/,
+        VkDeviceSize /*dstOffset*/,
+        uint /*marker*/,
+        void> vkCmdWriteBufferMarker2AMD = null;
+
     /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks>
@@ -77,6 +94,9 @@ public static unsafe class VkAmdBufferMarker
     ///     <list type="bullet">
     ///         <item>
     ///             <description>vkCmdWriteBufferMarkerAMD</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkCmdWriteBufferMarker2AMD</description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -86,6 +106,12 @@ public static unsafe class VkAmdBufferMarker
         {
             *pvkCmdWriteBufferMarkerAMD = (delegate*<VkCommandBuffer, VkPipelineStageFlagBits, VkBuffer, VkDeviceSize, uint, void>)GetVkFunction(
                 device, "\u6b76\u6d43\u5764\u6972\u6574\u7542\u6666\u7265\u614d\u6b72\u7265\u4d41\u0044");
+        }
+
+        fixed (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkBuffer, VkDeviceSize, uint, void>* pvkCmdWriteBufferMarker2AMD = &vkCmdWriteBufferMarker2AMD)
+        {
+            *pvkCmdWriteBufferMarker2AMD = (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkBuffer, VkDeviceSize, uint, void>)GetVkFunction(
+                device, "\u6b76\u6d43\u5764\u6972\u6574\u7542\u6666\u7265\u614d\u6b72\u7265\u4132\u444d\u0000");
         }
     }
 }

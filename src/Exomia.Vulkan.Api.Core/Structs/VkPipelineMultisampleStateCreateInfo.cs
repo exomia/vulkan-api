@@ -48,7 +48,7 @@ public unsafe struct VkPipelineMultisampleStateCreateInfo
     /// <summary>sampleShadingEnable can be used to enable Sample Shading.</summary>
     public VkBool32 sampleShadingEnable;
 
-    /// <summary>minSampleShading specifies a minimum fraction of sample shading if sampleShadingEnable is set to VK_TRUE.</summary>
+    /// <summary>minSampleShading specifies a minimum fraction of sample shading if sampleShadingEnable is VK_TRUE.</summary>
     public float minSampleShading;
 
     /// <summary>pSampleMask is a pointer to an array of VkSampleMaskvalues used in the sample mask test.</summary>

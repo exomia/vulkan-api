@@ -109,15 +109,16 @@ public unsafe struct VkSwapchainCreateInfoKHR
 
     /// <summary>
     ///     clipped specifies whether the Vulkan implementation is allowed to discard rendering operations that affect
-    ///     regions of the surface that are not visible.If set to VK_TRUE, the presentable images associated with the swapchain
-    ///     may not own all of their pixels. Pixels in the presentable images that correspond to regions of the target surface
-    ///     obscured by another window on the desktop, or subject to some other clipping mechanism will have undefined content
-    ///     when read back. Fragment shaders may not execute for these pixels, and thus any side effects they would have had
-    ///     will not occur. Setting VK_TRUE does not guarantee any clipping will occur, but allows more efficient presentation
-    ///     methods to be used on some platforms.If set to VK_FALSE, presentable images associated with the swapchain will own
-    ///     all of the pixels they contain.NoteApplications should set this value to VK_TRUE if they do not expect to read back
-    ///     the content of presentable images before presenting them or after reacquiring them, and if their fragment shaders
-    ///     do not have any side effects that require them to run for all pixels in the presentable image.
+    ///     regions of the surface that are not visible.If clipped is VK_TRUE, the presentable images associated with the
+    ///     swapchain may not own all of their pixels. Pixels in the presentable images that correspond to regions of the
+    ///     target surface obscured by another window on the desktop, or subject to some other clipping mechanism will have
+    ///     undefined content when read back. Fragment shaders may not execute for these pixels, and thus any side effects they
+    ///     would have had will not occur. Setting VK_TRUE does not guarantee any clipping will occur, but allows more
+    ///     efficient presentation methods to be used on some platforms.If clipped is VK_FALSE, presentable images associated
+    ///     with the swapchain will own all of the pixels they contain.NoteApplications should set this value to VK_TRUE if
+    ///     they do not expect to read back the content of presentable images before presenting them or after reacquiring them,
+    ///     and if their fragment shaders do not have any side effects that require them to run for all pixels in the
+    ///     presentable image.
     /// </summary>
     public VkBool32 clipped;
 

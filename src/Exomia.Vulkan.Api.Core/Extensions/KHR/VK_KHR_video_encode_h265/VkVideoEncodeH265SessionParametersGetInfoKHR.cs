@@ -67,13 +67,13 @@ public unsafe struct VkVideoEncodeH265SessionParametersGetInfoKHR
 
     /// <summary>
     ///     stdSPSId specifies the H.265 sequence parameter set ID used to identify the retrieved H.265 sequence and/or
-    ///     picture parameter set(s) when writeStdSPS and/or writeStdPPS is set to VK_TRUE.
+    ///     picture parameter set(s) when writeStdSPS and/or writeStdPPS is VK_TRUE.
     /// </summary>
     public uint stdSPSId;
 
     /// <summary>
     ///     stdPPSId specifies the H.265 picture parameter set ID used to identify the retrieved H.265 picture parameter
-    ///     set when writeStdPPS is set to VK_TRUE.
+    ///     set when writeStdPPS is VK_TRUE.
     /// </summary>
     public uint stdPPSId;
 }

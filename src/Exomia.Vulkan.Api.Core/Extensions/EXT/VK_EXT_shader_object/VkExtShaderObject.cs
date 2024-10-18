@@ -849,8 +849,8 @@ public static unsafe class VkExtShaderObject
     /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
     /// <param name="depthClampMode">depthClampMode determines how the clamp range is determined for each viewport.</param>
     /// <param name="pDepthClampRange">
-    ///     pDepthClampRange sets the depth clamp range for all viewports if depthClampMode is set
-    ///     to VK_DEPTH_CLAMP_MODE_USER_DEFINED_RANGE_EXT.
+    ///     pDepthClampRange sets the depth clamp range for all viewports if depthClampMode is
+    ///     VK_DEPTH_CLAMP_MODE_USER_DEFINED_RANGE_EXT.
     /// </param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,

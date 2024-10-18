@@ -61,7 +61,7 @@ public unsafe struct VkVideoEncodeH264SessionParametersGetInfoKHR
 
     /// <summary>
     ///     stdPPSId specifies the H.264 picture parameter set ID used to identify the retrieved H.264 picture parameter
-    ///     set when writeStdPPS is set to VK_TRUE.
+    ///     set when writeStdPPS is VK_TRUE.
     /// </summary>
     public uint stdPPSId;
 }

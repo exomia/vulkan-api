@@ -284,7 +284,7 @@ public static unsafe class VkKhrSwapchain
     ///     pAcquireInfo is a pointer to a VkAcquireNextImageInfoKHRstructure containing parameters of
     ///     the acquire.
     /// </param>
-    /// <param name="pImageIndex">pImageIndex is a pointer to a uint32_t that is set to the index of the next image to use.</param>
+    /// <param name="pImageIndex">pImageIndex is a pointer to a uint32_t value specifying the index of the next image to use.</param>
     /// <remarks>
     ///     <list type="table">
     ///         <item>

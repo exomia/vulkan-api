@@ -714,7 +714,7 @@ public struct VkPhysicalDeviceLimits
 
     /// <summary>
     ///     timestampComputeAndGraphicsspecifies support for timestamps on all graphics and compute queues. If this limit
-    ///     is set to VK_TRUE, all queues that advertise the VK_QUEUE_GRAPHICS_BIT or VK_QUEUE_COMPUTE_BIT in the
+    ///     is VK_TRUE, all queues that advertise the VK_QUEUE_GRAPHICS_BIT or VK_QUEUE_COMPUTE_BIT in the
     ///     VkQueueFamilyProperties::queueFlags support VkQueueFamilyProperties::timestampValidBits of at least 36. See
     ///     Timestamp Queries.
     /// </summary>

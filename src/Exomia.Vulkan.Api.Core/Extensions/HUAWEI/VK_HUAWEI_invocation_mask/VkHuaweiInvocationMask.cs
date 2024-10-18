@@ -54,7 +54,7 @@ public static unsafe class VkHuaweiInvocationMask
     /// </summary>
     /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded</param>
     /// <param name="imageView">
-    ///     imageView is an image view handle specifying the invocation mask image imageView may be set to
+    ///     imageView is an image view handle specifying the invocation mask image imageView may be
     ///     VK_NULL_HANDLE, which is equivalent to specifying a view of an image filled with ones value.
     /// </param>
     /// <param name="imageLayout">
