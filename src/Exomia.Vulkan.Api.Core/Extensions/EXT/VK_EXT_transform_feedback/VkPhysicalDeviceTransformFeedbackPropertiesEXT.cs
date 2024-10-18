@@ -47,7 +47,7 @@ public unsafe struct VkPhysicalDeviceTransformFeedbackPropertiesEXT
     /// <summary>
     ///     maxTransformFeedbackStreamsis the maximum number of vertex streams that can be output from geometry shaders
     ///     declared with the GeometryStreams capability. If the implementation does not support
-    ///     VkPhysicalDeviceTransformFeedbackFeaturesEXT::geometryStreamsthen maxTransformFeedbackStreams must be set to 1.
+    ///     VkPhysicalDeviceTransformFeedbackFeaturesEXT::geometryStreamsthen maxTransformFeedbackStreams must be 1.
     /// </summary>
     public uint maxTransformFeedbackStreams;
 

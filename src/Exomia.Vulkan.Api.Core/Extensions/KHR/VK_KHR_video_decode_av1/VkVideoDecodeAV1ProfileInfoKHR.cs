@@ -45,7 +45,7 @@ public unsafe struct VkVideoDecodeAV1ProfileInfoKHR
 
     /// <summary>
     ///     filmGrainSupport specifies whether AV1 film grain, as defined in section 7.8.3 of the AV1 Specification, can
-    ///     be used with the video profile. When this member is set to VK_TRUE, video session objects created against the video
+    ///     be used with the video profile. When this member is VK_TRUE, video session objects created against the video
     ///     profile will be able to decode pictures that have film grain enabled.
     /// </summary>
     public VkBool32 filmGrainSupport;

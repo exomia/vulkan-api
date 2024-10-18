@@ -104,7 +104,7 @@ public enum VkPipelineCreateFlagBits2KHR : ulong
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a>
     ///     object; VK_PIPELINE_COMPILE_REQUIRED will be returned by pipeline creation, and the
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a> will
-    ///     be set to
+    ///     be
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NULL_HANDLE.html">VK_NULL_HANDLE</a>
     ///     .
     /// </summary>

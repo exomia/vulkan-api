@@ -45,7 +45,7 @@ public unsafe struct VkPipelineViewportDepthClampControlCreateInfoEXT
     public VkDepthClampModeEXT depthClampMode;
 
     /// <summary>
-    ///     pDepthClampRange sets the depth clamp range for all viewports if depthClampMode is set to
+    ///     pDepthClampRange sets the depth clamp range for all viewports if depthClampMode is
     ///     VK_DEPTH_CLAMP_MODE_USER_DEFINED_RANGE_EXT.
     /// </summary>
     public VkDepthClampRangeEXT* pDepthClampRange;

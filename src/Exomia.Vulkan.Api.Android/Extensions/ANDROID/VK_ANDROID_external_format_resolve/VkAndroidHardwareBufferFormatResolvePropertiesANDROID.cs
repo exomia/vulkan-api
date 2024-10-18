@@ -47,10 +47,10 @@ public unsafe struct VkAndroidHardwareBufferFormatResolvePropertiesANDROID
     /// <summary>
     ///     colorAttachmentFormat is a VkFormat specifying the format of color attachment images that must be used for
     ///     color attachments when resolving to the specified external format. If the implementation supports external format
-    ///     resolves for the specified external format, this value will be set to a color format supporting the
+    ///     resolves for the specified external format, this value will be a color format supporting the
     ///     VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT in VkFormatProperties::optimalTilingFeatures as returned by
     ///     vkGetPhysicalDeviceFormatProperties with format equal to colorAttachmentFormat If external format resolves are not
-    ///     supported, this value will be set to VK_FORMAT_UNDEFINED.
+    ///     supported, this value will be VK_FORMAT_UNDEFINED.
     /// </summary>
     public VkFormat colorAttachmentFormat;
 }

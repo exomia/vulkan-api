@@ -81,6 +81,25 @@ public static unsafe class VkNvDeviceDiagnosticCheckpoints
         VkCheckpointDataNV* /*pCheckpointData*/,
         void> vkGetQueueCheckpointDataNV = null;
 
+    /// <summary>
+    ///     vkGetQueueCheckpointData2NV - Retrieve diagnostic checkpoint data -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointData2NV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointData2NV.html</a>
+    /// </summary>
+    /// <param name="queue">queue is the VkQueue object the caller would like to retrieve checkpoint data for</param>
+    /// <param name="pCheckpointDataCount">
+    ///     pCheckpointDataCount is a pointer to an integer related to the number of checkpoint
+    ///     markers available or queried, as described below.
+    /// </param>
+    /// <param name="pCheckpointData">
+    ///     pCheckpointData is either NULL or a pointer to an array of VkCheckpointData2NV
+    ///     structures.
+    /// </param>
+    public static readonly delegate*<
+        VkQueue /*queue*/,
+        uint* /*pCheckpointDataCount*/,
+        VkCheckpointData2NV* /*pCheckpointData*/,
+        void> vkGetQueueCheckpointData2NV = null;
+
     /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks>
@@ -91,6 +110,9 @@ public static unsafe class VkNvDeviceDiagnosticCheckpoints
     ///         </item>
     ///         <item>
     ///             <description>vkGetQueueCheckpointDataNV</description>
+    ///         </item>
+    ///         <item>
+    ///             <description>vkGetQueueCheckpointData2NV</description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -105,6 +127,12 @@ public static unsafe class VkNvDeviceDiagnosticCheckpoints
         {
             *pvkGetQueueCheckpointDataNV = (delegate*<VkQueue, uint*, VkCheckpointDataNV*, void>)GetVkFunction(
                 device, "\u6b76\u6547\u5174\u6575\u6575\u6843\u6365\u706b\u696f\u746e\u6144\u6174\u564e\u0000");
+        }
+
+        fixed (delegate*<VkQueue, uint*, VkCheckpointData2NV*, void>* pvkGetQueueCheckpointData2NV = &vkGetQueueCheckpointData2NV)
+        {
+            *pvkGetQueueCheckpointData2NV = (delegate*<VkQueue, uint*, VkCheckpointData2NV*, void>)GetVkFunction(
+                device, "\u6b76\u6547\u5174\u6575\u6575\u6843\u6365\u706b\u696f\u746e\u6144\u6174\u4e32\u0056");
         }
     }
 }

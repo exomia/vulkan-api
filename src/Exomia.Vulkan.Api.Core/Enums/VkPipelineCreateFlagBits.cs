@@ -56,7 +56,7 @@ public enum VkPipelineCreateFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a>
     ///     object; VK_PIPELINE_COMPILE_REQUIREDwill be returned by pipeline creation, and the
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a> will
-    ///     be set to
+    ///     be
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NULL_HANDLE.html">VK_NULL_HANDLE</a>
     ///     .
     /// </summary>
@@ -67,18 +67,6 @@ public enum VkPipelineCreateFlagBits
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkPipelineCreateFlagBits</a>
     /// </summary>
     VK_PIPELINE_CREATE_EARLY_RETURN_ON_FAILURE_BIT = 0x200,
-
-    /// <summary>
-    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that the pipeline will be used
-    ///     with a fragment shading rate attachment and dynamic rendering.
-    /// </summary>
-    VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x200000,
-
-    /// <summary>
-    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXTspecifies that the pipeline will be used
-    ///     with a fragment density map attachment and dynamic rendering.
-    /// </summary>
-    VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 0x400000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_BIT_KHRspecifies that an any-hit shader will always be
@@ -143,6 +131,18 @@ public enum VkPipelineCreateFlagBits
     ///     exactly once on each shader in the pipeline before using the pipeline.
     /// </summary>
     VK_PIPELINE_CREATE_DEFER_COMPILE_BIT_NV = 0x20,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXTspecifies that the pipeline will be used
+    ///     with a fragment density map attachment and dynamic rendering.
+    /// </summary>
+    VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = 0x400000,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that the pipeline will be used
+    ///     with a fragment shading rate attachment and dynamic rendering.
+    /// </summary>
+    VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = 0x200000,
 
     /// <summary>
     ///     VK_PIPELINE_CREATE_CAPTURE_STATISTICS_BIT_KHR specifies that the shader compiler should capture statistics for the
@@ -265,18 +265,6 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_DISPATCH_BASE = VK_PIPELINE_CREATE_DISPATCH_BASE_BIT,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that the pipeline will be used
-    ///     with a fragment shading rate attachment and dynamic rendering.
-    /// </summary>
-    VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR,
-
-    /// <summary>
-    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXTspecifies that the pipeline will be used
-    ///     with a fragment density map attachment and dynamic rendering.
-    /// </summary>
-    VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT,
-
-    /// <summary>
     ///     VK_PIPELINE_CREATE_VIEW_INDEX_FROM_DEVICE_INDEX_BIT specifies that any shader input variables decorated as
     ///     ViewIndex will be assigned values as if they were decorated as DeviceIndex.
     /// </summary>
@@ -290,12 +278,24 @@ public enum VkPipelineCreateFlagBits
     VK_PIPELINE_CREATE_DISPATCH_BASE_KHR = VK_PIPELINE_CREATE_DISPATCH_BASE,
 
     /// <summary>
+    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXTspecifies that the pipeline will be used
+    ///     with a fragment density map attachment and dynamic rendering.
+    /// </summary>
+    VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT = VK_PIPELINE_CREATE_RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_BIT_EXT,
+
+    /// <summary>
+    ///     VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHRspecifies that the pipeline will be used
+    ///     with a fragment shading rate attachment and dynamic rendering.
+    /// </summary>
+    VK_PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR = VK_PIPELINE_CREATE_RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR,
+
+    /// <summary>
     ///     VK_PIPELINE_CREATE_FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT specifies that pipeline creation will fail if a
     ///     compile is required for creation of a valid
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a>
     ///     object; VK_PIPELINE_COMPILE_REQUIREDwill be returned by pipeline creation, and the
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipeline.html">VkPipeline</a> will
-    ///     be set to
+    ///     be
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_NULL_HANDLE.html">VK_NULL_HANDLE</a>
     ///     .
     /// </summary>

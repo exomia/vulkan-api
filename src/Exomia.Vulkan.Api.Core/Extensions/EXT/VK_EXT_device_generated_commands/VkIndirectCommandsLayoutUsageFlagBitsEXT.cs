@@ -35,7 +35,7 @@ public enum VkIndirectCommandsLayoutUsageFlagBitsEXT
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdExecuteGeneratedCommandsEXT.html">
     ///         vkCmdExecuteGeneratedCommandsEXT
     ///     </a>
-    ///     with isPreprocessedset to VK_TRUE.
+    ///     with isPreprocessed set to VK_TRUE.
     /// </summary>
     VK_INDIRECT_COMMANDS_LAYOUT_USAGE_EXPLICIT_PREPROCESS_BIT_EXT = 0x1,
 

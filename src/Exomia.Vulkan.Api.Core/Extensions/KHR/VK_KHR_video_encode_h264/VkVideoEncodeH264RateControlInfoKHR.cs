@@ -45,15 +45,15 @@ public unsafe struct VkVideoEncodeH264RateControlInfoKHR
 
     /// <summary>
     ///     gopFrameCount is the number of frames within a group of pictures (GOP) intended to be used by the application.
-    ///     If it is set to 0, the rate control algorithm may assume an implementation-dependent GOP length. If it is set to
-    ///     UINT32_MAX, the GOP length is treated as infinite.
+    ///     If it is 0, the rate control algorithm may assume an implementation-dependent GOP length. If it is UINT32_MAX, the
+    ///     GOP length is treated as infinite.
     /// </summary>
     public uint gopFrameCount;
 
     /// <summary>
-    ///     idrPeriod is the interval, in terms of number of frames, between two IDR frames (see IDR period). If it is set
-    ///     to 0, the rate control algorithm may assume an implementation-dependent IDR period. If it is set to UINT32_MAX, the
-    ///     IDR period is treated as infinite.
+    ///     idrPeriod is the interval, in terms of number of frames, between two IDR frames (see IDR period). If it is 0,
+    ///     the rate control algorithm may assume an implementation-dependent IDR period. If it is UINT32_MAX, the IDR period
+    ///     is treated as infinite.
     /// </summary>
     public uint idrPeriod;
 

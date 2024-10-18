@@ -116,42 +116,6 @@ public static unsafe class VkKhrSynchronization2
         VkFence /*fence*/,
         VkResult> vkQueueSubmit2KHR = null;
 
-    /// <summary>
-    ///     vkCmdWriteBufferMarker2AMD - Execute a pipelined write of a marker value into a buffer -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarker2AMD.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarker2AMD.html</a>
-    /// </summary>
-    /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="stage">stage specifies the pipeline stage whose completion triggers the marker write.</param>
-    /// <param name="dstBuffer">dstBuffer is the buffer where the marker will be written.</param>
-    /// <param name="dstOffset">dstOffset is the byte offset into the buffer where the marker will be written.</param>
-    /// <param name="marker">marker is the 32-bit value of the marker.</param>
-    public static readonly delegate*<
-        VkCommandBuffer /*commandBuffer*/,
-        VkPipelineStageFlags2 /*stage*/,
-        VkBuffer /*dstBuffer*/,
-        VkDeviceSize /*dstOffset*/,
-        uint /*marker*/,
-        void> vkCmdWriteBufferMarker2AMD = null;
-
-    /// <summary>
-    ///     vkGetQueueCheckpointData2NV - Retrieve diagnostic checkpoint data -
-    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointData2NV.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointData2NV.html</a>
-    /// </summary>
-    /// <param name="queue">queue is the VkQueue object the caller would like to retrieve checkpoint data for</param>
-    /// <param name="pCheckpointDataCount">
-    ///     pCheckpointDataCount is a pointer to an integer related to the number of checkpoint
-    ///     markers available or queried, as described below.
-    /// </param>
-    /// <param name="pCheckpointData">
-    ///     pCheckpointData is either NULL or a pointer to an array of VkCheckpointData2NV
-    ///     structures.
-    /// </param>
-    public static readonly delegate*<
-        VkQueue /*queue*/,
-        uint* /*pCheckpointDataCount*/,
-        VkCheckpointData2NV* /*pCheckpointData*/,
-        void> vkGetQueueCheckpointData2NV = null;
-
     /// <summary> Loads all function pointer based on the device for this extension. (see remarks!) </summary>
     /// <param name="device"> The device that the function pointers will be compatible with. </param>
     /// <remarks>
@@ -174,12 +138,6 @@ public static unsafe class VkKhrSynchronization2
     ///         </item>
     ///         <item>
     ///             <description>vkQueueSubmit2KHR</description>
-    ///         </item>
-    ///         <item>
-    ///             <description>vkCmdWriteBufferMarker2AMD</description>
-    ///         </item>
-    ///         <item>
-    ///             <description>vkGetQueueCheckpointData2NV</description>
     ///         </item>
     ///     </list>
     /// </remarks>
@@ -214,18 +172,6 @@ public static unsafe class VkKhrSynchronization2
         fixed (delegate*<VkQueue, uint, VkSubmitInfo2*, VkFence, VkResult>* pvkQueueSubmit2KHR = &vkQueueSubmit2KHR)
         {
             *pvkQueueSubmit2KHR = (delegate*<VkQueue, uint, VkSubmitInfo2*, VkFence, VkResult>)GetVkFunction(device, "\u6b76\u7551\u7565\u5365\u6275\u696d\u3274\u484b\u0052");
-        }
-
-        fixed (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkBuffer, VkDeviceSize, uint, void>* pvkCmdWriteBufferMarker2AMD = &vkCmdWriteBufferMarker2AMD)
-        {
-            *pvkCmdWriteBufferMarker2AMD = (delegate*<VkCommandBuffer, VkPipelineStageFlags2, VkBuffer, VkDeviceSize, uint, void>)GetVkFunction(
-                device, "\u6b76\u6d43\u5764\u6972\u6574\u7542\u6666\u7265\u614d\u6b72\u7265\u4132\u444d\u0000");
-        }
-
-        fixed (delegate*<VkQueue, uint*, VkCheckpointData2NV*, void>* pvkGetQueueCheckpointData2NV = &vkGetQueueCheckpointData2NV)
-        {
-            *pvkGetQueueCheckpointData2NV = (delegate*<VkQueue, uint*, VkCheckpointData2NV*, void>)GetVkFunction(
-                device, "\u6b76\u6547\u5174\u6575\u6575\u6843\u6365\u706b\u696f\u746e\u6144\u6174\u4e32\u0056");
         }
     }
 }
