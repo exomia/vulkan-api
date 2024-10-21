@@ -49,8 +49,8 @@ public unsafe struct VkPhysicalDeviceExternalMemoryScreenBufferFeaturesQNX
 
     /// <summary>
     ///     screenBufferImport indicates whether QNX Screen buffer import functionality is supported. If
-    ///     screenBufferImport is set to VK_TRUE, VkDeviceMemory supports importing _screen_buffer from applications. In this
-    ///     case, the application is responsible for the resource management of the _screen_buffer.
+    ///     screenBufferImport is VK_TRUE, VkDeviceMemorysupports importing _screen_buffer from applications. In this case, the
+    ///     application is responsible for the resource management of the _screen_buffer.
     /// </summary>
     public VkBool32 screenBufferImport;
 }

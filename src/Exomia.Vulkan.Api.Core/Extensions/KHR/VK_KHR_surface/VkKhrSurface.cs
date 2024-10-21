@@ -73,8 +73,8 @@ public static unsafe class VkKhrSurface
     /// <param name="queueFamilyIndex">queueFamilyIndex is the queue family.</param>
     /// <param name="surface">surface is the surface.</param>
     /// <param name="pSupported">
-    ///     pSupported is a pointer to a VkBool32, which is set to VK_TRUE to indicate support, and
-    ///     VK_FALSE otherwise.
+    ///     pSupported is a pointer to a VkBool32. VK_TRUE indicates support, and VK_FALSE indicates no
+    ///     support.
     /// </param>
     /// <remarks>
     ///     <list type="table">

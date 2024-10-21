@@ -26,7 +26,11 @@ namespace Exomia.Vulkan.Api.Core;
 ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_attachment_feedback_loop_layout.html
 ///     </a>
 /// </summary>
+/// <remarks>
+///     specialuse: glemulation,d3demulation
+/// </remarks>
 [VkDepends("VK_KHR_get_physical_device_properties2,VK_VERSION_1_1")]
+[VkSpecialuse("glemulation,d3demulation")]
 [VkDeviceExt]
 public static class VkExtAttachmentFeedbackLoopLayout
 {

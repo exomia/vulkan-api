@@ -5,4 +5,3 @@ global using VkPhysicalDeviceDynamicRenderingFeaturesKHR = Exomia.Vulkan.Api.Cor
 global using VkCommandBufferInheritanceRenderingInfoKHR = Exomia.Vulkan.Api.Core.VkCommandBufferInheritanceRenderingInfo;
 global using VkRenderingFlagsKHR = Exomia.Vulkan.Api.Core.VkRenderingFlagBits;
 global using VkRenderingFlagBitsKHR = Exomia.Vulkan.Api.Core.VkRenderingFlagBits;
-global using VkAttachmentSampleCountInfoNV = Exomia.Vulkan.Api.Core.VkAttachmentSampleCountInfoAMD;

@@ -43,7 +43,7 @@ public unsafe struct VkPhysicalDeviceDepthClipEnableFeaturesEXT
     /// <summary>
     ///     depthClipEnable indicates that the implementation supports setting the depth clipping operation explicitly
     ///     via the VkPipelineRasterizationDepthClipStateCreateInfoEXTpipeline state. Otherwise depth clipping is only enabled
-    ///     when VkPipelineRasterizationStateCreateInfo::depthClampEnable is set to VK_FALSE.
+    ///     when VkPipelineRasterizationStateCreateInfo::depthClampEnable is VK_FALSE.
     /// </summary>
     public VkBool32 depthClipEnable;
 }

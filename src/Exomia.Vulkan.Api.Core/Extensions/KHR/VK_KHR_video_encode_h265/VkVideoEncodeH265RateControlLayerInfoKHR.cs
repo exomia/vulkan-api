@@ -48,7 +48,7 @@ public unsafe struct VkVideoEncodeH265RateControlLayerInfoKHR
 
     /// <summary>
     ///     minQp specifies the lower bounds on the QP values, for each picture type, that the implementation&#8217;s rate
-    ///     control algorithm will use when useMinQp is set to VK_TRUE.
+    ///     control algorithm will use when useMinQp is VK_TRUE.
     /// </summary>
     public VkVideoEncodeH265QpKHR minQp;
 
@@ -60,7 +60,7 @@ public unsafe struct VkVideoEncodeH265RateControlLayerInfoKHR
 
     /// <summary>
     ///     maxQp specifies the upper bounds on the QP values, for each picture type, that the implementation&#8217;s rate
-    ///     control algorithm will use when useMaxQp is set to VK_TRUE.
+    ///     control algorithm will use when useMaxQp is VK_TRUE.
     /// </summary>
     public VkVideoEncodeH265QpKHR maxQp;
 
@@ -72,7 +72,7 @@ public unsafe struct VkVideoEncodeH265RateControlLayerInfoKHR
 
     /// <summary>
     ///     maxFrameSize specifies the upper bounds on the encoded frame size, for each picture type, when useMaxFrameSize
-    ///     is set to VK_TRUE.
+    ///     is VK_TRUE.
     /// </summary>
     public VkVideoEncodeH265FrameSizeKHR maxFrameSize;
 }
