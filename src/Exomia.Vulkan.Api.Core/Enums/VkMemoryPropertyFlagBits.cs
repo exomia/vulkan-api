@@ -68,8 +68,20 @@ public enum VkMemoryPropertyFlagBits
     VK_MEMORY_PROPERTY_PROTECTED_BIT = 0x20,
 
     /// <summary>
-    ///     VK_MEMORY_PROPERTY_DEVICE_COHERENT_BIT_AMD bit specifies that device accesses to allocations of this memory
-    ///     type are automatically made available and visible.
+    ///     VK_MEMORY_PROPERTY_DEVICE_COHERENT_BIT_AMD bit specifies that device accesses to allocations of this memory type
+    ///     are automatically made
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-dependencies-available-and-visible">
+    ///         available
+    ///         and visible
+    ///     </a>
+    ///     on the device. If paired with VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
+    ///     <a
+    ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#synchronization-dependencies-available-and-visible">
+    ///         memory
+    ///         domain operations
+    ///     </a>
+    ///     are also performed automatically between host and device.
     /// </summary>
     VK_MEMORY_PROPERTY_DEVICE_COHERENT_BIT_AMD = 0x40,
 

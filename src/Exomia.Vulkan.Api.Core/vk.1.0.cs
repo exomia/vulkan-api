@@ -729,7 +729,7 @@ public static partial class Vk
     /// </param>
     /// <param name="ppData">
     ///     ppData is a pointer to a void* variable in which a host-accessible pointer to the beginning of the
-    ///     mapped range is returned. This pointer minus offset must be aligned to at least
+    ///     mapped range is returned. The value of the returned pointer minus offset must be aligned to
     ///     VkPhysicalDeviceLimits::minMemoryMapAlignment.
     /// </param>
     /// <remarks>
