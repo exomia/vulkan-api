@@ -285,7 +285,7 @@ public static unsafe class VkExtOpacityMicromap
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyMemoryToMicromapEXT.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyMemoryToMicromapEXT.html</a>
     /// </summary>
     /// <param name="commandBuffer">commandBuffer is the command buffer into which the command will be recorded.</param>
-    /// <param name="pInfo">pInfo is a pointer to a VkCopyMicromapToMemoryInfoEXTstructure defining the copy operation.</param>
+    /// <param name="pInfo">pInfo is a pointer to a VkCopyMemoryToMicromapInfoEXTstructure defining the copy operation.</param>
     public static readonly delegate*<
         VkCommandBuffer /*commandBuffer*/,
         VkCopyMemoryToMicromapInfoEXT* /*pInfo*/,
