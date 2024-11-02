@@ -48,7 +48,8 @@ public unsafe struct VkWriteDescriptorSet
     ///     number of bytes to update. Otherwise, descriptorCount is one ofthe number of elements in pImageInfothe number of
     ///     elements in pBufferInfothe number of elements in pTexelBufferViewa value matching the dataSize member of a
     ///     VkWriteDescriptorSetInlineUniformBlock structure in the pNext chaina value matching the accelerationStructureCount
-    ///     of a VkWriteDescriptorSetAccelerationStructureKHR structure in the pNext chain
+    ///     of a VkWriteDescriptorSetAccelerationStructureKHRor VkWriteDescriptorSetAccelerationStructureNV     structure in
+    ///     the pNext chain
     /// </summary>
     public uint descriptorCount;
 

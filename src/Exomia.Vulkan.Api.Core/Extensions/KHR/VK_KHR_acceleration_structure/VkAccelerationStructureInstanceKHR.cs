@@ -34,7 +34,7 @@ public struct VkAccelerationStructureInstanceKHR
     private uint _bitfield2;
 
     /// <summary>
-    ///     accelerationStructureReference is either:a device address containing the value obtained from
+    ///     accelerationStructureReference is either     :a device address containing the value obtained from
     ///     vkGetAccelerationStructureDeviceAddressKHRor vkGetAccelerationStructureHandleNV     (used by device operations
     ///     which reference acceleration structures) or,a VkAccelerationStructureKHR object (used by host operations which
     ///     reference acceleration structures).
