@@ -31,19 +31,25 @@ public enum VkCopyAccelerationStructureModeKHR
     VK_COPY_ACCELERATION_STRUCTURE_MODE_CLONE_KHR = 0,
 
     /// <summary>
-    ///     VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR creates a more compact version of an acceleration structure src
-    ///     into dst. The acceleration structure dst must have been created with a size at least as large as that returned by
+    ///     VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR creates a more     compact version of an acceleration structure src
+    ///     into dst.     The acceleration structure dst must have been created with a size     at least as large as that
+    ///     returned by
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesNV.html">
+    ///         vkCmdWriteAccelerationStructuresPropertiesNV
+    ///     </a>
+    ///     ,
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesKHR.html">
     ///         vkCmdWriteAccelerationStructuresPropertiesKHR
     ///     </a>
-    ///     or
+    ///     , or
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkWriteAccelerationStructuresPropertiesKHR.html">
     ///         vkWriteAccelerationStructuresPropertiesKHR
     ///     </a>
-    ///     after the build of the acceleration structure specified by src. If src contains references to other acceleration
-    ///     structures, dst will reference the same acceleration structures.
+    ///     after the build of the acceleration structure specified by src.     If src contains references to other
+    ///     acceleration structures,     dst will reference the same acceleration structures.
     /// </summary>
     VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR = 1,
 
@@ -68,19 +74,25 @@ public enum VkCopyAccelerationStructureModeKHR
     VK_COPY_ACCELERATION_STRUCTURE_MODE_CLONE_NV = VK_COPY_ACCELERATION_STRUCTURE_MODE_CLONE_KHR,
 
     /// <summary>
-    ///     VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR creates a more compact version of an acceleration structure src
-    ///     into dst. The acceleration structure dst must have been created with a size at least as large as that returned by
+    ///     VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR creates a more     compact version of an acceleration structure src
+    ///     into dst.     The acceleration structure dst must have been created with a size     at least as large as that
+    ///     returned by
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesNV.html">
+    ///         vkCmdWriteAccelerationStructuresPropertiesNV
+    ///     </a>
+    ///     ,
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesKHR.html">
     ///         vkCmdWriteAccelerationStructuresPropertiesKHR
     ///     </a>
-    ///     or
+    ///     , or
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkWriteAccelerationStructuresPropertiesKHR.html">
     ///         vkWriteAccelerationStructuresPropertiesKHR
     ///     </a>
-    ///     after the build of the acceleration structure specified by src. If src contains references to other acceleration
-    ///     structures, dst will reference the same acceleration structures.
+    ///     after the build of the acceleration structure specified by src.     If src contains references to other
+    ///     acceleration structures,     dst will reference the same acceleration structures.
     /// </summary>
     VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_NV = VK_COPY_ACCELERATION_STRUCTURE_MODE_COMPACT_KHR
 }

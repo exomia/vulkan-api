@@ -42,11 +42,13 @@ public enum VkAccelerationStructureCreateFlagBitsKHR
     VK_ACCELERATION_STRUCTURE_CREATE_DESCRIPTOR_BUFFER_CAPTURE_REPLAY_BIT_EXT = 0x8,
 
     /// <summary>
-    ///     VK_ACCELERATION_STRUCTURE_CREATE_MOTION_BIT_NV<br />
+    ///     VK_ACCELERATION_STRUCTURE_CREATE_MOTION_BIT_NV specifies that the acceleration structure will be used with motion
+    ///     information, see
     ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccelerationStructureCreateFlagBitsKHR">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkAccelerationStructureCreateFlagBitsKHR
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInfoNV.html">
+    ///         VkAccelerationStructureMotionInfoNV
     ///     </a>
+    ///     for more detail.
     /// </summary>
     VK_ACCELERATION_STRUCTURE_CREATE_MOTION_BIT_NV = 0x4
 }
