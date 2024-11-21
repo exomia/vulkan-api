@@ -21,7 +21,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkDescriptorBindingFlagBits
 {
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT indicates that if descriptors in this binding are updated between when
+    ///     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT specifies that if descriptors in this binding are updated between when
     ///     the descriptor set is bound in a command buffer and when that command buffer is submitted to a queue, then the
     ///     submission will use the most recently set descriptors for this binding and the updates do not invalidate the
     ///     command buffer. Descriptor bindings created with this flag are also partially exempt from the external
@@ -40,7 +40,7 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT = 0x1,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT indicates that descriptors in this binding can be updated
+    ///     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT specifies that descriptors in this binding can be updated
     ///     after a command buffer has bound this descriptor set, or while a command buffer that uses this descriptor set is
     ///     pending execution, as long as the descriptors that are updated are not used by those command buffers. Descriptor
     ///     bindings created with this flag are also partially exempt from the external synchronization requirement in
@@ -58,7 +58,7 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT = 0x2,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT indicates that descriptors in this binding that are not dynamically
+    ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT specifies that descriptors in this binding that are not dynamically
     ///     used need not contain valid descriptors at the time the descriptors are consumed. A descriptor is dynamically used
     ///     if any shader invocation executes an instruction that performs any memory access using the descriptor. If a
     ///     descriptor is not dynamically used, any resource referenced by the descriptor is not considered to be referenced
@@ -67,7 +67,7 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT = 0x4,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT indicates that     this is a variable-sized descriptor binding
+    ///     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT specifies that     this is a variable-sized descriptor binding
     ///     whose size will be     specified when a descriptor set is allocated using this layout.     The value of
     ///     descriptorCount is treated as an upper bound on the     size of the binding.     This must only be used for the
     ///     last binding in the descriptor set     layout (i.e. the binding with the largest value of binding).     For the
@@ -94,7 +94,7 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT = 0x8,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT indicates that if descriptors in this binding are updated between when
+    ///     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT specifies that if descriptors in this binding are updated between when
     ///     the descriptor set is bound in a command buffer and when that command buffer is submitted to a queue, then the
     ///     submission will use the most recently set descriptors for this binding and the updates do not invalidate the
     ///     command buffer. Descriptor bindings created with this flag are also partially exempt from the external
@@ -113,7 +113,7 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT_EXT = VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT indicates that descriptors in this binding can be updated
+    ///     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT specifies that descriptors in this binding can be updated
     ///     after a command buffer has bound this descriptor set, or while a command buffer that uses this descriptor set is
     ///     pending execution, as long as the descriptors that are updated are not used by those command buffers. Descriptor
     ///     bindings created with this flag are also partially exempt from the external synchronization requirement in
@@ -131,7 +131,7 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT_EXT = VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT indicates that descriptors in this binding that are not dynamically
+    ///     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT specifies that descriptors in this binding that are not dynamically
     ///     used need not contain valid descriptors at the time the descriptors are consumed. A descriptor is dynamically used
     ///     if any shader invocation executes an instruction that performs any memory access using the descriptor. If a
     ///     descriptor is not dynamically used, any resource referenced by the descriptor is not considered to be referenced
@@ -140,7 +140,7 @@ public enum VkDescriptorBindingFlagBits
     VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT_EXT = VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT,
 
     /// <summary>
-    ///     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT indicates that     this is a variable-sized descriptor binding
+    ///     VK_DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_BIT specifies that     this is a variable-sized descriptor binding
     ///     whose size will be     specified when a descriptor set is allocated using this layout.     The value of
     ///     descriptorCount is treated as an upper bound on the     size of the binding.     This must only be used for the
     ///     last binding in the descriptor set     layout (i.e. the binding with the largest value of binding).     For the

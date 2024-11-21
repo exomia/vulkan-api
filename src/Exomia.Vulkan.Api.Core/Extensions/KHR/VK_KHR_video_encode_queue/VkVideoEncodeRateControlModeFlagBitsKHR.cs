@@ -34,6 +34,8 @@ public enum VkVideoEncodeRateControlModeFlagBitsKHR
     ///     VkVideoEncodeH264NaluSliceInfoKHR::constantQp to control the quality of the encoded picture.<br />
     ///     When using an H.265 encode profile, implementations will use the QP value specified in
     ///     VkVideoEncodeH265NaluSliceSegmentInfoKHR::constantQp to control the quality of the encoded picture.<br />
+    ///     When using an AV1 encode profile, implementations will use the quantizer index value specified in
+    ///     VkVideoEncodeAV1PictureInfoKHR::constantQIndex to control the quality of the encoded picture.<br />
     /// </summary>
     VK_VIDEO_ENCODE_RATE_CONTROL_MODE_DISABLED_BIT_KHR = 0x1,
 

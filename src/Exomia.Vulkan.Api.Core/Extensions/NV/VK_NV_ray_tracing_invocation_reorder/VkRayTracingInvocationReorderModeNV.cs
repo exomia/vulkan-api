@@ -23,13 +23,13 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkRayTracingInvocationReorderModeNV
 {
     /// <summary>
-    ///     VK_RAY_TRACING_INVOCATION_REORDER_MODE_NONE_NV indicates that the implementation is likely to not reorder at
+    ///     VK_RAY_TRACING_INVOCATION_REORDER_MODE_NONE_NV specifies that the implementation is likely to not reorder at
     ///     reorder calls.
     /// </summary>
     VK_RAY_TRACING_INVOCATION_REORDER_MODE_NONE_NV = 0,
 
     /// <summary>
-    ///     VK_RAY_TRACING_INVOCATION_REORDER_MODE_REORDER_NV indicates that the implementation is likely to reorder at
+    ///     VK_RAY_TRACING_INVOCATION_REORDER_MODE_REORDER_NV specifies that the implementation is likely to reorder at
     ///     reorder calls.
     /// </summary>
     VK_RAY_TRACING_INVOCATION_REORDER_MODE_REORDER_NV = 1

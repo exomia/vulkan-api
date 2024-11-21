@@ -24,7 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkVideoEncodeCapabilityFlagBitsKHR
 {
     /// <summary>
-    ///     VK_VIDEO_ENCODE_CAPABILITY_PRECEDING_EXTERNALLY_ENCODED_BYTES_BIT_KHRindicates that the implementation
+    ///     VK_VIDEO_ENCODE_CAPABILITY_PRECEDING_EXTERNALLY_ENCODED_BYTES_BIT_KHRspecifies that the implementation
     ///     supports the use of
     ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeInfoKHR.html">VkVideoEncodeInfoKHR</a>
     ///     ::precedingExternallyEncodedBytes.
@@ -32,7 +32,7 @@ public enum VkVideoEncodeCapabilityFlagBitsKHR
     VK_VIDEO_ENCODE_CAPABILITY_PRECEDING_EXTERNALLY_ENCODED_BYTES_BIT_KHR = 0x1,
 
     /// <summary>
-    ///     VK_VIDEO_ENCODE_CAPABILITY_INSUFFICIENT_BITSTREAM_BUFFER_RANGE_DETECTION_BIT_KHRindicates that the implementation
+    ///     VK_VIDEO_ENCODE_CAPABILITY_INSUFFICIENT_BITSTREAM_BUFFER_RANGE_DETECTION_BIT_KHRspecifies that the implementation
     ///     is able to detect and report when the destination video bitstream buffer range provided by the application is not
     ///     sufficiently large to fit the encoded bitstream data produced by a video encode operation by reporting the
     ///     VK_QUERY_RESULT_STATUS_INSUFFICIENT_BITSTREAM_BUFFER_RANGE_KHR
@@ -42,5 +42,23 @@ public enum VkVideoEncodeCapabilityFlagBitsKHR
     ///     </a>
     ///     .
     /// </summary>
-    VK_VIDEO_ENCODE_CAPABILITY_INSUFFICIENT_BITSTREAM_BUFFER_RANGE_DETECTION_BIT_KHR = 0x2
+    VK_VIDEO_ENCODE_CAPABILITY_INSUFFICIENT_BITSTREAM_BUFFER_RANGE_DETECTION_BIT_KHR = 0x2,
+
+    /// <summary>
+    ///     VK_VIDEO_ENCODE_CAPABILITY_QUANTIZATION_DELTA_MAP_BIT_KHR<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVideoEncodeCapabilityFlagBitsKHR">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVideoEncodeCapabilityFlagBitsKHR
+    ///     </a>
+    /// </summary>
+    VK_VIDEO_ENCODE_CAPABILITY_QUANTIZATION_DELTA_MAP_BIT_KHR = 0x4,
+
+    /// <summary>
+    ///     VK_VIDEO_ENCODE_CAPABILITY_EMPHASIS_MAP_BIT_KHR<br />
+    ///     <a
+    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVideoEncodeCapabilityFlagBitsKHR">
+    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkVideoEncodeCapabilityFlagBitsKHR
+    ///     </a>
+    /// </summary>
+    VK_VIDEO_ENCODE_CAPABILITY_EMPHASIS_MAP_BIT_KHR = 0x8
 }

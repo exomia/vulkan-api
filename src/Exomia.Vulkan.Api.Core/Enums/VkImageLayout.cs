@@ -28,7 +28,7 @@ public enum VkImageLayout
     /// </summary>
     VK_IMAGE_LAYOUT_UNDEFINED = 0,
 
-    /// <summary>VK_IMAGE_LAYOUT_GENERAL supports all types of device access.</summary>
+    /// <summary>VK_IMAGE_LAYOUT_GENERAL supports all types of device access, unless specified otherwise.</summary>
     VK_IMAGE_LAYOUT_GENERAL = 1,
 
     /// <summary>
@@ -276,6 +276,23 @@ public enum VkImageLayout
     ///     VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT or VK_IMAGE_USAGE_SAMPLED_BIT usage bits enabled.
     /// </summary>
     VK_IMAGE_LAYOUT_ATTACHMENT_FEEDBACK_LOOP_OPTIMAL_EXT = 1000339000,
+
+    /// <summary>
+    ///     VK_IMAGE_LAYOUT_VIDEO_ENCODE_QUANTIZATION_MAP_KHR must only be used as a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-quantization-map">
+    ///         quantization
+    ///         map
+    ///     </a>
+    ///     in a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///         video
+    ///         encode operation
+    ///     </a>
+    ///     . This layout is valid only for image subresources of images created with the
+    ///     VK_IMAGE_USAGE_VIDEO_ENCODE_QUANTIZATION_DELTA_MAP_BIT_KHR or VK_IMAGE_USAGE_VIDEO_ENCODE_EMPHASIS_MAP_BIT_KHR
+    ///     usage bit enabled.
+    /// </summary>
+    VK_IMAGE_LAYOUT_VIDEO_ENCODE_QUANTIZATION_MAP_KHR = 1000553000,
 
     /// <summary>
     ///     VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMALspecifies a layout for depth/stencil format images

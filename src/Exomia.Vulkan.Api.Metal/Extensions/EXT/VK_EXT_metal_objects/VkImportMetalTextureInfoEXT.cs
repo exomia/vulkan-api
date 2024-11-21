@@ -38,7 +38,7 @@ public unsafe struct VkImportMetalTextureInfoEXT
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>plane indicates the plane of the VkImage that the id&lt;MTLTexture&gt; object should be attached to.</summary>
+    /// <summary>plane specifies the plane of the VkImage that the id&lt;MTLTexture&gt; object should be attached to.</summary>
     public VkImageAspectFlagBits plane;
 
     /// <summary>mtlTexture is a the Metal id&lt;MTLTexture&gt; object that is to underlie the VkImage plane.</summary>

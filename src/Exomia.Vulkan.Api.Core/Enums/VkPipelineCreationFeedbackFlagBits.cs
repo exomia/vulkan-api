@@ -23,33 +23,33 @@ namespace Exomia.Vulkan.Api.Core;
 [Flags]
 public enum VkPipelineCreationFeedbackFlagBits
 {
-    /// <summary>VK_PIPELINE_CREATION_FEEDBACK_VALID_BIT indicates that the feedback information is valid.</summary>
+    /// <summary>VK_PIPELINE_CREATION_FEEDBACK_VALID_BIT specifies that the feedback information is valid.</summary>
     VK_PIPELINE_CREATION_FEEDBACK_VALID_BIT = 0x1,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATION_FEEDBACK_APPLICATION_PIPELINE_CACHE_HIT_BITindicates that a readily usable pipeline or
+    ///     VK_PIPELINE_CREATION_FEEDBACK_APPLICATION_PIPELINE_CACHE_HIT_BITspecifies that a readily usable pipeline or
     ///     pipeline stage was found in the pipelineCache specified by the application in the pipeline creation command.
     /// </summary>
     VK_PIPELINE_CREATION_FEEDBACK_APPLICATION_PIPELINE_CACHE_HIT_BIT = 0x2,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATION_FEEDBACK_BASE_PIPELINE_ACCELERATION_BITindicates that the base pipeline specified by the
+    ///     VK_PIPELINE_CREATION_FEEDBACK_BASE_PIPELINE_ACCELERATION_BITspecifies that the base pipeline specified by the
     ///     basePipelineHandle or basePipelineIndex member of the Vk*PipelineCreateInfo structure was used to accelerate the
     ///     creation of the pipeline.
     /// </summary>
     VK_PIPELINE_CREATION_FEEDBACK_BASE_PIPELINE_ACCELERATION_BIT = 0x4,
 
-    /// <summary>VK_PIPELINE_CREATION_FEEDBACK_VALID_BIT indicates that the feedback information is valid.</summary>
+    /// <summary>VK_PIPELINE_CREATION_FEEDBACK_VALID_BIT specifies that the feedback information is valid.</summary>
     VK_PIPELINE_CREATION_FEEDBACK_VALID_BIT_EXT = VK_PIPELINE_CREATION_FEEDBACK_VALID_BIT,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATION_FEEDBACK_APPLICATION_PIPELINE_CACHE_HIT_BITindicates that a readily usable pipeline or
+    ///     VK_PIPELINE_CREATION_FEEDBACK_APPLICATION_PIPELINE_CACHE_HIT_BITspecifies that a readily usable pipeline or
     ///     pipeline stage was found in the pipelineCache specified by the application in the pipeline creation command.
     /// </summary>
     VK_PIPELINE_CREATION_FEEDBACK_APPLICATION_PIPELINE_CACHE_HIT_BIT_EXT = VK_PIPELINE_CREATION_FEEDBACK_APPLICATION_PIPELINE_CACHE_HIT_BIT,
 
     /// <summary>
-    ///     VK_PIPELINE_CREATION_FEEDBACK_BASE_PIPELINE_ACCELERATION_BITindicates that the base pipeline specified by the
+    ///     VK_PIPELINE_CREATION_FEEDBACK_BASE_PIPELINE_ACCELERATION_BITspecifies that the base pipeline specified by the
     ///     basePipelineHandle or basePipelineIndex member of the Vk*PipelineCreateInfo structure was used to accelerate the
     ///     creation of the pipeline.
     /// </summary>

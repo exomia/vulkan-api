@@ -72,21 +72,18 @@ public unsafe struct VkPhysicalDeviceDescriptorBufferPropertiesEXT
     /// </summary>
     public VkDeviceSize descriptorBufferOffsetAlignment;
 
-    /// <summary>
-    ///     maxDescriptorBufferBindingsindicates the maximum sum total number of descriptor buffers and embedded
-    ///     immutable sampler sets that can be bound.
-    /// </summary>
+    /// <summary> maxDescriptorBufferBindingsindicates the maximum number of descriptor buffer bindings.</summary>
     public uint maxDescriptorBufferBindings;
 
     /// <summary>
-    ///     maxResourceDescriptorBufferBindings indicates the maximum number of resource descriptor buffers that can be
-    ///     bound.
+    ///     maxResourceDescriptorBufferBindings indicates the maximum number of descriptor buffer bindings with
+    ///     VK_BUFFER_USAGE_RESOURCE_DESCRIPTOR_BUFFER_BIT_EXT that can be used.
     /// </summary>
     public uint maxResourceDescriptorBufferBindings;
 
     /// <summary>
-    ///     maxSamplerDescriptorBufferBindings indicates the maximum number of sampler descriptor buffers that can be
-    ///     bound.
+    ///     maxSamplerDescriptorBufferBindings indicates the maximum number of descriptor buffer bindings with
+    ///     VK_BUFFER_USAGE_SAMPLER_DESCRIPTOR_BUFFER_BIT_EXT that can be used.
     /// </summary>
     public uint maxSamplerDescriptorBufferBindings;
 

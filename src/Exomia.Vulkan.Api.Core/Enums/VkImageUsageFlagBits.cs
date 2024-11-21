@@ -203,6 +203,36 @@ public enum VkImageUsageFlagBits
     VK_IMAGE_USAGE_SAMPLE_BLOCK_MATCH_BIT_QCOM = 0x200000,
 
     /// <summary>
+    ///     VK_IMAGE_USAGE_VIDEO_ENCODE_QUANTIZATION_DELTA_MAP_BIT_KHRspecifies that the image can be used as a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-quantization-delta-map">
+    ///         quantization
+    ///         delta map
+    ///     </a>
+    ///     in a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///         video
+    ///         encode operation
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_IMAGE_USAGE_VIDEO_ENCODE_QUANTIZATION_DELTA_MAP_BIT_KHR = 0x2000000,
+
+    /// <summary>
+    ///     VK_IMAGE_USAGE_VIDEO_ENCODE_EMPHASIS_MAP_BIT_KHR specifies that the image can be used as an
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-emphasis-map">
+    ///         emphasis
+    ///         map
+    ///     </a>
+    ///     in a
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#video-encode-operations">
+    ///         video
+    ///         encode operation
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_IMAGE_USAGE_VIDEO_ENCODE_EMPHASIS_MAP_BIT_KHR = 0x4000000,
+
+    /// <summary>
     ///     VK_IMAGE_USAGE_FRAGMENT_SHADING_RATE_ATTACHMENT_BIT_KHR specifies     that the image can be used to create a
     ///     VkImageView suitable for     use as a
     ///     <a

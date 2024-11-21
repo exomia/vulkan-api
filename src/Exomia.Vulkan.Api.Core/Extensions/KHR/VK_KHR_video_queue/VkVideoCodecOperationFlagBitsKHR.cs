@@ -23,7 +23,7 @@ namespace Exomia.Vulkan.Api.Core;
 [Flags]
 public enum VkVideoCodecOperationFlagBitsKHR
 {
-    /// <summary>VK_VIDEO_CODEC_OPERATION_NONE_KHR indicates no support for any video codec operations.</summary>
+    /// <summary>VK_VIDEO_CODEC_OPERATION_NONE_KHR specifies that no video codec operations are supported.</summary>
     VK_VIDEO_CODEC_OPERATION_NONE_KHR = 0,
 
     /// <summary>
@@ -74,5 +74,15 @@ public enum VkVideoCodecOperationFlagBitsKHR
     ///     </a>
     ///     .
     /// </summary>
-    VK_VIDEO_CODEC_OPERATION_DECODE_AV1_BIT_KHR = 0x4
+    VK_VIDEO_CODEC_OPERATION_DECODE_AV1_BIT_KHR = 0x4,
+
+    /// <summary>
+    ///     VK_VIDEO_CODEC_OPERATION_ENCODE_AV1_BIT_KHR specifies support for
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-av1">
+    ///         AV1 encode
+    ///         operations
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_VIDEO_CODEC_OPERATION_ENCODE_AV1_BIT_KHR = 0x40000
 }

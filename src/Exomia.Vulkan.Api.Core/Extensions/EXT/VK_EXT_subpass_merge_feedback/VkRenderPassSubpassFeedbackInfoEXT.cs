@@ -32,7 +32,7 @@ public unsafe struct VkRenderPassSubpassFeedbackInfoEXT
 {
     /// <summary>
     ///     subpassMergeStatus is a VkSubpassMergeStatusEXT value specifying information about whether the subpass is
-    ///     merged with previous subpass and the reason why it is not merged.
+    ///     merged with the previous subpass and the reason why it is not merged.
     /// </summary>
     public VkSubpassMergeStatusEXT subpassMergeStatus;
 

@@ -85,8 +85,8 @@ public unsafe struct VkGraphicsPipelineCreateInfo
     ///     pMultisampleState is a pointer to a VkPipelineMultisampleStateCreateInfo structure defining multisample state
     ///     used when rasterization is enabled.  If the VK_EXT_extended_dynamic_state3 extension is enabled, it can be NULL if
     ///     the pipeline is created with all of VK_DYNAMIC_STATE_RASTERIZATION_SAMPLES_EXT, VK_DYNAMIC_STATE_SAMPLE_MASK_EXT,
-    ///     and VK_DYNAMIC_STATE_ALPHA_TO_COVERAGE_ENABLE_EXT dynamic states set, and either alphaToOne is disabled on the
-    ///     device or VK_DYNAMIC_STATE_ALPHA_TO_ONE_ENABLE_EXT is set, in which case
+    ///     and VK_DYNAMIC_STATE_ALPHA_TO_COVERAGE_ENABLE_EXT dynamic states set, and either the alphaToOne feature is not
+    ///     enabled or VK_DYNAMIC_STATE_ALPHA_TO_ONE_ENABLE_EXT is set, in which case
     ///     VkPipelineMultisampleStateCreateInfo::sampleShadingEnable is assumed to be VK_FALSE.
     /// </summary>
     public VkPipelineMultisampleStateCreateInfo* pMultisampleState;

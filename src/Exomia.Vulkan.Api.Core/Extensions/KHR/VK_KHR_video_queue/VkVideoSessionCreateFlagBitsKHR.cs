@@ -47,5 +47,27 @@ public enum VkVideoSessionCreateFlagBitsKHR
     ///     </a>
     ///     with video coding operations.
     /// </summary>
-    VK_VIDEO_SESSION_CREATE_INLINE_QUERIES_BIT_KHR = 0x4
+    VK_VIDEO_SESSION_CREATE_INLINE_QUERIES_BIT_KHR = 0x4,
+
+    /// <summary>
+    ///     VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_QUANTIZATION_DELTA_MAP_BIT_KHRspecifies that the video session can be used to
+    ///     encode pictures with
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-quantization-delta-map">
+    ///         quantization
+    ///         delta maps
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_QUANTIZATION_DELTA_MAP_BIT_KHR = 0x8,
+
+    /// <summary>
+    ///     VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_EMPHASIS_MAP_BIT_KHRspecifies that the video session can be used to
+    ///     encode pictures with
+    ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#encode-emphasis-map">
+    ///         emphasis
+    ///         maps
+    ///     </a>
+    ///     .
+    /// </summary>
+    VK_VIDEO_SESSION_CREATE_ALLOW_ENCODE_EMPHASIS_MAP_BIT_KHR = 0x10
 }

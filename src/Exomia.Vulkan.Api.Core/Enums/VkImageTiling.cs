@@ -32,7 +32,7 @@ public enum VkImageTiling
     VK_IMAGE_TILING_LINEAR = 1,
 
     /// <summary>
-    ///     VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT indicates that the image&#8217;s tiling is defined by a
+    ///     VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT specifies that the image&#8217;s tiling is defined by a
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#glossary-drm-format-modifier">
     ///         Linux
     ///         DRM format modifier
