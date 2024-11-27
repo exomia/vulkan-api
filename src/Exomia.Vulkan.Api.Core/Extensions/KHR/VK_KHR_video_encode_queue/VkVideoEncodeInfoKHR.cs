@@ -29,7 +29,7 @@ public unsafe struct VkVideoEncodeInfoKHR
     /// <summary>pNext is a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary>flags is a bitmask of VkVideoEncodeFlagBitsKHR indicating video encode command flags.</summary>
     public VkVideoEncodeFlagsKHR flags;
 
     /// <summary>dstBuffer is the destination video bitstream buffer to write the encoded bitstream to.</summary>

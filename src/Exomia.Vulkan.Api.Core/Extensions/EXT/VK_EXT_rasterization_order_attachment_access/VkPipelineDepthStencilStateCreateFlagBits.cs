@@ -24,28 +24,28 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkPipelineDepthStencilStateCreateFlagBits
 {
     /// <summary>
-    ///     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_BIT_EXTindicates that
+    ///     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_BIT_EXTspecifies that
     ///     access to the depth aspects of depth/stencil and input attachments will have implicit framebuffer-local memory
     ///     dependencies.
     /// </summary>
     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_BIT_EXT = 0x1,
 
     /// <summary>
-    ///     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_EXTindicates that
+    ///     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_EXTspecifies that
     ///     access to the stencil aspects of depth/stencil and input attachments will have implicit framebuffer-local memory
     ///     dependencies.
     /// </summary>
     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_EXT = 0x2,
 
     /// <summary>
-    ///     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_BIT_EXTindicates that
+    ///     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_BIT_EXTspecifies that
     ///     access to the depth aspects of depth/stencil and input attachments will have implicit framebuffer-local memory
     ///     dependencies.
     /// </summary>
     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_BIT_ARM = VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_BIT_EXT,
 
     /// <summary>
-    ///     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_EXTindicates that
+    ///     VK_PIPELINE_DEPTH_STENCIL_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_BIT_EXTspecifies that
     ///     access to the stencil aspects of depth/stencil and input attachments will have implicit framebuffer-local memory
     ///     dependencies.
     /// </summary>

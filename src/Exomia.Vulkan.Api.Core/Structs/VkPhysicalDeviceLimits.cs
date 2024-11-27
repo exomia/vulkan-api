@@ -555,12 +555,12 @@ public struct VkPhysicalDeviceLimits
 
     /// <summary>
     ///     minTexelBufferOffsetAlignment is the minimum required alignment, in bytes, for the offset member of the
-    ///     VkBufferViewCreateInfo structure for texel buffers. The value must be a power of two. If texelBufferAlignment is
-    ///     enabled, this limit is equivalent to the maximum of the uniformTexelBufferOffsetAlignmentBytes and
-    ///     storageTexelBufferOffsetAlignmentBytes members of VkPhysicalDeviceTexelBufferAlignmentProperties, but smaller
-    ///     alignment is optionally allowed by storageTexelBufferOffsetSingleTexelAlignment and
-    ///     uniformTexelBufferOffsetSingleTexelAlignment. If texelBufferAlignment is not enabled,
-    ///     VkBufferViewCreateInfo::offset must be a multiple of this value.
+    ///     VkBufferViewCreateInfo structure for texel buffers. The value must be a power of two. If the
+    ///     texelBufferAlignmentfeature is enabled, this limit is equivalent to the maximum of the
+    ///     uniformTexelBufferOffsetAlignmentBytes and storageTexelBufferOffsetAlignmentBytes members of
+    ///     VkPhysicalDeviceTexelBufferAlignmentProperties, but smaller alignment is optionally allowed by
+    ///     storageTexelBufferOffsetSingleTexelAlignment and uniformTexelBufferOffsetSingleTexelAlignment. If the
+    ///     texelBufferAlignmentfeature is not enabled, VkBufferViewCreateInfo::offset must be a multiple of this value.
     /// </summary>
     public VkDeviceSize minTexelBufferOffsetAlignment;
 

@@ -24,14 +24,14 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkPipelineColorBlendStateCreateFlagBits
 {
     /// <summary>
-    ///     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXTindicates that access to
+    ///     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXTspecifies that access to
     ///     color and input attachments will have implicit framebuffer-local memory dependencies, allowing applications to
     ///     express custom blending operations in a fragment shader.
     /// </summary>
     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXT = 0x1,
 
     /// <summary>
-    ///     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXTindicates that access to
+    ///     VK_PIPELINE_COLOR_BLEND_STATE_CREATE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_BIT_EXTspecifies that access to
     ///     color and input attachments will have implicit framebuffer-local memory dependencies, allowing applications to
     ///     express custom blending operations in a fragment shader.
     /// </summary>

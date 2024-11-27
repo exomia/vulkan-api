@@ -21,26 +21,26 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkGeometryFlagBitsKHR
 {
     /// <summary>
-    ///     VK_GEOMETRY_OPAQUE_BIT_KHR indicates that this geometry does not invoke the any-hit shaders even if present in
+    ///     VK_GEOMETRY_OPAQUE_BIT_KHR specifies that this geometry does not invoke the any-hit shaders even if present in
     ///     a hit group.
     /// </summary>
     VK_GEOMETRY_OPAQUE_BIT_KHR = 0x1,
 
     /// <summary>
-    ///     VK_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR indicates that the implementation must only call the
+    ///     VK_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR specifies that the implementation must only call the
     ///     any-hit shader a single time for each primitive in this geometry. If this bit is absent an implementation may
     ///     invoke the any-hit shader more than once for this geometry.
     /// </summary>
     VK_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR = 0x2,
 
     /// <summary>
-    ///     VK_GEOMETRY_OPAQUE_BIT_KHR indicates that this geometry does not invoke the any-hit shaders even if present in
+    ///     VK_GEOMETRY_OPAQUE_BIT_KHR specifies that this geometry does not invoke the any-hit shaders even if present in
     ///     a hit group.
     /// </summary>
     VK_GEOMETRY_OPAQUE_BIT_NV = VK_GEOMETRY_OPAQUE_BIT_KHR,
 
     /// <summary>
-    ///     VK_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR indicates that the implementation must only call the
+    ///     VK_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT_KHR specifies that the implementation must only call the
     ///     any-hit shader a single time for each primitive in this geometry. If this bit is absent an implementation may
     ///     invoke the any-hit shader more than once for this geometry.
     /// </summary>

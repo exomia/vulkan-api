@@ -109,9 +109,9 @@ public unsafe struct VkPhysicalDeviceVulkan12Features
 
     /// <summary>
     ///     descriptorIndexing indicates whether the implementation supports the minimum set of descriptor indexing
-    ///     features as described in the Feature Requirements section. Enabling the descriptorIndexing member when
-    ///     vkCreateDeviceis called does not imply the other minimum descriptor indexing features are also enabled. Those other
-    ///     descriptor indexing features must be enabled individually as needed by the application.
+    ///     features as described in the Feature Requirements section. Enabling this feature when vkCreateDevice is called does
+    ///     not imply the other minimum descriptor indexing features are also enabled. Those other descriptor indexing features
+    ///     must be enabled individually as needed by the application.
     /// </summary>
     public VkBool32 descriptorIndexing;
 

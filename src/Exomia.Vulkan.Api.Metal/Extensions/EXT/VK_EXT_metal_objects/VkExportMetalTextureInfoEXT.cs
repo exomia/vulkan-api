@@ -47,7 +47,7 @@ public unsafe struct VkExportMetalTextureInfoEXT
     /// <summary>bufferView is VK_NULL_HANDLE or a VkBufferView.</summary>
     public VkBufferView bufferView;
 
-    /// <summary>plane indicates the plane of a multi-planar VkImage or VkImageView.</summary>
+    /// <summary>plane specifies the plane of a multi-planar VkImage or VkImageView.</summary>
     public VkImageAspectFlagBits plane;
 
     /// <summary>

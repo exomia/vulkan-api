@@ -33,7 +33,7 @@ public unsafe struct VkVideoSessionParametersCreateInfoKHR
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>flags is reserved for future use.</summary>
+    /// <summary>flags is a bitmask of VkVideoSessionParametersCreateFlagBitsKHR specifying create flags.</summary>
     public VkVideoSessionParametersCreateFlagsKHR flags;
 
     /// <summary>

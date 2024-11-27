@@ -25,7 +25,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkPhysicalDeviceSchedulingControlsFlagBitsARM : ulong
 {
     /// <summary>
-    ///     VK_PHYSICAL_DEVICE_SCHEDULING_CONTROLS_SHADER_CORE_COUNT_ARMindicates that a
+    ///     VK_PHYSICAL_DEVICE_SCHEDULING_CONTROLS_SHADER_CORE_COUNT_ARMspecifies that a
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceQueueShaderCoreControlCreateInfoARM.html">
     ///         VkDeviceQueueShaderCoreControlCreateInfoARM

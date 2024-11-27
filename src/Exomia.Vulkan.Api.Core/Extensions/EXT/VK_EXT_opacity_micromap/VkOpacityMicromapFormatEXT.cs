@@ -20,13 +20,13 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkOpacityMicromapFormatEXT
 {
     /// <summary>
-    ///     VK_OPACITY_MICROMAP_FORMAT_2_STATE_EXT indicates that the given micromap format has one bit per subtriangle
+    ///     VK_OPACITY_MICROMAP_FORMAT_2_STATE_EXT specifies that the given micromap format has one bit per subtriangle
     ///     encoding either fully opaque or fully transparent.
     /// </summary>
     VK_OPACITY_MICROMAP_FORMAT_2_STATE_EXT = 1,
 
     /// <summary>
-    ///     VK_OPACITY_MICROMAP_FORMAT_4_STATE_EXT indicates that the given micromap format has two bits per subtriangle
+    ///     VK_OPACITY_MICROMAP_FORMAT_4_STATE_EXT specifies that the given micromap format has two bits per subtriangle
     ///     encoding four modes which can be interpreted as described in
     ///     <a href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#ray-opacity-micromap">
     ///         ray

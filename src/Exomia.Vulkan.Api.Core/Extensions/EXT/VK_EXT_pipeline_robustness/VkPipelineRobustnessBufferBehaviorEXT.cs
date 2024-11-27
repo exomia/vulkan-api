@@ -24,7 +24,7 @@ public enum VkPipelineRobustnessBufferBehaviorEXT
 {
     /// <summary>
     ///     VK_PIPELINE_ROBUSTNESS_BUFFER_BEHAVIOR_DEVICE_DEFAULT_EXTspecifies that this pipeline stage follows the
-    ///     behavior of robustness features that are enabled on the device that created this pipeline
+    ///     behavior of robustness features that are enabled that created this pipeline
     /// </summary>
     VK_PIPELINE_ROBUSTNESS_BUFFER_BEHAVIOR_DEVICE_DEFAULT_EXT = 0,
 

@@ -1,0 +1,4 @@
+global using VkVideoEncodeAV1CapabilityFlagsKHR = Exomia.Vulkan.Api.Core.VkVideoEncodeAV1CapabilityFlagBitsKHR;
+global using VkVideoEncodeAV1StdFlagsKHR = Exomia.Vulkan.Api.Core.VkVideoEncodeAV1StdFlagBitsKHR;
+global using VkVideoEncodeAV1SuperblockSizeFlagsKHR = Exomia.Vulkan.Api.Core.VkVideoEncodeAV1SuperblockSizeFlagBitsKHR;
+global using VkVideoEncodeAV1RateControlFlagsKHR = Exomia.Vulkan.Api.Core.VkVideoEncodeAV1RateControlFlagBitsKHR;
