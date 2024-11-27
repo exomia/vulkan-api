@@ -27,7 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static unsafe class VkNvxImageViewHandle
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION = 2;
+    public const uint VK_NVX_IMAGE_VIEW_HANDLE_SPEC_VERSION = 3;
 
     /// <summary> The extension name. </summary>
     public const string VK_NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME = "VK_NVX_image_view_handle";
@@ -56,6 +56,17 @@ public static unsafe class VkNvxImageViewHandle
         VkDevice /*device*/,
         VkImageViewHandleInfoNVX* /*pInfo*/,
         uint> vkGetImageViewHandleNVX = null;
+
+    /// <summary>
+    ///     vkGetImageViewHandle64NVX - Get the 64-bit handle for an image view for a specific descriptor type -
+    ///     <a href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewHandle64NVX.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewHandle64NVX.html</a>
+    /// </summary>
+    /// <param name="device">device is the logical device that owns the image view.</param>
+    /// <param name="pInfo">pInfo describes the image view to query and type of handle.</param>
+    public static readonly delegate*<
+        VkDevice /*device*/,
+        VkImageViewHandleInfoNVX* /*pInfo*/,
+        ulong> vkGetImageViewHandle64NVX = null;
 
     /// <summary>
     ///     vkGetImageViewAddressNVX - Get the device address of an image view -
@@ -89,6 +100,9 @@ public static unsafe class VkNvxImageViewHandle
     ///             <description>vkGetImageViewHandleNVX</description>
     ///         </item>
     ///         <item>
+    ///             <description>vkGetImageViewHandle64NVX</description>
+    ///         </item>
+    ///         <item>
     ///             <description>vkGetImageViewAddressNVX</description>
     ///         </item>
     ///     </list>
@@ -98,6 +112,12 @@ public static unsafe class VkNvxImageViewHandle
         fixed (delegate*<VkDevice, VkImageViewHandleInfoNVX*, uint>* pvkGetImageViewHandleNVX = &vkGetImageViewHandleNVX)
         {
             *pvkGetImageViewHandleNVX = (delegate*<VkDevice, VkImageViewHandleInfoNVX*, uint>)GetVkFunction(device, "\u6b76\u6547\u4974\u616d\u6567\u6956\u7765\u6148\u646e\u656c\u564e\u0058");
+        }
+
+        fixed (delegate*<VkDevice, VkImageViewHandleInfoNVX*, ulong>* pvkGetImageViewHandle64NVX = &vkGetImageViewHandle64NVX)
+        {
+            *pvkGetImageViewHandle64NVX = (delegate*<VkDevice, VkImageViewHandleInfoNVX*, ulong>)GetVkFunction(
+                device, "\u6b76\u6547\u4974\u616d\u6567\u6956\u7765\u6148\u646e\u656c\u3436\u564e\u0058");
         }
 
         fixed (delegate*<VkDevice, VkImageView, VkImageViewAddressPropertiesNVX*, VkResult>* pvkGetImageViewAddressNVX = &vkGetImageViewAddressNVX)

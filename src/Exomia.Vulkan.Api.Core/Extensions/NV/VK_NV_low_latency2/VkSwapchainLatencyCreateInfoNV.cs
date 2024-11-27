@@ -37,12 +37,6 @@ public unsafe struct VkSwapchainLatencyCreateInfoNV
     /// <summary>pNext is NULL or a pointer to a structure extending this structure.</summary>
     public void* pNext;
 
-    /// <summary>
-    ///     latencyModeEnable<br />
-    ///     <a
-    ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainLatencyCreateInfoNV">
-    ///         https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VkSwapchainLatencyCreateInfoNV
-    ///     </a>
-    /// </summary>
+    /// <summary>latencyModeEnable is VK_TRUE if the created swapchain will utilize low latency mode, VK_FALSE otherwise.</summary>
     public VkBool32 latencyModeEnable;
 }

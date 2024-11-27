@@ -46,6 +46,4 @@ public static class VkKhrVideoDecodeAv1
     ///     }
     /// </remarks>
     public const string VK_KHR_VIDEO_DECODE_AV1_EXTENSION_NAME_UTF8_NT = "\u4b56\u4b5f\u5248\u565f\u4449\u4f45\u445f\u4345\u444f\u5f45\u5641\u5f31\u5845\u4554\u534e\u4f49\u5f4e\u414e\u454d\u0000";
-
-    public const uint VK_MAX_VIDEO_AV1_REFERENCES_PER_FRAME_KHR = 7;
 }

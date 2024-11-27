@@ -21,13 +21,13 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkBuildMicromapFlagBitsEXT
 {
     /// <summary>
-    ///     VK_BUILD_MICROMAP_PREFER_FAST_TRACE_BIT_EXT indicates that the given micromap build should prioritize trace
+    ///     VK_BUILD_MICROMAP_PREFER_FAST_TRACE_BIT_EXT specifies that the given micromap build should prioritize trace
     ///     performance over build time.
     /// </summary>
     VK_BUILD_MICROMAP_PREFER_FAST_TRACE_BIT_EXT = 0x1,
 
     /// <summary>
-    ///     VK_BUILD_MICROMAP_PREFER_FAST_BUILD_BIT_EXT indicates that the given micromap build should prioritize build
+    ///     VK_BUILD_MICROMAP_PREFER_FAST_BUILD_BIT_EXT specifies that the given micromap build should prioritize build
     ///     time over trace performance.
     /// </summary>
     VK_BUILD_MICROMAP_PREFER_FAST_BUILD_BIT_EXT = 0x2,

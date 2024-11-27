@@ -52,7 +52,7 @@ public unsafe struct VkPhysicalDeviceCooperativeMatrix2PropertiesNV
 
     /// <summary>
     ///     cooperativeMatrixFlexibleDimensionsMaxDimension is the maximum supported dimension for cooperative matrix
-    ///     types when cooperativeMatrixFlexibleDimensionsis enabled.
+    ///     types when the cooperativeMatrixFlexibleDimensionsfeature is enabled.
     /// </summary>
     public uint cooperativeMatrixFlexibleDimensionsMaxDimension;
 

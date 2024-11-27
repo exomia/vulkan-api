@@ -49,7 +49,7 @@ public unsafe struct VkPipelineColorBlendStateCreateInfo
     ///     attachmentCount is the number of VkPipelineColorBlendAttachmentState elements in pAttachments. It is ignored
     ///     if the pipeline is created with VK_DYNAMIC_STATE_COLOR_BLEND_ENABLE_EXT, VK_DYNAMIC_STATE_COLOR_BLEND_EQUATION_EXT,
     ///     and VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT dynamic states set, and either VK_DYNAMIC_STATE_COLOR_BLEND_ADVANCED_EXT
-    ///     set or advancedBlendCoherentOperationsis not enabled on the device.
+    ///     set or the advancedBlendCoherentOperationsfeature is not enabled.
     /// </summary>
     public uint attachmentCount;
 
@@ -57,7 +57,7 @@ public unsafe struct VkPipelineColorBlendStateCreateInfo
     ///     pAttachments is a pointer to an array of VkPipelineColorBlendAttachmentState structures defining blend state
     ///     for each color attachment. It is ignored if the pipeline is created with VK_DYNAMIC_STATE_COLOR_BLEND_ENABLE_EXT,
     ///     VK_DYNAMIC_STATE_COLOR_BLEND_EQUATION_EXT, and VK_DYNAMIC_STATE_COLOR_WRITE_MASK_EXT dynamic states set, and either
-    ///     VK_DYNAMIC_STATE_COLOR_BLEND_ADVANCED_EXT set or advancedBlendCoherentOperationsis not enabled on the device.
+    ///     VK_DYNAMIC_STATE_COLOR_BLEND_ADVANCED_EXT set or the advancedBlendCoherentOperationsfeature is not enabled.
     /// </summary>
     public VkPipelineColorBlendAttachmentState* pAttachments;
 

@@ -38,7 +38,7 @@ public enum VkBorderColor
     VK_BORDER_COLOR_INT_OPAQUE_WHITE = 5,
 
     /// <summary>
-    ///     VK_BORDER_COLOR_FLOAT_CUSTOM_EXT indicates that a
+    ///     VK_BORDER_COLOR_FLOAT_CUSTOM_EXT specifies that a
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerCustomBorderColorCreateInfoEXT.html">
     ///         VkSamplerCustomBorderColorCreateInfoEXT
@@ -50,7 +50,7 @@ public enum VkBorderColor
     VK_BORDER_COLOR_FLOAT_CUSTOM_EXT = 1000287003,
 
     /// <summary>
-    ///     VK_BORDER_COLOR_INT_CUSTOM_EXT indicates that a
+    ///     VK_BORDER_COLOR_INT_CUSTOM_EXT specifies that a
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerCustomBorderColorCreateInfoEXT.html">
     ///         VkSamplerCustomBorderColorCreateInfoEXT

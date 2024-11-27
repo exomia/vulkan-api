@@ -24,7 +24,7 @@ namespace Exomia.Vulkan.Api.Core;
 public enum VkIndirectCommandsInputModeFlagBitsEXT
 {
     /// <summary>
-    ///     VK_INDIRECT_COMMANDS_INPUT_MODE_VULKAN_INDEX_BUFFER_EXT indicates that the indirect buffer contains
+    ///     VK_INDIRECT_COMMANDS_INPUT_MODE_VULKAN_INDEX_BUFFER_EXT specifies that the indirect buffer contains
     ///     <a
     ///         href="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindIndexBufferIndirectCommandEXT.html">
     ///         VkBindIndexBufferIndirectCommandEXT
@@ -34,7 +34,7 @@ public enum VkIndirectCommandsInputModeFlagBitsEXT
     VK_INDIRECT_COMMANDS_INPUT_MODE_VULKAN_INDEX_BUFFER_EXT = 0x1,
 
     /// <summary>
-    ///     VK_INDIRECT_COMMANDS_INPUT_MODE_DXGI_INDEX_BUFFER_EXT indicates that the indirect buffer contains
+    ///     VK_INDIRECT_COMMANDS_INPUT_MODE_DXGI_INDEX_BUFFER_EXT specifies that the indirect buffer contains
     ///     D3D12_INDEX_BUFFER_VIEW.
     /// </summary>
     VK_INDIRECT_COMMANDS_INPUT_MODE_DXGI_INDEX_BUFFER_EXT = 0x2

@@ -25,7 +25,7 @@ public struct VkClearAttachment
 
     /// <summary>
     ///     colorAttachment is only meaningful if VK_IMAGE_ASPECT_COLOR_BIT is set in aspectMask, in which case it is an
-    ///     index into the currently bound color attachments.
+    ///     index into the bound color attachments.
     /// </summary>
     public uint colorAttachment;
 

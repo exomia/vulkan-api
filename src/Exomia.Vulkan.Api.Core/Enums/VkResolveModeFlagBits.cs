@@ -20,29 +20,29 @@ namespace Exomia.Vulkan.Api.Core;
 [Flags]
 public enum VkResolveModeFlagBits
 {
-    /// <summary>VK_RESOLVE_MODE_NONE indicates that no resolve operation is done.</summary>
+    /// <summary>VK_RESOLVE_MODE_NONE specifies that no resolve operation is done.</summary>
     VK_RESOLVE_MODE_NONE = 0,
 
     /// <summary>
-    ///     VK_RESOLVE_MODE_SAMPLE_ZERO_BIT indicates that result of the resolve operation is equal to the value of sample
+    ///     VK_RESOLVE_MODE_SAMPLE_ZERO_BIT specifies that result of the resolve operation is equal to the value of sample
     ///     0.
     /// </summary>
     VK_RESOLVE_MODE_SAMPLE_ZERO_BIT = 0x1,
 
     /// <summary>
-    ///     VK_RESOLVE_MODE_AVERAGE_BIT indicates that result of the resolve operation is the average of the sample
+    ///     VK_RESOLVE_MODE_AVERAGE_BIT specifies that result of the resolve operation is the average of the sample
     ///     values.
     /// </summary>
     VK_RESOLVE_MODE_AVERAGE_BIT = 0x2,
 
-    /// <summary>VK_RESOLVE_MODE_MIN_BIT indicates that result of the resolve operation is the minimum of the sample values.</summary>
+    /// <summary>VK_RESOLVE_MODE_MIN_BIT specifies that result of the resolve operation is the minimum of the sample values.</summary>
     VK_RESOLVE_MODE_MIN_BIT = 0x4,
 
-    /// <summary>VK_RESOLVE_MODE_MAX_BIT indicates that result of the resolve operation is the maximum of the sample values.</summary>
+    /// <summary>VK_RESOLVE_MODE_MAX_BIT specifies that result of the resolve operation is the maximum of the sample values.</summary>
     VK_RESOLVE_MODE_MAX_BIT = 0x8,
 
     /// <summary>
-    ///     VK_RESOLVE_MODE_EXTERNAL_FORMAT_DOWNSAMPLE_ANDROID indicates that rather than a multisample resolve, a single
+    ///     VK_RESOLVE_MODE_EXTERNAL_FORMAT_DOWNSAMPLE_ANDROID specifies that rather than a multisample resolve, a single
     ///     sampled color attachment will be downsampled into a Y′CBCR format image specified by an external Android format.
     ///     Unlike other resolve modes, implementations can resolve multiple times during rendering, or even bypass writing to
     ///     the color attachment altogether, as long as the final value is resolved to the resolve attachment. Values in the G,
@@ -62,24 +62,24 @@ public enum VkResolveModeFlagBits
     /// </summary>
     VK_RESOLVE_MODE_EXTERNAL_FORMAT_DOWNSAMPLE_ANDROID = 0x10,
 
-    /// <summary>VK_RESOLVE_MODE_NONE indicates that no resolve operation is done.</summary>
+    /// <summary>VK_RESOLVE_MODE_NONE specifies that no resolve operation is done.</summary>
     VK_RESOLVE_MODE_NONE_KHR = VK_RESOLVE_MODE_NONE,
 
     /// <summary>
-    ///     VK_RESOLVE_MODE_SAMPLE_ZERO_BIT indicates that result of the resolve operation is equal to the value of sample
+    ///     VK_RESOLVE_MODE_SAMPLE_ZERO_BIT specifies that result of the resolve operation is equal to the value of sample
     ///     0.
     /// </summary>
     VK_RESOLVE_MODE_SAMPLE_ZERO_BIT_KHR = VK_RESOLVE_MODE_SAMPLE_ZERO_BIT,
 
     /// <summary>
-    ///     VK_RESOLVE_MODE_AVERAGE_BIT indicates that result of the resolve operation is the average of the sample
+    ///     VK_RESOLVE_MODE_AVERAGE_BIT specifies that result of the resolve operation is the average of the sample
     ///     values.
     /// </summary>
     VK_RESOLVE_MODE_AVERAGE_BIT_KHR = VK_RESOLVE_MODE_AVERAGE_BIT,
 
-    /// <summary>VK_RESOLVE_MODE_MIN_BIT indicates that result of the resolve operation is the minimum of the sample values.</summary>
+    /// <summary>VK_RESOLVE_MODE_MIN_BIT specifies that result of the resolve operation is the minimum of the sample values.</summary>
     VK_RESOLVE_MODE_MIN_BIT_KHR = VK_RESOLVE_MODE_MIN_BIT,
 
-    /// <summary>VK_RESOLVE_MODE_MAX_BIT indicates that result of the resolve operation is the maximum of the sample values.</summary>
+    /// <summary>VK_RESOLVE_MODE_MAX_BIT specifies that result of the resolve operation is the maximum of the sample values.</summary>
     VK_RESOLVE_MODE_MAX_BIT_KHR = VK_RESOLVE_MODE_MAX_BIT
 }

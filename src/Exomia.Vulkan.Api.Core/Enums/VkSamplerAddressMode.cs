@@ -33,23 +33,23 @@ public enum VkSamplerAddressMode
 
     /// <summary>
     ///     VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE specifies that the     mirror clamp to edge wrap mode will be used.
-    ///     This is only valid if
+    ///     This is only valid if the
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#features-samplerMirrorClampToEdge">
     ///         <code>samplerMirrorClampToEdge</code>
     ///     </a>
-    ///     is enabled, or if     the VK_KHR_sampler_mirror_clamp_to_edge extension is enabled.
+    ///     feature is enabled, or if     the VK_KHR_sampler_mirror_clamp_to_edge extension is enabled.
     /// </summary>
     VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE = 4,
 
     /// <summary>
     ///     VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE specifies that the     mirror clamp to edge wrap mode will be used.
-    ///     This is only valid if
+    ///     This is only valid if the
     ///     <a
     ///         href="https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#features-samplerMirrorClampToEdge">
     ///         <code>samplerMirrorClampToEdge</code>
     ///     </a>
-    ///     is enabled, or if     the VK_KHR_sampler_mirror_clamp_to_edge extension is enabled.
+    ///     feature is enabled, or if     the VK_KHR_sampler_mirror_clamp_to_edge extension is enabled.
     /// </summary>
     VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE_KHR = VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE
 }

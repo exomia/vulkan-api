@@ -27,7 +27,7 @@ namespace Exomia.Vulkan.Api.Core;
 public static unsafe class VkNvxBinaryImport
 {
     /// <summary> The spec version. </summary>
-    public const uint VK_NVX_BINARY_IMPORT_SPEC_VERSION = 1;
+    public const uint VK_NVX_BINARY_IMPORT_SPEC_VERSION = 2;
 
     /// <summary> The extension name. </summary>
     public const string VK_NVX_BINARY_IMPORT_EXTENSION_NAME = "VK_NVX_binary_import";
